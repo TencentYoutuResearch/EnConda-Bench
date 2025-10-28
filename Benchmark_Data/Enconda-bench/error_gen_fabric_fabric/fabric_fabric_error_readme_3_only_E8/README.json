@@ -1,0 +1,18 @@
+{
+  "readme": "fabric_fabric_error_readme_3_only_E8",
+  "repo_name": "fabric_fabric",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The provided quickstart command `fabric --host user@host -- \"your command\"` is syntax from the legacy Fabric v1 and is not the primary usage pattern for modern Fabric (v2+). It is confusing and lacks context about creating a fabfile.",
+      "correction_candidates": [
+        "Replace the example with a modern one, showing how to create a `fabfile.py` and run a task with `fab my_task`.",
+        "Clarify that this command is for Fabric v1 and provide a separate example for v2+.",
+        "Change the command to `fab --hosts user@host -- \"your command\"` which is the modern equivalent for ad-hoc commands.",
+        "Remove the quickstart section as it is misleading."
+      ],
+      "golden_answer": "Replace the example with a modern one, showing how to create a `fabfile.py` and run a task with `fab my_task`."
+    }
+  ]
+}

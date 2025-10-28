@@ -1,0 +1,18 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_3_only_E2",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for creating a new project is incorrect. The README specifies `micropy new <PROJECT NAME>`, but the correct command is `micropy init <PROJECT NAME>`.",
+      "correction_candidates": [
+        "micropy create <PROJECT NAME>",
+        "micropy init <PROJECT NAME>",
+        "micropy project new <PROJECT NAME>",
+        "micropy start <PROJECT NAME>"
+      ],
+      "golden_answer": "micropy init <PROJECT NAME>"
+    }
+  ]
+}

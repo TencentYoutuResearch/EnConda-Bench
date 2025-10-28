@@ -1,0 +1,18 @@
+{
+  "readme": "scott-griffiths_bitstring_error_readme_4_only_E2",
+  "repo_name": "scott-griffiths_bitstring",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command uses the incorrect package name `python-bitstring` instead of the correct PyPI package name `bitstring`.",
+      "correction_candidates": [
+        "Change the package name in the command to `bitstring`: `$ pip install bitstring`",
+        "Use `pip search` to find the correct package name first.",
+        "Install from the GitHub repository directly: `$ pip install git+https://github.com/scott-griffiths/bitstring.git`",
+        "Try installing with `pip3` instead of `pip`: `$ pip3 install python-bitstring`"
+      ],
+      "golden_answer": "Change the package name in the command to `bitstring`: `$ pip install bitstring`"
+    }
+  ]
+}

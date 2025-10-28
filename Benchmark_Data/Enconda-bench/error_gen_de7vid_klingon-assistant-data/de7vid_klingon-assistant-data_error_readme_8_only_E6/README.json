@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_8_only_E6",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Instructions specify running validate_db.py before write_db.sh, but this order may not be correct as validation should typically happen after database compilation",
+      "correction_candidates": [
+        "After changes to the database, it is important to run the `write_db.sh` script and then run the `validate_db.py` script",
+        "After changes to the database, it is important to run the `write_db.sh` script",
+        "After changes to the database, it is important to run both the `write_db.sh` script and `validate_db.py` script in either order",
+        "After changes to the database, it is important to first run the `compile_db.sh` script and then run the `validate_db.py` script"
+      ],
+      "golden_answer": "After changes to the database, it is important to run the `write_db.sh` script"
+    }
+  ]
+}

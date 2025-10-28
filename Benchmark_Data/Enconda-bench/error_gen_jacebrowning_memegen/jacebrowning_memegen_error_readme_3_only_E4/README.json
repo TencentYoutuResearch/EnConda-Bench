@@ -1,0 +1,18 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_3_only_E4",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The 'Layouts' section mentions and provides an example for a `bottom` layout, which is not a valid option. The only valid options are `default` and `top`.",
+      "correction_candidates": [
+        "Change the example to use `layout=top` and update the accompanying text to only mention `default` and `top` as valid layouts.",
+        "Add `bottom` as a newly supported layout option in the documentation.",
+        "Replace `layout=bottom` with `position=bottom` as the correct parameter for this functionality.",
+        "Remove the 'Layouts' section entirely as this feature is deprecated."
+      ],
+      "golden_answer": "Change the example to use `layout=top` and update the accompanying text to only mention `default` and `top` as valid layouts."
+    }
+  ]
+}

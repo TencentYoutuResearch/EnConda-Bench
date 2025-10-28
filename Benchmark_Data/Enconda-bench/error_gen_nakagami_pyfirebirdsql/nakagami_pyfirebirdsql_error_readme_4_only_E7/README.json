@@ -1,0 +1,18 @@
+{
+  "readme": "nakagami_pyfirebirdsql_error_readme_4_only_E7",
+  "repo_name": "nakagami_pyfirebirdsql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that `backports.zoneinfo` is required for Python 3.9+, when it is actually required for Python 3.7 and 3.8. Python 3.9+ includes the `zoneinfo` module in its standard library.",
+      "correction_candidates": [
+        "It should state that `backports.zoneinfo` is required for all Python 3 versions.",
+        "It should state that `backports.zoneinfo` is required for Python 3.7 and 3.8.",
+        "It should state that `pytz` is required instead of `backports.zoneinfo`.",
+        "It should state that `backports.zoneinfo` is required for Python 2.7."
+      ],
+      "golden_answer": "It should state that `backports.zoneinfo` is required for Python 3.7 and 3.8."
+    }
+  ]
+}

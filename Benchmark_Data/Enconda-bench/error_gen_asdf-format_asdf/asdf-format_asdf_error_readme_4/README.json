@@ -1,0 +1,29 @@
+{
+  "readme": "asdf-format_asdf_error_readme_4",
+  "repo_name": "asdf-format_asdf",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The code example for creating a file uses an incorrect method name, `af.save()`. The correct method is `af.write_to()`.",
+      "correction_candidates": [
+        "Replace `af.save(\"example.asdf\")` with `af.write_to(\"example.asdf\")`.",
+        "Replace `af.save(\"example.asdf\")` with `asdf.write(af, \"example.asdf\")`.",
+        "Replace `af.save(\"example.asdf\")` with `af.to_file(\"example.asdf\")`.",
+        "Replace `af.save(\"example.asdf\")` with `af.write(\"example.asdf\")`."
+      ],
+      "golden_answer": "Replace `af.save(\"example.asdf\")` with `af.write_to(\"example.asdf\")`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The License section refers to a `LICENSE` file and a `license` folder, but the correct paths are `LICENSE.rst` and the `licenses` folder.",
+      "correction_candidates": [
+        "Change `LICENSE` to `LICENSE.rst` and `the license folder` to `the licenses folder`.",
+        "Change `LICENSE` to `LICENSE.md` and `the license folder` to `the licenses folder`.",
+        "Change `LICENSE` to `LICENSE.txt`.",
+        "Remove the reference to the folder, as all license text is in `LICENSE.rst`."
+      ],
+      "golden_answer": "Change `LICENSE` to `LICENSE.rst` and `the license folder` to `the licenses folder`."
+    }
+  ]
+}

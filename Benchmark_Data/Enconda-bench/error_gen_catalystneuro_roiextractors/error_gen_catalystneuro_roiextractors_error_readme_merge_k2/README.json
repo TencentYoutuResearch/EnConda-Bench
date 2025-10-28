@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_catalystneuro_roiextractors_error_readme_merge_k2",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to create the conda environment (`conda env create`) is placed after the commands to activate it and install packages into it, which will fail.",
+      "correction_candidates": [
+        "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`.",
+        "Combine the environment creation and package installation into a single script.",
+        "Use `mamba env create` instead of `conda env create` for faster resolution.",
+        "Remove the `conda env create` step and install directly into the base environment."
+      ],
+      "golden_answer": "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install .` is used, but the documentation incorrectly claims this installs the package in editable mode. The correct flag `-e` is missing.",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install --editable .",
+        "python setup.py develop",
+        "pip install -e roiextractors"
+      ],
+      "golden_answer": "pip install -e ."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command `conda env create -f roiextractors_env.yml` refers to a file `roiextractors_env.yml` that does not exist in the repository. The correct file is `environment.yml`.",
+      "correction_candidates": [
+        "Change `conda env create -f roiextractors_env.yml` to `conda env create -f environment.yml`.",
+        "Change `conda env create -f roiextractors_env.yml` to `conda env create roiextractors_env`.",
+        "Download the correct environment file from a different URL before running the create command.",
+        "Replace the `conda env create` command with a series of `conda install` commands for each dependency."
+      ],
+      "golden_answer": "Change `conda env create -f roiextractors_env.yml` to `conda env create -f environment.yml`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install numpy scipy` is unnecessary and potentially harmful, as these dependencies are already managed by the conda environment file, which could lead to version conflicts.",
+      "correction_candidates": [
+        "Remove the line `pip install numpy scipy`.",
+        "Change the line to `pip install --upgrade numpy scipy` to ensure the latest versions are used.",
+        "Comment out the line with a note: `# pip install numpy scipy if needed`.",
+        "Move the `pip install numpy scipy` command to before the `conda env create` command."
+      ],
+      "golden_answer": "Remove the line `pip install numpy scipy`."
+    }
+  ]
+}

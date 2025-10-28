@@ -1,0 +1,29 @@
+{
+  "readme": "robotframework_robotframework_error_readme_3",
+  "repo_name": "robotframework_robotframework",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install robotframework==4.1.3` pins the installation to a specific, outdated version that is primarily for Python 2 compatibility, which is incorrect for modern Python environments and lacks current features.",
+      "correction_candidates": [
+        "pip install robotframework",
+        "pip install --upgrade robotframework",
+        "pip install robotframework>=6.0",
+        "pip install robotframework-latest"
+      ],
+      "golden_answer": "pip install robotframework"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have a logical order error: they install robotframework globally first, then create and activate a virtual environment. The package should be installed after activating the venv to keep it isolated.",
+      "correction_candidates": [
+        "The commands should be:\n\n    python -m venv .venv\n    source .venv/bin/activate\n    pip install robotframework\n",
+        "The commands should be:\n\n    pip install --user robotframework\n    python -m venv .venv\n    source .venv/bin/activate\n",
+        "The commands should be:\n\n    python -m venv .venv\n    pip install robotframework\n",
+        "The commands should be:\n\n    pip install robotframework\n    python -m venv --system-site-packages .venv\n    source .venv/bin/activate\n"
+      ],
+      "golden_answer": "The commands should be:\n\n    python -m venv .venv\n    source .venv/bin/activate\n    pip install robotframework\n"
+    }
+  ]
+}

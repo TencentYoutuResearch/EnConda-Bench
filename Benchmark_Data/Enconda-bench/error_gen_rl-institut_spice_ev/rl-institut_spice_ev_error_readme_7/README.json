@@ -1,0 +1,29 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_7",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added instruction to install package dependencies first, but then only shows pip install command without specifying what dependencies to install first",
+      "correction_candidates": [
+        "To install `spice_ev` as a package run:",
+        "To install `spice_ev` as a package, simply run:",
+        "Install `spice_ev` as a package using:",
+        "To set up `spice_ev` as a package, execute:"
+      ],
+      "golden_answer": "To install `spice_ev` as a package run:"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used 'python simulate.py' instead of 'python generate.py' for the command that includes price and fixed load timeseries",
+      "correction_candidates": [
+        "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --price-csv ../price/price.csv --fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price ../price/price.csv --include-fixed-load fixed_load.csv --output scenario.json",
+        "python generate.py --csv-price ../price/price.csv --csv-fixed-load fixed_load.csv --output scenario.json"
+      ],
+      "golden_answer": "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json"
+    }
+  ]
+}

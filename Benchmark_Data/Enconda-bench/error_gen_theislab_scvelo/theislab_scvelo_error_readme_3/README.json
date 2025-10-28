@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_scvelo_error_readme_3",
+  "repo_name": "theislab_scvelo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions misleadingly state that no other packages are needed for full functionality, while omitting the fact that a clustering package like 'leidenalg' is required for certain functions.",
+      "correction_candidates": [
+        "Add the command 'pip install leidenalg' to the installation instructions.",
+        "Change 'pip install scvelo' to 'pip install scvelo[extra]'.",
+        "Add a note: \"For clustering, please also install leidenalg via 'pip install leidenalg'.\"",
+        "Remove the sentence \"For full functionality including plotting and clustering, no other packages are needed.\""
+      ],
+      "golden_answer": "Add a note: \"For clustering, please also install leidenalg via 'pip install leidenalg'.\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The 'Running Examples' section provides a command that references a non-existent file path 'examples/introduction.py'.",
+      "correction_candidates": [
+        "Change the path to 'docs/notebooks/getting_started.ipynb'.",
+        "Correct the command to 'jupyter notebook docs/notebooks/getting_started.ipynb'.",
+        "Change the path to 'scvelo/datasets/pancreas.py'.",
+        "Remove the 'Running Examples' section entirely."
+      ],
+      "golden_answer": "Correct the command to 'jupyter notebook docs/notebooks/getting_started.ipynb'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "quantumjot_btrack_error_readme_5_only_E1",
+  "repo_name": "quantumjot_btrack",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (opencv-python and numpy with specific versions) to the installation command that are not required by btrack",
+      "correction_candidates": [
+        "pip install btrack",
+        "pip install btrack scipy matplotlib",
+        "conda install btrack",
+        "pip install --upgrade btrack"
+      ],
+      "golden_answer": "pip install btrack"
+    }
+  ]
+}

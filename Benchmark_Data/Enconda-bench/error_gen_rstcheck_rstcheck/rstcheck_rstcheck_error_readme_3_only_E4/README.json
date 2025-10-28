@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_3_only_E4",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example command '$ rstcheck bad_syntax.rst' refers to a file that does not match the file content ('bad_rst.rst') shown in the preceding code block.",
+      "correction_candidates": [
+        "Change the command to '$ rstcheck bad_rst.rst' to match the file content shown.",
+        "Change the file content to be named 'bad_syntax.rst'.",
+        "Add a note explaining that 'bad_syntax.rst' is a placeholder name.",
+        "Remove the example entirely as it is confusing."
+      ],
+      "golden_answer": "Change the command to '$ rstcheck bad_rst.rst' to match the file content shown."
+    }
+  ]
+}

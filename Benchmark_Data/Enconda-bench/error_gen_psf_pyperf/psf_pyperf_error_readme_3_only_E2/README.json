@@ -1,0 +1,18 @@
+{
+  "readme": "psf_pyperf_error_readme_3_only_E2",
+  "repo_name": "psf_pyperf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pyperf stats` example command references `bench.json`, but the sample output shown corresponds to a different benchmark suite (`telco.json`), not the one created in the preceding `timeit` example.",
+      "correction_candidates": [
+        "$ python3 -m pyperf stats telco.json",
+        "$ python3 -m pyperf stats -m bench.json",
+        "$ python3 -m pyperf dump bench.json",
+        "$ python3 -m pyperf show bench.json"
+      ],
+      "golden_answer": "$ python3 -m pyperf stats telco.json"
+    }
+  ]
+}

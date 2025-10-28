@@ -1,0 +1,29 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_4",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Version status' section has incorrect information. It states that `aiogram-dialog` v2.x supports `aiogram` v2.x, and v1.x supports v3.x. The correct mapping is `aiogram-dialog` v2.x for `aiogram` v3.x, and `aiogram-dialog` v1.x for `aiogram` v2.x.",
+      "correction_candidates": [
+        "v2.x - actual release, supports aiogram v3.x\nv1.x - old release, supports aiogram v2.x, critical fix only",
+        "v2.x - actual release, supports aiogram v2.x and v3.x\nv1.x - old release, no longer supported",
+        "v2.x - actual release, supports latest aiogram\nv1.x - old release, supports legacy aiogram",
+        "v2.x - actual release, supports aiogram > 3.0\nv1.x - old release, supports aiogram < 3.0, critical fix only"
+      ],
+      "golden_answer": "v2.x - actual release, supports aiogram v3.x\nv1.x - old release, supports aiogram v2.x, critical fix only"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the examples `[examples](/examples)` points to an absolute path on the domain, which will result in a 404 error when viewed on GitHub. The correct link should be a relative path to the `example` directory in the repository.",
+      "correction_candidates": [
+        "and [examples](example)",
+        "and [examples](./example)",
+        "and [examples](https://github.com/Tishka17/aiogram_dialog/tree/master/example)",
+        "and [examples](../example)"
+      ],
+      "golden_answer": "and [examples](example)"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_jmetal_jmetalpy_error_readme_merge_k2",
+  "repo_name": "jmetal_jmetalpy",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The main installation command `pip install jmetalpy=` contains a syntax error, causing the installation to fail.",
+      "correction_candidates": [
+        "pip install jmetalpy",
+        "pip install jmetalpy --upgrade",
+        "pip install \"jmetalpy\"",
+        "pip install jmetalpy=="
+      ],
+      "golden_answer": "pip install jmetalpy"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example code attempts to save results to a 'results/' directory which may not exist, and the comment incorrectly states it is created automatically, which can cause a FileNotFoundError.",
+      "correction_candidates": [
+        "print_function_values_to_file(front, './FUN.NSGAII.ZDT1')",
+        "print_function_values_to_file(front, 'FUN.NSGAII.ZDT1')",
+        "import os; os.makedirs('results', exist_ok=True); print_function_values_to_file(front, 'results/FUN.NSGAII.ZDT1')",
+        "print_function_values_to_file(front, 'FUN.NSGAII.ZDT1.txt')"
+      ],
+      "golden_answer": "print_function_values_to_file(front, 'FUN.NSGAII.ZDT1')"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README falsely claims that the library is only compatible with Python 3.6 and not newer versions, which contradicts the PyPI badge and actual package compatibility.",
+      "correction_candidates": [
+        "Remove the sentence 'Note: jMetalPy requires Python 3.6 and is not compatible with newer versions.'",
+        "Change the sentence to 'jMetalPy requires Python >= 3.8'.",
+        "Change the sentence to 'jMetalPy is compatible with Python 3.6 and higher.'",
+        "The PyPI badge indicates compatibility, so the text should be updated to match the badge."
+      ],
+      "golden_answer": "Remove the sentence 'Note: jMetalPy requires Python 3.6 and is not compatible with newer versions.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies for parallel computing is incorrect; 'parallel' is not a valid package extra. The correct extra is 'distributed'.",
+      "correction_candidates": [
+        "pip install \"jmetalpy[dask,spark]\"",
+        "pip install \"jmetalpy[all]\"",
+        "pip install \"jmetalpy[distributed]\"",
+        "pip install jmetalpy pyspark dask"
+      ],
+      "golden_answer": "pip install \"jmetalpy[distributed]\""
+    }
+  ]
+}

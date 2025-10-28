@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_3_only_E1",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions mandate installing the `PyMySQL` package, which is an alternative database driver, not a required dependency for `django-mysql`.",
+      "correction_candidates": [
+        "Replace `pip install PyMySQL` with `pip install mysqlclient`.",
+        "Remove the step for installing `PyMySQL` as it's not a direct dependency.",
+        "Change the second command to `pip install django-mysql[pymysql]` and combine the steps.",
+        "Explain that either `PyMySQL` or `mysqlclient` can be used, but `mysqlclient` is recommended."
+      ],
+      "golden_answer": "Remove the step for installing `PyMySQL` as it's not a direct dependency."
+    }
+  ]
+}

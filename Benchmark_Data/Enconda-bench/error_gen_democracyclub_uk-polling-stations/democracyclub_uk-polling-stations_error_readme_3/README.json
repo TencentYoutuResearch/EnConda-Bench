@@ -1,0 +1,29 @@
+{
+  "readme": "democracyclub_uk-polling-stations_error_readme_3",
+  "repo_name": "democracyclub_uk-polling-stations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is ambiguously stated as 'python 3', while the project specifically requires version 3.10, leading to potential compatibility errors.",
+      "correction_candidates": [
+        "The text should be changed back to 'UK-Polling-Stations requires python 3.10'.",
+        "The project should be updated to support any version of Python 3.",
+        "Add a note specifying that `python --version` should return `3.10.x`.",
+        "Include a step to install Python 3.10 using `pyenv` or a similar version manager."
+      ],
+      "golden_answer": "The text should be changed back to 'UK-Polling-Stations requires python 3.10'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for importing ONSPD data incorrectly provides a path to a specific CSV file, contradicting the note that requires a path to the directory.",
+      "correction_candidates": [
+        "The command is correct, but the note 'Path is to data _directory_... not the csv itself' should be removed.",
+        "The command should use a flag to specify it's a file path: `python manage.py import_onspd --file /path/to/data/ONSPD_MAY_2023_UK.csv`.",
+        "The command should point to the directory containing the data, not the CSV file: `python manage.py import_onspd /path/to/data`.",
+        "The CSV file should be moved to the project root before running the import."
+      ],
+      "golden_answer": "The command should point to the directory containing the data, not the CSV file: `python manage.py import_onspd /path/to/data`."
+    }
+  ]
+}

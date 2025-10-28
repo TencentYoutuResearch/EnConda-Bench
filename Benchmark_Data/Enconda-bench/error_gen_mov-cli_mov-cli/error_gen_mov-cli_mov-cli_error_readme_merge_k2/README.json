@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_mov-cli_mov-cli_error_readme_merge_k2",
+  "repo_name": "mov-cli_mov-cli",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python version 3 or above is required, which is too broad and incorrect. The package requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change 'Python version 3 or above' to 'Python version 3.8 or above'.",
+        "Change 'Python version 3 or above' to 'Python version 3.6 or above'.",
+        "Change 'Python version 3 or above' to 'the latest version of Python 3'.",
+        "Add a `python_requires` check in the setup file to enforce the version."
+      ],
+      "golden_answer": "Change 'Python version 3 or above' to 'Python version 3.8 or above'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise installing a plugin (`mov-cli-youtube`) before installing the main `mov-cli` package. The main package must be installed first.",
+      "correction_candidates": [
+        "Remove the `pip install mov-cli-youtube` line and the preceding sentence.",
+        "Move the `pip install mov-cli-youtube` command to the 'Usage' section.",
+        "Combine the commands into `pip install mov-cli mov-cli-youtube -U`.",
+        "Reverse the order of the installation commands: `pip install mov-cli -U` followed by `pip install mov-cli-youtube`."
+      ],
+      "golden_answer": "Remove the `pip install mov-cli-youtube` line and the preceding sentence."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `mov-cli --query youtube blender studio` is incorrect. The flag for searching is `-s` or `--scraper`, not `--query`.",
+      "correction_candidates": [
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli -s youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli --search youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli -q youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli search --scraper youtube blender studio`."
+      ],
+      "golden_answer": "Replace `mov-cli --query youtube blender studio` with `mov-cli -s youtube blender studio`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The markdown link reference for the license file points to `./LICENSE.md`, but the file in the repository is named `LICENSE`.",
+      "correction_candidates": [
+        "Change `[license-url]: ./LICENSE.md` to `[license-url]: ./LICENSE`.",
+        "Rename the `LICENSE` file in the repository to `LICENSE.md`.",
+        "Change `[license-url]: ./LICENSE.md` to point to the full GitHub URL of the license file.",
+        "Remove the `.md` extension from all file links in the README."
+      ],
+      "golden_answer": "Change `[license-url]: ./LICENSE.md` to `[license-url]: ./LICENSE`."
+    }
+  ]
+}

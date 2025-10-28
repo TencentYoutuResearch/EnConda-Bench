@@ -1,0 +1,18 @@
+{
+  "readme": "microsoftgraph_msgraph-sdk-python-core_error_readme_6_only_E1",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependency 'requests-oauthlib' that is not required for msgraph-core",
+      "correction_candidates": [
+        "Remove pip3 install requests-oauthlib line entirely",
+        "Replace requests-oauthlib with kiota-abstractions",
+        "Change requests-oauthlib to microsoft-kiota-authentication-azure",
+        "Keep only msgraph-core and azure-identity installations"
+      ],
+      "golden_answer": "Remove pip3 install requests-oauthlib line entirely"
+    }
+  ]
+}

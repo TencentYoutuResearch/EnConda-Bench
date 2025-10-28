@@ -1,0 +1,18 @@
+{
+  "readme": "online-ml_river_error_readme_2_only_E2",
+  "repo_name": "online-ml_river",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install river from ...` is syntactically incorrect for installing a package from a git repository.",
+      "correction_candidates": [
+        "pip install --upgrade git+https://github.com/online-ml/river",
+        "pip install git+https://github.com/online-ml/river --upgrade",
+        "pip install https://github.com/online-ml/river.git --upgrade",
+        "git clone https://github.com/online-ml/river && cd river && pip install . --upgrade"
+      ],
+      "golden_answer": "pip install git+https://github.com/online-ml/river --upgrade"
+    }
+  ]
+}

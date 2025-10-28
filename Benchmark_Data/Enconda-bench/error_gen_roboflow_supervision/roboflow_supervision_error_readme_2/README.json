@@ -1,0 +1,29 @@
+{
+  "readme": "roboflow_supervision_error_readme_2",
+  "repo_name": "roboflow_supervision",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install supervision[full]` attempts to install an optional dependency group named 'full' which does not exist for this package, causing a `pip` error.",
+      "correction_candidates": [
+        "pip install supervision",
+        "pip install supervision --all-extras",
+        "pip install supervision[all]",
+        "pip install \"supervision[full]\""
+      ],
+      "golden_answer": "pip install supervision"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "When loading a YOLO dataset, the code example uses an incorrect parameter `data_path` instead of the required `data_yaml_path`, leading to a `TypeError` or unexpected behavior.",
+      "correction_candidates": [
+        "dataset = sv.DetectionDataset.from_yolo(images_directory_path=..., annotations_directory_path=..., data_yaml_path=...)",
+        "dataset = sv.DetectionDataset.from_yolo(images_directory_path=..., annotations_directory_path=..., yaml_path=...)",
+        "dataset = sv.DetectionDataset.from_yolo(images_directory_path=..., annotations_directory_path=..., config_path=...)",
+        "dataset = sv.DetectionDataset.from_yolo(images_directory_path=..., annotations_directory_path=..., path_to_data_yaml=...)"
+      ],
+      "golden_answer": "dataset = sv.DetectionDataset.from_yolo(images_directory_path=..., annotations_directory_path=..., data_yaml_path=...)"
+    }
+  ]
+}

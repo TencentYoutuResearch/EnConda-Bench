@@ -1,0 +1,18 @@
+{
+  "readme": "datamol-io_datamol_error_readme_6_only_E4",
+  "repo_name": "datamol-io_datamol",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "File paths in the Easy IO example reference local files that likely don't exist instead of cloud storage URLs",
+      "correction_candidates": [
+        "mols = dm.read_sdf(\"s3://my-awesome-data-lake/smiles.sdf\", as_df=False)\ndm.to_sdf(mols, \"gs://data-bucket/smiles.sdf\")",
+        "mols = dm.read_sdf(\"./data/molecules.sdf\", as_df=False)\ndm.to_sdf(mols, \"./output/results.sdf\")",
+        "mols = dm.read_sdf(\"https://example.com/molecules.sdf\", as_df=False)\ndm.to_sdf(mols, \"https://example.com/results.sdf\")",
+        "mols = dm.read_sdf(\"/path/to/molecules.sdf\", as_df=False)\ndm.to_sdf(mols, \"/path/to/results.sdf\")"
+      ],
+      "golden_answer": "mols = dm.read_sdf(\"s3://my-awesome-data-lake/smiles.sdf\", as_df=False)\ndm.to_sdf(mols, \"gs://data-bucket/smiles.sdf\")"
+    }
+  ]
+}

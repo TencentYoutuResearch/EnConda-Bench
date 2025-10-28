@@ -1,0 +1,18 @@
+{
+  "readme": "scitools_iris-grib_error_readme_4_only_E2",
+  "repo_name": "scitools_iris-grib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command specifies the outdated `scitools` channel instead of the recommended `conda-forge` channel, which may lead to installation failure or outdated packages.",
+      "correction_candidates": [
+        "Change the command to `conda install -c conda-forge iris-grib`.",
+        "Change the command to `conda install -c scitools -c conda-forge iris-grib`.",
+        "Remove the channel flag and run `conda install iris-grib`, assuming `conda-forge` is in the user's default channels.",
+        "Change the command to `conda install iris-grib --channel conda-forge`."
+      ],
+      "golden_answer": "Change the command to `conda install -c conda-forge iris-grib`."
+    }
+  ]
+}

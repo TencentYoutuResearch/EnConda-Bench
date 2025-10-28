@@ -1,0 +1,29 @@
+{
+  "readme": "numba_llvmlite_error_readme_5",
+  "repo_name": "numba_llvmlite",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Removed specific Python version requirements (3.9 -- 3.12) making compatibility unclear",
+      "correction_candidates": [
+        "llvmlite has been tested with Python 3.9 -- 3.12 and is likely to work with greater versions.",
+        "llvmlite has been tested with Python 3.8+ and is likely to work with greater versions.",
+        "llvmlite has been tested with Python 3.10 -- 3.12 and is likely to work with greater versions.",
+        "llvmlite has been tested with Python 2.7 and 3.6+ and is likely to work with greater versions."
+      ],
+      "golden_answer": "llvmlite has been tested with Python 3.9 -- 3.12 and is likely to work with greater versions."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Removed specific LLVM version requirement (14.x.x) making compatibility unclear",
+      "correction_candidates": [
+        "As of version 0.41.0, llvmlite requires LLVM 14.x.x on all architectures",
+        "As of version 0.41.0, llvmlite requires LLVM 11.x.x on all architectures",
+        "As of version 0.41.0, llvmlite requires LLVM 15.x.x on all architectures",
+        "As of version 0.41.0, llvmlite requires LLVM 13.x.x on all architectures"
+      ],
+      "golden_answer": "As of version 0.41.0, llvmlite requires LLVM 14.x.x on all architectures"
+    }
+  ]
+}

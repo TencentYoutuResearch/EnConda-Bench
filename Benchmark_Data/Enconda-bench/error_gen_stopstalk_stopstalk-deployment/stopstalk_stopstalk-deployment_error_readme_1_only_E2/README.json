@@ -1,0 +1,18 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_1_only_E2",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command has an incorrect syntax. An extra argument `stopstalk-deployment` is placed before the repository URL, which will cause the command to fail.",
+      "correction_candidates": [
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git stopstalk-deployment",
+        "git clone --name stopstalk-deployment https://github.com/stopstalk/stopstalk-deployment.git",
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git",
+        "git pull https://github.com/stopstalk/stopstalk-deployment.git"
+      ],
+      "golden_answer": "git clone https://github.com/stopstalk/stopstalk-deployment.git"
+    }
+  ]
+}

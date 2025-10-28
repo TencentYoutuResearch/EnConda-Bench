@@ -1,0 +1,29 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_1",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The manual installation guide specifies an incorrect destination folder, `<config directory>/components`. The correct folder for custom integrations is `<config directory>/custom_components`.",
+      "correction_candidates": [
+        "The destination folder should be `<config directory>/custom_components`.",
+        "The destination folder should be `<config directory>/integrations`.",
+        "The files should be placed directly in the `<config directory>`.",
+        "Create a new folder named `components` inside `<config directory>`."
+      ],
+      "golden_answer": "The destination folder should be `<config directory>/custom_components`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the manual installation guide, the instruction to restart Home Assistant is placed before the instruction to add the required entry to `configuration.yaml`. The configuration must be added before restarting for it to be loaded.",
+      "correction_candidates": [
+        "The `configuration.yaml` entry should be added before restarting Home Assistant.",
+        "Restart Home Assistant twice, once before and once after adding the configuration.",
+        "The `configuration.yaml` entry is optional and can be added at any time.",
+        "You should add the configuration and then reload YAML configurations from the Developer Tools, no restart is needed."
+      ],
+      "golden_answer": "The `configuration.yaml` entry should be added before restarting Home Assistant."
+    }
+  ]
+}

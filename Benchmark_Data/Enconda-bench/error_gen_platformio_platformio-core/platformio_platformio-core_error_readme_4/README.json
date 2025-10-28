@@ -1,0 +1,29 @@
+{
+  "readme": "platformio_platformio-core_error_readme_4",
+  "repo_name": "platformio_platformio-core",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The installation instructions are too vague, lacking specific commands, recommended Python versions, or guidance on using virtual environments, which can lead to a problematic setup.",
+      "correction_candidates": [
+        "The instructions should be more specific. For example: 'Install Python 3.6+ and then run `pip install -U platformio`.'",
+        "The instructions should mention installing from the package manager, e.g., `apt-get install platformio`.",
+        "The instructions should link to the official installation guide for detailed steps.",
+        "The instructions should clarify that 'Python' means 'Python 3'."
+      ],
+      "golden_answer": "The instructions should be more specific. For example: 'Install Python 3.6+ and then run `pip install -U platformio`.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to verify the installation, `platformio --v`, is incorrect. The correct flag is `--version`.",
+      "correction_candidates": [
+        "The correct command is `platformio version`.",
+        "The correct command is `pio --version`.",
+        "The correct command is `platformio -version`.",
+        "The correct command is `platformio --version`."
+      ],
+      "golden_answer": "The correct command is `platformio --version`."
+    }
+  ]
+}

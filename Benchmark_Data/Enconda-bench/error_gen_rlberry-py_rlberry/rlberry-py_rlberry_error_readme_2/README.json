@@ -1,0 +1,29 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_2",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the logo image is incorrect, pointing to 'logo.svg' instead of 'logo_wide.svg', which results in a broken image link.",
+      "correction_candidates": [
+        "Change the image source to 'https://raw.githubusercontent.com/rlberry-py/rlberry/main/assets/logo_wide.svg'.",
+        "Change the image source to './assets/logo_wide.svg'.",
+        "Change the image source to 'https://github.com/rlberry-py/rlberry/blob/main/assets/logo_wide.svg'.",
+        "Remove the logo image tag from the README."
+      ],
+      "golden_answer": "Change the image source to 'https://raw.githubusercontent.com/rlberry-py/rlberry/main/assets/logo_wide.svg'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly include a preliminary step to install a non-existent package `rlberry-core`. This command will fail as the package is not on PyPI.",
+      "correction_candidates": [
+        "Change `pip install rlberry-core` to `pip install rlberry[core]`.",
+        "Remove the line `pip install rlberry-core` and its preceding text.",
+        "Combine the two commands into `pip install rlberry-core rlberry`.",
+        "Replace `pip install rlberry-core` with `pip install git+https://github.com/rlberry-py/rlberry.git#subdirectory=core`."
+      ],
+      "golden_answer": "Remove the line `pip install rlberry-core` and its preceding text."
+    }
+  ]
+}

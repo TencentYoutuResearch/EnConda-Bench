@@ -1,0 +1,18 @@
+{
+  "readme": "benadida_helios-server_error_readme_2_only_E1",
+  "repo_name": "benadida_helios-server",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The dependency installation step `pip install django` is incomplete. It will miss all other project dependencies listed in `requirements.txt`.",
+      "correction_candidates": [
+        "To install all necessary dependencies, you should use the command `pip install -r requirements.txt`.",
+        "You also need to install `psycopg2-binary` and `gunicorn` manually.",
+        "The command should be `pip install django --upgrade` to get the latest version.",
+        "You should run `pip freeze > requirements.txt` first to generate the dependencies file."
+      ],
+      "golden_answer": "To install all necessary dependencies, you should use the command `pip install -r requirements.txt`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "neptune-ai_neptune-client_error_readme_1_only_E1",
+  "repo_name": "neptune-ai_neptune-client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command in 'Getting started' is incorrect. It uses `pip install neptune-client`, but the correct package name is `neptune`.",
+      "correction_candidates": [
+        "pip install neptune",
+        "pip install neptune.ai",
+        "conda install neptune",
+        "pip install neptune-ml"
+      ],
+      "golden_answer": "pip install neptune"
+    }
+  ]
+}

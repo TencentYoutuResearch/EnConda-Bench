@@ -1,0 +1,18 @@
+{
+  "readme": "commaai_comma10k_error_readme_4_only_E4",
+  "repo_name": "commaai_comma10k",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The animated GIF showing an example mask is referenced as 'sample_animation.gif', which does not exist in the repository. The correct filename is 'sample.gif'.",
+      "correction_candidates": [
+        "Change the image reference from 'sample_animation.gif' back to 'sample.gif'.",
+        "Change the image reference to 'assets/sample.gif'.",
+        "Remove the animated GIF section entirely.",
+        "Change the alt text to \"Animated GIF not found\" and leave the broken link."
+      ],
+      "golden_answer": "Change the image reference from 'sample_animation.gif' back to 'sample.gif'."
+    }
+  ]
+}

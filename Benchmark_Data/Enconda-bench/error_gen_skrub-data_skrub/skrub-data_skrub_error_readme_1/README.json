@@ -1,0 +1,29 @@
+{
+  "readme": "skrub-data_skrub_error_readme_1",
+  "repo_name": "skrub-data_skrub",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `scikit-learn-extra` is a required prerequisite for installation, which is an unnecessary dependency.",
+      "correction_candidates": [
+        "Remove the sentence stating that `scikit-learn-extra` is a prerequisite.",
+        "Change the prerequisite to `pip install scikit-learn`.",
+        "Add `scikit-learn-extra` to the `conda` install command as well.",
+        "Clarify that `scikit-learn-extra` is an optional dependency for advanced features."
+      ],
+      "golden_answer": "Remove the sentence stating that `scikit-learn-extra` is a prerequisite."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command uses an incorrect flag `--update` instead of the correct `-U` or `--upgrade` flag.",
+      "correction_candidates": [
+        "pip install skrub --upgrade",
+        "pip install skrub -U",
+        "pip install --update skrub",
+        "pip install skrub -update"
+      ],
+      "golden_answer": "pip install skrub -U"
+    }
+  ]
+}

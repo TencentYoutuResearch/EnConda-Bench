@@ -1,0 +1,18 @@
+{
+  "readme": "tommadness_kh2randomizer_error_readme_2_only_E1",
+  "repo_name": "tommadness_kh2randomizer",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install requirements.txt` is incorrect. It attempts to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Use `pip install -r requirements.txt` to install dependencies from the file.",
+        "The correct command is `python -m pip install -r requirements.txt`.",
+        "You can also use the long-form flag: `pip install --requirement requirements.txt`.",
+        "A valid alternative command is `cat requirements.txt | xargs pip install`."
+      ],
+      "golden_answer": "Use `pip install -r requirements.txt` to install dependencies from the file."
+    }
+  ]
+}

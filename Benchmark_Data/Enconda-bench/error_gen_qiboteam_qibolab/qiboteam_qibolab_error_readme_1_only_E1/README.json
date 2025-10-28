@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibolab_error_readme_1_only_E1",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are incomplete; they omit the 'qibo' library, which is a core dependency required to run the provided examples.",
+      "correction_candidates": [
+        "pip install qibolab qibo",
+        "pip install qibolab; pip install qibo",
+        "pip install qibolab[qibo]",
+        "pip install qibolab-base qibo"
+      ],
+      "golden_answer": "pip install qibolab qibo"
+    }
+  ]
+}

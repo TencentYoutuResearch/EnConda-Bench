@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_1_only_E6",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `pip install` command is executed before activating the virtual environment, which will install packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The `pip install` command should be run before creating the virtual environment with `venv`.",
+        "The virtual environment must be activated using `. env/bin/activate` before running `pip install \"[dev]\"`.",
+        "Replace `pip install \"[dev]\"` with `pip install --user \"[dev]\"` to ensure packages are installed for the current user.",
+        "The `pip install` command should be run from the parent directory, not from within the `bigbang` directory."
+      ],
+      "golden_answer": "The virtual environment must be activated using `. env/bin/activate` before running `pip install \"[dev]\"`."
+    }
+  ]
+}

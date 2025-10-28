@@ -1,0 +1,29 @@
+{
+  "readme": "democracyclub_everyelection_error_readme_3",
+  "repo_name": "democracyclub_everyelection",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `venv/bin/activate` tries to execute the activation script directly but does not `source` it, so the current shell's environment is not correctly modified to use the virtual environment.",
+      "correction_candidates": [
+        "The command must be prefixed with `source`, i.e., `source venv/bin/activate`.",
+        "The command should be `python venv/bin/activate`.",
+        "The command should be run with `sh venv/bin/activate`.",
+        "On Windows, the command is `venv\\Scripts\\activate`."
+      ],
+      "golden_answer": "The command must be prefixed with `source`, i.e., `source venv/bin/activate`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to install dependencies points to `requirements/base.txt`, but the standard file is `requirements.txt` in the root directory, which will cause a 'file not found' error.",
+      "correction_candidates": [
+        "You should create a `requirements/` directory and move `requirements.txt` into it as `base.txt`.",
+        "The correct command is `pip install -r requirements.txt`.",
+        "The command should be `pip install -r reqs.txt`.",
+        "The path is correct, but you need to run `git submodule update --init` first."
+      ],
+      "golden_answer": "The correct command is `pip install -r requirements.txt`."
+    }
+  ]
+}

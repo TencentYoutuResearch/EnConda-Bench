@@ -1,0 +1,18 @@
+{
+  "readme": "vespa-engine_pyvespa_error_readme_3_only_E2",
+  "repo_name": "vespa-engine_pyvespa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command `ruff --fix .` for running the linter manually is syntactically incorrect.",
+      "correction_candidates": [
+        "The correct command to check for errors is `ruff check .`.",
+        "The correct command to format files is `ruff format .`.",
+        "The correct command to check for errors and apply fixes is `ruff check . --fix`.",
+        "The command should be `ruff . --fix`."
+      ],
+      "golden_answer": "The correct command to check for errors and apply fixes is `ruff check . --fix`."
+    }
+  ]
+}

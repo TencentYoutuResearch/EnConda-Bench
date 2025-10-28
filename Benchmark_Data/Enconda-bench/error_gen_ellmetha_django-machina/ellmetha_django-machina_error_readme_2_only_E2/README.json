@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_2_only_E2",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip instal django-machina` contains a syntax error ('instal' instead of 'install').",
+      "correction_candidates": [
+        "Correct the typo in the command: `pip instal` should be `pip install`.",
+        "Fix the command to be `pip install django-machina`.",
+        "The `pip` subcommand is misspelled.",
+        "Change `instal` to `install`."
+      ],
+      "golden_answer": "Fix the command to be `pip install django-machina`."
+    }
+  ]
+}

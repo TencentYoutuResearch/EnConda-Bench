@@ -1,0 +1,29 @@
+{
+  "readme": "pastas_pastas_error_readme_6",
+  "repo_name": "pastas_pastas",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent requirements.txt file for dependency installation",
+      "correction_candidates": [
+        "Remove the line about installing from requirements.txt entirely",
+        "First, install the required dependencies from environment.yml:",
+        "First, install the required dependencies from setup.py:",
+        "First, install the required dependencies from pyproject.toml:"
+      ],
+      "golden_answer": "Remove the line about installing from requirements.txt entirely"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added tensorflow>=2.0 as a dependency which is not actually required for Pastas",
+      "correction_candidates": [
+        "Remove tensorflow>=2.0 from the dependencies list",
+        "Change tensorflow>=2.0 to scikit-learn>=0.24",
+        "Change tensorflow>=2.0 to lmfit>=1.0",
+        "Change tensorflow>=2.0 to xarray>=0.16"
+      ],
+      "golden_answer": "Remove tensorflow>=2.0 from the dependencies list"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_fonttools_fontbakery_error_readme_merge_k4",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `fontbakery check-googlefonts --font myfont.ttf` is syntactically incorrect. The tool expects font files as positional arguments, not with a `--font` flag.",
+      "correction_candidates": [
+        "Change the example to: `fontbakery check --profile googlefonts myfont.ttf`",
+        "Change the example to: `fontbakery check-googlefonts -f myfont.ttf`",
+        "Change the example to: `fontbakery check-googlefonts myfont.ttf`",
+        "Change the example to: `fontbakery --check googlefonts myfont.ttf`"
+      ],
+      "golden_answer": "Change the example to: `fontbakery check-googlefonts myfont.ttf`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that `fonttools` must be installed manually before `fontbakery`. This is an unnecessary step that can cause dependency conflicts, as `fonttools` is installed automatically as a dependency.",
+      "correction_candidates": [
+        "Run `pip install fonttools fontbakery` to install both at once.",
+        "Remove the instruction to install `fonttools` manually. The `fontbakery` package will automatically install the correct version of `fonttools`.",
+        "Run `pip install fonttools --no-deps` before installing `fontbakery`.",
+        "Ensure `fonttools` is version 4.0 or higher before installing `fontbakery`."
+      ],
+      "golden_answer": "Remove the instruction to install `fonttools` manually. The `fontbakery` package will automatically install the correct version of `fonttools`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the tool supports `metadata.json` files for project metadata, but it actually supports Protocol Buffer files named `METADATA.pb`.",
+      "correction_candidates": [
+        "Change `metadata.json` to `METADATA.proto`.",
+        "Change `metadata.json` to `METADATA.pb`.",
+        "Change `metadata.json` to `font-metadata.json`.",
+        "Change `metadata.json` to `METADATA.xml`."
+      ],
+      "golden_answer": "Change `metadata.json` to `METADATA.pb`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest that `pip install fontbakery` is sufficient for most use cases, which is misleading. It fails to mention that optional dependencies are required for certain check profiles, such as `ufo`, which can be installed with `pip install fontbakery[ufo]`.",
+      "correction_candidates": [
+        "Advise users to run `pip install fontbakery --all` to get all features.",
+        "Change the instruction to `pip install fontbakery[all]` to ensure all optional dependencies are installed.",
+        "Advise users to consult the detailed installation guides linked above for specifics on optional dependencies.",
+        "Advise users to install dependencies like `ufo-sources` manually if needed."
+      ],
+      "golden_answer": "Change the instruction to `pip install fontbakery[all]` to ensure all optional dependencies are installed."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `fontbakery run google-profile myfont.ttf` is incorrect. The tool does not have a `run` subcommand, and profiles are invoked as subcommands directly (e.g., `check-googlefonts`).",
+      "correction_candidates": [
+        "The correct command is `fontbakery check-googlefonts myfont.ttf`.",
+        "The correct command is `fontbakery --run-profile google-profile --file myfont.ttf`.",
+        "The correct command is `fontbakery google-profile myfont.ttf`.",
+        "The correct command is `fontbakery check --profile googlefonts myfont.ttf`."
+      ],
+      "golden_answer": "The correct command is `fontbakery check-googlefonts myfont.ttf`."
+    }
+  ]
+}

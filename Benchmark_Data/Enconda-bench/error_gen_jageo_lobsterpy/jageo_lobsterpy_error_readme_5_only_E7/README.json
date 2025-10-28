@@ -1,0 +1,18 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_5_only_E7",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned version (==1.0.0) in standard installation command that may not exist or be outdated",
+      "correction_candidates": [
+        "Install using ``pip install lobsterpy``",
+        "Install using ``pip install lobsterpy>=1.0.0``",
+        "Install using ``pip install lobsterpy~=1.0``",
+        "Install using ``pip install lobsterpy --upgrade``"
+      ],
+      "golden_answer": "Install using ``pip install lobsterpy``"
+    }
+  ]
+}

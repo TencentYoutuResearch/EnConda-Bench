@@ -1,0 +1,18 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_1_only_E7",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python' under prerequisites without a specific version, while the project requires Python 2.7, leading to potential version incompatibility.",
+      "correction_candidates": [
+        "* Python 2.7",
+        "* Python >2.6",
+        "* Python 3",
+        "* Python (2.7 recommended)"
+      ],
+      "golden_answer": "* Python 2.7"
+    }
+  ]
+}

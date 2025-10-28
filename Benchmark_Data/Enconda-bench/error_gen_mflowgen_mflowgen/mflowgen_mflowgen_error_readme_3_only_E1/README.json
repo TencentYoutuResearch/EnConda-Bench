@@ -1,0 +1,18 @@
+{
+  "readme": "mflowgen_mflowgen_error_readme_3_only_E1",
+  "repo_name": "mflowgen_mflowgen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install requirements.txt` is syntactically incorrect for installing dependencies from a file. It treats 'requirements.txt' as a package name.",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install --file requirements.txt",
+        "cat requirements.txt | xargs pip install",
+        "pip install -requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

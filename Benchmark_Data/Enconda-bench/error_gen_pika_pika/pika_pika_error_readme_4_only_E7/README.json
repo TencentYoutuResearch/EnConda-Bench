@@ -1,0 +1,18 @@
+{
+  "readme": "pika_pika_error_readme_4_only_E7",
+  "repo_name": "pika_pika",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The contributing guide mandates using a specific and potentially outdated version of Yapf (`0.28.0`), which can cause version conflicts or formatting inconsistencies.",
+      "correction_candidates": [
+        "Change `Yapf==0.28.0` back to `Yapf` to remove the strict version requirement.",
+        "Update the version to a more recent one, like `Yapf==0.32.0`.",
+        "Suggest using `black` instead of `yapf`.",
+        "Change the style from `google` to `pep8`."
+      ],
+      "golden_answer": "Change `Yapf==0.28.0` back to `Yapf` to remove the strict version requirement."
+    }
+  ]
+}

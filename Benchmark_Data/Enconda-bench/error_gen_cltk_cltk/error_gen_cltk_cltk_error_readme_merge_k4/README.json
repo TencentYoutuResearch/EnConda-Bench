@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_cltk_cltk_error_readme_merge_k4",
+  "repo_name": "cltk_cltk",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly state that language models must be downloaded before installing the `cltk` package. Models are typically downloaded after installation using the library's own functions.",
+      "correction_candidates": [
+        "Remove the instruction about downloading models before installation.",
+        "Move the instruction about downloading models to a new 'Usage' section after 'Installation'.",
+        "Change the instruction to 'After installing, download models by running `import cltk; cltk.download_models()`'.",
+        "Clarify that model download is an optional step for offline use."
+      ],
+      "golden_answer": "Remove the instruction about downloading models before installation."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install pip using `python get-pip.py` is incomplete and potentially confusing. It doesn't explain where to get `get-pip.py`, and modern Python installations usually include pip.",
+      "correction_candidates": [
+        "Replace the instruction with `python -m ensurepip --upgrade`.",
+        "Remove the instruction about installing pip, as it's a standard tool.",
+        "Add a link to the official pip installation guide: `https://pip.pypa.io/en/stable/installation/`.",
+        "Change the command to `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` followed by `python get-pip.py`."
+      ],
+      "golden_answer": "Remove the instruction about installing pip, as it's a standard tool."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installation command specifies unnecessary and potentially conflicting dependency versions that are not required for CLTK",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip install cltk --upgrade",
+        "$ pip install cltk[all]",
+        "$ conda install -c conda-forge cltk"
+      ],
+      "golden_answer": "$ pip install cltk"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax using --config-file parameter that doesn't exist for pip install",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip install cltk --user",
+        "$ pip install cltk --upgrade",
+        "$ pip install -r requirements.txt"
+      ],
+      "golden_answer": "$ pip install cltk"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using pip2 command which is deprecated and incompatible with modern CLTK versions that require Python 3",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip3 install cltk",
+        "$ python -m pip install cltk",
+        "$ python3 -m pip install cltk"
+      ],
+      "golden_answer": "$ pip install cltk"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_2_only_E7",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README claims Twine is compatible with Python 2.7, but the |python-versions| badge shows it requires Python 3.8+, creating a version compatibility conflict.",
+      "correction_candidates": [
+        "Remove the sentence stating it is compatible with Python 2.7.",
+        "Change the sentence to 'Twine requires Python 3.8 or newer.'",
+        "Install an older version of Twine that supports Python 2.7.",
+        "Update the |python-versions| badge to include Python 2.7."
+      ],
+      "golden_answer": "Remove the sentence stating it is compatible with Python 2.7."
+    }
+  ]
+}

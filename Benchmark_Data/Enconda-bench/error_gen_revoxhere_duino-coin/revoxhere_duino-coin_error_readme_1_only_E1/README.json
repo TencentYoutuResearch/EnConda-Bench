@@ -1,0 +1,18 @@
+{
+  "readme": "revoxhere_duino-coin_error_readme_1_only_E1",
+  "repo_name": "revoxhere_duino-coin",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The Linux manual installation command is missing the `python3-pip` package, which is required to run the `pip` command in the next step.",
+      "correction_candidates": [
+        "In the `apt install` command, add the `python3-pip` package.",
+        "Replace `python3 -m pip install` with `python3 -m easy_install`.",
+        "Run `sudo apt install python3-pip` as a separate command before `git clone`.",
+        "Remove the line `python3 -m pip install -r requirements.txt` as the packages are already installed."
+      ],
+      "golden_answer": "In the `apt install` command, add the `python3-pip` package."
+    }
+  ]
+}

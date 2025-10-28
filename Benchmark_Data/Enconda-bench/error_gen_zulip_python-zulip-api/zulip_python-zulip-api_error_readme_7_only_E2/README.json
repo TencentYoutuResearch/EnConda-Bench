@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_7_only_E2",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent test command usage - mixing py.test with pytest and using invalid --coverage flag",
+      "correction_candidates": [
+        "pytest",
+        "pytest --cov",
+        "python -m pytest --coverage",
+        "py.test"
+      ],
+      "golden_answer": "pytest"
+    }
+  ]
+}

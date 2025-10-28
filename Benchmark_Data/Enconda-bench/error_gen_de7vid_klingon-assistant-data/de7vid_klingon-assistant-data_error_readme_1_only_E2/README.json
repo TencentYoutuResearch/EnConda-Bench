@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_1_only_E2",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command syntax provided for `review_changes.sh` is incorrect. The script uses positional arguments for language and commit, not named flags like `--language`.",
+      "correction_candidates": [
+        "The script `review_changes.sh` takes a language code and an optional commit as positional arguments.",
+        "The script should be called as `sh review_changes.sh <lang> [commit]`.",
+        "The script `review_changes.sh` requires a configuration file to specify the language and commit.",
+        "The correct command is `review_changes.sh <language_code> [commit_hash]`."
+      ],
+      "golden_answer": "The script `review_changes.sh` takes a language code and an optional commit as positional arguments."
+    }
+  ]
+}

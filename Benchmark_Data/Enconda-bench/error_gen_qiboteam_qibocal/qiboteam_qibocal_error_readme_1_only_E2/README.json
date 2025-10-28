@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_1_only_E2",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a protocol uses an invalid option `--o` for specifying the output folder, which should be `-o`.",
+      "correction_candidates": [
+        "The correct command is: `qq auto <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> --output <output_folder>`",
+        "The correct command is: `qq auto --runcard <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> -output <output_folder>`"
+      ],
+      "golden_answer": "The correct command is: `qq auto <runcard> -o <output_folder>`"
+    }
+  ]
+}

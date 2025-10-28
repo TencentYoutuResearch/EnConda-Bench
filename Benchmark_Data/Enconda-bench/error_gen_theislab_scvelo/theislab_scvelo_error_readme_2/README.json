@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_scvelo_error_readme_2",
+  "repo_name": "theislab_scvelo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that scVelo requires Python 2.7, which is outdated and incompatible. scVelo requires Python 3.6 or newer.",
+      "correction_candidates": [
+        "Change \"Python 2.7\" to \"Python 3\".",
+        "Change \"Python 2.7\" to \"Python >= 3.6\".",
+        "Remove the sentence \"scVelo requires Python 2.7.\"",
+        "Change \"Python 2.7\" to \"the latest Python version\"."
+      ],
+      "golden_answer": "Change \"Python 2.7\" to \"Python >= 3.6\"."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly direct the user to install scVelo before creating and activating a virtual environment, which can lead to polluting the global Python environment.",
+      "correction_candidates": [
+        "Move the virtual environment creation and activation steps before the 'pip install scvelo' command.",
+        "Replace the installation instructions with 'pipx install scvelo'.",
+        "Add a note: \"Run pip install inside the activated virtual environment.\"",
+        "Combine the commands into: 'python -m venv .venv && source .venv/bin/activate && pip install scvelo'."
+      ],
+      "golden_answer": "Move the virtual environment creation and activation steps before the 'pip install scvelo' command."
+    }
+  ]
+}

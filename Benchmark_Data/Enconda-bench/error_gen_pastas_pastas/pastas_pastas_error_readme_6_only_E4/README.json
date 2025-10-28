@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_6_only_E4",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent requirements.txt file for dependency installation",
+      "correction_candidates": [
+        "Remove the line about installing from requirements.txt entirely",
+        "First, install the required dependencies from environment.yml:",
+        "First, install the required dependencies from setup.py:",
+        "First, install the required dependencies from pyproject.toml:"
+      ],
+      "golden_answer": "Remove the line about installing from requirements.txt entirely"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_1_only_E2",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example for configuring INSTALLED_APPS is missing a comma between 'dal' and 'dal_select2', which will cause a Python syntax error.",
+      "correction_candidates": [
+        "INSTALLED_APPS = (\n    # ...\n    'dal',\n    'dal_select2',\n    # ...\n)",
+        "INSTALLED_APPS = list(INSTALLED_APPS) + ['dal', 'dal_select2']",
+        "INSTALLED_APPS += ('dal', 'dal_select2',)",
+        "INSTALLED_APPS.extend(['dal', 'dal_select2'])"
+      ],
+      "golden_answer": "INSTALLED_APPS = (\n    # ...\n    'dal',\n    'dal_select2',\n    # ...\n)"
+    }
+  ]
+}

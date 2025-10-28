@@ -1,0 +1,29 @@
+{
+  "readme": "nextcord_nextcord_error_readme_8",
+  "repo_name": "nextcord_nextcord",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent pip command usage - uses 'pip' instead of 'python3 -m pip' for development version installation",
+      "correction_candidates": [
+        "$ python3 -m pip install -U .[voice]",
+        "$ python -m pip install -U .[voice]",
+        "$ pip3 install -U .[voice]",
+        "$ python3 -m pip install --editable .[voice]"
+      ],
+      "golden_answer": "$ python3 -m pip install -U .[voice]"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect installation order - suggests installing system packages after pip installation instead of before",
+      "correction_candidates": [
+        "Please note that on Linux installing voice you must install the following packages via your favourite package manager (e.g. ``apt``, ``dnf``, etc) before running the above commands:",
+        "Please note that on Linux installing voice you must first ensure the following packages are installed via your favourite package manager (e.g. ``apt``, ``dnf``, etc):",
+        "Please note that on Linux installing voice requires the following system packages to be installed via your favourite package manager (e.g. ``apt``, ``dnf``, etc) prior to installation:",
+        "Please note that on Linux installing voice you should install the following packages via your favourite package manager (e.g. ``apt``, ``dnf``, etc) during the installation process:"
+      ],
+      "golden_answer": "Please note that on Linux installing voice you must install the following packages via your favourite package manager (e.g. ``apt``, ``dnf``, etc) before running the above commands:"
+    }
+  ]
+}

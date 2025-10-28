@@ -1,0 +1,29 @@
+{
+  "readme": "r-anime_holo_error_readme_6",
+  "repo_name": "r-anime_holo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.5+ to 2.7+ which is incompatible with modern dependencies",
+      "correction_candidates": [
+        "Change Python requirement back to 3.5+",
+        "Update to Python 3.8+ for better compatibility",
+        "Use Python 3.6+ as minimum requirement",
+        "Specify Python 3.7+ for optimal performance"
+      ],
+      "golden_answer": "Change Python requirement back to 3.5+"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax '--setup' instead of '-m setup' for database setup",
+      "correction_candidates": [
+        "Change '--setup' to '-m setup'",
+        "Use 'python src/holo.py setup' without flags",
+        "Replace with 'python src/holo.py --mode setup'",
+        "Change to 'python src/holo.py -s setup'"
+      ],
+      "golden_answer": "Change '--setup' to '-m setup'"
+    }
+  ]
+}

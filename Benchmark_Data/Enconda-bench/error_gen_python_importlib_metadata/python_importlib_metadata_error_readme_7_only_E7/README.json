@@ -1,0 +1,18 @@
+{
+  "readme": "python_importlib_metadata_error_readme_7_only_E7",
+  "repo_name": "python_importlib_metadata",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement stating Python 2.7 compatibility when the package requires Python 3.8+",
+      "correction_candidates": [
+        "This package requires Python 3.8 or later for compatibility",
+        "This package requires Python 3.6 or later for compatibility",
+        "This package requires Python 3.10 or later for compatibility",
+        "This package supports all Python versions from 3.7+"
+      ],
+      "golden_answer": "This package requires Python 3.8 or later for compatibility"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "democracyclub_uk-polling-stations_error_readme_2_only_E1",
+  "repo_name": "democracyclub_uk-polling-stations",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `apt-get install` command for Ubuntu setup is missing the `postgis` package, which is a required system dependency for the project.",
+      "correction_candidates": [
+        "The `postgresql-14-postgis-3` package includes `postgis`, so no change is needed.",
+        "Add `postgis` to the `apt-get install` command list for Ubuntu.",
+        "Run `sudo apt-get install postgis` in a separate command after the main package installation.",
+        "The `postgis` package should be installed via `pip` instead of `apt-get`."
+      ],
+      "golden_answer": "Add `postgis` to the `apt-get install` command list for Ubuntu."
+    }
+  ]
+}

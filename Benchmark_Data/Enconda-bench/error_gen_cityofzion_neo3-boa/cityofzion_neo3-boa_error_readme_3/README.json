@@ -1,0 +1,29 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_3",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install .` is used instead of `pip install -e .`. This performs a standard installation rather than an 'editable' one, which is typically intended for development setups from source.",
+      "correction_candidates": [
+        "Change `pip install .` to `python setup.py install`.",
+        "Change `pip install .` to `pip install --editable .`.",
+        "Change `pip install .` to `pip install -e .`.",
+        "Change `pip install .` to `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Change `pip install .` to `pip install -e .`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to 'Smart contract examples' points to a non-existent path `/examples` instead of the correct path `/boa3_test/examples`.",
+      "correction_candidates": [
+        "Change the link path from `[/examples]` to `[/boa3_test/examples]`.",
+        "Change the link path from `[/examples]` to `[/tests/examples]`.",
+        "Change the link path from `[/examples]` to `[/boa3/examples]`.",
+        "Change the link path from `[/examples]` to `[/smart_contracts/examples]`."
+      ],
+      "golden_answer": "Change the link path from `[/examples]` to `[/boa3_test/examples]`."
+    }
+  ]
+}

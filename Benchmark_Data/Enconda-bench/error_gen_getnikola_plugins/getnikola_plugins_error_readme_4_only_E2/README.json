@@ -1,0 +1,18 @@
+{
+  "readme": "getnikola_plugins_error_readme_4_only_E2",
+  "repo_name": "getnikola_plugins",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The documentation incorrectly states that a `conf.py` file is mandatory, while it should be an optional `conf.py.sample` file.",
+      "correction_candidates": [
+        "The `conf.py` file is optional and should be placed in the repository's root directory.",
+        "The `conf.py.sample` file is optional. If there are any config options you need for your plugin, put them here.",
+        "The `conf.py.sample` file is mandatory for all plugins with configuration options.",
+        "The `config.ini` file should be used for plugin options instead of `conf.py.sample`."
+      ],
+      "golden_answer": "The `conf.py.sample` file is optional. If there are any config options you need for your plugin, put them here."
+    }
+  ]
+}

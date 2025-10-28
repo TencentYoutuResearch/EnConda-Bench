@@ -1,0 +1,18 @@
+{
+  "readme": "kevinmusgrave_pytorch-metric-learning_error_readme_5_only_E2",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid --install-option parameter to pip install command",
+      "correction_candidates": [
+        "pip install pytorch-metric-learning[with-hooks]",
+        "pip install pytorch-metric-learning[with-hooks] --force-reinstall",
+        "pip install pytorch-metric-learning[with-hooks] --upgrade",
+        "pip install pytorch-metric-learning[with-hooks] --no-cache-dir"
+      ],
+      "golden_answer": "pip install pytorch-metric-learning[with-hooks]"
+    }
+  ]
+}

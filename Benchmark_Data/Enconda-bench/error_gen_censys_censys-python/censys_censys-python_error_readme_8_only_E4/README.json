@@ -1,0 +1,18 @@
+{
+  "readme": "censys_censys-python_error_readme_8_only_E4",
+  "repo_name": "censys_censys-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed the examples directory path from 'examples/' to 'config/examples/' which is an incorrect path that doesn't exist in the repository",
+      "correction_candidates": [
+        "[`examples/`](examples/)",
+        "[`docs/examples/`](docs/examples/)",
+        "[`src/examples/`](src/examples/)",
+        "[`tests/examples/`](tests/examples/)"
+      ],
+      "golden_answer": "[`examples/`](examples/)"
+    }
+  ]
+}

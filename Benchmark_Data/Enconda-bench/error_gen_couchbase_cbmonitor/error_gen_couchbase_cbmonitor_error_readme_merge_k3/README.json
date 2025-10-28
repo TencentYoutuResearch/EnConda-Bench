@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_couchbase_cbmonitor_error_readme_merge_k3",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python' under prerequisites without a specific version, while the project requires Python 2.7, leading to potential version incompatibility.",
+      "correction_candidates": [
+        "* Python 2.7",
+        "* Python >2.6",
+        "* Python 3",
+        "* Python (2.7 recommended)"
+      ],
+      "golden_answer": "* Python 2.7"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The initial setup command is incorrectly listed as 'make install', which is not a valid target. The correct command is 'make'.",
+      "correction_candidates": [
+        "$ make setup",
+        "$ make",
+        "$ ./install.sh",
+        "$ pip install ."
+      ],
+      "golden_answer": "$ make"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Running webapp' section is placed before the 'Initial setup' section, which is a logical error as the application must be set up before it can be run.",
+      "correction_candidates": [
+        "Swap the \"Initial setup\" and \"Running webapp\" sections.",
+        "Combine the \"Initial setup\" and \"Running webapp\" sections into one \"Usage\" section.",
+        "Add a note at the top specifying to follow setup instructions first.",
+        "Rename \"Initial setup\" to \"Installation\" and move it to the top."
+      ],
+      "golden_answer": "Swap the \"Initial setup\" and \"Running webapp\" sections."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The setup command 'make -f build.mk' incorrectly references a non-existent 'build.mk' file instead of using the default Makefile.",
+      "correction_candidates": [
+        "Change the command to '$ make'.",
+        "Create a 'build.mk' file that includes the 'Makefile'.",
+        "Change the command to '$ make -f Makefile'.",
+        "Rename the project's 'Makefile' to 'build.mk'."
+      ],
+      "golden_answer": "Change the command to '$ make'."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The prerequisites list creates a version conflict: it specifies Python 2.7, but also lists Django 2.0, which requires Python 3.5 or newer.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.5+'.",
+        "Change 'Django 2.0' to 'Django 1.11', which is compatible with Python 2.7.",
+        "Remove '* Django 2.0' as it is not a true dependency of the project.",
+        "Remove both version specifications and state that 'make' handles dependencies."
+      ],
+      "golden_answer": "Remove '* Django 2.0' as it is not a true dependency of the project."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The prerequisite 'Django 2.0' is unnecessary as the project is a static report generator and does not use the Django framework.",
+      "correction_candidates": [
+        "Remove '* Django 2.0' from the prerequisites list.",
+        "Change '* Django 2.0' to '* Flask'.",
+        "Add a note explaining that Django is an optional dependency.",
+        "Replace '* Django 2.0' with the actual web framework used."
+      ],
+      "golden_answer": "Remove '* Django 2.0' from the prerequisites list."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_6",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed the command parameter from '--simbev' to '--simbev-path' which is an incorrect parameter name",
+      "correction_candidates": [
+        "python generate.py simbev --simbev /path/to/simbev/output/ --output scenario.json",
+        "python generate.py simbev --input /path/to/simbev/output/ --output scenario.json",
+        "python generate.py simbev --directory /path/to/simbev/output/ --output scenario.json",
+        "python generate.py simbev --source /path/to/simbev/output/ --output scenario.json"
+      ],
+      "golden_answer": "python generate.py simbev --simbev /path/to/simbev/output/ --output scenario.json"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Missing Python version requirement specification in installation section",
+      "correction_candidates": [
+        "Clone this repository. SpiceEV just has an optional dependency on Matplotlib. Everything else uses the Python (>= 3.6) standard library.",
+        "Clone this repository. SpiceEV requires Python 3.6 or higher and has an optional dependency on Matplotlib.",
+        "Clone this repository. SpiceEV is compatible with Python versions 3.6+ with optional Matplotlib dependency.",
+        "Clone this repository. SpiceEV needs Python >= 3.6 and optionally Matplotlib for plotting functionality."
+      ],
+      "golden_answer": "Clone this repository. SpiceEV just has an optional dependency on Matplotlib. Everything else uses the Python (>= 3.6) standard library."
+    }
+  ]
+}

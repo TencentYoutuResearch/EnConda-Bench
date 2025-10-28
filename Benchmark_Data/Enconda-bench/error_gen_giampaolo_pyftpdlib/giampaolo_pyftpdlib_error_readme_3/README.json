@@ -1,0 +1,29 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_3",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Command line usage' section appears before the 'Installation' section, leading users to try running the module before they are instructed on how to install it.",
+      "correction_candidates": [
+        "Combine the installation and usage steps into a single code block.",
+        "Move the 'Installation' section to be before the 'Command line usage' section.",
+        "Add a note in 'Command line usage' that installation instructions are provided below.",
+        "The order is fine, as `pyftpdlib` might be a built-in module."
+      ],
+      "golden_answer": "Move the 'Installation' section to be before the 'Command line usage' section."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the API example, the `FTPServer` constructor is called with a string `'127.0.0.1:21'` for the address, but it expects a tuple `('127.0.0.1', 21)`.",
+      "correction_candidates": [
+        "server = FTPServer(address=\"127.0.0.1\", port=21, handler=handler)",
+        "server = FTPServer(host=\"127.0.0.1:21\", handler=handler)",
+        "server = FTPServer((\"127.0.0.1\", 21), handler)",
+        "server = FTPServer(handler, (\"127.0.0.1\", 21))"
+      ],
+      "golden_answer": "server = FTPServer((\"127.0.0.1\", 21), handler)"
+    }
+  ]
+}

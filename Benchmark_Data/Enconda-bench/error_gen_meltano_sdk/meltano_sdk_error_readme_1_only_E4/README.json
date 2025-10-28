@@ -1,0 +1,18 @@
+{
+  "readme": "meltano_sdk_error_readme_1_only_E4",
+  "repo_name": "meltano_sdk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Contributors Guide' is a relative path to a file 'CONTRIBUTING.md', which is incorrect. It should be a full URL pointing to the documentation website.",
+      "correction_candidates": [
+        "https://github.com/meltano/sdk/blob/main/CONTRIBUTING.md",
+        "docs/CONTRIBUTING.md",
+        "https://sdk.meltano.com/en/latest/CONTRIBUTING.html",
+        "https://sdk.meltano.com/en/latest/contributing.html"
+      ],
+      "golden_answer": "https://sdk.meltano.com/en/latest/CONTRIBUTING.html"
+    }
+  ]
+}

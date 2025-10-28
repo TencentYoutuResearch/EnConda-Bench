@@ -1,0 +1,18 @@
+{
+  "readme": "uriyyo_fastapi-pagination_error_readme_5_only_E7",
+  "repo_name": "uriyyo_fastapi-pagination",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Added specific version constraints that may cause compatibility issues",
+      "correction_candidates": [
+        "pip install fastapi-pagination",
+        "pip install fastapi-pagination>=2.0.0",
+        "pip install fastapi-pagination sqlalchemy",
+        "pip install fastapi-pagination~=2.1.0"
+      ],
+      "golden_answer": "pip install fastapi-pagination"
+    }
+  ]
+}

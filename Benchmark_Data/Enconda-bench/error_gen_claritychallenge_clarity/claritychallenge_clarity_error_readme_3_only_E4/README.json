@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_3_only_E4",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Modified binaural STOI (MBSTOI)' tool points to an incorrect path `./clarity/mbstoi/mbstoi.py`. The file is located inside the `evaluator` subdirectory.",
+      "correction_candidates": [
+        "Change the path to `./clarity/evaluator/mbstoi/mbstoi.py`",
+        "Change the path to `./evaluator/mbstoi/mbstoi.py`",
+        "Change the path to `./clarity/evaluator/mbstoi.py`",
+        "Change the path to `./clarity/tools/mbstoi/mbstoi.py`"
+      ],
+      "golden_answer": "Change the path to `./clarity/evaluator/mbstoi/mbstoi.py`"
+    }
+  ]
+}

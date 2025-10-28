@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_benthayer_git-gud_error_readme_merge_k4",
+  "repo_name": "benthayer_git-gud",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip3 install git gud` is incorrect because it tries to install two separate packages, 'git' and 'gud', instead of the single 'git-gud' package.",
+      "correction_candidates": [
+        "pip3 install git-gud",
+        "pip3 install \"git-gud\"",
+        "pip install git-gud",
+        "python3 -m pip install git-gud"
+      ],
+      "golden_answer": "pip3 install git-gud"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly suggest running `git gud` before specifying that the command must be run inside a new empty directory, which can cause the tool to fail or modify an unintended directory.",
+      "correction_candidates": [
+        "To get started, you need to initialize Git Gud in an empty directory. Once in the directory, run `git gud`.",
+        "To get started, first run `git gud init` in an empty directory.",
+        "Run `git gud` in a new directory to get started.",
+        "To get started, you need to initialize Git Gud in an empty directory."
+      ],
+      "golden_answer": "To get started, you need to initialize Git Gud in an empty directory."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'How to install' section describes the Python requirement but omits the actual command needed to install the `git-gud` package using pip.",
+      "correction_candidates": [
+        "After 'installing is simple:', add the line `pip3 install git-gud`.",
+        "After 'installing is simple:', add the command `python3 -m pip install git-gud`.",
+        "Change the `git gud` command block to `pip3 install git-gud`.",
+        "After 'installing is simple:', add the following block:\n```\npip3 install git-gud\n```"
+      ],
+      "golden_answer": "After 'installing is simple:', add the following block:\n```\npip3 install git-gud\n```"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Added instruction to download a configuration file from a non-existent path 'https://github.com/benthayer/git-gud/config/setup.yaml'",
+      "correction_candidates": [
+        "Remove the instruction about downloading the configuration file entirely.",
+        "Make sure to clone the repository from https://github.com/benthayer/git-gud before installation.",
+        "Make sure to download the source code from https://github.com/benthayer/git-gud/releases before installation.",
+        "Make sure to check the documentation at https://github.com/benthayer/git-gud/blob/main/README.md before installation."
+      ],
+      "golden_answer": "Remove the instruction about downloading the configuration file entirely."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added a specific version constraint '==1.2.3' to the installation command, which may not exist or be the correct version",
+      "correction_candidates": [
+        "pip3 install git-gud",
+        "pip3 install git-gud --upgrade",
+        "pip3 install git-gud>=1.0.0",
+        "pip3 install git-gud --pre"
+      ],
+      "golden_answer": "pip3 install git-gud"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Changed the startup command from 'git gud' to 'git-gud start' which uses incorrect syntax with hyphens instead of spaces",
+      "correction_candidates": [
+        "git gud",
+        "gitgud",
+        "python -m git_gud",
+        "git gud init"
+      ],
+      "golden_answer": "git gud"
+    }
+  ]
+}

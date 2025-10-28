@@ -1,0 +1,29 @@
+{
+  "readme": "juju_python-libjuju_error_readme_3",
+  "repo_name": "juju_python-libjuju",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The logging is configured after the main async function `deploy()` is called. This is a logical order error, as any logs emitted during the execution of `deploy()` will not be formatted or displayed as configured.",
+      "correction_candidates": [
+        "Move the `logging.basicConfig` call to the top of the `deploy` function.",
+        "Move the `jasyncio.run(deploy())` call to be the last statement in the `main` function.",
+        "Remove the logging configuration as it is not essential for the example.",
+        "Change `logging.basicConfig` to `logging.getLogger().basicConfig`."
+      ],
+      "golden_answer": "Move the `jasyncio.run(deploy())` call to be the last statement in the `main` function."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The tox command is missing the '--' separator, which is necessary to correctly pass arguments to the command run by the tox environment. Without it, the script path may not be passed correctly.",
+      "correction_candidates": [
+        "Change the command to `tox -e example --file examples/connect_current_model.py`.",
+        "Change the command to `tox -e example -- examples/connect_current_model.py`.",
+        "Change the command to `tox -e example -c examples/connect_current_model.py`.",
+        "Change the command to `tox run -e example -- examples/connect_current_model.py`."
+      ],
+      "golden_answer": "Change the command to `tox -e example -- examples/connect_current_model.py`."
+    }
+  ]
+}

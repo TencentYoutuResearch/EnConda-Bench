@@ -1,0 +1,18 @@
+{
+  "readme": "transientskp_tkp_error_readme_1_only_E2",
+  "repo_name": "transientskp_tkp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is `pytest`, but the project may be configured to use a different test runner, such as `setup.py test`, or pytest may not be installed.",
+      "correction_candidates": [
+        "The test command should be `python setup.py test`.",
+        "The test command should be `make test`.",
+        "You must first install pytest using `pip install pytest`.",
+        "The test command should be `python -m unittest discover`."
+      ],
+      "golden_answer": "The test command should be `python setup.py test`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_1_only_E7",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only supported on Python 3.8, while it also supports Python 3.9.",
+      "correction_candidates": [
+        "This package is supported in python 3.8 and later.",
+        "This package is supported in python > 3.7",
+        "This package is supported in python 3.8 and 3.9",
+        "This package is supported in python 3"
+      ],
+      "golden_answer": "This package is supported in python 3.8 and 3.9"
+    }
+  ]
+}

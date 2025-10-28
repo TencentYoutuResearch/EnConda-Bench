@@ -1,0 +1,29 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_7",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version mismatch - specifies web2py version 2.18.5 instead of the required 2.14.6",
+      "correction_candidates": [
+        "Install web2py (We need 2.14.6 version only) in a directory.",
+        "Install web2py (We need 2.17.1 version only) in a directory.",
+        "Install web2py (We need 2.16.1 version only) in a directory.",
+        "Install web2py (We need latest version only) in a directory."
+      ],
+      "golden_answer": "Install web2py (We need 2.14.6 version only) in a directory."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Inconsistent pip command usage - first command uses pip3 while second uses pip, potentially causing dependency installation issues",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip3 install -r requirements.txt --proxy=<proxy address>",
+        "python -m pip install -r requirements.txt",
+        "python3 -m pip install -r requirements.txt --proxy=<proxy address>"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

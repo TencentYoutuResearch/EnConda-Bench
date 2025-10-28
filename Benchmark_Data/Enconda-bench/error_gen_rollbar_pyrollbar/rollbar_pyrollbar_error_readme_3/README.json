@@ -1,0 +1,29 @@
+{
+  "readme": "rollbar_pyrollbar_error_readme_3",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The contribution workflow incorrectly lists pushing to a branch before committing changes. A commit must be made locally before it can be pushed to a remote repository.",
+      "correction_candidates": [
+        "3. Commit your changes (```git commit -am 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)",
+        "3. Stage your changes (```git add .```) and commit them (```git commit -m 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)",
+        "3. Commit your changes to a new branch (```git commit -am 'Added some feature'```)\n4. Push the new branch to origin (```git push origin my-new-feature```)",
+        "3. Commit your changes using `git commit -am 'Added some feature'`\n4. Push to the branch using `git push origin my-new-feature`"
+      ],
+      "golden_answer": "3. Commit your changes (```git commit -am 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is specified as `pytest`, but the project is configured to run tests via `python setup.py test`. Using `pytest` directly may fail if not properly configured.",
+      "correction_candidates": [
+        "To run the tests: `python setup.py test`",
+        "To run the tests: `python -m unittest discover`",
+        "To run the tests: `tox`",
+        "To run the tests: `py.test rollbar/test`"
+      ],
+      "golden_answer": "To run the tests: `python setup.py test`"
+    }
+  ]
+}

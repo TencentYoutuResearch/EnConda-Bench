@@ -1,0 +1,18 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_5_only_E7",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies Python 2.7 as required version when gsutil now supports Python 3.x",
+      "correction_candidates": [
+        "Make sure to install Python 3.7 or later as gsutil requires this version to function properly.",
+        "Make sure to install Python 3.6+ as gsutil has dropped Python 2 support.",
+        "Ensure you have Python 3.8 or newer installed for optimal gsutil performance.",
+        "Install Python 3.7 through 3.11 as these are the supported Python versions for gsutil."
+      ],
+      "golden_answer": "Make sure to install Python 3.7 or later as gsutil requires this version to function properly."
+    }
+  ]
+}

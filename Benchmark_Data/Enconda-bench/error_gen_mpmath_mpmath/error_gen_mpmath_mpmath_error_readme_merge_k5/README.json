@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_mpmath_mpmath_error_readme_merge_k5",
+  "repo_name": "mpmath_mpmath",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install --source .` is invalid for installing a package from a local source directory.",
+      "correction_candidates": [
+        "pip install .",
+        "python setup.py install .",
+        "pip install -e .",
+        "pip install from-source ."
+      ],
+      "golden_answer": "pip install ."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `numpy` as a required prerequisite for `mpmath` that must be installed separately, which is unnecessary.",
+      "correction_candidates": [
+        "Remove the sentence `First, ensure you have numpy installed by running ``pip install numpy``.`",
+        "Change `pip install numpy` to `pip install gmpy2`.",
+        "Change `pip install numpy` to `pip install sympy`.",
+        "Move the numpy installation instruction to after the mpmath installation instruction."
+      ],
+      "golden_answer": "Remove the sentence `First, ensure you have numpy installed by running ``pip install numpy``.`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README specifies an incorrect directory name (`documentation` instead of `docs`) for finding the local documentation files.",
+      "correction_candidates": [
+        "Change `documentation directory` to `docs directory`.",
+        "Change `documentation directory` to `doc/source directory`.",
+        "Change `documentation directory` to `mpmath/docs directory`.",
+        "Change `documentation directory` to `the project's root directory`."
+      ],
+      "golden_answer": "Change `documentation directory` to `docs directory`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install mpmath --py` contains an invalid flag `--py`, causing the installation to fail.",
+      "correction_candidates": [
+        "pip install mpmath",
+        "pip install mpmath --python",
+        "python -m pip install mpmath",
+        "pip install \"mpmath\""
+      ],
+      "golden_answer": "pip install mpmath"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly instructs users to run tests before installing the package, which is the wrong order and will fail because the package and its dependencies are not yet installed.",
+      "correction_candidates": [
+        "Change 'Before installing, you should first run the unit tests...' to 'After installing, the unit tests can be run...'",
+        "Replace 'Before installing, you should first run the unit tests...' with 'The unit tests in mpmath/tests/ can be run...'",
+        "Change 'Before installing, you should first run the unit tests...' to 'To contribute, you should first run the unit tests...'",
+        "Move the entire 'Running tests' section to be after the 'Download & installation' section."
+      ],
+      "golden_answer": "Replace 'Before installing, you should first run the unit tests...' with 'The unit tests in mpmath/tests/ can be run...'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README omits the command or tool (`pytest`) required to run the unit tests, leaving the user without instructions on how to execute them.",
+      "correction_candidates": [
+        "To run the unit tests in mpmath/tests/, install pytest (`pip install pytest`) and then run `pytest`.",
+        "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation.",
+        "The unit tests in mpmath/tests/ can be run using the unittest module: `python -m unittest discover`.",
+        "The unit tests in mpmath/tests/ can be run with the command `python run_tests.py`."
+      ],
+      "golden_answer": "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (numpy scipy) to the pip install command",
+      "correction_candidates": [
+        "``pip install mpmath``",
+        "``pip install --user mpmath``",
+        "``python -m pip install mpmath``",
+        "``pip3 install mpmath``"
+      ],
+      "golden_answer": "``pip install mpmath``"
+    }
+  ]
+}

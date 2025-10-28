@@ -1,0 +1,29 @@
+{
+  "readme": "neurogym_neurogym_error_readme_2",
+  "repo_name": "neurogym_neurogym",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation commands are in the wrong logical order. The `pip install -e .` command must be run from within the `neurogym` directory, but the instructions list it before the `cd neurogym` command.",
+      "correction_candidates": [
+        "pip install -e ./neurogym\ncd neurogym",
+        "cd neurogym\npip install -e .",
+        "pip install -e neurogym\ncd neurogym",
+        "git clone https://github.com/neurogym/neurogym.git && pip install -e ."
+      ],
+      "golden_answer": "cd neurogym\npip install -e ."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the list of implemented tasks points to a non-existent file `tasks.md`. The correct filename is `envs.md`.",
+      "correction_candidates": [
+        "[here](https://github.com/gyyang/neurogym/blob/master/docs/environments.md)",
+        "[here](https://neurogym.github.io/envs/)",
+        "[here](https://github.com/gyyang/neurogym/blob/master/docs/envs.md)",
+        "[here](https://github.com/gyyang/neurogym/blob/master/neurogym/envs/README.md)"
+      ],
+      "golden_answer": "[here](https://github.com/gyyang/neurogym/blob/master/docs/envs.md)"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_benadida_helios-server_error_readme_merge_k2",
+  "repo_name": "benadida_helios-server",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The python dependencies are installed globally using pip before the virtual environment is created and activated, which is the wrong order.",
+      "correction_candidates": [
+        "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally.",
+        "You must run `pip install --user -r requirements.txt` to install packages for the current user.",
+        "The virtual environment should be created in the system's root directory, not the project directory.",
+        "You should install dependencies one by one instead of using `requirements.txt`."
+      ],
+      "golden_answer": "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py startserver 8000` is incorrect for starting a Django development server. The correct command is `runserver`.",
+      "correction_candidates": [
+        "The command to start the development server should be `python manage.py runserver 8000`.",
+        "The command should be `python manage.py run`.",
+        "You need to specify the IP address, for example: `python manage.py startserver 0.0.0.0:8000`.",
+        "Use `django-admin startserver 8000` instead of `manage.py`."
+      ],
+      "golden_answer": "The command to start the development server should be `python manage.py runserver 8000`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The dependency installation step `pip install django` is incomplete. It will miss all other project dependencies listed in `requirements.txt`.",
+      "correction_candidates": [
+        "To install all necessary dependencies, you should use the command `pip install -r requirements.txt`.",
+        "You also need to install `psycopg2-binary` and `gunicorn` manually.",
+        "The command should be `pip install django --upgrade` to get the latest version.",
+        "You should run `pip freeze > requirements.txt` first to generate the dependencies file."
+      ],
+      "golden_answer": "To install all necessary dependencies, you should use the command `pip install -r requirements.txt`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "gazzolalab_miv-os_error_readme_1_only_E2",
+  "repo_name": "gazzolalab_miv-os",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install miv_os` is incorrect. The package name on PyPI uses a hyphen (MiV-OS), not an underscore.",
+      "correction_candidates": [
+        "pip install MiV-OS",
+        "pip install miv-os-package",
+        "pip install \"MiV_OS\"",
+        "pip install git+https://github.com/GazzolaLab/MiV-OS.git"
+      ],
+      "golden_answer": "pip install MiV-OS"
+    }
+  ]
+}

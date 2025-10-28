@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_1_only_E7",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version is specified as 'python 3', which is ambiguous and can lead to compatibility issues as it doesn't specify the required minor version.",
+      "correction_candidates": [
+        "Change 'python 3' to 'python > 3.6'.",
+        "Change 'python 3' to 'python 3.9'.",
+        "Change 'python 3' to 'python'.",
+        "Change 'python 3' to 'python 3.9+'."
+      ],
+      "golden_answer": "Change 'python 3' to 'python 3.9'."
+    }
+  ]
+}

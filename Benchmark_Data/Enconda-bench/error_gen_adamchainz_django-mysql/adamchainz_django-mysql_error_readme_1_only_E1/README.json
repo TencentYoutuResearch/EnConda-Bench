@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_1_only_E1",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions omit the `mysqlclient` dependency, which is required for Django to communicate with a MySQL database.",
+      "correction_candidates": [
+        "Add a step to install system dependencies like `libmysqlclient-dev`.",
+        "The command should be `pip install django-mysql mysqlclient`.",
+        "Change the installation command to `pip install django-mysql[mysql]`.",
+        "Mention that `PyMySQL` must also be installed separately."
+      ],
+      "golden_answer": "The command should be `pip install django-mysql mysqlclient`."
+    }
+  ]
+}

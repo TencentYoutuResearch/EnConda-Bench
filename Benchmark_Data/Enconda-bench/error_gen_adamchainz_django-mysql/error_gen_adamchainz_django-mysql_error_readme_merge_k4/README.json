@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_adamchainz_django-mysql_error_readme_merge_k4",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions tell the user to install `django-mysql` globally with pip before creating and activating a virtual environment.",
+      "correction_candidates": [
+        "Move the `pip install django-mysql` command to be after the `source venv/bin/activate` command.",
+        "Run `pip install django-mysql --user` instead of a global install.",
+        "Combine all steps into one command: `python3 -m venv venv && source venv/bin/activate && pip install django-mysql`.",
+        "Remove the virtual environment steps as they are optional."
+      ],
+      "golden_answer": "Move the `pip install django-mysql` command to be after the `source venv/bin/activate` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions omit the `mysqlclient` dependency, which is required for Django to communicate with a MySQL database.",
+      "correction_candidates": [
+        "Add a step to install system dependencies like `libmysqlclient-dev`.",
+        "The command should be `pip install django-mysql mysqlclient`.",
+        "Change the installation command to `pip install django-mysql[mysql]`.",
+        "Mention that `PyMySQL` must also be installed separately."
+      ],
+      "golden_answer": "The command should be `pip install django-mysql mysqlclient`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The installation command pins `django-mysql` to version 2.0.0, which is outdated and likely incompatible with modern Django versions.",
+      "correction_candidates": [
+        "The command should be `pip install django-mysql>=4.0.0`.",
+        "Remove the version specifier `==2.0.0` to install the latest version.",
+        "Change the version to `pip install django-mysql~=4.0`.",
+        "The comment '# For older Django projects' should be removed as it is confusing."
+      ],
+      "golden_answer": "Remove the version specifier `==2.0.0` to install the latest version."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command includes an invalid flag `--fast`, which will cause the command to fail.",
+      "correction_candidates": [
+        "Remove the `--fast` flag from the command.",
+        "Replace `--fast` with the correct flag `--no-cache-dir`.",
+        "Replace `--fast` with `--use-feature=fast-deps`.",
+        "The `--fast` flag should be placed before the package name."
+      ],
+      "golden_answer": "Remove the `--fast` flag from the command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions mandate installing the `PyMySQL` package, which is an alternative database driver, not a required dependency for `django-mysql`.",
+      "correction_candidates": [
+        "Replace `pip install PyMySQL` with `pip install mysqlclient`.",
+        "Remove the step for installing `PyMySQL` as it's not a direct dependency.",
+        "Change the second command to `pip install django-mysql[pymysql]` and combine the steps.",
+        "Explain that either `PyMySQL` or `mysqlclient` can be used, but `mysqlclient` is recommended."
+      ],
+      "golden_answer": "Remove the step for installing `PyMySQL` as it's not a direct dependency."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions specify a hardcoded file path `myproject/settings/base.py` for the Django settings, which is a common pattern but not guaranteed to exist in all projects.",
+      "correction_candidates": [
+        "Change the path to the more standard `myproject/settings.py`.",
+        "Refer to \"your project's settings file\" instead of a specific path.",
+        "Provide alternative paths, such as `config/settings.py` or `project/settings.py`.",
+        "Remove the file path and just instruct the user to add the app to `INSTALLED_APPS` in their settings."
+      ],
+      "golden_answer": "Refer to \"your project's settings file\" instead of a specific path."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added incorrect system dependency installation command and forced specific version of mysqlclient without proper context",
+      "correction_candidates": [
+        "Remove the installation instructions and refer users to the official installation documentation",
+        "Install system dependencies with `brew install mysql` on macOS and use `pip install django-mysql` without version pinning",
+        "Use `apt-get install default-libmysqlclient-dev` and install with `pip install django-mysql` allowing automatic dependency resolution",
+        "Install with conda using `conda install django-mysql` and avoid manual system dependency management"
+      ],
+      "golden_answer": "Remove the installation instructions and refer users to the official installation documentation"
+    }
+  ]
+}

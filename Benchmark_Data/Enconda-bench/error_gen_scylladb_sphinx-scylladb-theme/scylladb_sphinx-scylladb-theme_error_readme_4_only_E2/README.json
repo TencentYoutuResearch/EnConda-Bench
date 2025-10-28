@@ -1,0 +1,18 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_4_only_E2",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment, `source venv/bin`, is incomplete. The correct command on POSIX systems is `source venv/bin/activate`.",
+      "correction_candidates": [
+        "Change `source venv/bin` to `source venv/bin/activate`.",
+        "Change `source venv/bin` to `. venv/bin/activate`.",
+        "Change `source venv/bin` to `venv\\Scripts\\activate` for Windows users.",
+        "Change `source venv/bin` to `run venv/bin/activate`."
+      ],
+      "golden_answer": "Change `source venv/bin` to `source venv/bin/activate`."
+    }
+  ]
+}

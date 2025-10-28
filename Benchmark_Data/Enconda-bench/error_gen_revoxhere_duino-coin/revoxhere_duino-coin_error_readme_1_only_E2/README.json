@@ -1,0 +1,18 @@
+{
+  "readme": "revoxhere_duino-coin_error_readme_1_only_E2",
+  "repo_name": "revoxhere_duino-coin",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The Windows pip installation command is missing the `-r` flag, causing pip to try to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change `py -m pip install requirements.txt` to `py -m pip install -r requirements.txt`.",
+        "Change `py -m pip install requirements.txt` to `pip install from requirements.txt`.",
+        "Manually open `requirements.txt` and install each package one by one using `py -m pip install <package_name>`.",
+        "Change `py -m pip install requirements.txt` to `py -m pip install --requirements requirements.txt`."
+      ],
+      "golden_answer": "Change `py -m pip install requirements.txt` to `py -m pip install -r requirements.txt`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "elifesciences_elife-bot_error_readme_2",
+  "repo_name": "elifesciences_elife-bot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that the `django` library must be installed manually, which is not a dependency for this project and contradicts that dependencies are handled by builder libraries.",
+      "correction_candidates": [
+        "Remove the sentence \"First, ensure you have installed `django` by running `pip install django`.\"",
+        "Replace `pip install django` with `pip install -r requirements.txt`.",
+        "Change the sentence to \"Dependencies are managed by eLife builder libraries.\"",
+        "Remove the entire \"Installation and tests\" section as it is handled by builder libraries."
+      ],
+      "golden_answer": "Remove the sentence \"First, ensure you have installed `django` by running `pip install django`.\""
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly specifies that the project is only compatible with Python 2.7, which is an outdated and likely incorrect version constraint for a modern project.",
+      "correction_candidates": [
+        "Remove the sentence \"Note: This project is only compatible with Python 2.7 and may not work with other versions.\"",
+        "Change the sentence to \"This project is compatible with Python 3.6+.\"",
+        "Change the test command to `python3 -m pytest...` to specify Python 3.",
+        "Add a note: \"Please check the project's configuration files for specific Python version requirements.\""
+      ],
+      "golden_answer": "Remove the sentence \"Note: This project is only compatible with Python 2.7 and may not work with other versions.\""
+    }
+  ]
+}

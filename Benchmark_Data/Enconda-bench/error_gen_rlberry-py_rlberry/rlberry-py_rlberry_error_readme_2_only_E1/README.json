@@ -1,0 +1,18 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_2_only_E1",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly include a preliminary step to install a non-existent package `rlberry-core`. This command will fail as the package is not on PyPI.",
+      "correction_candidates": [
+        "Change `pip install rlberry-core` to `pip install rlberry[core]`.",
+        "Remove the line `pip install rlberry-core` and its preceding text.",
+        "Combine the two commands into `pip install rlberry-core rlberry`.",
+        "Replace `pip install rlberry-core` with `pip install git+https://github.com/rlberry-py/rlberry.git#subdirectory=core`."
+      ],
+      "golden_answer": "Remove the line `pip install rlberry-core` and its preceding text."
+    }
+  ]
+}

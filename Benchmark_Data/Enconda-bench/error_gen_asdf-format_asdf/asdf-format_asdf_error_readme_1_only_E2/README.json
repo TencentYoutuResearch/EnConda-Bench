@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf_error_readme_1_only_E2",
+  "repo_name": "asdf-format_asdf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests from an installed version of the package, `$ pytest asdf`, is incorrect. It is missing the `--pyargs` flag needed to correctly locate the package.",
+      "correction_candidates": [
+        "$ pytest --pyargs asdf",
+        "$ python -m pytest asdf",
+        "$ pytest asdf/tests",
+        "$ pytest"
+      ],
+      "golden_answer": "$ pytest --pyargs asdf"
+    }
+  ]
+}

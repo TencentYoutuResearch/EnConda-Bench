@@ -1,0 +1,29 @@
+{
+  "readme": "revoxhere_duino-coin_error_readme_6",
+  "repo_name": "revoxhere_duino-coin",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Using Python 2 instead of Python 3 in Linux installation commands",
+      "correction_candidates": [
+        "Change all python2 references to python3",
+        "Add version specification like python>=3.6",
+        "Use python without version number",
+        "Install both python2 and python3 packages"
+      ],
+      "golden_answer": "Change all python2 references to python3"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax with --version parameter in Windows pip install command",
+      "correction_candidates": [
+        "py -m pip install -r requirements.txt",
+        "python -m pip install -r requirements.txt",
+        "pip3 install -r requirements.txt",
+        "py -3 -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "py -m pip install -r requirements.txt"
+    }
+  ]
+}

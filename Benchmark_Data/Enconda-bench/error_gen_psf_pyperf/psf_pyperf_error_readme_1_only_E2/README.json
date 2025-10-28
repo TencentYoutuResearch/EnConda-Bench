@@ -1,0 +1,18 @@
+{
+  "readme": "psf_pyperf_error_readme_1_only_E2",
+  "repo_name": "psf_pyperf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pyperf timeit` command uses an incorrect parameter `--output` to specify the output file, which should be `-o` or `--output-file`.",
+      "correction_candidates": [
+        "$ python3 -m pyperf timeit '[1,2]*1000' -o bench.json",
+        "$ python3 -m pyperf timeit '[1,2]*1000' --out bench.json",
+        "$ python3 -m pyperf timeit '[1,2]*1000' > bench.json",
+        "$ python3 -m pyperf timeit '[1,2]*1000' --file bench.json"
+      ],
+      "golden_answer": "$ python3 -m pyperf timeit '[1,2]*1000' -o bench.json"
+    }
+  ]
+}

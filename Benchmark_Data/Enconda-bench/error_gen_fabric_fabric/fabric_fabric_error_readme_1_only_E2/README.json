@@ -1,0 +1,18 @@
+{
+  "readme": "fabric_fabric_error_readme_1_only_E2",
+  "repo_name": "fabric_fabric",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `source venv/bin/activate.sh` is incorrect for activating a standard Python virtual environment on Linux/macOS; the activation script is named `activate`.",
+      "correction_candidates": [
+        "Change the activation command to `source venv/bin/activate`.",
+        "Use the command `. venv/bin/activate` which is a shorthand for source.",
+        "On Windows, the command is `venv\\Scripts\\activate`.",
+        "Rename the activation script to `activate.sh`."
+      ],
+      "golden_answer": "Change the activation command to `source venv/bin/activate`."
+    }
+  ]
+}

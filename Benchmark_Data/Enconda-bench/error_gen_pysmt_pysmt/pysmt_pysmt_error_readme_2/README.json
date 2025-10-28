@@ -1,0 +1,29 @@
+{
+  "readme": "pysmt_pysmt_error_readme_2",
+  "repo_name": "pysmt_pysmt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly claims that pySMT is only compatible with Python 2.7, which is outdated and false.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7 compatibility. pySMT works with modern Python 3 versions.",
+        "The note should say pySMT is compatible with Python 3.6 and newer.",
+        "The note is incorrect and should be deleted as the library is actively maintained for Python 3.",
+        "The note should be updated to state pySMT supports both Python 2.7 and Python 3.x."
+      ],
+      "golden_answer": "Remove the note about Python 2.7 compatibility. pySMT works with modern Python 3 versions."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that a system-level package `python-mathsat` must be installed, which is not the standard procedure and the package may not exist.",
+      "correction_candidates": [
+        "Remove the instruction to install `python-mathsat`. The `pysmt-install` script handles solver installation.",
+        "The instruction should be to install `mathsat` from source, not via a system package manager.",
+        "The package is actually called `libmathsat-dev`, not `python-mathsat`.",
+        "The correct way is to use `pip install mathsat-python` before installing pysmt."
+      ],
+      "golden_answer": "Remove the instruction to install `python-mathsat`. The `pysmt-install` script handles solver installation."
+    }
+  ]
+}

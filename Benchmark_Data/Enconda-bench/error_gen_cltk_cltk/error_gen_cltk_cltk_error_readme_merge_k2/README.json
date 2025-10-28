@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_cltk_cltk_error_readme_merge_k2",
+  "repo_name": "cltk_cltk",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly state that language models must be downloaded before installing the `cltk` package. Models are typically downloaded after installation using the library's own functions.",
+      "correction_candidates": [
+        "Remove the instruction about downloading models before installation.",
+        "Move the instruction about downloading models to a new 'Usage' section after 'Installation'.",
+        "Change the instruction to 'After installing, download models by running `import cltk; cltk.download_models()`'.",
+        "Clarify that model download is an optional step for offline use."
+      ],
+      "golden_answer": "Remove the instruction about downloading models before installation."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install pip using `python get-pip.py` is incomplete and potentially confusing. It doesn't explain where to get `get-pip.py`, and modern Python installations usually include pip.",
+      "correction_candidates": [
+        "Replace the instruction with `python -m ensurepip --upgrade`.",
+        "Remove the instruction about installing pip, as it's a standard tool.",
+        "Add a link to the official pip installation guide: `https://pip.pypa.io/en/stable/installation/`.",
+        "Change the command to `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` followed by `python get-pip.py`."
+      ],
+      "golden_answer": "Remove the instruction about installing pip, as it's a standard tool."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installation command specifies unnecessary and potentially conflicting dependency versions that are not required for CLTK",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip install cltk --upgrade",
+        "$ pip install cltk[all]",
+        "$ conda install -c conda-forge cltk"
+      ],
+      "golden_answer": "$ pip install cltk"
+    }
+  ]
+}

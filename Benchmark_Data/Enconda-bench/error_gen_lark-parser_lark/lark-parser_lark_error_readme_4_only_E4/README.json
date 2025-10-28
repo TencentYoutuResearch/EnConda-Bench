@@ -1,0 +1,18 @@
+{
+  "readme": "lark-parser_lark_error_readme_4_only_E4",
+  "repo_name": "lark-parser_lark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the JSON tutorial is broken. The path 'docs/tutorial/json_tutorial.md' is incorrect.",
+      "correction_candidates": [
+        "Correct the path to `[Tutorial](/docs/json_tutorial.md)`.",
+        "Correct the path to `[Tutorial](/docs/tutorials/json.md)`.",
+        "Correct the path to `[Tutorial](examples/json_tutorial.md)`.",
+        "Use the full URL: `[Tutorial](https://lark-parser.readthedocs.io/en/latest/json_tutorial.html)`."
+      ],
+      "golden_answer": "Correct the path to `[Tutorial](/docs/json_tutorial.md)`."
+    }
+  ]
+}

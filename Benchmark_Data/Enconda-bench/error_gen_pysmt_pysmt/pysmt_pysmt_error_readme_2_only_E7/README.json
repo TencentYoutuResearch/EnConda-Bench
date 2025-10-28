@@ -1,0 +1,18 @@
+{
+  "readme": "pysmt_pysmt_error_readme_2_only_E7",
+  "repo_name": "pysmt_pysmt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly claims that pySMT is only compatible with Python 2.7, which is outdated and false.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7 compatibility. pySMT works with modern Python 3 versions.",
+        "The note should say pySMT is compatible with Python 3.6 and newer.",
+        "The note is incorrect and should be deleted as the library is actively maintained for Python 3.",
+        "The note should be updated to state pySMT supports both Python 2.7 and Python 3.x."
+      ],
+      "golden_answer": "Remove the note about Python 2.7 compatibility. pySMT works with modern Python 3 versions."
+    }
+  ]
+}

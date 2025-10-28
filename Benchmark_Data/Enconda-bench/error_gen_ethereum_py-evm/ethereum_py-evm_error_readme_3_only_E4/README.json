@@ -1,0 +1,18 @@
+{
+  "readme": "ethereum_py-evm_error_readme_3_only_E4",
+  "repo_name": "ethereum_py-evm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Snake Charmers Tactical Manual' points to a non-existent file within the 'py-evm' repository.",
+      "correction_candidates": [
+        "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual'.",
+        "Change the link to 'https://github.com/ethereum/py-evm/blob/main/CONTRIBUTING.md'.",
+        "Change the link to 'https://py-evm.readthedocs.io/en/latest/contributing.html#snake-charmers-tactical-manual'.",
+        "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual/blob/master/README.md'."
+      ],
+      "golden_answer": "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual'."
+    }
+  ]
+}

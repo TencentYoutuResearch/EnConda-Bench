@@ -1,0 +1,18 @@
+{
+  "readme": "quantumjot_btrack_error_readme_3_only_E4",
+  "repo_name": "quantumjot_btrack",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the developer guide in the 'Development' section is broken. It points to `.../developer_guide` instead of the correct path `.../dev_guide`, resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link URL to `https://btrack.readthedocs.io/en/latest/dev_guide`.",
+        "Change the link URL to `https://btrack.readthedocs.io/en/latest/development.html`.",
+        "Change the link URL to point to the `CONTRIBUTING.md` file on GitHub.",
+        "Remove the link and just refer to the documentation."
+      ],
+      "golden_answer": "Change the link URL to `https://btrack.readthedocs.io/en/latest/dev_guide`."
+    }
+  ]
+}

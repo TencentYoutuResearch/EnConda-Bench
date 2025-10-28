@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_mdolab_pygeo_error_readme_merge_k2",
+  "repo_name": "mdolab_pygeo",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise running `pip install .` before creating and activating the virtual environment, which would cause the package to be installed in the global or user site-packages instead of the intended isolated environment.",
+      "correction_candidates": [
+        "First, create and activate a virtual environment, then run `pip install .`.",
+        "First, run `pip install . --user`, then create and activate a virtual environment.",
+        "First, create a virtual environment, then run `pip install .` from the project root without activating the environment.",
+        "The commands are correct but should be run with `python3` instead of `python`."
+      ],
+      "golden_answer": "First, create and activate a virtual environment, then run `pip install .`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to build the local documentation is `make docs`, which is incorrect. The correct command specified in the Makefile is `make html`.",
+      "correction_candidates": [
+        "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal.",
+        "To locally build the documentation, run `sphinx-build -b html doc doc/_build` from the root directory.",
+        "To locally build the documentation, enter the `doc` folder and enter `make` in terminal.",
+        "To locally build the documentation, enter the `doc` folder and run the `build.sh` script."
+      ],
+      "golden_answer": "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions mandate installing a system-level package `python3-vtk7` using `apt-get`. This is an unnecessary dependency for the core library, specific to Debian-based systems, and may conflict with the version required by pip.",
+      "correction_candidates": [
+        "Remove the `sudo apt-get install python3-vtk7` command. Python dependencies, including `vtk`, are handled by `pip` when installing the package.",
+        "Replace the `apt-get` command with `pip install vtk`.",
+        "Replace the `apt-get` command with `conda install vtk`.",
+        "Update the package name to a more recent version, like `python3-vtk9`."
+      ],
+      "golden_answer": "Remove the `sudo apt-get install python3-vtk7` command. Python dependencies, including `vtk`, are handled by `pip` when installing the package."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions for building the documentation specify entering the `docs` folder, but the correct folder name containing the Makefile is `doc`.",
+      "correction_candidates": [
+        "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal.",
+        "To locally build the documentation, run `make -C doc html` from the root directory.",
+        "The folder `docs` must be renamed to `doc` before running the command.",
+        "To locally build the documentation, enter the `doc/source` folder and enter `make html` in terminal."
+      ],
+      "golden_answer": "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal."
+    }
+  ]
+}

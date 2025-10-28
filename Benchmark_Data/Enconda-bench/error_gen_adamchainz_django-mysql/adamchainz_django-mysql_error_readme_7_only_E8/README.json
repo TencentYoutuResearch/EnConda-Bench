@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_7_only_E8",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Added confusing and unnecessary configuration steps that don't align with the package's actual installation process",
+      "correction_candidates": [
+        "Remove the configuration template reference and direct users to the official documentation",
+        "Provide actual configuration examples inline instead of referencing missing files",
+        "Replace with a simple pip install command and link to setup documentation",
+        "Add a proper quickstart section with real configuration examples"
+      ],
+      "golden_answer": "Remove the configuration template reference and direct users to the official documentation"
+    }
+  ]
+}

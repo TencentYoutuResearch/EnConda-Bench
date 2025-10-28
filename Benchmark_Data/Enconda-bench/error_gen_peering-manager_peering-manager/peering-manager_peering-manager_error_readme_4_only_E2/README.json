@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_4_only_E2",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements.txt` is incorrect. It attempts to install a package named 'requirements.txt' instead of installing the packages listed within the file. The correct command requires the `-r` flag.",
+      "correction_candidates": [
+        "Change the command to `pip install -r requirements.txt`.",
+        "Change the command to `pip install --file requirements.txt`.",
+        "Change the command to `pip -r install requirements.txt`.",
+        "Change the command to `python -m pip install from-requirements requirements.txt`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    }
+  ]
+}

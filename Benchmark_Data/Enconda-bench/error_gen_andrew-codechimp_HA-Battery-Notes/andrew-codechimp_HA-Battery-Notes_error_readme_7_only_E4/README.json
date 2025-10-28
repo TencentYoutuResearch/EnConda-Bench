@@ -1,0 +1,18 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_7_only_E4",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Added reference to non-existent installation guide file path",
+      "correction_candidates": [
+        "Remove the reference to `docs/installation/setup.md` as this file doesn't exist",
+        "Change to reference the existing documentation at the provided URL instead",
+        "Update path to `docs/setup/installation.md` for correct file location",
+        "Replace with link to `README.md` installation section"
+      ],
+      "golden_answer": "Remove the reference to `docs/installation/setup.md` as this file doesn't exist"
+    }
+  ]
+}

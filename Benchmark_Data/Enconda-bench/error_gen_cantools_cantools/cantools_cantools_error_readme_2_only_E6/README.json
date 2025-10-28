@@ -1,0 +1,18 @@
+{
+  "readme": "cantools_cantools_error_readme_2_only_E6",
+  "repo_name": "cantools_cantools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The contribution guidelines list running linters before installing the necessary development dependencies, which will fail because the linters are not yet installed.",
+      "correction_candidates": [
+        "Move the 'Run the linters' step to be after the 'Install prerequisites' step.",
+        "Combine the 'Run the linters' and 'Run the tests' steps into a single step after installation.",
+        "The correct order is: 1. Fork, 2. Install prerequisites, 3. Implement, 4. Implement test cases, 5. Run linters, 6. Run tests, 7. Create pull request.",
+        "Move the 'Install prerequisites' step to be step 2."
+      ],
+      "golden_answer": "Move the 'Install prerequisites' step to be step 2."
+    }
+  ]
+}

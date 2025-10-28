@@ -1,0 +1,18 @@
+{
+  "readme": "dagshub_client_error_readme_1_only_E2",
+  "repo_name": "dagshub_client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install dagshub-client` is incorrect. The correct package name on PyPI is `dagshub`.",
+      "correction_candidates": [
+        "pip install dagshub",
+        "pip install dagshub --client",
+        "python -m pip install dagshub",
+        "pip install dagshub.client"
+      ],
+      "golden_answer": "pip install dagshub"
+    }
+  ]
+}

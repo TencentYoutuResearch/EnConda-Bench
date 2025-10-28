@@ -1,0 +1,29 @@
+{
+  "readme": "ethereum_py-evm_error_readme_2",
+  "repo_name": "ethereum_py-evm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'virtualenv' command does not specify a Python version, which can lead to the creation of a virtual environment with an incompatible system default Python version (e.g., Python 2).",
+      "correction_candidates": [
+        "Change 'virtualenv venv' to 'python3 -m venv venv'.",
+        "Change 'virtualenv venv' to 'virtualenv --python=python3 venv'.",
+        "Add 'python --version' before the 'virtualenv venv' command to ensure it's Python 3.",
+        "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+      ],
+      "golden_answer": "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command for installing development dependencies is missing the '[dev]' extra, which results in necessary tools for development (like testing and linting packages) not being installed.",
+      "correction_candidates": [
+        "Change 'python -m pip install -e .' to 'python -m pip install -e .[dev]'.",
+        "Add a new command 'pip install -r requirements-dev.txt' after 'python -m pip install -e .'.",
+        "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'.",
+        "Change 'python -m pip install -e .' to 'pip install -e \".[dev]\"'."
+      ],
+      "golden_answer": "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'."
+    }
+  ]
+}

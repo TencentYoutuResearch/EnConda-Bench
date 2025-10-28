@@ -1,0 +1,29 @@
+{
+  "readme": "libensemble_libensemble_error_readme_3",
+  "repo_name": "libensemble_libensemble",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest installing the package globally and only then mention creating a virtual environment, which is the wrong order and bad practice.",
+      "correction_candidates": [
+        "Move the recommendation to use a virtual environment to before the `pip install` command.",
+        "Replace the instructions with: `python -m venv venv && source venv/bin/activate && pip install libensemble`.",
+        "Change `pip install libensemble` to `pip install --user libensemble`.",
+        "Remove the sentence about creating a virtual environment."
+      ],
+      "golden_answer": "Move the recommendation to use a virtual environment to before the `pip install` command."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The README omits the command needed to run the basic usage script, leaving the user unsure how to execute the example code.",
+      "correction_candidates": [
+        "Change \"Run the following script:\" to \"Run the following via `python this_file.py --comms local --nworkers 4`:\".",
+        "Add the command `python your_script_name.py --comms local --nworkers 4` after the code block.",
+        "Add a comment inside the code block: `# To run: python this_file.py --comms local --nworkers 4`.",
+        "Change \"Run the following script:\" to \"Run the following via `python this_file.py`:`\"."
+      ],
+      "golden_answer": "Change \"Run the following script:\" to \"Run the following via `python this_file.py --comms local --nworkers 4`:\".\""
+    }
+  ]
+}

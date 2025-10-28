@@ -1,0 +1,18 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_1_only_E4",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for launching the BatchEnsemble baseline on a cloud TPU is incorrect. The script is located in the top-level 'baselines' directory, not within the 'uncertainty_baselines' package directory.",
+      "correction_candidates": [
+        "python baselines/cifar/batchensemble.py",
+        "python uncertainty_baselines/baselines/cifar/batchensemble.py",
+        "python scripts/cifar/batchensemble.py",
+        "python examples/cifar/batchensemble.py"
+      ],
+      "golden_answer": "python baselines/cifar/batchensemble.py"
+    }
+  ]
+}

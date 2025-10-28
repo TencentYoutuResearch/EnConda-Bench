@@ -1,0 +1,18 @@
+{
+  "readme": "cda-tum_mqt-bench_error_readme_4_only_E4",
+  "repo_name": "cda-tum_mqt-bench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the main showcase image is incorrect. It points to `.../cda-tum/mqt-bench/...` which will result in a 404 error, as the image is hosted in the `mqtbench` repository, not the `mqt-bench` one.",
+      "correction_candidates": [
+        "The image URL should be a relative path to the `docs` folder: `docs/_static/mqtbench.png`.",
+        "The branch name in the URL should be changed from `main` to `master`.",
+        "The repository name in the image's URL path should be corrected from `mqt-bench` to `mqtbench`.",
+        "The image file name is incorrect and should be `mqt_bench.png`."
+      ],
+      "golden_answer": "The repository name in the image's URL path should be corrected from `mqt-bench` to `mqtbench`."
+    }
+  ]
+}

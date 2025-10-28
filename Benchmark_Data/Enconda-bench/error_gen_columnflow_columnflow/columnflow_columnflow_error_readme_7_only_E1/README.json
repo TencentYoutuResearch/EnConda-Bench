@@ -1,0 +1,18 @@
+{
+  "readme": "columnflow_columnflow_error_readme_7_only_E1",
+  "repo_name": "columnflow_columnflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Listed generic dependencies that are not the actual columnflow dependencies and used pip instead of the proper setup method",
+      "correction_candidates": [
+        "Remove the pip install command and refer to the setup.sh script instead",
+        "Replace with pip install columnflow[all] for complete installation",
+        "Change to conda install columnflow from conda-forge",
+        "Use pip install -e . after cloning the repository"
+      ],
+      "golden_answer": "Remove the pip install command and refer to the setup.sh script instead"
+    }
+  ]
+}

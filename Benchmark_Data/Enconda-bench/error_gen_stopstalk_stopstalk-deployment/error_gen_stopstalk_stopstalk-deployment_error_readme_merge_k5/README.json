@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_stopstalk_stopstalk-deployment_error_readme_merge_k5",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command has an incorrect syntax. An extra argument `stopstalk-deployment` is placed before the repository URL, which will cause the command to fail.",
+      "correction_candidates": [
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git stopstalk-deployment",
+        "git clone --name stopstalk-deployment https://github.com/stopstalk/stopstalk-deployment.git",
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git",
+        "git pull https://github.com/stopstalk/stopstalk-deployment.git"
+      ],
+      "golden_answer": "git clone https://github.com/stopstalk/stopstalk-deployment.git"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The order of dependency installation is incorrect. The `pip install` command is executed before installing the required system-level development packages (`libxml2-dev`, `libxslt1-dev`), which can cause the installation of Python packages that depend on them to fail.",
+      "correction_candidates": [
+        "The correct order is to first run `pip install -r requirements.txt`, then run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`.",
+        "Run both commands together: `apt-get install ... && pip install ...`.",
+        "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`.",
+        "Install Python packages individually, then run the `apt-get` command."
+      ],
+      "golden_answer": "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to copy the sample configuration file places it in the wrong directory. It copies `0firstrun.py.sample` to `stopstalk/0firstrun.py` instead of `stopstalk/models/0firstrun.py`, and the application will not find it.",
+      "correction_candidates": [
+        "mv models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.sample models/",
+        "cp models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.sample ./"
+      ],
+      "golden_answer": "cp models/0firstrun.py.sample models/0firstrun.py"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `mv` command references a non-existent source directory `stopstalk-app`. The `git clone` command creates a directory named `stopstalk-deployment`, so the `mv` command will fail with a 'No such file or directory' error.",
+      "correction_candidates": [
+        "mv stopstalk-deployment stopstalk",
+        "cp -r stopstalk-deployment stopstalk",
+        "rename stopstalk-deployment stopstalk",
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git stopstalk"
+      ],
+      "golden_answer": "mv stopstalk-deployment stopstalk"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The command to start the web2py server is incomplete. It omits the `-a yourPassword` flag, which is necessary to set an administrative password on the first run. Without it, the user cannot access the administrative interface.",
+      "correction_candidates": [
+        "python web2py.py --nogui",
+        "python web2py.py -a yourPassword // Choose any password",
+        "python web2py.py --password yourPassword",
+        "python web2py.py -p 8000"
+      ],
+      "golden_answer": "python web2py.py -a yourPassword // Choose any password"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect source filename in copy command - references '0firstrun.py.example' instead of the correct '0firstrun.py.sample'",
+      "correction_candidates": [
+        "cp models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.template models/0firstrun.py",
+        "cp models/0firstrun.py.default models/0firstrun.py",
+        "cp models/0firstrun.py.config models/0firstrun.py"
+      ],
+      "golden_answer": "cp models/0firstrun.py.sample models/0firstrun.py"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing requirements.txt after starting web2py server instead of before, which violates logical order",
+      "correction_candidates": [
+        "Move the pip install -r requirements.txt command to step 1 after installing system dependencies",
+        "Remove the pip install -r requirements.txt command from step 10 entirely",
+        "Replace pip install -r requirements.txt with python -m pip install --upgrade pip",
+        "Change the command to pip install -r stopstalk/requirements.txt"
+      ],
+      "golden_answer": "Move the pip install -r requirements.txt command to step 1 after installing system dependencies"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Inconsistent pip command usage - first command uses pip3 while second uses pip, potentially causing dependency installation issues",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip3 install -r requirements.txt --proxy=<proxy address>",
+        "python -m pip install -r requirements.txt",
+        "python3 -m pip install -r requirements.txt --proxy=<proxy address>"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

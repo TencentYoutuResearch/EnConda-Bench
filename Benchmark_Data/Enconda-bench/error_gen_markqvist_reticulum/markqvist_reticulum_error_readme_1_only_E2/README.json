@@ -1,0 +1,18 @@
+{
+  "readme": "markqvist_reticulum_error_readme_1_only_E2",
+  "repo_name": "markqvist_reticulum",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command `pip install rns --all` is incorrect. The `--all` flag does not exist for this package.",
+      "correction_candidates": [
+        "Change the command to `pip install rns`",
+        "Change the command to `pip install rns --full`",
+        "Change the command to `pip install rns[all]`",
+        "Change the command to `pip install Reticulum`"
+      ],
+      "golden_answer": "Change the command to `pip install rns`"
+    }
+  ]
+}

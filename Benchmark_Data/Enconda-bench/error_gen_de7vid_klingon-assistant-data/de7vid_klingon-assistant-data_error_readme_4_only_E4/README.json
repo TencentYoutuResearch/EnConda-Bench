@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_4_only_E4",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly instructs the user to manually create the `EXTRA` file if it's missing, whereas the `write_db.sh` script should generate it.",
+      "correction_candidates": [
+        "The `EXTRA` file is managed by the `write_db.sh` script and should not be created manually.",
+        "The `EXTRA` file is located in the `scripts/` directory, not the project root.",
+        "The `EXTRA` file is deprecated and no longer used by the build process.",
+        "The `write_db.sh` script will create the `EXTRA` file if it doesn't exist; manual creation is unnecessary."
+      ],
+      "golden_answer": "The `EXTRA` file is managed by the `write_db.sh` script and should not be created manually."
+    }
+  ]
+}

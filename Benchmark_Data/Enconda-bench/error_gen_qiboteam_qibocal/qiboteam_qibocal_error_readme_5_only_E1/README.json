@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_5_only_E1",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary 'pip install poetry' command in the basic installation section when poetry is not needed for regular installation",
+      "correction_candidates": [
+        "Remove the 'pip install poetry' line from the installation section",
+        "Replace 'pip install poetry' with 'pip install --upgrade pip'",
+        "Move 'pip install poetry' to the developer instructions section",
+        "Change 'pip install poetry' to 'pip install setuptools'"
+      ],
+      "golden_answer": "Remove the 'pip install poetry' line from the installation section"
+    }
+  ]
+}

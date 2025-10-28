@@ -1,0 +1,29 @@
+{
+  "readme": "idaholab_civet_error_readme_5",
+  "repo_name": "idaholab_civet",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "Remove the pip install -r requirements.txt line entirely",
+        "Change requirements.txt to setup.py dependencies",
+        "Create a requirements.txt file with necessary dependencies",
+        "Replace with pip install civet command"
+      ],
+      "golden_answer": "Remove the pip install -r requirements.txt line entirely"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing dependencies before creating and activating virtual environment",
+      "correction_candidates": [
+        "Move virtual environment activation before pip install commands",
+        "Create virtual environment with python -m venv venv first",
+        "Use conda environment instead of venv",
+        "Install system-wide without virtual environment"
+      ],
+      "golden_answer": "Move virtual environment activation before pip install commands"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "lsstdesc_gcr-catalogs_error_readme_1_only_E4",
+  "repo_name": "lsstdesc_gcr-catalogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the example notebook 'GCRCatalogs Demo.ipynb' is broken because it points to the wrong path. The `examples/` directory is missing from the path.",
+      "correction_candidates": [
+        "- See [this notebook](examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`.",
+        "- See [this notebook](./examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`.",
+        "- See [this notebook](notebooks/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`.",
+        "- See [this notebook](/examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`."
+      ],
+      "golden_answer": "- See [this notebook](examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf-standard_error_readme_1_only_E1",
+  "repo_name": "asdf-format_asdf-standard",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development dependencies includes an incorrect package name, 'black-code', which does not exist. The correct package for the black code formatter is 'black'.",
+      "correction_candidates": [
+        "pip install pre-commit isort black",
+        "pip install pre-commit isort black-formatter",
+        "conda install pre-commit isort black",
+        "pip install pre-commit isort py-black"
+      ],
+      "golden_answer": "pip install pre-commit isort black"
+    }
+  ]
+}

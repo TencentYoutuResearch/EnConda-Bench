@@ -1,0 +1,18 @@
+{
+  "readme": "googlefonts_gftools_error_readme_3_only_E6",
+  "repo_name": "googlefonts_gftools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions advise installing `gftools` globally with pip before creating and activating a virtual environment. This is the wrong order and defeats the purpose of using a virtual environment.",
+      "correction_candidates": [
+        "Use pipx to install gftools in an isolated environment:\npipx install gftools",
+        "Install the package and then create a venv with access to system packages:\npip install gftools\npython3 -m venv gftools-venv --system-site-packages",
+        "First, create and activate a virtual environment, then install the package:\npython3 -m venv gftools-venv\nsource gftools-venv/bin/activate\npip install gftools",
+        "Install the package directly with sudo:\nsudo pip install gftools"
+      ],
+      "golden_answer": "First, create and activate a virtual environment, then install the package:\npython3 -m venv gftools-venv\nsource gftools-venv/bin/activate\npip install gftools"
+    }
+  ]
+}

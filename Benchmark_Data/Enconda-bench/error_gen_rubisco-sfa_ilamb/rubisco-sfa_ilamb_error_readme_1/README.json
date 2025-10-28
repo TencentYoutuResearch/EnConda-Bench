@@ -1,0 +1,29 @@
+{
+  "readme": "rubisco-sfa_ilamb_error_readme_1",
+  "repo_name": "rubisco-sfa_ilamb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions list a dependency `numby` which does not exist; the correct package name is `numpy`.",
+      "correction_candidates": [
+        "pip install numpy pandas netCDF4 matplotlib",
+        "conda install numpy pandas netCDF4 matplotlib",
+        "pip install ilamb --no-deps && pip install numpy pandas netCDF4 matplotlib",
+        "pip install num-py pandas netCDF4 matplotlib"
+      ],
+      "golden_answer": "pip install numpy pandas netCDF4 matplotlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `ilamb-run -configure my_ilamb_file.cfg` uses an incorrect single-dash for a long-form argument. The correct syntax is `--configure`.",
+      "correction_candidates": [
+        "ilamb-run --run my_ilamb_file.cfg",
+        "ilamb-run --configure my_ilamb_file.cfg",
+        "ilamb-run -c my_ilamb_file.cfg",
+        "ilamb-run my_ilamb_file.cfg"
+      ],
+      "golden_answer": "ilamb-run --configure my_ilamb_file.cfg"
+    }
+  ]
+}

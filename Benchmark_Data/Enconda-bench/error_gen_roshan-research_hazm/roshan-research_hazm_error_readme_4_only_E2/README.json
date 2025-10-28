@@ -1,0 +1,18 @@
+{
+  "readme": "roshan-research_hazm_error_readme_4_only_E2",
+  "repo_name": "roshan-research_hazm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package from GitHub is syntactically incorrect. `pip install --git` is not a valid pip command.",
+      "correction_candidates": [
+        "Change `pip install --git https://github.com/roshan-research/hazm.git` to `pip install git+https://github.com/roshan-research/hazm.git`.",
+        "Change `pip install --git https://github.com/roshan-research/hazm.git` to `git clone https://github.com/roshan-research/hazm.git` followed by `pip install .`.",
+        "Change `pip install --git https://github.com/roshan-research/hazm.git` to `pip install -e git+https://github.com/roshan-research/hazm.git#egg=hazm`.",
+        "Change `pip install --git` to `pip install --repo`."
+      ],
+      "golden_answer": "Change `pip install --git https://github.com/roshan-research/hazm.git` to `pip install git+https://github.com/roshan-research/hazm.git`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "fhempy_fhempy_error_readme_6_only_E6",
+  "repo_name": "fhempy_fhempy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Changed the order of peer setup steps, installing fhempy before setting up and activating the virtual environment",
+      "correction_candidates": [
+        "Move pip3 install --upgrade fhempy after activating the virtual environment",
+        "Replace pip3 install --upgrade fhempy with python -m pip install --upgrade fhempy and move it after venv activation",
+        "Change the order to: create venv, activate venv, then install fhempy within the activated environment",
+        "Remove the pip3 install step entirely and let the systemd script handle the installation"
+      ],
+      "golden_answer": "Change the order to: create venv, activate venv, then install fhempy within the activated environment"
+    }
+  ]
+}

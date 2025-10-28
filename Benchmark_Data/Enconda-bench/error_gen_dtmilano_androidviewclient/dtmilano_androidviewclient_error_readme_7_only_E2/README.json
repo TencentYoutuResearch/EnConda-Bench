@@ -1,0 +1,18 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_7_only_E2",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax - '--requirements' flag is incorrect, should be '-r' for requirements file",
+      "correction_candidates": [
+        "pip3 install -r requirements.txt androidviewclient --upgrade",
+        "pip3 install --requirement requirements.txt androidviewclient --upgrade",
+        "pip3 install -f requirements.txt androidviewclient --upgrade",
+        "pip3 install --req requirements.txt androidviewclient --upgrade"
+      ],
+      "golden_answer": "pip3 install -r requirements.txt androidviewclient --upgrade"
+    }
+  ]
+}

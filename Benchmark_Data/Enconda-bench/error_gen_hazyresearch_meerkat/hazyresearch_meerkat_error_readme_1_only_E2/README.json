@@ -1,0 +1,18 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_1_only_E2",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install meerkat` is incorrect. The package on PyPI is named `meerkat-ml`, so this command will fail.",
+      "correction_candidates": [
+        "pip install meerkat-ml",
+        "pip install 'meerkat'",
+        "conda install meerkat",
+        "pip install meerkatml"
+      ],
+      "golden_answer": "pip install meerkat-ml"
+    }
+  ]
+}

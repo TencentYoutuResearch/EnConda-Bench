@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_wireless-innovation-forum_spectrum-access-system_error_readme_merge_k2",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the venv installation example, the command to install packages from requirements.txt is placed before the command to activate the virtual environment, which will cause packages to be installed globally instead of in the venv.",
+      "correction_candidates": [
+        "The `pip install` command should be run after activating the virtual environment with `source ./winnf3/bin/activate`.",
+        "The `requirements.txt` file should be installed using `conda install --file requirements.txt`.",
+        "The `source` command should be replaced with `conda activate winnf3`.",
+        "The `pip install` command should be run before creating the virtual environment with `python3.11 -m venv ./winnf3`."
+      ],
+      "golden_answer": "The `pip install` command should be run after activating the virtual environment with `source ./winnf3/bin/activate`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a conda environment uses 'conda new', which is not a valid conda command for this purpose. The correct command is 'conda create'.",
+      "correction_candidates": [
+        "The command should be `conda create --name winnf3 python=3.11`.",
+        "The command should be `conda init winnf3 --python 3.11`.",
+        "The command should be `conda env new --name winnf3 python=3.11`.",
+        "The command should be `conda create -n winnf3 python=3.11`."
+      ],
+      "golden_answer": "The command should be `conda create --name winnf3 python=3.11`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions for the test harness list 'pip3 install python-jwt'. 'python-jwt' is an incorrect and unmaintained package. The correct package is 'PyJWT', which can be installed via 'pip3 install jwt'.",
+      "correction_candidates": [
+        "The package should be installed using conda: `conda install pyjwt`.",
+        "The correct package name is `jwt`, so the command should be `pip3 install jwt`.",
+        "The package should be installed with `pip3 install jsonwebtokens`.",
+        "The correct package is `PyJWT`, which should be installed via `pip3 install PyJWT`."
+      ],
+      "golden_answer": "The correct package name is `jwt`, so the command should be `pip3 install jwt`."
+    }
+  ]
+}

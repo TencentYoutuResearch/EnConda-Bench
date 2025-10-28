@@ -1,0 +1,18 @@
+{
+  "readme": "yt-project_unyt_error_readme_3_only_E1",
+  "repo_name": "yt-project_unyt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that the `sympy` dependency is optional, when in fact it is a required dependency.",
+      "correction_candidates": [
+        "Change the text to 'This package only depends on ``numpy`` and ``sympy``.'",
+        "Change the text to 'This package depends on ``numpy`` and optionally on ``sympy`` for advanced features.'",
+        "Add installation instructions for optional dependencies: `pip install unyt[sympy]`",
+        "Change the text to 'This package has no external dependencies.'"
+      ],
+      "golden_answer": "Change the text to 'This package only depends on ``numpy`` and ``sympy``.'"
+    }
+  ]
+}

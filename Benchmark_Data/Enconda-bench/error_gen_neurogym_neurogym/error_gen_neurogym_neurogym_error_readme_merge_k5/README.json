@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_neurogym_neurogym_error_readme_merge_k5",
+  "repo_name": "neurogym_neurogym",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command for a full installation, `pip install -e '.[full]'`, uses an incorrect extra requirement key. The correct key for all optional dependencies is `'[all]'`.",
+      "correction_candidates": [
+        "pip install -e . --all",
+        "pip install -e '.[complete]'",
+        "pip install -e .[all]",
+        "pip install -e '.[all]'"
+      ],
+      "golden_answer": "pip install -e '.[all]'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation commands are in the wrong logical order. The `pip install -e .` command must be run from within the `neurogym` directory, but the instructions list it before the `cd neurogym` command.",
+      "correction_candidates": [
+        "pip install -e ./neurogym\ncd neurogym",
+        "cd neurogym\npip install -e .",
+        "pip install -e neurogym\ncd neurogym",
+        "git clone https://github.com/neurogym/neurogym.git && pip install -e ."
+      ],
+      "golden_answer": "cd neurogym\npip install -e ."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the list of implemented tasks points to a non-existent file `tasks.md`. The correct filename is `envs.md`.",
+      "correction_candidates": [
+        "[here](https://github.com/gyyang/neurogym/blob/master/docs/environments.md)",
+        "[here](https://neurogym.github.io/envs/)",
+        "[here](https://github.com/gyyang/neurogym/blob/master/docs/envs.md)",
+        "[here](https://github.com/gyyang/neurogym/blob/master/neurogym/envs/README.md)"
+      ],
+      "golden_answer": "[here](https://github.com/gyyang/neurogym/blob/master/docs/envs.md)"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is syntactically incorrect. It provides `neurogym.git` as the repository source, which is not a valid URL.",
+      "correction_candidates": [
+        "git clone https://github.com/neurogym/neurogym",
+        "git clone https://github.com/neurogym/neurogym.git",
+        "git clone git@github.com:neurogym/neurogym.git",
+        "git clone https://www.github.com/neurogym/neurogym.git"
+      ],
+      "golden_answer": "git clone https://github.com/neurogym/neurogym.git"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the contribution template file points to a non-existent path `templates/task.py`. The correct path is `examples/template.py`.",
+      "correction_candidates": [
+        "[template](https://github.com/gyyang/neurogym/blob/master/examples/template.py)",
+        "[template](https://github.com/gyyang/neurogym/blob/master/neurogym/template.py)",
+        "[template](https://github.com/gyyang/neurogym/blob/master/docs/template.py)",
+        "[template](https://github.com/gyyang/neurogym/blob/master/CONTRIBUTING.md)"
+      ],
+      "golden_answer": "[template](https://github.com/gyyang/neurogym/blob/master/examples/template.py)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in incorrect order - pip install is executed before cloning the repository and changing to the directory",
+      "correction_candidates": [
+        "git clone https://github.com/neurogym/neurogym.git\n    cd neurogym\n    pip install -e .",
+        "pip install -e .\n    git clone https://github.com/neurogym/neurogym.git\n    cd neurogym",
+        "cd neurogym\n    git clone https://github.com/neurogym/neurogym.git\n    pip install -e .",
+        "git clone https://github.com/neurogym/neurogym.git\n    pip install -e .\n    cd neurogym"
+      ],
+      "golden_answer": "git clone https://github.com/neurogym/neurogym.git\n    cd neurogym\n    pip install -e ."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The full install command references 'last command' but the previous commands are now in wrong order",
+      "correction_candidates": [
+        "pip install -e '.[all]'",
+        "pip install -e . --all",
+        "pip install neurogym[all]",
+        "pip install -e '[all]'"
+      ],
+      "golden_answer": "pip install -e '.[all]'"
+    }
+  ]
+}

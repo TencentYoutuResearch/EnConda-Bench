@@ -1,0 +1,18 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_8_only_E2",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid command syntax 'quacc run --example basic_dft --input molecule.xyz --output results/' that doesn't exist in the actual package",
+      "correction_candidates": [
+        "Replace with: python -c 'import quacc; print(quacc.__version__)'",
+        "Use: python -m quacc.examples.basic_workflow",
+        "Change to: quacc --help to see available commands",
+        "Update to: python examples/basic_example.py"
+      ],
+      "golden_answer": "Replace with: python -c 'import quacc; print(quacc.__version__)'"
+    }
+  ]
+}

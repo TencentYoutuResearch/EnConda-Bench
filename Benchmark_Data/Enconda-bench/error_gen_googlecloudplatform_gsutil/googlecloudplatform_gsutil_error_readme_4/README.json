@@ -1,0 +1,29 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_4",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "An incorrect example command `gsutil create bucket <bucket_name>` is provided for creating a bucket. The correct command is `gsutil mb gs://<bucket_name>`.",
+      "correction_candidates": [
+        "Change the command to `gsutil mb gs://<bucket_name>`.",
+        "Change the command to `gsutil mkbucket gs://<bucket_name>`.",
+        "Change the command to `gcloud storage buckets create gs://<bucket_name>`.",
+        "Remove the incorrect example command entirely."
+      ],
+      "golden_answer": "Change the command to `gsutil mb gs://<bucket_name>`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `boto3` as a required dependency. `gsutil` is built on the `boto` library, not `boto3`, and dependencies are handled by the SDK installer.",
+      "correction_candidates": [
+        "Change the dependency from `boto3` to `boto`.",
+        "Specify that both `boto` and `boto3` are required.",
+        "Change the instruction to `pip install boto3`.",
+        "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+      ],
+      "golden_answer": "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+    }
+  ]
+}

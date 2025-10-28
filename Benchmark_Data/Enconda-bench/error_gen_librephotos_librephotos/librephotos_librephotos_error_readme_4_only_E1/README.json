@@ -1,0 +1,18 @@
+{
+  "readme": "librephotos_librephotos_error_readme_4_only_E1",
+  "repo_name": "librephotos_librephotos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that NodeJS is a required dependency for the backend.",
+      "correction_candidates": [
+        "The backend is Python/Django and does not require NodeJS. This instruction should be removed.",
+        "NodeJS is required, but only version 14 is supported.",
+        "NodeJS is only required for frontend development, not the backend.",
+        "You must install NodeJS using nvm, not a system package manager."
+      ],
+      "golden_answer": "The backend is Python/Django and does not require NodeJS. This instruction should be removed."
+    }
+  ]
+}

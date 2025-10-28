@@ -1,0 +1,29 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_5",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 2.7+ instead of Python 3.8+ which creates version compatibility issues",
+      "correction_candidates": [
+        "PyLabRobot is built on modern Python 3.8+ features and async/await syntax.",
+        "PyLabRobot is built on modern Python 3.6+ features and async/await syntax.",
+        "PyLabRobot is built on modern Python 3.10+ features and async/await syntax.",
+        "PyLabRobot is built on modern Python 3.7+ features and async/await syntax."
+      ],
+      "golden_answer": "PyLabRobot is built on modern Python 3.8+ features and async/await syntax."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced incorrect file path 'hamilton-config.json' instead of 'hamilton-layout.json'",
+      "correction_candidates": [
+        "deck = Deck.load_from_json_file(\"hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"hamilton-setup.json\")",
+        "deck = Deck.load_from_json_file(\"hamilton-deck.json\")",
+        "deck = Deck.load_from_json_file(\"hamilton-configuration.json\")"
+      ],
+      "golden_answer": "deck = Deck.load_from_json_file(\"hamilton-layout.json\")"
+    }
+  ]
+}

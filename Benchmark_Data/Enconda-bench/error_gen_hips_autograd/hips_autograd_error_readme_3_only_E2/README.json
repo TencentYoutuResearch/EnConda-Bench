@@ -1,0 +1,18 @@
+{
+  "readme": "hips_autograd_error_readme_3_only_E2",
+  "repo_name": "hips_autograd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The first example code block incorrectly imports `grad` from `autograd.core` instead of the top-level `autograd` package, which will cause an `ImportError`.",
+      "correction_candidates": [
+        "Change the import to `from autograd.differential_operators import grad`.",
+        "Change the import to `from autograd.convenience_wrappers import grad`.",
+        "Change the import to `import autograd; grad = autograd.grad`.",
+        "Change the import to `from autograd import grad`."
+      ],
+      "golden_answer": "Change the import to `from autograd import grad`."
+    }
+  ]
+}

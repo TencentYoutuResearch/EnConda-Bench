@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_5_only_E1",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary system dependencies are listed that are not actually required for pajbot installation",
+      "correction_candidates": [
+        "Remove libssl-dev libffi-dev python3-dev as they are not needed",
+        "Replace with only libssl-dev as the single required dependency",
+        "Change to postgresql-dev libxml2-dev dependencies instead",
+        "Keep only python3-dev and remove the other two dependencies"
+      ],
+      "golden_answer": "Remove libssl-dev libffi-dev python3-dev as they are not needed"
+    }
+  ]
+}

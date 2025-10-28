@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_mirageoscience_geoapps_error_readme_merge_k3",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The main banner image is linked to a specific, outdated release candidate version ('v0.10.0-rc.2') instead of the main branch, which may result in displaying an old or broken image.",
+      "correction_candidates": [
+        "Update the image URL to point to the `main` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/main/docs/images/index_page.png`",
+        "Update the image URL to point to the `develop` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/develop/docs/images/index_page.png`",
+        "Remove the image directive entirely.",
+        "Update the image URL to point to the `latest` tag: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/latest/docs/images/index_page.png`"
+      ],
+      "golden_answer": "Update the image URL to point to the `main` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/main/docs/images/index_page.png`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states 'this project requires Python 3.7 to run', which may conflict with the Python versions badge and cause confusion about actual compatibility.",
+      "correction_candidates": [
+        "Remove the sentence 'Please note that this project requires Python 3.7 to run.'",
+        "Change the sentence to 'Please note that this project requires Python >= 3.8 to run.' to match the likely supported versions.",
+        "Remove the `pyversions` badge to avoid contradiction.",
+        "Change the sentence to 'Check the `pyversions` badge for compatibility details.'"
+      ],
+      "golden_answer": "Remove the sentence 'Please note that this project requires Python 3.7 to run.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The 'Download the latest' link incorrectly points to a zip archive of the `master` branch, but the repository's default branch is `main`, causing the link to be broken.",
+      "correction_candidates": [
+        "Change the branch name in the URL from `master` to `main`: `.../archive/main.zip`",
+        "Change the branch name in the URL from `master` to `develop`: `.../archive/develop.zip`",
+        "Remove the 'Download the latest' link entirely.",
+        "Change the link to point to the GitHub releases page instead of a direct download."
+      ],
+      "golden_answer": "Change the branch name in the URL from `master` to `main`: `.../archive/main.zip`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the third-party software notices points to a non-existent file `THIRD_PARTY.rst`. The correct filename is `THIRD_PARTY_SOFTWARE.rst`.",
+      "correction_candidates": [
+        "Correct the link target and definition to point to `THIRD_PARTY_SOFTWARE.rst`.",
+        "Change the link to an absolute URL pointing to the file on GitHub.",
+        "Remove the 'Third Party Software' section.",
+        "Correct the link target and definition to point to `LICENSE.rst`."
+      ],
+      "golden_answer": "Correct the link target and definition to point to `THIRD_PARTY_SOFTWARE.rst`."
+    }
+  ]
+}

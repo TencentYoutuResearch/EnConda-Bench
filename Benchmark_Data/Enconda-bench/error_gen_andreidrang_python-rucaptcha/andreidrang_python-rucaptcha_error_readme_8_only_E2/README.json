@@ -1,0 +1,18 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_8_only_E2",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command usage error - suggests using pip2 for installation but library requires Python 3.9+ according to changelog",
+      "correction_candidates": [
+        "pip install python-rucaptcha",
+        "pip3 install python-rucaptcha",
+        "python -m pip install python-rucaptcha",
+        "python3.9 -m pip install python-rucaptcha"
+      ],
+      "golden_answer": "pip install python-rucaptcha"
+    }
+  ]
+}

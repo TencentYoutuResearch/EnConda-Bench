@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_2_only_E1",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The standard installation instructions are incomplete. The `pip install .` command is missing, so the user will clone the repository but not install the package.",
+      "correction_candidates": [
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install .\n```",
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install -e .\n```",
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npython setup.py install\n```",
+        "The installation commands are:\n```sh\npip install git+https://github.com/qiboteam/qibocal.git\n```"
+      ],
+      "golden_answer": "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install .\n```"
+    }
+  ]
+}

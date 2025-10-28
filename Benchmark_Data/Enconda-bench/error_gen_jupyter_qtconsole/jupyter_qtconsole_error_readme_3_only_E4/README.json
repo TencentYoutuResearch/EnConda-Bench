@@ -1,0 +1,18 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_3_only_E4",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The image link for the qtconsole screenshot is broken due to an incorrect path, which omits the `/source` directory.",
+      "correction_candidates": [
+        "Change the image path to `https://raw.githubusercontent.com/jupyter/qtconsole/main/docs/source/_images/qtconsole.png`.",
+        "Change the image path to `https://raw.githubusercontent.com/jupyter/qtconsole/master/docs/source/_images/qtconsole.png`.",
+        "Change the image path to point to the documentation: `https://qtconsole.readthedocs.io/en/stable/_images/qtconsole.png`.",
+        "Remove the image line entirely."
+      ],
+      "golden_answer": "Change the image path to `https://raw.githubusercontent.com/jupyter/qtconsole/master/docs/source/_images/qtconsole.png`."
+    }
+  ]
+}

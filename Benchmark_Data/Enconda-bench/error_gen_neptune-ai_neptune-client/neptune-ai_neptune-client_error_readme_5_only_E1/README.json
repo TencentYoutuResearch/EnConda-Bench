@@ -1,0 +1,18 @@
+{
+  "readme": "neptune-ai_neptune-client_error_readme_5_only_E1",
+  "repo_name": "neptune-ai_neptune-client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (tensorflow pytorch) to the pip install command that are not required for basic Neptune installation",
+      "correction_candidates": [
+        "pip install neptune",
+        "pip install neptune-client",
+        "pip install neptune --upgrade",
+        "pip install neptune[tensorflow,pytorch]"
+      ],
+      "golden_answer": "pip install neptune"
+    }
+  ]
+}

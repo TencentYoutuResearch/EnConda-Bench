@@ -1,0 +1,18 @@
+{
+  "readme": "huggingface_datasets_error_readme_1_only_E2",
+  "repo_name": "huggingface_datasets",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example code for loading the 'squad' dataset uses incorrect syntax `load_dataset.squad()` instead of passing the dataset name as a string argument.",
+      "correction_candidates": [
+        "squad_dataset = load_dataset('squad')",
+        "squad_dataset = load_dataset(name='squad')",
+        "from datasets.squad import load_dataset\nsquad_dataset = load_dataset()",
+        "squad_dataset = load_dataset.from_hub('squad')"
+      ],
+      "golden_answer": "squad_dataset = load_dataset('squad')"
+    }
+  ]
+}

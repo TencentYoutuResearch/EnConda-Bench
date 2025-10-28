@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_2_only_E6",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the `Testing` section, the steps are in the wrong logical order. It instructs the user to install dependencies *before* cloning the repository, which is impossible.",
+      "correction_candidates": [
+        "Swap step 1 (`poetry install`) and step 2 (`git clone ...`).",
+        "Combine the two steps into a single instruction: `git clone ... && cd terminusdb-client-python && poetry install`.",
+        "Delete step 1 (`poetry install`) as cloning the repository is sufficient.",
+        "Move step 1 (`poetry install`) to after step 3 (running pytest)."
+      ],
+      "golden_answer": "Swap step 1 (`poetry install`) and step 2 (`git clone ...`)."
+    }
+  ]
+}

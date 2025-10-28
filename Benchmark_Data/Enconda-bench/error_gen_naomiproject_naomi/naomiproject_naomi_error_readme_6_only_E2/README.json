@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_6_only_E2",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command syntax error - using invalid parameters for setup.py script",
+      "correction_candidates": [
+        "To get started, run the setup script with `python setup.py install`.",
+        "To get started, run the setup script with `python setup.py configure`.",
+        "To get started, run the setup script with `python setup.py build install`.",
+        "To get started, run the setup script with `python setup.py --help` to see available options."
+      ],
+      "golden_answer": "To get started, run the setup script with `python setup.py install`."
+    }
+  ]
+}

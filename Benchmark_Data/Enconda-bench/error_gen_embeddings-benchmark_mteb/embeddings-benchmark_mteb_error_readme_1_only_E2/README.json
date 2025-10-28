@@ -1,0 +1,18 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_1_only_E2",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The CLI command `mteb run --m ...` uses an incorrect flag `--m`. The correct flag for specifying the model is a single-dashed `-m`, causing a command-line argument parsing error.",
+      "correction_candidates": [
+        "mteb run --model sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run -model sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run -m sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run --model_name sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "golden_answer": "mteb run -m sentence-transformers/all-MiniLM-L6-v2"
+    }
+  ]
+}

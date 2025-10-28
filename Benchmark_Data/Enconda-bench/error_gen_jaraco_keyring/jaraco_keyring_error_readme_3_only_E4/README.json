@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_keyring_error_readme_3_only_E4",
+  "repo_name": "jaraco_keyring",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Tab Completion' section, the example command for installing bash completions incorrectly points to '/etc/bash_completion.d/keyring'. While this path exists on some systems, the more standard path mentioned in the surrounding text is '/usr/share/bash-completion/completions/keyring'.",
+      "correction_candidates": [
+        "sudo tee /usr/local/etc/bash_completion.d/keyring",
+        "sudo tee /etc/profile.d/keyring.bash",
+        "keyring --print-completion bash >> ~/.bashrc",
+        "sudo tee /usr/share/bash-completion/completions/keyring"
+      ],
+      "golden_answer": "sudo tee /usr/share/bash-completion/completions/keyring"
+    }
+  ]
+}

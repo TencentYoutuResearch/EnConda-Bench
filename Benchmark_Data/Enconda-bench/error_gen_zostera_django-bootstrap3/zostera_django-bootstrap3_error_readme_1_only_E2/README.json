@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap3_error_readme_1_only_E2",
+  "repo_name": "zostera_django-bootstrap3",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip command `pip install bootstrap3` is incorrect; the correct package name is `django-bootstrap3`.",
+      "correction_candidates": [
+        "The correct command is `pip install django-bootstrap3`.",
+        "The correct command is `pip install django-bootstrap-3`.",
+        "The correct command is `pip install python-bootstrap3`.",
+        "The correct command is `pip install django bootstrap3`."
+      ],
+      "golden_answer": "The correct command is `pip install django-bootstrap3`."
+    }
+  ]
+}

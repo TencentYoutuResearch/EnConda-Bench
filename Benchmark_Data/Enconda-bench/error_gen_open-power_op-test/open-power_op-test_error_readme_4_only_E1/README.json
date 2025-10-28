@@ -1,0 +1,18 @@
+{
+  "readme": "open-power_op-test_error_readme_4_only_E1",
+  "repo_name": "open-power_op-test",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The documentation omits `sshpass` from the list of required system packages, but it is a necessary dependency for the test framework to function correctly.",
+      "correction_candidates": [
+        "You will also need below packages to be installed\n\n        sshpass, openssh-client and (recent) ipmitool - 1.8.15 or above should be adequate.",
+        "You will also need below packages to be installed\n\n        sshpass and (recent) ipmitool - 1.8.15 or above should be adequate.",
+        "You will also need below packages to be installed\n\n        You may need sshpass and (recent) ipmitool - 1.8.15 or above should be adequate.",
+        "You will also need below packages to be installed\n\n        ssh and (recent) ipmitool - 1.8.15 or above should be adequate."
+      ],
+      "golden_answer": "You will also need below packages to be installed\n\n        sshpass and (recent) ipmitool - 1.8.15 or above should be adequate."
+    }
+  ]
+}

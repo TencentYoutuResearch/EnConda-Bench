@@ -1,0 +1,29 @@
+{
+  "readme": "rcmdnk_homebrew-file_error_readme_2",
+  "repo_name": "rcmdnk_homebrew-file",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README claims that `brew-file` requires an outdated version of Homebrew (< 2.0.0), which is incorrect and may mislead users into downgrading a critical dependency.",
+      "correction_candidates": [
+        "Change the note to require Homebrew version > 3.0.0.",
+        "Change the note to state the tool is compatible with all versions of Homebrew.",
+        "Remove the note about the Homebrew version requirement.",
+        "Change the note to require the latest version of Homebrew."
+      ],
+      "golden_answer": "Remove the note about the Homebrew version requirement."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Prerequisites' section incorrectly lists `python3` as a required dependency. `brew-file` is a shell script and does not require Python, adding an unnecessary installation step for users.",
+      "correction_candidates": [
+        "Remove the entire 'Prerequisites' section.",
+        "Change the prerequisite to `ruby`.",
+        "Change the prerequisite to `git`.",
+        "Change the prerequisite to `bash > 5.0`."
+      ],
+      "golden_answer": "Remove the entire 'Prerequisites' section."
+    }
+  ]
+}

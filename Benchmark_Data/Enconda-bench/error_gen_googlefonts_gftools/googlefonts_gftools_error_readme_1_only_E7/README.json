@@ -1,0 +1,18 @@
+{
+  "readme": "googlefonts_gftools_error_readme_1_only_E7",
+  "repo_name": "googlefonts_gftools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is not specified, only stating 'a recent version,' which is ambiguous and can lead to installation or runtime issues if an incompatible version is used.",
+      "correction_candidates": [
+        "Please note that gftools requires Python 3.",
+        "Please note that gftools is compatible with Python 2.7 and 3.x.",
+        "Please note that gftools requires Python 3.6 or later.",
+        "Please note that gftools requires [Python 3.7](http://www.python.org/download/) or later."
+      ],
+      "golden_answer": "Please note that gftools requires [Python 3.7](http://www.python.org/download/) or later."
+    }
+  ]
+}

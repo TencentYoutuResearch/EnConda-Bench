@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_4_only_E1",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The developer instructions are missing the `poetry install` command, which is necessary to install the project's dependencies for a development environment.",
+      "correction_candidates": [
+        "The `poetry install` command is missing. It should be run after `cd qibocal` and before `pre-commit install` to install project dependencies.",
+        "The command `pip install -r requirements.txt` should be run after cloning.",
+        "The command `poetry update` should be used instead of `poetry install`.",
+        "The pre-commit hooks install the dependencies automatically, so no other command is needed."
+      ],
+      "golden_answer": "The `poetry install` command is missing. It should be run after `cd qibocal` and before `pre-commit install` to install project dependencies."
+    }
+  ]
+}

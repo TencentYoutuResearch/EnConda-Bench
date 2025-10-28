@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_uploadcare_pyuploadcare_error_readme_merge_k4",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install Django extras is incorrect. `pip install pyuploadcare-django` will fail because the package name is wrong; extras are installed using brackets.",
+      "correction_candidates": [
+        "pip install pyuploadcare[django]",
+        "pip install pyuploadcare --with-django",
+        "pip install pyuploadcare django",
+        "pip install pyuploadcare; pip install django-pyuploadcare"
+      ],
+      "golden_answer": "pip install pyuploadcare[django]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run local tests is incorrect. The instructions mention installing `act` but then provide a command that is not a valid `make` target or `act` command. The correct command uses `make`.",
+      "correction_candidates": [
+        "make test_with_github_actions",
+        "act --job test",
+        "act -W .github/workflows/test.yml",
+        "act"
+      ],
+      "golden_answer": "make test_with_github_actions"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests creating a virtual environment after installing the package, which is the wrong order. Packages should be installed into an already-activated virtual environment to avoid polluting the global Python installation.",
+      "correction_candidates": [
+        "A virtual environment should be created and activated *before* installing packages.",
+        "The correct order is: `python -m venv venv`, `source venv/bin/activate`, then `pip install pyuploadcare`.",
+        "Remove the sentence suggesting to create a virtual environment after installation. A virtual environment should be set up first.",
+        "Move the `pip install` commands to be after the virtual environment setup instructions."
+      ],
+      "golden_answer": "Remove the sentence suggesting to create a virtual environment after installation. A virtual environment should be set up first."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The version requirement for Python 3.6/3.7 is incorrect. It states `pyuploadcare < 3.0` is needed, but `< 3.0` is for Python 2.7. The correct requirement for Python 3.6/3.7 is `< 5.0`.",
+      "correction_candidates": [
+        "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare < 5.0`.",
+        "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare==4.3.0`.",
+        "Python 3.6 and 3.7 are no longer supported; please upgrade to Python 3.8 or newer.",
+        "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare~=4.0`."
+      ],
+      "golden_answer": "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare < 5.0`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Installation command uses incorrect syntax 'install pip pyuploadcare' instead of 'pip install pyuploadcare'",
+      "correction_candidates": [
+        "pip install pyuploadcare",
+        "python -m pip install pyuploadcare",
+        "pip3 install pyuploadcare",
+        "python3 -m pip install pyuploadcare"
+      ],
+      "golden_answer": "pip install pyuploadcare"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Testing command is missing the 'make' prefix, showing just 'test_with_github_actions' instead of 'make test_with_github_actions'",
+      "correction_candidates": [
+        "make test_with_github_actions",
+        "npm run test_with_github_actions",
+        "./test_with_github_actions",
+        "python test_with_github_actions"
+      ],
+      "golden_answer": "make test_with_github_actions"
+    }
+  ]
+}

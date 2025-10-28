@@ -1,0 +1,18 @@
+{
+  "readme": "pureqml_qmlcore_error_readme_1_only_E2",
+  "repo_name": "pureqml_qmlcore",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to initialize a boilerplate project is incorrect. The '--init' flag does not exist for the build script.",
+      "correction_candidates": [
+        "In the 'Simple how-to' section, replace `./qmlcore/build --init` with `./qmlcore/build --boilerplate`.",
+        "In the 'Simple how-to' section, replace `./qmlcore/build --init` with `python ./qmlcore/build --new`.",
+        "The correct command is `./qmlcore/build --create`.",
+        "The command should be run from the qmlcore directory: `cd qmlcore && ./build --init`."
+      ],
+      "golden_answer": "In the 'Simple how-to' section, replace `./qmlcore/build --init` with `./qmlcore/build --boilerplate`."
+    }
+  ]
+}

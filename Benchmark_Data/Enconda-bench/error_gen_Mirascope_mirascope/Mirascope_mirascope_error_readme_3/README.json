@@ -1,0 +1,29 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_3",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest creating and activating a virtual environment *after* installing the package, which is the wrong order. The package will be installed in the global environment instead of the virtual one.",
+      "correction_candidates": [
+        "Move the virtual environment creation instructions to be before the `pip install` command.",
+        "Remove the virtual environment creation instructions.",
+        "Change the instructions to `pip install mirascope --user` and then create the virtual environment.",
+        "Add `pip uninstall mirascope` before the virtual environment creation instructions to correct the installation."
+      ],
+      "golden_answer": "Move the virtual environment creation instructions to be before the `pip install` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install all optional dependencies is syntactically incorrect. `pip` does not have an `--all` flag for this purpose.",
+      "correction_candidates": [
+        "pip install mirascope[anthropic,groq,logfire]",
+        "pip install mirascope --with-all",
+        "pip install mirascope[all]",
+        "pip install mirascope --all-extras"
+      ],
+      "golden_answer": "pip install mirascope[all]"
+    }
+  ]
+}

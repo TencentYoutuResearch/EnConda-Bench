@@ -1,0 +1,18 @@
+{
+  "readme": "thouska_spotpy_error_readme_2_only_E7",
+  "repo_name": "thouska_spotpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `pip install` command pins the package to version `1.4.0`, which is an old version and may not be compatible with modern environments or contain the latest features.",
+      "correction_candidates": [
+        "pip install spotpy",
+        "pip install spotpy --upgrade",
+        "pip install spotpy>=1.5.0",
+        "pip install spotpy-latest"
+      ],
+      "golden_answer": "pip install spotpy"
+    }
+  ]
+}

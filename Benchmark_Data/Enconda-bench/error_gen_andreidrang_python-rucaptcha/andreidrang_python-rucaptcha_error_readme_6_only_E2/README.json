@@ -1,0 +1,18 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_6_only_E2",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax with incorrect word order 'install pip python-rucaptcha' instead of 'pip install python-rucaptcha'",
+      "correction_candidates": [
+        "pip install python-rucaptcha",
+        "python -m pip install python-rucaptcha",
+        "pip3 install python-rucaptcha",
+        "sudo pip install python-rucaptcha"
+      ],
+      "golden_answer": "pip install python-rucaptcha"
+    }
+  ]
+}

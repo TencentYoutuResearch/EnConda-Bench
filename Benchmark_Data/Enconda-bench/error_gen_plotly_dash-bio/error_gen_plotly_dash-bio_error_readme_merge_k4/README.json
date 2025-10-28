@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_plotly_dash-bio_error_readme_merge_k4",
+  "repo_name": "plotly_dash-bio",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `pip install` command is executed before the virtual environment is created and activated, which installs packages globally instead of within the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install` command to be the first step, before creating the virtual environment.",
+        "The `pip install` command should be run after creating the virtual environment but before activating it.",
+        "The `pip install` command should be run after creating and activating the virtual environment.",
+        "Create a `requirements.txt` file and run `pip install -r requirements.txt` before creating the virtual environment."
+      ],
+      "golden_answer": "The `pip install` command should be run after creating and activating the virtual environment."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to build JupyterLab is incorrect. `jupyter lab build-extension` is not the correct command for rebuilding the application.",
+      "correction_candidates": [
+        "Use the command `jupyter lab install`.",
+        "Use the command `jupyter lab build`.",
+        "Use the command `jupyter build lab`.",
+        "Use the command `jupyter-lab build`."
+      ],
+      "golden_answer": "Use the command `jupyter lab build`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `dash-bio` package, which is essential for running the examples, is missing from the `pip install` command.",
+      "correction_candidates": [
+        "Add `dash-core-components` to the `pip install` command.",
+        "Add `dash-bio` to the `pip install` command.",
+        "Remove `Jupyterlab` from the `pip install` command as it is not required.",
+        "Replace `dash` with `dash-bio` in the `pip install` command."
+      ],
+      "golden_answer": "Add `dash-bio` to the `pip install` command."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command to install the `jupyterlab-plotly` extension does not specify a version, which can lead to installing an incompatible version.",
+      "correction_candidates": [
+        "Change the command to `jupyter labextension install jupyterlab-plotly@latest`.",
+        "Change the command to `jupyter labextension install jupyterlab-plotly@4.14.3`.",
+        "Change the command to `pip install jupyterlab-plotly@4.14.3`.",
+        "Change the command to `jupyter labextension update --all`."
+      ],
+      "golden_answer": "Change the command to `jupyter labextension install jupyterlab-plotly@4.14.3`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL used to fetch the example data file `alignment_viewer_p53.fasta` is incorrect, pointing to a non-existent repository path.",
+      "correction_candidates": [
+        "Change the URL to `https://raw.githubusercontent.com/plotly/dash-bio-docs-files/main/alignment_viewer_p53.fasta`.",
+        "Download the file locally and change the code to `data = open('alignment_viewer_p53.fasta').read()`.",
+        "Change the URL to `https://raw.githubusercontent.com/plotly/dash-bio-docs-files/master/alignment_viewer_p53.fasta`.",
+        "Change the URL to `https://github.com/plotly/dash-bio-docs-files/blob/master/alignment_viewer_p53.fasta`."
+      ],
+      "golden_answer": "Change the URL to `https://raw.githubusercontent.com/plotly/dash-bio-docs-files/master/alignment_viewer_p53.fasta`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment on Windows is incorrect. `source` is a command used in Unix-like shells, not in the Windows Command Prompt or PowerShell.",
+      "correction_candidates": [
+        "On Windows, enter: `env\\Scripts\\activate`",
+        "On Windows, enter: `.\\env\\Scripts\\activate.bat`",
+        "On Windows, enter: `.\\env\\Scripts\\activate`",
+        "On Windows, enter: `call env\\Scripts\\activate`"
+      ],
+      "golden_answer": "On Windows, enter: `.\\env\\Scripts\\activate`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using 'python2' command instead of 'python3' for creating virtual environment on macOS and Linux, which is incorrect syntax as python2 doesn't support venv module.",
+      "correction_candidates": [
+        "Change 'python2 -m venv env' to 'python3 -m venv env'",
+        "Use 'python -m venv env' instead of 'python2 -m venv env'",
+        "Replace with 'virtualenv env' command for broader compatibility",
+        "Use 'python3.8 -m venv env' to specify exact Python version"
+      ],
+      "golden_answer": "Change 'python2 -m venv env' to 'python3 -m venv env'"
+    }
+  ]
+}

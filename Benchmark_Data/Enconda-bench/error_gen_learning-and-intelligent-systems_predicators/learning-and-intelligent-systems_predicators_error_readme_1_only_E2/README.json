@@ -1,0 +1,18 @@
+{
+  "readme": "learning-and-intelligent-systems_predicators_error_readme_1_only_E2",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pytest command for running checks is missing the `--cov-fail-under=100` flag, which contradicts the documentation's claim that 100% code coverage is enforced.",
+      "correction_candidates": [
+        "Add the `--cov-fail-under=100` flag to the `pytest` command.",
+        "Change the description to say 'code is adequately covered' without mentioning '100'.",
+        "Replace the command with `pytest --cov=predicators`.",
+        "Add the `--strict-coverage` flag to the `pytest` command."
+      ],
+      "golden_answer": "Add the `--cov-fail-under=100` flag to the `pytest` command."
+    }
+  ]
+}

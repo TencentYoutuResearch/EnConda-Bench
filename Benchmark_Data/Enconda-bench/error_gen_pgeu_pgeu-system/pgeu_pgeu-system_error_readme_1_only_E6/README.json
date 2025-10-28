@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_1_only_E6",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally using `pip` before the virtual environment is created and activated, which can lead to system-wide package conflicts.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source venv/bin/activate` command.",
+        "Combine the venv creation and pip install into one step: `python3 -m venv venv && ./venv/bin/pip install -r requirements.txt`.",
+        "Remove the virtual environment steps and install dependencies globally.",
+        "Use `pipenv install` instead of `pip` and `venv`."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source venv/bin/activate` command."
+    }
+  ]
+}

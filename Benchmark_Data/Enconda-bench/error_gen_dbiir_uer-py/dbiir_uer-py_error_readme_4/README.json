@@ -1,0 +1,29 @@
+{
+  "readme": "dbiir_uer-py_error_readme_4",
+  "repo_name": "dbiir_uer-py",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states the vocabulary file path is `corpora/google_zh_vocab.txt` and uses this incorrect path in all example commands; the correct path is `models/google_zh_vocab.txt`.",
+      "correction_candidates": [
+        "Change all instances of `corpora/google_zh_vocab.txt` back to the correct path `models/google_zh_vocab.txt`.",
+        "Move the file `google_zh_vocab.txt` from the `models` directory to the `corpora` directory.",
+        "Create a symbolic link from `corpora/google_zh_vocab.txt` to `models/google_zh_vocab.txt`.",
+        "Change the path to `datasets/google_zh_vocab.txt`."
+      ],
+      "golden_answer": "Change all instances of `corpora/google_zh_vocab.txt` back to the correct path `models/google_zh_vocab.txt`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The inference command for `run_classifier_infer.py` is missing the required `--labels_num` parameter, which the explanatory text explicitly says is needed.",
+      "correction_candidates": [
+        "Add `--labels_num 2` to the `run_classifier_infer.py` command.",
+        "Add `--num_labels 2` to the `run_classifier_infer.py` command.",
+        "Modify the script so that `--labels_num` is optional.",
+        "Add `--class_num 2` to the `run_classifier_infer.py` command."
+      ],
+      "golden_answer": "Add `--labels_num 2` to the `run_classifier_infer.py` command."
+    }
+  ]
+}

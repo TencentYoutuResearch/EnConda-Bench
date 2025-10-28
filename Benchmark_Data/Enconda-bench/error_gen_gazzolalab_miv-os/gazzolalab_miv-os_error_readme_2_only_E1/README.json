@@ -1,0 +1,18 @@
+{
+  "readme": "gazzolalab_miv-os_error_readme_2_only_E1",
+  "repo_name": "gazzolalab_miv-os",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily ask the user to manually install `numpy`. `numpy` is a dependency of MiV-OS and will be installed automatically by pip.",
+      "correction_candidates": [
+        "Remove the line `$ pip install numpy`.",
+        "Add `scipy` to the manual installation: `$ pip install numpy scipy`.",
+        "Move the `$ pip install numpy` command after `$ pip install MiV-OS`.",
+        "Specify a version for numpy: `$ pip install numpy==1.21.0`."
+      ],
+      "golden_answer": "Remove the line `$ pip install numpy`."
+    }
+  ]
+}

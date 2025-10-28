@@ -1,0 +1,29 @@
+{
+  "readme": "mad-lab-fau_biopsykit_error_readme_2",
+  "repo_name": "mad-lab-fau_biopsykit",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is specified as exactly version 3.8 (`=3.8`), which is overly restrictive and incorrect. The package supports version 3.8 and newer.",
+      "correction_candidates": [
+        "Change the Python requirement to `Python >3.8`.",
+        "Change the Python requirement to `Python >=3.8`.",
+        "Change the Python requirement to `Python <=3.8`.",
+        "Remove the Python version specification."
+      ],
+      "golden_answer": "Change the Python requirement to `Python >=3.8`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that `poethepoet` might need to be installed separately with pip, but it is a development dependency managed by poetry and will be installed with `poetry install`.",
+      "correction_candidates": [
+        "Specify that `poethepoet` should be installed with `poetry add poethepoet --dev`.",
+        "Remove the sentence suggesting to install `poethepoet` separately.",
+        "Change the command to `pip install poethepoet --upgrade`.",
+        "Specify that `poethepoet` is installed with `pipx install poethepoet`."
+      ],
+      "golden_answer": "Remove the sentence suggesting to install `poethepoet` separately."
+    }
+  ]
+}

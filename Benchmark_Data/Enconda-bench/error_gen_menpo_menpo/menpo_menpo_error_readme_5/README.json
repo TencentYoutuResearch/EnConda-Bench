@@ -1,0 +1,29 @@
+{
+  "readme": "menpo_menpo_error_readme_5",
+  "repo_name": "menpo_menpo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies to pip install command that aren't required for basic Menpo installation",
+      "correction_candidates": [
+        "pip install menpo",
+        "pip install menpo numpy scipy",
+        "pip install menpo --no-deps",
+        "pip install menpo[complete]"
+      ],
+      "golden_answer": "pip install menpo"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Mixed pip and conda installation commands in wrong order, showing pip install before conda install for the same package",
+      "correction_candidates": [
+        "conda install -c conda-forge menpo",
+        "pip install menpo && conda install -c conda-forge menpo",
+        "conda create -n menpo && conda install -c conda-forge menpo",
+        "conda install menpo"
+      ],
+      "golden_answer": "conda install -c conda-forge menpo"
+    }
+  ]
+}

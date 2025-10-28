@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_8_only_E2",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent command paths - step 2 uses 'python holo.py' while other steps use 'python src/holo.py'",
+      "correction_candidates": [
+        "Change step 2 to use 'python src/holo.py -m setup' for consistency",
+        "Update all commands to use 'python holo.py' without src/ prefix",
+        "Add 'cd src/' instruction before step 2 to match the path",
+        "Use relative path './src/holo.py' for all commands"
+      ],
+      "golden_answer": "Change step 2 to use 'python src/holo.py -m setup' for consistency"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_4_only_E8",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "In the 'venv in Linux' example, the activation command provided is for Windows (`.\\winnf3\\Scripts\\activate`) instead of the correct command for Linux, causing confusion and failure on Linux systems.",
+      "correction_candidates": [
+        "The command should be `conda activate winnf3`.",
+        "The backslashes should be forward slashes: `./winnf3/Scripts/activate`.",
+        "The correct activation command for a venv on Linux is `source ./winnf3/bin/activate`.",
+        "The command is missing a preceding `./`, it should be `./winnf3/Scripts/activate`."
+      ],
+      "golden_answer": "The correct activation command for a venv on Linux is `source ./winnf3/bin/activate`."
+    }
+  ]
+}

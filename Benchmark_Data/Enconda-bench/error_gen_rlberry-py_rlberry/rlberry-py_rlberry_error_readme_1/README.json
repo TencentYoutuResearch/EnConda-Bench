@@ -1,0 +1,29 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_1",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version badge ambiguously states '3+' instead of the specific supported version '3.11', which could lead to users trying to use incompatible Python versions.",
+      "correction_candidates": [
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.11-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.9+-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-latest-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-%3E=3.9-blue\">"
+      ],
+      "golden_answer": "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.11-blue\">"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install -u rlberry` is incorrect. The flag `-u` is not a valid flag for upgrading a package; the correct flag is `-U` or `--upgrade`.",
+      "correction_candidates": [
+        "pip install rlberry",
+        "pip install --upgrade rlberry",
+        "pip install rlberry --update",
+        "pip install -U rlberry"
+      ],
+      "golden_answer": "pip install -U rlberry"
+    }
+  ]
+}

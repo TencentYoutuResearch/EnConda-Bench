@@ -1,0 +1,29 @@
+{
+  "readme": "materialsproject_custodian_error_readme_3",
+  "repo_name": "materialsproject_custodian",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the custodian logo is incorrect, causing the image not to display. It is written as `assets/custodian_logo.png` but should be `docs/assets/custodian_logo.png`.",
+      "correction_candidates": [
+        "Change the image path to `docs/assets/custodian_logo.png`.",
+        "Change the image path to `./docs/assets/custodian_logo.png`.",
+        "Change the image path to `/docs/assets/custodian_logo.png`.",
+        "Change the image path to `https://raw.githubusercontent.com/materialsproject/custodian/main/docs/assets/custodian_logo.png`."
+      ],
+      "golden_answer": "Change the image path to `docs/assets/custodian_logo.png`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The stable installation command `pip install custodian --user` is not the generally recommended approach, as it can lead to issues in virtual environments or conflict with system-managed packages.",
+      "correction_candidates": [
+        "Change the command to `pip install custodian`.",
+        "Change the command to `python -m pip install custodian`.",
+        "Change the command to `pip3 install custodian`.",
+        "Change the command to `sudo pip install custodian`."
+      ],
+      "golden_answer": "Change the command to `pip install custodian`."
+    }
+  ]
+}

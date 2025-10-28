@@ -1,0 +1,29 @@
+{
+  "readme": "scitools_iris-grib_error_readme_1",
+  "repo_name": "scitools_iris-grib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest installing with pip but fail to mention the required non-Python dependency `eccodes`, which must be installed separately before `iris-grib` can function.",
+      "correction_candidates": [
+        "Install the `eccodes` library using your system's package manager (e.g., `sudo apt-get install libeccodes-dev` or `brew install eccodes`) before running pip install.",
+        "Run `pip install eccodes iris-grib` to install all dependencies automatically.",
+        "The recommended installation method is using conda: `conda install -c conda-forge iris-grib`.",
+        "Download the `eccodes` wheel file manually from the ECMWF website and install it with `pip`."
+      ],
+      "golden_answer": "Install the `eccodes` library using your system's package manager (e.g., `sudo apt-get install libeccodes-dev` or `brew install eccodes`) before running pip install."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command is incorrect, attempting to install `iris` and `grib` as two separate packages instead of the single `iris-grib` package.",
+      "correction_candidates": [
+        "Correct the command to `pip install iris-grib`.",
+        "Correct the command to `pip install scitools-iris-grib`.",
+        "Correct the command to `pip install 'iris-grib'`.",
+        "Correct the command to `pip install iris_grib`."
+      ],
+      "golden_answer": "Correct the command to `pip install iris-grib`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "libensemble_libensemble_error_readme_6_only_E2",
+  "repo_name": "libensemble_libensemble",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed --comms to --comm in the command usage example, making it an invalid parameter",
+      "correction_candidates": [
+        "python this_file.py --comms local --nworkers 4",
+        "python this_file.py --communication local --nworkers 4",
+        "python this_file.py --comm-type local --nworkers 4",
+        "python this_file.py --mpi local --nworkers 4"
+      ],
+      "golden_answer": "python this_file.py --comms local --nworkers 4"
+    }
+  ]
+}

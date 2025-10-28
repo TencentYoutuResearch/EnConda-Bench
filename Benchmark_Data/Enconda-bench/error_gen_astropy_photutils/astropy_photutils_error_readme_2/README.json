@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_photutils_error_readme_2",
+  "repo_name": "astropy_photutils",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Photutils requires Python 2.7, which is outdated and unsupported. The package requires a modern Python version.",
+      "correction_candidates": [
+        "Remove the sentence stating it requires Python 2.7.",
+        "Change the requirement to Python 3.6+.",
+        "Specify that it requires Python >= 3.8, as per the latest documentation.",
+        "State that the package is compatible with both Python 2.7 and 3.x."
+      ],
+      "golden_answer": "Remove the sentence stating it requires Python 2.7."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The suggested command `cat CITATION` to view citation details is incorrect because the file is not in the repository root and is named `CITATION.rst`.",
+      "correction_candidates": [
+        "The command is incorrect because the file is not in the current working directory after installation.",
+        "Use `less photutils/CITATION.rst` to view the file from the repository root.",
+        "The command should be `photutils --citation`.",
+        "Remove the command and direct users to the `CITATION` file link provided."
+      ],
+      "golden_answer": "Remove the command and direct users to the `CITATION` file link provided."
+    }
+  ]
+}

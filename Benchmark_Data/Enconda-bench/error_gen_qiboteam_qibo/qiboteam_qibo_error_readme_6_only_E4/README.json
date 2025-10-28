@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibo_error_readme_6_only_E4",
+  "repo_name": "qiboteam_qibo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Installation command references a requirements file path that likely doesn't exist in the repository",
+      "correction_candidates": [
+        "Use 'pip install qibo' instead of referencing a requirements file",
+        "Change path to 'requirements.txt' in the root directory",
+        "Use 'pip install -e .' for development installation",
+        "Reference the correct path 'requirements/dev-requirements.txt'"
+      ],
+      "golden_answer": "Use 'pip install qibo' instead of referencing a requirements file"
+    }
+  ]
+}

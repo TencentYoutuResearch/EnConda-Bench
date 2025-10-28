@@ -1,0 +1,29 @@
+{
+  "readme": "ceph_ceph-ansible_error_readme_2",
+  "repo_name": "ceph_ceph-ansible",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the project requires Ansible version 2.9 and is not compatible with newer versions, which is a restrictive and likely inaccurate compatibility claim.",
+      "correction_candidates": [
+        "Replace the sentence with: 'This project is compatible with Ansible versions 4.0 and newer.'",
+        "Remove the sentence: 'This project requires Ansible version 2.9, as it is not compatible with newer versions.'",
+        "Replace the sentence with: 'Please check the official documentation for Ansible version compatibility information.'",
+        "Replace the sentence with: 'This project requires Ansible Core >= 2.11.'"
+      ],
+      "golden_answer": "Remove the sentence: 'This project requires Ansible version 2.9, as it is not compatible with newer versions.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to a non-existent quick start file at `docs/QUICKSTART.md`.",
+      "correction_candidates": [
+        "Replace the sentence with a link to the quick start guide in the official documentation: `https://docs.ceph.com/projects/ceph-ansible/en/latest/misc/quick-start.html`",
+        "Correct the file path to `documentation/quick-start.md`.",
+        "Remove the sentence: 'For a quick start, see the `docs/QUICKSTART.md` file in this repository.'",
+        "Correct the file path to `QUICKSTART.md` in the root directory."
+      ],
+      "golden_answer": "Remove the sentence: 'For a quick start, see the `docs/QUICKSTART.md` file in this repository.'"
+    }
+  ]
+}

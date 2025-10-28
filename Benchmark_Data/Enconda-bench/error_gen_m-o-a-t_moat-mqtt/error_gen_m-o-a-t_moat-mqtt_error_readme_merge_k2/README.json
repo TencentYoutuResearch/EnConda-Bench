@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_m-o-a-t_moat-mqtt_error_readme_merge_k2",
+  "repo_name": "m-o-a-t_moat-mqtt",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an underscore (`moat_mqtt`) instead of a hyphen (`moat-mqtt`), which is incorrect for the PyPI package name and will cause the installation to fail.",
+      "correction_candidates": [
+        "$ pip install moat-mqtt",
+        "$ pip install \"moat-mqtt\"",
+        "$ pip install MoaT-MQTT",
+        "$ python -m pip install moat-mqtt"
+      ],
+      "golden_answer": "$ pip install moat-mqtt"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The link to the documentation on 'Read the Docs' points to an incorrect domain (`.com` instead of `.org`), leading to a '404 Not Found' error.",
+      "correction_candidates": [
+        ".. _Read the Docs: http://moat-mqtt.readthedocs.io/",
+        ".. _Read the Docs: https://moat-mqtt.readthedocs.org/",
+        ".. _Read the Docs: http://moat-mqtt.readthedocs.org/",
+        ".. _Read the Docs: https://readthedocs.org/projects/moat-mqtt/"
+      ],
+      "golden_answer": ".. _Read the Docs: http://moat-mqtt.readthedocs.org/"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that `hbmqtt` must be installed manually as a prerequisite. `moat-mqtt` is a self-contained fork and does not depend on a separate `hbmqtt` installation.",
+      "correction_candidates": [
+        "Remove the instruction to install `hbmqtt`.",
+        "The instructions should specify `pip install hbmqtt --no-deps`.",
+        "The instructions should be `pip install moat-mqtt hbmqtt`.",
+        "The instructions should state that `anyio` needs to be installed first: `$ pip install anyio`."
+      ],
+      "golden_answer": "Remove the instruction to install `hbmqtt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly claims the package is only compatible with Python 2.7, while its dependency `anyio` requires Python 3, making the statement false and misleading.",
+      "correction_candidates": [
+        "Remove the sentence about Python 2.7 compatibility.",
+        "Change the sentence to \"Note: This package requires Python 3.6 or newer.\"",
+        "Change the sentence to \"Note: This package is compatible with both Python 2.7 and Python 3.x.\"",
+        "Change the sentence to \"Note: To use with Python 2.7, you must install the `trollius` backport.\""
+      ],
+      "golden_answer": "Remove the sentence about Python 2.7 compatibility."
+    }
+  ]
+}

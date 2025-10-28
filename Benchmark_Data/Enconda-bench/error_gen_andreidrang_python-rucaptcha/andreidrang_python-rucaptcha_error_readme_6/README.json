@@ -1,0 +1,29 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_6",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax with incorrect word order 'install pip python-rucaptcha' instead of 'pip install python-rucaptcha'",
+      "correction_candidates": [
+        "pip install python-rucaptcha",
+        "python -m pip install python-rucaptcha",
+        "pip3 install python-rucaptcha",
+        "sudo pip install python-rucaptcha"
+      ],
+      "golden_answer": "pip install python-rucaptcha"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Testing steps are in wrong logical order - running tests before setting up the required environment variable",
+      "correction_candidates": [
+        "Set RUCAPTCHA_KEY first, then run make tests",
+        "Run make tests first to check if key is needed",
+        "Set environment variables after testing to avoid conflicts",
+        "Use make tests --setup-env to automatically configure"
+      ],
+      "golden_answer": "Set RUCAPTCHA_KEY first, then run make tests"
+    }
+  ]
+}

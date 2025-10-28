@@ -1,0 +1,18 @@
+{
+  "readme": "pytest-dev_pytest-xdist_error_readme_1_only_E1",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command uses an incorrect package name `pytest_xdist` instead of the correct `pytest-xdist`.",
+      "correction_candidates": [
+        "Change `pip install pytest_xdist` to `pip install pytest-xdist`.",
+        "Change `pip install pytest_xdist` to `pip install xdist`.",
+        "Change `pip install pytest_xdist` to `python -m pip install pytest-xdist`.",
+        "The package should be installed via conda: `conda install pytest-xdist`."
+      ],
+      "golden_answer": "Change `pip install pytest_xdist` to `pip install pytest-xdist`."
+    }
+  ]
+}

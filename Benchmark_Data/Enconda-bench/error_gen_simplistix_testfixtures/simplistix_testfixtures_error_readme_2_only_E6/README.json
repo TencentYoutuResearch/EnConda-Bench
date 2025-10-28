@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_2_only_E6",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The contribution instructions have the wrong logical order: it tells the user to install the package in editable mode before cloning the git repository.",
+      "correction_candidates": [
+        "Swap the order of the `git clone` and `pip install -e .` commands.",
+        "Replace the two commands with: `git clone https://github.com/simplistix/testfixtures.git && cd testfixtures && pip install -e .`",
+        "Remove the `pip install -e .` command as it is not needed to clone the repository.",
+        "Correct the commands to: `git clone https://github.com/simplistix/testfixtures.git; cd testfixtures; pip install -e .`"
+      ],
+      "golden_answer": "Swap the order of the `git clone` and `pip install -e .` commands."
+    }
+  ]
+}

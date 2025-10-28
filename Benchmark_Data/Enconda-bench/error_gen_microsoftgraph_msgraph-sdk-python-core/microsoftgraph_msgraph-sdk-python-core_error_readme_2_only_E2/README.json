@@ -1,0 +1,18 @@
+{
+  "readme": "microsoftgraph_msgraph-sdk-python-core_error_readme_2_only_E2",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install msgraph-core==latest` uses invalid syntax. The `==latest` tag is not a valid way to specify the latest version in pip.",
+      "correction_candidates": [
+        "Change the command to `pip install msgraph-core --latest`.",
+        "Change the command to `pip install msgraph-core --upgrade`.",
+        "Change the command to `pip install msgraph-core`.",
+        "Change the command to `pip install msgraph-core@latest`."
+      ],
+      "golden_answer": "Change the command to `pip install msgraph-core`."
+    }
+  ]
+}

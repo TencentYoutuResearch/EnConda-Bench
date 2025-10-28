@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap4_error_readme_2_only_E6",
+  "repo_name": "zostera_django-bootstrap4",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions are in the wrong logical order, telling the user to add the app to `INSTALLED_APPS` before installing it with pip.",
+      "correction_candidates": [
+        "Combine the installation and configuration steps into a single instruction.",
+        "The `pip install` step should be performed before modifying `settings.py`.",
+        "The `settings.py` modification is optional and should be moved to an 'Advanced' section.",
+        "A virtual environment should be created before any other steps."
+      ],
+      "golden_answer": "The `pip install` step should be performed before modifying `settings.py`."
+    }
+  ]
+}

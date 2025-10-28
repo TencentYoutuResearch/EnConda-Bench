@@ -1,0 +1,18 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_1_only_E6",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `pip install` command is executed before the `git clone` command. This will fail because the `citationhunt/requirements.txt` file does not exist until the repository is cloned.",
+      "correction_candidates": [
+        "Execute `pip install git+https://github.com/eggpi/citationhunt.git#egg=citationhunt` before the `git clone` command.",
+        "Correct the order by executing `git clone https://github.com/eggpi/citationhunt.git` before `pip install -r citationhunt/requirements.txt`.",
+        "Change the command to `pip install requests` since that is the main dependency.",
+        "Remove the `pip install` command entirely and run it after starting the webservice."
+      ],
+      "golden_answer": "Correct the order by executing `git clone https://github.com/eggpi/citationhunt.git` before `pip install -r citationhunt/requirements.txt`."
+    }
+  ]
+}

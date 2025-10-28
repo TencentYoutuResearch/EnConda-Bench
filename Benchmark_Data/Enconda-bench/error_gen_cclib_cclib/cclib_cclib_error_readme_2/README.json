@@ -1,0 +1,29 @@
+{
+  "readme": "cclib_cclib_error_readme_2",
+  "repo_name": "cclib_cclib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library is compatible with Python 2.7, which is no longer supported and will cause installation or runtime errors.",
+      "correction_candidates": [
+        "This library requires Python 3.8 or higher.",
+        "This library is compatible with both Python 2.7 and Python 3.x.",
+        "This library requires Python 3.6 specifically.",
+        "To use with Python 2.7, you must install a legacy version: `pip install cclib<1.7`"
+      ],
+      "golden_answer": "This library requires Python 3.8 or higher."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly advise installing the package into the global environment before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "The order is correct, but you should use `sudo pip install .` for global installation.",
+        "First create and activate the virtual environment, then install the package: `python -m venv venv`, `source venv/bin/activate`, `pip install .`",
+        "You can install directly into the virtual environment using: `python -m venv venv && ./venv/bin/pip install .`",
+        "Skip the virtual environment and install globally with `pip install .` for simplicity."
+      ],
+      "golden_answer": "First create and activate the virtual environment, then install the package: `python -m venv venv`, `source venv/bin/activate`, `pip install .`"
+    }
+  ]
+}

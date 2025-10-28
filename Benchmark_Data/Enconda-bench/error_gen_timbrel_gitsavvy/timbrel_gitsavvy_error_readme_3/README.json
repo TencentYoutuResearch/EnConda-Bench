@@ -1,0 +1,29 @@
+{
+  "readme": "timbrel_gitsavvy_error_readme_3",
+  "repo_name": "timbrel_gitsavvy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for finding command names tell the user to run a command *before* enabling command logging. This will prevent the executed command from being logged to the console.",
+      "correction_candidates": [
+        "Enable logging with `sublime.log_commands(True)` before running the command from the Command Palette.",
+        "Run `sublime.log_commands(True)` and then restart Sublime Text before running the command.",
+        "Run the command, then run `sublime.show_command_history()`.",
+        "Run the command and then `sublime.log_commands(True)` to see the last executed command."
+      ],
+      "golden_answer": "Enable logging with `sublime.log_commands(True)` before running the command from the Command Palette."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example keybinding for opening the inline diff uses an incorrect command 'gs_show_inline_diff'. The correct command is 'gs_inline_diff'.",
+      "correction_candidates": [
+        "Change the command in the keybinding to `gs_inline_diff`.",
+        "Change the command in the keybinding to `git: inline_diff`.",
+        "Change the command in the keybinding to `gitsavvy_inline_diff`.",
+        "Change the command in the keybinding to `gs_diff`, and add the argument `\"args\": {\"inline\": true}`."
+      ],
+      "golden_answer": "Change the command in the keybinding to `gs_inline_diff`."
+    }
+  ]
+}

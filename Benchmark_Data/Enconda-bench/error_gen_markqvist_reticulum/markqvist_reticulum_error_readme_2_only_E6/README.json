@@ -1,0 +1,18 @@
+{
+  "readme": "markqvist_reticulum_error_readme_2_only_E6",
+  "repo_name": "markqvist_reticulum",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instruction for `pipx` installation suggests running `rnsd` to create a configuration before installing the package, which is impossible since `rnsd` is part of the package.",
+      "correction_candidates": [
+        "Remove the sentence 'First, run `rnsd` to create an initial configuration, then install the package.'",
+        "Change the instruction to 'First, install with `pipx install rns`, then run `rnsd`.'",
+        "Change the instruction to 'First, manually create a config file at `~/.config/rns/config`, then run `pipx install rns`.'",
+        "Change the command to `pipx run rnsd && pipx install rns`."
+      ],
+      "golden_answer": "Remove the sentence 'First, run `rnsd` to create an initial configuration, then install the package.'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_1_only_E2",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'GitHub Cloning' installation section, the command `python setup.py install` is used. This is an outdated method that bypasses pip's dependency resolver and can lead to installation issues. The recommended approach is using `pip install`.",
+      "correction_candidates": [
+        "pip install .",
+        "pip install --use-pep517 .",
+        "pip install -e .",
+        "python -m pip install ."
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

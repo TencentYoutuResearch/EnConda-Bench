@@ -1,0 +1,18 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_2_only_E6",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for `pip` installation are in the wrong logical order. It suggests running qtconsole before confirming its dependencies are installed, which will cause an error.",
+      "correction_candidates": [
+        "Restore the original text: \"**Note:** Make sure that Qt is installed. Unfortunately, Qt is not installed when using pip. The next section gives instructions on doing it.\"",
+        "Add the command `pip install pyqt5` before `pip install qtconsole`.",
+        "Change the section to recommend installing with conda instead.",
+        "Combine the installation into one line: `pip install qtconsole pyqt5`."
+      ],
+      "golden_answer": "Restore the original text: \"**Note:** Make sure that Qt is installed. Unfortunately, Qt is not installed when using pip. The next section gives instructions on doing it.\""
+    }
+  ]
+}

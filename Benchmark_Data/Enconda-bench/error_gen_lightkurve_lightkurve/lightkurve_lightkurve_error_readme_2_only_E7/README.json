@@ -1,0 +1,18 @@
+{
+  "readme": "lightkurve_lightkurve_error_readme_2_only_E7",
+  "repo_name": "lightkurve_lightkurve",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that Lightkurve requires Python 2.7, which is outdated and incompatible. The package requires a modern version of Python 3.",
+      "correction_candidates": [
+        "Remove the sentence stating that Lightkurve requires Python 2.7.",
+        "Change the sentence to state that Lightkurve is compatible with Python 3.8 and higher.",
+        "Replace 'Python 2.7' with 'the latest version of Python 3'.",
+        "Add a note that while Python 2.7 is mentioned, Python 3 is recommended."
+      ],
+      "golden_answer": "Remove the sentence stating that Lightkurve requires Python 2.7."
+    }
+  ]
+}

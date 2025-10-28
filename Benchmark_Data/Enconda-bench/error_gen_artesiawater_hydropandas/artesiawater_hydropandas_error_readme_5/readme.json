@@ -1,0 +1,29 @@
+{
+  "readme": "artesiawater_hydropandas_error_readme_5",
+  "repo_name": "artesiawater_hydropandas",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned specific version in installation command when latest version should be used",
+      "correction_candidates": [
+        "`pip install hydropandas`",
+        "`pip install --upgrade hydropandas`",
+        "`pip install hydropandas>=1.0.0`",
+        "`conda install hydropandas`"
+      ],
+      "golden_answer": "`pip install hydropandas`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command for development installation missing -e flag",
+      "correction_candidates": [
+        "`pip install -e .` from the module root directory",
+        "`python setup.py develop` from the module root directory",
+        "`pip install .` from the module root directory",
+        "`python -m pip install --editable .` from the module root directory"
+      ],
+      "golden_answer": "`pip install -e .` from the module root directory"
+    }
+  ]
+}

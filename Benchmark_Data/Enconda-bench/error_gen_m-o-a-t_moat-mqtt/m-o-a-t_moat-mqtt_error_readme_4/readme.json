@@ -1,0 +1,29 @@
+{
+  "readme": "m-o-a-t_moat-mqtt_error_readme_4",
+  "repo_name": "m-o-a-t_moat-mqtt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command attempts to install an optional dependency extra named `storage`, but this extra does not exist. The correct extra for MoaT-KV integration is `kv`.",
+      "correction_candidates": [
+        "The command should be `pip install moat-mqtt[kv]` to install MoaT-KV support.",
+        "The command should be `pip install moat-mqtt` and then `pip install moat-kv` separately.",
+        "The command should be `pip install \"moat-mqtt[storage]\"`.",
+        "The command should be `pip install moat-mqtt-storage`."
+      ],
+      "golden_answer": "The command should be `pip install moat-mqtt[kv]` to install MoaT-KV support."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command to start the broker uses an incorrect syntax for passing the configuration file, using `--config=` instead of a space. Many command-line tools expect a space as a separator for long-form options.",
+      "correction_candidates": [
+        "The correct syntax is `$ moat-broker --config /etc/moat/broker.conf`.",
+        "The correct syntax is `$ moat-broker -c /etc/moat/broker.conf`.",
+        "The command is not `moat-broker`, it's `moat-mqtt broker --config /etc/moat/broker.conf`.",
+        "The configuration file path should be in quotes: `$ moat-broker --config=\"/etc/moat/broker.conf\"`."
+      ],
+      "golden_answer": "The correct syntax is `$ moat-broker --config /etc/moat/broker.conf`."
+    }
+  ]
+}

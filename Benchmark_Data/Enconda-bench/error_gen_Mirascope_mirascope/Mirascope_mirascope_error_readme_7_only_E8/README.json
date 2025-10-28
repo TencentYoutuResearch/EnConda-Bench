@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_7_only_E8",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Removed the tools parameter from OpenAICallParams but still expects tool functionality to work in the example",
+      "correction_candidates": [
+        "call_params = OpenAICallParams(model=\"gpt-4\", tools=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, functions=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, tool_choice=\"auto\", tools=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, enable_tools=True)"
+      ],
+      "golden_answer": "call_params = OpenAICallParams(model=\"gpt-4\", tools=[get_current_weather])"
+    }
+  ]
+}

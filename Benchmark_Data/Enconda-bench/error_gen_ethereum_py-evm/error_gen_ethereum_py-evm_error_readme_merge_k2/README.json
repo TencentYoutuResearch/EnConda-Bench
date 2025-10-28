@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_ethereum_py-evm_error_readme_merge_k2",
+  "repo_name": "ethereum_py-evm",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development dependencies are installed before the virtual environment is created and activated, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The command '. venv/bin/activate' should be the first command after 'cd py-evm'.",
+        "The command 'python -m pip install -e \".[dev]\"' should be run after 'virtualenv -p python3 venv' and '. venv/bin/activate'.",
+        "Replace 'python -m pip install -e \".[dev]\"' with 'pip install -r requirements-dev.txt' after activating the virtual environment.",
+        "The command 'python -m pip install -e \".[dev]\"' should be moved to the very end of the script."
+      ],
+      "golden_answer": "The command 'python -m pip install -e \".[dev]\"' should be run after 'virtualenv -p python3 venv' and '. venv/bin/activate'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'make release' command uses an incorrect double-dash parameter '--bump' which is not the correct syntax for passing variables to a Makefile.",
+      "correction_candidates": [
+        "Change the command to 'make release --bump $$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'release --bump $$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'make release BUMP=$$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'make release bump=$$VERSION_PART_TO_BUMP$$'."
+      ],
+      "golden_answer": "Change the command to 'make release bump=$$VERSION_PART_TO_BUMP$$'."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'virtualenv' command does not specify a Python version, which can lead to the creation of a virtual environment with an incompatible system default Python version (e.g., Python 2).",
+      "correction_candidates": [
+        "Change 'virtualenv venv' to 'python3 -m venv venv'.",
+        "Change 'virtualenv venv' to 'virtualenv --python=python3 venv'.",
+        "Add 'python --version' before the 'virtualenv venv' command to ensure it's Python 3.",
+        "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+      ],
+      "golden_answer": "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command for installing development dependencies is missing the '[dev]' extra, which results in necessary tools for development (like testing and linting packages) not being installed.",
+      "correction_candidates": [
+        "Change 'python -m pip install -e .' to 'python -m pip install -e .[dev]'.",
+        "Add a new command 'pip install -r requirements-dev.txt' after 'python -m pip install -e .'.",
+        "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'.",
+        "Change 'python -m pip install -e .' to 'pip install -e \".[dev]\"'."
+      ],
+      "golden_answer": "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'."
+    }
+  ]
+}

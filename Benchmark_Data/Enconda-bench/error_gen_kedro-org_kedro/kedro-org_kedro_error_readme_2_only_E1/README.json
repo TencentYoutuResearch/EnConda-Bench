@@ -1,0 +1,18 @@
+{
+  "readme": "kedro-org_kedro_error_readme_2_only_E1",
+  "repo_name": "kedro-org_kedro",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `jupyter` is a required dependency that must be installed before installing Kedro.",
+      "correction_candidates": [
+        "Jupyter is not a required dependency for the core Kedro framework and does not need to be installed first.",
+        "Jupyter is included with the `pip install kedro` command and does not need to be installed separately.",
+        "You should install Jupyter with conda using `conda install jupyter` for better compatibility.",
+        "Kedro's notebook support is an optional extra, installable with `pip install kedro[notebooks]`."
+      ],
+      "golden_answer": "Jupyter is not a required dependency for the core Kedro framework and does not need to be installed first."
+    }
+  ]
+}

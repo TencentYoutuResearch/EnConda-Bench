@@ -1,0 +1,18 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_4_only_E1",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `torchaudio` and the non-existent `torchvideo` are mandatory dependencies for basic use, when they are optional dependencies for specific data types.",
+      "correction_candidates": [
+        "Correct the text to: '> **_Optional Dependencies_**: some parts of Meerkat rely on optional dependencies e.g. audio processing may rely on utilities from `torchaudio`.'",
+        "Revert the section to its original commented-out state using <!-- ... -->.",
+        "Remove the dependency note entirely.",
+        "Correct the packages to `torchaudio` and `torchvision` and clarify they are optional extras."
+      ],
+      "golden_answer": "Correct the text to: '> **_Optional Dependencies_**: some parts of Meerkat rely on optional dependencies e.g. audio processing may rely on utilities from `torchaudio`.'"
+    }
+  ]
+}

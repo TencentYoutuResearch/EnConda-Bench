@@ -1,0 +1,18 @@
+{
+  "readme": "pysmt_pysmt_error_readme_4_only_E8",
+  "repo_name": "pysmt_pysmt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The 'Solvers Support' table incorrectly swaps the supported theories for Z3 and MathSAT, misleadingly attributing NRA/NIA support to MathSAT instead of Z3.",
+      "correction_candidates": [
+        "Swap the 'Supported Theories' entries for MathSAT and Z3 back to their correct descriptions.",
+        "Correct the MathSAT theories to 'UF, LIA, LRA, BV, AX' and the Z3 theories to 'UF, LIA, LRA, BV, AX, NRA, NIA'.",
+        "The table should be corrected to show that Z3 supports NRA and NIA, while MathSAT does not.",
+        "Restore the original table where MathSAT supports 'UF, LIA, LRA, BV, AX' and Z3 supports 'UF, LIA, LRA, BV, AX, NRA, NIA'."
+      ],
+      "golden_answer": "Correct the MathSAT theories to 'UF, LIA, LRA, BV, AX' and the Z3 theories to 'UF, LIA, LRA, BV, AX, NRA, NIA'."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "strinking_futaba_error_readme_2",
+  "repo_name": "strinking_futaba",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified as 'Python 3 or later', which is too broad and may cause compatibility issues as the project requires features from Python 3.6+.",
+      "correction_candidates": [
+        "Change the requirement to 'Requires Python 3.6 or later.'",
+        "Change the requirement to 'Requires Python 3.6.'",
+        "Add a python = \"^3.6\" entry to the pyproject.toml file.",
+        "Change the requirement to 'Requires the latest version of Python 3.'"
+      ],
+      "golden_answer": "Change the requirement to 'Requires Python 3.6 or later.'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The dependency installation step (`poetry install`) is listed after the database setup and configuration steps. The application dependencies should be installed before attempting to configure or run the application.",
+      "correction_candidates": [
+        "Move the `poetry install` command to be the first step in the 'Setup' section.",
+        "Move the `poetry install` command to be the second step, after `pip3 install poetry`.",
+        "Move the `poetry install` command to the 'To run' section, just before `python3 -m futaba`.",
+        "Combine the first two steps into `pip3 install poetry && poetry install`."
+      ],
+      "golden_answer": "Move the `poetry install` command to be the second step, after `pip3 install poetry`."
+    }
+  ]
+}

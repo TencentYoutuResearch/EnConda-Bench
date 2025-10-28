@@ -1,0 +1,18 @@
+{
+  "readme": "python-markdown_markdown_error_readme_6_only_E2",
+  "repo_name": "python-markdown_markdown",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The 'python setup.py install' command is outdated and may cause installation issues",
+      "correction_candidates": [
+        "python -m pip install .",
+        "pip install -e .",
+        "python -m build && pip install dist/*.whl",
+        "conda install markdown"
+      ],
+      "golden_answer": "python -m pip install ."
+    }
+  ]
+}

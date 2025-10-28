@@ -1,0 +1,18 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_4_only_E1",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command suggests using `conda install dacy`, but the package is distributed on PyPI and should be installed with `pip`. The conda command is likely to fail without specifying a channel like conda-forge, which isn't mentioned.",
+      "correction_candidates": [
+        "pip install dacy",
+        "conda install -c conda-forge dacy",
+        "python -m pip install dacy",
+        "pip install dacy -f https://pypi.org/simple"
+      ],
+      "golden_answer": "pip install dacy"
+    }
+  ]
+}

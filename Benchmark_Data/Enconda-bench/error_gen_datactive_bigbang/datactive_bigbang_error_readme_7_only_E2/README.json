@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_7_only_E2",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Using incorrect command 'collect-mails' instead of 'collect-mail' in the bigbang usage example",
+      "correction_candidates": [
+        "Change 'bigbang collect-mails' to 'bigbang collect-mail'",
+        "Fix the command name from collect-mails to collect-mail",
+        "Use the correct singular form 'collect-mail' instead of plural",
+        "Replace 'collect-mails' with the proper 'collect-mail' command"
+      ],
+      "golden_answer": "Change 'bigbang collect-mails' to 'bigbang collect-mail'"
+    }
+  ]
+}

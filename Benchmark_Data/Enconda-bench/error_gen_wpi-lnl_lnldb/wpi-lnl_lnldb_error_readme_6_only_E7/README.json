@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_6_only_E7",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version incompatibility between Python2.7 and Django 2.2 or later",
+      "correction_candidates": [
+        "Change 'Python2.7' to 'Python3.x'",
+        "Change 'Django 2.2 or later' to 'Django 1.11 or earlier'",
+        "Change 'Python2.7' to 'Python3.6+'",
+        "Change the entire sentence to 'LNLDB now runs under Python3.8 and Django 3.2 or later'"
+      ],
+      "golden_answer": "Change 'Python2.7' to 'Python3.x'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_3_only_E7",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "A note incorrectly states that `protoletariat` is only compatible with `protoc` version 2.5.0, which is outdated and likely to cause compatibility issues with modern protobuf features.",
+      "correction_candidates": [
+        "Remove the note about the `protoc` version requirement.",
+        "Change the note to \"requires `protoc` version 3.0.0 or newer.\"",
+        "The tool `protol` automatically installs the correct version of `protoc`.",
+        "Change the note to \"requires `protoc` version 3.20.0, but is backwards-compatible with 2.5.0.\""
+      ],
+      "golden_answer": "Remove the note about the `protoc` version requirement."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "python-openapi_openapi-core_error_readme_3_only_E2",
+  "repo_name": "python-openapi_openapi-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing from the repository uses the incorrect `git://` protocol scheme instead of `git+https://`, which will cause pip to fail.",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/python-openapi/openapi-core.git#egg=openapi_core",
+        "pip install -e git+ssh://git@github.com/python-openapi/openapi-core.git#egg=openapi_core",
+        "The protocol should be `git+https` for pip to install from a git repository over HTTPS.",
+        "pip install -e \"git+https://github.com/python-openapi/openapi-core.git#egg=openapi_core\""
+      ],
+      "golden_answer": "pip install -e git+https://github.com/python-openapi/openapi-core.git#egg=openapi_core"
+    }
+  ]
+}

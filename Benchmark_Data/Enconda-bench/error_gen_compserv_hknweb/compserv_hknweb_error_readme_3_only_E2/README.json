@@ -1,0 +1,18 @@
+{
+  "readme": "compserv_hknweb_error_readme_3_only_E2",
+  "repo_name": "compserv_hknweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The deployment section incorrectly states the deployment script is `deploy.py`, but the project uses Fabric, and the correct file is `fabfile.py`.",
+      "correction_candidates": [
+        "Rename the `fabfile.py` in the repository to `deploy.py` to match the documentation.",
+        "Change the filename in the text from `deploy.py` to `fabfile.py`.",
+        "Change the deployment command to `HKNWEB_MODE=\"prod\" python deploy.py`.",
+        "Create a new `deploy.py` script that calls the `fabfile.py`."
+      ],
+      "golden_answer": "Change the filename in the text from `deploy.py` to `fabfile.py`."
+    }
+  ]
+}

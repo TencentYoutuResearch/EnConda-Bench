@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_1_only_E2",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command is syntactically incorrect, using 'from channel' instead of the correct flag.",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ conda install -c numba llvmlite",
+        "$ conda install llvmlite --channel numba",
+        "$ conda get --channel=numba llvmlite"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    }
+  ]
+}

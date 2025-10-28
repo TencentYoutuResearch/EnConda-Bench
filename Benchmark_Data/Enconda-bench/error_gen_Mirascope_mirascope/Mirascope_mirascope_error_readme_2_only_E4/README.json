@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_2_only_E4",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the 'QuickStart' video thumbnail is incorrect, pointing to a non-existent 'docs/assets' directory and causing the image to not display.",
+      "correction_candidates": [
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `../assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `./assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `/assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `quickstart-screenshot-with-play-button.png`."
+      ],
+      "golden_answer": "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `./assets/quickstart-screenshot-with-play-button.png`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_7_only_E2",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect Django command syntax using --settings flag with wrong path format",
+      "correction_candidates": [
+        "python manage.py runserver",
+        "python manage.py runserver --settings=pgeu.settings",
+        "DJANGO_SETTINGS_MODULE=pgeu.settings python manage.py runserver",
+        "python manage.py runserver --settings=settings.production"
+      ],
+      "golden_answer": "python manage.py runserver"
+    }
+  ]
+}

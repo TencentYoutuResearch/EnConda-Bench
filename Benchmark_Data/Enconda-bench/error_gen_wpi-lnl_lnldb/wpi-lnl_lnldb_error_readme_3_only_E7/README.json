@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_3_only_E7",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The introduction omits the specific Django version required, stating it runs on 'Django' which is too vague and can lead to installing an incompatible version.",
+      "correction_candidates": [
+        "The text should be changed to 'Django 2.2 or later'.",
+        "The text should be changed to 'Django 3.x'.",
+        "The text should be changed to 'the latest version of Django'.",
+        "The text should specify the version in requirements_debug.txt."
+      ],
+      "golden_answer": "The text should be changed to 'Django 2.2 or later'."
+    }
+  ]
+}

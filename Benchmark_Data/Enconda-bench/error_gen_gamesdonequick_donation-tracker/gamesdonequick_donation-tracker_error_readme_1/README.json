@@ -1,0 +1,29 @@
+{
+  "readme": "gamesdonequick_donation-tracker_error_readme_1",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is specified as 'Python 3.8+', which is too broad and may lead to using an untested or incompatible future Python version.",
+      "correction_candidates": [
+        "Python >= 3.8",
+        "Python 3.8 to 3.12",
+        "Python 3.10",
+        "Python 3.8, 3.9, 3.10, 3.11, or 3.12"
+      ],
+      "golden_answer": "Python 3.8 to 3.12"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install --edit donation-tracker' is incorrect. The '--edit' flag is not a valid option for pip install.",
+      "correction_candidates": [
+        "pip install -e donation-tracker",
+        "pip install --editable ./donation-tracker",
+        "pip install donation-tracker --dev",
+        "python setup.py develop"
+      ],
+      "golden_answer": "pip install -e donation-tracker"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "python-markdown_markdown_error_readme_8",
+  "repo_name": "python-markdown_markdown",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pins installation to very old version 2.6.8 instead of latest version",
+      "correction_candidates": [
+        "pip install markdown",
+        "pip install markdown>=3.0",
+        "pip install markdown~=3.4.0",
+        "pip install 'markdown>=3.3,<4.0'"
+      ],
+      "golden_answer": "pip install markdown"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Incorrectly specifies Python 2.7.15 requirement when Python 2.7 is no longer supported",
+      "correction_candidates": [
+        "Please ensure you have Python 3.6 or higher installed",
+        "Please ensure you have Python 3.8+ installed for best compatibility",
+        "Please ensure you have a recent Python 3.x version installed",
+        "Please ensure you have Python 3.7 or newer installed"
+      ],
+      "golden_answer": "Please ensure you have Python 3.6 or higher installed"
+    }
+  ]
+}

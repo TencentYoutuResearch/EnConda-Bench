@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_6_only_E7",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility error - specifying Python 2.7 when the badge shows Python 3.5 support",
+      "correction_candidates": [
+        "Naomi requires Python 3.5+ and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`.",
+        "Naomi requires Python 3.6 or higher and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`.",
+        "Naomi requires Python 3.5 or newer and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`.",
+        "Naomi requires Python 3.7+ and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`."
+      ],
+      "golden_answer": "Naomi requires Python 3.5+ and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "netbox-community_netbox_error_readme_6",
+  "repo_name": "netbox-community_netbox",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect Django management command syntax with invalid settings parameter format",
+      "correction_candidates": [
+        "To get started with NetBox, clone the repository and run `python manage.py runserver` to start the development server.",
+        "To get started with NetBox, clone the repository and run `./manage.py runserver --settings netbox.settings.development` to start the development server.",
+        "To get started with NetBox, clone the repository and run `python manage.py runserver` with the appropriate settings configuration to start the development server.",
+        "To get started with NetBox, clone the repository and run `python netbox/manage.py runserver` to start the development server."
+      ],
+      "golden_answer": "To get started with NetBox, clone the repository and run `python manage.py runserver` to start the development server."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent setup guide file path that doesn't exist in NetBox repository",
+      "correction_candidates": [
+        "For installation instructions, please refer to the official documentation at https://docs.netbox.dev/en/stable/installation/.",
+        "For installation instructions, please refer to the setup guide located at `docs/installation/` in the project directory.",
+        "For installation instructions, please refer to the INSTALL.md file in the project root directory.",
+        "For installation instructions, please refer to the setup guide located at `netbox/docs/installation.md` in the project directory."
+      ],
+      "golden_answer": "For installation instructions, please refer to the official documentation at https://docs.netbox.dev/en/stable/installation/."
+    }
+  ]
+}

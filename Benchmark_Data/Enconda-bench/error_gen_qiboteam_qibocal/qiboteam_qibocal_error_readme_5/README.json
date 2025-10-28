@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_5",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary 'pip install poetry' command in the basic installation section when poetry is not needed for regular installation",
+      "correction_candidates": [
+        "Remove the 'pip install poetry' line from the installation section",
+        "Replace 'pip install poetry' with 'pip install --upgrade pip'",
+        "Move 'pip install poetry' to the developer instructions section",
+        "Change 'pip install poetry' to 'pip install setuptools'"
+      ],
+      "golden_answer": "Remove the 'pip install poetry' line from the installation section"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In developer instructions, 'pip install .' is executed before 'poetry install', which is incorrect order",
+      "correction_candidates": [
+        "Move 'pip install .' after 'poetry install' and 'pre-commit install'",
+        "Replace 'pip install .' with 'poetry install --dev'",
+        "Remove 'pip install .' from developer instructions entirely",
+        "Change the order to run 'poetry install' before 'pip install .'"
+      ],
+      "golden_answer": "Change the order to run 'poetry install' before 'pip install .'"
+    }
+  ]
+}

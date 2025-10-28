@@ -1,0 +1,18 @@
+{
+  "readme": "pypose_pypose_error_readme_2_only_E4",
+  "repo_name": "pypose_pypose",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path `requirements.txt` is incorrect. The file is located at `requirements/runtime.txt`.",
+      "correction_candidates": [
+        "Change `pip install -r requirements.txt` to `pip install -r requirements/runtime.txt`.",
+        "Change `pip install -r requirements.txt` to `pip install -r runtime.txt`.",
+        "Change `pip install -r requirements.txt` to `cat requirements.txt | xargs pip install`.",
+        "Change `pip install -r requirements.txt` to `pip install -r ./requirements/runtime.txt`."
+      ],
+      "golden_answer": "Change `pip install -r requirements.txt` to `pip install -r requirements/runtime.txt`."
+    }
+  ]
+}

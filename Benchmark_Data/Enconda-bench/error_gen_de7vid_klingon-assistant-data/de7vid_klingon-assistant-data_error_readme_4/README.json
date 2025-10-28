@@ -1,0 +1,29 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_4",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides a non-existent command (`python commit_submissions.py --auto`) for using the `commit_submissions.py` script.",
+      "correction_candidates": [
+        "The `commit_submissions.py` script is run without any arguments.",
+        "The README should be corrected to remove the fake `--auto` flag from the command example.",
+        "The correct command is `python scripts/commit_submissions.py`.",
+        "The `commit_submissions.py` script does not create commits automatically; it prepares them. The command example is misleading."
+      ],
+      "golden_answer": "The README should be corrected to remove the fake `--auto` flag from the command example."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly instructs the user to manually create the `EXTRA` file if it's missing, whereas the `write_db.sh` script should generate it.",
+      "correction_candidates": [
+        "The `EXTRA` file is managed by the `write_db.sh` script and should not be created manually.",
+        "The `EXTRA` file is located in the `scripts/` directory, not the project root.",
+        "The `EXTRA` file is deprecated and no longer used by the build process.",
+        "The `write_db.sh` script will create the `EXTRA` file if it doesn't exist; manual creation is unnecessary."
+      ],
+      "golden_answer": "The `EXTRA` file is managed by the `write_db.sh` script and should not be created manually."
+    }
+  ]
+}

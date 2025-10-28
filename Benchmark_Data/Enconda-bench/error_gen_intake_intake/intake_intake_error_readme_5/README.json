@@ -1,0 +1,29 @@
+{
+  "readme": "intake_intake_error_readme_5",
+  "repo_name": "intake_intake",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Changed package name from 'intake' to 'intake-core' in conda installation command, which is an incorrect package name",
+      "correction_candidates": [
+        "conda install -c conda-forge intake",
+        "conda install -c pyviz intake",
+        "conda install intake",
+        "conda install -c anaconda intake"
+      ],
+      "golden_answer": "conda install -c conda-forge intake"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Moved 'Install intake using pip install -e .' step before 'Use pytest to run tests' which creates incorrect logical order",
+      "correction_candidates": [
+        "Move 'Install intake using pip install -e .' after 'Use pytest to run tests'",
+        "Move 'Install intake using pip install -e .' before 'Create development Python environment'",
+        "Move 'Install intake using pip install -e .' after 'Create development Python environment' and before 'Use pytest to run tests'",
+        "Remove the 'Install intake using pip install -e .' step entirely"
+      ],
+      "golden_answer": "Move 'Install intake using pip install -e .' after 'Create development Python environment' and before 'Use pytest to run tests'"
+    }
+  ]
+}

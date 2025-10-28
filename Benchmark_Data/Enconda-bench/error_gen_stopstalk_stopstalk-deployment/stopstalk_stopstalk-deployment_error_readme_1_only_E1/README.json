@@ -1,0 +1,18 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_1_only_E1",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install Python packages from the requirements file is incorrect. It attempts to install a package named 'requirements.txt' instead of reading the packages listed within the file, because the '-r' flag is missing.",
+      "correction_candidates": [
+        "pip install --requirements requirements.txt",
+        "pip install -r requirements.txt",
+        "cat requirements.txt | xargs pip install",
+        "pip install from-file requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "reagento_adaptix_error_readme_5_only_E6",
+  "repo_name": "reagento_adaptix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Logical order error - suggests installing dependencies before creating virtual environment",
+      "correction_candidates": [
+        "First create a virtual environment using `python -m venv myenv`, then install dependencies.",
+        "Create a virtual environment with `python -m venv myenv` and activate it before installing any packages.",
+        "Set up your environment by running `python -m venv myenv` first, then proceed with package installation.",
+        "Initialize a virtual environment using `python -m venv myenv` prior to dependency installation."
+      ],
+      "golden_answer": "First create a virtual environment using `python -m venv myenv`, then install dependencies."
+    }
+  ]
+}

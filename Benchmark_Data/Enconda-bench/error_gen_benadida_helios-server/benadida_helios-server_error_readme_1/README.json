@@ -1,0 +1,29 @@
+{
+  "readme": "benadida_helios-server_error_readme_1",
+  "repo_name": "benadida_helios-server",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The python dependencies are installed globally using pip before the virtual environment is created and activated, which is the wrong order.",
+      "correction_candidates": [
+        "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally.",
+        "You must run `pip install --user -r requirements.txt` to install packages for the current user.",
+        "The virtual environment should be created in the system's root directory, not the project directory.",
+        "You should install dependencies one by one instead of using `requirements.txt`."
+      ],
+      "golden_answer": "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py startserver 8000` is incorrect for starting a Django development server. The correct command is `runserver`.",
+      "correction_candidates": [
+        "The command to start the development server should be `python manage.py runserver 8000`.",
+        "The command should be `python manage.py run`.",
+        "You need to specify the IP address, for example: `python manage.py startserver 0.0.0.0:8000`.",
+        "Use `django-admin startserver 8000` instead of `manage.py`."
+      ],
+      "golden_answer": "The command to start the development server should be `python manage.py runserver 8000`."
+    }
+  ]
+}

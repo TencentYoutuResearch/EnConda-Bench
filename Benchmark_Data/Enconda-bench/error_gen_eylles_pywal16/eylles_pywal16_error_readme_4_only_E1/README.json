@@ -1,0 +1,18 @@
+{
+  "readme": "eylles_pywal16_error_readme_4_only_E1",
+  "repo_name": "eylles_pywal16",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command uses the incorrect package name 'py-wal' instead of the correct 'pywal16'.",
+      "correction_candidates": [
+        "You can install the latest release from PyPI:\n`pip install pywal`",
+        "You can install the latest release from PyPI:\n`pip install pywal16`",
+        "You can install the latest release from PyPI:\n`pip install python-wal`",
+        "You can install the latest release from PyPI:\n`pip install wal16`"
+      ],
+      "golden_answer": "You can install the latest release from PyPI:\n`pip install pywal16`"
+    }
+  ]
+}

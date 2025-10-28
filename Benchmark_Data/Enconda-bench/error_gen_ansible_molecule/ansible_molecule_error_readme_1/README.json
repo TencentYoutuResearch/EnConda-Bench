@@ -1,0 +1,29 @@
+{
+  "readme": "ansible_molecule_error_readme_1",
+  "repo_name": "ansible_molecule",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python3 -m pip install -u setuptools pip tox` uses an invalid flag `-u`. The correct flag for upgrading packages is `-U` or `--upgrade`.",
+      "correction_candidates": [
+        "python3 -m pip install -U setuptools pip tox",
+        "python3 -m pip install --upgrade setuptools pip tox",
+        "python3 -m pip install --update setuptools pip tox",
+        "python3 -m pip install -upgrade setuptools pip tox"
+      ],
+      "golden_answer": "python3 -m pip install -U setuptools pip tox"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The command to install Python packages is executed before the command that creates and activates the virtual environment. This will cause packages to be installed in the system's global Python environment, not the project's isolated virtual environment.",
+      "correction_candidates": [
+        "The lines should be reordered to: `$ python3 -m venv .venv && source .venv/bin/activate` followed by `$ python3 -m pip install -U setuptools pip tox`",
+        "The lines should be reordered to: `$ python3 -m pip install -U setuptools pip tox` followed by `$ source .venv/bin/activate && python3 -m venv .venv`",
+        "The lines should be combined into: `$ python3 -m venv .venv && python3 -m pip install -U setuptools pip tox && source .venv/bin/activate`",
+        "The lines should be reordered to: `$ source .venv/bin/activate` followed by `$ python3 -m venv .venv` and `$ python3 -m pip install -U setuptools pip tox`"
+      ],
+      "golden_answer": "The lines should be reordered to: `$ python3 -m venv .venv && source .venv/bin/activate` followed by `$ python3 -m pip install -U setuptools pip tox`"
+    }
+  ]
+}

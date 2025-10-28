@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_fedora-python_portingdb_error_readme_merge_k5",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to check for droppable packages specifies an incorrect data directory path (`database/`), which does not exist in the repository structure.",
+      "correction_candidates": [
+        "python -m portingdb --datadir data/ check-drops",
+        "python -m portingdb --datadir ./data check-drops",
+        "python -m portingdb check-drops --datadir ../data/",
+        "python -m portingdb --data-directory data/ check-drops"
+      ],
+      "golden_answer": "python -m portingdb --datadir data/ check-drops"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly place the 'pip install' command before the instruction to create and activate a Python virtual environment, which would install the package in the global Python environment.",
+      "correction_candidates": [
+        "First set up a Python virtual environment, then run `pip install --editable .`",
+        "Run `pip install --user --editable .` and then create a virtual environment.",
+        "Run `python3 -m venv venv && . venv/bin/activate && pip install --editable .`",
+        "Install the package using `pipx install --editable .`"
+      ],
+      "golden_answer": "First set up a Python virtual environment, then run `pip install --editable .`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README fails to specify the required Python version (3.7+), stating only 'Python 3', which can lead to compatibility errors if an older, unsupported version is used.",
+      "correction_candidates": [
+        "To install it, first set up a [Python virtual environment](...) with Python 3.7+.",
+        "To install it, first set up a [Python virtual environment](...) with the latest Python 3 version.",
+        "To install it, first set up a [Python virtual environment](...) with Python > 3.6.",
+        "To install it, first set up a [Python virtual environment](...) with Python >= 3.7."
+      ],
+      "golden_answer": "To install it, first set up a [Python virtual environment](...) with Python 3.7+."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instructions for freezing the static website are missing the `export PYTHONPATH=.` command. This step is critical for the script to find its local modules, and its absence can cause `ModuleNotFoundError`.",
+      "correction_candidates": [
+        "Add `export PYTHONPATH=.` before running the `elsasite.py freeze` command.",
+        "Run `PYTHONPATH=. python elsasite.py freeze`.",
+        "The `elsasite.py` script should be run from the project root directory after setting the PYTHONPATH.",
+        "Modify `sys.path` within `elsasite.py` to include the project root."
+      ],
+      "golden_answer": "Add `export PYTHONPATH=.` before running the `elsasite.py freeze` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to build the static website uses an incorrect argument `--freeze` instead of the positional command `freeze`.",
+      "correction_candidates": [
+        "python elsasite.py freeze",
+        "python -m elsasite freeze",
+        "python elsasite.py build",
+        "./elsasite.py freeze"
+      ],
+      "golden_answer": "python elsasite.py freeze"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the data updating guide points to a non-existent directory `documentation/` instead of the correct `docs/` directory.",
+      "correction_candidates": [
+        "A guide for updating the data is [in `docs/`](./docs/update_portingdb.rst).",
+        "A guide for updating the data is in the file `docs/update_portingdb.rst`.",
+        "A guide for updating the data is [in `docs/`](./docs/).",
+        "A guide for updating the data is available in the repository's `docs` folder."
+      ],
+      "golden_answer": "A guide for updating the data is [in `docs/`](./docs/update_portingdb.rst)."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Moved PYTHONPATH export before pip install, which is incorrect order",
+      "correction_candidates": [
+        "Move export PYTHONPATH=. after pip install --editable .",
+        "Remove export PYTHONPATH=. from installation section",
+        "Add export PYTHONPATH=. to both installation and usage sections",
+        "Replace export PYTHONPATH=. with pip install -e . in installation"
+      ],
+      "golden_answer": "Move export PYTHONPATH=. after pip install --editable ."
+    }
+  ]
+}

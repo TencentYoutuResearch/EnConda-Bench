@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_democracyclub_uk-polling-stations_error_readme_merge_k3",
+  "repo_name": "democracyclub_uk-polling-stations",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Install front-end dependencies' section is placed before the Python dependencies are installed, which is an illogical order for a Django project.",
+      "correction_candidates": [
+        "The 'Install front-end dependencies' section should be moved after the 'Run migrations' section.",
+        "The 'Install front-end dependencies' section should be moved after 'Install python dependencies'.",
+        "The 'Install python dependencies' section should be moved to be immediately after 'Install system dependencies'.",
+        "The 'Install front-end dependencies' section should be moved to the end of the 'Getting Started' section."
+      ],
+      "golden_answer": "The 'Install front-end dependencies' section should be moved after 'Install python dependencies'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Create database' section, the `createuser` command uses an incorrect flag `-p` which specifies a port, instead of `-P` which prompts for a password.",
+      "correction_candidates": [
+        "sudo -u postgres createuser dc -P -s",
+        "sudo -u postgres createuser dc --password --superuser",
+        "sudo -u postgres createuser dc -s && sudo -u postgres psql -c \"ALTER USER dc WITH PASSWORD 'your_password';\"",
+        "createuser dc -P -s --user=postgres"
+      ],
+      "golden_answer": "sudo -u postgres createuser dc -P -s"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `apt-get install` command for Ubuntu setup is missing the `postgis` package, which is a required system dependency for the project.",
+      "correction_candidates": [
+        "The `postgresql-14-postgis-3` package includes `postgis`, so no change is needed.",
+        "Add `postgis` to the `apt-get install` command list for Ubuntu.",
+        "Run `sudo apt-get install postgis` in a separate command after the main package installation.",
+        "The `postgis` package should be installed via `pip` instead of `apt-get`."
+      ],
+      "golden_answer": "Add `postgis` to the `apt-get install` command list for Ubuntu."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to create the local config file (`cp polling_stations/local.example.py...`) uses an incorrect source path, as the example file is located in the `settings` subdirectory.",
+      "correction_candidates": [
+        "The command should be `mv polling_stations/settings/local.example.py polling_stations/settings/local.py`.",
+        "Correct the source path in the `cp` command to `polling_stations/settings/local.example.py`.",
+        "The command should be `cp polling_stations/settings.py polling_stations/settings/local.py`.",
+        "Create the `polling_stations/settings/local.py` file manually and copy the contents from `local.example.py`."
+      ],
+      "golden_answer": "Correct the source path in the `cp` command to `polling_stations/settings/local.example.py`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is ambiguously stated as 'python 3', while the project specifically requires version 3.10, leading to potential compatibility errors.",
+      "correction_candidates": [
+        "The text should be changed back to 'UK-Polling-Stations requires python 3.10'.",
+        "The project should be updated to support any version of Python 3.",
+        "Add a note specifying that `python --version` should return `3.10.x`.",
+        "Include a step to install Python 3.10 using `pyenv` or a similar version manager."
+      ],
+      "golden_answer": "The text should be changed back to 'UK-Polling-Stations requires python 3.10'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for importing ONSPD data incorrectly provides a path to a specific CSV file, contradicting the note that requires a path to the directory.",
+      "correction_candidates": [
+        "The command is correct, but the note 'Path is to data _directory_... not the csv itself' should be removed.",
+        "The command should use a flag to specify it's a file path: `python manage.py import_onspd --file /path/to/data/ONSPD_MAY_2023_UK.csv`.",
+        "The command should point to the directory containing the data, not the CSV file: `python manage.py import_onspd /path/to/data`.",
+        "The CSV file should be moved to the project root before running the import."
+      ],
+      "golden_answer": "The command should point to the directory containing the data, not the CSV file: `python manage.py import_onspd /path/to/data`."
+    }
+  ]
+}

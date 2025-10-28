@@ -1,0 +1,18 @@
+{
+  "readme": "nschloe_meshio_error_readme_2_only_E7",
+  "repo_name": "nschloe_meshio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instruction 'Install meshio for the Python major version that ParaView uses' is missing the critical command to actually determine ParaView's Python version. Without this, the user is likely to install meshio for their system's default Python, which may be incompatible with ParaView's bundled Python interpreter.",
+      "correction_candidates": [
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check `python --version`).",
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check ParaView's 'About' dialog).",
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check `pvpython --version`).",
+        "The first step should be: Install meshio for Python 3."
+      ],
+      "golden_answer": "The first step should be: Install meshio for the Python major version that ParaView uses (check `pvpython --version`)."
+    }
+  ]
+}

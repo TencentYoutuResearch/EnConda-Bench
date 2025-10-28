@@ -1,0 +1,18 @@
+{
+  "readme": "emdgroup_baybe_error_readme_1_only_E1",
+  "repo_name": "emdgroup_baybe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The example command for installing optional dependencies is missing quotes around 'baybe[test,lint]'. This can lead to errors in certain shells like zsh, which interpret the brackets for globbing.",
+      "correction_candidates": [
+        "pip install \"baybe[test,lint]\"",
+        "pip install baybe --with test,lint",
+        "pip install baybe[test] baybe[lint]",
+        "pip install 'baybe[test,lint]'"
+      ],
+      "golden_answer": "pip install 'baybe[test,lint]'"
+    }
+  ]
+}

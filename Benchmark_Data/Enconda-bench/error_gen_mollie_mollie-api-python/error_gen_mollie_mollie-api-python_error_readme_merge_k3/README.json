@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_mollie_mollie-api-python_error_readme_merge_k3",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Installation' section, the command to install `flask` is placed before the virtual environment is created and activated. Dependencies should be installed after activating the virtual environment to keep them isolated.",
+      "correction_candidates": [
+        "Move the `$ pip install flask` command to be after the `$ source .venv/bin/activate` command.",
+        "Combine the flask installation with the client installation: `$ pip install flask -e .`",
+        "Delete the `$ pip install flask` command.",
+        "Move the virtual environment creation steps to the very top of the 'Installation' section."
+      ],
+      "golden_answer": "Move the `$ pip install flask` command to be after the `$ source .venv/bin/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation' section, the command `SET MOLLIE_API_KEY=test_YourApiKey` is used to set an environment variable. This is Windows-specific syntax, while the preceding command `source .venv/bin/activate` is for Unix-like systems (Linux, macOS), where `export` should be used.",
+      "correction_candidates": [
+        "Replace `SET MOLLIE_API_KEY=test_YourApiKey` with `export MOLLIE_API_KEY=test_YourApiKey`.",
+        "Change the command to `MOLLIE_API_KEY=test_YourApiKey python examples/app.py` and remove the next line.",
+        "Add a note: 'On Windows, use SET. On Linux/macOS, use export.'",
+        "Replace `SET` with `ENV`."
+      ],
+      "golden_answer": "Replace `SET MOLLIE_API_KEY=test_YourApiKey` with `export MOLLIE_API_KEY=test_YourApiKey`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Requirements' section specifies 'Python >= 3.6', but the library's v3 client actually requires Python 3.8 or newer. Using an older Python version like 3.6 or 3.7 will lead to installation or runtime errors.",
+      "correction_candidates": [
+        "Change the requirement to 'Python >= 3.8'.",
+        "Change the requirement to 'Python 3.8+'.",
+        "Change the requirement to 'Python >= 3.7'.",
+        "Add a note saying 'Python 3.6 and 3.7 are supported with older versions of this client'."
+      ],
+      "golden_answer": "Change the requirement to 'Python >= 3.8'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Installation' section for running examples from a git checkout, the command to install the `mollie-api-python` package itself from the local source code is missing. Without it, `import mollie` will fail.",
+      "correction_candidates": [
+        "Add `$ pip install -e .` after `$ pip install flask`.",
+        "Add `$ pip install .` after `$ pip install flask`.",
+        "Add `$ python setup.py install` after `$ pip install flask`.",
+        "Change `$ pip install flask` to `$ pip install flask mollie-api-python`."
+      ],
+      "golden_answer": "Add `$ pip install -e .` after `$ pip install flask`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation' section, the virtual environment is created with `python -m venv venv`, but the activation command is `source .venv/bin/activate`. The activation command will fail because the directory name mismatch ('.venv' vs 'venv').",
+      "correction_candidates": [
+        "Change `python -m venv venv` to `python -m venv .venv`.",
+        "Change `source .venv/bin/activate` to `source venv/bin/activate`.",
+        "Change `python -m venv venv` to `virtualenv .venv`.",
+        "Remove the line `$ python -m venv venv`."
+      ],
+      "golden_answer": "Change `python -m venv venv` to `python -m venv .venv`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'OAuth2' section, the command to run the OAuth example app uses an incorrect file path: `python examples/oauth_app.py`. The correct path is `examples/oauth/oauth_app.py`.",
+      "correction_candidates": [
+        "Change the command to `python examples/oauth/oauth_app.py`.",
+        "Change the command to `cd examples/oauth && python oauth_app.py`.",
+        "Change the command to `python oauth_app.py` and add a note to `cd` into the `examples/oauth` directory first.",
+        "Change the command to `python examples/oauth/app.py`."
+      ],
+      "golden_answer": "Change the command to `python examples/oauth/oauth_app.py`."
+    }
+  ]
+}

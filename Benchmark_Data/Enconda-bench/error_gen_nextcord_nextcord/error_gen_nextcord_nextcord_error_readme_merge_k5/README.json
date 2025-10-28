@@ -1,0 +1,106 @@
+{
+  "readme": "error_gen_nextcord_nextcord_error_readme_merge_k5",
+  "repo_name": "nextcord_nextcord",
+  "level": "level9",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 3.6 or higher is required, but the library requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change \"Python 3.6 or higher is required\" to \"Python 3.7 or higher is required\".",
+        "Change \"Python 3.6 or higher is required\" to \"Any version of Python 3 is supported\".",
+        "Remove the Python version requirement sentence entirely.",
+        "Change \"Python 3.6 or higher is required\" to \"Python 3.8 or higher is required\"."
+      ],
+      "golden_answer": "Change \"Python 3.6 or higher is required\" to \"Python 3.8 or higher is required\"."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install with voice support, `python3 -m pip install -U nextcord voice`, is syntactically incorrect. It attempts to install a package named 'voice' instead of installing the 'voice' extra for nextcord.",
+      "correction_candidates": [
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord-voice`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U \"nextcord[voice]\"`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord --with-voice`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord && python3 -m pip install -U PyNaCl`."
+      ],
+      "golden_answer": "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U \"nextcord[voice]\"`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command provided to install voice support is incorrect. It installs the base `nextcord` library but omits the `[voice]` extra, which means voice-related dependencies will be missing.",
+      "correction_candidates": [
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U nextcord PyNaCl`.",
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U \"nextcord[voice]\"`.",
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U nextcord-voice`.",
+        "In the voice support section, add a new command `python3 -m pip install -U PyNaCl` after the existing one."
+      ],
+      "golden_answer": "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U \"nextcord[voice]\"`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands for installing the development version are in the wrong logical order. The `pip install` command is run before changing into the `nextcord` directory, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Swap the `$ cd nextcord` and `$ python3 -m pip install -U .[voice]` commands.",
+        "Remove the `$ cd nextcord` command and change `.` to `./nextcord` in the pip command.",
+        "Swap the `$ git clone` and `$ python3 -m pip install` commands.",
+        "Combine the last two commands into a single line: `$ cd nextcord && python3 -m pip install -U .[voice]`."
+      ],
+      "golden_answer": "Swap the `$ cd nextcord` and `$ python3 -m pip install -U .[voice]` commands."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The list of required Linux packages includes `libssl-dev`, which is not a necessary dependency for installing nextcord with voice support.",
+      "correction_candidates": [
+        "Remove `libffi-dev` from the list of packages.",
+        "Replace `libssl-dev` with `openssl-dev` in the list of packages.",
+        "Remove `libssl-dev` from the list of packages.",
+        "Remove `python-dev` from the list of packages."
+      ],
+      "golden_answer": "Remove `libssl-dev` from the list of packages."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the examples directory is broken. It incorrectly points to a singular `example` directory instead of the correct plural `examples` directory.",
+      "correction_candidates": [
+        "Change the link `.../blob/master/example/` to point to `.../tree/master/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/main/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/master/docs/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/master/examples/`."
+      ],
+      "golden_answer": "Change the link `.../blob/master/example/` to point to `.../blob/master/examples/`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip install command syntax - missing quotes around package with extras on Windows",
+      "correction_candidates": [
+        "py -3 -m pip install -U \"nextcord[voice]\"",
+        "py -3 -m pip install -U 'nextcord[voice]'",
+        "py -3 -m pip install -U nextcord\\[voice\\]",
+        "py -3 -m pip install --upgrade \"nextcord[voice]\""
+      ],
+      "golden_answer": "py -3 -m pip install -U \"nextcord[voice]\""
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent pip command usage - uses 'pip' instead of 'python3 -m pip' for development version installation",
+      "correction_candidates": [
+        "$ python3 -m pip install -U .[voice]",
+        "$ python -m pip install -U .[voice]",
+        "$ pip3 install -U .[voice]",
+        "$ python3 -m pip install --editable .[voice]"
+      ],
+      "golden_answer": "$ python3 -m pip install -U .[voice]"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect installation order - suggests installing system packages after pip installation instead of before",
+      "correction_candidates": [
+        "Please note that on Linux installing voice you must install the following packages via your favourite package manager (e.g. ``apt``, ``dnf``, etc) before running the above commands:",
+        "Please note that on Linux installing voice you must first ensure the following packages are installed via your favourite package manager (e.g. ``apt``, ``dnf``, etc):",
+        "Please note that on Linux installing voice requires the following system packages to be installed via your favourite package manager (e.g. ``apt``, ``dnf``, etc) prior to installation:",
+        "Please note that on Linux installing voice you should install the following packages via your favourite package manager (e.g. ``apt``, ``dnf``, etc) during the installation process:"
+      ],
+      "golden_answer": "Please note that on Linux installing voice you must install the following packages via your favourite package manager (e.g. ``apt``, ``dnf``, etc) before running the above commands:"
+    }
+  ]
+}

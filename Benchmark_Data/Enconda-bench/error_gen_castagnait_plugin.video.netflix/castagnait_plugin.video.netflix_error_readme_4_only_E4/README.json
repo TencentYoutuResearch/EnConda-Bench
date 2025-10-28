@@ -1,0 +1,18 @@
+{
+  "readme": "castagnait_plugin.video.netflix_error_readme_4_only_E4",
+  "repo_name": "castagnait_plugin.video.netflix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL provided for manual installation in the Kodi file manager points to a sub-directory (`/kodi19/`) instead of the root of the repository, which will prevent Kodi from finding the repository files.",
+      "correction_candidates": [
+        "The URL should be `https://castagnait.github.io/repository.castagnait/addons.xml`.",
+        "The URL should be `https://github.com/castagnait/repository.castagnait`.",
+        "The URL should be `https://castagnait.github.io/`.",
+        "The correct URL for the Kodi file manager is `https://castagnait.github.io/repository.castagnait/`."
+      ],
+      "golden_answer": "The correct URL for the Kodi file manager is `https://castagnait.github.io/repository.castagnait/`."
+    }
+  ]
+}

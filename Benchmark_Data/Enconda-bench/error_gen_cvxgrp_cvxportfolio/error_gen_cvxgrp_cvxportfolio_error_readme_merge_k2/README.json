@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_cvxgrp_cvxportfolio_error_readme_merge_k2",
+  "repo_name": "cvxgrp_cvxportfolio",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README vaguely states that testing is done against 'the latest stable python 3 version', removing the specific list of supported versions (3.8-3.12), which can cause compatibility confusion for users on older, but still supported, Python versions.",
+      "correction_candidates": [
+        "Restore the original text: 'We test against recent python versions (3.8, 3.9, 3.10, 3.11, 3.12)'.",
+        "Change the text to: 'We support Python 3.8 and newer'.",
+        "Add a link to the `test.yml` workflow file for users to check compatible versions.",
+        "Change the text to: 'We test against Python >=3.8, <=3.12'."
+      ],
+      "golden_answer": "Restore the original text: 'We test against recent python versions (3.8, 3.9, 3.10, 3.11, 3.12)'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to activate the virtual environment, `source venv/bin/activate`, uses an incorrect directory name `venv`. The setup command `make env` creates a directory named `env`.",
+      "correction_candidates": [
+        "Change the command to `source .env/bin/activate`.",
+        "Change the command to `source env/bin/activate`.",
+        "Advise the user to first rename the `env` directory to `venv`.",
+        "Change the command to `. env/bin/activate`."
+      ],
+      "golden_answer": "Change the command to `source env/bin/activate`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest setting up a `pre-commit` git hook that runs `make lint` before creating the development environment with `make env`. This will fail because the linter is installed by `make env`.",
+      "correction_candidates": [
+        "Move the git hooks setup instructions to be after the `make env` and `make test` commands.",
+        "Change `make lint` in the hook to `env/bin/pylint cvxportfolio` to use the environment's linter directly.",
+        "Add a step `pip install pylint` before setting up the git hooks.",
+        "Combine the commands: `make env && make lint` in the pre-commit hook."
+      ],
+      "golden_answer": "Move the git hooks setup instructions to be after the `make env` and `make test` commands."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is given as `pytest cvxportfolio/tests`, but the project is set up to run tests with `python -m cvxportfolio.tests` and does not guarantee `pytest` is installed or configured.",
+      "correction_candidates": [
+        "Change the command to `python -m pytest cvxportfolio/tests`.",
+        "Change the command to `python -m cvxportfolio.tests`.",
+        "Add `pip install pytest` to the development installation instructions.",
+        "Change the command to `pytest` to run tests from the root directory."
+      ],
+      "golden_answer": "Change the command to `python -m cvxportfolio.tests`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "matthiasvalvekens_pyhanko_error_readme_1",
+  "repo_name": "matthiasvalvekens_pyhanko",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 3.6 is supported, but the project requires Python 3.8 or later, which will cause installation or runtime failures.",
+      "correction_candidates": [
+        "PyHanko requires Python 3.8 or later.",
+        "PyHanko requires Python 3.7 or later.",
+        "PyHanko is compatible with Python 3.",
+        "PyHanko requires Python 3.6 or newer."
+      ],
+      "golden_answer": "PyHanko requires Python 3.8 or later."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to get help is `pyhanko help`, which is incorrect for a `click`-based CLI. The correct command is `pyhanko --help`.",
+      "correction_candidates": [
+        "Built-in help: run `pyhanko -h` to get started",
+        "Built-in help: run `pyhanko help` to get started",
+        "Built-in help: run `pyhanko --usage` to get started",
+        "Built-in help: run `pyhanko --help` to get started"
+      ],
+      "golden_answer": "Built-in help: run `pyhanko --help` to get started"
+    }
+  ]
+}

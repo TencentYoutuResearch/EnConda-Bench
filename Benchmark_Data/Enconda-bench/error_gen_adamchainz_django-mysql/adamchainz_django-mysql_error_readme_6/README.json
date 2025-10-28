@@ -1,0 +1,29 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_6",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used deprecated --install-option flag in pip command which is no longer supported in modern pip versions",
+      "correction_candidates": [
+        "Use `pip install django-mysql` without any install options",
+        "Use `python -m pip install django-mysql` for better compatibility",
+        "Install using `pip install --user django-mysql` for user-specific installation",
+        "Use `pip install django-mysql --upgrade` to ensure latest version"
+      ],
+      "golden_answer": "Use `pip install django-mysql` without any install options"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Instructed to run Django migrations before installing the package, which is logically incorrect order",
+      "correction_candidates": [
+        "Install the package first, then run migrations after adding it to INSTALLED_APPS",
+        "Run migrations only after configuring the database settings properly",
+        "Install django-mysql, configure settings.py, then run migrations",
+        "Set up virtual environment, install package, configure Django, then migrate"
+      ],
+      "golden_answer": "Install the package first, then run migrations after adding it to INSTALLED_APPS"
+    }
+  ]
+}

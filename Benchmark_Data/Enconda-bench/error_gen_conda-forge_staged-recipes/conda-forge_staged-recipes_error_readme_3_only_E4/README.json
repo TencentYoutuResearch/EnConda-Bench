@@ -1,0 +1,18 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_3_only_E4",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to example recipes in FAQ #1 is broken because the URL incorrectly points to a non-existent 'recipe_examples' directory instead of 'recipes'.",
+      "correction_candidates": [
+        "Change the link to `https://github.com/conda-forge/staged-recipes/tree/main/recipes`",
+        "Change the link to `https://github.com/conda-forge/staged-recipes/tree/master/recipes`",
+        "Change the link to point to the `example` directory: `.../tree/main/example`",
+        "Remove the link and instruct the user to browse the repository's `recipes` directory manually."
+      ],
+      "golden_answer": "Change the link to `https://github.com/conda-forge/staged-recipes/tree/main/recipes`"
+    }
+  ]
+}

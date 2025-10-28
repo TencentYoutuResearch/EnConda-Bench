@@ -1,0 +1,18 @@
+{
+  "readme": "intake_intake_error_readme_3_only_E2",
+  "repo_name": "intake_intake",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to run tests, `pytest --run-all`, is incorrect as `--run-all` is not a valid standard option for pytest, which will cause the command to fail.",
+      "correction_candidates": [
+        "Use the command `pytest tests/` to specify the test directory.",
+        "Use the command `pytest -v` for verbose output.",
+        "Use the command `pytest` without any arguments.",
+        "Use the command `python -m pytest` which is an equivalent way to run pytest."
+      ],
+      "golden_answer": "Use the command `pytest` without any arguments."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_7_only_E1",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary and potentially conflicting heavy dependencies listed for a voice assistant project",
+      "correction_candidates": [
+        "To install Naomi, you'll need to install basic audio dependencies. Run `pip install -r requirements.txt` to install all necessary packages.",
+        "To install Naomi, you'll need to install the core dependencies including `pyaudio sounddevice speech_recognition pyttsx3`.",
+        "To install Naomi, you'll need to install audio processing libraries. Use `pip install pyaudio numpy scipy` for the core functionality.",
+        "To install Naomi, you'll need to install voice recognition dependencies: `pip install speechrecognition pyaudio requests`."
+      ],
+      "golden_answer": "To install Naomi, you'll need to install basic audio dependencies. Run `pip install -r requirements.txt` to install all necessary packages."
+    }
+  ]
+}

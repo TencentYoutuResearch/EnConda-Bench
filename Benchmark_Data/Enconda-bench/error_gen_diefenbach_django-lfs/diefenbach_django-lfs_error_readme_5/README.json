@@ -1,0 +1,29 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_5",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong order - installing dependencies and running setup before creating virtual environment",
+      "correction_candidates": [
+        "First create a virtual environment, activate it, then install the required dependencies using pip install -r requirements.txt and python setup.py install",
+        "Create and activate a virtual environment first, then run pip install -r requirements.txt followed by python setup.py install",
+        "Set up a virtual environment and activate it before installing dependencies with pip install -r requirements.txt and python setup.py install",
+        "Initialize a virtual environment, activate it, then install requirements using pip install -r requirements.txt and python setup.py install"
+      ],
+      "golden_answer": "First create a virtual environment, activate it, then install the required dependencies using pip install -r requirements.txt and python setup.py install"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that may not exist in the repository",
+      "correction_candidates": [
+        "Use pip install django instead of pip install -r requirements.txt",
+        "Replace requirements.txt with setup.py dependencies or provide the actual requirements file",
+        "Install dependencies manually: pip install django jquery-python",
+        "Remove the requirements.txt reference and use pip install -e . instead"
+      ],
+      "golden_answer": "Replace requirements.txt with setup.py dependencies or provide the actual requirements file"
+    }
+  ]
+}

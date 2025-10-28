@@ -1,0 +1,29 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_4",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The prerequisites list creates a version conflict: it specifies Python 2.7, but also lists Django 2.0, which requires Python 3.5 or newer.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.5+'.",
+        "Change 'Django 2.0' to 'Django 1.11', which is compatible with Python 2.7.",
+        "Remove '* Django 2.0' as it is not a true dependency of the project.",
+        "Remove both version specifications and state that 'make' handles dependencies."
+      ],
+      "golden_answer": "Remove '* Django 2.0' as it is not a true dependency of the project."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The prerequisite 'Django 2.0' is unnecessary as the project is a static report generator and does not use the Django framework.",
+      "correction_candidates": [
+        "Remove '* Django 2.0' from the prerequisites list.",
+        "Change '* Django 2.0' to '* Flask'.",
+        "Add a note explaining that Django is an optional dependency.",
+        "Replace '* Django 2.0' with the actual web framework used."
+      ],
+      "golden_answer": "Remove '* Django 2.0' from the prerequisites list."
+    }
+  ]
+}

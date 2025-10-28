@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_reproject_error_readme_4",
+  "repo_name": "astropy_reproject",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that a separate package `reproject-core` must be installed. This package does not exist, and all functionality is included in the `reproject` package.",
+      "correction_candidates": [
+        "The package is monolithic. Simply run `pip install reproject` to install.",
+        "The correct way to install all features, including optional ones, is `pip install 'reproject[all]'`.",
+        "Remove the line about `reproject-core`. The only command needed is `pip install reproject`.",
+        "There is no `reproject-core` package. The installation is done with a single command: `pip install reproject`."
+      ],
+      "golden_answer": "There is no `reproject-core` package. The installation is done with a single command: `pip install reproject`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The README suggests installing with `apt-get`, which is platform-specific and provides a system-level installation that may be outdated or conflict with user-level `pip` installations. The standard method is `pip`.",
+      "correction_candidates": [
+        "Installation should be done using `pip` into a virtual environment to avoid system-level conflicts. The recommended command is `pip install reproject`.",
+        "The recommended cross-platform installation method is via conda: `conda install -c conda-forge reproject`.",
+        "Remove the `apt-get` instruction. The primary and recommended installation method is `pip install reproject`.",
+        "Using system package managers like `apt-get` is not recommended. Use `pip` instead: `pip install reproject`."
+      ],
+      "golden_answer": "Remove the `apt-get` instruction. The primary and recommended installation method is `pip install reproject`."
+    }
+  ]
+}

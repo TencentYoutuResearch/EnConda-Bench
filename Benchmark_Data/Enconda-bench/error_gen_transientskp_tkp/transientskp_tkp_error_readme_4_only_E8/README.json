@@ -1,0 +1,18 @@
+{
+  "readme": "transientskp_tkp_error_readme_4_only_E8",
+  "repo_name": "transientskp_tkp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "A critical configuration step for 'MonetDB' is mentioned without any instructions on how or where to perform this configuration, leaving the user unsure how to proceed.",
+      "correction_candidates": [
+        "The note is for advanced users only and can be ignored for basic installation.",
+        "The note should be moved to the top of the installation section for better visibility.",
+        "The note should be expanded with instructions, for example: 'Configure your database by creating a `pipeline.cfg` file from `pipeline.cfg.example` and editing the connection details.'",
+        "The note is irrelevant as MonetDB is no longer supported and should be removed."
+      ],
+      "golden_answer": "The note should be expanded with instructions, for example: 'Configure your database by creating a `pipeline.cfg` file from `pipeline.cfg.example` and editing the connection details.'"
+    }
+  ]
+}

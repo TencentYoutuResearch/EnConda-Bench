@@ -1,0 +1,18 @@
+{
+  "readme": "starsimhub_starsim_error_readme_3_only_E6",
+  "repo_name": "starsimhub_starsim",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise installing the package with pip before creating and activating a virtual environment, which defeats the purpose of the environment.",
+      "correction_candidates": [
+        "The instructions should be changed to first create and activate a virtual environment, then run `pip install starsim`.",
+        "Replace the incorrect sentence with: 'Starsim is most easily installed via PyPI: ``pip install starsim``.'",
+        "The instructions should be changed to use `conda install starsim` which handles environments automatically.",
+        "The instructions should be changed to recommend `pipx install starsim` for global installation."
+      ],
+      "golden_answer": "Replace the incorrect sentence with: 'Starsim is most easily installed via PyPI: ``pip install starsim``.'"
+    }
+  ]
+}

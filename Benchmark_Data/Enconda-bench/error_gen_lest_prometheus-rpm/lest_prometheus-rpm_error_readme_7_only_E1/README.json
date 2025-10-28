@@ -1,0 +1,18 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_7_only_E1",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added apt-get command for installing dependencies on CentOS systems, which uses yum/dnf package manager instead",
+      "correction_candidates": [
+        "Before proceeding, install the following system packages: `sudo yum install -y rpm-build rpmdevtools golang git`.",
+        "Before proceeding, install the following system packages: `sudo dnf install rpm-build rpmdevtools golang git`.",
+        "Before proceeding, install the following system packages: `sudo yum groupinstall 'Development Tools' && sudo yum install golang git`.",
+        "Before proceeding, install the following system packages: `sudo yum install gcc make golang git rpm-devel`."
+      ],
+      "golden_answer": "Before proceeding, install the following system packages: `sudo yum install -y rpm-build rpmdevtools golang git`."
+    }
+  ]
+}

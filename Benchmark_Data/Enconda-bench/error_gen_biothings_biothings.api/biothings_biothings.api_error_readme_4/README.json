@@ -1,0 +1,29 @@
+{
+  "readme": "biothings_biothings.api_error_readme_4",
+  "repo_name": "biothings_biothings.api",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for Docker support (`pip install biothings[hub,docker,pygraphviz]`) includes `pygraphviz`, which is an unnecessary dependency not specified in the project's `setup.py` and may cause installation failures.",
+      "correction_candidates": [
+        "Remove \"pygraphviz\" from the installation command: pip install biothings[hub,docker]",
+        "Install pygraphviz separately using a system package manager before running pip install.",
+        "Change the command to: pip install biothings[hub,docker] --no-deps",
+        "Check setup.py for the correct list of optional dependencies."
+      ],
+      "golden_answer": "Remove \"pygraphviz\" from the installation command: pip install biothings[hub,docker]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "When installing from a local clone with extras, the command `pip install . --option web_extra` uses an incorrect flag. The correct syntax is `pip install .[web_extra]`.",
+      "correction_candidates": [
+        "pip install .[web_extra]",
+        "pip install \".[web_extra]\"",
+        "pip install -e .[web_extra]",
+        "pip install --install-option=\"--with-web_extra\" ."
+      ],
+      "golden_answer": "pip install .[web_extra]"
+    }
+  ]
+}

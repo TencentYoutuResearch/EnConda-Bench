@@ -1,0 +1,29 @@
+{
+  "readme": "bottlecapdave_homeassistant-octopusenergy_error_readme_2",
+  "repo_name": "bottlecapdave_homeassistant-octopusenergy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The My Home Assistant redirect link for adding the HACS repository contains incorrect URL parameters ('author' and 'repo' instead of 'owner' and 'repository'), causing the link to fail.",
+      "correction_candidates": [
+        "[Add the repository](https://my.home-assistant.io/redirect/hacs_repository/?owner=BottlecapDave&repository=homeassistant-octopusenergy&category=integration)",
+        "[Add the repository](https://my.home-assistant.io/redirect/hacs_repository/?user=BottlecapDave&repository=homeassistant-octopusenergy&type=integration)",
+        "[Add the repository](https://hacs.xyz/docs/navigation/repositories)",
+        "[Add the repository](https://github.com/BottlecapDave/HomeAssistant-OctopusEnergy)"
+      ],
+      "golden_answer": "[Add the repository](https://my.home-assistant.io/redirect/hacs_repository/?owner=BottlecapDave&repository=homeassistant-octopusenergy&category=integration)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The manual installation steps are in the wrong order, instructing the user to restart Home Assistant before copying the integration files, which will prevent the integration from being loaded.",
+      "correction_candidates": [
+        "Restart Home Assistant, copy the files, then restart Home Assistant again.",
+        "Copy the files into the `custom_components` folder. A restart is not required.",
+        "Place the contents of `custom_components` into the folder, then go to Developer Tools and click 'Reload Custom Components'.",
+        "To install, place the contents of `custom_components` into the `<config directory>/custom_components` folder of your Home Assistant installation. Once installed, don't forget to restart your home assistant instance for the integration to be picked up."
+      ],
+      "golden_answer": "To install, place the contents of `custom_components` into the `<config directory>/custom_components` folder of your Home Assistant installation. Once installed, don't forget to restart your home assistant instance for the integration to be picked up."
+    }
+  ]
+}

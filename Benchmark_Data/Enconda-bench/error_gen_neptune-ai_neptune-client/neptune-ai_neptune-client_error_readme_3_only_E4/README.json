@@ -1,0 +1,18 @@
+{
+  "readme": "neptune-ai_neptune-client_error_readme_3_only_E4",
+  "repo_name": "neptune-ai_neptune-client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for 'Any framework' in the 'Core features' section points to an incorrect URL (`.../integrations/all/`) which likely does not exist.",
+      "correction_candidates": [
+        "Correct the link to `https://docs.neptune.ai/integrations/`.",
+        "Correct the link to `https://docs.neptune.ai/`.",
+        "Correct the link to `https://github.com/neptune-ai/examples`.",
+        "Remove the hyperlink and just keep the text 'Any framework:'."
+      ],
+      "golden_answer": "Correct the link to `https://docs.neptune.ai/integrations/`."
+    }
+  ]
+}

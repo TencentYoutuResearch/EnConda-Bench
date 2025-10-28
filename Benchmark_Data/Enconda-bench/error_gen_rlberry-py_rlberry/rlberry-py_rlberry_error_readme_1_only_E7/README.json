@@ -1,0 +1,18 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_1_only_E7",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version badge ambiguously states '3+' instead of the specific supported version '3.11', which could lead to users trying to use incompatible Python versions.",
+      "correction_candidates": [
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.11-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.9+-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-latest-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-%3E=3.9-blue\">"
+      ],
+      "golden_answer": "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.11-blue\">"
+    }
+  ]
+}

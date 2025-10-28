@@ -1,0 +1,18 @@
+{
+  "readme": "matchms_matchms_error_readme_3_only_E4",
+  "repo_name": "matchms_matchms",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided in the example code, 'data/pesticides.mgf', is incorrect. The actual path to the test data file is 'tests/testdata/pesticides.mgf'.",
+      "correction_candidates": [
+        "pipeline.run(\"./tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"../tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"pesticides.mgf\")"
+      ],
+      "golden_answer": "pipeline.run(\"tests/testdata/pesticides.mgf\")"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_3",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the Hamilton STAR example, the `lh.setup()` command is called after other liquid handling operations, which will fail because the robot connection is not established first.",
+      "correction_candidates": [
+        "Move the `await lh.setup()` line to be right after the `lh = LiquidHandler(...)` line.",
+        "The `setup()` call should be `lh.setup()` instead of `await lh.setup()`.",
+        "The `setup()` call is unnecessary and should be removed.",
+        "Move the `await lh.setup()` line to be before the `deck = Deck.load_from_json_file(...)` line."
+      ],
+      "golden_answer": "Move the `await lh.setup()` line to be right after the `lh = LiquidHandler(...)` line."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pump example uses an incorrect method name `run_for` and an incorrect parameter `time` instead of the correct `run_for_duration` method and `duration` parameter.",
+      "correction_candidates": [
+        "await p.run_for_duration(speed=100, duration=30)",
+        "await p.run_duration(speed=100, duration=30)",
+        "await p.run_for_duration(rpm=100, seconds=30)",
+        "await p.run(speed=100, duration=30)"
+      ],
+      "golden_answer": "await p.run_for_duration(speed=100, duration=30)"
+    }
+  ]
+}

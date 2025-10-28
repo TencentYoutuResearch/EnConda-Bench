@@ -1,0 +1,29 @@
+{
+  "readme": "pretalx_pretalx_error_readme_5",
+  "repo_name": "pretalx_pretalx",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7 version for development installation",
+      "correction_candidates": [
+        "To install pretalx for development, first install Python 3.8+ and then run `pip install -r requirements.txt`.",
+        "To install pretalx for development, first install Python 3.6 or higher and then run `pip install -r requirements.txt`.",
+        "To install pretalx for development, first install Python 3.9+ and then run `pip install -r requirements.txt`.",
+        "To install pretalx for development, first install the latest Python version and then run `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "To install pretalx for development, first install Python 3.8+ and then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file path 'dependencies.txt' instead of 'DEPENDENCIES.rst'",
+      "correction_candidates": [
+        "The licenses of all dependencies are documented in the `DEPENDENCIES.rst`_ file.",
+        "The licenses of all dependencies are documented in the `requirements.txt`_ file.",
+        "The licenses of all dependencies are documented in the `deps.md`_ file.",
+        "The licenses of all dependencies are documented in the `LICENSE-DEPS`_ file."
+      ],
+      "golden_answer": "The licenses of all dependencies are documented in the `DEPENDENCIES.rst`_ file."
+    }
+  ]
+}

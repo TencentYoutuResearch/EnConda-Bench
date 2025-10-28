@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_2_only_E1",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary and likely incorrect Python dependency `google-api-python-client` is listed as a requirement for the `call_google_translate.py` script.",
+      "correction_candidates": [
+        "The script has no external dependencies that need to be installed via pip.",
+        "The correct dependency is `pip install google-cloud-translate`.",
+        "The script's dependencies are listed in a `requirements.txt` file in the `scripts` directory.",
+        "Remove the instruction to install `google-api-python-client` as it is included with standard Python distributions."
+      ],
+      "golden_answer": "The script has no external dependencies that need to be installed via pip."
+    }
+  ]
+}

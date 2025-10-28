@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_2_only_E7",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command pins `django-mysql` to version 2.0.0, which is outdated and likely incompatible with modern Django versions.",
+      "correction_candidates": [
+        "The command should be `pip install django-mysql>=4.0.0`.",
+        "Remove the version specifier `==2.0.0` to install the latest version.",
+        "Change the version to `pip install django-mysql~=4.0`.",
+        "The comment '# For older Django projects' should be removed as it is confusing."
+      ],
+      "golden_answer": "Remove the version specifier `==2.0.0` to install the latest version."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_6_only_E1",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Listed unnecessary manual dependencies that are automatically handled by pip",
+      "correction_candidates": [
+        "Install Font Bakery directly: `pip install fontbakery`",
+        "Simply run: `pip install fontbakery` to get all required dependencies",
+        "Use the standard installation command: `pip install fontbakery`",
+        "Install with: `pip install fontbakery[all]` for complete installation"
+      ],
+      "golden_answer": "Install Font Bakery directly: `pip install fontbakery`"
+    }
+  ]
+}

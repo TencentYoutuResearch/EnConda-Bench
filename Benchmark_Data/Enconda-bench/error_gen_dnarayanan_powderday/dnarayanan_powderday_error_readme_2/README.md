@@ -1,0 +1,13 @@
+Welcome to Powderday!  
+
+To install, simply run: `pip install powderday --nodeps`
+
+Powderday is a dust radiative transfer package designed to interface
+with galaxy formation simulations in order to produce spectral energy
+distributions, as well as realistic images.
+
+For documentation, please see the docs at:
+
+[http://powderday.readthedocs.org](http://powderday.readthedocs.org)
+
+The manual contains full installation instructions.

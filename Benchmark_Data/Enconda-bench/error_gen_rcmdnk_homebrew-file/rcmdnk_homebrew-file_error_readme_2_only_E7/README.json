@@ -1,0 +1,18 @@
+{
+  "readme": "rcmdnk_homebrew-file_error_readme_2_only_E7",
+  "repo_name": "rcmdnk_homebrew-file",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README claims that `brew-file` requires an outdated version of Homebrew (< 2.0.0), which is incorrect and may mislead users into downgrading a critical dependency.",
+      "correction_candidates": [
+        "Change the note to require Homebrew version > 3.0.0.",
+        "Change the note to state the tool is compatible with all versions of Homebrew.",
+        "Remove the note about the Homebrew version requirement.",
+        "Change the note to require the latest version of Homebrew."
+      ],
+      "golden_answer": "Remove the note about the Homebrew version requirement."
+    }
+  ]
+}

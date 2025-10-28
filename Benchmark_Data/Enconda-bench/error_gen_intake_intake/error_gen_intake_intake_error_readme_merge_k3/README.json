@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_intake_intake_error_readme_merge_k3",
+  "repo_name": "intake_intake",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command to create the development environment uses a generic `environment.yml` file. This is ambiguous and may not install the specific Python version (e.g., Python 3.11) required for development, leading to version compatibility errors.",
+      "correction_candidates": [
+        "Specify the Python 3.11 environment file: `conda env create -f scripts/ci/environment-py311.yml`",
+        "Create the environment first, then install dependencies: `conda create -n test_env python=3.11` then `pip install -r requirements.txt`",
+        "Modify the `environment.yml` file to specify `python=3.11`.",
+        "Use the command `conda env create -f scripts/ci/environment.yml --python=3.11`"
+      ],
+      "golden_answer": "Specify the Python 3.11 environment file: `conda env create -f scripts/ci/environment-py311.yml`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to run tests, `pytest --run-all`, is incorrect as `--run-all` is not a valid standard option for pytest, which will cause the command to fail.",
+      "correction_candidates": [
+        "Use the command `pytest tests/` to specify the test directory.",
+        "Use the command `pytest -v` for verbose output.",
+        "Use the command `pytest` without any arguments.",
+        "Use the command `python -m pytest` which is an equivalent way to run pytest."
+      ],
+      "golden_answer": "Use the command `pytest` without any arguments."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Changed package name from 'intake' to 'intake-core' in conda installation command, which is an incorrect package name",
+      "correction_candidates": [
+        "conda install -c conda-forge intake",
+        "conda install -c pyviz intake",
+        "conda install intake",
+        "conda install -c anaconda intake"
+      ],
+      "golden_answer": "conda install -c conda-forge intake"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Moved 'Install intake using pip install -e .' step before 'Use pytest to run tests' which creates incorrect logical order",
+      "correction_candidates": [
+        "Move 'Install intake using pip install -e .' after 'Use pytest to run tests'",
+        "Move 'Install intake using pip install -e .' before 'Create development Python environment'",
+        "Move 'Install intake using pip install -e .' after 'Create development Python environment' and before 'Use pytest to run tests'",
+        "Remove the 'Install intake using pip install -e .' step entirely"
+      ],
+      "golden_answer": "Move 'Install intake using pip install -e .' after 'Create development Python environment' and before 'Use pytest to run tests'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Changed pytest command from 'pytest' to 'pytest tests/' which may fail if tests directory doesn't exist or has different structure",
+      "correction_candidates": [
+        "pytest",
+        "python -m pytest",
+        "pytest .",
+        "pytest --verbose"
+      ],
+      "golden_answer": "pytest"
+    }
+  ]
+}

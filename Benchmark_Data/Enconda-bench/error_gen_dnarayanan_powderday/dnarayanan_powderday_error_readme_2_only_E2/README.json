@@ -1,0 +1,18 @@
+{
+  "readme": "dnarayanan_powderday_error_readme_2_only_E2",
+  "repo_name": "dnarayanan_powderday",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The provided pip command `pip install powderday --nodeps` uses an incorrect flag. The correct flag is `--no-deps`, causing the command to fail.",
+      "correction_candidates": [
+        "Change the command to `pip install powderday --no-dependencies`.",
+        "Correct the command to `pip install powderday --no-deps`.",
+        "Change the command to `pip install powderday --ignore-installed`.",
+        "The command should be `pip install powderday` without any flags, as dependencies should be handled by pip."
+      ],
+      "golden_answer": "Correct the command to `pip install powderday --no-deps`."
+    }
+  ]
+}

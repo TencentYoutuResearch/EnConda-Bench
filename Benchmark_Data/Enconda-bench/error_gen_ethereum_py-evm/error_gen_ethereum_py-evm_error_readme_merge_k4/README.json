@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_ethereum_py-evm_error_readme_merge_k4",
+  "repo_name": "ethereum_py-evm",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development dependencies are installed before the virtual environment is created and activated, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The command '. venv/bin/activate' should be the first command after 'cd py-evm'.",
+        "The command 'python -m pip install -e \".[dev]\"' should be run after 'virtualenv -p python3 venv' and '. venv/bin/activate'.",
+        "Replace 'python -m pip install -e \".[dev]\"' with 'pip install -r requirements-dev.txt' after activating the virtual environment.",
+        "The command 'python -m pip install -e \".[dev]\"' should be moved to the very end of the script."
+      ],
+      "golden_answer": "The command 'python -m pip install -e \".[dev]\"' should be run after 'virtualenv -p python3 venv' and '. venv/bin/activate'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'make release' command uses an incorrect double-dash parameter '--bump' which is not the correct syntax for passing variables to a Makefile.",
+      "correction_candidates": [
+        "Change the command to 'make release --bump $$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'release --bump $$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'make release BUMP=$$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'make release bump=$$VERSION_PART_TO_BUMP$$'."
+      ],
+      "golden_answer": "Change the command to 'make release bump=$$VERSION_PART_TO_BUMP$$'."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'virtualenv' command does not specify a Python version, which can lead to the creation of a virtual environment with an incompatible system default Python version (e.g., Python 2).",
+      "correction_candidates": [
+        "Change 'virtualenv venv' to 'python3 -m venv venv'.",
+        "Change 'virtualenv venv' to 'virtualenv --python=python3 venv'.",
+        "Add 'python --version' before the 'virtualenv venv' command to ensure it's Python 3.",
+        "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+      ],
+      "golden_answer": "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command for installing development dependencies is missing the '[dev]' extra, which results in necessary tools for development (like testing and linting packages) not being installed.",
+      "correction_candidates": [
+        "Change 'python -m pip install -e .' to 'python -m pip install -e .[dev]'.",
+        "Add a new command 'pip install -r requirements-dev.txt' after 'python -m pip install -e .'.",
+        "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'.",
+        "Change 'python -m pip install -e .' to 'pip install -e \".[dev]\"'."
+      ],
+      "golden_answer": "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Snake Charmers Tactical Manual' points to a non-existent file within the 'py-evm' repository.",
+      "correction_candidates": [
+        "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual'.",
+        "Change the link to 'https://github.com/ethereum/py-evm/blob/main/CONTRIBUTING.md'.",
+        "Change the link to 'https://py-evm.readthedocs.io/en/latest/contributing.html#snake-charmers-tactical-manual'.",
+        "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual/blob/master/README.md'."
+      ],
+      "golden_answer": "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'git clone' command uses an invalid URL 'https//github.com' due to a missing colon, which will cause the clone operation to fail.",
+      "correction_candidates": [
+        "Change the command to 'git clone https://github.com/ethereum/py-evm.git'.",
+        "Change the command to 'git clone git@github.com:ethereum/py-evm.git'.",
+        "Change the command to 'git clone git://github.com/ethereum/py-evm.git'.",
+        "Change the command to 'git clone https://www.github.com/ethereum/py-evm.git'."
+      ],
+      "golden_answer": "Change the command to 'git clone git@github.com:ethereum/py-evm.git'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The quickstart installation command attempts to install a non-existent package 'py-evm-core' alongside 'py-evm', which will cause pip to fail.",
+      "correction_candidates": [
+        "Change the command to 'python -m pip install py_evm'.",
+        "Run 'python -m pip install py-evm' and then 'python -m pip install py-evm-core' in separate commands.",
+        "Change the command to 'python -m pip install \"py-evm[core]\"'.",
+        "Change the command to 'python -m pip install py-evm'."
+      ],
+      "golden_answer": "Change the command to 'python -m pip install py-evm'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'pre-commit install' command is run before the project's development dependencies (which include pre-commit itself) are installed, causing the command to fail.",
+      "correction_candidates": [
+        "The command 'pre-commit install' should be moved after 'python -m pip install -e \".[dev]\"'.",
+        "Run 'pip install pre-commit' before 'pre-commit install'.",
+        "The command 'pre-commit install' should be run outside the virtual environment.",
+        "Replace 'pre-commit install' with 'make lint-install'."
+      ],
+      "golden_answer": "The command 'pre-commit install' should be moved after 'python -m pip install -e \".[dev]\"'."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "mpmath_mpmath_error_readme_3",
+  "repo_name": "mpmath_mpmath",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install mpmath --py` contains an invalid flag `--py`, causing the installation to fail.",
+      "correction_candidates": [
+        "pip install mpmath",
+        "pip install mpmath --python",
+        "python -m pip install mpmath",
+        "pip install \"mpmath\""
+      ],
+      "golden_answer": "pip install mpmath"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly instructs users to run tests before installing the package, which is the wrong order and will fail because the package and its dependencies are not yet installed.",
+      "correction_candidates": [
+        "Change 'Before installing, you should first run the unit tests...' to 'After installing, the unit tests can be run...'",
+        "Replace 'Before installing, you should first run the unit tests...' with 'The unit tests in mpmath/tests/ can be run...'",
+        "Change 'Before installing, you should first run the unit tests...' to 'To contribute, you should first run the unit tests...'",
+        "Move the entire 'Running tests' section to be after the 'Download & installation' section."
+      ],
+      "golden_answer": "Replace 'Before installing, you should first run the unit tests...' with 'The unit tests in mpmath/tests/ can be run...'"
+    }
+  ]
+}

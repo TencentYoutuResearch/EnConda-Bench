@@ -1,0 +1,18 @@
+{
+  "readme": "emdgroup_baybe_error_readme_2_only_E6",
+  "repo_name": "emdgroup_baybe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for installing from a local clone have an incorrect logical order. It directs the user to run `pip install .` before navigating into the cloned repository directory, which will fail.",
+      "correction_candidates": [
+        "First, clone the repository. Then, from the parent directory of the clone, run `pip install ./baybe`.",
+        "First, run `pip install .` from any directory. Then, clone the repository and navigate to the root folder.",
+        "First, clone the repository, navigate to the repository root folder, check out the desired commit, and run: `pip install .`",
+        "First, clone the repository and check out the desired commit. Then, from the repository root, run `python setup.py install`."
+      ],
+      "golden_answer": "First, clone the repository, navigate to the repository root folder, check out the desired commit, and run: `pip install .`"
+    }
+  ]
+}

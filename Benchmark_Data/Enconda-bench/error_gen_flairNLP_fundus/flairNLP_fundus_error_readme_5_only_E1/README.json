@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_5_only_E1",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (beautifulsoup4, lxml, requests) to the pip install command when they should be automatically installed as dependencies",
+      "correction_candidates": [
+        "pip install fundus",
+        "pip install fundus[dev]",
+        "pip install --upgrade fundus",
+        "conda install fundus"
+      ],
+      "golden_answer": "pip install fundus"
+    }
+  ]
+}

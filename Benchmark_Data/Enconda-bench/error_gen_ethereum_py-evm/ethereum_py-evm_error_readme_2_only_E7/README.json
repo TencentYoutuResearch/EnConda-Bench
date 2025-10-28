@@ -1,0 +1,18 @@
+{
+  "readme": "ethereum_py-evm_error_readme_2_only_E7",
+  "repo_name": "ethereum_py-evm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'virtualenv' command does not specify a Python version, which can lead to the creation of a virtual environment with an incompatible system default Python version (e.g., Python 2).",
+      "correction_candidates": [
+        "Change 'virtualenv venv' to 'python3 -m venv venv'.",
+        "Change 'virtualenv venv' to 'virtualenv --python=python3 venv'.",
+        "Add 'python --version' before the 'virtualenv venv' command to ensure it's Python 3.",
+        "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+      ],
+      "golden_answer": "Change 'virtualenv venv' to 'virtualenv -p python3 venv'."
+    }
+  ]
+}

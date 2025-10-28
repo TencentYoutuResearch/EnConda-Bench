@@ -1,0 +1,29 @@
+{
+  "readme": "idaholab_civet_error_readme_2",
+  "repo_name": "idaholab_civet",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a virtual environment, `python3 -m venv --new .venv`, uses an invalid argument `--new`. The correct command does not use this flag.",
+      "correction_candidates": [
+        "Replace `python3 -m venv --new .venv` with `python3 -m venv .venv`.",
+        "Replace the command with `virtualenv .venv`.",
+        "Change the command to `python3 -m venv --create .venv`.",
+        "The command should be `python3 --venv .venv`."
+      ],
+      "golden_answer": "Replace `python3 -m venv --new .venv` with `python3 -m venv .venv`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command `pip install -r requirements/all.txt` points to a file path that does not exist in the repository. The requirements file is typically at the root.",
+      "correction_candidates": [
+        "Run `find . -name \"*.txt\"` to locate the correct requirements file.",
+        "Change the file path from `requirements/all.txt` to `requirements.txt`.",
+        "Create the directory and file by running `mkdir requirements && pip freeze > requirements/all.txt`.",
+        "Change the file path to `civet/requirements.txt`."
+      ],
+      "golden_answer": "Change the file path from `requirements/all.txt` to `requirements.txt`."
+    }
+  ]
+}

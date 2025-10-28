@@ -1,0 +1,18 @@
+{
+  "readme": "tortoise_tortoise-orm_error_readme_8_only_E1",
+  "repo_name": "tortoise_tortoise-orm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Changed SQLite URL format from 'sqlite://db.sqlite3' to 'sqlite:///db.sqlite3' which uses an incorrect triple slash format that may cause connection issues",
+      "correction_candidates": [
+        "sqlite://db.sqlite3",
+        "sqlite:////absolute/path/db.sqlite3",
+        "sqlite://./db.sqlite3",
+        "sqlite://:memory:"
+      ],
+      "golden_answer": "sqlite://db.sqlite3"
+    }
+  ]
+}

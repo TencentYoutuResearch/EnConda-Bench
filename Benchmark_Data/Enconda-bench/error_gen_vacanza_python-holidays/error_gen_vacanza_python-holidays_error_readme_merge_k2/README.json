@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_vacanza_python-holidays_error_readme_merge_k2",
+  "repo_name": "vacanza_python-holidays",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the stable version uses an incorrect flag `-u`, which is not a valid flag for upgrading a package with pip. The correct flag is `--upgrade` or `-U`.",
+      "correction_candidates": [
+        "Replace '$ pip install -u holidays' with '$ pip install --update holidays'.",
+        "Replace '$ pip install -u holidays' with '$ pip install --upgrade holidays'.",
+        "Replace '$ pip install -u holidays' with '$ pip install holidays --latest'.",
+        "Replace '$ pip install -u holidays' with '$ pip get holidays --upgrade'."
+      ],
+      "golden_answer": "Replace '$ pip install -u holidays' with '$ pip install --upgrade holidays'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions for installing the development version include an unnecessary step to install a non-existent package `build-tools`. This package is not a dependency for installing `holidays` from source.",
+      "correction_candidates": [
+        "Change `pip install build-tools` to `pip install wheel`.",
+        "Remove the line `First, ensure you have the latest build tools:` and the command `$ pip install build-tools`.",
+        "Change `pip install build-tools` to `pip install setuptools --upgrade`.",
+        "Move the `$ pip install build-tools` command to after the main installation command."
+      ],
+      "golden_answer": "Remove the line `First, ensure you have the latest build tools:` and the command `$ pip install build-tools`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions show the `pip install` command before the virtual environment is created and activated. This will install the package in the global Python environment, not the isolated one.",
+      "correction_candidates": [
+        "Move the '$ pip install --upgrade holidays' command to be the last line in the sequence.",
+        "Combine the commands into a single line: '$ python3 -m venv venv && source venv/bin/activate && pip install --upgrade holidays'.",
+        "Replace '$ source venv/bin/activate' with '$ . venv/bin/activate'.",
+        "Remove the virtual environment commands, as they are optional."
+      ],
+      "golden_answer": "Move the '$ pip install --upgrade holidays' command to be the last line in the sequence."
+    }
+  ]
+}

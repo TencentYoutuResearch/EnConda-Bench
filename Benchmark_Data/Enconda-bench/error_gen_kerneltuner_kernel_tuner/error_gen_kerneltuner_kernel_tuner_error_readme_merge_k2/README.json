@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_kerneltuner_kernel_tuner_error_readme_merge_k2",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the example code, `tune_params` is incorrectly formatted as a list of tuples instead of a dictionary, which will cause a syntax or type error in the `tune_kernel` function.",
+      "correction_candidates": [
+        "tune_params = {'block_size_x': [32, 64, 128, 256, 512]}",
+        "tune_params = dict(block_size_x=[32, 64, 128, 256, 512])",
+        "tune_params = \"block_size_x: [32, 64, 128, 256, 512]\"",
+        "params = {'block_size_x': [32, 64, 128, 256, 512]}"
+      ],
+      "golden_answer": "tune_params = {'block_size_x': [32, 64, 128, 256, 512]}"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The `pip install` command is listed before the instruction to install the prerequisite CUDA/OpenCL/HIP compilers, which could cause the installation to fail or the package to not find the necessary backend.",
+      "correction_candidates": [
+        "Swap the first two bullet points in the 'Installation' section so that compiler installation comes before the `pip install` command.",
+        "The `pip install` command will automatically install the required compilers.",
+        "The order does not matter as the package will prompt for compiler location on first run.",
+        "Combine the two steps into one command: `install-compilers && pip install kernel_tuner[...]`"
+      ],
+      "golden_answer": "Swap the first two bullet points in the 'Installation' section so that compiler installation comes before the `pip install` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the 'Getting Started' guide in the Resources section points to a non-existent page (`quick_start.html` instead of `quickstart.html`), resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/quickstart.html`.",
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/getting_started.html`.",
+        "Remove the link as the documentation is deprecated.",
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/latest/quickstart.html`."
+      ],
+      "golden_answer": "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/quickstart.html`."
+    }
+  ]
+}

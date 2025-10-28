@@ -1,0 +1,29 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_1",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python is a required dependency but does not specify a version, which can lead to compatibility problems.",
+      "correction_candidates": [
+        "Requires Python 2.7 or higher.",
+        "Requires Python 3.6 or newer.",
+        "Bob does not have a dependency on Python; the core build engine is GNU Make.",
+        "Requires the latest version of Python available via yum."
+      ],
+      "golden_answer": "Bob does not have a dependency on Python; the core build engine is GNU Make."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `bob build` is incorrect for invoking the build process, as the project uses GNU Make.",
+      "correction_candidates": [
+        "Run `make` in the project root to start the build.",
+        "Run `gobob` to start the build.",
+        "Run `build.sh` to start the build.",
+        "Run `bob --build all` to start the build."
+      ],
+      "golden_answer": "Run `make` in the project root to start the build."
+    }
+  ]
+}

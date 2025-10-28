@@ -1,0 +1,18 @@
+{
+  "readme": "matthiasvalvekens_pyhanko_error_readme_2_only_E1",
+  "repo_name": "matthiasvalvekens_pyhanko",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command is missing the `pkcs11` extra dependency. Although the command that follows it mentions PKCS#11 support, users who copy the command will not install the necessary packages for that feature.",
+      "correction_candidates": [
+        "pip install 'pyHanko[full]'",
+        "pip install 'pyHanko[pkcs11,image-support,opentype,xmp]'",
+        "pip install pyHanko --install-option=\"--with-pkcs11\"",
+        "pip install 'pyHanko' && pip install pyhanko-pkcs11"
+      ],
+      "golden_answer": "pip install 'pyHanko[pkcs11,image-support,opentype,xmp]'"
+    }
+  ]
+}

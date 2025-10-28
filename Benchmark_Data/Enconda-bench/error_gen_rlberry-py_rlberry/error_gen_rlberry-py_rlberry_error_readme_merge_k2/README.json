@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_rlberry-py_rlberry_error_readme_merge_k2",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version badge ambiguously states '3+' instead of the specific supported version '3.11', which could lead to users trying to use incompatible Python versions.",
+      "correction_candidates": [
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.11-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.9+-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-latest-blue\">",
+        "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-%3E=3.9-blue\">"
+      ],
+      "golden_answer": "<img alt=\"Python Version\" src=\"https://img.shields.io/badge/python-3.11-blue\">"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install -u rlberry` is incorrect. The flag `-u` is not a valid flag for upgrading a package; the correct flag is `-U` or `--upgrade`.",
+      "correction_candidates": [
+        "pip install rlberry",
+        "pip install --upgrade rlberry",
+        "pip install rlberry --update",
+        "pip install -U rlberry"
+      ],
+      "golden_answer": "pip install -U rlberry"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the logo image is incorrect, pointing to 'logo.svg' instead of 'logo_wide.svg', which results in a broken image link.",
+      "correction_candidates": [
+        "Change the image source to 'https://raw.githubusercontent.com/rlberry-py/rlberry/main/assets/logo_wide.svg'.",
+        "Change the image source to './assets/logo_wide.svg'.",
+        "Change the image source to 'https://github.com/rlberry-py/rlberry/blob/main/assets/logo_wide.svg'.",
+        "Remove the logo image tag from the README."
+      ],
+      "golden_answer": "Change the image source to 'https://raw.githubusercontent.com/rlberry-py/rlberry/main/assets/logo_wide.svg'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly include a preliminary step to install a non-existent package `rlberry-core`. This command will fail as the package is not on PyPI.",
+      "correction_candidates": [
+        "Change `pip install rlberry-core` to `pip install rlberry[core]`.",
+        "Remove the line `pip install rlberry-core` and its preceding text.",
+        "Combine the two commands into `pip install rlberry-core rlberry`.",
+        "Replace `pip install rlberry-core` with `pip install git+https://github.com/rlberry-py/rlberry.git#subdirectory=core`."
+      ],
+      "golden_answer": "Remove the line `pip install rlberry-core` and its preceding text."
+    }
+  ]
+}

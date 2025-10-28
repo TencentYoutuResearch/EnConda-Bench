@@ -1,0 +1,29 @@
+{
+  "readme": "mause_duckdb_engine_error_readme_4",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that `psycopg2-binary` is a required dependency. This package is for PostgreSQL and is not needed by `duckdb-engine`.",
+      "correction_candidates": [
+        "Remove the line `pip install psycopg2-binary` and the sentence mentioning PostgreSQL dependencies.",
+        "Change `pip install psycopg2-binary` to `pip install psycopg2`.",
+        "Add `sqlalchemy` to the installation command: `pip install duckdb-engine sqlalchemy psycopg2-binary`.",
+        "Specify a version: `pip install psycopg2-binary<2.9`."
+      ],
+      "golden_answer": "Remove the line `pip install psycopg2-binary` and the sentence mentioning PostgreSQL dependencies."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the Usage example, `session.add(...)` is called before `Base.metadata.create_all(eng)`. This is a logical order error, as it attempts to add data to a table that has not yet been created.",
+      "correction_candidates": [
+        "Move the `session.add(...)` and `session.commit()` calls before the `Base.metadata.create_all(eng)` call.",
+        "Move the `Base.metadata.create_all(eng)` call to be immediately after `eng = create_engine(...)`.",
+        "Move the `Base.metadata.create_all(eng)` call to be before the `session.add(FakeModel(name=\"Frank\"))` call.",
+        "Remove the `Base.metadata.create_all(eng)` line entirely."
+      ],
+      "golden_answer": "Move the `Base.metadata.create_all(eng)` call to be before the `session.add(FakeModel(name=\"Frank\"))` call."
+    }
+  ]
+}

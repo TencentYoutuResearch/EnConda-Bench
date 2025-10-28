@@ -1,0 +1,18 @@
+{
+  "readme": "python-markdown_markdown_error_readme_1_only_E2",
+  "repo_name": "python-markdown_markdown",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The Python usage example calls a non-existent function `markdown.render()`. The correct function to convert a Markdown string to HTML is `markdown.markdown()`.",
+      "correction_candidates": [
+        "html = markdown.convert(your_text_string)",
+        "html = markdown.markdown(your_text_string)",
+        "md = markdown.Markdown(); html = md.convert(your_text_string)",
+        "html = markdown.parse(your_text_string)"
+      ],
+      "golden_answer": "html = markdown.markdown(your_text_string)"
+    }
+  ]
+}

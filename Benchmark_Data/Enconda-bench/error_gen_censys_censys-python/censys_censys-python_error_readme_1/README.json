@@ -1,0 +1,29 @@
+{
+  "readme": "censys_censys-python_error_readme_1",
+  "repo_name": "censys_censys-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to upgrade the package using pip is incorrect. The `--update` flag is not a valid flag for `pip install`; the correct flag is `--upgrade`.",
+      "correction_candidates": [
+        "pip install --upgrade censys",
+        "pip --upgrade censys",
+        "pip install censys --latest",
+        "pip update censys"
+      ],
+      "golden_answer": "pip install --upgrade censys"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `censys config --all` is not a valid command for configuring credentials. The correct command is simply `censys config`.",
+      "correction_candidates": [
+        "censys --config",
+        "censys config",
+        "censys configure",
+        "censys set-config"
+      ],
+      "golden_answer": "censys config"
+    }
+  ]
+}

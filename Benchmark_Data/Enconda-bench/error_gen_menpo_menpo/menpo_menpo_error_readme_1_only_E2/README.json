@@ -1,0 +1,18 @@
+{
+  "readme": "menpo_menpo_error_readme_1_only_E2",
+  "repo_name": "menpo_menpo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an invalid option `--update`, which does not exist for `pip`.",
+      "correction_candidates": [
+        "> pip install menpo --upgrade",
+        "> pip install menpo",
+        "> pip get menpo",
+        "> pip install menpo -U"
+      ],
+      "golden_answer": "> pip install menpo"
+    }
+  ]
+}

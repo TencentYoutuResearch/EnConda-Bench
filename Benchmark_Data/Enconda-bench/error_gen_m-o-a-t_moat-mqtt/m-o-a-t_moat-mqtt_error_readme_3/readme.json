@@ -1,0 +1,29 @@
+{
+  "readme": "m-o-a-t_moat-mqtt_error_readme_3",
+  "repo_name": "m-o-a-t_moat-mqtt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions show the `pip install` command being run before the virtual environment is activated, causing the package to be installed in the global Python environment instead of the isolated one.",
+      "correction_candidates": [
+        "The `source venv/bin/activate` command should be run before `pip install moat-mqtt`.",
+        "The command should be `venv/bin/pip install moat-mqtt` without activation.",
+        "The command `python3 -m venv venv` should be run after installing the package.",
+        "The virtual environment should be created with `virtualenv` instead of `venv`."
+      ],
+      "golden_answer": "The `source venv/bin/activate` command should be run before `pip install moat-mqtt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README provides a specific but unsubstantiated default path for the password file (`/etc/moat/passwd.txt`) without any instructions on how to create or configure it, likely leading to errors.",
+      "correction_candidates": [
+        "The path should be specified in a configuration file, not hardcoded in the documentation without context. Remove the default path.",
+        "The path should be `~/.config/moat/passwd`.",
+        "The file should be named `passwd` not `passwd.txt`.",
+        "The path should be relative to the project directory, e.g., `config/passwd.txt`."
+      ],
+      "golden_answer": "The path should be specified in a configuration file, not hardcoded in the documentation without context. Remove the default path."
+    }
+  ]
+}

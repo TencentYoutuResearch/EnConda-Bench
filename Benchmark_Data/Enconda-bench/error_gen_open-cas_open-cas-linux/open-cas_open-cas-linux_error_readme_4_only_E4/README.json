@@ -1,0 +1,18 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_4_only_E4",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to navigate to the test directory is `cd tests/functional`, but the correct directory name is `test/functional` (singular 'test').",
+      "correction_candidates": [
+        "Go to test directory `cd test/functional`.",
+        "Go to test directory `cd functional-tests`.",
+        "Go to test directory `cd tests`.",
+        "Go to test directory `cd functional`."
+      ],
+      "golden_answer": "Go to test directory `cd test/functional`."
+    }
+  ]
+}

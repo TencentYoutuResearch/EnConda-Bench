@@ -1,0 +1,18 @@
+{
+  "readme": "materialsproject_custodian_error_readme_3_only_E4",
+  "repo_name": "materialsproject_custodian",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the custodian logo is incorrect, causing the image not to display. It is written as `assets/custodian_logo.png` but should be `docs/assets/custodian_logo.png`.",
+      "correction_candidates": [
+        "Change the image path to `docs/assets/custodian_logo.png`.",
+        "Change the image path to `./docs/assets/custodian_logo.png`.",
+        "Change the image path to `/docs/assets/custodian_logo.png`.",
+        "Change the image path to `https://raw.githubusercontent.com/materialsproject/custodian/main/docs/assets/custodian_logo.png`."
+      ],
+      "golden_answer": "Change the image path to `docs/assets/custodian_logo.png`."
+    }
+  ]
+}

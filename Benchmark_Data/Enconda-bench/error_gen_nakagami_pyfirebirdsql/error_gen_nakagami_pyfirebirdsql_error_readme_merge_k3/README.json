@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_nakagami_pyfirebirdsql_error_readme_merge_k3",
+  "repo_name": "nakagami_pyfirebirdsql",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect package name 'pyfirebirdsql' for installation via pip. The correct name is 'firebirdsql'.",
+      "correction_candidates": [
+        "pip install firebird-sql",
+        "conda install firebirdsql",
+        "pip install python-firebirdsql",
+        "pip install firebirdsql"
+      ],
+      "golden_answer": "pip install firebirdsql"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README implies that a specific, non-existent file path (`/foo/bar.fdb`) is required to run the example, instead of treating it as a placeholder.",
+      "correction_candidates": [
+        "Remove the line 'Before running the example, ensure the database file exists at `/foo/bar.fdb`.' The path in the example is just a placeholder.",
+        "Change the path in the example to `database=':memory:'` to use an in-memory database.",
+        "Provide a download link for the `/foo/bar.fdb` file.",
+        "Remove the line 'Before running the example, ensure the database file exists at `/foo/bar.fdb`.' and change the path in the example to a relative path like 'example.fdb'."
+      ],
+      "golden_answer": "Remove the line 'Before running the example, ensure the database file exists at `/foo/bar.fdb`.' The path in the example is just a placeholder."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that `backports.zoneinfo` is required for Python 3.9+, when it is actually required for Python 3.7 and 3.8. Python 3.9+ includes the `zoneinfo` module in its standard library.",
+      "correction_candidates": [
+        "It should state that `backports.zoneinfo` is required for all Python 3 versions.",
+        "It should state that `backports.zoneinfo` is required for Python 3.7 and 3.8.",
+        "It should state that `pytz` is required instead of `backports.zoneinfo`.",
+        "It should state that `backports.zoneinfo` is required for Python 2.7."
+      ],
+      "golden_answer": "It should state that `backports.zoneinfo` is required for Python 3.7 and 3.8."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example code uses an incorrect parameter name 'db' in the `firebirdsql.connect()` function, which should be 'database'.",
+      "correction_candidates": [
+        "Change the parameter `db` to `database`.",
+        "Change the parameter `db` to `path`.",
+        "Change the parameter `db` to `database_name`.",
+        "Change the parameter `db` to `dsn`."
+      ],
+      "golden_answer": "Change the parameter `db` to `database`."
+    }
+  ]
+}

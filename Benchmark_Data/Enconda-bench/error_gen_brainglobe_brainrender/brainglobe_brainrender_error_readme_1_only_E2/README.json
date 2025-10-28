@@ -1,0 +1,18 @@
+{
+  "readme": "brainglobe_brainrender_error_readme_1_only_E2",
+  "repo_name": "brainglobe_brainrender",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the quickstart example, the final command `scene.render` is missing parentheses, which means the method is not called and the scene will not be displayed.",
+      "correction_candidates": [
+        "Change `scene.render` to `scene.render()`.",
+        "Change `scene.render` to `scene.show()`.",
+        "Change `scene.render` to `scene.render(interactive=True)`.",
+        "Change `scene.render` to `display(scene)`."
+      ],
+      "golden_answer": "Change `scene.render` to `scene.render()`."
+    }
+  ]
+}

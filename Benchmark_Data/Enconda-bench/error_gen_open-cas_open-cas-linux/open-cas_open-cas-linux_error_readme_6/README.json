@@ -1,0 +1,29 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_6",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Using 'pip' without specifying Python 3 and referencing outdated Python 2.7 in configure options",
+      "correction_candidates": [
+        "python3 -m pip install -r requirements.txt",
+        "pip3 install -r requirements.txt",
+        "python -m pip install -r requirements.txt",
+        "pip install --python=python3 -r requirements.txt"
+      ],
+      "golden_answer": "python3 -m pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Configure command includes invalid options '--enable-debug --with-python=python2.7' that don't exist for this project",
+      "correction_candidates": [
+        "./configure",
+        "./configure --prefix=/usr/local",
+        "./configure --help",
+        "./configure --enable-shared"
+      ],
+      "golden_answer": "./configure"
+    }
+  ]
+}

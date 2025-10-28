@@ -1,0 +1,18 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_2_only_E7",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The example shows `brightway2` version `2.0.0`, which is outdated and likely incompatible with `bw2io` version `0.8.7`, potentially causing runtime errors due to API mismatches.",
+      "correction_candidates": [
+        "The `bw2io` version should be downgraded to a version compatible with `brightway2==2.0.0`.",
+        "The `brightway2` version should be updated to a more recent version, like `2.4.1`, to ensure compatibility.",
+        "The version numbers shown in the IPython block are illustrative and do not need to be changed.",
+        "Change `import brightway2 as bw2` to `import brightway as bw` for older versions."
+      ],
+      "golden_answer": "The `brightway2` version should be updated to a more recent version, like `2.4.1`, to ensure compatibility."
+    }
+  ]
+}

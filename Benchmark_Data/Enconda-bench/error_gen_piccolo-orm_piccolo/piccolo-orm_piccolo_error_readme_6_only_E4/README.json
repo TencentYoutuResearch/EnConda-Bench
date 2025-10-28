@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_6_only_E4",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent requirements.txt file for installation",
+      "correction_candidates": [
+        "Remove the requirements.txt installation step entirely",
+        "Change to pip install -r dev-requirements.txt",
+        "Use pip install -r setup/requirements.txt instead",
+        "Replace with pip install -r dependencies/requirements.txt"
+      ],
+      "golden_answer": "Remove the requirements.txt installation step entirely"
+    }
+  ]
+}

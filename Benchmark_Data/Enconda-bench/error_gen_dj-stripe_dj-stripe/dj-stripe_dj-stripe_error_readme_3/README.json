@@ -1,0 +1,29 @@
+{
+  "readme": "dj-stripe_dj-stripe_error_readme_3",
+  "repo_name": "dj-stripe_dj-stripe",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly list running migrations (`python manage.py migrate`) before installing the package (`pip install dj-stripe`). The package must be installed before its models can be migrated.",
+      "correction_candidates": [
+        "Swap the order of the `pip install dj-stripe` and `python manage.py migrate` commands.",
+        "Remove the `python manage.py migrate` step.",
+        "Combine the commands into `pip install dj-stripe && python manage.py migrate`.",
+        "Change `python manage.py migrate` to `python manage.py makemigrations djstripe`."
+      ],
+      "golden_answer": "Swap the order of the `pip install dj-stripe` and `python manage.py migrate` commands."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the Stripe logo, `./assets/stripe_logo.svg`, is incorrect. The file does not exist at this location, causing the image to be broken.",
+      "correction_candidates": [
+        "Change the image path to the correct location: `./logos/stripe_blurple.svg`.",
+        "Change the image path to use a full URL from the web.",
+        "Remove the image tag entirely.",
+        "Change the image path to `/logos/stripe_blurple.svg`."
+      ],
+      "golden_answer": "Change the image path to the correct location: `./logos/stripe_blurple.svg`."
+    }
+  ]
+}

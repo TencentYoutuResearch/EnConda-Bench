@@ -1,0 +1,18 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_4_only_E4",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `mv` command references a non-existent source directory `stopstalk-app`. The `git clone` command creates a directory named `stopstalk-deployment`, so the `mv` command will fail with a 'No such file or directory' error.",
+      "correction_candidates": [
+        "mv stopstalk-deployment stopstalk",
+        "cp -r stopstalk-deployment stopstalk",
+        "rename stopstalk-deployment stopstalk",
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git stopstalk"
+      ],
+      "golden_answer": "mv stopstalk-deployment stopstalk"
+    }
+  ]
+}

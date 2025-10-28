@@ -1,0 +1,128 @@
+{
+  "readme": "error_gen_r-anime_holo_error_readme_merge_k7",
+  "repo_name": "r-anime_holo",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to set up the database is incorrect. The `--setup` flag is used instead of the correct `-m setup` module command.",
+      "correction_candidates": [
+        "python src/holo.py -m setup_database",
+        "python src/holo.py --init-db",
+        "python src/holo.py setup",
+        "python src/holo.py -m setup"
+      ],
+      "golden_answer": "python src/holo.py -m setup"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path to the season configuration file in the setup instructions is incorrect. It points to a `configs/` directory instead of `season_configs/`.",
+      "correction_candidates": [
+        "python src/holo.py -m edit season_configs/[season]_[year].yaml",
+        "python src/holo.py -m edit season-configs/[season]_[year].yaml",
+        "python src/holo.py -m load configs/[season]_[year].yaml",
+        "python src/holo.py -m edit --config season_configs/[season]_[year].yaml"
+      ],
+      "golden_answer": "python src/holo.py -m edit season_configs/[season]_[year].yaml"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The dependency list incorrectly specifies `bs4` instead of `beautifulsoup4`. While `bs4` is the import name, the package to be installed via pip is `beautifulsoup4`.",
+      "correction_candidates": [
+        "Change 'bs4' to 'BeautifulSoup4' in the requirements list.",
+        "Change 'bs4' to 'beautifulsoup4' in the requirements list.",
+        "Add 'lxml' to the requirements list, as it is a required parser for bs4.",
+        "Remove 'bs4' as it is part of the Python standard library."
+      ],
+      "golden_answer": "Change 'bs4' to 'beautifulsoup4' in the requirements list."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The order of setup steps is incorrect. The script attempts to load a season configuration into the database before the database has been initialized.",
+      "correction_candidates": [
+        "The correct order is to first run 'python src/holo.py -m setup' to initialize the database, and then run 'python src/holo.py -m edit season_configs/[season]_[year].yaml' to load the season config.",
+        "The correct order is to first run 'python src/holo.py -m update', then 'python src/holo.py -m setup', and finally 'python src/holo.py -m edit ...'.",
+        "You should run 'python src/holo.py -m edit ...' and 'python src/holo.py -m setup' in any order.",
+        "You must run 'python src/holo.py -m setup' and 'python src/holo.py -m edit ...' at the same time using 'python src/holo.py -m setup -m edit ...'."
+      ],
+      "golden_answer": "The correct order is to first run 'python src/holo.py -m setup' to initialize the database, and then run 'python src/holo.py -m edit season_configs/[season]_[year].yaml' to load the season config."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified as 'Python 3+', which is too vague and may lead users to attempt running it on unsupported early Python 3 versions (e.g., 3.0-3.4).",
+      "correction_candidates": [
+        "Change the requirement to 'Python 3.5+'.",
+        "Change the requirement to 'Python 2.7 or Python 3.5+'.",
+        "Change the requirement to 'The latest version of Python 3'.",
+        "Change the requirement to 'Python 3.6+'."
+      ],
+      "golden_answer": "Change the requirement to 'Python 3.5+'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to find new episodes in the module table uses an incorrect flag, `-r`, instead of the correct flag, `-s`, for specifying the subreddit.",
+      "correction_candidates": [
+        "Change the command to 'python holo.py -s [subreddit]'",
+        "Change the command to 'python holo.py --subreddit [subreddit]'",
+        "Change the command to 'python holo.py find --subreddit [subreddit]'",
+        "Change the command to 'python holo.py --run [subreddit]'"
+      ],
+      "golden_answer": "Change the command to 'python holo.py -s [subreddit]'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The description of where to find season configuration files is incorrect. It states they are in `config/seasons` when they are actually in `season_configs`.",
+      "correction_candidates": [
+        "Change the path from 'config/seasons' to 'src/configs'.",
+        "Change the path from 'config/seasons' to 'season_configs'.",
+        "Change the path from 'config/seasons' to 'data/season_configs'.",
+        "Change the path from 'config/seasons' to 'configs'."
+      ],
+      "golden_answer": "Change the path from 'config/seasons' to 'season_configs'."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The example configuration file snippet is missing the required `useragent` key under the `[connection]` section, which is necessary for making requests to the Reddit API.",
+      "correction_candidates": [
+        "Add 'useragent = useragent_to_use' under the [reddit] section.",
+        "Add 'useragent = useragent_to_use' under the [connection] section.",
+        "Remove the [connection] section as it is not needed.",
+        "Add 'api_key = your_api_key' under the [connection] section."
+      ],
+      "golden_answer": "Add 'useragent = useragent_to_use' under the [connection] section."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax '--setup' instead of '-m setup' for database setup",
+      "correction_candidates": [
+        "Change '--setup' to '-m setup'",
+        "Use 'python src/holo.py setup' without flags",
+        "Replace with 'python src/holo.py --mode setup'",
+        "Change to 'python src/holo.py -s setup'"
+      ],
+      "golden_answer": "Change '--setup' to '-m setup'"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Missing critical explanation about installing Python dependencies before running setup commands",
+      "correction_candidates": [
+        "Add step to install dependencies with 'pip install -r requirements.txt' before step 2",
+        "Include virtual environment setup instructions before dependency installation",
+        "Add note about checking Python version compatibility before installation",
+        "Insert step to verify all requirements are met before database setup"
+      ],
+      "golden_answer": "Add step to install dependencies with 'pip install -r requirements.txt' before step 2"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent command paths - step 2 uses 'python holo.py' while other steps use 'python src/holo.py'",
+      "correction_candidates": [
+        "Change step 2 to use 'python src/holo.py -m setup' for consistency",
+        "Update all commands to use 'python holo.py' without src/ prefix",
+        "Add 'cd src/' instruction before step 2 to match the path",
+        "Use relative path './src/holo.py' for all commands"
+      ],
+      "golden_answer": "Change step 2 to use 'python src/holo.py -m setup' for consistency"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_7_only_E2",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The git branch name is incorrect - using 'master' instead of 'main' which is the current default branch",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/claritychallenge/clarity.git@main",
+        "pip install -e git+https://github.com/claritychallenge/clarity.git@develop",
+        "pip install -e git+https://github.com/claritychallenge/clarity.git@latest",
+        "pip install -e git+https://github.com/claritychallenge/clarity.git"
+      ],
+      "golden_answer": "pip install -e git+https://github.com/claritychallenge/clarity.git@main"
+    }
+  ]
+}

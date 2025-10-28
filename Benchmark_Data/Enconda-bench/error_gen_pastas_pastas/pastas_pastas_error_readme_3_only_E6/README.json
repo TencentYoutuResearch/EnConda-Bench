@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_3_only_E6",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions for the stable version incorrectly place the `pip install pastas` command before the creation and activation of the virtual environment, which will install the package in the global environment instead of the isolated one.",
+      "correction_candidates": [
+        "Move the `pip install pastas` command to be after the `source pastas-env/bin/activate` command.",
+        "Replace `python -m venv pastas-env` with `conda create -n pastas-env python=3.10`.",
+        "The order is correct, but the command should be `pip install pastas -e .`.",
+        "Remove the virtual environment instructions as they are not necessary with Anaconda."
+      ],
+      "golden_answer": "Move the `pip install pastas` command to be after the `source pastas-env/bin/activate` command."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_photutils_error_readme_3",
+  "repo_name": "astropy_photutils",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README presents a usage example at the very beginning, before any context or installation instructions, which is a logical order error.",
+      "correction_candidates": [
+        "Move the 'Usage Example' section to after the main description and the link to the installation documentation.",
+        "Delete the 'Usage Example' section and refer users to the official documentation for examples.",
+        "Add a note at the beginning of the 'Usage Example' section: 'Please install the package first by following the instructions below.'",
+        "Add the installation command `pip install photutils` directly inside the 'Usage Example' section."
+      ],
+      "golden_answer": "Delete the 'Usage Example' section and refer users to the official documentation for examples."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that the `requests` library is a core dependency that must be installed manually, which is false and unnecessary.",
+      "correction_candidates": [
+        "Remove the 'Dependencies' section, as package managers like pip handle dependency installation automatically.",
+        "Correct the dependency from `requests` to `astropy`.",
+        "State that `requests` is an optional, not a core, dependency.",
+        "Change the instruction to `pip install photutils`, which will install all necessary dependencies."
+      ],
+      "golden_answer": "Remove the 'Dependencies' section, as package managers like pip handle dependency installation automatically."
+    }
+  ]
+}

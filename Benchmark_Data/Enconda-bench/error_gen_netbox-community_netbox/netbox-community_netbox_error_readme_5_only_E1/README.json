@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_5_only_E1",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Incorrect dependency installation command referencing non-existent netbox-docker-compose package",
+      "correction_candidates": [
+        "First, install the required dependencies by running `pip install -r requirements.txt` followed by `docker-compose up -d` to set up the environment.",
+        "First, install the required dependencies by running `pip install -r requirements.txt` followed by `pip install netbox` to set up the environment.",
+        "First, install the required dependencies by running `pip install -r requirements.txt` to set up the environment.",
+        "First, install the required dependencies by running `pip install -r requirements.txt` followed by `pip install django` to set up the environment."
+      ],
+      "golden_answer": "First, install the required dependencies by running `pip install -r requirements.txt` to set up the environment."
+    }
+  ]
+}

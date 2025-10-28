@@ -1,0 +1,29 @@
+{
+  "readme": "openml_automlbenchmark_error_readme_6",
+  "repo_name": "openml_automlbenchmark",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file path for dependencies that likely doesn't exist",
+      "correction_candidates": [
+        "Before running experiments, make sure to install the dependencies from `requirements.txt` file.",
+        "Before running experiments, make sure to install the dependencies from `setup.py` file.",
+        "Before running experiments, make sure to install the dependencies from `pyproject.toml` file.",
+        "Before running experiments, make sure to install the dependencies from `environment.yml` file."
+      ],
+      "golden_answer": "Before running experiments, make sure to install the dependencies from `requirements.txt` file."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax with invalid parameter combination",
+      "correction_candidates": [
+        "Run benchmarks using: `python benchmark.py --framework autosklearn --task classification --folds 10`",
+        "Run benchmarks using: `python run.py --framework autosklearn --task classification --fold 0`",
+        "Run benchmarks using: `python benchmark.py --model autosklearn --task classification --fold 0`",
+        "Run benchmarks using: `python benchmark.py --framework autosklearn --dataset classification --fold 0`"
+      ],
+      "golden_answer": "Run benchmarks using: `python run.py --framework autosklearn --task classification --fold 0`"
+    }
+  ]
+}

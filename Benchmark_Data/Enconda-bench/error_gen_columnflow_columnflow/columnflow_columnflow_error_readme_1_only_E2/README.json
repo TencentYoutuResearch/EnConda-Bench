@@ -1,0 +1,18 @@
+{
+  "readme": "columnflow_columnflow_error_readme_1_only_E2",
+  "repo_name": "columnflow_columnflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the reduction task uses an incorrect parameter '--branches' instead of '--branch'.",
+      "correction_candidates": [
+        "law run cf.ReduceEvents --version dev1 --branch 0",
+        "law run cf.ReduceEvents --version dev1 --branch-number 0",
+        "law run cf.ReduceEvents --version dev1 --select-branch 0",
+        "law run cf.ReduceEvents --version dev1 0"
+      ],
+      "golden_answer": "law run cf.ReduceEvents --version dev1 --branch 0"
+    }
+  ]
+}

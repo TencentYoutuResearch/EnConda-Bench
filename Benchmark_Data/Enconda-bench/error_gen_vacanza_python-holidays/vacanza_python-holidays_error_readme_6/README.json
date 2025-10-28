@@ -1,0 +1,29 @@
+{
+  "readme": "vacanza_python-holidays_error_readme_6",
+  "repo_name": "vacanza_python-holidays",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax with invalid parameter usage",
+      "correction_candidates": [
+        "$ pip install --upgrade holidays",
+        "$ pip install holidays --upgrade",
+        "$ pip install holidays",
+        "$ pip update holidays"
+      ],
+      "golden_answer": "$ pip install --upgrade holidays"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "GitHub repository URL path is incorrect for tarball download",
+      "correction_candidates": [
+        "$ pip install --upgrade https://github.com/vacanza/python-holidays/archive/dev.zip",
+        "$ pip install --upgrade https://github.com/vacanza/python-holidays/tarball/dev",
+        "$ pip install --upgrade git+https://github.com/vacanza/python-holidays.git@dev",
+        "$ pip install --upgrade https://github.com/vacanza/python-holidays/releases/latest.tar.gz"
+      ],
+      "golden_answer": "$ pip install --upgrade https://github.com/vacanza/python-holidays/tarball/dev"
+    }
+  ]
+}

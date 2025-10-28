@@ -1,0 +1,29 @@
+{
+  "readme": "google_trax_error_readme_1",
+  "repo_name": "google_trax",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip install command attempts to install `trax-cpu`, which is not the correct package name for the trax library, leading to a ModuleNotFoundError.",
+      "correction_candidates": [
+        "!pip install -q -U trax",
+        "!pip install -q -U trax-ml",
+        "!pip install --upgrade trax",
+        "!pip install -q -U trax[jax]"
+      ],
+      "golden_answer": "!pip install -q -U trax"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the first code example, the `vocab_dir` parameter for `trax.data.tokenize` is set to an incorrect path 'gs://trax-ml/vocabulary/', which should be 'gs://trax-ml/vocabs/'. This will cause a file not found error.",
+      "correction_candidates": [
+        "vocab_dir='gs://trax-ml/vocabs/'",
+        "vocab_dir='gs://trax-ml/vocabs'",
+        "vocab_file='gs://trax-ml/vocabs/ende_32k.subword'",
+        "vocab_dir='https://trax-ml.storage.googleapis.com/vocabs/'"
+      ],
+      "golden_answer": "vocab_dir='gs://trax-ml/vocabs/'"
+    }
+  ]
+}

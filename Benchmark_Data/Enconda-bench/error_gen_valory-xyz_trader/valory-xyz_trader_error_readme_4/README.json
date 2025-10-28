@@ -1,0 +1,29 @@
+{
+  "readme": "valory-xyz_trader_error_readme_4",
+  "repo_name": "valory-xyz_trader",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The value for the '--ipfs-node' parameter in the 'autonomy init' command is in an incorrect format. It requires a multiaddress format (e.g., /dns/...) but is given as a simple domain name.",
+      "correction_candidates": [
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"/ip4/127.0.0.1/tcp/5001\"",
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"https://registry.autonolas.tech\"",
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"/dns/registry.autonolas.tech/tcp/443/https\"",
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"registry.autonolas.tech:443\""
+      ],
+      "golden_answer": "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"/dns/registry.autonolas.tech/tcp/443/https\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a file named 'package.json' to find the service hash, but the correct filename is 'packages.json'. This typo will prevent the user from finding the correct file and value.",
+      "correction_candidates": [
+        "Correct the filename in the text to `service.yaml`.",
+        "Correct the filename in the text to `packages.json`.",
+        "Correct the filename in the text to `trader.json`.",
+        "Correct the filename and the link to point to `package.json`."
+      ],
+      "golden_answer": "Correct the filename in the text to `packages.json`."
+    }
+  ]
+}

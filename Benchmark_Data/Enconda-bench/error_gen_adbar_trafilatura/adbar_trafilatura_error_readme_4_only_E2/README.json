@@ -1,0 +1,18 @@
+{
+  "readme": "adbar_trafilatura_error_readme_4_only_E2",
+  "repo_name": "adbar_trafilatura",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides an incorrect command to install the optional GUI, referencing a non-existent package `trafilatura-gui`.",
+      "correction_candidates": [
+        "Change the command to `pip install trafilatura[gui]`.",
+        "Change the command to `pip install trafilatura --with-gui`.",
+        "Change the command to `pip install trafilatura` and add a note that the GUI is included.",
+        "Remove the installation command and direct users to the documentation."
+      ],
+      "golden_answer": "Change the command to `pip install trafilatura[gui]`."
+    }
+  ]
+}

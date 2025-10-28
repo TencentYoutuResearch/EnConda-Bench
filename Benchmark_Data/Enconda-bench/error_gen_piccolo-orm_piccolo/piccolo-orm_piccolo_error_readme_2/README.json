@@ -1,0 +1,29 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_2",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that Piccolo is compatible with Python 3.6, but it requires a newer version of Python due to its use of modern language features.",
+      "correction_candidates": [
+        "Change the requirement to 'Python 3.8 and above'.",
+        "Change the requirement to 'Python 2.7 and 3.6+'.",
+        "Add a note that Python 3.6 requires an older version of Piccolo.",
+        "Remove the sentence mentioning Python 3.6 compatibility."
+      ],
+      "golden_answer": "Remove the sentence mentioning Python 3.6 compatibility."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions show the `pip install` command being run before the command to activate the virtual environment. This will install the package in the global or user site-packages instead of the intended virtual environment.",
+      "correction_candidates": [
+        "Move the `pip install` commands to the top, before creating the virtual environment.",
+        "Replace `source myenv/bin/activate` with `myenv/bin/pip install 'piccolo[postgres]'` and remove the separate pip install step.",
+        "Move the `source myenv/bin/activate` command to be right after `python3 -m venv myenv` and before any `pip install` commands.",
+        "Remove the virtual environment creation steps entirely."
+      ],
+      "golden_answer": "Move the `source myenv/bin/activate` command to be right after `python3 -m venv myenv` and before any `pip install` commands."
+    }
+  ]
+}

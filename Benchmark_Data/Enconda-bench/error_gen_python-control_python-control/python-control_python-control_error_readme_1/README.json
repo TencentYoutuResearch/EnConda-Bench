@@ -1,0 +1,29 @@
+{
+  "readme": "python-control_python-control_error_readme_1",
+  "repo_name": "python-control_python-control",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The pip installation instructions incorrectly place the `control` package installation before its optional but recommended dependency `slycot`, which should be installed first.",
+      "correction_candidates": [
+        "Run `pip install control slycot` to install both at once.",
+        "The order is correct, but a flag is missing: `pip install control --with-slycot`.",
+        "The commands should be `pip install slycot` followed by `pip install control`.",
+        "Run `pip install slycot` and then `pip install control --no-deps`."
+      ],
+      "golden_answer": "The commands should be `pip install slycot` followed by `pip install control`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests, `pytest --v`, uses an incorrect flag for verbosity, which should be `-v`.",
+      "correction_candidates": [
+        "The correct command is `pytest -v`.",
+        "The correct command is `pytest --verbose`.",
+        "The correct command is `pytest test -v`.",
+        "The correct command is `pytest --verbosity=1`."
+      ],
+      "golden_answer": "The correct command is `pytest -v`."
+    }
+  ]
+}

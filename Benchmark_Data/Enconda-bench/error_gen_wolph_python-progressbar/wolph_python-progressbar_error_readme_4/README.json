@@ -1,0 +1,29 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_4",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `easy_install` command uses an incorrect package name `progressbar-2` instead of the correct `progressbar2`.",
+      "correction_candidates": [
+        "easy_install progressbar",
+        "easy_install \"progressbar2\"",
+        "easy_install progressbar2",
+        "python -m easy_install progressbar-2"
+      ],
+      "golden_answer": "easy_install progressbar2"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the logging example, `logging.basicConfig()` is called before `progressbar.streams.wrap_stderr()`, which is the wrong order. The stream must be wrapped before the logging handler is initialized to prevent garbled output.",
+      "correction_candidates": [
+        "Remove the `logging.basicConfig()` line entirely.",
+        "Swap the `logging.basicConfig()` and `progressbar.streams.wrap_stderr()` lines to wrap stderr first.",
+        "Replace `logging.basicConfig()` with `logging.basicConfig(stream=progressbar.streams.stderr)`.",
+        "Add `progressbar.streams.flush()` after `logging.basicConfig()`."
+      ],
+      "golden_answer": "Swap the `logging.basicConfig()` and `progressbar.streams.wrap_stderr()` lines to wrap stderr first."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "islandora_documentation_error_readme_5_only_E2",
+  "repo_name": "islandora_documentation",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip install command syntax using requirements.txt",
+      "correction_candidates": [
+        "Before submitting changes, make sure to run `pip install -r requirements.txt` to install the necessary dependencies.",
+        "Before submitting changes, make sure to run `pip install --requirements requirements.txt` to install the necessary dependencies.",
+        "Before submitting changes, make sure to run `pip install -f requirements.txt` to install the necessary dependencies.",
+        "Before submitting changes, make sure to run `pip requirements.txt install` to install the necessary dependencies."
+      ],
+      "golden_answer": "Before submitting changes, make sure to run `pip install -r requirements.txt` to install the necessary dependencies."
+    }
+  ]
+}

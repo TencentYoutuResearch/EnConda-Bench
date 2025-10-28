@@ -1,0 +1,18 @@
+{
+  "readme": "gymrek-lab_TRTools_error_readme_7_only_E6",
+  "repo_name": "gymrek-lab_TRTools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order of conda environment setup commands - running poetry install before creating the conda environment",
+      "correction_candidates": [
+        "conda env create -n trtools -f dev-env.yml\nconda run -n trtools poetry install",
+        "conda create -n trtools && poetry install",
+        "conda env create -f dev-env.yml -n trtools\npoetry install",
+        "poetry install\nconda env create -n trtools -f dev-env.yml"
+      ],
+      "golden_answer": "conda env create -n trtools -f dev-env.yml\nconda run -n trtools poetry install"
+    }
+  ]
+}

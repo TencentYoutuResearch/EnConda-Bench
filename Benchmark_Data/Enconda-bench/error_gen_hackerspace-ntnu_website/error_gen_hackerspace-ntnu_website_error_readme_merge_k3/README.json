@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_hackerspace-ntnu_website_error_readme_merge_k3",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instruction to install Python packages with `pip` is placed before the instructions for creating and activating a virtual environment, which would install packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The `pip install` command should be run immediately after the `git clone` command.",
+        "The `pip install` command should be run inside the project directory, after activating the virtual environment.",
+        "The `pip install` command should be run with the `--user` flag to avoid global installation.",
+        "The virtual environment should be created inside the project directory after cloning it."
+      ],
+      "golden_answer": "The `pip install` command should be run inside the project directory, after activating the virtual environment."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate translation files uses an incorrect flag syntax (`--locale nb --locale en`) for specifying multiple locales.",
+      "correction_candidates": [
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb,en`.",
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages --locale \"nb en\"`.",
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb -l en`.",
+        "Run the command separately for each language: `python manage.py makemessages -l nb` and then `python manage.py makemessages -l en`."
+      ],
+      "golden_answer": "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb -l en`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `apt install` command for Linux is missing the `python3-venv` package, which is required to create virtual environments using `python3 -m venv`.",
+      "correction_candidates": [
+        "Add `python3-virtualenv` to the `apt install` command.",
+        "Add `python3-venv` to the `apt install` command.",
+        "Install pip and then run `pip install virtualenv` instead of using `apt`.",
+        "The command is correct; `venv` is included with `python3-pip`."
+      ],
+      "golden_answer": "Add `python3-venv` to the `apt install` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to load test data references a non-existent file `fixture.json` instead of the correct `fixtures.json`.",
+      "correction_candidates": [
+        "Change the command to `python manage.py loaddata fixture.json --format=json`.",
+        "Rename the file `fixtures.json` to `fixture.json` in the project.",
+        "Change the command to `python manage.py loaddata fixtures.json`.",
+        "Change the command to `python manage.py loaddata fixtures`."
+      ],
+      "golden_answer": "Change the command to `python manage.py loaddata fixtures.json`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The guide suggests installing and using generic `python` and `pip` commands, which on many Linux systems default to Python 2, while the project requires Python 3.",
+      "correction_candidates": [
+        "Change all instances of `python`, `pip`, `python-pip`, and `python-venv` to `python3`, `pip3`, `python3-pip`, and `python3-venv` respectively.",
+        "Add a step to create a symbolic link from `python` to `python3`.",
+        "Specify Python 2.7 in the `requirements.txt` file for compatibility.",
+        "Run all commands with `python3.8` explicitly, e.g., `python3.8 manage.py runserver`."
+      ],
+      "golden_answer": "Change all instances of `python`, `pip`, `python-pip`, and `python-venv` to `python3`, `pip3`, `python3-pip`, and `python3-venv` respectively."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `dumpdata` command incorrectly uses a `-o` flag to specify the output file, which is not a valid option for this command. It should use standard output redirection `>`.",
+      "correction_candidates": [
+        "Replace `-o fixtures.json` with `--output fixtures.json`.",
+        "Replace `-o fixtures.json` with `> fixtures.json`.",
+        "Remove the `-o fixtures.json` part and pipe the output manually.",
+        "Replace `-o fixtures.json` with `--outfile=fixtures.json`."
+      ],
+      "golden_answer": "Replace `-o fixtures.json` with `> fixtures.json`."
+    }
+  ]
+}

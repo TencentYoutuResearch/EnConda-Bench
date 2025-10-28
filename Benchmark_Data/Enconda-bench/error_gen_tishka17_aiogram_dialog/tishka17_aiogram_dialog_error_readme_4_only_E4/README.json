@@ -1,0 +1,18 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_4_only_E4",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the examples `[examples](/examples)` points to an absolute path on the domain, which will result in a 404 error when viewed on GitHub. The correct link should be a relative path to the `example` directory in the repository.",
+      "correction_candidates": [
+        "and [examples](example)",
+        "and [examples](./example)",
+        "and [examples](https://github.com/Tishka17/aiogram_dialog/tree/master/example)",
+        "and [examples](../example)"
+      ],
+      "golden_answer": "and [examples](example)"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "tortoise_tortoise-orm_error_readme_5",
+  "repo_name": "tortoise_tortoise-orm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned specific version (1.0.0) in all installation commands which may cause version conflicts or prevent users from getting newer versions",
+      "correction_candidates": [
+        "pip install tortoise-orm",
+        "pip install tortoise-orm>=1.0.0",
+        "pip install tortoise-orm~=1.0",
+        "pip install 'tortoise-orm>=1.0.0,<2.0.0'"
+      ],
+      "golden_answer": "pip install tortoise-orm"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced file path 'docs/CONTRIBUTING.rst' may not exist in the actual project structure",
+      "correction_candidates": [
+        "CONTRIBUTING.rst",
+        "CONTRIBUTING.md",
+        "docs/contributing.md",
+        ".github/CONTRIBUTING.md"
+      ],
+      "golden_answer": "CONTRIBUTING.rst"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_2",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The code for setting up the dispatcher calls `setup_dialogs(dp)` before `dp.include_router(dialog)`. `setup_dialogs` must be called after all dialog routers have been included, otherwise the dialogs will not be registered correctly.",
+      "correction_candidates": [
+        "dp.include_router(dialog)\nsetup_dialogs(dp)",
+        "from aiogram_dialog.utils import register_dialogs\nregister_dialogs(dp, dialog)",
+        "dp.include_router(dialog)\ndialog.setup(dp)",
+        "setup_dialogs(dp, routers=[dialog])"
+      ],
+      "golden_answer": "dp.include_router(dialog)\nsetup_dialogs(dp)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README does not provide an installation command. A user trying to install the package might guess the name, but `aiogram-dialog` is required, not `aiogram_dialog`.",
+      "correction_candidates": [
+        "Add a section: ### Installation\n```bash\npip install aiogram-dialog\n```",
+        "Add a section: ### Installation\n```bash\npip install aiogram_dialog\n```",
+        "Add a section: ### Installation\n```bash\npip install aiogram.dialog\n```",
+        "Add a section: ### Installation\n```bash\npip install python-aiogram-dialog\n```"
+      ],
+      "golden_answer": "Add a section: ### Installation\n```bash\npip install aiogram-dialog\n```"
+    }
+  ]
+}

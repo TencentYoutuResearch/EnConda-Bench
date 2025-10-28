@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf_error_readme_4_only_E4",
+  "repo_name": "asdf-format_asdf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The License section refers to a `LICENSE` file and a `license` folder, but the correct paths are `LICENSE.rst` and the `licenses` folder.",
+      "correction_candidates": [
+        "Change `LICENSE` to `LICENSE.rst` and `the license folder` to `the licenses folder`.",
+        "Change `LICENSE` to `LICENSE.md` and `the license folder` to `the licenses folder`.",
+        "Change `LICENSE` to `LICENSE.txt`.",
+        "Remove the reference to the folder, as all license text is in `LICENSE.rst`."
+      ],
+      "golden_answer": "Change `LICENSE` to `LICENSE.rst` and `the license folder` to `the licenses folder`."
+    }
+  ]
+}

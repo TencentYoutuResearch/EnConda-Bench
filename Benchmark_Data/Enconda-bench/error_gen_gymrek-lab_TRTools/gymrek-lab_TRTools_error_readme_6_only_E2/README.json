@@ -1,0 +1,18 @@
+{
+  "readme": "gymrek-lab_TRTools_error_readme_6_only_E2",
+  "repo_name": "gymrek-lab_TRTools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect test command 'pytest trtools/' instead of the correct 'test_trtools.sh' script",
+      "correction_candidates": [
+        "test_trtools.sh",
+        "python -m pytest trtools/",
+        "pytest --cov=trtools",
+        "run_tests.py"
+      ],
+      "golden_answer": "test_trtools.sh"
+    }
+  ]
+}

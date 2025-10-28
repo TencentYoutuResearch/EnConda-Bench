@@ -1,0 +1,29 @@
+{
+  "readme": "microsoft_torchgeo_error_readme_3",
+  "repo_name": "microsoft_torchgeo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command `pip install torchgeo==0.2.0` pins the version to an old release. This can cause version conflicts with other libraries or mean that newer features and bug fixes described in the README and documentation are not available, leading to compatibility errors or unexpected behavior.",
+      "correction_candidates": [
+        "Change the command to `pip install torchgeo` to install the latest stable version.",
+        "Change the command to `pip install torchgeo>=0.5.0` to ensure a recent version is used.",
+        "Change the command to `pip install torchgeo --upgrade`.",
+        "Add a note explaining that version 0.2.0 is required for reproducibility."
+      ],
+      "golden_answer": "Change the command to `pip install torchgeo` to install the latest stable version."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The YAML configuration file for the LightningCLI example has incorrect indentation. The `init_args` and `dict_kwargs` keys are at the same level as `data`, but they should be nested underneath it. This will cause a parsing error when LightningCLI tries to read the file.",
+      "correction_candidates": [
+        "Correct the indentation so that `init_args` and `dict_kwargs` are nested under the `data` key.",
+        "Convert the config file format from YAML to JSON.",
+        "Remove the `data` key and move its children to the top level.",
+        "Wrap the entire YAML block in quotes to treat it as a string."
+      ],
+      "golden_answer": "Correct the indentation so that `init_args` and `dict_kwargs` are nested under the `data` key."
+    }
+  ]
+}

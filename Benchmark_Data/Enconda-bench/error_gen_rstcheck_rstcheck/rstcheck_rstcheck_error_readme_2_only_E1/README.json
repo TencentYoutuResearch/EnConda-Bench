@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_2_only_E1",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary and incorrect dependency 'check-rst' is listed as a required installation step.",
+      "correction_candidates": [
+        "Remove the line '$ pip install check-rst'.",
+        "Change '$ pip install check-rst' to '$ pip install rst-lint'.",
+        "Combine the installations into '$ pip install check-rst rstcheck'.",
+        "Replace '$ pip install check-rst' with '$ apt-get install rst-checker'."
+      ],
+      "golden_answer": "Remove the line '$ pip install check-rst'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_4_only_E6",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions attempt to run database migrations with `python manage.py migrate` before installing the project dependencies, which will fail because Django and other packages are not yet installed.",
+      "correction_candidates": [
+        "The `python manage.py migrate` command should be replaced with `python manage.py makemigrations`.",
+        "The `pip install` command should be moved to before the `venv` creation.",
+        "The `python manage.py migrate` command is not necessary for local development.",
+        "The `python manage.py migrate` command should be run after the `pip install` command."
+      ],
+      "golden_answer": "The `python manage.py migrate` command should be run after the `pip install` command."
+    }
+  ]
+}

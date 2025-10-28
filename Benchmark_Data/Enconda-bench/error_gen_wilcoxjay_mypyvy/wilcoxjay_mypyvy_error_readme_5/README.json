@@ -1,0 +1,29 @@
+{
+  "readme": "wilcoxjay_mypyvy_error_readme_5",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced wrong filename 'dependencies.txt' instead of 'requirements.txt' for pip install command",
+      "correction_candidates": [
+        "python3 -m pip install -r requirements.txt",
+        "python3 -m pip install -r setup.txt",
+        "pip install -r requirements.txt",
+        "python -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "python3 -m pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command 'check' instead of 'verify' for the verify mode example",
+      "correction_candidates": [
+        "python3 src/mypyvy.py verify examples/lockserv.pyv",
+        "python3 src/mypyvy.py validate examples/lockserv.pyv",
+        "python3 src/mypyvy.py test examples/lockserv.pyv",
+        "python3 src/mypyvy.py run examples/lockserv.pyv"
+      ],
+      "golden_answer": "python3 src/mypyvy.py verify examples/lockserv.pyv"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "camdavidsonpilon_lifelines_error_readme_4",
+  "repo_name": "camdavidsonpilon_lifelines",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that `pandas` must be uninstalled, which is a required dependency for `lifelines`.",
+      "correction_candidates": [
+        "Replace `pip uninstall pandas` with `pip install --upgrade pandas`.",
+        "Add a note that this step is only for users with pandas version < 1.0.",
+        "The `pip uninstall pandas` command should be removed.",
+        "The command should be `pip uninstall pandas` followed by `conda install pandas`."
+      ],
+      "golden_answer": "The `pip uninstall pandas` command should be removed."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command uses the wrong channel (`conda` instead of `conda-forge`) and incorrect flag order, which will likely fail.",
+      "correction_candidates": [
+        "The command should be `conda install lifelines`.",
+        "The correct channel is `anaconda`, not `conda`. The command should be `conda install -c anaconda lifelines`.",
+        "Change the command to `conda install lifelines --channel conda-forge`.",
+        "The correct command is `conda install -c conda-forge lifelines`."
+      ],
+      "golden_answer": "The correct command is `conda install -c conda-forge lifelines`."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_huggingface_datasets_error_readme_merge_k2",
+  "repo_name": "huggingface_datasets",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README instructs the user to install the package with pip before creating and activating a virtual environment, which is the wrong order.",
+      "correction_candidates": [
+        "Create a virtual environment, activate it, and then run `pip install datasets`.",
+        "🤗 Datasets can be installed from PyPi and has to be installed in a virtual environment (venv or conda for instance)\n\n```bash\npip install datasets\n```",
+        "First, run `pip install venv`, then `pip install datasets` inside the new environment.",
+        "Run `pip install datasets --user` to install it globally before creating a venv."
+      ],
+      "golden_answer": "🤗 Datasets can be installed from PyPi and has to be installed in a virtual environment (venv or conda for instance)\n\n```bash\npip install datasets\n```"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example code for loading the 'squad' dataset uses incorrect syntax `load_dataset.squad()` instead of passing the dataset name as a string argument.",
+      "correction_candidates": [
+        "squad_dataset = load_dataset('squad')",
+        "squad_dataset = load_dataset(name='squad')",
+        "from datasets.squad import load_dataset\nsquad_dataset = load_dataset()",
+        "squad_dataset = load_dataset.from_hub('squad')"
+      ],
+      "golden_answer": "squad_dataset = load_dataset('squad')"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command includes an unnecessary and incorrect package, `huggingface`, which is not the correct library for this purpose.",
+      "correction_candidates": [
+        "pip install datasets[huggingface]",
+        "pip install datasets",
+        "pip install huggingface-datasets",
+        "pip install datasets && pip install huggingface"
+      ],
+      "golden_answer": "pip install datasets"
+    }
+  ]
+}

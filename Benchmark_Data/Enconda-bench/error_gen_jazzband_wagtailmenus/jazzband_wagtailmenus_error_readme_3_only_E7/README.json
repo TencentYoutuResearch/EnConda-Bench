@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_wagtailmenus_error_readme_3_only_E7",
+  "repo_name": "jazzband_wagtailmenus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README lists outdated and incompatible versions for Wagtail, Django, and Python, which will cause installation or runtime errors with the latest version of the package.",
+      "correction_candidates": [
+        "Update compatibility to: Wagtail >= 5.2, Django 3.2, 4.2, >= 5.0, and Python 3.8 to 3.12.",
+        "Update compatibility to: Wagtail >= 4.0, Django >= 3.2, and Python >= 3.8.",
+        "The compatibility should be listed as 'latest stable versions' of all dependencies.",
+        "Remove the compatibility section and direct users to the `pyproject.toml` file."
+      ],
+      "golden_answer": "Update compatibility to: Wagtail >= 5.2, Django 3.2, 4.2, >= 5.0, and Python 3.8 to 3.12."
+    }
+  ]
+}

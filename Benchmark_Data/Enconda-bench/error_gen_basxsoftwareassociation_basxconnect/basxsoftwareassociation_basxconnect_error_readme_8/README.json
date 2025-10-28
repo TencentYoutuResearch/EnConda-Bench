@@ -1,0 +1,29 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_8",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-standard file path 'dependencies/requirements-dev.txt' that likely doesn't exist",
+      "correction_candidates": [
+        "Use the standard requirements file: `pip install -r requirements.txt`",
+        "Install from setup.py: `pip install -e .` for development installation",
+        "Check for requirements files in the root directory: `pip install -r requirements/dev.txt`",
+        "Use pyproject.toml: `pip install -e .[dev]` for development dependencies"
+      ],
+      "golden_answer": "Use the standard requirements file: `pip install -r requirements.txt`"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Missing critical setup steps like database migration and environment configuration",
+      "correction_candidates": [
+        "Add database migration step: run `python manage.py migrate` before starting the server",
+        "Include virtual environment creation: `python -m venv venv && source venv/bin/activate` before pip install",
+        "Add environment configuration: copy `.env.example` to `.env` and configure settings",
+        "Include static files collection: run `python manage.py collectstatic` for production setup"
+      ],
+      "golden_answer": "Add database migration step: run `python manage.py migrate` before starting the server"
+    }
+  ]
+}

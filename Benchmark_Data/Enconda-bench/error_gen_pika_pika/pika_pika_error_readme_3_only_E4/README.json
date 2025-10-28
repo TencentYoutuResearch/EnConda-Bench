@@ -1,0 +1,18 @@
+{
+  "readme": "pika_pika_error_readme_3_only_E4",
+  "repo_name": "pika_pika",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to an example file at `scripts/consume_recover.py`, but the correct path is `examples/consume_recover.py`.",
+      "correction_candidates": [
+        "Change the file path to `examples/consume_recover.py`.",
+        "Change the file path to `examples/recovery/consume_recover.py`.",
+        "Change the file path to `pika/examples/consume_recover.py`.",
+        "Remove the sentence mentioning the file path."
+      ],
+      "golden_answer": "Change the file path to `examples/consume_recover.py`."
+    }
+  ]
+}

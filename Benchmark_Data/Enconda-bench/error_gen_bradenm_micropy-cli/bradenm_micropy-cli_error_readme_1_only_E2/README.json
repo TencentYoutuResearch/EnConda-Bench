@@ -1,0 +1,18 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_1_only_E2",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to install the package uses an incorrect flag `--update`. The correct flag for upgrading a package with pip is `--upgrade`.",
+      "correction_candidates": [
+        "pip update micropy-cli",
+        "pip install --upgrade micropy-cli",
+        "pip --upgrade install micropy-cli",
+        "pip install micropy-cli --latest"
+      ],
+      "golden_answer": "pip install --upgrade micropy-cli"
+    }
+  ]
+}

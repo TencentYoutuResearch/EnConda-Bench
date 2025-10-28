@@ -1,0 +1,29 @@
+{
+  "readme": "tortoise_tortoise-orm_error_readme_8",
+  "repo_name": "tortoise_tortoise-orm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Changed SQLite URL format from 'sqlite://db.sqlite3' to 'sqlite:///db.sqlite3' which uses an incorrect triple slash format that may cause connection issues",
+      "correction_candidates": [
+        "sqlite://db.sqlite3",
+        "sqlite:////absolute/path/db.sqlite3",
+        "sqlite://./db.sqlite3",
+        "sqlite://:memory:"
+      ],
+      "golden_answer": "sqlite://db.sqlite3"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added instruction to install and initialize Aerich before mentioning to see docs, which puts setup steps in wrong order and lacks specific commands",
+      "correction_candidates": [
+        "Tortoise ORM uses Aerich as its database migration tool, see more detail at its docs.",
+        "Install Aerich with 'pip install aerich', then run 'aerich init -t app.settings.TORTOISE_ORM' to initialize.",
+        "First run 'aerich init-db' to create initial migration, then use Aerich for database migrations.",
+        "Use 'aerich init' followed by 'aerich init-db' to set up migrations for your project."
+      ],
+      "golden_answer": "Tortoise ORM uses Aerich as its database migration tool, see more detail at its docs."
+    }
+  ]
+}

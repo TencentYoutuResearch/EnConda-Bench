@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibo_error_readme_6",
+  "repo_name": "qiboteam_qibo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Installation command references a requirements file path that likely doesn't exist in the repository",
+      "correction_candidates": [
+        "Use 'pip install qibo' instead of referencing a requirements file",
+        "Change path to 'requirements.txt' in the root directory",
+        "Use 'pip install -e .' for development installation",
+        "Reference the correct path 'requirements/dev-requirements.txt'"
+      ],
+      "golden_answer": "Use 'pip install qibo' instead of referencing a requirements file"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "States that Qibo requires Python 2.7, which is outdated and incompatible with modern quantum computing libraries",
+      "correction_candidates": [
+        "Qibo requires Python 3.8 or later for optimal performance",
+        "Qibo supports Python 3.6+ with some features requiring 3.9+",
+        "Remove the Python version requirement statement entirely",
+        "Qibo requires Python 3.7 or later with NumPy 1.19+"
+      ],
+      "golden_answer": "Qibo requires Python 3.8 or later for optimal performance"
+    }
+  ]
+}

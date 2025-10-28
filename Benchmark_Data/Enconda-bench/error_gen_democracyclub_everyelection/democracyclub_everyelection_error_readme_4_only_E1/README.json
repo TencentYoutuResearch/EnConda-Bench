@@ -1,0 +1,18 @@
+{
+  "readme": "democracyclub_everyelection_error_readme_4_only_E1",
+  "repo_name": "democracyclub_everyelection",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction `pip install django` is redundant and unnecessary because Django is already listed as a dependency in `requirements.txt`.",
+      "correction_candidates": [
+        "The `pip install django` command should be removed.",
+        "You should specify a version, e.g., `pip install django==3.2`.",
+        "The `pip install django` command should be moved after `pip install -r requirements.txt`.",
+        "`requirements.txt` should be edited to remove the `django` line."
+      ],
+      "golden_answer": "The `pip install django` command should be removed."
+    }
+  ]
+}

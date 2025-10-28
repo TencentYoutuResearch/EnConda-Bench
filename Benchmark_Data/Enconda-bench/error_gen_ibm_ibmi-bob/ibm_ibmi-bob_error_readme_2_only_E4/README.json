@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_2_only_E4",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that build settings are configured in a `build.config.json` file, but the project uses standard makefiles for configuration.",
+      "correction_candidates": [
+        "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`.",
+        "Configure your build settings in `iproj.json`.",
+        "Configure your build settings in `bob.properties`.",
+        "Run the `configure` script to generate build files."
+      ],
+      "golden_answer": "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`."
+    }
+  ]
+}

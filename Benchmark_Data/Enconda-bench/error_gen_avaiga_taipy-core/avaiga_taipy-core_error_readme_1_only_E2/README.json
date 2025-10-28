@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_1_only_E2",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command has its arguments in the wrong order. The repository URL should come before the optional local directory name.",
+      "correction_candidates": [
+        "git pull https://github.com/Avaiga/taipy-core.git",
+        "clone https://github.com/Avaiga/taipy-core.git",
+        "git clone https://github.com/Avaiga/taipy-core.git",
+        "git clone https://github.com/Avaiga/taipy-core.git taipy-core"
+      ],
+      "golden_answer": "git clone https://github.com/Avaiga/taipy-core.git"
+    }
+  ]
+}

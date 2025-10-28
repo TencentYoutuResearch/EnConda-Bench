@@ -1,0 +1,18 @@
+{
+  "readme": "pasqal-io_pulser_error_readme_2_only_E6",
+  "repo_name": "pasqal-io_pulser",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for running tests are in the wrong order. It directs the user to run pytest before installing the development dependencies, which will cause an error.",
+      "correction_candidates": [
+        "First, install development requirements by running `pip install -r dev_requirements.txt`. After that, you can run the test suite with `pytest --cov`.",
+        "Run `make test` to automatically install dependencies and run the tests.",
+        "Run `pytest --cov` and if it fails, then run `pip install pytest pytest-cov`.",
+        "The instructions to run tests should be moved before the main installation section."
+      ],
+      "golden_answer": "First, install development requirements by running `pip install -r dev_requirements.txt`. After that, you can run the test suite with `pytest --cov`."
+    }
+  ]
+}

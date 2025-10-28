@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_6_only_E4",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file name 'credentials.json' instead of 'service_account.json'",
+      "correction_candidates": [
+        "which should be renamed to `service_account.json` and put in your `epschedule` folder",
+        "which should be renamed to `auth.json` and put in your `epschedule` folder",
+        "which should be renamed to `config.json` and put in your `epschedule` folder",
+        "which should be renamed to `keys.json` and put in your `epschedule` folder"
+      ],
+      "golden_answer": "which should be renamed to `service_account.json` and put in your `epschedule` folder"
+    }
+  ]
+}

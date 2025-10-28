@@ -1,0 +1,18 @@
+{
+  "readme": "librephotos_librephotos_error_readme_2_only_E6",
+  "repo_name": "librephotos_librephotos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development setup instructions tell the user to install pip dependencies before creating the virtual environment, which is the wrong order.",
+      "correction_candidates": [
+        "The command `pip install -r requirements.txt` should use the `--user` flag.",
+        "The virtual environment should be created with `virtualenv venv`, not `python -m venv venv`.",
+        "The steps are in the wrong order. The user should create the virtual environment before installing dependencies from `requirements.txt`.",
+        "The correct command is `pip install -r requirements.txt --upgrade`."
+      ],
+      "golden_answer": "The steps are in the wrong order. The user should create the virtual environment before installing dependencies from `requirements.txt`."
+    }
+  ]
+}

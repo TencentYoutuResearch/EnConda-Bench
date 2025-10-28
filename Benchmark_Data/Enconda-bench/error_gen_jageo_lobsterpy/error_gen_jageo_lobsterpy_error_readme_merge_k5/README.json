@@ -1,0 +1,106 @@
+{
+  "readme": "error_gen_jageo_lobsterpy_error_readme_merge_k5",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level9",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install LobsterPy with the optional featurizer dependency is misspelled as 'featurizers' (plural).",
+      "correction_candidates": [
+        "Install using ``pip install lobsterpy --with-featurizer``",
+        "Install using ``pip install lobsterpy-featurizer``",
+        "Install using ``pip install lobsterpy[featurizer]``",
+        "Install using ``pip install lobsterpy featurizer``"
+      ],
+      "golden_answer": "Install using ``pip install lobsterpy[featurizer]``"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to enforce analysis of all bonds, `lobsterpy automatic-plot --analyse-all-bonds`, uses a non-existent flag.",
+      "correction_candidates": [
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --all-bonds``.",
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --bonds all``.",
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot -a``.",
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --allbonds``."
+      ],
+      "golden_answer": "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --allbonds``."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Python version' section incorrectly states that the package is compatible with Python 2.7, which is not supported.",
+      "correction_candidates": [
+        "Before the installation, please make sure that you are using the latest Python version.",
+        "Before the installation, please make sure that you are using a Python 3 version.",
+        "Before the installation, please make sure that you are using one of the supported Python versions (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml)).",
+        "Before the installation, please make sure that you are using one of the supported Python versions (see the badges at the top)."
+      ],
+      "golden_answer": "Before the installation, please make sure that you are using one of the supported Python versions (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml))."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The description for `lobsterpy create-inputs` incorrectly states that it uses a non-existent `lobster.yaml` file for configuration.",
+      "correction_candidates": [
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `lobsterin` file.",
+        "``lobsterpy create-inputs`` will create standard inputs based on existing POSCAR, POTCAR, and INCAR files.",
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `POSCAR.lobster` file.",
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `vasprun.xml` file."
+      ],
+      "golden_answer": "``lobsterpy create-inputs`` will create standard inputs based on existing POSCAR, POTCAR, and INCAR files."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for creating and activating a virtual environment are placed after the package installation commands, which is the wrong logical order. The environment should be created before installation.",
+      "correction_candidates": [
+        "Move the 'Recommended: Virtual Environment' section before the 'Standard installation' section.",
+        "Change `python -m venv venv` to `conda create -n lobsterpy_env python=3.9`.",
+        "Remove the 'Recommended: Virtual Environment' section as pip handles this automatically.",
+        "Add `pip install virtualenv` before creating the environment."
+      ],
+      "golden_answer": "Move the 'Recommended: Virtual Environment' section before the 'Standard installation' section."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `lobsterpy plot --bonds 1,2` uses an incorrect flag and syntax to specify which bonds to plot.",
+      "correction_candidates": [
+        "``lobsterpy plot --bonds \"1 2\"`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot 1,2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot --bond 1 --bond 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot 1 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``."
+      ],
+      "golden_answer": "``lobsterpy plot 1 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pinned version (==1.0.0) in standard installation command that may not exist or be outdated",
+      "correction_candidates": [
+        "Install using ``pip install lobsterpy``",
+        "Install using ``pip install lobsterpy>=1.0.0``",
+        "Install using ``pip install lobsterpy~=1.0``",
+        "Install using ``pip install lobsterpy --upgrade``"
+      ],
+      "golden_answer": "Install using ``pip install lobsterpy``"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing featurizer dependencies separately before the main package, which is unnecessary and incorrect order",
+      "correction_candidates": [
+        "Install using ``pip install lobsterpy[featurizer]``",
+        "Install using ``pip install lobsterpy[featurizer] --upgrade``",
+        "First install lobsterpy, then: ``pip install scikit-learn pandas numpy matplotlib``",
+        "Install using ``conda install lobsterpy[featurizer]``"
+      ],
+      "golden_answer": "Install using ``pip install lobsterpy[featurizer]``"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'lobsterpy analysis' instead of the correct 'lobsterpy description'",
+      "correction_candidates": [
+        "You can use ``lobsterpy description`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically.",
+        "You can use ``lobsterpy analyze`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically.",
+        "You can use ``lobsterpy summary`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically.",
+        "You can use ``lobsterpy cohp`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically."
+      ],
+      "golden_answer": "You can use ``lobsterpy description`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically."
+    }
+  ]
+}

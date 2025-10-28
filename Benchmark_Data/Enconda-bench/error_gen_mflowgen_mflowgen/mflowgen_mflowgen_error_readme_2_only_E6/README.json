@@ -1,0 +1,18 @@
+{
+  "readme": "mflowgen_mflowgen_error_readme_2_only_E6",
+  "repo_name": "mflowgen_mflowgen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. `pip install mflowgen` is run before the virtual environment is created and activated, causing the package to be installed in the global or user site-packages instead of the isolated environment.",
+      "correction_candidates": [
+        "First, create the virtual environment with `python3 -m venv venv`, then install the package with `pip install mflowgen`, and finally activate the environment with `source venv/bin/activate`.",
+        "First, create the virtual environment with `python3 -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package with `pip install mflowgen`.",
+        "First, install the package with `pip install mflowgen`, then create the virtual environment with `python3 -m venv venv`, and finally activate it with `source venv/bin/activate`.",
+        "First, activate the environment with `source venv/bin/activate`, then create it with `python3 -m venv venv`, and finally install the package with `pip install mflowgen`."
+      ],
+      "golden_answer": "First, create the virtual environment with `python3 -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package with `pip install mflowgen`."
+    }
+  ]
+}

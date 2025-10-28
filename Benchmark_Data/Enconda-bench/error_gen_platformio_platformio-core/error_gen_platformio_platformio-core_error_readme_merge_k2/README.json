@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_platformio_platformio-core_error_readme_merge_k2",
+  "repo_name": "platformio_platformio-core",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes the `requests` package, which is not a required dependency for installing PlatformIO Core.",
+      "correction_candidates": [
+        "pip install -U platformio",
+        "pip install -U platformio --no-deps",
+        "pip install platformio",
+        "pip install -U platformio[core]"
+      ],
+      "golden_answer": "pip install -U platformio"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly advise installing PlatformIO globally before creating and activating the virtual environment, defeating the purpose of using an isolated environment.",
+      "correction_candidates": [
+        "The `pip install -U platformio` command should be run after creating and activating the virtual environment.",
+        "The `pip install -U platformio` command should be run inside the virtual environment directory.",
+        "Remove the global installation step entirely and only install in the virtual environment.",
+        "The virtual environment should be created before installing any packages."
+      ],
+      "golden_answer": "The `pip install -U platformio` command should be run after creating and activating the virtual environment."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment is incorrect for Unix-based systems. It should be `source .venv/bin/activate`.",
+      "correction_candidates": [
+        "The activation command is wrong. It should be `source .venv/bin/activate`.",
+        "The activation command should be `. .venv/activate`.",
+        "The activation command is missing the `bin/` directory. Use `source .venv/bin/activate`.",
+        "The activation command is `.venv\\Scripts\\activate` on Windows."
+      ],
+      "golden_answer": "The activation command is missing the `bin/` directory. Use `source .venv/bin/activate`."
+    }
+  ]
+}

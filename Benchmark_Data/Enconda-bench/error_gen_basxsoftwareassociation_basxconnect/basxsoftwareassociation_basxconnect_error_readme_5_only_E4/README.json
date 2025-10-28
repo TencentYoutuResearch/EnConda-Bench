@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_5_only_E4",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that may not exist in the repository",
+      "correction_candidates": [
+        "Install dependencies using `pip install django` and other required packages individually",
+        "Use `pip install -r pyproject.toml` instead of requirements.txt",
+        "Check if requirements.txt exists in the repository, or create it with `pip freeze > requirements.txt`",
+        "Install from setup.py using `pip install -e .` instead of requirements file"
+      ],
+      "golden_answer": "Check if requirements.txt exists in the repository, or create it with `pip freeze > requirements.txt`"
+    }
+  ]
+}

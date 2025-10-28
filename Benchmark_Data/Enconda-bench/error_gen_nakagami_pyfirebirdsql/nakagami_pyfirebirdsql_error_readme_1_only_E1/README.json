@@ -1,0 +1,18 @@
+{
+  "readme": "nakagami_pyfirebirdsql_error_readme_1_only_E1",
+  "repo_name": "nakagami_pyfirebirdsql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect package name 'pyfirebirdsql' for installation via pip. The correct name is 'firebirdsql'.",
+      "correction_candidates": [
+        "pip install firebird-sql",
+        "conda install firebirdsql",
+        "pip install python-firebirdsql",
+        "pip install firebirdsql"
+      ],
+      "golden_answer": "pip install firebirdsql"
+    }
+  ]
+}

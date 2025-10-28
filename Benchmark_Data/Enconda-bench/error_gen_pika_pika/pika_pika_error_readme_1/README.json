@@ -1,0 +1,29 @@
+{
+  "readme": "pika_pika_error_readme_1",
+  "repo_name": "pika_pika",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Pika supports Python 3.5+, but the library actually requires Python 3.7 or newer.",
+      "correction_candidates": [
+        "Change the text to 'Supports Python 3.7+'.",
+        "Change the text to 'Supports Python 3.6+'.",
+        "Change the text to 'Supports Python 2.7 and 3.7+'.",
+        "Add a note saying 'Python 3.5 support is deprecated'."
+      ],
+      "golden_answer": "Change the text to 'Supports Python 3.7+'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `basic_publish` example uses an incorrect keyword argument `message` instead of `body`.",
+      "correction_candidates": [
+        "Change `message=b'Test message.'` to `body=b'Test message.'`",
+        "Change `channel.basic_publish` to `channel.publish`.",
+        "Change `message=b'Test message.'` to `payload=b'Test message.'`",
+        "Add `properties=pika.BasicProperties(content_type='text/plain', delivery_mode=1)` to the `basic_publish` call."
+      ],
+      "golden_answer": "Change `message=b'Test message.'` to `body=b'Test message.'`"
+    }
+  ]
+}

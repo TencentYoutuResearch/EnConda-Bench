@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap3_error_readme_1_only_E6",
+  "repo_name": "zostera_django-bootstrap3",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README instructs to add 'bootstrap3' to `INSTALLED_APPS` before installing the package with pip, which will cause a `ModuleNotFoundError` when Django starts.",
+      "correction_candidates": [
+        "The `pip install` command should be run before modifying `settings.py`.",
+        "The `settings.py` file should be modified after running the Django server for the first time.",
+        "The `pip install` command and the `settings.py` modification should be done in a single script.",
+        "You should run `pip freeze` before and after modifying `settings.py`."
+      ],
+      "golden_answer": "The `pip install` command should be run before modifying `settings.py`."
+    }
+  ]
+}

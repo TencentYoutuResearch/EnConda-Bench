@@ -1,0 +1,29 @@
+{
+  "readme": "yubico_yubikey-manager_error_readme_2",
+  "repo_name": "yubico_yubikey-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The introductory sentence incorrectly states the tool is a 'Python 3.6 only library', when it actually requires Python 3.7 or later.",
+      "correction_candidates": [
+        "Change 'Python 3.6 only' to 'Python 3.7 (or later)'.",
+        "Change 'Python 3.6 only' to 'Python 3'.",
+        "Change 'Python 3.6 only' to 'Python 2.7 or 3.6'.",
+        "Change 'Python 3.6 only' to 'Latest Python 3 version'."
+      ],
+      "golden_answer": "Change 'Python 3.6 only' to 'Python 3.7 (or later)'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The shell completion command has the `source` keyword incorrectly placed inside the process substitution `<()`, which is a syntax error and will fail.",
+      "correction_candidates": [
+        "Move the `source` command outside the process substitution, to be `$ source <(_YKMAN_COMPLETE=bash_source ykman | sudo tee /etc/bash_completion.d/ykman)`.",
+        "Replace `<()` with `$()`.",
+        "Remove the `source` command entirely.",
+        "Replace the entire line with `eval \"$(_YKMAN_COMPLETE=bash_source ykman)\"` and pipe it to tee."
+      ],
+      "golden_answer": "Move the `source` command outside the process substitution, to be `$ source <(_YKMAN_COMPLETE=bash_source ykman | sudo tee /etc/bash_completion.d/ykman)`."
+    }
+  ]
+}

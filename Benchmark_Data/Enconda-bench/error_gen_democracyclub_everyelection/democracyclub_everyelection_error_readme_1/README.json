@@ -1,0 +1,29 @@
+{
+  "readme": "democracyclub_everyelection_error_readme_1",
+  "repo_name": "democracyclub_everyelection",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions install dependencies globally before creating and activating the virtual environment, which defeats the purpose of using a virtual environment.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be the last step.",
+        "Create and activate the virtual environment before installing dependencies.",
+        "The order is correct, but you should use `pip3` instead of `pip`.",
+        "Remove the virtual environment steps as they are not necessary if packages are installed globally."
+      ],
+      "golden_answer": "Create and activate the virtual environment before installing dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py test` is used to run tests, which is incorrect for this project as it is specific to the Django framework.",
+      "correction_candidates": [
+        "The correct command to run tests is `pytest`.",
+        "The command should be `python -m unittest discover`.",
+        "You need to install Django first with `pip install django`.",
+        "The command should be `py.test`."
+      ],
+      "golden_answer": "The correct command to run tests is `pytest`."
+    }
+  ]
+}

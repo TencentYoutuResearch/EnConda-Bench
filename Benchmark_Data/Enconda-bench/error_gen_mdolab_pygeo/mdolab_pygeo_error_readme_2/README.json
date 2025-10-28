@@ -1,0 +1,29 @@
+{
+  "readme": "mdolab_pygeo_error_readme_2",
+  "repo_name": "mdolab_pygeo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions mandate installing a system-level package `python3-vtk7` using `apt-get`. This is an unnecessary dependency for the core library, specific to Debian-based systems, and may conflict with the version required by pip.",
+      "correction_candidates": [
+        "Remove the `sudo apt-get install python3-vtk7` command. Python dependencies, including `vtk`, are handled by `pip` when installing the package.",
+        "Replace the `apt-get` command with `pip install vtk`.",
+        "Replace the `apt-get` command with `conda install vtk`.",
+        "Update the package name to a more recent version, like `python3-vtk9`."
+      ],
+      "golden_answer": "Remove the `sudo apt-get install python3-vtk7` command. Python dependencies, including `vtk`, are handled by `pip` when installing the package."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions for building the documentation specify entering the `docs` folder, but the correct folder name containing the Makefile is `doc`.",
+      "correction_candidates": [
+        "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal.",
+        "To locally build the documentation, run `make -C doc html` from the root directory.",
+        "The folder `docs` must be renamed to `doc` before running the command.",
+        "To locally build the documentation, enter the `doc/source` folder and enter `make html` in terminal."
+      ],
+      "golden_answer": "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal."
+    }
+  ]
+}

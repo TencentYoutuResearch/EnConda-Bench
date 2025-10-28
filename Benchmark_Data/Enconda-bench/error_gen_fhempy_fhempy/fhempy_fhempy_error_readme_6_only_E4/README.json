@@ -1,0 +1,18 @@
+{
+  "readme": "fhempy_fhempy_error_readme_6_only_E4",
+  "repo_name": "fhempy_fhempy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Removed the leading slash from the flowchart image path, making it a relative path that may not exist",
+      "correction_candidates": [
+        "Change flowchart.png to /flowchart.png to use absolute path",
+        "Change flowchart.png to ./flowchart.png for explicit relative path",
+        "Change flowchart.png to images/flowchart.png assuming it's in an images directory",
+        "Change flowchart.png to docs/flowchart.png assuming it's in a docs directory"
+      ],
+      "golden_answer": "Change flowchart.png to /flowchart.png to use absolute path"
+    }
+  ]
+}

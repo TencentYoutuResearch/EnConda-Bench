@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_3_only_E2",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command uses an incorrect channel name 'conda' and incorrect syntax `--channel` instead of `-c conda-forge`.",
+      "correction_candidates": [
+        "conda install -c conda-forge skrub",
+        "conda install skrub -c conda-forge",
+        "conda install anaconda skrub",
+        "conda install skrub"
+      ],
+      "golden_answer": "conda install -c conda-forge skrub"
+    }
+  ]
+}

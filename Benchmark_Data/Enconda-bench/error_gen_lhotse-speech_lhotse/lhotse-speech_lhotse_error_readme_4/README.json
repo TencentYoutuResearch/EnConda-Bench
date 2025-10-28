@@ -1,0 +1,29 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_4",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing the latest unreleased version from GitHub has an incorrect syntax for the git URL, missing the protocol 'https://github.com/'.",
+      "correction_candidates": [
+        "pip install git+lhotse-speech/lhotse",
+        "pip install lhotse@git+https://github.com/lhotse-speech/lhotse",
+        "pip install git+https://github.com/lhotse-speech/lhotse",
+        "pip install git+https://github.com/lhotse-speech/lhotse.git"
+      ],
+      "golden_answer": "pip install git+https://github.com/lhotse-speech/lhotse"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the example code snippet, the `SimpleCutSampler` is initialized with an incorrect parameter `max_len=300` instead of the correct parameter `max_duration=300`.",
+      "correction_candidates": [
+        "sampler = SimpleCutSampler(cuts, max_len=300)",
+        "sampler = SimpleCutSampler(cuts, duration=300)",
+        "sampler = SimpleCutSampler(cuts, max_duration=300)",
+        "sampler = SimpleCutSampler(cuts, max_cuts=300)"
+      ],
+      "golden_answer": "sampler = SimpleCutSampler(cuts, max_duration=300)"
+    }
+  ]
+}

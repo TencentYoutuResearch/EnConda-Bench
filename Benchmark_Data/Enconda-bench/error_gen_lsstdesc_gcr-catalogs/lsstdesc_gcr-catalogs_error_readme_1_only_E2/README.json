@@ -1,0 +1,18 @@
+{
+  "readme": "lsstdesc_gcr-catalogs_error_readme_1_only_E2",
+  "repo_name": "lsstdesc_gcr-catalogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the DESC Python environment is incorrect. `conda activate` is used for named conda environments, not for sourcing a setup script.",
+      "correction_candidates": [
+        "source /global/common/software/lsst/common/miniconda/setup_current_python.sh",
+        "./global/common/software/lsst/common/miniconda/setup_current_python.sh",
+        "bash /global/common/software/lsst/common/miniconda/setup_current_python.sh",
+        "conda source /global/common/software/lsst/common/miniconda/setup_current_python.sh"
+      ],
+      "golden_answer": "source /global/common/software/lsst/common/miniconda/setup_current_python.sh"
+    }
+  ]
+}

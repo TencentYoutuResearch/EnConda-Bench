@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_3_only_E4",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the installation documentation contains an incorrect path segment ('install/installation.html' instead of 'install/index.html').",
+      "correction_candidates": [
+        "http://llvmlite.pydata.org/en/latest/install/index.html",
+        "http://llvmlite.readthedocs.io/en/latest/install/index.html",
+        "http://llvmlite.pydata.org/en/latest/install.html",
+        "http://llvmlite.pydata.org/en/latest/docs/install/index.html"
+      ],
+      "golden_answer": "http://llvmlite.pydata.org/en/latest/install/index.html"
+    }
+  ]
+}

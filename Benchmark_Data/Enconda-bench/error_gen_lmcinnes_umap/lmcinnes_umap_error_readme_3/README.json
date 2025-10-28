@@ -1,0 +1,29 @@
+{
+  "readme": "lmcinnes_umap_error_readme_3",
+  "repo_name": "lmcinnes_umap",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install optional plotting dependencies is incorrect. It uses `[plotting]` instead of the correct extra identifier `[plot]`.",
+      "correction_candidates": [
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plot]`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plots]`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install 'umap-learn[plot]'`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn matplotlib datashader holoviews`."
+      ],
+      "golden_answer": "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plot]`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The suggested order for manual dependency installation is incorrect. It advises running `pip install umap-learn` before using `conda` to install its dependencies, which can lead to installation failures.",
+      "correction_candidates": [
+        "Move the `pip install umap-learn` command to be the last step, after all `conda install` commands.",
+        "Combine all `conda install` commands into one and place it before the `pip install` command.",
+        "Remove the `pip install` command and add `umap-learn` to the conda install command: `conda install ... umap-learn`.",
+        "Use `conda install` for all dependencies first, then use `pip install --no-deps umap-learn`."
+      ],
+      "golden_answer": "Move the `pip install umap-learn` command to be the last step, after all `conda install` commands."
+    }
+  ]
+}

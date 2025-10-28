@@ -1,0 +1,18 @@
+{
+  "readme": "sassoftware_python-sasctl_error_readme_2_only_E1",
+  "repo_name": "sassoftware_python-sasctl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install swat-sasctl` for installing an optional dependency is incorrect. There is no such package; optional dependencies should be installed using `pip install sasctl[extra]` syntax.",
+      "correction_candidates": [
+        "Use the command `pip install sasctl[swat]` to install the optional swat dependency.",
+        "Use the command `pip install sasctl swat` to install both packages.",
+        "Use the command `pip install sasctl --with-swat` to include the optional dependency.",
+        "First run `pip install sasctl`, then run `pip install swat`."
+      ],
+      "golden_answer": "Use the command `pip install sasctl[swat]` to install the optional swat dependency."
+    }
+  ]
+}

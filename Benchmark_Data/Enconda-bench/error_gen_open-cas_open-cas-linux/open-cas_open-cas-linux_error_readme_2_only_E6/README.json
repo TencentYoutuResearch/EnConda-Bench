@@ -1,0 +1,18 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_2_only_E6",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. The './configure' script should be run after installing python dependencies from 'requirements.txt', as it may check for them.",
+      "correction_candidates": [
+        "The correct order is: `python3 -m pip install -r requirements.txt`, then `./configure`, then `make`, then `make install`.",
+        "The correct order is: `make`, then `./configure`, then `python3 -m pip install -r requirements.txt`, then `make install`.",
+        "The correct order is: `./configure`, then `make`, then `make install`, then `python3 -m pip install -r requirements.txt`.",
+        "The correct order is: `make install`, then `./configure`, then `python3 -m pip install -r requirements.txt`, then `make`."
+      ],
+      "golden_answer": "The correct order is: `python3 -m pip install -r requirements.txt`, then `./configure`, then `make`, then `make install`."
+    }
+  ]
+}

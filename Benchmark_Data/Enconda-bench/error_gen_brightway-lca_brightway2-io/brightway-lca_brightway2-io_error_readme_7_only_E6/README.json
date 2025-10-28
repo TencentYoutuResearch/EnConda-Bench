@@ -1,0 +1,18 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_7_only_E6",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Instructions suggest installing bw2io before creating and activating the virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "python -m venv myenv && source myenv/bin/activate && pip install bw2io",
+        "First create virtual environment with python -m venv myenv, then activate with source myenv/bin/activate, finally install with pip install bw2io",
+        "Create and activate virtual environment first: python -m venv myenv && source myenv/bin/activate, then install bw2io",
+        "Set up virtual environment (python -m venv myenv && source myenv/bin/activate) before installing bw2io"
+      ],
+      "golden_answer": "python -m venv myenv && source myenv/bin/activate && pip install bw2io"
+    }
+  ]
+}

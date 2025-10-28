@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_3_only_E1",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package `libpq-dev-tools` listed in the system dependencies does not exist, causing the installation command to fail.",
+      "correction_candidates": [
+        "Remove `-tools` from the package name. The correct package is `libpq-dev`.",
+        "Replace `libpq-dev-tools` with `postgresql-client`.",
+        "Split the package into `libpq-dev` and `libpq-tools`.",
+        "Remove `libpq-dev-tools` from the list as it's optional."
+      ],
+      "golden_answer": "Remove `-tools` from the package name. The correct package is `libpq-dev`."
+    }
+  ]
+}

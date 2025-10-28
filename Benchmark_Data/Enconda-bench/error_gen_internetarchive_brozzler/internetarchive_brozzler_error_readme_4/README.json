@@ -1,0 +1,29 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_4",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The explanatory note for the `--warcprox-auto` flag, which is critical for understanding how to use it in a clustered deployment, has been removed from the 'Installation and Usage' section. This omission makes the option's purpose and requirements unclear.",
+      "correction_candidates": [
+        "Restore the deleted note that begins with '.. [*] A note about --warcprox-auto:'.",
+        "Add a link to the warcprox documentation next to the `--warcprox-auto` flag.",
+        "Change `--warcprox-auto` to `--warcprox-url http://localhost:8000` to make it more explicit.",
+        "Add a new section titled 'Clustered Deployments' explaining how to use `--warcprox-auto`."
+      ],
+      "golden_answer": "Restore the deleted note that begins with '.. [*] A note about --warcprox-auto:'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Brozzler Dashboard' section, the installation command is `pip install brozzler-dashboard`. This is incorrect because the dashboard is not a separate package but an optional component of the `brozzler` package, installed using extras syntax.",
+      "correction_candidates": [
+        "Change `pip install brozzler-dashboard` to `pip install brozzler --with-dashboard`.",
+        "Change `pip install brozzler-dashboard` to `pip install brozzler` and then `pip install flask`.",
+        "Change `pip install brozzler-dashboard` to `pip install brozzler[dashboard]`.",
+        "Add a note that `brozzler-dashboard` must be installed from a separate repository."
+      ],
+      "golden_answer": "Change `pip install brozzler-dashboard` to `pip install brozzler[dashboard]`."
+    }
+  ]
+}

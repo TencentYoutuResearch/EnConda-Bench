@@ -1,0 +1,29 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_1",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command `conda install jupyter-qtconsole` is incorrect; the package name is `qtconsole`.",
+      "correction_candidates": [
+        "conda install -c conda-forge qtconsole",
+        "conda install qtconsole",
+        "conda install jupyter_qtconsole",
+        "pip install jupyter-qtconsole"
+      ],
+      "golden_answer": "conda install qtconsole"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install python-qt5` is incorrect for installing PyQt5. The correct package name on PyPI is `pyqt5`.",
+      "correction_candidates": [
+        "pip install PyQt5",
+        "conda install pyqt5",
+        "pip install pyqt5",
+        "pip install pyside6"
+      ],
+      "golden_answer": "pip install pyqt5"
+    }
+  ]
+}

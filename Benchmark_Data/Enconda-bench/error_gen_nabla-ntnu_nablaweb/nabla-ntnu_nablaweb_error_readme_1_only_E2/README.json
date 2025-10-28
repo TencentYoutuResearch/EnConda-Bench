@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_1_only_E2",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install pre-commit hooks is 'pipenv pre-commit install', which is incorrect. Commands executed within the pipenv environment should be prefixed with 'run'.",
+      "correction_candidates": [
+        "Change 'pipenv pre-commit install' to 'pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv shell && pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv install pre-commit'."
+      ],
+      "golden_answer": "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'."
+    }
+  ]
+}

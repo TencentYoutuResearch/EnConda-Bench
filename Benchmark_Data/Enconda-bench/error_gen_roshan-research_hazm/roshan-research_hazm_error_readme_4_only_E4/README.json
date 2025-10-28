@@ -1,0 +1,18 @@
+{
+  "readme": "roshan-research_hazm_error_readme_4_only_E4",
+  "repo_name": "roshan-research_hazm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The usage example for `SpacyPOSTagger` provides a specific but non-existent relative file path (`./models/spacy_pos_tagger`) instead of a generic placeholder, which will cause a file not found error as this directory structure is not created by default.",
+      "correction_candidates": [
+        "Change `model_path = './models/spacy_pos_tagger'` back to the placeholder `model_path = 'MODELPATH'`.",
+        "Change `model_path = './models/spacy_pos_tagger'` to `model_path = 'roshan-research/spacy_pos_tagger_parsbertpostagger'` to load directly from Hugging Face.",
+        "Add a note before the code block: 'First, download the model and place it in a `./models/` directory.'",
+        "Change the path to an absolute path placeholder like `model_path = '/path/to/your/model'`."
+      ],
+      "golden_answer": "Change `model_path = './models/spacy_pos_tagger'` back to the placeholder `model_path = 'MODELPATH'`."
+    }
+  ]
+}

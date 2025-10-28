@@ -1,0 +1,18 @@
+{
+  "readme": "googlefonts_gftools_error_readme_2_only_E4",
+  "repo_name": "googlefonts_gftools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path specified for the Google Fonts API key file, `/etc/gftools/api.key`, is incorrect and will not be found by the tools. This path also typically requires root permissions to write to.",
+      "correction_candidates": [
+        "You will then need to create a new text file located on your system at ~/.gftools/api_key",
+        "You will then need to create a new text file located on your system at `~/.gf-api-key` (where ~ is your home directory)",
+        "You will then need to create a new text file located on your system at /var/lib/gftools/api.key",
+        "You will then need to export an environment variable GF_API_KEY with your key."
+      ],
+      "golden_answer": "You will then need to create a new text file located on your system at `~/.gf-api-key` (where ~ is your home directory)"
+    }
+  ]
+}

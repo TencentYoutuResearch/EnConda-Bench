@@ -1,0 +1,29 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_2",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that the theme requires Python 2.7, which is an outdated and unsupported version of Python. Modern Sphinx projects typically require Python 3.",
+      "correction_candidates": [
+        "Remove the sentence 'This theme requires Python 2.7.' as the required version is specified in the project's packaging files.",
+        "Change 'Python 2.7' to 'Python 3.6 or newer'.",
+        "Change 'Python 2.7' to 'Python 3'.",
+        "Change 'Python 2.7' to 'the latest version of Python'."
+      ],
+      "golden_answer": "Remove the sentence 'This theme requires Python 2.7.' as the required version is specified in the project's packaging files."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The license link points to `LICENSE.md`, but the standard file name for a license in a repository is typically `LICENSE` without a file extension.",
+      "correction_candidates": [
+        "Change the license link from `<LICENSE.md>` to `<LICENSE>`.",
+        "Change the license link from `<LICENSE.md>` to `<LICENSE.txt>`.",
+        "Change the license link from `<LICENSE.md>` to `<COPYING>`.",
+        "Change the license link from `<LICENSE.md>` to `LICENSE`."
+      ],
+      "golden_answer": "Change the license link from `<LICENSE.md>` to `<LICENSE>`."
+    }
+  ]
+}

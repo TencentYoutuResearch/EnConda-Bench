@@ -1,0 +1,29 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_5",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies using outdated Python 2.7 instead of Python 3, which is deprecated and incompatible with modern dependencies",
+      "correction_candidates": [
+        "Make sure you have Python 3.8 or higher installed for compatibility",
+        "Ensure you have Python 3.6+ installed for optimal performance",
+        "Use Python 3.7 or later for full feature support",
+        "Install Python 3.9 or newer for the best experience"
+      ],
+      "golden_answer": "Make sure you have Python 3.8 or higher installed for compatibility"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Instructs to install development dependencies before main dependencies, which is the wrong order",
+      "correction_candidates": [
+        "First install the main requirements.txt file, then install dependencies from requirements-dev.txt",
+        "Install requirements.txt first, followed by requirements-dev.txt for development setup",
+        "Begin with pip install -r requirements.txt, then proceed with requirements-dev.txt",
+        "Start by installing production dependencies from requirements.txt, then add development dependencies"
+      ],
+      "golden_answer": "First install the main requirements.txt file, then install dependencies from requirements-dev.txt"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_6_only_E7",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7 and Django 1.11 versions that are no longer supported",
+      "correction_candidates": [
+        "This project requires Python 3.8+ and Django 4.0+ for optimal performance",
+        "Use Python 3.9 or higher with Django 3.2 LTS or newer versions",
+        "Requires Python 3.10+ and the latest Django 4.2 LTS version",
+        "Compatible with Python 3.7-3.11 and Django versions 3.0 through 4.1"
+      ],
+      "golden_answer": "This project requires Python 3.8+ and Django 4.0+ for optimal performance"
+    }
+  ]
+}

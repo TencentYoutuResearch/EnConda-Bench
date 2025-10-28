@@ -1,0 +1,18 @@
+{
+  "readme": "biothings_biothings.api_error_readme_4_only_E2",
+  "repo_name": "biothings_biothings.api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "When installing from a local clone with extras, the command `pip install . --option web_extra` uses an incorrect flag. The correct syntax is `pip install .[web_extra]`.",
+      "correction_candidates": [
+        "pip install .[web_extra]",
+        "pip install \".[web_extra]\"",
+        "pip install -e .[web_extra]",
+        "pip install --install-option=\"--with-web_extra\" ."
+      ],
+      "golden_answer": "pip install .[web_extra]"
+    }
+  ]
+}

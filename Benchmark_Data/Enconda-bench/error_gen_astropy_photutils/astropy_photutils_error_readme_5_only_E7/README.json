@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_5_only_E7",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 2.7 compatibility which is outdated and incorrect for modern Photutils",
+      "correction_candidates": [
+        "Photutils requires Python 3.8 or later for modern astronomical computing",
+        "Photutils supports Python 3.6+ for compatibility with current systems",
+        "Photutils requires Python 3.9+ to use the latest features",
+        "Photutils works with Python 3.7 or newer versions"
+      ],
+      "golden_answer": "Photutils requires Python 3.8 or later for modern astronomical computing"
+    }
+  ]
+}

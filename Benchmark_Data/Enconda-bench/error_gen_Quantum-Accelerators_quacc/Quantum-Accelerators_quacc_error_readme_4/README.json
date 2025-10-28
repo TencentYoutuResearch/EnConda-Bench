@@ -1,0 +1,29 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_4",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `pytorch` is a required dependency for all calculations. This is false and would cause users to install a large, unnecessary library.",
+      "correction_candidates": [
+        "Change the note to mention that `pytorch` is an optional dependency for machine-learning-related workflows.",
+        "Remove the note entirely as `pytorch` is not a dependency.",
+        "Replace `pytorch` with `ase`, which is a core dependency.",
+        "Replace `pytorch` with `covalent`, which is one of the supported workflow managers."
+      ],
+      "golden_answer": "Remove the note entirely as `pytorch` is not a dependency."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The \"Getting Started\" section has its steps in the wrong logical order. It instructs the user to run a Python command using the `quacc` library *before* instructing them to install it, which will cause an `ImportError`.",
+      "correction_candidates": [
+        "Combine the two steps into one: `pip install quacc && python -c '...'`",
+        "Swap the order of step 1 and step 2.",
+        "Remove step 1 as it is too complex for a getting started guide.",
+        "Change step 2 to `pip install -e .` to install from a local clone."
+      ],
+      "golden_answer": "Swap the order of step 1 and step 2."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "has2k1_plotnine_error_readme_1_only_E1",
+  "repo_name": "has2k1_plotnine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The primary installation command `pip install plotnine` is missing, leaving only the commands for installing optional extras, which is confusing for a standard installation.",
+      "correction_candidates": [
+        "Add the line \"$ pip install plotnine --default\" at the beginning of the pip installation list.",
+        "Change \"$ pip install 'plotnine[extra]'\" to \"$ pip install plotnine\".",
+        "Add the line \"$ pip install plotnine             # 1. should be sufficient for most\" at the beginning of the pip installation list.",
+        "Add a note explaining that 'plotnine[extra]' is the new standard installation method."
+      ],
+      "golden_answer": "Add the line \"$ pip install plotnine             # 1. should be sufficient for most\" at the beginning of the pip installation list."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_3_only_E4",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instructions for adding a new dataset reference an incorrect file path 'docs/references.md' for bibtex entries; the correct file is 'references.md' in the root directory.",
+      "correction_candidates": [
+        "Add the bibtex reference to `references.md`.",
+        "Add the bibtex reference to `CITATIONS.md`.",
+        "Add the bibtex reference to the main `README.md`.",
+        "Add the bibtex reference to `docs/bibtex.bib`."
+      ],
+      "golden_answer": "Add the bibtex reference to `references.md`."
+    }
+  ]
+}

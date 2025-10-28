@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_8_only_E7",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility error - claims Python 3.8+ and Django 2.2 but changelog shows only Django 1.10 support",
+      "correction_candidates": [
+        "Change to Python 2.7+ and Django 1.8-1.10 to match the changelog",
+        "Update to Python 3.6+ and Django 1.10+ based on actual compatibility",
+        "Specify Python 2.7/3.x and Django 1.6+ for broader compatibility",
+        "Remove version specifications and refer to setup.py for requirements"
+      ],
+      "golden_answer": "Change to Python 2.7+ and Django 1.8-1.10 to match the changelog"
+    }
+  ]
+}

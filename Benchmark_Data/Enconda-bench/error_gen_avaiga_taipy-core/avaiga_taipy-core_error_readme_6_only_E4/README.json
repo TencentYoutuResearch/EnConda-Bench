@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_6_only_E4",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing requirements.yaml file which likely does not exist, as Python dependency files are typically named requirements.txt",
+      "correction_candidates": [
+        "Change requirements.yaml to requirements.txt",
+        "Use pip install -r pyproject.toml instead",
+        "Replace with pip install -r environment.yml",
+        "Use pip install -r Pipfile for dependency management"
+      ],
+      "golden_answer": "Change requirements.yaml to requirements.txt"
+    }
+  ]
+}

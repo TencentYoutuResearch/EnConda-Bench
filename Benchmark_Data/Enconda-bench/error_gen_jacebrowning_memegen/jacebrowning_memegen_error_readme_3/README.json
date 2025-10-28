@@ -1,0 +1,29 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_3",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The documentation incorrectly states that users must first visit the docs page to activate a session, which is a non-existent and unnecessary step for this stateless API.",
+      "correction_candidates": [
+        "Change the activation URL from `/docs/` to `/api/v1/activate`.",
+        "Clarify that session activation is only required for `POST` requests.",
+        "Remove the note about needing to visit the docs page to activate a session, as this step is not required.",
+        "Add a `token` parameter to all example URLs to reflect the session activation requirement."
+      ],
+      "golden_answer": "Remove the note about needing to visit the docs page to activate a session, as this step is not required."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The 'Layouts' section mentions and provides an example for a `bottom` layout, which is not a valid option. The only valid options are `default` and `top`.",
+      "correction_candidates": [
+        "Change the example to use `layout=top` and update the accompanying text to only mention `default` and `top` as valid layouts.",
+        "Add `bottom` as a newly supported layout option in the documentation.",
+        "Replace `layout=bottom` with `position=bottom` as the correct parameter for this functionality.",
+        "Remove the 'Layouts' section entirely as this feature is deprecated."
+      ],
+      "golden_answer": "Change the example to use `layout=top` and update the accompanying text to only mention `default` and `top` as valid layouts."
+    }
+  ]
+}

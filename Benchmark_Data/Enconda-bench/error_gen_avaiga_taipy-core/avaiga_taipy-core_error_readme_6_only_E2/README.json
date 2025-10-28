@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_6_only_E2",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Using 'python setup.py install --user' which is deprecated and can cause issues with modern Python packaging",
+      "correction_candidates": [
+        "Replace with 'pip install -e .' for editable installation",
+        "Use 'python -m build' followed by 'pip install dist/*.whl'",
+        "Change to 'python setup.py develop' for development mode",
+        "Use 'pip install .' instead of setup.py directly"
+      ],
+      "golden_answer": "Replace with 'pip install -e .' for editable installation"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_2_only_E1",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary dependency, `tensorflow>=2.0`, is listed as a core requirement, which is incorrect for this package and will cause unneeded installation of a large library.",
+      "correction_candidates": [
+        "Remove the line `tensorflow>=2.0` from the dependency list.",
+        "Change `tensorflow>=2.0` to `tensorflow-cpu>=2.0`.",
+        "The dependency list is correct as is.",
+        "Move `tensorflow>=2.0` to the optional dependencies section."
+      ],
+      "golden_answer": "Remove the line `tensorflow>=2.0` from the dependency list."
+    }
+  ]
+}

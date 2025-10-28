@@ -1,0 +1,18 @@
+{
+  "readme": "kerneltuner_kernel_tuner_error_readme_3_only_E7",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions incorrectly state that the package requires Python 2.7, which is outdated and incompatible with modern scientific Python packages. This will likely cause installation or runtime errors.",
+      "correction_candidates": [
+        "Remove the line 'Note: This package requires Python 2.7.'",
+        "Change the line to 'Note: This package requires Python 3.6 or newer.'",
+        "The package is compatible with both Python 2 and 3.",
+        "Use `pip2` to install the package for Python 2.7."
+      ],
+      "golden_answer": "Remove the line 'Note: This package requires Python 2.7.'"
+    }
+  ]
+}

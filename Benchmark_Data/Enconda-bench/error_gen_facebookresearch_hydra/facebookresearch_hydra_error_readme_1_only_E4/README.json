@@ -1,0 +1,18 @@
+{
+  "readme": "facebookresearch_hydra_error_readme_1_only_E4",
+  "repo_name": "facebookresearch_hydra",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the summary of changes points to `CHANGELOG.md`, but the correct file is `NEWS.md`.",
+      "correction_candidates": [
+        "Change the link text from `CHANGELOG.md` to `NEWS.md` and the file path to `NEWS.md`.",
+        "Change the file path to `docs/NEWS.md`.",
+        "Change the link to point to the GitHub releases page.",
+        "Remove the sentence linking to the change summary file."
+      ],
+      "golden_answer": "Change the link text from `CHANGELOG.md` to `NEWS.md` and the file path to `NEWS.md`."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_ing-bank_probatus_error_readme_merge_k2",
+  "repo_name": "ing-bank_probatus",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package uses an incorrect flag `--probatus` instead of the package name.",
+      "correction_candidates": [
+        "pip install probatus",
+        "pip --install probatus",
+        "pip install probatus --upgrade",
+        "python -m pip install probatus"
+      ],
+      "golden_answer": "pip install probatus"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the `CONTRIBUTING.md` file points to a non-existent path `.github/CONTRIBUTING.md`.",
+      "correction_candidates": [
+        "Change the link path to `CONTRIBUTING.md`.",
+        "Change the link path to `docs/CONTRIBUTING.md`.",
+        "Create a new file at `.github/CONTRIBUTING.md` with the contribution guidelines.",
+        "Remove the link to the contributing guide."
+      ],
+      "golden_answer": "Change the link path to `CONTRIBUTING.md`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions unnecessarily require the user to manually install the `shap` dependency, which is already handled by the `probatus` package installation.",
+      "correction_candidates": [
+        "Remove the `pip install shap` command and the accompanying text.",
+        "Add a note that `shap` is a core dependency that will be installed automatically.",
+        "Combine the installations into `pip install shap probatus`.",
+        "Move `pip install shap` after `pip install probatus` to verify the installation."
+      ],
+      "golden_answer": "Remove the `pip install shap` command and the accompanying text."
+    }
+  ]
+}

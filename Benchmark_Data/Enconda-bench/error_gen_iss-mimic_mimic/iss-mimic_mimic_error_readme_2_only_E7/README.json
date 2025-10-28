@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_2_only_E7",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README ambiguously states the project requires 'Python 2.7 or higher', which is problematic as the code is likely incompatible with Python 2 and requires a specific Python 3 version.",
+      "correction_candidates": [
+        "Specify a compatible Python version range, for example: 'This project requires Python 3.6 or higher.'",
+        "Change the requirement to 'This project requires the latest version of Python 3.'",
+        "Remove the Python version requirement line entirely.",
+        "State that the project requires 'Python 3' without specifying a minor version."
+      ],
+      "golden_answer": "Specify a compatible Python version range, for example: 'This project requires Python 3.6 or higher.'"
+    }
+  ]
+}

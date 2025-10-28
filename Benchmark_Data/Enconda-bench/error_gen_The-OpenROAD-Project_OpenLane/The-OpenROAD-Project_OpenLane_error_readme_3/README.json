@@ -1,0 +1,29 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_3",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the git repository is incorrect due to a case-sensitivity issue ('OpenLANE' instead of 'OpenLane'). This will cause the 'git clone' command to fail with a 'repository not found' error.",
+      "correction_candidates": [
+        "git clone https://github.com/The-OpenROAD-Project/OpenLane.git",
+        "git clone https://github.com/efabless/openlane",
+        "git clone git@github.com:The-OpenROAD-Project/OpenLane.git",
+        "git clone https://github.com/The-OpenROAD-Project/OpenLane"
+      ],
+      "golden_answer": "git clone https://github.com/The-OpenROAD-Project/OpenLane"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a design flow uses an incorrect argument syntax. The script expects a single dash for the flag ('-design') not a double dash ('--design').",
+      "correction_candidates": [
+        "./flow.tcl -design spm",
+        "./flow.tcl -d spm",
+        "./flow.tcl spm",
+        "flow.tcl -design spm"
+      ],
+      "golden_answer": "./flow.tcl -design spm"
+    }
+  ]
+}

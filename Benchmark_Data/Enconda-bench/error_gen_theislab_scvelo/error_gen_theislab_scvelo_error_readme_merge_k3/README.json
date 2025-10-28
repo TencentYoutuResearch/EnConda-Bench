@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_theislab_scvelo_error_readme_merge_k3",
+  "repo_name": "theislab_scvelo",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction 'pip install pytorch' is unnecessary for a standard scVelo installation and can cause version conflicts, especially if later installing extras like veloVI.",
+      "correction_candidates": [
+        "pip install scvelo[veloVI]",
+        "conda install pytorch -c pytorch",
+        "Remove the line 'pip install pytorch'.",
+        "pip install torch"
+      ],
+      "golden_answer": "Remove the line 'pip install pytorch'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install scvelo --upgrade-all' is invalid because '--upgrade-all' is not a valid flag for pip.",
+      "correction_candidates": [
+        "pip install scvelo --upgrade",
+        "pip install --upgrade scvelo",
+        "pip install -U scvelo",
+        "pip install scvelo"
+      ],
+      "golden_answer": "pip install -U scvelo"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that scVelo requires Python 2.7, which is outdated and incompatible. scVelo requires Python 3.6 or newer.",
+      "correction_candidates": [
+        "Change \"Python 2.7\" to \"Python 3\".",
+        "Change \"Python 2.7\" to \"Python >= 3.6\".",
+        "Remove the sentence \"scVelo requires Python 2.7.\"",
+        "Change \"Python 2.7\" to \"the latest Python version\"."
+      ],
+      "golden_answer": "Change \"Python 2.7\" to \"Python >= 3.6\"."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly direct the user to install scVelo before creating and activating a virtual environment, which can lead to polluting the global Python environment.",
+      "correction_candidates": [
+        "Move the virtual environment creation and activation steps before the 'pip install scvelo' command.",
+        "Replace the installation instructions with 'pipx install scvelo'.",
+        "Add a note: \"Run pip install inside the activated virtual environment.\"",
+        "Combine the commands into: 'python -m venv .venv && source .venv/bin/activate && pip install scvelo'."
+      ],
+      "golden_answer": "Move the virtual environment creation and activation steps before the 'pip install scvelo' command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions misleadingly state that no other packages are needed for full functionality, while omitting the fact that a clustering package like 'leidenalg' is required for certain functions.",
+      "correction_candidates": [
+        "Add the command 'pip install leidenalg' to the installation instructions.",
+        "Change 'pip install scvelo' to 'pip install scvelo[extra]'.",
+        "Add a note: \"For clustering, please also install leidenalg via 'pip install leidenalg'.\"",
+        "Remove the sentence \"For full functionality including plotting and clustering, no other packages are needed.\""
+      ],
+      "golden_answer": "Add a note: \"For clustering, please also install leidenalg via 'pip install leidenalg'.\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The 'Running Examples' section provides a command that references a non-existent file path 'examples/introduction.py'.",
+      "correction_candidates": [
+        "Change the path to 'docs/notebooks/getting_started.ipynb'.",
+        "Correct the command to 'jupyter notebook docs/notebooks/getting_started.ipynb'.",
+        "Change the path to 'scvelo/datasets/pancreas.py'.",
+        "Remove the 'Running Examples' section entirely."
+      ],
+      "golden_answer": "Correct the command to 'jupyter notebook docs/notebooks/getting_started.ipynb'."
+    }
+  ]
+}

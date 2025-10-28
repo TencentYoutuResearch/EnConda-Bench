@@ -1,0 +1,29 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_3",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The syntax for creating a Guard with a single validator is incorrect. The example incorrectly passes the validator to the `Guard` constructor instead of using the `.use()` method.",
+      "correction_candidates": [
+        "guard = Guard.use(RegexMatch, ...)",
+        "guard = Guard().use(RegexMatch, ...)",
+        "guard = Guard().add(RegexMatch, ...)",
+        "guard = new Guard(RegexMatch, ...)"
+      ],
+      "golden_answer": "guard = Guard().use(RegexMatch, ...)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the 'Contributing Guide' in the 'Contributing' section points to a non-existent file path 'docs/CONTRIBUTING.md'.",
+      "correction_candidates": [
+        "[Contributing Guide](CONTRIBUTING)",
+        "[Contributing Guide](CONTRIBUTING.md)",
+        "[Contributing Guide](.github/CONTRIBUTING.md)",
+        "[Contributing Guide](/CONTRIBUTING.md)"
+      ],
+      "golden_answer": "[Contributing Guide](CONTRIBUTING.md)"
+    }
+  ]
+}

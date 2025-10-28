@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_1_only_E4",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instructions incorrectly state that the `service_account.json` file should be placed in a `config` subfolder, but the application expects it in the root project directory.",
+      "correction_candidates": [
+        "Create a `config` directory in the `epschedule` folder and place the `service_account.json` file there.",
+        "Change the instruction to place `service_account.json` in the user's home directory.",
+        "Change the instruction to place `service_account.json` in the `epschedule` folder.",
+        "Rename `service_account.json` to `config.json` and place it in the `epschedule` folder."
+      ],
+      "golden_answer": "Change the instruction to place `service_account.json` in the `epschedule` folder."
+    }
+  ]
+}

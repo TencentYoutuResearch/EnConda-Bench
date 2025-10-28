@@ -1,0 +1,18 @@
+{
+  "readme": "webcomics_dosage_error_readme_1_only_E2",
+  "repo_name": "webcomics_dosage",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The development installation command has incorrect syntax, placing the extras `[css,bash,dev]` before the package path `.`, which will cause pip to fail.",
+      "correction_candidates": [
+        "Correct the command to `pip install -e . --extras css,bash,dev`.",
+        "Correct the command to `pip install --editable .[css,bash,dev]`.",
+        "Correct the command to `pip install -e .[css,bash,dev]`.",
+        "Correct the command to `pip install -e . [css,bash,dev]`."
+      ],
+      "golden_answer": "Correct the command to `pip install -e .[css,bash,dev]`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "censys_censys-python_error_readme_2_only_E6",
+  "repo_name": "censys_censys-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development setup instructions incorrectly place `poetry install` before cloning the repository. The repository must be cloned first to access the project directory.",
+      "correction_candidates": [
+        "First, run `git clone git@github.com:censys/censys-python.git`, then `cd censys-python/`, and finally `poetry install`.",
+        "First, run `poetry new censys-python`, then `cd censys-python/`, and finally `poetry install`.",
+        "First, run `poetry install`, then `git clone git@github.com:censys/censys-python.git` inside the new environment.",
+        "Run `poetry shell` and then `git clone git@github.com:censys/censys-python.git`."
+      ],
+      "golden_answer": "First, run `git clone git@github.com:censys/censys-python.git`, then `cd censys-python/`, and finally `poetry install`."
+    }
+  ]
+}

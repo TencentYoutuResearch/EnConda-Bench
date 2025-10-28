@@ -1,0 +1,18 @@
+{
+  "readme": "fixator10_fixator10-cogs_error_readme_6_only_E2",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid --force-reinstall flag to cog install command which doesn't exist",
+      "correction_candidates": [
+        "Remove the --force-reinstall flag as it's not a valid option",
+        "Replace --force-reinstall with --force to override existing installations",
+        "Change --force-reinstall to --update to update existing cogs",
+        "Use --reinstall instead of --force-reinstall for the correct syntax"
+      ],
+      "golden_answer": "Remove the --force-reinstall flag as it's not a valid option"
+    }
+  ]
+}

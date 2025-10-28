@@ -1,0 +1,18 @@
+{
+  "readme": "hips_autograd_error_readme_1_only_E2",
+  "repo_name": "hips_autograd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command for the basic installation is syntactically incorrect, using a flag-like syntax `--autograd` instead of the package name.",
+      "correction_candidates": [
+        "pip get autograd",
+        "conda install autograd",
+        "pip install autograd-lib",
+        "pip install autograd"
+      ],
+      "golden_answer": "pip install autograd"
+    }
+  ]
+}

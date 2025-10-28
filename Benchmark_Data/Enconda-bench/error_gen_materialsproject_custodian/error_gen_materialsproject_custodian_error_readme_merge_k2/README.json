@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_materialsproject_custodian_error_readme_merge_k2",
+  "repo_name": "materialsproject_custodian",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package in developmental mode is incorrect. `python setup.py --develop` is not a valid command.",
+      "correction_candidates": [
+        "Replace `python setup.py --develop` with `python setup.py develop`.",
+        "Replace `python setup.py --develop` with `pip install -e .`.",
+        "Replace `python setup.py --develop` with `python setup.py install --dev`.",
+        "Replace `python setup.py --develop` with `python install --develop`."
+      ],
+      "golden_answer": "Replace `python setup.py --develop` with `python setup.py develop`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The supported Python version is listed as 'Python 3.6+', which is incorrect. The actual minimum required version is 3.8.",
+      "correction_candidates": [
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.8+.'",
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.7+.'",
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.9 and higher.'",
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports the latest version of Python 3.'"
+      ],
+      "golden_answer": "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.8+.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the custodian logo is incorrect, causing the image not to display. It is written as `assets/custodian_logo.png` but should be `docs/assets/custodian_logo.png`.",
+      "correction_candidates": [
+        "Change the image path to `docs/assets/custodian_logo.png`.",
+        "Change the image path to `./docs/assets/custodian_logo.png`.",
+        "Change the image path to `/docs/assets/custodian_logo.png`.",
+        "Change the image path to `https://raw.githubusercontent.com/materialsproject/custodian/main/docs/assets/custodian_logo.png`."
+      ],
+      "golden_answer": "Change the image path to `docs/assets/custodian_logo.png`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The stable installation command `pip install custodian --user` is not the generally recommended approach, as it can lead to issues in virtual environments or conflict with system-managed packages.",
+      "correction_candidates": [
+        "Change the command to `pip install custodian`.",
+        "Change the command to `python -m pip install custodian`.",
+        "Change the command to `pip3 install custodian`.",
+        "Change the command to `sudo pip install custodian`."
+      ],
+      "golden_answer": "Change the command to `pip install custodian`."
+    }
+  ]
+}

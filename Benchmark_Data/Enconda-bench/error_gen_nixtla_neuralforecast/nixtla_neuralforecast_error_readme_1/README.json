@@ -1,0 +1,29 @@
+{
+  "readme": "nixtla_neuralforecast_error_readme_1",
+  "repo_name": "nixtla_neuralforecast",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip installation command uses 'neural-forecast' which is an incorrect package name. The correct package name on PyPI is 'neuralforecast'.",
+      "correction_candidates": [
+        "pip install neuralforecast",
+        "pip install 'neuralforecast'",
+        "pip install nixtla-neuralforecast",
+        "pip install neuralforecast --upgrade"
+      ],
+      "golden_answer": "pip install neuralforecast"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the Quick Start example, the NBEATS model is initialized with a parameter 'epochs=100'. The correct parameter name for specifying the number of training iterations is 'max_steps'.",
+      "correction_candidates": [
+        "Change `epochs=100` to `max_steps=100`",
+        "Change `epochs=100` to `n_epochs=100`",
+        "Change `epochs=100` to `training_steps=100`",
+        "Remove the `epochs=100` parameter entirely"
+      ],
+      "golden_answer": "Change `epochs=100` to `max_steps=100`"
+    }
+  ]
+}

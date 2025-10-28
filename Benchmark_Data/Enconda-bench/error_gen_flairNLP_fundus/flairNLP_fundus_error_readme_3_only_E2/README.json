@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_3_only_E2",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install fundus --no-cache` is incorrect. `--no-cache` is not a valid pip install option and will cause an error. The correct flag to disable the cache is `--no-cache-dir`.",
+      "correction_candidates": [
+        "pip install fundus --no-cache-dir",
+        "pip install \"fundus\"",
+        "pip install fundus",
+        "python -m pip install fundus"
+      ],
+      "golden_answer": "pip install fundus"
+    }
+  ]
+}

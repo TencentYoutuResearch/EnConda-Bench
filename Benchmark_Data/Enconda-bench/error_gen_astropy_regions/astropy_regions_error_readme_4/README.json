@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_regions_error_readme_4",
+  "repo_name": "astropy_regions",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that a system package `libregions-dev` is required for installation, which is a non-existent dependency.",
+      "correction_candidates": [
+        "Please see the online documentation for installation instructions and dependencies.",
+        "The only dependencies are standard Python packages like Astropy and NumPy, which are installed automatically.",
+        "The package has no system-level dependencies.",
+        "Remove the sentence requiring the `libregions-dev` system package."
+      ],
+      "golden_answer": "Remove the sentence requiring the `libregions-dev` system package."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link for the Zenodo citation badge points to a generic search page instead of the specific DOI record for the project.",
+      "correction_candidates": [
+        ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://doi.org/10.5281/zenodo.5826358",
+        ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://zenodo.org/badge/latestdoi/35690635",
+        "Update the Zenodo badge target to point to the project's specific Zenodo record.",
+        ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://zenodo.org/record/5826359"
+      ],
+      "golden_answer": ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://zenodo.org/badge/latestdoi/35690635"
+    }
+  ]
+}

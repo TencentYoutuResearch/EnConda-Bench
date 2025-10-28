@@ -1,0 +1,29 @@
+{
+  "readme": "islandora_documentation_error_readme_6",
+  "repo_name": "islandora_documentation",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file paths specified for mkdocs configuration and content folder",
+      "correction_candidates": [
+        "The navigation structure is specified in `mkdocs.yml` and the `/docs/` folder contains the content.",
+        "The navigation structure is specified in `mkdocs.yaml` and the `/content/` folder contains the content.",
+        "The navigation structure is specified in `config.yml` and the `/docs/` folder contains the content.",
+        "The navigation structure is specified in `mkdocs.config` and the `/docs/` folder contains the content."
+      ],
+      "golden_answer": "The navigation structure is specified in `mkdocs.yml` and the `/docs/` folder contains the content."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specifies Python 3.6+ requirement which may be outdated and incompatible with current mkdocs versions",
+      "correction_candidates": [
+        "Make sure you have Python 3.8+ installed, as it is recommended for the latest mkdocs versions.",
+        "Make sure you have Python 3.9+ installed, as older versions may have compatibility issues with mkdocs.",
+        "Make sure you have Python 3.7+ installed, as it provides better compatibility with mkdocs dependencies.",
+        "Make sure you have the latest Python version installed for optimal mkdocs performance."
+      ],
+      "golden_answer": "Make sure you have Python 3.8+ installed, as it is recommended for the latest mkdocs versions."
+    }
+  ]
+}

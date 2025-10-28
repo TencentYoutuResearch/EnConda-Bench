@@ -1,0 +1,29 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_5",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing the library before creating and activating a virtual environment, which is the wrong order",
+      "correction_candidates": [
+        "Create and activate the virtual environment first, then install the library",
+        "Install all dependencies globally without using a virtual environment",
+        "Use conda instead of pip and venv for environment management",
+        "Install the library after deactivating the virtual environment"
+      ],
+      "golden_answer": "Create and activate the virtual environment first, then install the library"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Adding pysnmp-mibs as an unnecessary dependency when installing snmpclitools",
+      "correction_candidates": [
+        "Remove pysnmp-mibs from the installation command",
+        "Install pysnmp-mibs separately in a different step",
+        "Replace pysnmp-mibs with pysmi in the command",
+        "Use --no-deps flag when installing snmpclitools"
+      ],
+      "golden_answer": "Remove pysnmp-mibs from the installation command"
+    }
+  ]
+}

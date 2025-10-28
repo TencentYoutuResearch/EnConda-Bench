@@ -1,0 +1,29 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_8",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Incomplete Python version requirement - missing version number after 'Python'",
+      "correction_candidates": [
+        "Installation requires Python 3.10 or later.",
+        "Installation requires Python 3.9 or later.",
+        "Installation requires Python 3.8 or later.",
+        "Installation requires Python version 3.10 or later."
+      ],
+      "golden_answer": "Installation requires Python 3.10 or later."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file path with '_wrong' suffix that doesn't exist in the repository",
+      "correction_candidates": [
+        "- [Smart contract examples](/boa3_test/examples)",
+        "- [Smart contract examples](/boa3_test/example)",
+        "- [Smart contract examples](/boa3/examples)",
+        "- [Smart contract examples](/examples)"
+      ],
+      "golden_answer": "- [Smart contract examples](/boa3_test/examples)"
+    }
+  ]
+}

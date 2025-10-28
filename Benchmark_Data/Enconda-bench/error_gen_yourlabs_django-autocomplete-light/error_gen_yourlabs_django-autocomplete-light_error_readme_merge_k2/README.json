@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_yourlabs_django-autocomplete-light_error_readme_merge_k2",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command installs version 3.9.0, which is incompatible with the advertised Django 4.2 support (which requires version 3.10+).",
+      "correction_candidates": [
+        "pip install django-autocomplete-light",
+        "pip install django-autocomplete-light>=3.10",
+        "pip install 'django-autocomplete-light<4.0,>=3.10'",
+        "pip install django-autocomplete-light==3.10.0"
+      ],
+      "golden_answer": "pip install django-autocomplete-light>=3.10"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example for configuring INSTALLED_APPS is missing a comma between 'dal' and 'dal_select2', which will cause a Python syntax error.",
+      "correction_candidates": [
+        "INSTALLED_APPS = (\n    # ...\n    'dal',\n    'dal_select2',\n    # ...\n)",
+        "INSTALLED_APPS = list(INSTALLED_APPS) + ['dal', 'dal_select2']",
+        "INSTALLED_APPS += ('dal', 'dal_select2',)",
+        "INSTALLED_APPS.extend(['dal', 'dal_select2'])"
+      ],
+      "golden_answer": "INSTALLED_APPS = (\n    # ...\n    'dal',\n    'dal_select2',\n    # ...\n)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly advise modifying settings.py to add the app before it has been installed via pip.",
+      "correction_candidates": [
+        "The installation steps are in the wrong order. The `pip install` command should be executed before modifying `settings.py`.",
+        "The settings should be modified after running `manage.py migrate`.",
+        "The `INSTALLED_APPS` setting should be modified after creating a virtual environment.",
+        "The `pip install` command should be executed first, then `manage.py startapp`, then the `settings.py` modification."
+      ],
+      "golden_answer": "The installation steps are in the wrong order. The `pip install` command should be executed before modifying `settings.py`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes `jquery`, which is an unnecessary dependency because it is already bundled with the Django admin.",
+      "correction_candidates": [
+        "pip install django-autocomplete-light",
+        "pip install django-autocomplete-light --no-deps",
+        "pip install django-autocomplete-light select2",
+        "pip install django-autocomplete-light django-jquery"
+      ],
+      "golden_answer": "pip install django-autocomplete-light"
+    }
+  ]
+}

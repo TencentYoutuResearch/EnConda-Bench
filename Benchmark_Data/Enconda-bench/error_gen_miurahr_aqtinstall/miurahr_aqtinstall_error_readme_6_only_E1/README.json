@@ -1,0 +1,18 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_6_only_E1",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependencies numpy and tensorflow are listed that are not required for aqtinstall",
+      "correction_candidates": [
+        "Remove numpy and tensorflow from the dependencies list",
+        "Replace numpy and tensorflow with lxml and packaging",
+        "Move numpy and tensorflow to optional dependencies section",
+        "Keep only the original dependencies without numpy and tensorflow"
+      ],
+      "golden_answer": "Keep only the original dependencies without numpy and tensorflow"
+    }
+  ]
+}

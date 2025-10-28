@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_pygeo_error_readme_2_only_E4",
+  "repo_name": "mdolab_pygeo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instructions for building the documentation specify entering the `docs` folder, but the correct folder name containing the Makefile is `doc`.",
+      "correction_candidates": [
+        "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal.",
+        "To locally build the documentation, run `make -C doc html` from the root directory.",
+        "The folder `docs` must be renamed to `doc` before running the command.",
+        "To locally build the documentation, enter the `doc/source` folder and enter `make html` in terminal."
+      ],
+      "golden_answer": "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal."
+    }
+  ]
+}

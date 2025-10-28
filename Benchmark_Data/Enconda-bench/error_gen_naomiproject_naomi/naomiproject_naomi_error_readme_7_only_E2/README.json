@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_7_only_E2",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax with incorrect parameters for running Naomi",
+      "correction_candidates": [
+        "After installation, start Naomi by running `python naomi.py`.",
+        "After installation, start Naomi by running `naomi --start`.",
+        "After installation, start Naomi by running `./naomi.py --config config.yaml`.",
+        "After installation, start Naomi by running `python -m naomi`."
+      ],
+      "golden_answer": "After installation, start Naomi by running `python naomi.py`."
+    }
+  ]
+}

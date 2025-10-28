@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_neptune-ai_neptune-client_error_readme_merge_k2",
+  "repo_name": "neptune-ai_neptune-client",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command in 'Getting started' is incorrect. It uses `pip install neptune-client`, but the correct package name is `neptune`.",
+      "correction_candidates": [
+        "pip install neptune",
+        "pip install neptune.ai",
+        "conda install neptune",
+        "pip install neptune-ml"
+      ],
+      "golden_answer": "pip install neptune"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `neptune.init_run()` function in the 'Getting started' code snippet uses an incorrect parameter `project_name`. The correct parameter is `project`.",
+      "correction_candidates": [
+        "run = neptune.init_run(project=\"workspace-name/project-name\")",
+        "run = neptune.init(project=\"workspace-name/project-name\")",
+        "run = neptune.init_run(name=\"workspace-name/project-name\")",
+        "run = neptune.init_run(workspace=\"workspace-name\", project=\"project-name\")"
+      ],
+      "golden_answer": "run = neptune.init_run(project=\"workspace-name/project-name\")"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The logical order of the 'Getting started' steps is incorrect. It instructs the user to run the code snippet (Step 2) before installing the necessary `neptune` library (Step 3), which will cause an `ImportError`.",
+      "correction_candidates": [
+        "Swap the order of Step 2 and Step 3, so installation comes before adding the code.",
+        "Combine Step 2 and Step 3 into a single step.",
+        "Move the `pip install neptune` command inside the Python code block using `!pip install neptune`.",
+        "Add a note explaining that the library must be installed before running the script."
+      ],
+      "golden_answer": "Swap the order of Step 2 and Step 3, so installation comes before adding the code."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for 'Any framework' in the 'Core features' section points to an incorrect URL (`.../integrations/all/`) which likely does not exist.",
+      "correction_candidates": [
+        "Correct the link to `https://docs.neptune.ai/integrations/`.",
+        "Correct the link to `https://docs.neptune.ai/`.",
+        "Correct the link to `https://github.com/neptune-ai/examples`.",
+        "Remove the hyperlink and just keep the text 'Any framework:'."
+      ],
+      "golden_answer": "Correct the link to `https://docs.neptune.ai/integrations/`."
+    }
+  ]
+}

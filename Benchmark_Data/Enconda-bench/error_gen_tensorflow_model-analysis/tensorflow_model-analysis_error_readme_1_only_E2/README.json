@@ -1,0 +1,18 @@
+{
+  "readme": "tensorflow_model-analysis_error_readme_1_only_E2",
+  "repo_name": "tensorflow_model-analysis",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Build TFMA from source' section, the command to install the locally built wheel uses a wildcard `*`, which is not a standard way to specify a package for pip and may fail depending on the shell.",
+      "correction_candidates": [
+        "pip3 install tensorflow_model_analysis-<version>-py3-none-any.whl",
+        "pip3 install tensorflow_model_analysis",
+        "pip3 install dist/tensorflow_model_analysis-*.whl",
+        "python3 setup.py install"
+      ],
+      "golden_answer": "pip3 install tensorflow_model_analysis-<version>-py3-none-any.whl"
+    }
+  ]
+}

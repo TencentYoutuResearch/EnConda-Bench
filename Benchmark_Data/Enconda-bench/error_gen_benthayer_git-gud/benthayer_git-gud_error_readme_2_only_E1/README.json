@@ -1,0 +1,18 @@
+{
+  "readme": "benthayer_git-gud_error_readme_2_only_E1",
+  "repo_name": "benthayer_git-gud",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'How to install' section describes the Python requirement but omits the actual command needed to install the `git-gud` package using pip.",
+      "correction_candidates": [
+        "After 'installing is simple:', add the line `pip3 install git-gud`.",
+        "After 'installing is simple:', add the command `python3 -m pip install git-gud`.",
+        "Change the `git gud` command block to `pip3 install git-gud`.",
+        "After 'installing is simple:', add the following block:\n```\npip3 install git-gud\n```"
+      ],
+      "golden_answer": "After 'installing is simple:', add the following block:\n```\npip3 install git-gud\n```"
+    }
+  ]
+}

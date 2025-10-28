@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_6_only_E2",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used pip install with conda-specific --channel parameter which is invalid syntax",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ pip install llvmlite",
+        "$ conda install -c numba llvmlite",
+        "$ pip install --index-url https://anaconda.org/numba llvmlite"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    }
+  ]
+}

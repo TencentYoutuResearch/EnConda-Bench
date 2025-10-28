@@ -1,0 +1,18 @@
+{
+  "readme": "rubisco-sfa_ilamb_error_readme_3_only_E1",
+  "repo_name": "rubisco-sfa_ilamb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions for installing from source are missing a critical build dependency, `cython`, which is required to compile some package components.",
+      "correction_candidates": [
+        "The instructions should include installing `cython` before `pip install .`",
+        "The instructions should use `python setup.py install` instead of `pip install .`",
+        "The instructions are missing the `setuptools` dependency.",
+        "The repository should be cloned with `--recursive` to fetch submodules."
+      ],
+      "golden_answer": "The instructions should include installing `cython` before `pip install .`"
+    }
+  ]
+}

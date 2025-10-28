@@ -1,0 +1,18 @@
+{
+  "readme": "lark-parser_lark_error_readme_2_only_E4",
+  "repo_name": "lark-parser_lark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the Cheatsheet PDF is incorrect, pointing to 'cheatsheet.pdf' instead of 'lark_cheatsheet.pdf'.",
+      "correction_candidates": [
+        "Correct the path to `[Cheatsheet (PDF)](/docs/_static/lark_cheatsheet.pdf)`.",
+        "Correct the path to `[Cheatsheet (PDF)](/static/lark_cheatsheet.pdf)`.",
+        "Correct the path to `[Cheatsheet (PDF)](/docs/lark_cheatsheet.pdf)`.",
+        "Use the full URL: `[Cheatsheet (PDF)](https://github.com/lark-parser/lark/raw/master/docs/_static/lark_cheatsheet.pdf)`."
+      ],
+      "golden_answer": "Correct the path to `[Cheatsheet (PDF)](/docs/_static/lark_cheatsheet.pdf)`."
+    }
+  ]
+}

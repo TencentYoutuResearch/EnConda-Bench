@@ -1,0 +1,29 @@
+{
+  "readme": "menpo_menpo_error_readme_1",
+  "repo_name": "menpo_menpo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an invalid option `--update`, which does not exist for `pip`.",
+      "correction_candidates": [
+        "> pip install menpo --upgrade",
+        "> pip install menpo",
+        "> pip get menpo",
+        "> pip install menpo -U"
+      ],
+      "golden_answer": "> pip install menpo"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The testing instructions omit the `pytest-mock` dependency, which is required to run the test suite.",
+      "correction_candidates": [
+        "After installing `pytest`, `mock`, `pytest-mock` and `opencv`, running",
+        "After installing `pytest` and `pytest-mock`, running",
+        "After installing `pytest`, `mock` and `pytest-mock`, running",
+        "After installing `pytest-all`, running"
+      ],
+      "golden_answer": "After installing `pytest`, `mock` and `pytest-mock`, running"
+    }
+  ]
+}

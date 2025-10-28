@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_5_only_E6",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing system dependencies after pip package installation, which is incorrect order",
+      "correction_candidates": [
+        "To install django-machina, first create a virtual environment, then install system dependencies: sudo apt-get install postgresql-dev python-dev, and finally run pip install django-machina",
+        "To install django-machina, first install system dependencies: sudo apt-get install postgresql-dev python-dev, then create a virtual environment and run pip install django-machina",
+        "To install django-machina, run pip install django-machina in your activated virtual environment after ensuring system dependencies are installed",
+        "To install django-machina, install it directly with pip install django-machina, no system dependencies are required"
+      ],
+      "golden_answer": "To install django-machina, first install system dependencies: sudo apt-get install postgresql-dev python-dev, then create a virtual environment and run pip install django-machina"
+    }
+  ]
+}

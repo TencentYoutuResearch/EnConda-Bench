@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_irc_error_readme_3_only_E8",
+  "repo_name": "jaraco_irc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README incorrectly claims that DCC is fully supported in the asyncio version, which is misleading. The documentation correctly states elsewhere that DCC is a limitation of the asyncio implementation.",
+      "correction_candidates": [
+        "To enable DCC in the asyncio version, you must install `irc[dcc-aio]`.",
+        "The statement is incorrect and should be reverted to 'DCC is not currently implemented in the asyncio-based version'.",
+        "The DCC examples `dccsend` and `dccreceive` must be ported to asyncio first.",
+        "DCC support in asyncio is experimental and must be enabled with a feature flag."
+      ],
+      "golden_answer": "The statement is incorrect and should be reverted to 'DCC is not currently implemented in the asyncio-based version'."
+    }
+  ]
+}

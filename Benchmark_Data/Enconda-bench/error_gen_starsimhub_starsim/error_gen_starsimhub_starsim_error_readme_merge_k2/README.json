@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_starsimhub_starsim_error_readme_merge_k2",
+  "repo_name": "starsimhub_starsim",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3+' which is too vague and may lead to compatibility issues with older Python 3 versions.",
+      "correction_candidates": [
+        "Python 3.9 or newer.",
+        "Python 3.9-3.12.",
+        "Python > 3.8.",
+        "Python 3.10 is recommended."
+      ],
+      "golden_answer": "Python 3.9-3.12."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for local installation 'pip install -e' is incomplete and will cause a syntax error because it is missing the path specifier.",
+      "correction_candidates": [
+        "run `pip install --editable .`",
+        "run `pip install -e .` (don't forget the dot at the end!).",
+        "run `pip install .`",
+        "run `python setup.py install`"
+      ],
+      "golden_answer": "run `pip install -e .` (don't forget the dot at the end!)."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise installing the package with pip before creating and activating a virtual environment, which defeats the purpose of the environment.",
+      "correction_candidates": [
+        "The instructions should be changed to first create and activate a virtual environment, then run `pip install starsim`.",
+        "Replace the incorrect sentence with: 'Starsim is most easily installed via PyPI: ``pip install starsim``.'",
+        "The instructions should be changed to use `conda install starsim` which handles environments automatically.",
+        "The instructions should be changed to recommend `pipx install starsim` for global installation."
+      ],
+      "golden_answer": "Replace the incorrect sentence with: 'Starsim is most easily installed via PyPI: ``pip install starsim``.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Python code example has a syntax error; a comma is missing after the 'beta' key-value pair in the dictionary definition, which will cause the script to fail.",
+      "correction_candidates": [
+        "Add a comma after the line `beta = 0.5`.",
+        "Remove the `diseases` dictionary and define it separately.",
+        "Change the dictionary to a `ss.Parameters` object.",
+        "Enclose all dictionary keys in quotes, e.g., `'beta': 0.5,`."
+      ],
+      "golden_answer": "Add a comma after the line `beta = 0.5`."
+    }
+  ]
+}

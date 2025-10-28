@@ -1,0 +1,29 @@
+{
+  "readme": "biothings_biothings.api_error_readme_6",
+  "repo_name": "biothings_biothings.api",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - installing biothings[dev] before the local package installation",
+      "correction_candidates": [
+        "pip install .\npip install .[web_extra]",
+        "pip install . --upgrade\npip install .[web_extra]",
+        "pip install .[dev]\npip install .",
+        "pip install .\n# or\npip install .[web_extra]"
+      ],
+      "golden_answer": "pip install .\n# or\npip install .[web_extra]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax 'pip install biothings[dev]' without proper context in the local installation section",
+      "correction_candidates": [
+        "Remove the 'pip install biothings[dev]' line",
+        "Replace with 'pip install .[dev]'",
+        "Change to 'pip install --editable .[dev]'",
+        "Modify to 'python -m pip install .[dev]'"
+      ],
+      "golden_answer": "Replace with 'pip install .[dev]'"
+    }
+  ]
+}

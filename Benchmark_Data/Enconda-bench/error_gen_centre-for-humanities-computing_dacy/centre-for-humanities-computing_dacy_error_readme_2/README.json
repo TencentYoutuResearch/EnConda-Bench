@@ -1,0 +1,29 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_2",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The code example attempts to call `dacy.models()` before the `import dacy` statement, which will cause a NameError.",
+      "correction_candidates": [
+        "Place `import dacy` before the `for` loop.",
+        "from dacy import models; for model in models(): print(model)",
+        "Change the loop to `import dacy; for model in dacy.models(): print(model)`",
+        "Place `import dacy` at the very top of the script."
+      ],
+      "golden_answer": "Place `import dacy` before the `for` loop."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The example code attempts to load a model version `0.0.1` which is not listed as available. The available models shown in the example are all version `0.2.0`.",
+      "correction_candidates": [
+        "nlp = dacy.load('da_dacy_medium_trf-0.2.0')",
+        "nlp = dacy.load('medium')",
+        "dacy.download('da_dacy_medium_trf-0.2.0'); nlp = dacy.load('da_dacy_medium_trf-0.2.0')",
+        "nlp = dacy.load('da_dacy_medium_trf')"
+      ],
+      "golden_answer": "nlp = dacy.load('da_dacy_medium_trf-0.2.0')"
+    }
+  ]
+}

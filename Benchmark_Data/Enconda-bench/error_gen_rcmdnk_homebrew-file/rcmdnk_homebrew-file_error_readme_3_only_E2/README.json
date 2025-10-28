@@ -1,0 +1,18 @@
+{
+  "readme": "rcmdnk_homebrew-file_error_readme_3_only_E2",
+  "repo_name": "rcmdnk_homebrew-file",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate a `Brewfile` is given as `brew file create`, but the correct command is `brew file dump`, which will cause the command to fail.",
+      "correction_candidates": [
+        "Change step 3 to `brew file generate`.",
+        "Change step 3 to `brew file dump`.",
+        "Change step 3 to `brew file save`.",
+        "Change step 3 to `brew file init`."
+      ],
+      "golden_answer": "Change step 3 to `brew file dump`."
+    }
+  ]
+}

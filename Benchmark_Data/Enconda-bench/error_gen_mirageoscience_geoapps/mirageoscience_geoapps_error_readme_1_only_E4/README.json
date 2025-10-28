@@ -1,0 +1,18 @@
+{
+  "readme": "mirageoscience_geoapps_error_readme_1_only_E4",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The main banner image is linked to a specific, outdated release candidate version ('v0.10.0-rc.2') instead of the main branch, which may result in displaying an old or broken image.",
+      "correction_candidates": [
+        "Update the image URL to point to the `main` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/main/docs/images/index_page.png`",
+        "Update the image URL to point to the `develop` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/develop/docs/images/index_page.png`",
+        "Remove the image directive entirely.",
+        "Update the image URL to point to the `latest` tag: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/latest/docs/images/index_page.png`"
+      ],
+      "golden_answer": "Update the image URL to point to the `main` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/main/docs/images/index_page.png`"
+    }
+  ]
+}

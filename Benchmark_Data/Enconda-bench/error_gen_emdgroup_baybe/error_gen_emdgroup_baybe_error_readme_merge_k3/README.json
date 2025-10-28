@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_emdgroup_baybe_error_readme_merge_k3",
+  "repo_name": "emdgroup_baybe",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command in the 'Quick Start' section has incorrect syntax, which will cause the command to fail.",
+      "correction_candidates": [
+        "install pip baybe",
+        "pip install baybe",
+        "pip install baybe --upgrade",
+        "python -m pip install baybe"
+      ],
+      "golden_answer": "pip install baybe"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command to install from GitHub does not specify a branch or commit reference. This will install from the default branch, which might be an unstable or unintended version of the code.",
+      "correction_candidates": [
+        "pip install git+https://github.com/emdgroup/baybe.git --branch main",
+        "pip install git+https://github.com/emdgroup/baybe.git@main",
+        "pip install --git https://github.com/emdgroup/baybe.git@main",
+        "pip install from-git https://github.com/emdgroup/baybe.git@main"
+      ],
+      "golden_answer": "pip install git+https://github.com/emdgroup/baybe.git@main"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for installing from a local clone have an incorrect logical order. It directs the user to run `pip install .` before navigating into the cloned repository directory, which will fail.",
+      "correction_candidates": [
+        "First, clone the repository. Then, from the parent directory of the clone, run `pip install ./baybe`.",
+        "First, run `pip install .` from any directory. Then, clone the repository and navigate to the root folder.",
+        "First, clone the repository, navigate to the repository root folder, check out the desired commit, and run: `pip install .`",
+        "First, clone the repository and check out the desired commit. Then, from the repository root, run `python setup.py install`."
+      ],
+      "golden_answer": "First, clone the repository, navigate to the repository root folder, check out the desired commit, and run: `pip install .`"
+    }
+  ]
+}

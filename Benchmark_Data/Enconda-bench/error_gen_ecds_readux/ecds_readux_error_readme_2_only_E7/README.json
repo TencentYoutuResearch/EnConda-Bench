@@ -1,0 +1,18 @@
+{
+  "readme": "ecds_readux_error_readme_2_only_E7",
+  "repo_name": "ecds_readux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required version range for Elasticsearch is missing, which can lead to installing an incompatible version (e.g., 8.x) that will not work without code changes.",
+      "correction_candidates": [
+        "Specify the compatible Elasticsearch version range as '(>7.0, <7.14.0)'.",
+        "Specify the compatible Elasticsearch version as '7.13'.",
+        "Update the code to support the latest version of Elasticsearch.",
+        "Downgrade the Elasticsearch client library in 'requirements/local.txt' to an older version."
+      ],
+      "golden_answer": "Specify the compatible Elasticsearch version range as '(>7.0, <7.14.0)'."
+    }
+  ]
+}

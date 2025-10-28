@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_googlecloudplatform_gsutil_error_readme_merge_k3",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.6 is required, which is an unsupported, end-of-life version. `gsutil` requires a modern version of Python.",
+      "correction_candidates": [
+        "Change 'Python 2.6' to 'Python 3.6 or newer'.",
+        "Change 'Python 2.6' to 'the latest version of Python 2'.",
+        "Add a note that Python 3 can be used but Python 2.6 is recommended for stability.",
+        "Remove the sentence specifying that Python 2.6 is required."
+      ],
+      "golden_answer": "Remove the sentence specifying that Python 2.6 is required."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The development setup instructions advise installing dependencies globally before creating a virtual environment, which is the wrong order and defeats the purpose of an isolated environment.",
+      "correction_candidates": [
+        "Replace the instructions with `python setup.py develop`.",
+        "Correct the order to first create and activate the virtual environment, then run `pip install -r requirements.txt`.",
+        "Suggest using `conda` instead of `pip` and a virtual environment.",
+        "Add the `--user` flag to the `pip install` command to avoid global installation."
+      ],
+      "golden_answer": "Correct the order to first create and activate the virtual environment, then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "An incorrect example command `gsutil create bucket <bucket_name>` is provided for creating a bucket. The correct command is `gsutil mb gs://<bucket_name>`.",
+      "correction_candidates": [
+        "Change the command to `gsutil mb gs://<bucket_name>`.",
+        "Change the command to `gsutil mkbucket gs://<bucket_name>`.",
+        "Change the command to `gcloud storage buckets create gs://<bucket_name>`.",
+        "Remove the incorrect example command entirely."
+      ],
+      "golden_answer": "Change the command to `gsutil mb gs://<bucket_name>`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `boto3` as a required dependency. `gsutil` is built on the `boto` library, not `boto3`, and dependencies are handled by the SDK installer.",
+      "correction_candidates": [
+        "Change the dependency from `boto3` to `boto`.",
+        "Specify that both `boto` and `boto3` are required.",
+        "Change the instruction to `pip install boto3`.",
+        "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+      ],
+      "golden_answer": "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+    }
+  ]
+}

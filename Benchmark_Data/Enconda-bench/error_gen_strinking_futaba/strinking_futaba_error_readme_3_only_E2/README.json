@@ -1,0 +1,18 @@
+{
+  "readme": "strinking_futaba_error_readme_3_only_E2",
+  "repo_name": "strinking_futaba",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The docker command to set the environment variable is syntactically incorrect. It is missing the '=' between the variable name and its value.",
+      "correction_candidates": [
+        "docker run --env POSTGRES_PASSWORD=password -p 5432:5432 postgres",
+        "docker run -e POSTGRES_PASSWORD=\"password\" -p 5432:5432 postgres",
+        "docker run -e POSTGRES_PASSWORD=password -p 5432:5432 postgres",
+        "docker run -p 5432:5432 -e POSTGRES_PASSWORD=password postgres"
+      ],
+      "golden_answer": "docker run -e POSTGRES_PASSWORD=password -p 5432:5432 postgres"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "gamesdonequick_donation-tracker_error_readme_1_only_E2",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install --edit donation-tracker' is incorrect. The '--edit' flag is not a valid option for pip install.",
+      "correction_candidates": [
+        "pip install -e donation-tracker",
+        "pip install --editable ./donation-tracker",
+        "pip install donation-tracker --dev",
+        "python setup.py develop"
+      ],
+      "golden_answer": "pip install -e donation-tracker"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_2",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that 'Python <= 3.6 is required'. This is an outdated and incorrect version constraint that will mislead users into setting up an incompatible environment.",
+      "correction_candidates": [
+        "Change the note to specify 'Python >= 3.8 is required'.",
+        "Change the note to specify 'Python 3.7 is required'.",
+        "Remove the note about the Python version requirement.",
+        "Add a note that Python 2 is not supported."
+      ],
+      "golden_answer": "Remove the note about the Python version requirement."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the example script `run_mteb.py` is broken as the file does not exist at the specified path. The correct filename is `run_mteb_english.py`.",
+      "correction_candidates": [
+        "Change the link to point to 'examples/run_mteb.py'.",
+        "Change the link to point to 'mteb/scripts/run_mteb_english.py'.",
+        "Change the link to point to 'scripts/run_mteb_english.py'.",
+        "Change the link to point to the 'mteb/mtebscripts' repository."
+      ],
+      "golden_answer": "Change the link to point to 'scripts/run_mteb_english.py'."
+    }
+  ]
+}

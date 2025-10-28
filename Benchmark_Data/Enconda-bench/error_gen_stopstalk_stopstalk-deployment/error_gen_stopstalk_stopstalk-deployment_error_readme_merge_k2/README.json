@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_stopstalk_stopstalk-deployment_error_readme_merge_k2",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command has an incorrect syntax. An extra argument `stopstalk-deployment` is placed before the repository URL, which will cause the command to fail.",
+      "correction_candidates": [
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git stopstalk-deployment",
+        "git clone --name stopstalk-deployment https://github.com/stopstalk/stopstalk-deployment.git",
+        "git clone https://github.com/stopstalk/stopstalk-deployment.git",
+        "git pull https://github.com/stopstalk/stopstalk-deployment.git"
+      ],
+      "golden_answer": "git clone https://github.com/stopstalk/stopstalk-deployment.git"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The order of dependency installation is incorrect. The `pip install` command is executed before installing the required system-level development packages (`libxml2-dev`, `libxslt1-dev`), which can cause the installation of Python packages that depend on them to fail.",
+      "correction_candidates": [
+        "The correct order is to first run `pip install -r requirements.txt`, then run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`.",
+        "Run both commands together: `apt-get install ... && pip install ...`.",
+        "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`.",
+        "Install Python packages individually, then run the `apt-get` command."
+      ],
+      "golden_answer": "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to copy the sample configuration file places it in the wrong directory. It copies `0firstrun.py.sample` to `stopstalk/0firstrun.py` instead of `stopstalk/models/0firstrun.py`, and the application will not find it.",
+      "correction_candidates": [
+        "mv models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.sample models/",
+        "cp models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.sample ./"
+      ],
+      "golden_answer": "cp models/0firstrun.py.sample models/0firstrun.py"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_open-sdg_sdg-translations_error_readme_merge_k4",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The dependencies are installed globally using pip before the virtual environment is created and activated, which can cause system-wide package conflicts.",
+      "correction_candidates": [
+        "Create and activate the virtual environment before running `pip install -r requirements.txt`.",
+        "Run `pip install --user -r requirements.txt` to avoid installing packages system-wide.",
+        "The order is correct, but you must run `sudo pip install -r requirements.txt`.",
+        "After creating the venv, run `venv/bin/pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Create and activate the virtual environment before running `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python -script scripts/build_json.py` is invalid because `-script` is not a valid flag for the Python interpreter.",
+      "correction_candidates": [
+        "Use the command `python -m scripts.build_json` to run the script as a module.",
+        "Change the command to `python scripts/build_json.py`.",
+        "Run the script with `py scripts/build_json.py` instead.",
+        "Add `#!/usr/bin/env python` to the top of the script and run it with `./scripts/build_json.py`."
+      ],
+      "golden_answer": "Change the command to `python scripts/build_json.py`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instructions use the generic `python` command and claim compatibility with any version, which is unlikely and can cause issues. A specific minimum version should be stated.",
+      "correction_candidates": [
+        "Specify that Python 3.8 or higher is required and recommend using the `python3` command.",
+        "The project should be updated to be compatible with Python 2.7.",
+        "Use `py -3 -m venv venv` to ensure a Python 3 interpreter is used on Windows.",
+        "Install the `python-is-python3` package on Debian-based systems to ensure `python` maps to `python3`."
+      ],
+      "golden_answer": "Specify that Python 3.8 or higher is required and recommend using the `python3` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the dependency file `requirements/core.txt` is incorrect. The file is actually named `requirements.txt` and is located in the project root.",
+      "correction_candidates": [
+        "Change the command to `pip install -r requirements.txt`.",
+        "Move the `requirements.txt` file to a new directory `requirements/` and rename it to `core.txt`.",
+        "Create a symbolic link using `ln -s requirements.txt requirements/core.txt`.",
+        "The path is correct, but you must first run `mkdir requirements`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instructions omit the `cd sdg-translations` command after cloning the repository, which will cause all subsequent file-path-dependent commands to fail.",
+      "correction_candidates": [
+        "Add the command `cd sdg-translations` after the `git clone` step.",
+        "Prefix all subsequent commands with the directory, e.g., `python3 -m venv sdg-translations/venv`.",
+        "Clone the repository into the current directory with `git clone https://github.com/open-sdg/sdg-translations.git .`",
+        "The `cd` command is not needed if you run the script from the parent directory."
+      ],
+      "golden_answer": "Add the command `cd sdg-translations` after the `git clone` step."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `venv/bin/activate` is used to activate the virtual environment, but it must be sourced (e.g., with `source venv/bin/activate`) to modify the current shell's state.",
+      "correction_candidates": [
+        "Use `source venv/bin/activate` to correctly activate the virtual environment.",
+        "The command is correct, but requires `sudo` privileges: `sudo venv/bin/activate`.",
+        "On Windows, the correct command is `venv\\Scripts\\activate`.",
+        "Add the venv `bin` directory to your system's PATH variable permanently."
+      ],
+      "golden_answer": "Use `source venv/bin/activate` to correctly activate the virtual environment."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The build script is executed in step 3 before its dependencies are installed in step 4, which will cause the script to fail with an `ImportError`.",
+      "correction_candidates": [
+        "Swap steps 3 and 4, so that dependencies are installed before the script is run.",
+        "Combine the steps into a single command: `pip install -r requirements.txt && python scripts/build_json.py`.",
+        "The script should automatically install its own dependencies if they are not found.",
+        "Run the script with a special flag: `python scripts/build_json.py --install-dependencies`."
+      ],
+      "golden_answer": "Swap steps 3 and 4, so that dependencies are installed before the script is run."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install requirements.txt` incorrectly tries to install a package named 'requirements.txt' from PyPI, instead of installing the packages listed inside the file. The `-r` flag is missing.",
+      "correction_candidates": [
+        "The command should be `pip install -r requirements.txt`.",
+        "The command should be `pip install --requirement requirements.txt`.",
+        "Use `cat requirements.txt | xargs pip install` to install the packages.",
+        "Python's package manager `pip` is deprecated; use `poetry install` instead."
+      ],
+      "golden_answer": "The command should be `pip install -r requirements.txt`."
+    }
+  ]
+}

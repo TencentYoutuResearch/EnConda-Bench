@@ -1,0 +1,18 @@
+{
+  "readme": "lmcinnes_umap_error_readme_3_only_E2",
+  "repo_name": "lmcinnes_umap",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install optional plotting dependencies is incorrect. It uses `[plotting]` instead of the correct extra identifier `[plot]`.",
+      "correction_candidates": [
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plot]`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plots]`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install 'umap-learn[plot]'`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn matplotlib datashader holoviews`."
+      ],
+      "golden_answer": "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plot]`."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "readme": "error_gen_claritychallenge_clarity_error_readme_merge_k7",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the PyPI installation instructions, the command `conda create --name clarity` does not specify a Python version, which can lead to an environment with an incompatible Python version being created.",
+      "correction_candidates": [
+        "conda create --name clarity python",
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python>=3.8",
+        "conda env create -f environment.yml"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'GitHub Cloning' installation section, the command `python setup.py install` is used. This is an outdated method that bypasses pip's dependency resolver and can lead to installation issues. The recommended approach is using `pip install`.",
+      "correction_candidates": [
+        "pip install .",
+        "pip install --use-pep517 .",
+        "pip install -e .",
+        "python -m pip install ."
+      ],
+      "golden_answer": "pip install -e ."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the PyPI installation section, the command `pip install numpy scipy` is listed before `pip install pyclarity`. These are common dependencies and will be installed automatically by pip when installing `pyclarity`, making this step redundant and potentially causing version conflicts.",
+      "correction_candidates": [
+        "Remove the line `pip install numpy scipy`.",
+        "Change `pip install numpy scipy` to `pip install --upgrade numpy scipy`.",
+        "Move the `pip install numpy scipy` line to after `pip install pyclarity`.",
+        "Change `pip install numpy scipy` to `conda install numpy scipy`."
+      ],
+      "golden_answer": "Remove the line `pip install numpy scipy`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the 'GitHub Cloning' installation instructions, `pip install -e .` is executed before the conda environment is created and activated. The package should be installed after the environment is set up.",
+      "correction_candidates": [
+        "The `pip install -e .` command should be moved to the end, after `conda activate clarity`.",
+        "The `git clone` command should be moved to after `conda activate clarity`.",
+        "The `conda create` and `conda activate` commands should be removed.",
+        "The `pip install -e .` command should be run in the base conda environment first."
+      ],
+      "golden_answer": "The `pip install -e .` command should be moved to the end, after `conda activate clarity`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the PyPI installation section, the package is installed with `pip install py-clarity`. The correct package name on PyPI is `pyclarity`, without a hyphen.",
+      "correction_candidates": [
+        "pip install pyclarity",
+        "pip install py_clarity",
+        "pip install clarity",
+        "pip install 'py-clarity'"
+      ],
+      "golden_answer": "pip install pyclarity"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Modified binaural STOI (MBSTOI)' tool points to an incorrect path `./clarity/mbstoi/mbstoi.py`. The file is located inside the `evaluator` subdirectory.",
+      "correction_candidates": [
+        "Change the path to `./clarity/evaluator/mbstoi/mbstoi.py`",
+        "Change the path to `./evaluator/mbstoi/mbstoi.py`",
+        "Change the path to `./clarity/evaluator/mbstoi.py`",
+        "Change the path to `./clarity/tools/mbstoi/mbstoi.py`"
+      ],
+      "golden_answer": "Change the path to `./clarity/evaluator/mbstoi/mbstoi.py`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "In the 'GitHub Cloning' section, the instruction `conda create --name clarity python=2.7` specifies Python 2.7, which is end-of-life and incompatible with modern scientific computing libraries and syntax used in this project.",
+      "correction_candidates": [
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python",
+        "conda create --name clarity python=3",
+        "conda create --name clarity python=2.7 anaconda"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Challenges' section, the link to 'The 3rd Clarity Enhancement Challenge' uses an incorrect relative path `./cec3`. The correct path should include the `recipes` directory.",
+      "correction_candidates": [
+        "Change the path to `recipes/cec3`",
+        "Change the path to `./recipes/cec3`",
+        "Change the path to `clarity/recipes/cec3`",
+        "Change the path to `../recipes/cec3`"
+      ],
+      "golden_answer": "Change the path to `./recipes/cec3`"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in incorrect order - pip install is executed before creating and activating the virtual environment",
+      "correction_candidates": [
+        "conda create --name clarity python=3.8\nconda activate clarity\n\npip install pyclarity",
+        "pip install pyclarity --user\nconda create --name clarity python=3.8\nconda activate clarity",
+        "conda create --name clarity python=3.8\npip install pyclarity\nconda activate clarity",
+        "python -m venv clarity\nsource clarity/bin/activate\npip install pyclarity"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8\nconda activate clarity\n\npip install pyclarity"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The pip install command references a non-existent requirements.txt file path instead of the current directory",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -r requirements.txt",
+        "pip install -e ./setup.py",
+        "pip install --editable ."
+      ],
+      "golden_answer": "pip install -e ."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (tensorflow pytorch) that are not required for the basic pyclarity installation",
+      "correction_candidates": [
+        "pip install pyclarity",
+        "pip install pyclarity numpy scipy",
+        "pip install pyclarity --no-deps",
+        "pip install pyclarity[all]"
+      ],
+      "golden_answer": "pip install pyclarity"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The git branch name is incorrect - using 'master' instead of 'main' which is the current default branch",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/claritychallenge/clarity.git@main",
+        "pip install -e git+https://github.com/claritychallenge/clarity.git@develop",
+        "pip install -e git+https://github.com/claritychallenge/clarity.git@latest",
+        "pip install -e git+https://github.com/claritychallenge/clarity.git"
+      ],
+      "golden_answer": "pip install -e git+https://github.com/claritychallenge/clarity.git@main"
+    }
+  ]
+}

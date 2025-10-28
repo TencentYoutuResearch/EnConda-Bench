@@ -1,0 +1,29 @@
+{
+  "readme": "scitools_iris-grib_error_readme_4",
+  "repo_name": "scitools_iris-grib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command specifies the outdated `scitools` channel instead of the recommended `conda-forge` channel, which may lead to installation failure or outdated packages.",
+      "correction_candidates": [
+        "Change the command to `conda install -c conda-forge iris-grib`.",
+        "Change the command to `conda install -c scitools -c conda-forge iris-grib`.",
+        "Remove the channel flag and run `conda install iris-grib`, assuming `conda-forge` is in the user's default channels.",
+        "Change the command to `conda install iris-grib --channel conda-forge`."
+      ],
+      "golden_answer": "Change the command to `conda install -c conda-forge iris-grib`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The README states that the `eccodes` library is a prerequisite for pip installation but provides no instructions or guidance on how to install this system-level dependency.",
+      "correction_candidates": [
+        "Add instructions for installing `eccodes` using common package managers, such as `sudo apt-get install libeccodes-dev` for Debian/Ubuntu or `brew install eccodes` for macOS.",
+        "Recommend using conda for installation, as it handles the `eccodes` dependency automatically: `conda install -c conda-forge iris-grib`.",
+        "Provide a link to the official ECMWF `eccodes` installation documentation.",
+        "Remove the mention of `eccodes` and let the user discover the missing dependency upon failure."
+      ],
+      "golden_answer": "Add instructions for installing `eccodes` using common package managers, such as `sudo apt-get install libeccodes-dev` for Debian/Ubuntu or `brew install eccodes` for macOS."
+    }
+  ]
+}

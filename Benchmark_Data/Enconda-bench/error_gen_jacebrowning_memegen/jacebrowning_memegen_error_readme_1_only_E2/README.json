@@ -1,0 +1,18 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_1_only_E2",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The documentation incorrectly states that the escape pattern for a question mark is `~qu` instead of `~q`.",
+      "correction_candidates": [
+        "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + Q (~q) → question mark (?)`.",
+        "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + QM (~qm) → question mark (?)`.",
+        "In the example URL `.../~hspecial_characters~q/...`, replace `~q` with `~qu` to match the documentation.",
+        "Remove the line for the question mark escape pattern as it is a reserved character that cannot be escaped."
+      ],
+      "golden_answer": "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + Q (~q) → question mark (?)`."
+    }
+  ]
+}

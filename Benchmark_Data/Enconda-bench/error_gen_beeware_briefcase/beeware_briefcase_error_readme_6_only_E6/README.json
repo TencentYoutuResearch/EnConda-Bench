@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_6_only_E6",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Instructs users to install system dependencies before installing Briefcase, but doesn't specify what those dependencies are or provide the actual installation commands",
+      "correction_candidates": [
+        "Provide the actual system dependency installation commands before the pip install",
+        "Move the system dependency installation after the Briefcase installation",
+        "Remove the system dependency step entirely and keep the simple pip install",
+        "Add a link to system dependency documentation instead of referencing a file"
+      ],
+      "golden_answer": "Remove the system dependency step entirely and keep the simple pip install"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "librephotos_librephotos_error_readme_4",
+  "repo_name": "librephotos_librephotos",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that NodeJS is a required dependency for the backend.",
+      "correction_candidates": [
+        "The backend is Python/Django and does not require NodeJS. This instruction should be removed.",
+        "NodeJS is required, but only version 14 is supported.",
+        "NodeJS is only required for frontend development, not the backend.",
+        "You must install NodeJS using nvm, not a system package manager."
+      ],
+      "golden_answer": "The backend is Python/Django and does not require NodeJS. This instruction should be removed."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The development setup steps are in the wrong logical order, telling the user to run `python manage.py migrate` before cloning the repository.",
+      "correction_candidates": [
+        "You must run `python manage.py makemigrations` before running `migrate`.",
+        "The `git clone` command must be executed before any `manage.py` commands can be run.",
+        "The command should be `python3 manage.py migrate`, not `python manage.py migrate`.",
+        "The database must be created and configured before running migrations."
+      ],
+      "golden_answer": "The `git clone` command must be executed before any `manage.py` commands can be run."
+    }
+  ]
+}

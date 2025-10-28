@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_3_only_E8",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The command for activating the virtual environment is hardcoded as `source zulip-api-py3-venv/bin/activate`. This is unclear and potentially incorrect, as the actual venv name depends on the user's Python version. The original instructions correctly state that the `provision` script prints the exact command to use.",
+      "correction_candidates": [
+        "The command should be `. zulip-api-py3-venv/bin/activate`.",
+        "The `provision` script prints the correct command to activate the virtual environment, which should be used instead.",
+        "The virtual environment name should be `venv`, so the command is `source venv/bin/activate`.",
+        "The instructions should tell the user to find the activate script in the `zulip-api-py<version>-venv/bin` directory."
+      ],
+      "golden_answer": "The `provision` script prints the correct command to activate the virtual environment, which should be used instead."
+    }
+  ]
+}

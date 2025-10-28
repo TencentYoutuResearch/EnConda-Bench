@@ -1,0 +1,18 @@
+{
+  "readme": "getnikola_plugins_error_readme_2_only_E1",
+  "repo_name": "getnikola_plugins",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The format specified for `requirements-nonpy.txt` is incorrect, using a comma instead of a double colon `::` as a separator, which will cause dependency parsing to fail.",
+      "correction_candidates": [
+        "The format is `Human-friendly name: http://download/link`.",
+        "The format is `http://download/link (Human-friendly name)`.",
+        "The format is `Human-friendly name = http://download/link`.",
+        "The format is `Human-friendly name::http://download/link`."
+      ],
+      "golden_answer": "The format is `Human-friendly name::http://download/link`."
+    }
+  ]
+}

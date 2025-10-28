@@ -1,0 +1,29 @@
+{
+  "readme": "python-poetry_poetry_error_readme_7",
+  "repo_name": "python-poetry_poetry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Suggested installing unnecessary dependencies (setuptools, wheel, build) that are not required for Poetry usage",
+      "correction_candidates": [
+        "Poetry handles dependencies automatically, no need to install additional packages",
+        "Only install Poetry itself using the official installer",
+        "Install Poetry using pip install poetry, no additional dependencies needed",
+        "Use the official Poetry installer script without installing extra packages"
+      ],
+      "golden_answer": "Poetry handles dependencies automatically, no need to install additional packages"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used invalid flag 'poetry install -f requirements.txt' referencing a non-existent requirements.txt file",
+      "correction_candidates": [
+        "poetry install",
+        "poetry install --no-dev",
+        "poetry install --only main",
+        "poetry install --sync"
+      ],
+      "golden_answer": "poetry install"
+    }
+  ]
+}

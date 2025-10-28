@@ -1,0 +1,18 @@
+{
+  "readme": "nakagami_pyfirebirdsql_error_readme_1_only_E7",
+  "repo_name": "nakagami_pyfirebirdsql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package works on Python 3.6+, while the correct supported versions are 2.7 and 3.7+.",
+      "correction_candidates": [
+        "It works on Python 3 only.",
+        "It works on Python 2.7 and 3.7+.",
+        "It works on Python 3.8 and newer.",
+        "It works on all versions of Python 3."
+      ],
+      "golden_answer": "It works on Python 2.7 and 3.7+."
+    }
+  ]
+}

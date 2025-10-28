@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_1_only_E2",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `twine --upload dist/*` is syntactically incorrect. `upload` is a subcommand, not an option, so it should not be preceded by dashes.",
+      "correction_candidates": [
+        "The correct command is `twine upload dist/*`.",
+        "The correct command is `twine -u dist/*`.",
+        "The correct command is `twine --push dist/*`.",
+        "The correct command is `python -m twine --upload dist/*`."
+      ],
+      "golden_answer": "The correct command is `twine upload dist/*`."
+    }
+  ]
+}

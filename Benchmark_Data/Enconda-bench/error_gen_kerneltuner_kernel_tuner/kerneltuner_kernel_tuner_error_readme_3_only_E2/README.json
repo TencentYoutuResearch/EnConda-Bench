@@ -1,0 +1,18 @@
+{
+  "readme": "kerneltuner_kernel_tuner_error_readme_3_only_E2",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the example, the kernel name passed to `tune_kernel` is 'vector_add_kernel', but the kernel defined in the string is named 'vector_add'. This mismatch will cause an error when the tuner tries to find the kernel.",
+      "correction_candidates": [
+        "Change the first argument of `tune_kernel` from 'vector_add_kernel' to 'vector_add'.",
+        "Rename the kernel in the kernel string to `__global__ void vector_add_kernel(...)`.",
+        "Pass the kernel name as a keyword argument: `tune_kernel(kernel_name='vector_add', ...)`",
+        "The kernel name is optional and can be removed from the function call."
+      ],
+      "golden_answer": "Change the first argument of `tune_kernel` from 'vector_add_kernel' to 'vector_add'."
+    }
+  ]
+}

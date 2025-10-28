@@ -1,0 +1,18 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_3_only_E1",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command uses `python_rucaptcha` with an underscore, but the correct package name on PyPI is `python-rucaptcha` with a hyphen, which will cause the installation to fail.",
+      "correction_candidates": [
+        "pip install rucaptcha",
+        "python -m pip install python-rucaptcha",
+        "pip install 'python-rucaptcha'",
+        "pip install python-rucaptcha"
+      ],
+      "golden_answer": "pip install python-rucaptcha"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "uploadcare_pyuploadcare_error_readme_7_only_E2",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Testing command is missing the 'make' prefix, showing just 'test_with_github_actions' instead of 'make test_with_github_actions'",
+      "correction_candidates": [
+        "make test_with_github_actions",
+        "npm run test_with_github_actions",
+        "./test_with_github_actions",
+        "python test_with_github_actions"
+      ],
+      "golden_answer": "make test_with_github_actions"
+    }
+  ]
+}

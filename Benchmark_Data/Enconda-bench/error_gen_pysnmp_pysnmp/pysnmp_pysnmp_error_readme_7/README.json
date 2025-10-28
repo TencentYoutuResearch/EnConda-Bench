@@ -1,0 +1,29 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_7",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinning to a specific outdated version 1.4.2 which may not exist or be compatible",
+      "correction_candidates": [
+        "Remove version specification to install the latest version",
+        "Use a version range like pysnmplib>=1.0.0",
+        "Pin to the current stable version pysnmplib==6.0.7",
+        "Add --pre flag to install pre-release versions"
+      ],
+      "golden_answer": "Remove version specification to install the latest version"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Missing python3 command specification in the example execution, using just python instead",
+      "correction_candidates": [
+        "Change python to python3 in the example commands",
+        "Use python -m instead of direct script execution",
+        "Add #!/usr/bin/env python3 shebang explanation",
+        "Specify the full path to the Python interpreter"
+      ],
+      "golden_answer": "Change python to python3 in the example commands"
+    }
+  ]
+}

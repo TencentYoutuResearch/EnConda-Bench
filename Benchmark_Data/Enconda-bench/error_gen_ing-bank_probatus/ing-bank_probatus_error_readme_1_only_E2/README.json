@@ -1,0 +1,18 @@
+{
+  "readme": "ing-bank_probatus_error_readme_1_only_E2",
+  "repo_name": "ing-bank_probatus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package uses an incorrect flag `--probatus` instead of the package name.",
+      "correction_candidates": [
+        "pip install probatus",
+        "pip --install probatus",
+        "pip install probatus --upgrade",
+        "python -m pip install probatus"
+      ],
+      "golden_answer": "pip install probatus"
+    }
+  ]
+}

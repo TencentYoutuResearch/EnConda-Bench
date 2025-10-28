@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_1_only_E2",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command uses an incorrect flag `--update` instead of the correct `-U` or `--upgrade` flag.",
+      "correction_candidates": [
+        "pip install skrub --upgrade",
+        "pip install skrub -U",
+        "pip install --update skrub",
+        "pip install skrub -update"
+      ],
+      "golden_answer": "pip install skrub -U"
+    }
+  ]
+}

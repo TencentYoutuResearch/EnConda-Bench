@@ -1,0 +1,18 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_4_only_E4",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example code refers to a Stan program file named 'bernoulli_model.stan', but the actual file in the CmdStan examples directory is named 'bernoulli.stan'.",
+      "correction_candidates": [
+        "Create a copy of `bernoulli.stan` and name it `bernoulli_model.stan` in the same directory.",
+        "Rename the file in the code from `bernoulli_model.stan` to `bernoulli.stan`.",
+        "The file extension is wrong. It should be `.stanc`, not `.stan`.",
+        "The model name should be passed without the extension: `'bernoulli'`."
+      ],
+      "golden_answer": "Rename the file in the code from `bernoulli_model.stan` to `bernoulli.stan`."
+    }
+  ]
+}

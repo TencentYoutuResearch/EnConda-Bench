@@ -1,0 +1,18 @@
+{
+  "readme": "langchain-ai_langgraph_error_readme_1_only_E1",
+  "repo_name": "langchain-ai_langgraph",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install langgraph-core` is incorrect. It installs a core component but not the main `langgraph` package required to run the examples.",
+      "correction_candidates": [
+        "pip install langgraph",
+        "pip install -U langgraph",
+        "pip install --upgrade langgraph",
+        "pip install langgraph[all]"
+      ],
+      "golden_answer": "pip install -U langgraph"
+    }
+  ]
+}

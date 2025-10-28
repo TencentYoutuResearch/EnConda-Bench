@@ -1,0 +1,18 @@
+{
+  "readme": "mirageoscience_geoapps_error_readme_4_only_E4",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The documentation badge link points to the 'stable' version of the docs (`/en/stable/`), which may not exist or may be outdated. It should point to the 'latest' version.",
+      "correction_candidates": [
+        "Update the target URL to point to the 'latest' version of the docs: `.. |docs| image:: ...\n    :target: https://geoapps.readthedocs.io/en/latest/`",
+        "Remove the version from the URL path: `.. |docs| image:: ...\n    :target: https://geoapps.readthedocs.io/`",
+        "Update the target URL to point to the main documentation index: `.. |docs| image:: ...\n    :target: https://geoapps.readthedocs.io/en/latest/index.html`",
+        "Remove the `|docs|` badge and its definition."
+      ],
+      "golden_answer": "Update the target URL to point to the 'latest' version of the docs: `.. |docs| image:: ...\n    :target: https://geoapps.readthedocs.io/en/latest/`"
+    }
+  ]
+}

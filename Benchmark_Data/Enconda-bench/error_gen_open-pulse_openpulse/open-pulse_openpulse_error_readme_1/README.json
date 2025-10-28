@@ -1,0 +1,29 @@
+{
+  "readme": "open-pulse_openpulse_error_readme_1",
+  "repo_name": "open-pulse_openpulse",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions are missing the command to install Poetry itself, which is a required dependency manager for the project, before it is used.",
+      "correction_candidates": [
+        "Start by installing the required modules using the command: `pip install -r requirements.txt`",
+        "Start by installing the poetry module using the command: `pip install poetry`",
+        "Start by installing the poetry module using the command: `conda install poetry`",
+        "Start by installing the poetry module using the command: `pip install poetry-core`"
+      ],
+      "golden_answer": "Start by installing the poetry module using the command: `pip install poetry`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application is incorrect. It attempts to run 'pulse' directly with poetry, but it should be executed as a Python script.",
+      "correction_candidates": [
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse.py`",
+        "In the same folder, enter the following command in the terminal: `poetry shell` then `python pulse`",
+        "In the same folder, enter the following command in the terminal: `python pulse`",
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse`"
+      ],
+      "golden_answer": "In the same folder, enter the following command in the terminal: `poetry run python pulse`"
+    }
+  ]
+}

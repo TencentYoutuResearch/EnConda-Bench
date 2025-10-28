@@ -1,0 +1,18 @@
+{
+  "readme": "hackerspace-ntnu_website_error_readme_3_only_E7",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The guide suggests installing and using generic `python` and `pip` commands, which on many Linux systems default to Python 2, while the project requires Python 3.",
+      "correction_candidates": [
+        "Change all instances of `python`, `pip`, `python-pip`, and `python-venv` to `python3`, `pip3`, `python3-pip`, and `python3-venv` respectively.",
+        "Add a step to create a symbolic link from `python` to `python3`.",
+        "Specify Python 2.7 in the `requirements.txt` file for compatibility.",
+        "Run all commands with `python3.8` explicitly, e.g., `python3.8 manage.py runserver`."
+      ],
+      "golden_answer": "Change all instances of `python`, `pip`, `python-pip`, and `python-venv` to `python3`, `pip3`, `python3-pip`, and `python3-venv` respectively."
+    }
+  ]
+}

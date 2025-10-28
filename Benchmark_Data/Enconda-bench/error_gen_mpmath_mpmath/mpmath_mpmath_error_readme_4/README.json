@@ -1,0 +1,29 @@
+{
+  "readme": "mpmath_mpmath_error_readme_4",
+  "repo_name": "mpmath_mpmath",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README provides a vague Python version requirement ('a recent version of Python 3'), which can lead to users trying to install on an unsupported version like Python 3.7.",
+      "correction_candidates": [
+        "Mpmath requires Python 3.8 or later versions.",
+        "Mpmath requires Python >= 3.8.",
+        "Mpmath requires Python version 3.8, 3.9, 3.10, 3.11, 3.12, or 3.13.",
+        "Mpmath requires Python 3.8 or a newer version."
+      ],
+      "golden_answer": "Mpmath requires Python 3.8 or later versions."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README omits the command or tool (`pytest`) required to run the unit tests, leaving the user without instructions on how to execute them.",
+      "correction_candidates": [
+        "To run the unit tests in mpmath/tests/, install pytest (`pip install pytest`) and then run `pytest`.",
+        "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation.",
+        "The unit tests in mpmath/tests/ can be run using the unittest module: `python -m unittest discover`.",
+        "The unit tests in mpmath/tests/ can be run with the command `python run_tests.py`."
+      ],
+      "golden_answer": "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_2_only_E4",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command `conda env create -f roiextractors_env.yml` refers to a file `roiextractors_env.yml` that does not exist in the repository. The correct file is `environment.yml`.",
+      "correction_candidates": [
+        "Change `conda env create -f roiextractors_env.yml` to `conda env create -f environment.yml`.",
+        "Change `conda env create -f roiextractors_env.yml` to `conda env create roiextractors_env`.",
+        "Download the correct environment file from a different URL before running the create command.",
+        "Replace the `conda env create` command with a series of `conda install` commands for each dependency."
+      ],
+      "golden_answer": "Change `conda env create -f roiextractors_env.yml` to `conda env create -f environment.yml`."
+    }
+  ]
+}

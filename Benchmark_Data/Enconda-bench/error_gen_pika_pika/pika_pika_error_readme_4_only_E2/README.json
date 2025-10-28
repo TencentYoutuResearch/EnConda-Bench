@@ -1,0 +1,18 @@
+{
+  "readme": "pika_pika_error_readme_4_only_E2",
+  "repo_name": "pika_pika",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The blocking consumer example for `channel.consume` uses a parameter `auto_ack=False`, which is not a valid argument for this iterator-based consumption method and will raise an error.",
+      "correction_candidates": [
+        "Remove the `auto_ack=False` argument from the `channel.consume('test', auto_ack=False)` call.",
+        "Change `channel.consume` to `channel.basic_consume` and pass `on_message_callback`.",
+        "Change `auto_ack=False` to `no_ack=True`.",
+        "Change `channel.consume` to `channel.get` in a loop."
+      ],
+      "golden_answer": "Remove the `auto_ack=False` argument from the `channel.consume('test', auto_ack=False)` call."
+    }
+  ]
+}

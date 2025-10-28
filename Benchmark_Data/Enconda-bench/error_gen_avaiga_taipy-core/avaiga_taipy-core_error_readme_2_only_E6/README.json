@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_2_only_E6",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The logical order of operations is incorrect. Dependencies are being installed into the global Python environment before the local virtual environment is created and activated.",
+      "correction_candidates": [
+        "Remove the virtual environment steps as they are optional.",
+        "Run `pip install --user -r requirements/core.txt` to avoid global installation issues.",
+        "Move step 1 (Install dependencies) to be after step 2 (Create and activate a virtual environment).",
+        "Combine the steps into one: `python -m venv venv && source venv/bin/activate && pip install -r requirements/core.txt`"
+      ],
+      "golden_answer": "Move step 1 (Install dependencies) to be after step 2 (Create and activate a virtual environment)."
+    }
+  ]
+}

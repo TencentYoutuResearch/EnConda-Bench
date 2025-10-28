@@ -1,0 +1,29 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_6",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version conflict between requiring Django 1.11+ but installing Django 1.8, and using outdated Python 2.7",
+      "correction_candidates": [
+        "This system requires Python 3.8+ and Django 3.2+",
+        "This system requires Python 3.6+ and Django 2.2+",
+        "This system requires Python 3.7+ and Django 4.0+",
+        "This system requires Python 3.9+ and Django 3.1+"
+      ],
+      "golden_answer": "This system requires Python 3.8+ and Django 3.2+"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installing incorrect package name 'postgresql-dev' instead of the correct package name",
+      "correction_candidates": [
+        "sudo apt-get install libpq-dev python3-dev",
+        "sudo apt-get install postgresql-client-dev python3-dev",
+        "sudo apt-get install postgresql-server-dev-all python3-dev",
+        "sudo apt-get install postgresql-contrib python3-dev"
+      ],
+      "golden_answer": "sudo apt-get install libpq-dev python3-dev"
+    }
+  ]
+}

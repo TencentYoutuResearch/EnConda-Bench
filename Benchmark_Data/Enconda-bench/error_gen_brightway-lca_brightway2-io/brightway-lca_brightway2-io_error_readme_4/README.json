@@ -1,0 +1,29 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_4",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly suggests that writing the database can be done before applying linking strategies. This is a logical order error that would result in an unusable database with unlinked exchanges.",
+      "correction_candidates": [
+        "Change the sentence to state that strategies must be applied *before* writing the database.",
+        "Move the `importer.write_database()` call to be before `importer.apply_strategies()` in the example to match the text.",
+        "Remove the incorrect sentence: 'For faster processing on subsequent runs, you can write the database immediately after extraction and apply strategies later.'",
+        "Explain that `importer.write_database(strategies=False)` should be used if writing before applying strategies."
+      ],
+      "golden_answer": "Remove the incorrect sentence: 'For faster processing on subsequent runs, you can write the database immediately after extraction and apply strategies later.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The database name `'ecoinvent_38_cutoff'` used in the importer is a plausible but non-standard identifier. The example's output log shows the name `'ei_38_cutoff'`, creating an inconsistency that could cause confusion or errors.",
+      "correction_candidates": [
+        "Add a comment explaining that the database name is user-defined and can be anything.",
+        "The final log message `Created database: ei_38_cutoff` should be changed to `Created database: ecoinvent_38_cutoff` to match the input.",
+        "Change the database name to a variable, e.g., `db_name = 'ecoinvent_38_cutoff'`, for consistency.",
+        "Change the database name from `'ecoinvent_38_cutoff'` to `'ei_38_cutoff'` to match Brightway conventions and the example's output."
+      ],
+      "golden_answer": "Change the database name from `'ecoinvent_38_cutoff'` to `'ei_38_cutoff'` to match Brightway conventions and the example's output."
+    }
+  ]
+}

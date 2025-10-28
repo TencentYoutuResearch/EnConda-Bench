@@ -1,0 +1,29 @@
+{
+  "readme": "zostera_django-bootstrap4_error_readme_2",
+  "repo_name": "zostera_django-bootstrap4",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions are in the wrong logical order, telling the user to add the app to `INSTALLED_APPS` before installing it with pip.",
+      "correction_candidates": [
+        "Combine the installation and configuration steps into a single instruction.",
+        "The `pip install` step should be performed before modifying `settings.py`.",
+        "The `settings.py` modification is optional and should be moved to an 'Advanced' section.",
+        "A virtual environment should be created before any other steps."
+      ],
+      "golden_answer": "The `pip install` step should be performed before modifying `settings.py`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The app name to be added to `INSTALLED_APPS` is incorrect; it should be 'bootstrap4', not 'django_bootstrap4'.",
+      "correction_candidates": [
+        "INSTALLED_APPS = (..., \"django-bootstrap4\", ...)",
+        "INSTALLED_APPS = (..., \"bootstrap4.apps.Bootstrap4Config\", ...)",
+        "INSTALLED_APPS = (..., \"bootstrap4\", ...)",
+        "INSTALLED_APPS = (..., \"zostera.bootstrap4\", ...)"
+      ],
+      "golden_answer": "INSTALLED_APPS = (..., \"bootstrap4\", ...)"
+    }
+  ]
+}

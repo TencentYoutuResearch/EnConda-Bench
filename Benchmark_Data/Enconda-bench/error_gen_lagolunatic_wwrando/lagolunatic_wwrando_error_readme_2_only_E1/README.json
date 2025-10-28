@@ -1,0 +1,18 @@
+{
+  "readme": "lagolunatic_wwrando_error_readme_2_only_E1",
+  "repo_name": "lagolunatic_wwrando",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip command for installing dependencies is missing the `-r` flag, causing pip to try to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change the command to `py -3.12 -m pip install -r requirements.txt` on Windows.",
+        "Change the command to `py -3.12 -m pip install --requirement requirements.txt` on Windows.",
+        "Change the command to `cat requirements.txt | xargs py -3.12 -m pip install` on Windows.",
+        "Change the command to `py -3.12 -m pip install -f requirements.txt` on Windows."
+      ],
+      "golden_answer": "Change the command to `py -3.12 -m pip install -r requirements.txt` on Windows."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cclib_cclib_error_readme_3_only_E4",
+  "repo_name": "cclib_cclib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a `requirements.txt` file at the root of the repository, but this file does not exist, leading to a file not found error.",
+      "correction_candidates": [
+        "The dependencies are listed in `setup.py`; install the package directly with `pip install .` instead.",
+        "Create an empty `requirements.txt` file before running the command.",
+        "The file is located in a different directory: `pip install -r dev/requirements.txt`",
+        "Download the `requirements.txt` file from the project's website first."
+      ],
+      "golden_answer": "The dependencies are listed in `setup.py`; install the package directly with `pip install .` instead."
+    }
+  ]
+}

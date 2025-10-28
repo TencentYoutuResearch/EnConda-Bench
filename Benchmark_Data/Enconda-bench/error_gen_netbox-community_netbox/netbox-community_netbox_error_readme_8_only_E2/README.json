@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_8_only_E2",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip install command syntax missing '-r' flag for requirements file",
+      "correction_candidates": [
+        "To install NetBox dependencies, run `pip install -r requirements.txt` and make sure to have Redis server running on port 6380.",
+        "To install NetBox dependencies, run `pip install --requirement requirements.txt` and make sure to have Redis server running on port 6380.",
+        "To install NetBox dependencies, run `pip3 install -r requirements.txt` and make sure to have Redis server running on port 6380.",
+        "To install NetBox dependencies, run `python -m pip install -r requirements.txt` and make sure to have Redis server running on port 6380."
+      ],
+      "golden_answer": "To install NetBox dependencies, run `pip install -r requirements.txt` and make sure to have Redis server running on port 6380."
+    }
+  ]
+}

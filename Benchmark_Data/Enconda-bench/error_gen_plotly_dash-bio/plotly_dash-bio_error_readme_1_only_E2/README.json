@@ -1,0 +1,18 @@
+{
+  "readme": "plotly_dash-bio_error_readme_1_only_E2",
+  "repo_name": "plotly_dash-bio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to build JupyterLab is incorrect. `jupyter lab build-extension` is not the correct command for rebuilding the application.",
+      "correction_candidates": [
+        "Use the command `jupyter lab install`.",
+        "Use the command `jupyter lab build`.",
+        "Use the command `jupyter build lab`.",
+        "Use the command `jupyter-lab build`."
+      ],
+      "golden_answer": "Use the command `jupyter lab build`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_4",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The commands to get the source code are in the wrong order. 'cd lnldb' is executed before 'git clone', so the directory will not exist and the command will fail.",
+      "correction_candidates": [
+        "The 'git clone' command must be run before the 'cd lnldb' command.",
+        "The commands should be combined into 'git clone https://github.com/WPI-LNL/lnldb.git && cd lnldb'.",
+        "The first command should be 'mkdir lnldb' to create the directory first.",
+        "The second command should be 'git init' inside the 'lnldb' directory."
+      ],
+      "golden_answer": "The 'git clone' command must be run before the 'cd lnldb' command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The filename for local settings is specified as 'lnldb/settings_local.py', but the application actually looks for 'lnldb/local_settings.py'.",
+      "correction_candidates": [
+        "The correct file path is 'settings/local.py'.",
+        "The correct file path is 'local_settings.py' in the project root.",
+        "The correct file path is 'lnldb/local_settings.py'.",
+        "The correct file path is 'config/local_settings.py'."
+      ],
+      "golden_answer": "The correct file path is 'lnldb/local_settings.py'."
+    }
+  ]
+}

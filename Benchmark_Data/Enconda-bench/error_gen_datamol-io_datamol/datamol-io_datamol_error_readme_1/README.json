@@ -1,0 +1,29 @@
+{
+  "readme": "datamol-io_datamol_error_readme_1",
+  "repo_name": "datamol-io_datamol",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest using `pip install datamol` but fail to specify how to install the mandatory RDKit dependency, which cannot be installed straightforwardly from PyPI.",
+      "correction_candidates": [
+        "pip install datamol rdkit",
+        "conda install -c conda-forge rdkit && pip install datamol",
+        "mamba install -c conda-forge datamol",
+        "pip install datamol; pip install rdkit-pypi"
+      ],
+      "golden_answer": "mamba install -c conda-forge datamol"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The compatibility table incorrectly states that datamol version 0.12.x is tested with Python versions [3.8, 3.9], which contradicts the CI policy of testing the two latest Python versions (likely 3.10, 3.11).",
+      "correction_candidates": [
+        "Change the python versions for `datamol 0.12.x` to `[3.9, 3.10]`.",
+        "Change the python versions for `datamol 0.12.x` to `[3.10, 3.11]`.",
+        "Remove the entire row for `datamol 0.12.x` from the table.",
+        "Change the `datamol` version to `0.8.x` for the row with python `[3.8, 3.9]`."
+      ],
+      "golden_answer": "Change the python versions for `datamol 0.12.x` to `[3.10, 3.11]`."
+    }
+  ]
+}

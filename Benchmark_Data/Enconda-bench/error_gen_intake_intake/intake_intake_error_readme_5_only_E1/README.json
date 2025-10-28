@@ -1,0 +1,18 @@
+{
+  "readme": "intake_intake_error_readme_5_only_E1",
+  "repo_name": "intake_intake",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Changed package name from 'intake' to 'intake-core' in conda installation command, which is an incorrect package name",
+      "correction_candidates": [
+        "conda install -c conda-forge intake",
+        "conda install -c pyviz intake",
+        "conda install intake",
+        "conda install -c anaconda intake"
+      ],
+      "golden_answer": "conda install -c conda-forge intake"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_6_only_E7",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version conflict between requiring Django 1.11+ but installing Django 1.8, and using outdated Python 2.7",
+      "correction_candidates": [
+        "This system requires Python 3.8+ and Django 3.2+",
+        "This system requires Python 3.6+ and Django 2.2+",
+        "This system requires Python 3.7+ and Django 4.0+",
+        "This system requires Python 3.9+ and Django 3.1+"
+      ],
+      "golden_answer": "This system requires Python 3.8+ and Django 3.2+"
+    }
+  ]
+}

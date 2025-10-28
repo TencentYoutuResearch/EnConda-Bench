@@ -1,0 +1,29 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_4",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The database migration step is executed before Python dependencies (like Django) are installed, which will cause the `manage.py` script to fail.",
+      "correction_candidates": [
+        "Swap the 'Install Python dependencies' step with the 'Set up the database and run migrations' step.",
+        "Combine the installation and migration into a single script.",
+        "Run `pip install django` before the migration step, and the rest of the dependencies after.",
+        "Remove the migration step, as it's not always necessary for setup."
+      ],
+      "golden_answer": "Swap the 'Install Python dependencies' step with the 'Set up the database and run migrations' step."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py run` is incorrect for starting the Django development server.",
+      "correction_candidates": [
+        "Replace `run` with `runserver`. The correct command is `python manage.py runserver`.",
+        "Change the command to `django-admin runserver`.",
+        "Change the command to `python manage.py start`.",
+        "Use a wsgi server like gunicorn: `gunicorn pgeu.wsgi`."
+      ],
+      "golden_answer": "Replace `run` with `runserver`. The correct command is `python manage.py runserver`."
+    }
+  ]
+}

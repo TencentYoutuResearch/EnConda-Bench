@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_reproject_error_readme_3_only_E8",
+  "repo_name": "astropy_reproject",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The development installation instructions are poorly formatted, combining a command and its description on one line without proper code formatting, making it unclear and likely to be copied incorrectly.",
+      "correction_candidates": [
+        "To install for development, first clone the repository. Then, run the following command to install the package in editable mode with all dependencies: \n```\npip install -e .[all,test]\n```",
+        "For a development install, use this command: `pip install --editable .[all,test]`",
+        "To set up a development environment, run:\n\n`git clone https://github.com/astropy/reproject.git`\n`cd reproject`\n`pip install -e .[all,test]`",
+        "The command is `pip install -e .[all,test]`. This should be run from the root of the repository after cloning it."
+      ],
+      "golden_answer": "To install for development, first clone the repository. Then, run the following command to install the package in editable mode with all dependencies: \n```\npip install -e .[all,test]\n```"
+    }
+  ]
+}

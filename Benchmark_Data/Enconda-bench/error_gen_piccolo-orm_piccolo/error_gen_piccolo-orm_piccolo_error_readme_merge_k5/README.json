@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_piccolo-orm_piccolo_error_readme_merge_k5",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install piccolo[postgres]` may fail in some shells (like zsh) because it lacks quotes. The shell might interpret `[postgres]` as a glob pattern instead of part of the package name.",
+      "correction_candidates": [
+        "Run `pip install piccolo-postgres`.",
+        "Run `pip install piccolo --extras postgres`.",
+        "Run `pip install 'piccolo[postgres]'`.",
+        "Run `pip install piccolo postgres-driver`."
+      ],
+      "golden_answer": "Run `pip install 'piccolo[postgres]'`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `piccolo asgi new --orm piccolo` is incorrect. The `--orm` flag is not a valid parameter for this command.",
+      "correction_candidates": [
+        "Run `piccolo new asgi`.",
+        "Run `piccolo asgi new`.",
+        "Run `piccolo asgi new --with-orm=piccolo`.",
+        "Run `piccolo asgi create`."
+      ],
+      "golden_answer": "Run `piccolo asgi new`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions show the `pip install` command being run before the command to activate the virtual environment. This will install the package in the global or user site-packages instead of the intended virtual environment.",
+      "correction_candidates": [
+        "Move the `pip install` commands to the top, before creating the virtual environment.",
+        "Replace `source myenv/bin/activate` with `myenv/bin/pip install 'piccolo[postgres]'` and remove the separate pip install step.",
+        "Move the `source myenv/bin/activate` command to be right after `python3 -m venv myenv` and before any `pip install` commands.",
+        "Remove the virtual environment creation steps entirely."
+      ],
+      "golden_answer": "Move the `source myenv/bin/activate` command to be right after `python3 -m venv myenv` and before any `pip install` commands."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the ORM usage example, the line `b = Band(name='C-Sharps' popularity=100)` is missing a comma between the `name` and `popularity` arguments, which will cause a Python `SyntaxError`.",
+      "correction_candidates": [
+        "Change the line to `b = Band('C-Sharps', 100)`.",
+        "Change the line to `b = Band(name='C-Sharps', popularity=100)`.",
+        "Change the line to `b = Band.create(name='C-Sharps', popularity=100)`.",
+        "Change the line to `b = Band(name='C-Sharps'; popularity=100)`."
+      ],
+      "golden_answer": "Change the line to `b = Band(name='C-Sharps', popularity=100)`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install piccolo --all-extras` is not a valid pip command. The `--all-extras` flag is incorrect syntax for installing optional dependencies.",
+      "correction_candidates": [
+        "Run `pip install piccolo --with-all`.",
+        "Run `pip install 'piccolo[all]'`.",
+        "Run `pip install piccolo --install-option='[all]'`.",
+        "Run `pip install piccolo-all`."
+      ],
+      "golden_answer": "Run `pip install 'piccolo[all]'`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "System dependencies installation step placed after pip installation instead of before",
+      "correction_candidates": [
+        "Move the system dependencies installation before all pip install commands",
+        "Remove the system dependencies installation step entirely",
+        "Add the system dependencies installation after the virtual environment setup",
+        "Place the system dependencies installation at the end of the installation section"
+      ],
+      "golden_answer": "Move the system dependencies installation before all pip install commands"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent requirements.txt file for installation",
+      "correction_candidates": [
+        "Remove the requirements.txt installation step entirely",
+        "Change to pip install -r dev-requirements.txt",
+        "Use pip install -r setup/requirements.txt instead",
+        "Replace with pip install -r dependencies/requirements.txt"
+      ],
+      "golden_answer": "Remove the requirements.txt installation step entirely"
+    }
+  ]
+}

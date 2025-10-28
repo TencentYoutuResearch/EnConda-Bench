@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_zostera_django-bootstrap4_error_readme_merge_k2",
+  "repo_name": "zostera_django-bootstrap4",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states a strict requirement for Django 2.2, while the package supports a broader range of current Django versions.",
+      "correction_candidates": [
+        "This package requires Django 3.0 or later.",
+        "This package requires a combination of Python and Django that is currently supported.",
+        "This package requires Django LTS versions only.",
+        "Remove the entire 'Requirements' section as it is covered by the package metadata."
+      ],
+      "golden_answer": "This package requires a combination of Python and Django that is currently supported."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command uses an incorrect package name 'django-bootstrap-4' instead of the correct 'django-bootstrap4'.",
+      "correction_candidates": [
+        "pip install django-bootstrap-v4",
+        "pip install django-bootstrap4 --upgrade",
+        "pip install django-bootstrap4",
+        "python -m pip install django-bootstrap4"
+      ],
+      "golden_answer": "pip install django-bootstrap4"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions are in the wrong logical order, telling the user to add the app to `INSTALLED_APPS` before installing it with pip.",
+      "correction_candidates": [
+        "Combine the installation and configuration steps into a single instruction.",
+        "The `pip install` step should be performed before modifying `settings.py`.",
+        "The `settings.py` modification is optional and should be moved to an 'Advanced' section.",
+        "A virtual environment should be created before any other steps."
+      ],
+      "golden_answer": "The `pip install` step should be performed before modifying `settings.py`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The app name to be added to `INSTALLED_APPS` is incorrect; it should be 'bootstrap4', not 'django_bootstrap4'.",
+      "correction_candidates": [
+        "INSTALLED_APPS = (..., \"django-bootstrap4\", ...)",
+        "INSTALLED_APPS = (..., \"bootstrap4.apps.Bootstrap4Config\", ...)",
+        "INSTALLED_APPS = (..., \"bootstrap4\", ...)",
+        "INSTALLED_APPS = (..., \"zostera.bootstrap4\", ...)"
+      ],
+      "golden_answer": "INSTALLED_APPS = (..., \"bootstrap4\", ...)"
+    }
+  ]
+}

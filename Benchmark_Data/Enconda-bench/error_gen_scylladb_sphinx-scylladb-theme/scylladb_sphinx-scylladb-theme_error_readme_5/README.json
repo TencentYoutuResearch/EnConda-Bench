@@ -1,0 +1,29 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_5",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added specific version requirements for dependencies that may not be correct or necessary",
+      "correction_candidates": [
+        "pip install sphinx-scylladb-theme",
+        "pip install -r requirements.txt",
+        "conda install sphinx-scylladb-theme",
+        "pip install sphinx-scylladb-theme sphinx"
+      ],
+      "golden_answer": "pip install sphinx-scylladb-theme"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python 2.7 version requirement which is no longer supported",
+      "correction_candidates": [
+        "Python 3.8 or later",
+        "Python 3.6 or later",
+        "Python 3.7 or later",
+        "Python 3.9 or later"
+      ],
+      "golden_answer": "Python 3.8 or later"
+    }
+  ]
+}

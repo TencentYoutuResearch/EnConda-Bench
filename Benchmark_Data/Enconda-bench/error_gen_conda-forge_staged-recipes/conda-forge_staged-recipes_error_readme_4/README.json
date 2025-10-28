@@ -1,0 +1,29 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_4",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for generating a sha256 hash using openssl has an incorrect parameter format; it uses a dash `-sha256` when it should be a subcommand `sha256`.",
+      "correction_candidates": [
+        "openssl sha256sum your_sdist.tar.gz",
+        "openssl sha256 your_sdist.tar.gz",
+        "sha256sum your_sdist.tar.gz",
+        "openssl dgst -sha256 your_sdist.tar.gz"
+      ],
+      "golden_answer": "openssl sha256 your_sdist.tar.gz"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the `openssl` package is missing the `-c conda-forge` channel flag, which is necessary to find the correct package version for the build environment.",
+      "correction_candidates": [
+        "conda install openssl -c conda-forge",
+        "conda install -c defaults openssl",
+        "pip install pyopenssl",
+        "conda install openssl --channel=conda-forge"
+      ],
+      "golden_answer": "conda install openssl -c conda-forge"
+    }
+  ]
+}

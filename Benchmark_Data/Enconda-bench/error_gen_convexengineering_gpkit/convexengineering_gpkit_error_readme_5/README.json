@@ -1,0 +1,29 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_5",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong order - dependencies are installed before creating virtual environment",
+      "correction_candidates": [
+        "Create virtual environment first, then install dependencies inside it",
+        "Install GPkit first, then install the dependencies afterwards",
+        "Use conda to create environment and install all packages together",
+        "Install dependencies globally, then create virtual environment for GPkit only"
+      ],
+      "golden_answer": "Create virtual environment first, then install dependencies inside it"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Missing critical dependency installation for cvxopt solver",
+      "correction_candidates": [
+        "Add pip install cvxopt to the dependency installation commands",
+        "Add conda install cvxopt to the dependency installation commands",
+        "Add apt-get install cvxopt-dev to the dependency installation commands",
+        "Add pip install cvxpy cvxopt to the dependency installation commands"
+      ],
+      "golden_answer": "Add pip install cvxopt to the dependency installation commands"
+    }
+  ]
+}

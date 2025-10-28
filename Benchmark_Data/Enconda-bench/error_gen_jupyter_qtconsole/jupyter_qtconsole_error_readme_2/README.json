@@ -1,0 +1,29 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_2",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that qtconsole is only compatible with PyQt4, which is outdated information. It is compatible with PyQt5, PySide2, PyQt6, and PySide6.",
+      "correction_candidates": [
+        "Change the text to: \"The Qtconsole requires Python bindings for Qt. It is recommended to use PyQt5 or PySide2.\"",
+        "Change the text to: \"The Qtconsole is compatible with PyQt5, PyQt6, PySide2, and PySide6.\"",
+        "Restore the original sentence: \"The Qtconsole requires Python bindings for Qt, such as [PyQt6](https://pypi.org/project/PyQt6/), [PySide6](https://pypi.org/project/PySide6/), [PyQt5](https://pypi.org/project/PyQt5/) or [PySide2](https://pypi.org/project/PySide2/).\"",
+        "Remove the sentence entirely."
+      ],
+      "golden_answer": "Restore the original sentence: \"The Qtconsole requires Python bindings for Qt, such as [PyQt6](https://pypi.org/project/PyQt6/), [PySide6](https://pypi.org/project/PySide6/), [PyQt5](https://pypi.org/project/PyQt5/) or [PySide2](https://pypi.org/project/PySide2/).\""
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for `pip` installation are in the wrong logical order. It suggests running qtconsole before confirming its dependencies are installed, which will cause an error.",
+      "correction_candidates": [
+        "Restore the original text: \"**Note:** Make sure that Qt is installed. Unfortunately, Qt is not installed when using pip. The next section gives instructions on doing it.\"",
+        "Add the command `pip install pyqt5` before `pip install qtconsole`.",
+        "Change the section to recommend installing with conda instead.",
+        "Combine the installation into one line: `pip install qtconsole pyqt5`."
+      ],
+      "golden_answer": "Restore the original text: \"**Note:** Make sure that Qt is installed. Unfortunately, Qt is not installed when using pip. The next section gives instructions on doing it.\""
+    }
+  ]
+}

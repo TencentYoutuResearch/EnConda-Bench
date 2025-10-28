@@ -1,0 +1,18 @@
+{
+  "readme": "open-pulse_openpulse_error_readme_4_only_E2",
+  "repo_name": "open-pulse_openpulse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the Poetry dependency manager is incorrect. It installs 'poetry-core' instead of the full 'poetry' package, which includes the necessary command-line interface.",
+      "correction_candidates": [
+        "Start by installing the poetry module using the command: `pip install poetry`",
+        "Start by installing the poetry module using the command: `pip install --user poetry`",
+        "Start by installing the poetry module using the command: `python -m pip install poetry`",
+        "Start by installing the poetry module using the command: `pipx install poetry`"
+      ],
+      "golden_answer": "Start by installing the poetry module using the command: `pip install poetry`"
+    }
+  ]
+}

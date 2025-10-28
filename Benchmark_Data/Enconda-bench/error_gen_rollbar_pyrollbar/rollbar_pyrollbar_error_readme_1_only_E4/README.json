@@ -1,0 +1,18 @@
+{
+  "readme": "rollbar_pyrollbar_error_readme_1_only_E4",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the test directory is specified as `tests/`, but the correct path is `rollbar/test`.",
+      "correction_candidates": [
+        "Tests are in `rollbar/test`.",
+        "Tests are in `rollbar/test/`.",
+        "Tests are in the `rollbar/test` directory.",
+        "Tests are in `rollbar/test`. To run the tests: `python setup.py test`"
+      ],
+      "golden_answer": "Tests are in `rollbar/test`. To run the tests: `python setup.py test`"
+    }
+  ]
+}

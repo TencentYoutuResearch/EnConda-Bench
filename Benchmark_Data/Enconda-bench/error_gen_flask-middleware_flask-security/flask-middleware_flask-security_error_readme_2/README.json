@@ -1,0 +1,29 @@
+{
+  "readme": "flask-middleware_flask-security_error_readme_2",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only compatible with Python 3.6, which is false and may deter users with newer Python versions.",
+      "correction_candidates": [
+        "Change the sentence to \"Note: This package is tested on Python 3.6 and newer.\"",
+        "Remove the sentence \"Note: This package requires Python 3.6 and is not compatible with newer versions.\"",
+        "Check the project's setup.cfg for the actual Python version specifiers and update the note.",
+        "Change the sentence to \"Note: This package is primarily developed for Python 3.6 but may work with other versions.\""
+      ],
+      "golden_answer": "Remove the sentence \"Note: This package requires Python 3.6 and is not compatible with newer versions.\""
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions include an unnecessary and potentially problematic step to install a specific, old version of Flask. Flask is a dependency of Flask-Security-Too and will be installed automatically with a compatible version.",
+      "correction_candidates": [
+        "Change 'pip install Flask==1.0.0' to 'pip install Flask'.",
+        "Move 'pip install Flask==1.0.0' to after the 'pip install -U Flask-Security-Too' command.",
+        "Remove the line 'pip install Flask==1.0.0'.",
+        "Change 'pip install Flask==1.0.0' to 'pip install -U Flask'."
+      ],
+      "golden_answer": "Remove the line 'pip install Flask==1.0.0'."
+    }
+  ]
+}

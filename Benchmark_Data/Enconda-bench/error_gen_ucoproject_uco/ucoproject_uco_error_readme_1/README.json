@@ -1,0 +1,29 @@
+{
+  "readme": "ucoproject_uco_error_readme_1",
+  "repo_name": "ucoproject_uco",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include `tensorflow`, which is a large and unnecessary dependency for a project focused on ontology definitions.",
+      "correction_candidates": [
+        "The installation command should be `conda install tensorflow rdflib`.",
+        "The installation command should be `pip install uco`.",
+        "The installation command should only include the necessary library: `pip install rdflib`.",
+        "The installation command should be `pip install rdflib owlready2`."
+      ],
+      "golden_answer": "The installation command should only include the necessary library: `pip install rdflib`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `git pull` is used to download the repository for the first time, which is incorrect. `git clone` is the correct command for this purpose.",
+      "correction_candidates": [
+        "To get the repository, use the command `git clone https://github.com/unified-cyber-ontology/uco.git`.",
+        "To get the repository, use the command `git fetch https://github.com/unified-cyber-ontology/uco.git`.",
+        "To get the repository, first initialize a directory with `git init` and then run `git pull https://github.com/unified-cyber-ontology/uco.git`.",
+        "To get the repository, use the command `git checkout https://github.com/unified-cyber-ontology/uco.git`."
+      ],
+      "golden_answer": "To get the repository, use the command `git clone https://github.com/unified-cyber-ontology/uco.git`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "calliope-project_calliope_error_readme_2_only_E6",
+  "repo_name": "calliope-project_calliope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests running examples before providing the installation instructions, which is an incorrect logical order.",
+      "correction_candidates": [
+        "Move the installation command `mamba create ...` to be before the mention of the example models.",
+        "Add a note saying 'You must install Calliope before running the examples'.",
+        "Combine the installation and running examples into a single code block.",
+        "Remove the sentence 'You can start by running these examples.'"
+      ],
+      "golden_answer": "Move the installation command `mamba create ...` to be before the mention of the example models."
+    }
+  ]
+}

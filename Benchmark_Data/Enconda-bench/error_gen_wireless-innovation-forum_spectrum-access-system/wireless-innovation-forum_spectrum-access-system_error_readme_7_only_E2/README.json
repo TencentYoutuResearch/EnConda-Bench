@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_7_only_E2",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using --requirements instead of -r",
+      "correction_candidates": [
+        "python -m pip install -r ./requirements.txt",
+        "python -m pip install --requirement ./requirements.txt",
+        "pip install -r ./requirements.txt",
+        "python -m pip install -f ./requirements.txt"
+      ],
+      "golden_answer": "python -m pip install -r ./requirements.txt"
+    }
+  ]
+}

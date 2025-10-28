@@ -1,0 +1,29 @@
+{
+  "readme": "benadida_helios-server_error_readme_7",
+  "repo_name": "benadida_helios-server",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Using invalid syntax 'pip install -r requirements.txt==1.2.3' which treats requirements file as a package with version",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install --requirement requirements.txt",
+        "pip install -r requirements.txt --upgrade",
+        "python -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using incorrect parameter '--host' instead of proper Django runserver syntax",
+      "correction_candidates": [
+        "python manage.py runserver 0.0.0.0:8000",
+        "python manage.py runserver --bind 0.0.0.0:8000",
+        "python manage.py runserver -h 0.0.0.0",
+        "python manage.py runserver --address=0.0.0.0"
+      ],
+      "golden_answer": "python manage.py runserver 0.0.0.0:8000"
+    }
+  ]
+}

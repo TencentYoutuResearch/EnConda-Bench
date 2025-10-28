@@ -1,0 +1,18 @@
+{
+  "readme": "learning-and-intelligent-systems_predicators_error_readme_4_only_E1",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development dependencies, `pip install -e .[develop,testing]`, includes a non-existent extra dependency group `testing`, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Change the command to `pip install -e .[develop]`.",
+        "Change the command to `pip install -e '.[develop]'`.",
+        "Add a `testing` section to the `extras_require` in `setup.py`.",
+        "Change the command to `pip install -e .[dev]`."
+      ],
+      "golden_answer": "Change the command to `pip install -e .[develop]`."
+    }
+  ]
+}

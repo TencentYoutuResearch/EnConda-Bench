@@ -1,0 +1,29 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_1",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The dependencies are installed globally using pip before the virtual environment is created and activated, which can cause system-wide package conflicts.",
+      "correction_candidates": [
+        "Create and activate the virtual environment before running `pip install -r requirements.txt`.",
+        "Run `pip install --user -r requirements.txt` to avoid installing packages system-wide.",
+        "The order is correct, but you must run `sudo pip install -r requirements.txt`.",
+        "After creating the venv, run `venv/bin/pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Create and activate the virtual environment before running `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python -script scripts/build_json.py` is invalid because `-script` is not a valid flag for the Python interpreter.",
+      "correction_candidates": [
+        "Use the command `python -m scripts.build_json` to run the script as a module.",
+        "Change the command to `python scripts/build_json.py`.",
+        "Run the script with `py scripts/build_json.py` instead.",
+        "Add `#!/usr/bin/env python` to the top of the script and run it with `./scripts/build_json.py`."
+      ],
+      "golden_answer": "Change the command to `python scripts/build_json.py`."
+    }
+  ]
+}

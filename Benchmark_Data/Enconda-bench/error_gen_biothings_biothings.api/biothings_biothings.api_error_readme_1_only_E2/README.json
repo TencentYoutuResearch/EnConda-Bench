@@ -1,0 +1,18 @@
+{
+  "readme": "biothings_biothings.api_error_readme_1_only_E2",
+  "repo_name": "biothings_biothings.api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the latest development version from git uses an incorrect flag `--git` instead of the correct `git+` protocol prefix.",
+      "correction_candidates": [
+        "pip install git+https://github.com/biothings/biothings.api.git#egg=biothings",
+        "pip install from-git https://github.com/biothings/biothings.api.git#egg=biothings",
+        "git clone https://github.com/biothings/biothings.api.git && pip install ./biothings.api",
+        "pip install biothings --repo https://github.com/biothings/biothings.api.git"
+      ],
+      "golden_answer": "pip install git+https://github.com/biothings/biothings.api.git#egg=biothings"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_2_only_E6",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The commands for installing the development version are in the wrong logical order. The `pip install` command is run before changing into the `nextcord` directory, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Swap the `$ cd nextcord` and `$ python3 -m pip install -U .[voice]` commands.",
+        "Remove the `$ cd nextcord` command and change `.` to `./nextcord` in the pip command.",
+        "Swap the `$ git clone` and `$ python3 -m pip install` commands.",
+        "Combine the last two commands into a single line: `$ cd nextcord && python3 -m pip install -U .[voice]`."
+      ],
+      "golden_answer": "Swap the `$ cd nextcord` and `$ python3 -m pip install -U .[voice]` commands."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_3_only_E7",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The developer instructions incorrectly state that Poetry version 1.0.0 is required, which is an outdated version and may cause dependency resolution issues.",
+      "correction_candidates": [
+        "Remove the note about requiring Poetry version 1.0.0. The project is compatible with modern versions of Poetry.",
+        "Update the note to specify Poetry version >=1.2.0.",
+        "The project can be installed with `pip install poetry==1.0.0` before running `poetry install`.",
+        "Instead of Poetry, you can use pip to install dependencies from `poetry.lock`."
+      ],
+      "golden_answer": "Remove the note about requiring Poetry version 1.0.0. The project is compatible with modern versions of Poetry."
+    }
+  ]
+}

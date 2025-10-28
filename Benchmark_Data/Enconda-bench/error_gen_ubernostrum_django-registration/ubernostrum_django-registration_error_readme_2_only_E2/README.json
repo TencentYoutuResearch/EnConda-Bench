@@ -1,0 +1,18 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_2_only_E2",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a virtual environment, `python -m venv`, is incomplete. It is missing the required argument specifying the directory name for the environment (e.g., 'venv').",
+      "correction_candidates": [
+        "The command should be `python -m venv venv`.",
+        "The command should be `virtualenv venv`.",
+        "The command should be `python -m venv .venv`.",
+        "The command is missing a flag: `python -m venv --create .`"
+      ],
+      "golden_answer": "The command should be `python -m venv venv`."
+    }
+  ]
+}

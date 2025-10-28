@@ -1,0 +1,18 @@
+{
+  "readme": "robotframework_robotframework_error_readme_3_only_E1",
+  "repo_name": "robotframework_robotframework",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install robotframework==4.1.3` pins the installation to a specific, outdated version that is primarily for Python 2 compatibility, which is incorrect for modern Python environments and lacks current features.",
+      "correction_candidates": [
+        "pip install robotframework",
+        "pip install --upgrade robotframework",
+        "pip install robotframework>=6.0",
+        "pip install robotframework-latest"
+      ],
+      "golden_answer": "pip install robotframework"
+    }
+  ]
+}

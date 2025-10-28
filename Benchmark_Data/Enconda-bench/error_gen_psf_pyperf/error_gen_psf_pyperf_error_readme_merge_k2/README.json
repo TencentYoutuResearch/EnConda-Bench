@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_psf_pyperf_error_readme_merge_k2",
+  "repo_name": "psf_pyperf",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pyperf timeit` command uses an incorrect parameter `--output` to specify the output file, which should be `-o` or `--output-file`.",
+      "correction_candidates": [
+        "$ python3 -m pyperf timeit '[1,2]*1000' -o bench.json",
+        "$ python3 -m pyperf timeit '[1,2]*1000' --out bench.json",
+        "$ python3 -m pyperf timeit '[1,2]*1000' > bench.json",
+        "$ python3 -m pyperf timeit '[1,2]*1000' --file bench.json"
+      ],
+      "golden_answer": "$ python3 -m pyperf timeit '[1,2]*1000' -o bench.json"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pyperf stats` example command references `bench.json`, but the sample output shown corresponds to a different benchmark suite (`telco.json`), not the one created in the preceding `timeit` example.",
+      "correction_candidates": [
+        "$ python3 -m pyperf stats telco.json",
+        "$ python3 -m pyperf stats -m bench.json",
+        "$ python3 -m pyperf dump bench.json",
+        "$ python3 -m pyperf show bench.json"
+      ],
+      "golden_answer": "$ python3 -m pyperf stats telco.json"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions show installing `pyperf` globally before creating and activating a virtual environment, which is not a best practice and defeats the purpose of the virtual environment for this package.",
+      "correction_candidates": [
+        "python3 -m venv venv\nsource venv/bin/activate\npython3 -m pip install pyperf",
+        "python3 -m pip install virtualenv\nvirtualenv venv\nsource venv/bin/activate\npip install pyperf",
+        "python3 -m venv venv\npython3 -m pip install pyperf\nsource venv/bin/activate",
+        "python3 -m venv ./pyperf_env\nsource ./pyperf_env/bin/activate\npython3 -m pip install pyperf"
+      ],
+      "golden_answer": "python3 -m venv venv\nsource venv/bin/activate\npython3 -m pip install pyperf"
+    }
+  ]
+}

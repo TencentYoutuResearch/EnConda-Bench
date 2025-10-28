@@ -1,0 +1,29 @@
+{
+  "readme": "calliope-project_calliope_error_readme_3",
+  "repo_name": "calliope-project_calliope",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "A confusing and incorrect statement was added, claiming that YAML files must be manually compiled, which is not true for Calliope.",
+      "correction_candidates": [
+        "Remove the sentence 'Note that all YAML files must be manually compiled into a single file before running a model.'",
+        "Change the sentence to 'Calliope automatically compiles all model files.'",
+        "Change the sentence to 'Model definitions can be split across multiple YAML files which are combined at runtime.'",
+        "Replace 'manually compiled' with 'validated using a linter'."
+      ],
+      "golden_answer": "Remove the sentence 'Note that all YAML files must be manually compiled into a single file before running a model.'"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states a strict requirement for Python 3.6, which is outdated and may not be compatible.",
+      "correction_candidates": [
+        "Remove the phrase ', but requires Python 3.6'.",
+        "Change 'requires Python 3.6' to 'requires Python 3.8 or newer'.",
+        "Change 'requires Python 3.6' to 'is compatible with Python 3.6-3.9'.",
+        "Add a command to install Python 3.6: `conda install python=3.6`."
+      ],
+      "golden_answer": "Remove the phrase ', but requires Python 3.6'."
+    }
+  ]
+}

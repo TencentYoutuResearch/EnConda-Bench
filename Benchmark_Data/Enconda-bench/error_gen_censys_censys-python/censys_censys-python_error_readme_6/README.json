@@ -1,0 +1,29 @@
+{
+  "readme": "censys_censys-python_error_readme_6",
+  "repo_name": "censys_censys-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed the supported Python version from '3.8+' to '2.7+' which is incompatible and creates version conflict with the later statement about testing on Python 3.8+",
+      "correction_candidates": [
+        "Python 3.8+ is currently supported",
+        "Python 3.6+ is currently supported",
+        "Python 3.7+ is currently supported",
+        "Python 3.9+ is currently supported"
+      ],
+      "golden_answer": "Python 3.8+ is currently supported"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Changed the logical order of poetry installation steps by running 'poetry install' before changing to the project directory with 'cd censys-python/'",
+      "correction_candidates": [
+        "git clone https://github.com/censys/censys-python.git\ncd censys-python/\npoetry install",
+        "git clone https://github.com/censys/censys-python.git\npoetry install --directory censys-python/",
+        "cd censys-python/\ngit clone https://github.com/censys/censys-python.git\npoetry install",
+        "git clone https://github.com/censys/censys-python.git\npoetry init\ncd censys-python/\npoetry install"
+      ],
+      "golden_answer": "git clone https://github.com/censys/censys-python.git\ncd censys-python/\npoetry install"
+    }
+  ]
+}

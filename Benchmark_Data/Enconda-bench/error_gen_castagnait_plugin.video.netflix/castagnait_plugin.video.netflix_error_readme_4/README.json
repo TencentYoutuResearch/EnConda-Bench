@@ -1,0 +1,29 @@
+{
+  "readme": "castagnait_plugin.video.netflix_error_readme_4",
+  "repo_name": "castagnait_plugin.video.netflix",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL provided for manual installation in the Kodi file manager points to a sub-directory (`/kodi19/`) instead of the root of the repository, which will prevent Kodi from finding the repository files.",
+      "correction_candidates": [
+        "The URL should be `https://castagnait.github.io/repository.castagnait/addons.xml`.",
+        "The URL should be `https://github.com/castagnait/repository.castagnait`.",
+        "The URL should be `https://castagnait.github.io/`.",
+        "The correct URL for the Kodi file manager is `https://castagnait.github.io/repository.castagnait/`."
+      ],
+      "golden_answer": "The correct URL for the Kodi file manager is `https://castagnait.github.io/repository.castagnait/`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Widevine Security Level L3 is required for all playback, which is misleading as L1 is necessary for HD/4K content and this note contradicts information in the resolution table.",
+      "correction_candidates": [
+        "Change the note to specify that Widevine L1 is required for HD content.",
+        "Correct the note to say 'Widevine Security Level L1 and HDCP 2.2 hardware' are needed for 4K.",
+        "Explain that Widevine L3 limits playback to SD quality, while L1 is needed for higher resolutions.",
+        "Remove the note about Widevine Security Level L3."
+      ],
+      "golden_answer": "Remove the note about Widevine Security Level L3."
+    }
+  ]
+}

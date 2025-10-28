@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_regions_error_readme_4_only_E4",
+  "repo_name": "astropy_regions",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link for the Zenodo citation badge points to a generic search page instead of the specific DOI record for the project.",
+      "correction_candidates": [
+        ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://doi.org/10.5281/zenodo.5826358",
+        ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://zenodo.org/badge/latestdoi/35690635",
+        "Update the Zenodo badge target to point to the project's specific Zenodo record.",
+        ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://zenodo.org/record/5826359"
+      ],
+      "golden_answer": ".. |Zenodo| image:: https://zenodo.org/badge/35690635.svg\n    :target: https://zenodo.org/badge/latestdoi/35690635"
+    }
+  ]
+}

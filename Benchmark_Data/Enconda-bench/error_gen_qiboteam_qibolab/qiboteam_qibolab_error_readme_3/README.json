@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibolab_error_readme_3",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library is compatible with Python 3.7, while the PyPI badge and package classifiers indicate it requires Python 3.8 or newer.",
+      "correction_candidates": [
+        "You must use `pip3.7` to install the package for Python 3.7.",
+        "The library is compatible with all versions of Python 3.",
+        "The library requires Python 3.7 but with the `python-dev` package installed.",
+        "The library requires Python 3.8 or newer, as indicated by its PyPI classifiers."
+      ],
+      "golden_answer": "The library requires Python 3.8 or newer, as indicated by its PyPI classifiers."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instructions for setting up the hardware configuration 'runcard' are critically vague, lacking essential details on the required file structure, content, and location.",
+      "correction_candidates": [
+        "The configuration should be done using a JSON file, not YAML.",
+        "The runcard file should be specified using an environment variable `QIBOLAB_RUNCARD`.",
+        "The section should specify the exact path (e.g., a user-level directory like `~/.qibolab/runcards/` or a project-level directory) and provide a link to documentation or an example of the YAML file's structure.",
+        "The section should state that the runcard is only needed for simulation, not real hardware."
+      ],
+      "golden_answer": "The section should specify the exact path (e.g., a user-level directory like `~/.qibolab/runcards/` or a project-level directory) and provide a link to documentation or an example of the YAML file's structure."
+    }
+  ]
+}

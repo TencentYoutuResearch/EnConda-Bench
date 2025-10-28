@@ -1,0 +1,18 @@
+{
+  "readme": "camdavidsonpilon_lifelines_error_readme_4_only_E2",
+  "repo_name": "camdavidsonpilon_lifelines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command uses the wrong channel (`conda` instead of `conda-forge`) and incorrect flag order, which will likely fail.",
+      "correction_candidates": [
+        "The command should be `conda install lifelines`.",
+        "The correct channel is `anaconda`, not `conda`. The command should be `conda install -c anaconda lifelines`.",
+        "Change the command to `conda install lifelines --channel conda-forge`.",
+        "The correct command is `conda install -c conda-forge lifelines`."
+      ],
+      "golden_answer": "The correct command is `conda install -c conda-forge lifelines`."
+    }
+  ]
+}

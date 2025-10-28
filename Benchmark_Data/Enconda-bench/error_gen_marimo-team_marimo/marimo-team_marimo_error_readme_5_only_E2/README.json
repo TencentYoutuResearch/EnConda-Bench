@@ -1,0 +1,18 @@
+{
+  "readme": "marimo-team_marimo_error_readme_5_only_E2",
+  "repo_name": "marimo-team_marimo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'marimo create' instead of 'marimo edit' for creating/editing notebooks",
+      "correction_candidates": [
+        "marimo edit",
+        "marimo new",
+        "marimo start",
+        "marimo init"
+      ],
+      "golden_answer": "marimo edit"
+    }
+  ]
+}

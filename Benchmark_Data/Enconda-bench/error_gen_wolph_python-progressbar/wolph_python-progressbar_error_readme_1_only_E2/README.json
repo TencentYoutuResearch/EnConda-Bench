@@ -1,0 +1,18 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_1_only_E2",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The shell command to set the `WRAP_STDERR` environment variable is syntactically incorrect, missing the `=true` part, which will prevent it from working as intended on Linux/Unix systems.",
+      "correction_candidates": [
+        "export WRAP_STDERR && python your_script.py",
+        "set WRAP_STDERR=true; python your_script.py",
+        "WRAP_STDERR=true python your_script.py",
+        "WRAP_STDERR=1 python your_script.py"
+      ],
+      "golden_answer": "WRAP_STDERR=true python your_script.py"
+    }
+  ]
+}

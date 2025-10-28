@@ -1,0 +1,18 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_6_only_E2",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid commands 'quacc init --setup-environment' and 'python -m quacc.configure --auto-detect' that don't exist in the actual package",
+      "correction_candidates": [
+        "Replace with: pip install quacc",
+        "Use: python -c 'import quacc; print(quacc.__version__)'",
+        "Change to: quacc --help for usage information",
+        "Update to: pip install quacc && python -m quacc.tests"
+      ],
+      "golden_answer": "Replace with: pip install quacc"
+    }
+  ]
+}

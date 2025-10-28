@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_pip_error_readme_4_only_E1",
+  "repo_name": "pypa_pip",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Installation from Source' instructions are incomplete. They omit the necessary first step of downloading the source code and suggest using a deprecated command (`python setup.py install`).",
+      "correction_candidates": [
+        "First, clone the repository (`git clone https://github.com/pypa/pip.git`), `cd` into the directory, then run `pip install .`",
+        "First, download the source zip file from GitHub, unzip it, then run `python get-pip.py`.",
+        "To install from source, run `pip install git+https://github.com/pypa/pip.git`.",
+        "First, clone the repository, then run `python setup.py develop`."
+      ],
+      "golden_answer": "First, clone the repository (`git clone https://github.com/pypa/pip.git`), `cd` into the directory, then run `pip install .`"
+    }
+  ]
+}

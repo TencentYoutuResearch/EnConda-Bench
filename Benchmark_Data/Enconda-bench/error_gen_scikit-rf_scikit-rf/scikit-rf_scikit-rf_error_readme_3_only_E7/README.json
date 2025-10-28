@@ -1,0 +1,18 @@
+{
+  "readme": "scikit-rf_scikit-rf_error_readme_3_only_E7",
+  "repo_name": "scikit-rf_scikit-rf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The text recommends Python 2.7, which is outdated and incompatible with modern versions of scikit-rf and its dependencies.",
+      "correction_candidates": [
+        "Remove the text ` (version 2.7 is recommended)`.",
+        "Change `(version 2.7 is recommended)` to `(Python 3.8+ is required)`.",
+        "Change `(version 2.7 is recommended)` to `(any Python 3 version will work)`.",
+        "Remove the sentence `If you have installed Python...` entirely."
+      ],
+      "golden_answer": "Remove the text ` (version 2.7 is recommended)`."
+    }
+  ]
+}

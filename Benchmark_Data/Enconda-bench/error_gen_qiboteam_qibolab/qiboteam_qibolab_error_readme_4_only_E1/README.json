@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibolab_error_readme_4_only_E1",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly include `qiskit`, which is an unnecessary dependency and a separate quantum computing framework not required by qibolab.",
+      "correction_candidates": [
+        "The `qiskit` package is only needed for running on IBMQ hardware.",
+        "The command should be `pip install qibolab[qiskit]` to install it as an optional extra.",
+        "The `qiskit` package should be replaced with `qiskit-terra`.",
+        "The `qiskit` package should be removed from the installation command."
+      ],
+      "golden_answer": "The `qiskit` package should be removed from the installation command."
+    }
+  ]
+}

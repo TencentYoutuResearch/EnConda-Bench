@@ -1,0 +1,29 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_1",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to install Python packages is executed before the virtual environment is created and activated, which will cause packages to be installed globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "virtualenv env && source env/bin/activate && pip install -r requirements_debug.txt",
+        "python -m venv env; source env/bin/activate; pip install -r requirements_debug.txt",
+        "pip install -r requirements_debug.txt --user",
+        "First, run 'virtualenv env' and 'source env/bin/activate', then run 'pip install -r requirements_debug.txt'."
+      ],
+      "golden_answer": "First, run 'virtualenv env' and 'source env/bin/activate', then run 'pip install -r requirements_debug.txt'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'python manage.py new_superuser' is incorrect. 'new_superuser' is not a valid Django management command.",
+      "correction_candidates": [
+        "The command should be 'python manage.py createsuperuser'.",
+        "The command should be 'python manage.py create_superuser'.",
+        "The command should be 'python manage.py dbshell' followed by a SQL INSERT statement.",
+        "The command should be 'python manage.py createsuperuser --username admin --email admin@example.com'."
+      ],
+      "golden_answer": "The command should be 'python manage.py createsuperuser'."
+    }
+  ]
+}

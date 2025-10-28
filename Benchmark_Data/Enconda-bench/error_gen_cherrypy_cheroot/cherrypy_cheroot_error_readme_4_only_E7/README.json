@@ -1,0 +1,18 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_4_only_E7",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README advises installing the 'latest versions of all packages', which is risky and can lead to version conflicts or unexpected failures if a dependency releases a breaking change.",
+      "correction_candidates": [
+        "Remove the sentence 'Make sure you have the latest versions of all packages to avoid compatibility issues.'",
+        "Advise users to install dependencies using `pip install -e .[test]`, which uses versions specified in `setup.cfg`.",
+        "Provide a `requirements.txt` file with pinned versions for reproducible builds.",
+        "Change the advice to 'It is recommended to use the latest minor versions of packages, but avoid major version upgrades.'"
+      ],
+      "golden_answer": "Advise users to install dependencies using `pip install -e .[test]`, which uses versions specified in `setup.cfg`."
+    }
+  ]
+}

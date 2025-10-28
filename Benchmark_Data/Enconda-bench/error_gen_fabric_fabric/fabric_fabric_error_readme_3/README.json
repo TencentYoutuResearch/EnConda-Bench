@@ -1,0 +1,29 @@
+{
+  "readme": "fabric_fabric_error_readme_3",
+  "repo_name": "fabric_fabric",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install -r requirements.txt` is incorrect. The project is a library and is meant to be installed from PyPI, not from a local requirements file which is not provided for users.",
+      "correction_candidates": [
+        "Change the installation command to `pip install fabric`.",
+        "Add a step to first clone the repository, then run `pip install -r requirements.txt`.",
+        "Provide a `requirements.txt` file with the content `fabric`.",
+        "Change the command to `pip install .` after cloning the repository."
+      ],
+      "golden_answer": "Change the installation command to `pip install fabric`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The provided quickstart command `fabric --host user@host -- \"your command\"` is syntax from the legacy Fabric v1 and is not the primary usage pattern for modern Fabric (v2+). It is confusing and lacks context about creating a fabfile.",
+      "correction_candidates": [
+        "Replace the example with a modern one, showing how to create a `fabfile.py` and run a task with `fab my_task`.",
+        "Clarify that this command is for Fabric v1 and provide a separate example for v2+.",
+        "Change the command to `fab --hosts user@host -- \"your command\"` which is the modern equivalent for ad-hoc commands.",
+        "Remove the quickstart section as it is misleading."
+      ],
+      "golden_answer": "Replace the example with a modern one, showing how to create a `fabfile.py` and run a task with `fab my_task`."
+    }
+  ]
+}

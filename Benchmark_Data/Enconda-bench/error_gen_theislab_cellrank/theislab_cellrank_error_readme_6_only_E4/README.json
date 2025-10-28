@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_cellrank_error_readme_6_only_E4",
+  "repo_name": "theislab_cellrank",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing a non-existent configuration file path that users would not have",
+      "correction_candidates": [
+        "CellRank uses default settings automatically, no configuration file needed",
+        "Create your own cellrank_config.py file with custom settings if needed",
+        "Configuration can be set using cr.settings.* parameters in your Python script",
+        "Download the example configuration from the GitHub repository first"
+      ],
+      "golden_answer": "CellRank uses default settings automatically, no configuration file needed"
+    }
+  ]
+}

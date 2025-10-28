@@ -1,0 +1,29 @@
+{
+  "readme": "menpo_menpo_error_readme_3",
+  "repo_name": "menpo_menpo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the `menpo-logo.png` image is incorrect, causing it to not be displayed.",
+      "correction_candidates": [
+        "Change <img src=\"docs/menpo-logo.png\" ...> to <img src=\"./menpo-logo.png\" ...>",
+        "Change <img src=\"docs/menpo-logo.png\" ...> to <img src=\"menpo-logo.png\" ...>",
+        "Change <img src=\"docs/menpo-logo.png\" ...> to <img src=\"../menpo-logo.png\" ...>",
+        "Change <img src=\"docs/menpo-logo.png\" ...> to <img src=\"https://www.menpo.org/menpo-logo.png\" ...>"
+      ],
+      "golden_answer": "Change <img src=\"docs/menpo-logo.png\" ...> to <img src=\"menpo-logo.png\" ...>"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command is incorrect; it uses a non-existent package name `menpo-package`.",
+      "correction_candidates": [
+        "> conda install -c conda-forge menpo",
+        "> conda install menpo",
+        "> conda install -c conda-forge/menpo",
+        "> conda add -c conda-forge menpo"
+      ],
+      "golden_answer": "> conda install -c conda-forge menpo"
+    }
+  ]
+}

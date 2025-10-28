@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_6",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References 'requirements.txt' file that doesn't exist in the repository for installation",
+      "correction_candidates": [
+        "Change 'pip install -r requirements.txt' to 'pip install .'",
+        "Replace with 'pip install -e .' for editable installation",
+        "Use 'python setup.py install' instead of pip install command",
+        "Change to 'pip install -r pyproject.toml'"
+      ],
+      "golden_answer": "Change 'pip install -r requirements.txt' to 'pip install .'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'qqcal auto' instead of 'qq auto' for running protocols",
+      "correction_candidates": [
+        "Change 'qqcal auto' to 'qq auto'",
+        "Replace 'qqcal auto' with 'qibocal run'",
+        "Use 'python -m qibocal auto' instead of 'qqcal auto'",
+        "Change 'qqcal auto' to 'qibocal auto'"
+      ],
+      "golden_answer": "Change 'qqcal auto' to 'qq auto'"
+    }
+  ]
+}

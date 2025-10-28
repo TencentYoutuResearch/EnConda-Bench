@@ -1,0 +1,18 @@
+{
+  "readme": "ciscotestautomation_genieparser_error_readme_1_only_E1",
+  "repo_name": "ciscotestautomation_genieparser",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command is incomplete. It installs the base 'pyats' package but omits the '[full]' extra, which is required to install all components including genieparser.",
+      "correction_candidates": [
+        "$ pip install pyats --all",
+        "$ pip install pyats-full",
+        "$ pip install 'pyats[full]'",
+        "$ pip install pyats && pip install genie"
+      ],
+      "golden_answer": "$ pip install 'pyats[full]'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_7_only_E1",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Listed unnecessary heavy dependencies like TensorFlow, PyTorch, OpenCV that are not actually required for PyLabRobot",
+      "correction_candidates": [
+        "To install PyLabRobot, simply run: pip install pylabrobot",
+        "PyLabRobot has minimal dependencies and can be installed with: pip install pylabrobot",
+        "To install PyLabRobot, you need Python 3.8+ and can install with: pip install pylabrobot",
+        "PyLabRobot requires only standard Python libraries and can be installed with: pip install pylabrobot"
+      ],
+      "golden_answer": "PyLabRobot has minimal dependencies and can be installed with: pip install pylabrobot"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_6_only_E4",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced image files in assets directory that may not exist in the repository structure",
+      "correction_candidates": [
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"https://github.com/Mirascope/mirascope/raw/main/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>",
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"./docs/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>",
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"https://raw.githubusercontent.com/Mirascope/mirascope/main/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>",
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"./images/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>"
+      ],
+      "golden_answer": "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"https://github.com/Mirascope/mirascope/raw/main/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "owid_etl_error_readme_4",
+  "repo_name": "owid_etl",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly advise running `pip install etl`, which installs a public package from PyPI instead of the local project tool and is redundant with `poetry install`.",
+      "correction_candidates": [
+        "Change `pip install etl` to `pip install .`",
+        "Run `pip install -e .` to install the package in editable mode.",
+        "Remove the `pip install etl` command.",
+        "Run `pip install etl-owid` instead."
+      ],
+      "golden_answer": "Remove the `pip install etl` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `etl grapher ...` uses an incorrect subcommand 'grapher'. The `grapher` functionality is an option for the `run` command.",
+      "correction_candidates": [
+        "Correct the command to `etl run data/garden/institution/2023-11-29/ggdc --grapher --private`",
+        "Change `etl grapher` to `etl run`.",
+        "The command is `etl build --grapher data/garden/institution/2023-11-29/ggdc --private`",
+        "Run the grapher step separately: `etl grapher-update data/garden/institution/2023-11-29/ggdc --private`"
+      ],
+      "golden_answer": "Correct the command to `etl run data/garden/institution/2023-11-29/ggdc --grapher --private`"
+    }
+  ]
+}

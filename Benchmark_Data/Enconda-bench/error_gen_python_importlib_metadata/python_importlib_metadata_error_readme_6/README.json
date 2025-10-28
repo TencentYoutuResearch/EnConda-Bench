@@ -1,0 +1,29 @@
+{
+  "readme": "python_importlib_metadata_error_readme_6",
+  "repo_name": "python_importlib_metadata",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using --no-deps flag inappropriately",
+      "correction_candidates": [
+        "pip install importlib_metadata",
+        "pip install --user importlib_metadata",
+        "pip install --upgrade importlib_metadata",
+        "python -m pip install importlib_metadata"
+      ],
+      "golden_answer": "pip install importlib_metadata"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Suggesting installation without dependencies which may cause missing dependency issues",
+      "correction_candidates": [
+        "Remove the installation instruction entirely",
+        "Change to standard pip install command",
+        "Add warning about potential dependency issues",
+        "Recommend using conda instead of pip"
+      ],
+      "golden_answer": "Change to standard pip install command"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "xknx_xknx_error_readme_3",
+  "repo_name": "xknx_xknx",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The development setup instructs to `pip install xknx`, which installs the published package from PyPI, not the local development dependencies from the requirements file.",
+      "correction_candidates": [
+        "Install requirements: `pip install .`",
+        "Install requirements: `pip install -e .[dev]`",
+        "Install requirements: `pip install --no-cache-dir -r requirements/testing.txt`",
+        "Install requirements: `pip install -r requirements/testing.txt`"
+      ],
+      "golden_answer": "Install requirements: `pip install -r requirements/testing.txt`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a specific test uses the `-m` flag, which is for selecting tests by markers, instead of the correct `-k` flag, which selects tests by keyword expressions matching their names.",
+      "correction_candidates": [
+        "pytest -vv test/management_tests/procedures_test.py -k test_nm_individual_address_serial_number_write_fail",
+        "pytest -vv test/management_tests/procedures_test.py --select test_nm_individual_address_serial_number_write_fail",
+        "pytest -vv test/management_tests/procedures_test.py::test_nm_individual_address_serial_number_write_fail",
+        "pytest -vv test/management_tests/procedures_test.py --keyword test_nm_individual_address_serial_number_write_fail"
+      ],
+      "golden_answer": "pytest -vv test/management_tests/procedures_test.py -k test_nm_individual_address_serial_number_write_fail"
+    }
+  ]
+}

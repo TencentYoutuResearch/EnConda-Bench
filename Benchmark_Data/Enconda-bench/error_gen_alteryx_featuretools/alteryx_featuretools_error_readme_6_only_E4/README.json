@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_6_only_E4",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Reference to a non-existent requirements.txt file in the project root directory",
+      "correction_candidates": [
+        "Remove the instruction to install from requirements.txt as the file doesn't exist",
+        "Change the file path to point to an existing requirements file in the correct location",
+        "Create a note that requirements.txt should be created by the user first",
+        "Replace with instruction to install dependencies using setup.py instead"
+      ],
+      "golden_answer": "Remove the instruction to install from requirements.txt as the file doesn't exist"
+    }
+  ]
+}

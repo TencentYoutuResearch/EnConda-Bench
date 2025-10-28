@@ -1,0 +1,18 @@
+{
+  "readme": "emdgroup_baybe_error_readme_4_only_E1",
+  "repo_name": "emdgroup_baybe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The recommended command for installing optional dependencies includes 'deploy', which is not a valid dependency group listed in the README. This will cause pip to fail with a 'no such extra' error.",
+      "correction_candidates": [
+        "pip install 'baybe[chem,simulation]'",
+        "pip install 'baybe[chem]' 'baybe[deploy]'",
+        "pip install 'baybe[all]'",
+        "pip install 'baybe[chem,onnx,simulation]'"
+      ],
+      "golden_answer": "pip install 'baybe[chem,simulation]'"
+    }
+  ]
+}

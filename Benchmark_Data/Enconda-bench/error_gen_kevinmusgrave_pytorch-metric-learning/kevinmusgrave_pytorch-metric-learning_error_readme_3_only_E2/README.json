@@ -1,0 +1,18 @@
+{
+  "readme": "kevinmusgrave_pytorch-metric-learning_error_readme_3_only_E2",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command `conda install -c=conda-forge ...` uses an incorrect syntax for specifying the channel.",
+      "correction_candidates": [
+        "conda install -c conda-forge pytorch-metric-learning",
+        "conda install --channel conda-forge pytorch-metric-learning",
+        "conda install pytorch-metric-learning -c conda-forge",
+        "conda install pytorch-metric-learning --from-channel conda-forge"
+      ],
+      "golden_answer": "conda install -c conda-forge pytorch-metric-learning"
+    }
+  ]
+}

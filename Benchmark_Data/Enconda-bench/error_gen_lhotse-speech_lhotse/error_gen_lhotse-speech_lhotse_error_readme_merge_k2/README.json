@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_lhotse-speech_lhotse_error_readme_merge_k2",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the Lhotse package from PyPI is incorrect. The package name is 'lhotse', not 'lhotse-speech'.",
+      "correction_candidates": [
+        "pip install lhotse-speech",
+        "pip install lhotse",
+        "pip install lhotse[all]",
+        "pip install --upgrade lhotse-speech"
+      ],
+      "golden_answer": "pip install lhotse"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The development installation command includes a non-existent extra dependency named 'full', which will cause an error because it is not defined in setup.py.",
+      "correction_candidates": [
+        "pip install -e '.[dev, full]'",
+        "pip install -e '.[dev]'",
+        "pip install -e .",
+        "pip install -e '.[developer]'"
+      ],
+      "golden_answer": "pip install -e '.[dev]'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The development installation instructions list the installation and directory change commands before the `git clone` command, which is logically incorrect as the repository must be cloned first before changing into its directory and installing dependencies.",
+      "correction_candidates": [
+        "First `cd lhotse` and `pip install -e '.[dev]'`, then `git clone https://github.com/lhotse-speech/lhotse`.",
+        "First, clone the repository with `git clone https://github.com/lhotse-speech/lhotse`, then `cd lhotse` and run `pip install -e '.[dev]'`.",
+        "First `pip install -e '.[dev]'`, then `git clone https://github.com/lhotse-speech/lhotse` and `cd lhotse`.",
+        "First `git clone https://github.com/lhotse-speech/lhotse`, then `pip install -e '.[dev]'` and `cd lhotse`."
+      ],
+      "golden_answer": "First, clone the repository with `git clone https://github.com/lhotse-speech/lhotse`, then `cd lhotse` and run `pip install -e '.[dev]'`."
+    }
+  ]
+}

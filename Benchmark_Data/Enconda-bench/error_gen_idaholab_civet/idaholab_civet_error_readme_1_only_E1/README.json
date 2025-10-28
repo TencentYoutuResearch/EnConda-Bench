@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_1_only_E1",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `sudo yum install` is specific to RHEL-based Linux distributions (like CentOS) and will fail on Debian-based systems (like Ubuntu).",
+      "correction_candidates": [
+        "Replace `sudo yum install gcc python3-devel` with `sudo apt-get install build-essential python3-dev` for Debian/Ubuntu systems.",
+        "Remove the `sudo yum install` command, as these dependencies might already be installed.",
+        "Provide instructions for both package managers, for example: 'For RHEL/CentOS, run `sudo yum install ...`. For Debian/Ubuntu, run `sudo apt-get install ...`.'",
+        "Use `pip` to install these dependencies instead of a system package manager."
+      ],
+      "golden_answer": "Provide instructions for both package managers, for example: 'For RHEL/CentOS, run `sudo yum install ...`. For Debian/Ubuntu, run `sudo apt-get install ...`.'"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "openreview_openreview-py_error_readme_4",
+  "repo_name": "openreview_openreview-py",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `git clone` command uses an incorrect URL (`openreview_py.git` with an underscore instead of a hyphen), which will cause the clone operation to fail because the repository does not exist at that URL.",
+      "correction_candidates": [
+        "git clone https://github.com/openreview/openreview-py.git",
+        "git clone git@github.com:openreview/openreview-py.git",
+        "git clone https://github.com/openreview/openreview-py",
+        "gh repo clone openreview/openreview-py"
+      ],
+      "golden_answer": "git clone https://github.com/openreview/openreview-py.git"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The example usage code shows literal strings 'username' and 'password' instead of placeholders, which could mislead a user into trying to connect with these incorrect credentials, causing an authentication failure.",
+      "correction_candidates": [
+        "username='<your username>', password='<your password>'",
+        "username=YOUR_OPENREVIEW_USERNAME, password=YOUR_OPENREVIEW_PASSWORD",
+        "username='... your username ...', password='... your password ...'",
+        "// Replace with your OpenReview credentials\nclient = openreview.Client(baseurl='https://api.openreview.net', username='<your username>', password='<your password>')"
+      ],
+      "golden_answer": "username='<your username>', password='<your password>'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_7_only_E1",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (torch transformers) that are not required for basic Mirascope installation",
+      "correction_candidates": [
+        "pip install mirascope",
+        "pip install mirascope numpy scipy",
+        "pip install mirascope pandas matplotlib",
+        "pip install mirascope requests beautifulsoup4"
+      ],
+      "golden_answer": "pip install mirascope"
+    }
+  ]
+}

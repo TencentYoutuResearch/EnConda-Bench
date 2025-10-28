@@ -1,0 +1,29 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_4",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to install from GitHub, `pip install git://github.com/rlberry-py/rlberry.git`, uses an incorrect protocol `git://`. The correct format for pip is `git+https://`.",
+      "correction_candidates": [
+        "git clone https://github.com/rlberry-py/rlberry.git && cd rlberry && pip install .",
+        "pip install https://github.com/rlberry-py/rlberry/archive/main.zip",
+        "pip install git+https://github.com/rlberry-py/rlberry.git",
+        "pip install from-git https://github.com/rlberry-py/rlberry.git"
+      ],
+      "golden_answer": "pip install git+https://github.com/rlberry-py/rlberry.git"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README suggests installing an old version of NumPy (`<1.20`) for compatibility, which is likely to cause dependency conflicts with `rlberry` and other modern libraries.",
+      "correction_candidates": [
+        "Update the command to `pip install \"numpy>=1.21\"`.",
+        "Remove the note and the command suggesting to downgrade NumPy.",
+        "Change the command to `pip install numpy --upgrade`.",
+        "Keep the note, as older NumPy versions are required for certain legacy systems."
+      ],
+      "golden_answer": "Remove the note and the command suggesting to downgrade NumPy."
+    }
+  ]
+}

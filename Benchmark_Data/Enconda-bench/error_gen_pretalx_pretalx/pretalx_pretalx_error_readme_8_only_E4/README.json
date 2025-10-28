@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_8_only_E4",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file path 'requirements/dev.txt' that may not exist",
+      "correction_candidates": [
+        "To install dependencies, run `pip install -r requirements.txt` and then `python manage.py migrate --settings=pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r dev-requirements.txt` and then `python manage.py migrate --settings=pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r requirements-dev.txt` and then `python manage.py migrate --settings=pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r setup.cfg` and then `python manage.py migrate --settings=pretalx.settings.development`."
+      ],
+      "golden_answer": "To install dependencies, run `pip install -r requirements.txt` and then `python manage.py migrate --settings=pretalx.settings.development`."
+    }
+  ]
+}

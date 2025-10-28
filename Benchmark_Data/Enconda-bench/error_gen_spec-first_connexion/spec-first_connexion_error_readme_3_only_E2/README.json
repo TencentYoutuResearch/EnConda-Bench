@@ -1,0 +1,18 @@
+{
+  "readme": "spec-first_connexion_error_readme_3_only_E2",
+  "repo_name": "spec-first_connexion",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The gunicorn command in the 'Running your application' section incorrectly specifies the worker class as `uvicorn_worker`. The correct value is `uvicorn.workers.UvicornWorker`.",
+      "correction_candidates": [
+        "$ gunicorn -k uvicorn.workers.UvicornWorker run:app",
+        "$ gunicorn --worker-class uvicorn.workers.UvicornWorker run:app",
+        "$ gunicorn -k uvicorn run:app",
+        "$ gunicorn -w 4 -k uvicorn.workers.UvicornWorker run:app"
+      ],
+      "golden_answer": "$ gunicorn -k uvicorn.workers.UvicornWorker run:app"
+    }
+  ]
+}

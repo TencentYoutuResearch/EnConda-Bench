@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_6_only_E4",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed the setup file path from setup.cfg to requirements.txt which doesn't contain version information",
+      "correction_candidates": [
+        "Change back to setup.cfg#L27",
+        "Change to pyproject.toml",
+        "Change to setup.py",
+        "Change to environment.yml"
+      ],
+      "golden_answer": "Change back to setup.cfg#L27"
+    }
+  ]
+}

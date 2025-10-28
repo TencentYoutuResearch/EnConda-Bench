@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_pgeu_pgeu-system_error_readme_merge_k2",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally using `pip` before the virtual environment is created and activated, which can lead to system-wide package conflicts.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source venv/bin/activate` command.",
+        "Combine the venv creation and pip install into one step: `python3 -m venv venv && ./venv/bin/pip install -r requirements.txt`.",
+        "Remove the virtual environment steps and install dependencies globally.",
+        "Use `pipenv install` instead of `pip` and `venv`."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source venv/bin/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python3 -m venv --virtual .venv` uses a non-existent flag `--virtual`, causing the command to fail.",
+      "correction_candidates": [
+        "Remove the `--virtual` flag. The correct command is `python3 -m venv .venv`.",
+        "Replace `python3 -m venv --virtual .venv` with `virtualenv .venv`.",
+        "Change the flag to `--name`: `python3 -m venv --name .venv`.",
+        "Correct the command to `python3 --m venv .venv`."
+      ],
+      "golden_answer": "Remove the `--virtual` flag. The correct command is `python3 -m venv .venv`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install django postgres` attempts to install the wrong package for PostgreSQL connectivity (`postgres` instead of `psycopg2-binary`) and misses other required project dependencies.",
+      "correction_candidates": [
+        "Replace `pip install django postgres` with `pip install -r requirements.txt` to install all necessary dependencies.",
+        "Change the command to `pip install django psycopg2`.",
+        "Change the command to `pip install django-postgres`.",
+        "Replace `pip install django postgres` with `pip install django psycopg2-binary`."
+      ],
+      "golden_answer": "Replace `pip install django postgres` with `pip install -r requirements.txt` to install all necessary dependencies."
+    }
+  ]
+}

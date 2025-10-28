@@ -1,0 +1,18 @@
+{
+  "readme": "quantumjot_btrack_error_readme_3_only_E1",
+  "repo_name": "quantumjot_btrack",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect conda installation command. It suggests installing from a non-existent `btrack` channel, while the primary installation method is `pip`. This will lead to a 'channel not found' error.",
+      "correction_candidates": [
+        "Replace the conda command with `conda install -c conda-forge btrack`.",
+        "Remove the incorrect conda instructions and replace them with the correct pip command: `pip install btrack`.",
+        "Change the command to `conda install btrack` and hope for the best.",
+        "Add a note that conda installation is not officially supported."
+      ],
+      "golden_answer": "Remove the incorrect conda instructions and replace them with the correct pip command: `pip install btrack`."
+    }
+  ]
+}

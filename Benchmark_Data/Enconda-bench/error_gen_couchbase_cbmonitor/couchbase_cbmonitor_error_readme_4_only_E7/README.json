@@ -1,0 +1,18 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_4_only_E7",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The prerequisites list creates a version conflict: it specifies Python 2.7, but also lists Django 2.0, which requires Python 3.5 or newer.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.5+'.",
+        "Change 'Django 2.0' to 'Django 1.11', which is compatible with Python 2.7.",
+        "Remove '* Django 2.0' as it is not a true dependency of the project.",
+        "Remove both version specifications and state that 'make' handles dependencies."
+      ],
+      "golden_answer": "Remove '* Django 2.0' as it is not a true dependency of the project."
+    }
+  ]
+}

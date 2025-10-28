@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_lmcinnes_umap_error_readme_merge_k2",
+  "repo_name": "lmcinnes_umap",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'numba' dependency is omitted from the 'Requirements' list, even though it is a critical dependency for the package to function.",
+      "correction_candidates": [
+        "In the Requirements list, add `numba`.",
+        "In the Requirements list, add `numba >= 0.50`.",
+        "In the Requirements list, add `python-numba`.",
+        "In the Requirements list, add `numba` and `llvmlite`."
+      ],
+      "golden_answer": "In the Requirements list, add `numba`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The manual installation command `python setup.py install` is suggested, which is deprecated and may fail with modern tooling.",
+      "correction_candidates": [
+        "Replace `python setup.py install` with `pip install .`.",
+        "Replace `python setup.py install` with `python -m pip install -e .`.",
+        "Replace `python setup.py install` with `pip install -e .`.",
+        "Replace `python setup.py install` with `python -m build && pip install dist/*.whl`."
+      ],
+      "golden_answer": "Replace `python setup.py install` with `python -m pip install -e .`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install optional plotting dependencies is incorrect. It uses `[plotting]` instead of the correct extra identifier `[plot]`.",
+      "correction_candidates": [
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plot]`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plots]`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install 'umap-learn[plot]'`.",
+        "Replace `pip install umap-learn[plotting]` with `pip install umap-learn matplotlib datashader holoviews`."
+      ],
+      "golden_answer": "Replace `pip install umap-learn[plotting]` with `pip install umap-learn[plot]`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The suggested order for manual dependency installation is incorrect. It advises running `pip install umap-learn` before using `conda` to install its dependencies, which can lead to installation failures.",
+      "correction_candidates": [
+        "Move the `pip install umap-learn` command to be the last step, after all `conda install` commands.",
+        "Combine all `conda install` commands into one and place it before the `pip install` command.",
+        "Remove the `pip install` command and add `umap-learn` to the conda install command: `conda install ... umap-learn`.",
+        "Use `conda install` for all dependencies first, then use `pip install --no-deps umap-learn`."
+      ],
+      "golden_answer": "Move the `pip install umap-learn` command to be the last step, after all `conda install` commands."
+    }
+  ]
+}

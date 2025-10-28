@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_5_only_E1",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation command includes an incompatible numpy version (1.18) that is older than the minimum supported version (1.20) specified in the version table",
+      "correction_candidates": [
+        "`pip install openaerostruct`",
+        "`pip install openaerostruct numpy>=1.20`",
+        "`pip install openaerostruct scipy matplotlib`",
+        "`pip install openaerostruct --upgrade`"
+      ],
+      "golden_answer": "`pip install openaerostruct`"
+    }
+  ]
+}

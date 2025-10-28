@@ -1,0 +1,29 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_1",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README suggests installing the wrong package `python-ftp`. The correct package name is `pyftpdlib`.",
+      "correction_candidates": [
+        "pip install pyftpdlib",
+        "pip install ftpdlib",
+        "pip install python-ftplib-server",
+        "pip install py-ftpd-lib"
+      ],
+      "golden_answer": "pip install pyftpdlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to start the FTP server is incorrect. `pyftpdlib` does not register a direct command-line executable with `start` and `--port` arguments in this format.",
+      "correction_candidates": [
+        "pyftpdlib --port 2121 --write",
+        "python3 -m pyftpdlib --write",
+        "python3 pyftpdlib --port=2121 --write",
+        "ftpd --module pyftpdlib --write"
+      ],
+      "golden_answer": "python3 -m pyftpdlib --write"
+    }
+  ]
+}

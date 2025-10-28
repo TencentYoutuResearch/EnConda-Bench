@@ -1,0 +1,18 @@
+{
+  "readme": "mirageoscience_geoapps_error_readme_1_only_E7",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states 'this project requires Python 3.7 to run', which may conflict with the Python versions badge and cause confusion about actual compatibility.",
+      "correction_candidates": [
+        "Remove the sentence 'Please note that this project requires Python 3.7 to run.'",
+        "Change the sentence to 'Please note that this project requires Python >= 3.8 to run.' to match the likely supported versions.",
+        "Remove the `pyversions` badge to avoid contradiction.",
+        "Change the sentence to 'Check the `pyversions` badge for compatibility details.'"
+      ],
+      "golden_answer": "Remove the sentence 'Please note that this project requires Python 3.7 to run.'"
+    }
+  ]
+}

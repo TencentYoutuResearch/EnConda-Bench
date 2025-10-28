@@ -1,0 +1,29 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_4",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the 'GitHub Cloning' section, the instruction `conda create --name clarity python=2.7` specifies Python 2.7, which is end-of-life and incompatible with modern scientific computing libraries and syntax used in this project.",
+      "correction_candidates": [
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python",
+        "conda create --name clarity python=3",
+        "conda create --name clarity python=2.7 anaconda"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Challenges' section, the link to 'The 3rd Clarity Enhancement Challenge' uses an incorrect relative path `./cec3`. The correct path should include the `recipes` directory.",
+      "correction_candidates": [
+        "Change the path to `recipes/cec3`",
+        "Change the path to `./recipes/cec3`",
+        "Change the path to `clarity/recipes/cec3`",
+        "Change the path to `../recipes/cec3`"
+      ],
+      "golden_answer": "Change the path to `./recipes/cec3`"
+    }
+  ]
+}

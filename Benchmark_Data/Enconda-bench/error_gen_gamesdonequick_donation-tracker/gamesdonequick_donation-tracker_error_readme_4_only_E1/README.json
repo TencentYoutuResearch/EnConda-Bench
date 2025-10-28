@@ -1,0 +1,18 @@
+{
+  "readme": "gamesdonequick_donation-tracker_error_readme_4_only_E1",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the INSTALLED_APPS list, 'paypal.standard.ipn' is misspelled as 'paypal.ipn'. This will cause an ImportError when Django tries to load the application.",
+      "correction_candidates": [
+        "Change 'paypal.ipn' to 'paypal.standard.ipn'.",
+        "Change 'paypal.ipn' to 'django_paypal.ipn'.",
+        "Remove the 'paypal.ipn' line as it is optional.",
+        "Change 'paypal.ipn' to 'paypal'."
+      ],
+      "golden_answer": "Change 'paypal.ipn' to 'paypal.standard.ipn'."
+    }
+  ]
+}

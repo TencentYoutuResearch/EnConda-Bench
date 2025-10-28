@@ -1,0 +1,18 @@
+{
+  "readme": "nakagami_pyfirebirdsql_error_readme_2_only_E4",
+  "repo_name": "nakagami_pyfirebirdsql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README implies that a specific, non-existent file path (`/foo/bar.fdb`) is required to run the example, instead of treating it as a placeholder.",
+      "correction_candidates": [
+        "Remove the line 'Before running the example, ensure the database file exists at `/foo/bar.fdb`.' The path in the example is just a placeholder.",
+        "Change the path in the example to `database=':memory:'` to use an in-memory database.",
+        "Provide a download link for the `/foo/bar.fdb` file.",
+        "Remove the line 'Before running the example, ensure the database file exists at `/foo/bar.fdb`.' and change the path in the example to a relative path like 'example.fdb'."
+      ],
+      "golden_answer": "Remove the line 'Before running the example, ensure the database file exists at `/foo/bar.fdb`.' The path in the example is just a placeholder."
+    }
+  ]
+}

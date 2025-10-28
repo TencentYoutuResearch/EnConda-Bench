@@ -1,0 +1,18 @@
+{
+  "readme": "diofant_diofant_error_readme_2_only_E4",
+  "repo_name": "diofant_diofant",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs the user to edit a configuration file `config/settings.ini` which does not exist in the repository.",
+      "correction_candidates": [
+        "Remove the instruction to edit `config/settings.ini`.",
+        "Explain that the correct file to edit is `diofant/core/settings.py`.",
+        "Instruct the user to first create the `config/settings.ini` file.",
+        "Provide a command like `python setup.py --configure` to generate the file."
+      ],
+      "golden_answer": "Remove the instruction to edit `config/settings.ini`."
+    }
+  ]
+}

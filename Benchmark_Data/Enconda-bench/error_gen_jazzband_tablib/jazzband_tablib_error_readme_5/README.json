@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_tablib_error_readme_5",
+  "repo_name": "jazzband_tablib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation section includes unnecessary system dependencies (libxml2-dev, libxslt1-dev, python3-dev) that are not actually required for tablib",
+      "correction_candidates": [
+        "Remove the system dependencies line and keep only: pip install tablib",
+        "Replace with: sudo apt-get install python3-pip && pip install tablib",
+        "Change to: pip install --upgrade pip && pip install tablib",
+        "Use: conda install -c conda-forge tablib"
+      ],
+      "golden_answer": "Remove the system dependencies line and keep only: pip install tablib"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - pip install should come after system dependency installation, not on the same line",
+      "correction_candidates": [
+        "Separate the commands into two lines with pip install after the apt-get command",
+        "Move pip install tablib to a separate code block after the system dependencies",
+        "Add && between the apt-get and pip commands to ensure proper sequencing",
+        "Create a virtual environment first, then install system dependencies, then pip install"
+      ],
+      "golden_answer": "Separate the commands into two lines with pip install after the apt-get command"
+    }
+  ]
+}

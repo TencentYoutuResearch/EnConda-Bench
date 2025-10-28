@@ -1,0 +1,29 @@
+{
+  "readme": "zostera_django-bootstrap3_error_readme_7",
+  "repo_name": "zostera_django-bootstrap3",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect pip install command referencing a requirements file instead of the package name",
+      "correction_candidates": [
+        "pip install django-bootstrap3",
+        "pip install -e .",
+        "pip install --upgrade django-bootstrap3",
+        "python -m pip install django-bootstrap3"
+      ],
+      "golden_answer": "pip install django-bootstrap3"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect path 'examples/demo' for the example app instead of 'example'",
+      "correction_candidates": [
+        "An example app is provided in `example`. You can run it with `make example`.",
+        "An example app is provided in `demo/`. You can run it with `make example`.",
+        "An example app is provided in `sample/`. You can run it with `make example`.",
+        "An example app is provided in `examples/`. You can run it with `make example`."
+      ],
+      "golden_answer": "An example app is provided in `example`. You can run it with `make example`."
+    }
+  ]
+}

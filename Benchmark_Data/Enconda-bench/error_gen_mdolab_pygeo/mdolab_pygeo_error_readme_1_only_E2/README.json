@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_pygeo_error_readme_1_only_E2",
+  "repo_name": "mdolab_pygeo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to build the local documentation is `make docs`, which is incorrect. The correct command specified in the Makefile is `make html`.",
+      "correction_candidates": [
+        "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal.",
+        "To locally build the documentation, run `sphinx-build -b html doc doc/_build` from the root directory.",
+        "To locally build the documentation, enter the `doc` folder and enter `make` in terminal.",
+        "To locally build the documentation, enter the `doc` folder and run the `build.sh` script."
+      ],
+      "golden_answer": "To locally build the documentation, enter the `doc` folder and enter `make html` in terminal."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_3_only_E4",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the examples directory is broken. It incorrectly points to a singular `example` directory instead of the correct plural `examples` directory.",
+      "correction_candidates": [
+        "Change the link `.../blob/master/example/` to point to `.../tree/master/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/main/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/master/docs/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/master/examples/`."
+      ],
+      "golden_answer": "Change the link `.../blob/master/example/` to point to `.../blob/master/examples/`."
+    }
+  ]
+}

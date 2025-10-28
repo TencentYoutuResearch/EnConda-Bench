@@ -1,0 +1,18 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_2_only_E6",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly advise modifying settings.py to add the app before it has been installed via pip.",
+      "correction_candidates": [
+        "The installation steps are in the wrong order. The `pip install` command should be executed before modifying `settings.py`.",
+        "The settings should be modified after running `manage.py migrate`.",
+        "The `INSTALLED_APPS` setting should be modified after creating a virtual environment.",
+        "The `pip install` command should be executed first, then `manage.py startapp`, then the `settings.py` modification."
+      ],
+      "golden_answer": "The installation steps are in the wrong order. The `pip install` command should be executed before modifying `settings.py`."
+    }
+  ]
+}

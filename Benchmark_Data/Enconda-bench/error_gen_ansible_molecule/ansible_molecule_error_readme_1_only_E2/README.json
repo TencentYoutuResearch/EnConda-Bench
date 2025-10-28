@@ -1,0 +1,18 @@
+{
+  "readme": "ansible_molecule_error_readme_1_only_E2",
+  "repo_name": "ansible_molecule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python3 -m pip install -u setuptools pip tox` uses an invalid flag `-u`. The correct flag for upgrading packages is `-U` or `--upgrade`.",
+      "correction_candidates": [
+        "python3 -m pip install -U setuptools pip tox",
+        "python3 -m pip install --upgrade setuptools pip tox",
+        "python3 -m pip install --update setuptools pip tox",
+        "python3 -m pip install -upgrade setuptools pip tox"
+      ],
+      "golden_answer": "python3 -m pip install -U setuptools pip tox"
+    }
+  ]
+}

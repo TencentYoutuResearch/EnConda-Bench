@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_1_only_E2",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The main installation command uses an incorrect package name 'rst-check' instead of 'rstcheck'.",
+      "correction_candidates": [
+        "$ pip install rstcheck",
+        "$ pip install rst_check",
+        "$ pip install python-rstcheck",
+        "$ pip install rst-checker"
+      ],
+      "golden_answer": "$ pip install rstcheck"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_1_only_E6",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The python dependencies are installed using `pip` before the virtual environment is created, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source venv/activate` command.",
+        "Add the `--user` flag to the pip command: `pip install --user -r requirements.txt`.",
+        "Remove the virtual environment creation steps and install dependencies globally.",
+        "Run `python3 -m pip install -r requirements.txt` instead of `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source venv/activate` command."
+    }
+  ]
+}

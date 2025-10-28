@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_rubisco-sfa_ilamb_error_readme_merge_k3",
+  "repo_name": "rubisco-sfa_ilamb",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions list a dependency `numby` which does not exist; the correct package name is `numpy`.",
+      "correction_candidates": [
+        "pip install numpy pandas netCDF4 matplotlib",
+        "conda install numpy pandas netCDF4 matplotlib",
+        "pip install ilamb --no-deps && pip install numpy pandas netCDF4 matplotlib",
+        "pip install num-py pandas netCDF4 matplotlib"
+      ],
+      "golden_answer": "pip install numpy pandas netCDF4 matplotlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `ilamb-run -configure my_ilamb_file.cfg` uses an incorrect single-dash for a long-form argument. The correct syntax is `--configure`.",
+      "correction_candidates": [
+        "ilamb-run --run my_ilamb_file.cfg",
+        "ilamb-run --configure my_ilamb_file.cfg",
+        "ilamb-run -c my_ilamb_file.cfg",
+        "ilamb-run my_ilamb_file.cfg"
+      ],
+      "golden_answer": "ilamb-run --configure my_ilamb_file.cfg"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. The package is installed globally with pip before the virtual environment is created and activated.",
+      "correction_candidates": [
+        "Move the `pip install ilamb` command to after the virtual environment is created and activated.",
+        "Run `pip install ilamb --user` instead of `pip install ilamb`.",
+        "Remove the virtual environment steps as they are optional.",
+        "Run `python -m venv venv --system-site-packages` to include globally installed packages."
+      ],
+      "golden_answer": "Move the `pip install ilamb` command to after the virtual environment is created and activated."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs the user to point to a local file `./data/quantiles_Whittaker_cmip5v6.parquet` without providing the file or instructions on how to download it.",
+      "correction_candidates": [
+        "The instructions should link to the database file on GitHub for download.",
+        "The file is included in the pip package and the path should be relative to the installation directory.",
+        "The file should be specified with an absolute path, not a relative one.",
+        "The instructions should specify cloning the repository to get the data file."
+      ],
+      "golden_answer": "The instructions should link to the database file on GitHub for download."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions for installing from source are missing a critical build dependency, `cython`, which is required to compile some package components.",
+      "correction_candidates": [
+        "The instructions should include installing `cython` before `pip install .`",
+        "The instructions should use `python setup.py install` instead of `pip install .`",
+        "The instructions are missing the `setuptools` dependency.",
+        "The repository should be cloned with `--recursive` to fetch submodules."
+      ],
+      "golden_answer": "The instructions should include installing `cython` before `pip install .`"
+    }
+  ]
+}

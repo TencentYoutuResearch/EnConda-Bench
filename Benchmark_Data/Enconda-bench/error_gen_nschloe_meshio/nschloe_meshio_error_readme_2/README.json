@@ -1,0 +1,29 @@
+{
+  "readme": "nschloe_meshio_error_readme_2",
+  "repo_name": "nschloe_meshio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for the ParaView plugin are in the wrong logical order. The user is asked to find and load the `paraview-meshio-plugin.py` file *before* being instructed to install `meshio`. The plugin file will not exist until `meshio` is installed, causing this procedure to fail.",
+      "correction_candidates": [
+        "Correct order: 1. Install meshio. 2. Open ParaView. 3. Find and load the plugin file. 4. Activate Auto Load.",
+        "Correct order: 1. Open ParaView. 2. Install meshio. 3. Find and load the plugin file. 4. Activate Auto Load.",
+        "Correct order: 1. Find and load the plugin file. 2. Install meshio. 3. Open ParaView. 4. Activate Auto Load.",
+        "Correct order: 1. Activate Auto Load. 2. Install meshio. 3. Open ParaView. 4. Find and load the plugin file."
+      ],
+      "golden_answer": "Correct order: 1. Install meshio. 2. Open ParaView. 3. Find and load the plugin file. 4. Activate Auto Load."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instruction 'Install meshio for the Python major version that ParaView uses' is missing the critical command to actually determine ParaView's Python version. Without this, the user is likely to install meshio for their system's default Python, which may be incompatible with ParaView's bundled Python interpreter.",
+      "correction_candidates": [
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check `python --version`).",
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check ParaView's 'About' dialog).",
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check `pvpython --version`).",
+        "The first step should be: Install meshio for Python 3."
+      ],
+      "golden_answer": "The first step should be: Install meshio for the Python major version that ParaView uses (check `pvpython --version`)."
+    }
+  ]
+}

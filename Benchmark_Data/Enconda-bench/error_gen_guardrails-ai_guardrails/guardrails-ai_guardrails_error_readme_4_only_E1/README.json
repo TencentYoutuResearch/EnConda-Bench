@@ -1,0 +1,18 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_4_only_E1",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Installation' section is missing the primary command `pip install guardrails-ai`, which is required to install the package.",
+      "correction_candidates": [
+        "The package is installed automatically when `guardrails configure` is run.",
+        "Add `pip install guardrails-ai` to the 'Installation' section.",
+        "Add `conda install guardrails-ai` to the 'Installation' section.",
+        "Add instructions to clone the repository and run `python setup.py install`."
+      ],
+      "golden_answer": "Add `pip install guardrails-ai` to the 'Installation' section."
+    }
+  ]
+}

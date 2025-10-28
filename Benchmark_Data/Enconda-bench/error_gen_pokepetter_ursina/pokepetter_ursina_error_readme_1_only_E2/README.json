@@ -1,0 +1,18 @@
+{
+  "readme": "pokepetter_ursina_error_readme_1_only_E2",
+  "repo_name": "pokepetter_ursina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command `pip install ursina-engine` is incorrect; the package name is `ursina`.",
+      "correction_candidates": [
+        "Change `pip install ursina-engine` to `pip install ursina`.",
+        "Change `pip install ursina-engine` to `pip install ursina --stable`.",
+        "Change `pip install ursina-engine` to `python -m pip install ursina`.",
+        "Change `pip install ursina-engine` to `pip get ursina`."
+      ],
+      "golden_answer": "Change `pip install ursina-engine` to `pip install ursina`."
+    }
+  ]
+}

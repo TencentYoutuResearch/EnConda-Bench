@@ -1,0 +1,18 @@
+{
+  "readme": "mov-cli_mov-cli_error_readme_2_only_E7",
+  "repo_name": "mov-cli_mov-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python version 3 or above is required, which is too broad and incorrect. The package requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change 'Python version 3 or above' to 'Python version 3.8 or above'.",
+        "Change 'Python version 3 or above' to 'Python version 3.6 or above'.",
+        "Change 'Python version 3 or above' to 'the latest version of Python 3'.",
+        "Add a `python_requires` check in the setup file to enforce the version."
+      ],
+      "golden_answer": "Change 'Python version 3 or above' to 'Python version 3.8 or above'."
+    }
+  ]
+}

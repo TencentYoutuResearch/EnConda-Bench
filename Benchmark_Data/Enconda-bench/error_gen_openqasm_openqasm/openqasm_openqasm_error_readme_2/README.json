@@ -1,0 +1,29 @@
+{
+  "readme": "openqasm_openqasm_error_readme_2",
+  "repo_name": "openqasm_openqasm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly tell the user to install dependencies with pip before creating and activating the virtual environment, which can lead to installing packages in the global or user site-packages.",
+      "correction_candidates": [
+        "First, create and activate a virtual environment, then run `pip install -r requirements.txt` inside it.",
+        "The `pip install` command should use the `--user` flag to avoid system-wide installation.",
+        "Use `conda` to manage environments instead of `venv`.",
+        "Run `python setup.py develop` instead of using pip to install from requirements.txt."
+      ],
+      "golden_answer": "First, create and activate a virtual environment, then run `pip install -r requirements.txt` inside it."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The statement 'This project is compatible with Python' is too vague and does not specify the required version, which can lead to compatibility issues if the user has an unsupported version installed.",
+      "correction_candidates": [
+        "This project requires Python 3.8 or newer.",
+        "This project is compatible with Python 2.7.",
+        "This project is compatible with the latest stable version of Python 3.",
+        "The required Python version is specified in the `setup.py` file."
+      ],
+      "golden_answer": "This project requires Python 3.8 or newer."
+    }
+  ]
+}

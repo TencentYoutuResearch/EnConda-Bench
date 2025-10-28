@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_6_only_E6",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added installation step for pytest before running tests, creating logical order error by requiring dependency installation in testing section",
+      "correction_candidates": [
+        "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation.",
+        "The unit tests in mpmath/tests/ can be run using pytest. Install it with ``pip install pytest`` if not already available, then run ``pytest mpmath/tests/``.",
+        "To run the unit tests in mpmath/tests/, use the pytest framework by executing ``pytest`` in the project root directory.",
+        "Run the unit tests located in mpmath/tests/ using ``python -m pytest`` after ensuring pytest is installed in your environment."
+      ],
+      "golden_answer": "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation."
+    }
+  ]
+}

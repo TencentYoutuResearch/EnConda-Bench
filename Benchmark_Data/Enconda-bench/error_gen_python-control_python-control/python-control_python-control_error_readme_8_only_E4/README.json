@@ -1,0 +1,18 @@
+{
+  "readme": "python-control_python-control_error_readme_8_only_E4",
+  "repo_name": "python-control_python-control",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed the Slycot repository URL to an incorrect path that doesn't exist",
+      "correction_candidates": [
+        "https://github.com/python-control/Slycot",
+        "https://github.com/python-control/slycot-python",
+        "https://github.com/control-systems/Slycot",
+        "https://github.com/scipy/Slycot"
+      ],
+      "golden_answer": "https://github.com/python-control/Slycot"
+    }
+  ]
+}

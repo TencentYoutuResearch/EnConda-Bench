@@ -1,0 +1,18 @@
+{
+  "readme": "kevinmusgrave_pytorch-metric-learning_error_readme_2_only_E4",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to format code points to a non-existent script path `./scripts/format.sh` instead of the correct `./format_code.sh`.",
+      "correction_candidates": [
+        "Change the command to `bash ./format_code.sh`.",
+        "Change the command to `sh format_code.sh`.",
+        "Change the command to `./format_code.sh`.",
+        "Change the command to `black . && isort .`."
+      ],
+      "golden_answer": "Change the command to `./format_code.sh`."
+    }
+  ]
+}

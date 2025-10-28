@@ -1,0 +1,18 @@
+{
+  "readme": "python-control_python-control_error_readme_1_only_E2",
+  "repo_name": "python-control_python-control",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests, `pytest --v`, uses an incorrect flag for verbosity, which should be `-v`.",
+      "correction_candidates": [
+        "The correct command is `pytest -v`.",
+        "The correct command is `pytest --verbose`.",
+        "The correct command is `pytest test -v`.",
+        "The correct command is `pytest --verbosity=1`."
+      ],
+      "golden_answer": "The correct command is `pytest -v`."
+    }
+  ]
+}

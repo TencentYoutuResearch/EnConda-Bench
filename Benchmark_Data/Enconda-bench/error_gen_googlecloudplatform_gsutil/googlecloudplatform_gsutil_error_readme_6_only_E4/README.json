@@ -1,0 +1,18 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_6_only_E4",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent dependencies.txt file instead of requirements.txt",
+      "correction_candidates": [
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r requirements.txt`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r setup.cfg`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r pyproject.toml`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -e .`."
+      ],
+      "golden_answer": "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r requirements.txt`."
+    }
+  ]
+}

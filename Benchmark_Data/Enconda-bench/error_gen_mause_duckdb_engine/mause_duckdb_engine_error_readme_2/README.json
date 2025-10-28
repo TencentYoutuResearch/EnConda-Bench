@@ -1,0 +1,29 @@
+{
+  "readme": "mause_duckdb_engine_error_readme_2",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example connection string for a file-based database, `duckdb:///path/to/duck.db`, is incorrect for an absolute path. It should use four slashes (`////`) to denote an absolute path from the root directory.",
+      "correction_candidates": [
+        "engine = sqlalchemy.create_engine('duckdb:////path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:/path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:///./path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:path/to/duck.db')"
+      ],
+      "golden_answer": "engine = sqlalchemy.create_engine('duckdb:////path/to/duck.db')"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The note about pandas `read_sql()` chunksize incorrectly states that the issue occurs in duckdb versions `>=0.5.0`, which is the opposite of the truth. The issue was resolved in those versions.",
+      "correction_candidates": [
+        "The chunksize parameter is fully supported in all versions.",
+        "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb",
+        "NOTE: this is an issue in all versions of duckdb",
+        "NOTE: this is only an issue in versions <0.5.0 of duckdb"
+      ],
+      "golden_answer": "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb"
+    }
+  ]
+}

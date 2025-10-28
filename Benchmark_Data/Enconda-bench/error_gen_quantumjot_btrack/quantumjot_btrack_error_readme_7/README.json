@@ -1,0 +1,29 @@
+{
+  "readme": "quantumjot_btrack_error_readme_7",
+  "repo_name": "quantumjot_btrack",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified support for Python 2.7 which is deprecated and incompatible with modern btrack versions",
+      "correction_candidates": [
+        "Remove Python 2.7 support and use only Python 3.8+",
+        "Update to Python 3.7+ minimum requirement",
+        "Change to Python 3.6+ as the minimum supported version",
+        "Use the original PyPI badge that shows current supported Python versions"
+      ],
+      "golden_answer": "Use the original PyPI badge that shows current supported Python versions"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used invalid pip parameter '--python-version 2.7' which is not a valid pip install option",
+      "correction_candidates": [
+        "pip install btrack",
+        "python2.7 -m pip install btrack",
+        "pip3 install btrack",
+        "conda install -c conda-forge btrack"
+      ],
+      "golden_answer": "pip install btrack"
+    }
+  ]
+}

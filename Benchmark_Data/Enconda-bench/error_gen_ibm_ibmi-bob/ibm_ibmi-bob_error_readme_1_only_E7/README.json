@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_1_only_E7",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python is a required dependency but does not specify a version, which can lead to compatibility problems.",
+      "correction_candidates": [
+        "Requires Python 2.7 or higher.",
+        "Requires Python 3.6 or newer.",
+        "Bob does not have a dependency on Python; the core build engine is GNU Make.",
+        "Requires the latest version of Python available via yum."
+      ],
+      "golden_answer": "Bob does not have a dependency on Python; the core build engine is GNU Make."
+    }
+  ]
+}

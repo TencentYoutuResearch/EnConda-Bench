@@ -1,0 +1,18 @@
+{
+  "readme": "transientskp_tkp_error_readme_3_only_E4",
+  "repo_name": "transientskp_tkp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to install Python dependencies points to a non-existent file `requirements/dev.txt`. The correct file is likely `requirements.txt` in the project root.",
+      "correction_candidates": [
+        "The command should be `pip install -e .` to install in editable mode from `setup.py`.",
+        "The correct file path is `requirements.txt`, so the command should be `pip install -r requirements.txt`.",
+        "You need to create the `requirements/dev.txt` file first by copying it from an example file.",
+        "The correct command is `pip install -r requirements/requirements.txt`."
+      ],
+      "golden_answer": "The correct file path is `requirements.txt`, so the command should be `pip install -r requirements.txt`."
+    }
+  ]
+}

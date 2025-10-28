@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_4_only_E8",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The 'Quick Start' guide is incomplete. It omits the database migration step (`manage.py migrate`) and the command to create a superuser, leaving the user unable to log in or use the application properly.",
+      "correction_candidates": [
+        "Add a step `python manage.py check` before running the server.",
+        "Add the steps `python manage.py migrate` and `python manage.py createsuperuser` before the `runserver` command.",
+        "Add a note telling the user to configure the `settings.py` file before running the server.",
+        "Add the step `python manage.py collectstatic` before `runserver`."
+      ],
+      "golden_answer": "Add the steps `python manage.py migrate` and `python manage.py createsuperuser` before the `runserver` command."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "benadida_helios-server_error_readme_8",
+  "repo_name": "benadida_helios-server",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect configuration file path 'settings/local.py' that may not exist",
+      "correction_candidates": [
+        "Configure database settings by editing the main configuration in `helios/settings.py`:",
+        "Configure database settings by editing the main configuration in `config/settings.py`:",
+        "Configure database settings by editing the main configuration in `helios_server/settings.py`:",
+        "Configure database settings by editing the main configuration in `local_settings.py`:"
+      ],
+      "golden_answer": "Configure database settings by editing the main configuration in `helios/settings.py`:"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Providing vague version compatibility statement 'Python 2.x or 3.x' without specific version requirements",
+      "correction_candidates": [
+        "Note: This system requires Python 3.8 or higher for optimal compatibility.",
+        "Note: This system requires Python 3.6+ for compatibility with modern dependencies.",
+        "Note: This system requires Python 3.7 or later versions.",
+        "Note: This system requires Python >= 3.8 for full feature support."
+      ],
+      "golden_answer": "Note: This system requires Python 3.8 or higher for optimal compatibility."
+    }
+  ]
+}

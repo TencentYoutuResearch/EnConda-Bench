@@ -1,0 +1,18 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_3_only_E6",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The example code demonstrates calling `fit.summary()` before the `fit` object is created by `model.sample()`, which will cause a NameError.",
+      "correction_candidates": [
+        "Initialize `fit` before the summary call: `fit = None`.",
+        "The `summary` method should be called on the model, not the fit object: `model.summary()`.",
+        "Move the `fit = model.sample(...)` line before the `fit.summary()` line.",
+        "Combine the calls into one line: `model.sample(chains=4, data=data_file).summary()`."
+      ],
+      "golden_answer": "Move the `fit = model.sample(...)` line before the `fit.summary()` line."
+    }
+  ]
+}

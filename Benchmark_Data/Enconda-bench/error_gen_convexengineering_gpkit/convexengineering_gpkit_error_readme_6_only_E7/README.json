@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_6_only_E7",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7 version requirement",
+      "correction_candidates": [
+        "Change to Python 3.6 or higher for current GPkit versions",
+        "Change to Python 3.8+ for best performance and latest features",
+        "Change to Python 3.7-3.11 for compatibility with all dependencies",
+        "Remove specific Python version requirement entirely"
+      ],
+      "golden_answer": "Change to Python 3.6 or higher for current GPkit versions"
+    }
+  ]
+}

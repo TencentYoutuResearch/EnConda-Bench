@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_1_only_E4",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the example configuration file is incorrect. The directory is 'configs', not 'config'.",
+      "correction_candidates": [
+        "Copy from ./configs/example.ini to ./config.ini",
+        "Copy from ./config.ini.example to ./config.ini",
+        "Rename ./configs/example.ini to config.ini",
+        "Copy from ./example.ini to ./config.ini"
+      ],
+      "golden_answer": "Copy from ./configs/example.ini to ./config.ini"
+    }
+  ]
+}

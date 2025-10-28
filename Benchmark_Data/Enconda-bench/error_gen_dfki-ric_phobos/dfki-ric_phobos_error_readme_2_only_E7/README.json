@@ -1,0 +1,18 @@
+{
+  "readme": "dfki-ric_phobos_error_readme_2_only_E7",
+  "repo_name": "dfki-ric_phobos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that Phobos works with 'the latest version of Blender' instead of the specific, tested version v3.3LTS, which can lead to compatibility issues due to Blender's API changes between versions.",
+      "correction_candidates": [
+        "Phobos is an add-on for the open-source 3D modeling software Blender v2.8+.",
+        "Phobos is an add-on for the open-source 3D modeling software Blender v3.3LTS.",
+        "Phobos is an add-on for the open-source 3D modeling software Blender (any version with Python 3).",
+        "Phobos is an add-on for the open-source 3D modeling software Blender (latest stable release)."
+      ],
+      "golden_answer": "Phobos is an add-on for the open-source 3D modeling software Blender v3.3LTS."
+    }
+  ]
+}

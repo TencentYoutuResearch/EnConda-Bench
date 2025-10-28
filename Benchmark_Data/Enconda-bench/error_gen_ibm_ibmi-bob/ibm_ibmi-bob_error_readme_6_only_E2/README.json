@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_6_only_E2",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Shows incorrect order of commands - running 'make install' before 'bob --build' which is backwards",
+      "correction_candidates": [
+        "Change to 'bob --build && make install' to build first then install",
+        "Replace with just 'bob --build' as make install is not needed",
+        "Use 'bob --install && bob --build' for proper Bob-specific commands",
+        "Change to 'make clean && bob --build' to clean before building"
+      ],
+      "golden_answer": "Replace with just 'bob --build' as make install is not needed"
+    }
+  ]
+}

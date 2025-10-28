@@ -1,0 +1,18 @@
+{
+  "readme": "mad-lab-fau_biopsykit_error_readme_3_only_E4",
+  "repo_name": "mad-lab-fau_biopsykit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to activate the virtual environment has an incorrect path; it uses `venv/bin/activate` instead of the correct `.venv/bin/activate`, as poetry creates the virtual environment directory with a leading dot.",
+      "correction_candidates": [
+        "Change the path to `source .venv/bin/activate`.",
+        "Change the path to `source .venv/scripts/activate`.",
+        "Change the path to `source venv/activate`.",
+        "Change the command to `poetry activate`."
+      ],
+      "golden_answer": "Change the path to `source .venv/bin/activate`."
+    }
+  ]
+}

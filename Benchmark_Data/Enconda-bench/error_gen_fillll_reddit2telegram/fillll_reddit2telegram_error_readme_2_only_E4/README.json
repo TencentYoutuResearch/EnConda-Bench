@@ -1,0 +1,18 @@
+{
+  "readme": "fillll_reddit2telegram_error_readme_2_only_E4",
+  "repo_name": "fillll_reddit2telegram",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path `~/reddit2telegram/scripts/auto_update.sh` in the cron job is incorrect. The `auto_update.sh` script is located in the root of the project directory, not in a `scripts` subdirectory.",
+      "correction_candidates": [
+        "Change the path to `~/reddit2telegram/auto_update.sh`",
+        "Change the path to `/etc/reddit2telegram/auto_update.sh`",
+        "Change the path to `~/auto_update.sh`",
+        "Change the path to `./reddit2telegram/auto_update.sh`"
+      ],
+      "golden_answer": "Change the path to `~/reddit2telegram/auto_update.sh`"
+    }
+  ]
+}

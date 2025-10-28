@@ -1,0 +1,29 @@
+{
+  "readme": "datactive_bigbang_error_readme_8",
+  "repo_name": "datactive_bigbang",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Adding Docker as an unnecessary dependency that is not actually required for BigBang installation",
+      "correction_candidates": [
+        "Remove Docker from the list of required dependencies",
+        "Keep only Git and Pip as the required dependencies",
+        "Delete the Docker requirement since it's not used in installation",
+        "Remove ', and Docker' from the dependencies list"
+      ],
+      "golden_answer": "Remove ', and Docker' from the dependencies list"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect file path 'config/urls.txt' instead of the correct 'examples/urls.txt'",
+      "correction_candidates": [
+        "Change config/urls.txt to examples/urls.txt",
+        "Update the file path to point to the examples directory",
+        "Fix the path from config/ to examples/ directory",
+        "Correct the directory reference to match the existing examples folder"
+      ],
+      "golden_answer": "Change config/urls.txt to examples/urls.txt"
+    }
+  ]
+}

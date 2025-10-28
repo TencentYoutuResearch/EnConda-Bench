@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_jacebrowning_memegen_error_readme_merge_k4",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The documentation incorrectly states that the escape pattern for a question mark is `~qu` instead of `~q`.",
+      "correction_candidates": [
+        "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + Q (~q) → question mark (?)`.",
+        "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + QM (~qm) → question mark (?)`.",
+        "In the example URL `.../~hspecial_characters~q/...`, replace `~q` with `~qu` to match the documentation.",
+        "Remove the line for the question mark escape pattern as it is a reserved character that cannot be escaped."
+      ],
+      "golden_answer": "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + Q (~q) → question mark (?)`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The documentation provides an example using the 'arial' font, which is not listed as an available font and will not work.",
+      "correction_candidates": [
+        "Add 'Arial' to the list of available fonts in the table.",
+        "Remove the example sentence that suggests using the non-existent 'arial' font.",
+        "Change the example font from `font=arial` to `font=impact`, which is a valid font.",
+        "Add a note specifying that `font=arial` is an alias for `font=notosans`."
+      ],
+      "golden_answer": "Remove the example sentence that suggests using the non-existent 'arial' font."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The documentation incorrectly states that users must first visit the docs page to activate a session, which is a non-existent and unnecessary step for this stateless API.",
+      "correction_candidates": [
+        "Change the activation URL from `/docs/` to `/api/v1/activate`.",
+        "Clarify that session activation is only required for `POST` requests.",
+        "Remove the note about needing to visit the docs page to activate a session, as this step is not required.",
+        "Add a `token` parameter to all example URLs to reflect the session activation requirement."
+      ],
+      "golden_answer": "Remove the note about needing to visit the docs page to activate a session, as this step is not required."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The 'Layouts' section mentions and provides an example for a `bottom` layout, which is not a valid option. The only valid options are `default` and `top`.",
+      "correction_candidates": [
+        "Change the example to use `layout=top` and update the accompanying text to only mention `default` and `top` as valid layouts.",
+        "Add `bottom` as a newly supported layout option in the documentation.",
+        "Replace `layout=bottom` with `position=bottom` as the correct parameter for this functionality.",
+        "Remove the 'Layouts' section entirely as this feature is deprecated."
+      ],
+      "golden_answer": "Change the example to use `layout=top` and update the accompanying text to only mention `default` and `top` as valid layouts."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command syntax with invalid parameter '--debug-mode' instead of proper Flask debug options",
+      "correction_candidates": [
+        "Use `python server.py --port 8080 --debug` for debug mode",
+        "Use `flask run --port 8080 --debug` to start with debug enabled",
+        "Run with `python server.py --port 8080` and set FLASK_DEBUG=1 environment variable",
+        "Start the server using `python -m flask run --port 8080 --reload`"
+      ],
+      "golden_answer": "Use `python server.py --port 8080 --debug` for debug mode"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent file 'dependency-list.txt' instead of the standard 'requirements.txt'",
+      "correction_candidates": [
+        "Install the dependencies from requirements.txt first",
+        "Make sure to install dependencies from deps.txt before running",
+        "Install packages listed in requirements-prod.txt first",
+        "Ensure dependencies from package-list.txt are installed beforehand"
+      ],
+      "golden_answer": "Install the dependencies from requirements.txt first"
+    }
+  ]
+}

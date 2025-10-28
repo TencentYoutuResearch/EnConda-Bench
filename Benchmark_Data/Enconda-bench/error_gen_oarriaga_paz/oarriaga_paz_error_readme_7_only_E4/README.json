@@ -1,0 +1,18 @@
+{
+  "readme": "oarriaga_paz_error_readme_7_only_E4",
+  "repo_name": "oarriaga_paz",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Used absolute file path '/home/user/my_image.png' in example which likely doesn't exist on user systems",
+      "correction_candidates": [
+        "Use relative path like 'my_image.png' instead",
+        "Use a generic path like './images/my_image.png'",
+        "Use os.path.join() for cross-platform compatibility",
+        "Provide instructions to create the directory first"
+      ],
+      "golden_answer": "Use relative path like 'my_image.png' instead"
+    }
+  ]
+}

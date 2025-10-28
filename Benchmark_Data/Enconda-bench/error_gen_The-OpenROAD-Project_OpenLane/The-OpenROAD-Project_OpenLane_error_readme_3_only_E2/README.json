@@ -1,0 +1,18 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_3_only_E2",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a design flow uses an incorrect argument syntax. The script expects a single dash for the flag ('-design') not a double dash ('--design').",
+      "correction_candidates": [
+        "./flow.tcl -design spm",
+        "./flow.tcl -d spm",
+        "./flow.tcl spm",
+        "flow.tcl -design spm"
+      ],
+      "golden_answer": "./flow.tcl -design spm"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_python-markdown_markdown_error_readme_merge_k5",
+  "repo_name": "python-markdown_markdown",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install python-markdown` is incorrect. While it might install a package, it is not the official and maintained `Markdown` library, leading to potential version conflicts or missing features.",
+      "correction_candidates": [
+        "pip install markdown",
+        "pip install Markdown-PY",
+        "conda install markdown",
+        "pip install git+https://github.com/Python-Markdown/markdown.git"
+      ],
+      "golden_answer": "pip install markdown"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies 'setuptools wheel' to the pip install command",
+      "correction_candidates": [
+        "pip install markdown",
+        "pip install markdown --upgrade",
+        "pip install markdown[extras]",
+        "pip install --user markdown"
+      ],
+      "golden_answer": "pip install markdown"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Shows running 'python setup.py install' after 'pip install markdown' which is incorrect order and redundant",
+      "correction_candidates": [
+        "Remove the 'python setup.py install' line entirely",
+        "Replace both commands with 'pip install markdown' only",
+        "Move 'python setup.py install' before 'pip install markdown'",
+        "Change to 'pip install -e .' for development installation"
+      ],
+      "golden_answer": "Remove the 'python setup.py install' line entirely"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'python setup.py install' command is outdated and may cause installation issues",
+      "correction_candidates": [
+        "python -m pip install .",
+        "pip install -e .",
+        "python -m build && pip install dist/*.whl",
+        "conda install markdown"
+      ],
+      "golden_answer": "python -m pip install ."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect directory path 'documentation/' instead of 'docs/'",
+      "correction_candidates": [
+        "see the `docs/` directory",
+        "see the `doc/` directory",
+        "see the `manual/` directory",
+        "see the `help/` directory"
+      ],
+      "golden_answer": "see the `docs/` directory"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent configuration file 'config/settings.yaml'",
+      "correction_candidates": [
+        "Remove the entire sentence about the configuration file",
+        "Change to 'Make sure to check the examples/ directory for usage samples'",
+        "Change to 'Make sure to read the installation guide before using the library'",
+        "Change to 'Make sure to install the package dependencies before using the library'"
+      ],
+      "golden_answer": "Remove the entire sentence about the configuration file"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pins installation to very old version 2.6.8 instead of latest version",
+      "correction_candidates": [
+        "pip install markdown",
+        "pip install markdown>=3.0",
+        "pip install markdown~=3.4.0",
+        "pip install 'markdown>=3.3,<4.0'"
+      ],
+      "golden_answer": "pip install markdown"
+    }
+  ]
+}

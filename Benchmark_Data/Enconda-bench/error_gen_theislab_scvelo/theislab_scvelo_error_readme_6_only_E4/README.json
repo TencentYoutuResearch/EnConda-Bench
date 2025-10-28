@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_scvelo_error_readme_6_only_E4",
+  "repo_name": "theislab_scvelo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent configuration file path /usr/local/scvelo/config.yaml that users need to install",
+      "correction_candidates": [
+        "Remove the note about the configuration file entirely as it's not needed",
+        "Change the path to ~/.scvelo/config.yaml for user home directory",
+        "Update to reference the correct path /opt/scvelo/config.yaml",
+        "Replace with instructions to download config from the GitHub repository"
+      ],
+      "golden_answer": "Remove the note about the configuration file entirely as it's not needed"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_4_only_E1",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions only install production dependencies (`requirements/production.txt`), which is insufficient for a development environment. The development dependencies (e.g., testing tools, debug server) are missing.",
+      "correction_candidates": [
+        "The command `pip install -r requirements/development.txt` should be added after installing production dependencies.",
+        "The command should be changed to `pip install -r requirements.txt` to install all dependencies from a single file.",
+        "The command should be `pip install -e .` to install the project in editable mode.",
+        "The `production.txt` file should be edited to include development dependencies."
+      ],
+      "golden_answer": "The command `pip install -r requirements/development.txt` should be added after installing production dependencies."
+    }
+  ]
+}

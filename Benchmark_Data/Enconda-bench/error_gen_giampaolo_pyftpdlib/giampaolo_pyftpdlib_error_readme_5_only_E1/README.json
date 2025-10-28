@@ -1,0 +1,18 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_5_only_E1",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (cryptography, twisted) that are not required for basic pyftpdlib functionality",
+      "correction_candidates": [
+        "$ sudo apt-get install python3-dev libssl-dev\n$ pip install pyftpdlib",
+        "$ pip install pyftpdlib",
+        "$ sudo apt-get install python3-pip\n$ pip install pyftpdlib",
+        "$ conda install pyftpdlib"
+      ],
+      "golden_answer": "$ pip install pyftpdlib"
+    }
+  ]
+}

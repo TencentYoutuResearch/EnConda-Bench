@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_5_only_E1",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Incomplete dependency installation instructions missing virtual environment setup and version specifications",
+      "correction_candidates": [
+        "Before installation, create a virtual environment with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`",
+        "Before installation, make sure to install Python 3.8+ and create a conda environment with `conda create -n iss-mimic python=3.8` then `conda activate iss-mimic`",
+        "Before installation, ensure you have pip installed, then run `pip install --user requests numpy flask` to install dependencies locally",
+        "Before installation, update pip with `pip install --upgrade pip` then install dependencies with `pip install requests==2.28.0 numpy==1.21.0 flask==2.0.0`"
+      ],
+      "golden_answer": "Before installation, create a virtual environment with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`"
+    }
+  ]
+}

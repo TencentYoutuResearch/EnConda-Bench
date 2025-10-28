@@ -1,0 +1,18 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_6_only_E2",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added incorrect system package installation command that uses wrong package names",
+      "correction_candidates": [
+        "Change to `sudo apt-get install python3-dev libffi-dev libssl-dev libyaml-dev` with correct package names",
+        "Replace with `pip install --upgrade setuptools wheel` for Python dependency management",
+        "Use `sudo yum install python3-devel openssl-devel libffi-devel` for Red Hat based systems",
+        "Remove the system dependency installation command as it's not needed for this integration"
+      ],
+      "golden_answer": "Remove the system dependency installation command as it's not needed for this integration"
+    }
+  ]
+}

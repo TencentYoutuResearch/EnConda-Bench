@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_nonebot_nonebot2_error_readme_merge_k2",
+  "repo_name": "nonebot_nonebot2",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command `python3.8 -m pip install --user pipx` suggests using Python 3.8, but the project requires Python 3.9+ as indicated by the badge, which can lead to compatibility issues.",
+      "correction_candidates": [
+        "The project requires Python 3.9 or newer; use `python3.9 -m pip install --user pipx` or a later version.",
+        "The command should be `python -m pip install pipx` to install it globally.",
+        "The badge is incorrect; Python 3.8 is supported.",
+        "Use `pipx install pipx` instead."
+      ],
+      "golden_answer": "The project requires Python 3.9 or newer; use `python3.9 -m pip install --user pipx` or a later version."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. The guide instructs to create a project with `nb create` before installing the `nb-cli` package that provides this command.",
+      "correction_candidates": [
+        "The `nb create` command should be run after the `pipx install nb-cli` command.",
+        "The `nb create` command should be `nb-cli create`.",
+        "You should run `pip install nb-cli` globally first.",
+        "The correct order is to install pipx, then install nb-cli, then run nb create."
+      ],
+      "golden_answer": "The `nb create` command should be run after the `pipx install nb-cli` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The guide suggests installing `nb-cli` with `pip install nb-cli`, which installs it into the global or user environment. This contradicts the preceding steps that set up `pipx` for isolated tool installation, which is the recommended practice.",
+      "correction_candidates": [
+        "The command `pip install nb-cli` is not recommended; the guide should use `pipx install nb-cli` as intended.",
+        "You should use `python -m pip install nb-cli` for clarity.",
+        "The command should be `pip install nb-cli --user` to avoid permission errors.",
+        "You must first create a virtual environment with `python -m venv .venv` and then run `pip install nb-cli`."
+      ],
+      "golden_answer": "The command `pip install nb-cli` is not recommended; the guide should use `pipx install nb-cli` as intended."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the project is `nb run`, but the guide incorrectly instructs the user to run `nb start`, which will fail.",
+      "correction_candidates": [
+        "The command `nb start` is incorrect. You should use `nb run`.",
+        "The command should be `python -m nb-cli start`.",
+        "You need to install a start script first using `nb plugin install nonebot-plugin-start`.",
+        "The command is `nb run --start`."
+      ],
+      "golden_answer": "The command `nb start` is incorrect. You should use `nb run`."
+    }
+  ]
+}

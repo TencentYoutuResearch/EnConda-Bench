@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_8_only_E7",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated version ranges for Python, NumPy, and SciPy that are no longer supported",
+      "correction_candidates": [
+        "Update to Python 3.7+, NumPy 1.19+, and SciPy 1.5+",
+        "Update to Python 3.6+, NumPy 1.16+, and SciPy 1.2+",
+        "Update to Python 3.8+, NumPy 1.20+, and SciPy 1.6+",
+        "Remove specific version constraints and use latest stable versions"
+      ],
+      "golden_answer": "Update to Python 3.6+, NumPy 1.16+, and SciPy 1.2+"
+    }
+  ]
+}

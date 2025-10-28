@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_bradenm_micropy-cli_error_readme_merge_k4",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to install the package uses an incorrect flag `--update`. The correct flag for upgrading a package with pip is `--upgrade`.",
+      "correction_candidates": [
+        "pip update micropy-cli",
+        "pip install --upgrade micropy-cli",
+        "pip --upgrade install micropy-cli",
+        "pip install micropy-cli --latest"
+      ],
+      "golden_answer": "pip install --upgrade micropy-cli"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the `micropy.json` file is located inside the `.micropy/` folder. It should be in the project root, alongside the `.micropy/` folder.",
+      "correction_candidates": [
+        "Restore the original text stating that two items are added: a `.micropy/` folder and a `micropy.json` file.",
+        "Change the text to state that the `micropy.json` file is created in the user's home directory.",
+        "Change the text to state that the `.micropy/` folder is created inside a `src/` directory.",
+        "Change the text to state that a `micropy.ini` file is created instead of `micropy.json`."
+      ],
+      "golden_answer": "Restore the original text stating that two items are added: a `.micropy/` folder and a `micropy.json` file."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for cloning an environment have a logical order error. `micropy-cli` must be installed before the `micropy` command can be executed, but the instructions list installation as the last step.",
+      "correction_candidates": [
+        "The correct order is: Execute `micropy`, install `micropy-cli`, then navigate to the project directory.",
+        "The correct order is: Navigate to the project directory, execute `pip install micropy-cli`, then run `micropy init`.",
+        "The correct order is: Install `micropy-cli`, navigate to the project directory, then execute `micropy`.",
+        "The correct order is: Install `micropy-cli`, then execute `micropy install` in the project directory."
+      ],
+      "golden_answer": "The correct order is: Install `micropy-cli`, navigate to the project directory, then execute `micropy`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies for stub creation is incorrect. It uses `[stubs]` as the extra, but the correct extra is `[create_stubs]`.",
+      "correction_candidates": [
+        "pip install micropy-cli --with-stubs",
+        "pip install micropy-cli-stubs",
+        "pip install micropy-cli[stubber]",
+        "pip install micropy-cli[create_stubs]"
+      ],
+      "golden_answer": "pip install micropy-cli[create_stubs]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for creating a new project is incorrect. The README specifies `micropy new <PROJECT NAME>`, but the correct command is `micropy init <PROJECT NAME>`.",
+      "correction_candidates": [
+        "micropy create <PROJECT NAME>",
+        "micropy init <PROJECT NAME>",
+        "micropy project new <PROJECT NAME>",
+        "micropy start <PROJECT NAME>"
+      ],
+      "golden_answer": "micropy init <PROJECT NAME>"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The README incorrectly advises committing the `.micropy/` folder to version control. This folder contains locally generated files and symlinks specific to a user's environment and should be ignored.",
+      "correction_candidates": [
+        "The `.micropy/` folder should not be committed; it should be added to `.gitignore`.",
+        "Only the `stubs` subdirectory within `.micropy/` should be committed.",
+        "The `.micropy/` folder should be renamed to `.micropy-cache` before committing.",
+        "The `.micropy/` folder should be committed, but the `micropy.json` file should be ignored."
+      ],
+      "golden_answer": "The `.micropy/` folder should not be committed; it should be added to `.gitignore`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command line flag for installing development-only packages is incorrect. The documentation specifies `--development`, but the correct flag is `--dev`.",
+      "correction_candidates": [
+        "The correct flag is `-D`.",
+        "The correct flag is `--dev-only`.",
+        "The correct flag is `--is-dev`.",
+        "The correct flag is `--dev`."
+      ],
+      "golden_answer": "The correct flag is `--dev`."
+    }
+  ]
+}

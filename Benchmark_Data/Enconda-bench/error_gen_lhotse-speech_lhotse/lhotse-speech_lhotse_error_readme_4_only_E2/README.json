@@ -1,0 +1,18 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_4_only_E2",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing the latest unreleased version from GitHub has an incorrect syntax for the git URL, missing the protocol 'https://github.com/'.",
+      "correction_candidates": [
+        "pip install git+lhotse-speech/lhotse",
+        "pip install lhotse@git+https://github.com/lhotse-speech/lhotse",
+        "pip install git+https://github.com/lhotse-speech/lhotse",
+        "pip install git+https://github.com/lhotse-speech/lhotse.git"
+      ],
+      "golden_answer": "pip install git+https://github.com/lhotse-speech/lhotse"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "oarriaga_paz_error_readme_7_only_E6",
+  "repo_name": "oarriaga_paz",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pypaz with --user flag inside an activated virtual environment, which contradicts the purpose of virtual environments",
+      "correction_candidates": [
+        "Remove the --user flag when installing inside virtual environment",
+        "Install pypaz globally first, then create virtual environment",
+        "Use pip install pypaz without --user in virtual environment",
+        "Deactivate virtual environment before using --user flag"
+      ],
+      "golden_answer": "Remove the --user flag when installing inside virtual environment"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_cclib_cclib_error_readme_merge_k3",
+  "repo_name": "cclib_cclib",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions for building from source omit the required `numpy` dependency, which is not listed as a dependency in setup.py and will cause the build to fail if not pre-installed.",
+      "correction_candidates": [
+        "Run `pip install .[dev]` to install all dependencies including NumPy.",
+        "The package installs NumPy automatically, no changes are needed.",
+        "Modify the `setup.py` file to include `numpy` in `install_requires` before running `pip install .`",
+        "Before installing, ensure you have NumPy installed: `pip install numpy`, then run `pip install .`"
+      ],
+      "golden_answer": "Before installing, ensure you have NumPy installed: `pip install numpy`, then run `pip install .`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library is compatible with Python 2.7, which is no longer supported and will cause installation or runtime errors.",
+      "correction_candidates": [
+        "This library requires Python 3.8 or higher.",
+        "This library is compatible with both Python 2.7 and Python 3.x.",
+        "This library requires Python 3.6 specifically.",
+        "To use with Python 2.7, you must install a legacy version: `pip install cclib<1.7`"
+      ],
+      "golden_answer": "This library requires Python 3.8 or higher."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly advise installing the package into the global environment before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "The order is correct, but you should use `sudo pip install .` for global installation.",
+        "First create and activate the virtual environment, then install the package: `python -m venv venv`, `source venv/bin/activate`, `pip install .`",
+        "You can install directly into the virtual environment using: `python -m venv venv && ./venv/bin/pip install .`",
+        "Skip the virtual environment and install globally with `pip install .` for simplicity."
+      ],
+      "golden_answer": "First create and activate the virtual environment, then install the package: `python -m venv venv`, `source venv/bin/activate`, `pip install .`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command references a non-existent package `cclib-parser` instead of the correct package name `cclib`.",
+      "correction_candidates": [
+        "The package name is case-sensitive, use `pip install CCLIB`.",
+        "You need to specify the version: `pip install cclib-parser==1.8.1`.",
+        "First add a new pip index: `pip config set global.index-url https://cclib.github.io/pypi/` then install.",
+        "The correct package name is `cclib`, so use `pip install cclib`."
+      ],
+      "golden_answer": "The correct package name is `cclib`, so use `pip install cclib`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a `requirements.txt` file at the root of the repository, but this file does not exist, leading to a file not found error.",
+      "correction_candidates": [
+        "The dependencies are listed in `setup.py`; install the package directly with `pip install .` instead.",
+        "Create an empty `requirements.txt` file before running the command.",
+        "The file is located in a different directory: `pip install -r dev/requirements.txt`",
+        "Download the `requirements.txt` file from the project's website first."
+      ],
+      "golden_answer": "The dependencies are listed in `setup.py`; install the package directly with `pip install .` instead."
+    }
+  ]
+}

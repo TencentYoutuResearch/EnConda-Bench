@@ -1,0 +1,29 @@
+{
+  "readme": "dj-stripe_dj-stripe_error_readme_1",
+  "repo_name": "dj-stripe_dj-stripe",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies `Django >=3.0` which is too broad and incompatible with the required Python version and latest dj-stripe features. The correct minimum Django version is 4.2.",
+      "correction_candidates": [
+        "In the Requirements section, change `Django >=3.0` to `Django >=4.2`.",
+        "In the Requirements section, change `Django >=3.0` to `Django == 4.2`.",
+        "In the Requirements section, change `Django >=3.0` to `Django >=4.0`.",
+        "In the Requirements section, remove the Django version requirement."
+      ],
+      "golden_answer": "In the Requirements section, change `Django >=3.0` to `Django >=4.2`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily advise running `pip install stripe` separately. The `dj-stripe` package automatically installs the correct version of the `stripe` library as a dependency, and installing it manually can cause version conflicts.",
+      "correction_candidates": [
+        "Remove the `pip install stripe` command from the installation instructions.",
+        "Change `pip install stripe` to `pip install stripe==5.4.0`.",
+        "Move the `pip install stripe` command to after the `pip install dj-stripe` command.",
+        "Change `pip install stripe` to `pip install -U stripe`."
+      ],
+      "golden_answer": "Remove the `pip install stripe` command from the installation instructions."
+    }
+  ]
+}

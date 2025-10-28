@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_pygeo_error_readme_1_only_E6",
+  "repo_name": "mdolab_pygeo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise running `pip install .` before creating and activating the virtual environment, which would cause the package to be installed in the global or user site-packages instead of the intended isolated environment.",
+      "correction_candidates": [
+        "First, create and activate a virtual environment, then run `pip install .`.",
+        "First, run `pip install . --user`, then create and activate a virtual environment.",
+        "First, create a virtual environment, then run `pip install .` from the project root without activating the environment.",
+        "The commands are correct but should be run with `python3` instead of `python`."
+      ],
+      "golden_answer": "First, create and activate a virtual environment, then run `pip install .`."
+    }
+  ]
+}

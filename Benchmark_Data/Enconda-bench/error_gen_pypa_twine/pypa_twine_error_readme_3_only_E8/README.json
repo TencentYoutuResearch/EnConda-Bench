@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_3_only_E8",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The example `.pypirc` configuration is missing the required `[pypi]` section header. Without the header, Twine cannot parse the file correctly.",
+      "correction_candidates": [
+        "Add `[pypi]` on a new line before the `username` field.",
+        "Change the header to `[credentials]`.",
+        "Use environment variables `TWINE_USERNAME` and `TWINE_PASSWORD` instead of a file.",
+        "Enclose the credentials in quotes."
+      ],
+      "golden_answer": "Add `[pypi]` on a new line before the `username` field."
+    }
+  ]
+}

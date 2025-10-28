@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_2_only_E1",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the PyPI installation section, the command `pip install numpy scipy` is listed before `pip install pyclarity`. These are common dependencies and will be installed automatically by pip when installing `pyclarity`, making this step redundant and potentially causing version conflicts.",
+      "correction_candidates": [
+        "Remove the line `pip install numpy scipy`.",
+        "Change `pip install numpy scipy` to `pip install --upgrade numpy scipy`.",
+        "Move the `pip install numpy scipy` line to after `pip install pyclarity`.",
+        "Change `pip install numpy scipy` to `conda install numpy scipy`."
+      ],
+      "golden_answer": "Remove the line `pip install numpy scipy`."
+    }
+  ]
+}

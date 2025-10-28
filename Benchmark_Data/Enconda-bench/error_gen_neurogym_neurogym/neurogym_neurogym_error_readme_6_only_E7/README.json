@@ -1,0 +1,18 @@
+{
+  "readme": "neurogym_neurogym_error_readme_6_only_E7",
+  "repo_name": "neurogym_neurogym",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified very old and potentially incompatible versions of tensorflow and torch without explaining version requirements",
+      "correction_candidates": [
+        "Remove version specifications entirely",
+        "Use tensorflow>=2.0.0 torch>=1.0.0",
+        "Add note about Python version compatibility",
+        "Specify current stable versions instead"
+      ],
+      "golden_answer": "Remove version specifications entirely"
+    }
+  ]
+}

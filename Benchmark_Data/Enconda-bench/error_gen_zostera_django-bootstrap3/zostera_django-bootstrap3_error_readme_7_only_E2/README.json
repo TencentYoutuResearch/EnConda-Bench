@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap3_error_readme_7_only_E2",
+  "repo_name": "zostera_django-bootstrap3",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect pip install command referencing a requirements file instead of the package name",
+      "correction_candidates": [
+        "pip install django-bootstrap3",
+        "pip install -e .",
+        "pip install --upgrade django-bootstrap3",
+        "python -m pip install django-bootstrap3"
+      ],
+      "golden_answer": "pip install django-bootstrap3"
+    }
+  ]
+}

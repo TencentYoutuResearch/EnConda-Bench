@@ -1,0 +1,18 @@
+{
+  "readme": "elifesciences_elife-bot_error_readme_1_only_E4",
+  "repo_name": "elifesciences_elife-bot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for the starter script, `starters/starter_Ping.py`, is incorrect as the directory is likely named `starter`.",
+      "correction_candidates": [
+        "PYTHONPATH=. python starter/starter_Ping.py -e dev",
+        "PYTHONPATH=. python ./starter_Ping.py -e dev",
+        "PYTHONPATH=. python starter/Ping.py -e dev",
+        "cd starter && PYTHONPATH=.. python starter_Ping.py -e dev"
+      ],
+      "golden_answer": "PYTHONPATH=. python starter/starter_Ping.py -e dev"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf_error_readme_4_only_E2",
+  "repo_name": "asdf-format_asdf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The code example for creating a file uses an incorrect method name, `af.save()`. The correct method is `af.write_to()`.",
+      "correction_candidates": [
+        "Replace `af.save(\"example.asdf\")` with `af.write_to(\"example.asdf\")`.",
+        "Replace `af.save(\"example.asdf\")` with `asdf.write(af, \"example.asdf\")`.",
+        "Replace `af.save(\"example.asdf\")` with `af.to_file(\"example.asdf\")`.",
+        "Replace `af.save(\"example.asdf\")` with `af.write(\"example.asdf\")`."
+      ],
+      "golden_answer": "Replace `af.save(\"example.asdf\")` with `af.write_to(\"example.asdf\")`."
+    }
+  ]
+}

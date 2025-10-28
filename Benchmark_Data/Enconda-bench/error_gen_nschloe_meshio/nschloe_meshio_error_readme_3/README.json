@@ -1,0 +1,29 @@
+{
+  "readme": "nschloe_meshio_error_readme_3",
+  "repo_name": "nschloe_meshio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The arguments for `meshio.write_points_cells` are in the wrong order. The function signature is `(filename, points, cells, ...)`, but the example provides `(points, cells, filename)`, which will cause a TypeError.",
+      "correction_candidates": [
+        "meshio.write_points_cells(filename=\"foo.vtk\", points=points, cells=cells)",
+        "meshio.write_points_cells(\"foo.vtk\", points, cells)",
+        "meshio.write_points_cells(cells, points, \"foo.vtk\")",
+        "meshio.write_points_cells(points, \"foo.vtk\", cells)"
+      ],
+      "golden_answer": "meshio.write_points_cells(\"foo.vtk\", points, cells)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path provided for the ParaView plugin file, `/usr/lib/paraview-5.9/plugins/`, is incorrect for a user-level pip installation. The file is typically located in the user's home directory, not a system-level directory, leading to a 'file not found' error.",
+      "correction_candidates": [
+        "Find the file `paraview-meshio-plugin.py` in `/opt/paraview/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in `~/.config/ParaView/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in `~/.local/share/paraview-5.9/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in the meshio installation directory."
+      ],
+      "golden_answer": "Find the file `paraview-meshio-plugin.py` in `~/.local/share/paraview-5.9/plugins/`"
+    }
+  ]
+}

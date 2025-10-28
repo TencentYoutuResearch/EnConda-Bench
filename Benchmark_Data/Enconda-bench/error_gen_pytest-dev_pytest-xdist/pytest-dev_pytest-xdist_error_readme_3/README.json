@@ -1,0 +1,29 @@
+{
+  "readme": "pytest-dev_pytest-xdist_error_readme_3",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Quick Start' section incorrectly instructs the user to run `pytest` with xdist options before installing the `pytest-xdist` package.",
+      "correction_candidates": [
+        "Swap the order of step 1 (run tests) and step 2 (install plugin).",
+        "Combine the steps into one: 'Install the plugin using `pip install pytest-xdist` and then run `pytest -n auto`'.",
+        "Remove step 1 and only show the installation command.",
+        "Add a step 0: 'Install pytest using `pip install pytest`'."
+      ],
+      "golden_answer": "Swap the order of step 1 (run tests) and step 2 (install plugin)."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pytest -nauto` is syntactically incorrect; a space is required between the option `-n` and its value `auto`.",
+      "correction_candidates": [
+        "Change `pytest -nauto` to `pytest -n auto`.",
+        "Change `pytest -nauto` to `pytest --numprocesses=auto`.",
+        "Change `pytest -nauto` to `pytest --dist=load --tx=auto`.",
+        "Change `pytest -nauto` to `pytest -n 'auto'`."
+      ],
+      "golden_answer": "Change `pytest -nauto` to `pytest -n auto`."
+    }
+  ]
+}

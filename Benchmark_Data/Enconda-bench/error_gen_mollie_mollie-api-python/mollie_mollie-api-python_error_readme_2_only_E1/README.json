@@ -1,0 +1,18 @@
+{
+  "readme": "mollie_mollie-api-python_error_readme_2_only_E1",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Installation' section for running examples from a git checkout, the command to install the `mollie-api-python` package itself from the local source code is missing. Without it, `import mollie` will fail.",
+      "correction_candidates": [
+        "Add `$ pip install -e .` after `$ pip install flask`.",
+        "Add `$ pip install .` after `$ pip install flask`.",
+        "Add `$ python setup.py install` after `$ pip install flask`.",
+        "Change `$ pip install flask` to `$ pip install flask mollie-api-python`."
+      ],
+      "golden_answer": "Add `$ pip install -e .` after `$ pip install flask`."
+    }
+  ]
+}

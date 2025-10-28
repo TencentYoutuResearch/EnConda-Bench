@@ -1,0 +1,18 @@
+{
+  "readme": "cantools_cantools_error_readme_2_only_E4",
+  "repo_name": "cantools_cantools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided in the example script for loading the DBC file is incorrect, referring to 'test' instead of 'tests'.",
+      "correction_candidates": [
+        "db = cantools.database.load_file('cantools/tests/files/dbc/motohawk.dbc')",
+        "db = cantools.database.load_file('files/dbc/motohawk.dbc')",
+        "db = cantools.database.load_file('./tests/files/dbc/motohawk.dbc')",
+        "db = cantools.database.load_file('tests/files/dbc/motohawk.dbc')"
+      ],
+      "golden_answer": "db = cantools.database.load_file('tests/files/dbc/motohawk.dbc')"
+    }
+  ]
+}

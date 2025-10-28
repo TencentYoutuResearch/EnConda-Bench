@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_6_only_E1",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (redis-server, postgresql-dev) that are not actually required for this Django project",
+      "correction_candidates": [
+        "Remove redis-server and postgresql-dev from the dependencies list",
+        "Keep only python 3.9, pipenv, npm (nodejs), and libmagickwand-dev",
+        "Replace redis-server and postgresql-dev with sqlite3-dev",
+        "Move redis-server and postgresql-dev to optional dependencies section"
+      ],
+      "golden_answer": "Remove redis-server and postgresql-dev from the dependencies list"
+    }
+  ]
+}

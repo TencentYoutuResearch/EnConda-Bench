@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_5_only_E1",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary system dependencies and specific version constraints that are not required for great_tables installation",
+      "correction_candidates": [
+        "$ pip install great_tables",
+        "$ conda install great_tables",
+        "$ pip install --upgrade great_tables",
+        "$ python -m pip install great_tables"
+      ],
+      "golden_answer": "$ pip install great_tables"
+    }
+  ]
+}

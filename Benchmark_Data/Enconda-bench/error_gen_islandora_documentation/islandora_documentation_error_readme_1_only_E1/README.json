@@ -1,0 +1,18 @@
+{
+  "readme": "islandora_documentation_error_readme_1_only_E1",
+  "repo_name": "islandora_documentation",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install mkdocs` only installs the base `mkdocs` package, but not the specific theme or plugins listed in a `requirements.txt` file, which are necessary to build the site correctly.",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install mkdocs mkdocs-material mkdocs-redirects",
+        "conda install --file requirements.txt",
+        "pip install mkdocs && pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

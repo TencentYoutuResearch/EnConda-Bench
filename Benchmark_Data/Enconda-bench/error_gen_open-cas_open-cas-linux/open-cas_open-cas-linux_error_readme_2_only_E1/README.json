@@ -1,0 +1,18 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_2_only_E1",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'dnf install' command is missing a wildcard '*' to match the full RPM package name, which includes version and architecture details. This will likely result in a 'file not found' error.",
+      "correction_candidates": [
+        "dnf install ./packages/open-cas-linux.rpm",
+        "dnf install ./packages/*.rpm",
+        "dnf install ./packages/open-cas-linux-*.rpm",
+        "dnf install ./packages/open-cas-linux*.rpm"
+      ],
+      "golden_answer": "dnf install ./packages/open-cas-linux*.rpm"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_2_only_E1",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions for the test harness list 'pip3 install python-jwt'. 'python-jwt' is an incorrect and unmaintained package. The correct package is 'PyJWT', which can be installed via 'pip3 install jwt'.",
+      "correction_candidates": [
+        "The package should be installed using conda: `conda install pyjwt`.",
+        "The correct package name is `jwt`, so the command should be `pip3 install jwt`.",
+        "The package should be installed with `pip3 install jsonwebtokens`.",
+        "The correct package is `PyJWT`, which should be installed via `pip3 install PyJWT`."
+      ],
+      "golden_answer": "The correct package name is `jwt`, so the command should be `pip3 install jwt`."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_miurahr_aqtinstall_error_readme_merge_k4",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the 'Requirements' section, the minimum Python version is vaguely specified as '3.x', which could lead users to attempt installation with an unsupported version like Python 3.7, causing compatibility errors.",
+      "correction_candidates": [
+        "Minimum Python version: 3.6+",
+        "Minimum Python version: 3.8",
+        "Minimum Python version: any version of Python 3",
+        "Minimum Python version: 3.9"
+      ],
+      "golden_answer": "Minimum Python version: 3.8"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Example' section, the command to install all modules uses an incorrect parameter `--modules all` instead of the correct short form `-m all`, which will cause the command to fail.",
+      "correction_candidates": [
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --all-modules",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --install-all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -a"
+      ],
+      "golden_answer": "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Requirements' section, the `py7zr` package, which is a critical dependency for extracting 7-zip archives, has been omitted from the list of dependencies.",
+      "correction_candidates": [
+        "Add `py7zip` to the dependency list.",
+        "Add `py7zr` to the dependency list.",
+        "Add `7z-extractor` to the dependency list.",
+        "Add `libarchive` to the dependency list."
+      ],
+      "golden_answer": "Add `py7zr` to the dependency list."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Install' section, the commands are in the wrong logical order. The instructions install `aqtinstall` before updating `pip`, which can lead to installation failures with older versions of pip.",
+      "correction_candidates": [
+        "The commands should be run in this order: `pip install aqtinstall` and then `pip install -U pip`.",
+        "The commands should be combined into a single line: `pip install -U pip && pip install aqtinstall`.",
+        "The `pip install -U pip` command is optional and can be removed.",
+        "The commands should be run in this order: `pip install -U pip` and then `pip install aqtinstall`."
+      ],
+      "golden_answer": "The commands should be run in this order: `pip install -U pip` and then `pip install aqtinstall`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The pip commands are in wrong order - aqtinstall is installed before updating pip",
+      "correction_candidates": [
+        "pip install -U pip\npip install aqtinstall",
+        "pip install --upgrade pip\npip install aqtinstall",
+        "python -m pip install --upgrade pip\npip install aqtinstall",
+        "pip3 install -U pip\npip3 install aqtinstall"
+      ],
+      "golden_answer": "pip install -U pip\npip install aqtinstall"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependencies numpy and tensorflow are listed that are not required for aqtinstall",
+      "correction_candidates": [
+        "Remove numpy and tensorflow from the dependencies list",
+        "Replace numpy and tensorflow with lxml and packaging",
+        "Move numpy and tensorflow to optional dependencies section",
+        "Keep only the original dependencies without numpy and tensorflow"
+      ],
+      "golden_answer": "Keep only the original dependencies without numpy and tensorflow"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command 'aqt query-qt' is used instead of the correct 'aqt list-qt'",
+      "correction_candidates": [
+        "aqt list-qt windows desktop --arch 6.2.0",
+        "aqt show-qt windows desktop --arch 6.2.0",
+        "aqt get-qt windows desktop --arch 6.2.0",
+        "aqt find-qt windows desktop --arch 6.2.0"
+      ],
+      "golden_answer": "aqt list-qt windows desktop --arch 6.2.0"
+    }
+  ]
+}

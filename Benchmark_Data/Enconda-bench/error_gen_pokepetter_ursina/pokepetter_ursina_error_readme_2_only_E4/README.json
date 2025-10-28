@@ -1,0 +1,18 @@
+{
+  "readme": "pokepetter_ursina_error_readme_2_only_E4",
+  "repo_name": "pokepetter_ursina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to run the example script, `python games/ursina_game.py`, incorrectly assumes the file is in a `games` subdirectory that was never mentioned or created.",
+      "correction_candidates": [
+        "Change `python games/ursina_game.py` to `python ursina_game.py`.",
+        "Change `python games/ursina_game.py` to `python -m ursina_game`.",
+        "Add a step: 'Create a folder named `games` and place your file inside it.'",
+        "Change `python games/ursina_game.py` to `py ursina_game.py`."
+      ],
+      "golden_answer": "Change `python games/ursina_game.py` to `python ursina_game.py`."
+    }
+  ]
+}

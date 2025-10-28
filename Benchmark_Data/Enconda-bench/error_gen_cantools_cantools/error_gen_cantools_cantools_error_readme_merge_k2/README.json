@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_cantools_cantools_error_readme_merge_k2",
+  "repo_name": "cantools_cantools",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the installation command is incorrect ('py-cantools' instead of 'cantools'), which will cause pip to fail to find and install the package.",
+      "correction_candidates": [
+        "python3 -m pip install cantools",
+        "pip install cantools",
+        "conda install cantools",
+        "python3 -m pip install python-cantools"
+      ],
+      "golden_answer": "python3 -m pip install cantools"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for decoding `candump` output uses incorrect shell redirection ('<'), which will not pipe the output of `candump` to the `cantools` script correctly.",
+      "correction_candidates": [
+        "candump vcan0 | python3 -m cantools decode tests/files/dbc/motohawk.dbc",
+        "candump vcan0 > dump.log && python3 -m cantools decode tests/files/dbc/motohawk.dbc < dump.log",
+        "python3 -m cantools decode tests/files/dbc/motohawk.dbc --infile <(candump vcan0)",
+        "python3 -m cantools decode tests/files/dbc/motohawk.dbc $(candump vcan0)"
+      ],
+      "golden_answer": "candump vcan0 | python3 -m cantools decode tests/files/dbc/motohawk.dbc"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided in the example script for loading the DBC file is incorrect, referring to 'test' instead of 'tests'.",
+      "correction_candidates": [
+        "db = cantools.database.load_file('cantools/tests/files/dbc/motohawk.dbc')",
+        "db = cantools.database.load_file('files/dbc/motohawk.dbc')",
+        "db = cantools.database.load_file('./tests/files/dbc/motohawk.dbc')",
+        "db = cantools.database.load_file('tests/files/dbc/motohawk.dbc')"
+      ],
+      "golden_answer": "db = cantools.database.load_file('tests/files/dbc/motohawk.dbc')"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The contribution guidelines list running linters before installing the necessary development dependencies, which will fail because the linters are not yet installed.",
+      "correction_candidates": [
+        "Move the 'Run the linters' step to be after the 'Install prerequisites' step.",
+        "Combine the 'Run the linters' and 'Run the tests' steps into a single step after installation.",
+        "The correct order is: 1. Fork, 2. Install prerequisites, 3. Implement, 4. Implement test cases, 5. Run linters, 6. Run tests, 7. Create pull request.",
+        "Move the 'Install prerequisites' step to be step 2."
+      ],
+      "golden_answer": "Move the 'Install prerequisites' step to be step 2."
+    }
+  ]
+}

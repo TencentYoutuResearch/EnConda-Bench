@@ -1,0 +1,29 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_2",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly suggests that a GPU-enabled PyTorch installation is a mandatory prerequisite for all users, which is not true.",
+      "correction_candidates": [
+        "Change the text to: '> **_GPU Install (Optional)_**: If you want to use Meerkat with a GPU...'",
+        "Remove the GPU installation note entirely.",
+        "Move the `pip install meerkat-ml` command before the GPU note.",
+        "Comment out the GPU install note using <!-- ... -->."
+      ],
+      "golden_answer": "Change the text to: '> **_GPU Install (Optional)_**: If you want to use Meerkat with a GPU...'"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly specifies a strict and outdated Python version requirement (Python 3.7), which is inaccurate and may deter users with modern Python installations.",
+      "correction_candidates": [
+        "Update the note to specify a minimum compatible Python version, e.g., 'Python 3.8+ is required'.",
+        "Remove the Python version note entirely.",
+        "Replace the note with a link to the `pyproject.toml` for exact version requirements.",
+        "Change the note to 'Meerkat is compatible with Python 3.7 and higher.'"
+      ],
+      "golden_answer": "Remove the Python version note entirely."
+    }
+  ]
+}

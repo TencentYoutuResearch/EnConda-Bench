@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_6_only_E2",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command syntax for virtual environment creation",
+      "correction_candidates": [
+        "To get started, run `pip install pretalx` and then create your virtual environment with `python -m venv pretalx-env`.",
+        "To get started, run `pip install pretalx` and then create your virtual environment with `virtualenv venv`.",
+        "To get started, run `pip install pretalx` and then create your virtual environment with `conda create -n pretalx`.",
+        "To get started, run `pip install pretalx` and then create your virtual environment with `pipenv install`."
+      ],
+      "golden_answer": "To get started, run `pip install pretalx` and then create your virtual environment with `virtualenv venv`."
+    }
+  ]
+}

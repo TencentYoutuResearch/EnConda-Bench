@@ -1,0 +1,18 @@
+{
+  "readme": "flask-middleware_flask-security_error_readme_2_only_E1",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions include an unnecessary and potentially problematic step to install a specific, old version of Flask. Flask is a dependency of Flask-Security-Too and will be installed automatically with a compatible version.",
+      "correction_candidates": [
+        "Change 'pip install Flask==1.0.0' to 'pip install Flask'.",
+        "Move 'pip install Flask==1.0.0' to after the 'pip install -U Flask-Security-Too' command.",
+        "Remove the line 'pip install Flask==1.0.0'.",
+        "Change 'pip install Flask==1.0.0' to 'pip install -U Flask'."
+      ],
+      "golden_answer": "Remove the line 'pip install Flask==1.0.0'."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_7",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect path separator for Linux/Mac OS activation command - using backslash instead of forward slash",
+      "correction_candidates": [
+        "$ source venv/bin/activate",
+        "$ source ./venv/bin/activate",
+        "$ . venv/bin/activate",
+        "$ source venv\\bin\\activate"
+      ],
+      "golden_answer": "$ source venv/bin/activate"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using pip3 instead of pip command which may cause confusion or errors in virtual environments",
+      "correction_candidates": [
+        "$ pip install neo3-boa",
+        "$ python -m pip install neo3-boa",
+        "$ python3 -m pip install neo3-boa",
+        "$ pip3.10 install neo3-boa"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    }
+  ]
+}

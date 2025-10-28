@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_irc_error_readme_1_only_E7",
+  "repo_name": "jaraco_irc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the `irc.client_aio` module is compatible with Python 2.7. The library now requires Python 3, and the asyncio features are native to Python 3, making this claim false and misleading.",
+      "correction_candidates": [
+        "To use `irc.client_aio` on Python 2.7, you must install `asyncio` via `pip install asyncio`.",
+        "The `irc.client_aio` module is compatible with Python 2.7 if the `tulip` library is installed.",
+        "The `irc.client_aio` module requires Python 3.5+ and is not compatible with Python 2.7. The misleading sentence should be removed.",
+        "The entire library, including `irc.client_aio`, requires Python 3.8 or newer."
+      ],
+      "golden_answer": "The `irc.client_aio` module requires Python 3.5+ and is not compatible with Python 2.7. The misleading sentence should be removed."
+    }
+  ]
+}

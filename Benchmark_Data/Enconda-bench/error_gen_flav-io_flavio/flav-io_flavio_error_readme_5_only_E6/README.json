@@ -1,0 +1,18 @@
+{
+  "readme": "flav-io_flavio_error_readme_5_only_E6",
+  "repo_name": "flav-io_flavio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation instructions show installing dependencies with pip before setting up a virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "Create a virtual environment first using python -m venv flavio-env, activate it, then install dependencies",
+        "Use conda to create an isolated environment before installing any packages",
+        "Install dependencies system-wide using apt-get install python3-numpy python3-scipy python3-matplotlib",
+        "Remove the pip install step entirely and rely on setup.py to handle dependencies"
+      ],
+      "golden_answer": "Create a virtual environment first using python -m venv flavio-env, activate it, then install dependencies"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pyvisa_pyvisa_error_readme_3_only_E4",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command for installing from source references a non-existent 'install.py' file instead of the correct 'setup.py'.",
+      "correction_candidates": [
+        "$ python setup.py install",
+        "$ python3 setup.py install",
+        "The installation script is named `setup.py`, not `install.py`.",
+        "Change `install.py` to `setup.py`."
+      ],
+      "golden_answer": "$ python setup.py install"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "online-ml_river_error_readme_7_only_E2",
+  "repo_name": "online-ml_river",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command syntax error - using pip install with -r flag but no requirements file exists",
+      "correction_candidates": [
+        "pip install river",
+        "pip install river[dev]",
+        "pip install --user river",
+        "python setup.py install"
+      ],
+      "golden_answer": "pip install river"
+    }
+  ]
+}

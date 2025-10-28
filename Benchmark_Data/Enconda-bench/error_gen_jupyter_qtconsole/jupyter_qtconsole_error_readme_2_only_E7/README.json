@@ -1,0 +1,18 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_2_only_E7",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that qtconsole is only compatible with PyQt4, which is outdated information. It is compatible with PyQt5, PySide2, PyQt6, and PySide6.",
+      "correction_candidates": [
+        "Change the text to: \"The Qtconsole requires Python bindings for Qt. It is recommended to use PyQt5 or PySide2.\"",
+        "Change the text to: \"The Qtconsole is compatible with PyQt5, PyQt6, PySide2, and PySide6.\"",
+        "Restore the original sentence: \"The Qtconsole requires Python bindings for Qt, such as [PyQt6](https://pypi.org/project/PyQt6/), [PySide6](https://pypi.org/project/PySide6/), [PyQt5](https://pypi.org/project/PyQt5/) or [PySide2](https://pypi.org/project/PySide2/).\"",
+        "Remove the sentence entirely."
+      ],
+      "golden_answer": "Restore the original sentence: \"The Qtconsole requires Python bindings for Qt, such as [PyQt6](https://pypi.org/project/PyQt6/), [PySide6](https://pypi.org/project/PySide6/), [PyQt5](https://pypi.org/project/PyQt5/) or [PySide2](https://pypi.org/project/PySide2/).\""
+    }
+  ]
+}

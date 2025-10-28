@@ -1,0 +1,18 @@
+{
+  "readme": "psf_pyperf_error_readme_1_only_E7",
+  "repo_name": "psf_pyperf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that pyperf requires Python 3.5 or newer, while the actual requirement is Python 3.7 or newer.",
+      "correction_candidates": [
+        "pyperf requires Python 3.6 or newer.",
+        "pyperf requires Python 3.7 or newer.",
+        "pyperf is compatible with all Python 3 versions.",
+        "pyperf requires Python 3.7.1 or newer."
+      ],
+      "golden_answer": "pyperf requires Python 3.7 or newer."
+    }
+  ]
+}

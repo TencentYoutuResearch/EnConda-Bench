@@ -1,0 +1,18 @@
+{
+  "readme": "bdaiinstitute_spatialmath-python_error_readme_1_only_E2",
+  "repo_name": "bdaiinstitute_spatialmath-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package in editable mode from a local clone is syntactically incorrect. `pip install --e .` is not a valid command.",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install --editable .",
+        "pip install .",
+        "pip install -e spatialmath-python"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

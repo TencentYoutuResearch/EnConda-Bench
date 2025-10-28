@@ -1,0 +1,18 @@
+{
+  "readme": "librephotos_librephotos_error_readme_5_only_E7",
+  "repo_name": "librephotos_librephotos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 2.7 as minimum version requirement, which is outdated and incompatible with modern dependencies",
+      "correction_candidates": [
+        "Before installing, make sure you have Python 3.8 or later installed on your system.",
+        "Before installing, make sure you have Python 3.6 or later installed on your system.",
+        "Before installing, make sure you have Python 3.7 or later installed on your system.",
+        "Before installing, make sure you have Python 3.9 or later installed on your system."
+      ],
+      "golden_answer": "Before installing, make sure you have Python 3.8 or later installed on your system."
+    }
+  ]
+}

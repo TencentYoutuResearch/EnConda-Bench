@@ -1,0 +1,29 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_5",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version compatibility error - states support for Python 2.7 which is deprecated and incompatible with the actual requirement of Python 3.6+",
+      "correction_candidates": [
+        "Written in Python with support for Python 3.6 and above in versions 20.x.y and beyond.",
+        "Written in Python with support for Python 3.8 and above in versions 20.x.y and beyond.",
+        "Written in Python with support for Python 3.0 and above in versions 20.x.y and beyond.",
+        "Written in Python with support for Python 3.9 and above in versions 20.x.y and beyond."
+      ],
+      "golden_answer": "Written in Python with support for Python 3.6 and above in versions 20.x.y and beyond."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command using pip2 instead of pip3 for Python 3 installation",
+      "correction_candidates": [
+        "pip3 install androidviewclient --upgrade",
+        "python -m pip install androidviewclient --upgrade",
+        "pip install androidviewclient --upgrade",
+        "conda install androidviewclient --upgrade"
+      ],
+      "golden_answer": "pip3 install androidviewclient --upgrade"
+    }
+  ]
+}

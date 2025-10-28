@@ -1,0 +1,29 @@
+{
+  "readme": "postgrespro_mamonsu_error_readme_2",
+  "repo_name": "postgrespro_mamonsu",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The compatibility section incorrectly states that the agent supports 'Python 2.7+'. The agent is written for Python 3 and requires version 3.3 or higher.",
+      "correction_candidates": [
+        "Change `Python 2.7+` to `Python 3.3+`.",
+        "Change `Python 2.7+` to `Python 3.3 or higher`.",
+        "Change `Python 2.7+` to `Python >= 3.3`.",
+        "Change `Python 2.7+` to `Python 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11`."
+      ],
+      "golden_answer": "Change `Python 2.7+` to `Python 3.3+`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command for building an RPM package is missing the `python3-devel` dependency, which is required for compiling Python extensions. The build will fail without it.",
+      "correction_candidates": [
+        "yum install make rpm-build python3-devel python3-setuptools",
+        "yum install make rpm-build python-devel python3-setuptools",
+        "yum install make rpm-build python3-dev python3-setuptools",
+        "yum install make rpm-build python3-setuptools && yum install python3-devel"
+      ],
+      "golden_answer": "yum install make rpm-build python3-devel python3-setuptools"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_1",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the 'Requirements' section, the Python version is specified as 'Python 3', which is ambiguous. Brozzler requires Python 3.5 or later, and using an older version like 3.4 will cause errors.",
+      "correction_candidates": [
+        "Change `Python 3` to `Python >= 3.5`.",
+        "Change `Python 3` to `Python 3.5, 3.6, 3.7, or 3.8`.",
+        "Add a note saying `Python 3.4 and below are not supported`.",
+        "Change `Python 3` to `Python 3.5 or later`."
+      ],
+      "golden_answer": "Change `Python 3` to `Python 3.5 or later`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Getting Started' section, the command to start and log rethinkdb is `rethinkdb --log rethinkdb.log &`, which is incorrect. The rethinkdb command-line tool does not have a `--log` option for redirecting output.",
+      "correction_candidates": [
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb --logfile rethinkdb.log &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb &>>rethinkdb.log &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb > rethinkdb.log 2>&1 &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb --output rethinkdb.log --daemon`."
+      ],
+      "golden_answer": "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb &>>rethinkdb.log &`."
+    }
+  ]
+}

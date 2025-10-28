@@ -1,0 +1,18 @@
+{
+  "readme": "lagolunatic_wwrando_error_readme_3_only_E7",
+  "repo_name": "lagolunatic_wwrando",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instructions specify installing Python 3.6, which is an outdated version and may be incompatible with the project's dependencies or modern syntax, while the project requires 3.12.",
+      "correction_candidates": [
+        "Change the specified Python version from 3.6 to 3.12 and update all corresponding commands and download links.",
+        "Remove the specific Python version, simply stating 'Python 3', and use generic `python3` commands.",
+        "Keep Python 3.6 but add instructions to use `pip` to install specific older versions of the dependencies.",
+        "Add a note that Python 3.6 is the minimum required version, but newer versions like 3.12 are recommended."
+      ],
+      "golden_answer": "Change the specified Python version from 3.6 to 3.12 and update all corresponding commands and download links."
+    }
+  ]
+}

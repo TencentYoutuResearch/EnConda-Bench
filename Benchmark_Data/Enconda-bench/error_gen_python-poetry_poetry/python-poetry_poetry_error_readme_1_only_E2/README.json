@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_1_only_E2",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the `pyproject.toml` example, the script definition `my-script: \"my_package.main\"` uses a colon instead of an equals sign, which is invalid TOML syntax for key-value pairs.",
+      "correction_candidates": [
+        "my-script = \"my_package:main\"",
+        "my-script: \"my_package:main()\"",
+        "script = \"my-script:my_package.main\"",
+        "my-script = [\"my_package:main\"]"
+      ],
+      "golden_answer": "my-script = \"my_package:main\""
+    }
+  ]
+}

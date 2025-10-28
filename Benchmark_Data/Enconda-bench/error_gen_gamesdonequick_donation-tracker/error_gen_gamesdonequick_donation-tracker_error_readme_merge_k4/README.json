@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_gamesdonequick_donation-tracker_error_readme_merge_k4",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is specified as 'Python 3.8+', which is too broad and may lead to using an untested or incompatible future Python version.",
+      "correction_candidates": [
+        "Python >= 3.8",
+        "Python 3.8 to 3.12",
+        "Python 3.10",
+        "Python 3.8, 3.9, 3.10, 3.11, or 3.12"
+      ],
+      "golden_answer": "Python 3.8 to 3.12"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install --edit donation-tracker' is incorrect. The '--edit' flag is not a valid option for pip install.",
+      "correction_candidates": [
+        "pip install -e donation-tracker",
+        "pip install --editable ./donation-tracker",
+        "pip install donation-tracker --dev",
+        "python setup.py develop"
+      ],
+      "golden_answer": "pip install -e donation-tracker"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands to install and clone the repository are in the wrong order. 'pip install -e donation-tracker' attempts to install from a local directory that has not been created yet by 'git clone'.",
+      "correction_candidates": [
+        "First run `git clone git@github.com:GamesDoneQuick/donation-tracker`, then `pip install -e donation-tracker`.",
+        "Run `pip install git+https://github.com/GamesDoneQuick/donation-tracker.git@master` instead of cloning and installing locally.",
+        "Run `git clone git@github.com:GamesDoneQuick/donation-tracker` and then `python setup.py install` inside the new directory.",
+        "Run `pip install -e ./donation-tracker` after cloning the repository."
+      ],
+      "golden_answer": "First run `git clone git@github.com:GamesDoneQuick/donation-tracker`, then `pip install -e donation-tracker`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command 'pip install django' does not specify a version, which can lead to installing a future version of Django that is incompatible with the project.",
+      "correction_candidates": [
+        "pip install \"django<6.0\"",
+        "pip install django==5.0.*",
+        "pip install django~=5.0",
+        "pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install django~=5.0"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instruction to edit 'donation-tracker/urls.py' is incorrect. Based on the 'django-admin startproject tracker_development' command, the project's URL configuration file would be located at 'tracker_development/urls.py'.",
+      "correction_candidates": [
+        "Edit the `tracker/urls.py` file.",
+        "Edit the `tracker_development/urls.py` file.",
+        "Create a new `urls.py` in the root directory.",
+        "Edit the `tracker_development/settings.py` file to define the URLs."
+      ],
+      "golden_answer": "Edit the `tracker_development/urls.py` file."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the development server for JS bundles is 'npm start', but the 'Requirements' section specifies installing and using 'yarn'.",
+      "correction_candidates": [
+        "yarn start",
+        "yarn run dev",
+        "node scripts/start.js",
+        "npm run start"
+      ],
+      "golden_answer": "yarn start"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Requirements' section lists 'pre-commit' as a dependency but omits the command to install it, which will cause the 'pre-commit install' command in the 'Development Quick Start' section to fail.",
+      "correction_candidates": [
+        "Add `pre-commit` to a `requirements-dev.txt` file and run `pip install -r requirements-dev.txt`.",
+        "The `pre-commit` requirement should be specified as: `pre-commit` (`pip install pre-commit`).",
+        "Run `pipx install pre-commit`.",
+        "Run `brew install pre-commit` for macOS users."
+      ],
+      "golden_answer": "The `pre-commit` requirement should be specified as: `pre-commit` (`pip install pre-commit`)."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the INSTALLED_APPS list, 'paypal.standard.ipn' is misspelled as 'paypal.ipn'. This will cause an ImportError when Django tries to load the application.",
+      "correction_candidates": [
+        "Change 'paypal.ipn' to 'paypal.standard.ipn'.",
+        "Change 'paypal.ipn' to 'django_paypal.ipn'.",
+        "Remove the 'paypal.ipn' line as it is optional.",
+        "Change 'paypal.ipn' to 'paypal'."
+      ],
+      "golden_answer": "Change 'paypal.ipn' to 'paypal.standard.ipn'."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pokepetter_ursina_error_readme_3",
+  "repo_name": "pokepetter_ursina",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instruction to create a virtual environment is placed after the global installation of the package, defeating the purpose of environment isolation.",
+      "correction_candidates": [
+        "Move the instruction about creating a virtual environment to before any `pip install` commands.",
+        "Add a command `pip install ursina` again after the virtual environment is activated.",
+        "Remove the line 'After installation, it is good practice to create and activate a virtual environment for your project.'",
+        "Change the instruction to use `pipx` for global installation."
+      ],
+      "golden_answer": "Move the instruction about creating a virtual environment to before any `pip install` commands."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python setup.py install` is used instead of `python setup.py develop`. This prevents changes in the cloned source code from being immediately available, which is the goal of a development install.",
+      "correction_candidates": [
+        "Change `python setup.py install` to `python setup.py develop`.",
+        "Change `python setup.py install` to `pip install -e .` which is the modern equivalent.",
+        "Change `python setup.py install` to `python setup.py build` followed by `python setup.py install`.",
+        "Change `python setup.py install` to `pip install .`."
+      ],
+      "golden_answer": "Change `python setup.py install` to `python setup.py develop`."
+    }
+  ]
+}

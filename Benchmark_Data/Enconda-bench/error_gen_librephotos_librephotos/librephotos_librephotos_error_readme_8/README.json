@@ -1,0 +1,29 @@
+{
+  "readme": "librephotos_librephotos_error_readme_8",
+  "repo_name": "librephotos_librephotos",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced non-existent requirements-dev.txt file for dependency installation",
+      "correction_candidates": [
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). Follow the Docker installation method for the easiest setup.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). Make sure to install the required dependencies from `requirements.txt` first.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). Install Docker and Docker Compose before proceeding.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)."
+      ],
+      "golden_answer": "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Suggests installing development dependencies first before following standard installation, which is incorrect order",
+      "correction_candidates": [
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). Follow the complete installation guide for proper setup.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). The installation process will handle all dependencies automatically.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). Use the Docker method for automatic dependency management.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)."
+      ],
+      "golden_answer": "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)."
+    }
+  ]
+}

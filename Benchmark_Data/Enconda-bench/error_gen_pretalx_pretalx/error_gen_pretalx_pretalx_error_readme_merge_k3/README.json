@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_pretalx_pretalx_error_readme_merge_k3",
+  "repo_name": "pretalx_pretalx",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The local setup instructions install dependencies with pip before creating and activating the virtual environment, which pollutes the global Python environment.",
+      "correction_candidates": [
+        "The `python -m venv venv` command should be run before `git clone`.",
+        "Use `pip3` instead of `pip` to ensure the correct Python version is used.",
+        "The `pip install` command should be run after the `source venv/bin/activate` command.",
+        "The `pip install` command should be moved to the end of the script."
+      ],
+      "golden_answer": "The `pip install` command should be run after the `source venv/bin/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the development server is incorrect. `python manage.py run` is not a valid Django management command.",
+      "correction_candidates": [
+        "The command should be `python manage.py runserver`.",
+        "The command should be `python manage.py start`.",
+        "The command should be `pretalx runserver`.",
+        "The command should be `python manage.py startapp`."
+      ],
+      "golden_answer": "The command should be `python manage.py runserver`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions include `sudo apt-get install python3-django`, which is an unnecessary system-level dependency installation. Django should be installed via `pip` from `requirements.txt` within the virtual environment.",
+      "correction_candidates": [
+        "The command should be `sudo apt-get install python3-dev`.",
+        "The command should be run after activating the virtual environment.",
+        "Add the `--no-site-packages` flag to the `venv` command.",
+        "The command `sudo apt-get install python3-django` should be removed as Django is listed in `requirements.txt`."
+      ],
+      "golden_answer": "The command `sudo apt-get install python3-django` should be removed as Django is listed in `requirements.txt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies that Python 3.6 is required, which may be outdated or unnecessarily restrictive. The project likely supports a broader range of modern Python 3 versions.",
+      "correction_candidates": [
+        "The sentence 'This project requires Python 3.6 to run correctly' should be changed to specify Python 3.7 or newer.",
+        "The sentence 'This project requires Python 3.6 to run correctly' should be removed. The supported versions are defined in the project's packaging files and documentation.",
+        "The sentence 'This project requires Python 3.6 to run correctly' should be removed, as the specific Python version is managed by `pyenv` or defined in `setup.cfg`.",
+        "The sentence should be updated to 'This project requires Python 2.7 to run correctly'."
+      ],
+      "golden_answer": "The sentence 'This project requires Python 3.6 to run correctly' should be removed. The supported versions are defined in the project's packaging files and documentation."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions attempt to run database migrations with `python manage.py migrate` before installing the project dependencies, which will fail because Django and other packages are not yet installed.",
+      "correction_candidates": [
+        "The `python manage.py migrate` command should be replaced with `python manage.py makemigrations`.",
+        "The `pip install` command should be moved to before the `venv` creation.",
+        "The `python manage.py migrate` command is not necessary for local development.",
+        "The `python manage.py migrate` command should be run after the `pip install` command."
+      ],
+      "golden_answer": "The `python manage.py migrate` command should be run after the `pip install` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions only install production dependencies (`requirements/production.txt`), which is insufficient for a development environment. The development dependencies (e.g., testing tools, debug server) are missing.",
+      "correction_candidates": [
+        "The command `pip install -r requirements/development.txt` should be added after installing production dependencies.",
+        "The command should be changed to `pip install -r requirements.txt` to install all dependencies from a single file.",
+        "The command should be `pip install -e .` to install the project in editable mode.",
+        "The `production.txt` file should be edited to include development dependencies."
+      ],
+      "golden_answer": "The command `pip install -r requirements/development.txt` should be added after installing production dependencies."
+    }
+  ]
+}

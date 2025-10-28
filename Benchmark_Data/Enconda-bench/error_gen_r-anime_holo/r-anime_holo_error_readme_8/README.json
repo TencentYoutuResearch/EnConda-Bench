@@ -1,0 +1,29 @@
+{
+  "readme": "r-anime_holo_error_readme_8",
+  "repo_name": "r-anime_holo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Mixed dependency version specifications - some have specific versions while others don't, creating potential conflicts",
+      "correction_candidates": [
+        "Remove all version specifications and use latest versions for all dependencies",
+        "Add specific version numbers for all dependencies to ensure consistency",
+        "Use version ranges (e.g., >=2.25.0) instead of exact versions",
+        "Keep only critical dependencies with version specifications"
+      ],
+      "golden_answer": "Remove all version specifications and use latest versions for all dependencies"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent command paths - step 2 uses 'python holo.py' while other steps use 'python src/holo.py'",
+      "correction_candidates": [
+        "Change step 2 to use 'python src/holo.py -m setup' for consistency",
+        "Update all commands to use 'python holo.py' without src/ prefix",
+        "Add 'cd src/' instruction before step 2 to match the path",
+        "Use relative path './src/holo.py' for all commands"
+      ],
+      "golden_answer": "Change step 2 to use 'python src/holo.py -m setup' for consistency"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_1_only_E2",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The quick start command for `simulate.py` uses single dashes for long-form arguments (`-strategy`, `-visual`), which is invalid syntax and will cause an 'unrecognized arguments' error.",
+      "correction_candidates": [
+        "python simulate.py scenario.json --strategy=greedy --visual",
+        "python simulate.py scenario.json -s greedy -v",
+        "python simulate.py --scenario scenario.json --strategy greedy --visual",
+        "python simulate.py scenario.json --strategy greedy --visual"
+      ],
+      "golden_answer": "python simulate.py scenario.json --strategy greedy --visual"
+    }
+  ]
+}

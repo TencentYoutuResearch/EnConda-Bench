@@ -1,0 +1,29 @@
+{
+  "readme": "numba_llvmlite_error_readme_8",
+  "repo_name": "numba_llvmlite",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect conda parameter --channels instead of --channel (missing 's' makes it invalid)",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ conda install -c numba llvmlite",
+        "$ conda install --channel numba llvmlite",
+        "$ conda install --from-channel=numba llvmlite"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Added contradictory installation requirements mentioning LLVM 15.x.x and Python 2.7 which conflicts with earlier compatibility statements",
+      "correction_candidates": [
+        "Remove the entire 'Installation Requirements' section as it contradicts the compatibility information already provided",
+        "Before installing llvmlite, you must first install LLVM 14.x.x and ensure Python 3.9+ compatibility is maintained",
+        "Before installing llvmlite, ensure your system meets the Python 3.9 -- 3.12 and LLVM 14.x.x requirements mentioned above",
+        "Before installing llvmlite, you must first install the latest version of LLVM 16.x.x and ensure Python 3.12+ compatibility"
+      ],
+      "golden_answer": "Remove the entire 'Installation Requirements' section as it contradicts the compatibility information already provided"
+    }
+  ]
+}

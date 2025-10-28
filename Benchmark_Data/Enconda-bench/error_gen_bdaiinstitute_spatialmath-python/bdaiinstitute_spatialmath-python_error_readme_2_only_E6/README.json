@@ -1,0 +1,18 @@
+{
+  "readme": "bdaiinstitute_spatialmath-python_error_readme_2_only_E6",
+  "repo_name": "bdaiinstitute_spatialmath-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands for installing from GitHub is incorrect. The `cd` command is used before the `git clone` command, which will fail because the directory does not exist yet.",
+      "correction_candidates": [
+        "Swap the `cd spatialmath-python` and `git clone ...` commands.",
+        "Remove the `cd spatialmath-python` command.",
+        "Change `cd spatialmath-python` to `mkdir spatialmath-python && cd spatialmath-python`.",
+        "Replace the two lines with `git clone https://github.com/bdaiinstitute/spatialmath-python.git && cd spatialmath-python`."
+      ],
+      "golden_answer": "Swap the `cd spatialmath-python` and `git clone ...` commands."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_4",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The note about fixing a boot issue incorrectly advises forcing SELinux relabelling in 'enforcing mode'. This is dangerous and incorrect; it should be done in 'permissive mode' first.",
+      "correction_candidates": [
+        "force SELinux relabelling in permissive mode on your filesystem.",
+        "force SELinux relabelling in disabled mode on your filesystem.",
+        "disable SELinux entirely.",
+        "force SELinux relabelling using restorecon on the filesystem."
+      ],
+      "golden_answer": "force SELinux relabelling in permissive mode on your filesystem."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to navigate to the test directory is `cd tests/functional`, but the correct directory name is `test/functional` (singular 'test').",
+      "correction_candidates": [
+        "Go to test directory `cd test/functional`.",
+        "Go to test directory `cd functional-tests`.",
+        "Go to test directory `cd tests`.",
+        "Go to test directory `cd functional`."
+      ],
+      "golden_answer": "Go to test directory `cd test/functional`."
+    }
+  ]
+}

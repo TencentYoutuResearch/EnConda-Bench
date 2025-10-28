@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_rollbar_pyrollbar_error_readme_merge_k3",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git commit` command in the 'Contributing' section is syntactically incorrect because it is missing the `-m` flag to specify the commit message.",
+      "correction_candidates": [
+        "Commit your changes (```git commit -am 'Added some feature'```)",
+        "Commit your changes (```git commit -m 'Added some feature'```)",
+        "Commit your changes (```git commit --message 'Added some feature'```)",
+        "Commit your changes (```git commit -a -m 'Added some feature'```)"
+      ],
+      "golden_answer": "Commit your changes (```git commit -am 'Added some feature'```)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the test directory is specified as `tests/`, but the correct path is `rollbar/test`.",
+      "correction_candidates": [
+        "Tests are in `rollbar/test`.",
+        "Tests are in `rollbar/test/`.",
+        "Tests are in the `rollbar/test` directory.",
+        "Tests are in `rollbar/test`. To run the tests: `python setup.py test`"
+      ],
+      "golden_answer": "Tests are in `rollbar/test`. To run the tests: `python setup.py test`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Python version compatibility for PyRollbar v1.0.0 is vaguely listed as '3.x', which does not specify the exact supported minor versions and could lead to compatibility issues.",
+      "correction_candidates": [
+        "3.6, 3.7. 3.8, 3.9, 3.10, 3.11",
+        "Python 3.6+",
+        "All versions of Python 3",
+        "3.6 and newer"
+      ],
+      "golden_answer": "3.6, 3.7. 3.8, 3.9, 3.10, 3.11"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions unnecessarily direct the user to manually install the `requests` library, which is already a dependency of `pyrollbar` and would be installed automatically.",
+      "correction_candidates": [
+        "Follow the [Quick Start](https://docs.rollbar.com/docs/python#section-quick-start) instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python) to install pyrollbar and configure it for your platform.",
+        "Ensure you have `pip` installed, then follow the [Quick Start](https://docs.rollbar.com/docs/python#section-quick-start) instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python) to install pyrollbar and configure it for your platform.",
+        "First, install `pyrollbar` by running `pip install rollbar`, then follow the instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python).",
+        "Remove the unnecessary `pip install requests` step from the setup instructions."
+      ],
+      "golden_answer": "Follow the [Quick Start](https://docs.rollbar.com/docs/python#section-quick-start) instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python) to install pyrollbar and configure it for your platform."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The contribution workflow incorrectly lists pushing to a branch before committing changes. A commit must be made locally before it can be pushed to a remote repository.",
+      "correction_candidates": [
+        "3. Commit your changes (```git commit -am 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)",
+        "3. Stage your changes (```git add .```) and commit them (```git commit -m 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)",
+        "3. Commit your changes to a new branch (```git commit -am 'Added some feature'```)\n4. Push the new branch to origin (```git push origin my-new-feature```)",
+        "3. Commit your changes using `git commit -am 'Added some feature'`\n4. Push to the branch using `git push origin my-new-feature`"
+      ],
+      "golden_answer": "3. Commit your changes (```git commit -am 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is specified as `pytest`, but the project is configured to run tests via `python setup.py test`. Using `pytest` directly may fail if not properly configured.",
+      "correction_candidates": [
+        "To run the tests: `python setup.py test`",
+        "To run the tests: `python -m unittest discover`",
+        "To run the tests: `tox`",
+        "To run the tests: `py.test rollbar/test`"
+      ],
+      "golden_answer": "To run the tests: `python setup.py test`"
+    }
+  ]
+}

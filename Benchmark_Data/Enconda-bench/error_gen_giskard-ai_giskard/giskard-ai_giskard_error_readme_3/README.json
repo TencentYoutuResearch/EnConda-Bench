@@ -1,0 +1,29 @@
+{
+  "readme": "giskard-ai_giskard_error_readme_3",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install giskard-client -U` installs an incorrect and outdated package. The correct package is `giskard`.",
+      "correction_candidates": [
+        "pip install giskard -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard-ai -U",
+        "pip install giskard --upgrade"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The code imports libraries like `langchain` and `tiktoken` before the `pip install` command that installs them. The installation step must come before the import statements.",
+      "correction_candidates": [
+        "Place the `pip install` command at the very top of the 'Build a LLM agent' section, before any Python code.",
+        "Combine the `pip install` command with the main giskard installation at the top of the README.",
+        "Create a `requirements.txt` file with the dependencies and instruct the user to install it first.",
+        "Move the import statements to be inside the `model_predict` function."
+      ],
+      "golden_answer": "Place the `pip install` command at the very top of the 'Build a LLM agent' section, before any Python code."
+    }
+  ]
+}

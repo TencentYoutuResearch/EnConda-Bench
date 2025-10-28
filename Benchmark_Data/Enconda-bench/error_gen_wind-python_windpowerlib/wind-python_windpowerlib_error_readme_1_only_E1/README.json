@@ -1,0 +1,18 @@
+{
+  "readme": "wind-python_windpowerlib_error_readme_1_only_E1",
+  "repo_name": "wind-python_windpowerlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Optional Packages' section, the pip command to install the matplotlib library is misspelled as 'matplot', which will cause the installation to fail.",
+      "correction_candidates": [
+        "pip install python-matplotlib",
+        "pip install matplotlib",
+        "conda install matplotlib",
+        "pip install mplot"
+      ],
+      "golden_answer": "pip install matplotlib"
+    }
+  ]
+}

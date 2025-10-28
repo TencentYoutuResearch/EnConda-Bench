@@ -1,0 +1,29 @@
+{
+  "readme": "cclib_cclib_error_readme_1",
+  "repo_name": "cclib_cclib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions for building from source omit the required `numpy` dependency, which is not listed as a dependency in setup.py and will cause the build to fail if not pre-installed.",
+      "correction_candidates": [
+        "Run `pip install .[dev]` to install all dependencies including NumPy.",
+        "The package installs NumPy automatically, no changes are needed.",
+        "Modify the `setup.py` file to include `numpy` in `install_requires` before running `pip install .`",
+        "Before installing, ensure you have NumPy installed: `pip install numpy`, then run `pip install .`"
+      ],
+      "golden_answer": "Before installing, ensure you have NumPy installed: `pip install numpy`, then run `pip install .`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for the `ccget` script uses an incorrect flag `--file` which does not exist, causing a command syntax error.",
+      "correction_candidates": [
+        "To extract properties, use: `ccget scfenergies my_output.log`",
+        "To extract properties, use: `ccget --attribute scfenergies my_output.log`",
+        "To extract properties, use: `ccget scfenergies -f my_output.log`",
+        "The script is deprecated, use the Python API instead."
+      ],
+      "golden_answer": "To extract properties, use: `ccget scfenergies my_output.log`"
+    }
+  ]
+}

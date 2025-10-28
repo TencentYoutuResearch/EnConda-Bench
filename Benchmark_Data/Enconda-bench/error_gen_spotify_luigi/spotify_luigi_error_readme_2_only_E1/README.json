@@ -1,0 +1,18 @@
+{
+  "readme": "spotify_luigi_error_readme_2_only_E1",
+  "repo_name": "spotify_luigi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README instructs to install `python-toml` separately, which is an unnecessary dependency step. The TOML dependency is handled by the `luigi[toml]` extra.",
+      "correction_candidates": [
+        "First, ensure you have the `toml` library installed by running `pip install toml`.",
+        "Remove the instruction to install `python-toml` separately.",
+        "Change the instruction to `pip install luigi toml`.",
+        "The instruction to `pip install python-toml` should be removed, and the next line should be changed to `Run ``pip install luigi[toml]``...` to clarify that it handles the dependency."
+      ],
+      "golden_answer": "Remove the instruction to install `python-toml` separately."
+    }
+  ]
+}

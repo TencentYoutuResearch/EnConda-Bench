@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_1_only_E2",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In Example 2, the code `Crawler(PublisherCollection.TheNewYorker)` will raise an AttributeError because `PublisherCollection` does not have a `TheNewYorker` attribute directly. Publishers are grouped by country code.",
+      "correction_candidates": [
+        "crawler = Crawler(\"TheNewYorker\")",
+        "crawler = Crawler(PublisherCollection.us[\"TheNewYorker\"])",
+        "crawler = Crawler(PublisherCollection.us.TheNewYorker)",
+        "crawler = Crawler(PublisherCollection.get(\"TheNewYorker\"))"
+      ],
+      "golden_answer": "crawler = Crawler(PublisherCollection.us.TheNewYorker)"
+    }
+  ]
+}

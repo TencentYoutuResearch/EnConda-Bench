@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_2_only_E2",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command includes an invalid flag `--fast`, which will cause the command to fail.",
+      "correction_candidates": [
+        "Remove the `--fast` flag from the command.",
+        "Replace `--fast` with the correct flag `--no-cache-dir`.",
+        "Replace `--fast` with `--use-feature=fast-deps`.",
+        "The `--fast` flag should be placed before the package name."
+      ],
+      "golden_answer": "Remove the `--fast` flag from the command."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "materialsproject_custodian_error_readme_1_only_E7",
+  "repo_name": "materialsproject_custodian",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The supported Python version is listed as 'Python 3.6+', which is incorrect. The actual minimum required version is 3.8.",
+      "correction_candidates": [
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.8+.'",
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.7+.'",
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.9 and higher.'",
+        "Change 'Custodian supports Python 3.6+.' to 'Custodian supports the latest version of Python 3.'"
+      ],
+      "golden_answer": "Change 'Custodian supports Python 3.6+.' to 'Custodian supports Python 3.8+.'"
+    }
+  ]
+}

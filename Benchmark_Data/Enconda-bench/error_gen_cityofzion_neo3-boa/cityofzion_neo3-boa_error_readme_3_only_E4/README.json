@@ -1,0 +1,18 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_3_only_E4",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to 'Smart contract examples' points to a non-existent path `/examples` instead of the correct path `/boa3_test/examples`.",
+      "correction_candidates": [
+        "Change the link path from `[/examples]` to `[/boa3_test/examples]`.",
+        "Change the link path from `[/examples]` to `[/tests/examples]`.",
+        "Change the link path from `[/examples]` to `[/boa3/examples]`.",
+        "Change the link path from `[/examples]` to `[/smart_contracts/examples]`."
+      ],
+      "golden_answer": "Change the link path from `[/examples]` to `[/boa3_test/examples]`."
+    }
+  ]
+}

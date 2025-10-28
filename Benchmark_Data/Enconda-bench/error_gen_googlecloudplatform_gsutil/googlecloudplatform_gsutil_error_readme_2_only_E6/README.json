@@ -1,0 +1,18 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_2_only_E6",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development setup instructions advise installing dependencies globally before creating a virtual environment, which is the wrong order and defeats the purpose of an isolated environment.",
+      "correction_candidates": [
+        "Replace the instructions with `python setup.py develop`.",
+        "Correct the order to first create and activate the virtual environment, then run `pip install -r requirements.txt`.",
+        "Suggest using `conda` instead of `pip` and a virtual environment.",
+        "Add the `--user` flag to the `pip install` command to avoid global installation."
+      ],
+      "golden_answer": "Correct the order to first create and activate the virtual environment, then run `pip install -r requirements.txt`."
+    }
+  ]
+}

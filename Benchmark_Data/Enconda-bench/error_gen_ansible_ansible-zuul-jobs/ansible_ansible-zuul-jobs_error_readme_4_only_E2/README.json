@@ -1,0 +1,18 @@
+{
+  "readme": "ansible_ansible-zuul-jobs_error_readme_4_only_E2",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `tox -e lint` is used, but the project is not configured with a `tox.ini` file that defines a `lint` environment, so the command will fail.",
+      "correction_candidates": [
+        "ansible-lint .",
+        "tox",
+        "yamllint .",
+        "make lint"
+      ],
+      "golden_answer": "ansible-lint ."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "fixator10_fixator10-cogs_error_readme_1",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `[p]repo add` command specifies the `master` branch, which is incompatible with Red-DiscordBot V3. The correct branch is `V3`.",
+      "correction_candidates": [
+        "Change 'master' to 'V3' in the command.",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs V3",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs --branch V3",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs"
+      ],
+      "golden_answer": "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs V3"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `[p]cog install` command uses a comma as a separator between the repo name and the cog name, which is syntactically incorrect.",
+      "correction_candidates": [
+        "[p]cog install Fixator10-Cogs <cog_name>",
+        "[p]cog install Fixator10-Cogs --cog <cog_name>",
+        "[p]cog install from Fixator10-Cogs <cog_name>",
+        "[p]cog install <cog_name> from Fixator10-Cogs"
+      ],
+      "golden_answer": "[p]cog install Fixator10-Cogs <cog_name>"
+    }
+  ]
+}

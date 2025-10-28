@@ -1,0 +1,18 @@
+{
+  "readme": "plotly_dash-bio_error_readme_8_only_E1",
+  "repo_name": "plotly_dash-bio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Using conda commands to install packages in a Python virtual environment (venv) instead of pip, which causes incompatibility issues.",
+      "correction_candidates": [
+        "Change conda install commands to pip install commands to match the virtual environment setup",
+        "Switch from venv to conda environment creation using conda create -n env python=3.8",
+        "Use pip install for all packages since venv is a pip-based environment manager",
+        "Create a conda environment first with conda create, then use conda install commands"
+      ],
+      "golden_answer": "Change conda install commands to pip install commands to match the virtual environment setup"
+    }
+  ]
+}

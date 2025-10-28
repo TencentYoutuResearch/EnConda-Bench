@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_inflect_error_readme_2_only_E7",
+  "repo_name": "jaraco_inflect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library requires Python 2.7, which is outdated. The library's badges and metadata indicate support for modern Python 3 versions.",
+      "correction_candidates": [
+        "Remove the sentence stating it requires Python 2.7.",
+        "Change the sentence to \"This library is compatible with Python 3.6 and newer.\"",
+        "Change the sentence to \"This library requires the `python2-compat` package.\"",
+        "Update the sentence to \"This library is compatible with both Python 2.7 and Python 3.x.\""
+      ],
+      "golden_answer": "Remove the sentence stating it requires Python 2.7."
+    }
+  ]
+}

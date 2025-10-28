@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_6_only_E6",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Running pre-commit install without pipenv environment context, should be run within pipenv",
+      "correction_candidates": [
+        "pipenv run pre-commit install",
+        "pipenv shell && pre-commit install",
+        "Install pipenv dependencies first, then run pipenv run pre-commit install",
+        "pip install pre-commit && pre-commit install"
+      ],
+      "golden_answer": "pipenv run pre-commit install"
+    }
+  ]
+}

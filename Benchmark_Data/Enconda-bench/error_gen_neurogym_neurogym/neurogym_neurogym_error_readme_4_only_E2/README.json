@@ -1,0 +1,18 @@
+{
+  "readme": "neurogym_neurogym_error_readme_4_only_E2",
+  "repo_name": "neurogym_neurogym",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is syntactically incorrect. It provides `neurogym.git` as the repository source, which is not a valid URL.",
+      "correction_candidates": [
+        "git clone https://github.com/neurogym/neurogym",
+        "git clone https://github.com/neurogym/neurogym.git",
+        "git clone git@github.com:neurogym/neurogym.git",
+        "git clone https://www.github.com/neurogym/neurogym.git"
+      ],
+      "golden_answer": "git clone https://github.com/neurogym/neurogym.git"
+    }
+  ]
+}

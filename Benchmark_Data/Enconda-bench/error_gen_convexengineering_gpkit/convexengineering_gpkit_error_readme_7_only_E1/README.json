@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_7_only_E1",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Includes unnecessary dependencies (cvxpy, sympy) that are not required for GPkit",
+      "correction_candidates": [
+        "Remove cvxpy and sympy from the installation command",
+        "Remove only sympy but keep cvxpy for advanced optimization",
+        "Replace cvxpy and sympy with mosek and cvxopt packages",
+        "Move cvxpy and sympy to optional dependencies section"
+      ],
+      "golden_answer": "Remove cvxpy and sympy from the installation command"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_7_only_E4",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect requirements file name used for pip installation",
+      "correction_candidates": [
+        "Change 'requirements.txt' to 'requirements_debug.txt'",
+        "Change 'requirements.txt' to 'requirements/development.txt'",
+        "Change 'requirements.txt' to 'requirements_dev.txt'",
+        "Change 'requirements.txt' to 'requirements-debug.txt'"
+      ],
+      "golden_answer": "Change 'requirements.txt' to 'requirements_debug.txt'"
+    }
+  ]
+}

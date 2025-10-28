@@ -1,0 +1,18 @@
+{
+  "readme": "cda-tum_mqt-bench_error_readme_1_only_E6",
+  "repo_name": "cda-tum_mqt-bench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly place the `pip install` command before the creation and activation of the virtual environment, which means the package will be installed globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "First, run `pip install mqt.bench --user` to install the package for the current user, then create the virtual environment.",
+        "The commands should be run in a single line: `pip install mqt.bench && python3 -m venv venv && source venv/bin/activate`",
+        "The correct order is to create the virtual environment, activate it, and then install the package. The commands should be:\n```console\n$ python3 -m venv venv\n$ source venv/bin/activate\n(venv) $ pip install mqt.bench\n```",
+        "The `pip install` command should be moved to the end, but the `(venv)` prompt should be removed for clarity."
+      ],
+      "golden_answer": "The correct order is to create the virtual environment, activate it, and then install the package. The commands should be:\n```console\n$ python3 -m venv venv\n$ source venv/bin/activate\n(venv) $ pip install mqt.bench\n```"
+    }
+  ]
+}

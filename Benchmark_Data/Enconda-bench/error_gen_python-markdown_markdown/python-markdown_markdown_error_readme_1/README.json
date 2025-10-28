@@ -1,0 +1,29 @@
+{
+  "readme": "python-markdown_markdown_error_readme_1",
+  "repo_name": "python-markdown_markdown",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install python-markdown` is incorrect. While it might install a package, it is not the official and maintained `Markdown` library, leading to potential version conflicts or missing features.",
+      "correction_candidates": [
+        "pip install markdown",
+        "pip install Markdown-PY",
+        "conda install markdown",
+        "pip install git+https://github.com/Python-Markdown/markdown.git"
+      ],
+      "golden_answer": "pip install markdown"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Python usage example calls a non-existent function `markdown.render()`. The correct function to convert a Markdown string to HTML is `markdown.markdown()`.",
+      "correction_candidates": [
+        "html = markdown.convert(your_text_string)",
+        "html = markdown.markdown(your_text_string)",
+        "md = markdown.Markdown(); html = md.convert(your_text_string)",
+        "html = markdown.parse(your_text_string)"
+      ],
+      "golden_answer": "html = markdown.markdown(your_text_string)"
+    }
+  ]
+}

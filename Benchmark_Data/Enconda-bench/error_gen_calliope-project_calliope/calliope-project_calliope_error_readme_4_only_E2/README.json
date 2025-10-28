@@ -1,0 +1,18 @@
+{
+  "readme": "calliope-project_calliope_error_readme_4_only_E2",
+  "repo_name": "calliope-project_calliope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides a fictitious command `calliope run-example` to run examples, which does not exist.",
+      "correction_candidates": [
+        "Remove the sentence 'You can run them directly using the command `calliope run-example --name urban_scale`.'",
+        "Replace `calliope run-example --name urban_scale` with a Python script example, like `python -c 'import calliope; calliope.examples.urban_scale()'`",
+        "Change the command to `calliope examples --run urban_scale`.",
+        "Change the command to `python -m calliope.examples.urban_scale`."
+      ],
+      "golden_answer": "Remove the sentence 'You can run them directly using the command `calliope run-example --name urban_scale`.'"
+    }
+  ]
+}

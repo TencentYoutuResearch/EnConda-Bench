@@ -1,0 +1,18 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_3_only_E1",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect pip installation command, 'pip install stan', which installs a different package, instead of the correct 'pip install cmdstanpy'.",
+      "correction_candidates": [
+        "The correct command is 'pip install pystan', which is the official Python interface.",
+        "Specify the installation command as 'python -m pip install cmdstanpy'.",
+        "Remove the suggested command and just leave the link to PyPi for users to find the command.",
+        "Change the command from 'pip install stan' to 'pip install cmdstanpy'."
+      ],
+      "golden_answer": "Change the command from 'pip install stan' to 'pip install cmdstanpy'."
+    }
+  ]
+}

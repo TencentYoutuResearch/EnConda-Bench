@@ -1,0 +1,29 @@
+{
+  "readme": "commaai_comma10k_error_readme_8",
+  "repo_name": "commaai_comma10k",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent dependencies.txt file that is not mentioned elsewhere in the repository",
+      "correction_candidates": [
+        "Check for requirements.txt file instead, which is the standard Python dependency file",
+        "Install dependencies manually as needed when running the viewer script",
+        "Look for a setup.py file to install dependencies using pip install -e .",
+        "Use pip freeze to generate your own requirements file from working environment"
+      ],
+      "golden_answer": "Check for requirements.txt file instead, which is the standard Python dependency file"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Unclear instructions that don't specify how to actually install dependencies from the referenced file",
+      "correction_candidates": [
+        "Run pip install -r requirements.txt to install dependencies from the file",
+        "Use conda env create -f environment.yml if using conda package manager",
+        "Install each dependency individually using pip install package_name",
+        "Follow the installation instructions provided in the dependency file itself"
+      ],
+      "golden_answer": "Run pip install -r requirements.txt to install dependencies from the file"
+    }
+  ]
+}

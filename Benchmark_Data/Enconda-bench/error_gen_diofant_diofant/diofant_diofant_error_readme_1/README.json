@@ -1,0 +1,29 @@
+{
+  "readme": "diofant_diofant_error_readme_1",
+  "repo_name": "diofant_diofant",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library requires Python 2.7, which is an outdated and unsupported version for this library.",
+      "correction_candidates": [
+        "State that Diofant requires Python 3.8 or newer.",
+        "Remove the Python version requirement sentence entirely.",
+        "State that Diofant requires the latest version of Python.",
+        "State that Diofant is compatible with both Python 2.7 and Python 3."
+      ],
+      "golden_answer": "State that Diofant requires Python 3.8 or newer."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes 'requests', an unnecessary dependency not required for the library to function.",
+      "correction_candidates": [
+        "Change the command to `pip install diofant sympy`.",
+        "Change the command to `pip install diofant --no-deps`.",
+        "Change the command to `pip install diofant`.",
+        "Change the command to `conda install diofant`."
+      ],
+      "golden_answer": "Change the command to `pip install diofant`."
+    }
+  ]
+}

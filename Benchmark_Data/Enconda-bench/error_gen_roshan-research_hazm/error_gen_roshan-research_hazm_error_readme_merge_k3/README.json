@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_roshan-research_hazm_error_readme_merge_k3",
+  "repo_name": "roshan-research_hazm",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install hazm torch` incorrectly bundles the 'torch' library as a mandatory dependency, while it is only required for optional features like word embeddings.",
+      "correction_candidates": [
+        "Change the command to `pip install hazm`.",
+        "Change the command to `pip install hazm[full]`.",
+        "Change the command to `pip install hazm` and add a note that `torch` is needed for some modules.",
+        "Change the command to `pip install hazm[torch]`."
+      ],
+      "golden_answer": "Change the command to `pip install hazm`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `Usage` section, the example for the `Lemmatizer` uses an assignment operator (`=`) instead of a function call, which will cause a `TypeError`.",
+      "correction_candidates": [
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize('می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer('می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize(text='می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `Lemmatizer.lemmatize('می‌روم')`."
+      ],
+      "golden_answer": "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize('می‌روم')`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The `Installation` section incorrectly states that the library is only compatible with Python 2.7, which is outdated and contradicts the PyPI badge showing compatibility with modern Python versions (e.g., 3.8, 3.9, 3.10).",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Hazm is compatible with Python 2.7 only.'",
+        "Change the sentence to 'Note: Hazm requires Python 3.7 or newer.'",
+        "Change the sentence to 'Note: Hazm is not compatible with Python 2.'",
+        "Replace the sentence with a link to the PyPI page for version information."
+      ],
+      "golden_answer": "Remove the sentence 'Note: Hazm is compatible with Python 2.7 only.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The usage example for `POSTagger` specifies an incorrect model filename (`postagger.model` instead of `pos_tagger.model`), which will lead to a `FileNotFoundError` if the user follows the official model download links.",
+      "correction_candidates": [
+        "Change `model='postagger.model'` to `model='pos_tagger.model'`.",
+        "Change `model='postagger.model'` to `model_path='pos_tagger.model'`.",
+        "Change `model='postagger.model'` to point to the full path, e.g., `model='./models/pos_tagger.model'`.",
+        "Remove the `model` argument to use the default model: `tagger = POSTagger()`."
+      ],
+      "golden_answer": "Change `model='postagger.model'` to `model='pos_tagger.model'`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package from GitHub is syntactically incorrect. `pip install --git` is not a valid pip command.",
+      "correction_candidates": [
+        "Change `pip install --git https://github.com/roshan-research/hazm.git` to `pip install git+https://github.com/roshan-research/hazm.git`.",
+        "Change `pip install --git https://github.com/roshan-research/hazm.git` to `git clone https://github.com/roshan-research/hazm.git` followed by `pip install .`.",
+        "Change `pip install --git https://github.com/roshan-research/hazm.git` to `pip install -e git+https://github.com/roshan-research/hazm.git#egg=hazm`.",
+        "Change `pip install --git` to `pip install --repo`."
+      ],
+      "golden_answer": "Change `pip install --git https://github.com/roshan-research/hazm.git` to `pip install git+https://github.com/roshan-research/hazm.git`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The usage example for `SpacyPOSTagger` provides a specific but non-existent relative file path (`./models/spacy_pos_tagger`) instead of a generic placeholder, which will cause a file not found error as this directory structure is not created by default.",
+      "correction_candidates": [
+        "Change `model_path = './models/spacy_pos_tagger'` back to the placeholder `model_path = 'MODELPATH'`.",
+        "Change `model_path = './models/spacy_pos_tagger'` to `model_path = 'roshan-research/spacy_pos_tagger_parsbertpostagger'` to load directly from Hugging Face.",
+        "Add a note before the code block: 'First, download the model and place it in a `./models/` directory.'",
+        "Change the path to an absolute path placeholder like `model_path = '/path/to/your/model'`."
+      ],
+      "golden_answer": "Change `model_path = './models/spacy_pos_tagger'` back to the placeholder `model_path = 'MODELPATH'`."
+    }
+  ]
+}

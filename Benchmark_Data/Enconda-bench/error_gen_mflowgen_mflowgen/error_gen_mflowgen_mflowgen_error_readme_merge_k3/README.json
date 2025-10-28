@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_mflowgen_mflowgen_error_readme_merge_k3",
+  "repo_name": "mflowgen_mflowgen",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install mflow` attempts to install a package with the wrong name, which is not the correct package for this tool.",
+      "correction_candidates": [
+        "pip install mflow-gen",
+        "pip install mflowgen",
+        "pip install --upgrade mflow",
+        "python -m pip install mflow"
+      ],
+      "golden_answer": "pip install mflowgen"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `mflowgen --run --design ...` uses an incorrect flag format. The `run` command should not be preceded by double dashes.",
+      "correction_candidates": [
+        "mflowgen-run --design path/to/your/design",
+        "mflowgen run --design path/to/your/design",
+        "mflowgen execute --design path/to/your/design",
+        "mflowgen --design path/to/your/design --run"
+      ],
+      "golden_answer": "mflowgen run --design path/to/your/design"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. `pip install mflowgen` is run before the virtual environment is created and activated, causing the package to be installed in the global or user site-packages instead of the isolated environment.",
+      "correction_candidates": [
+        "First, create the virtual environment with `python3 -m venv venv`, then install the package with `pip install mflowgen`, and finally activate the environment with `source venv/bin/activate`.",
+        "First, create the virtual environment with `python3 -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package with `pip install mflowgen`.",
+        "First, install the package with `pip install mflowgen`, then create the virtual environment with `python3 -m venv venv`, and finally activate it with `source venv/bin/activate`.",
+        "First, activate the environment with `source venv/bin/activate`, then create it with `python3 -m venv venv`, and finally install the package with `pip install mflowgen`."
+      ],
+      "golden_answer": "First, create the virtual environment with `python3 -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package with `pip install mflowgen`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv venv` is ambiguous and may fail or use an incorrect Python version on systems where `python` points to Python 2 or is not available.",
+      "correction_candidates": [
+        "Use the command `python -m venv venv --python=python3` to ensure Python 3 is used.",
+        "Use the command `py -3 -m venv venv` to create the virtual environment.",
+        "Use the command `python3 -m venv venv` for clarity and to ensure Python 3 is used.",
+        "Use the command `virtualenv venv` as an alternative."
+      ],
+      "golden_answer": "Use the command `python3 -m venv venv` for clarity and to ensure Python 3 is used."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install requirements.txt` is syntactically incorrect for installing dependencies from a file. It treats 'requirements.txt' as a package name.",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install --file requirements.txt",
+        "cat requirements.txt | xargs pip install",
+        "pip install -requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instruction to run `source config/setup.sh` is incorrect as this file does not exist in the repository, leading to a file not found error.",
+      "correction_candidates": [
+        "Run the setup script with `source scripts/setup.sh`.",
+        "Set up the environment by running `pip install -e .` from the root directory.",
+        "Run the configuration script with `./configure`.",
+        "Source the environment file with `source env/setup.sh`."
+      ],
+      "golden_answer": "Set up the environment by running `pip install -e .` from the root directory."
+    }
+  ]
+}

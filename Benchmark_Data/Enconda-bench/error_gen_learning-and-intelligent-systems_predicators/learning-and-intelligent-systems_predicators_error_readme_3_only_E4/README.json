@@ -1,0 +1,18 @@
+{
+  "readme": "learning-and-intelligent-systems_predicators_error_readme_3_only_E4",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The alternative mypy command suggests `--config-file mypy.ini` but is meant to be run from the parent directory, where `mypy.ini` does not exist. The path is incorrect.",
+      "correction_candidates": [
+        "Change the config file path in the alternative command to `predicators/mypy.ini`.",
+        "Change the alternative command to `cd predicators && mypy . --config-file mypy.ini`.",
+        "Remove the alternative `mypy` command suggestion.",
+        "Move the `mypy.ini` file to the parent directory."
+      ],
+      "golden_answer": "Change the config file path in the alternative command to `predicators/mypy.ini`."
+    }
+  ]
+}

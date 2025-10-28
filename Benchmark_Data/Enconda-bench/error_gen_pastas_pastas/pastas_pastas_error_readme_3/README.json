@@ -1,0 +1,29 @@
+{
+  "readme": "pastas_pastas_error_readme_3",
+  "repo_name": "pastas_pastas",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The MyBinder link has an incorrect filepath parameter, pointing to `examples/1_basic_model.ipynb` instead of `examples/notebooks/1_basic_model.ipynb`, which will cause MyBinder to fail to find the file.",
+      "correction_candidates": [
+        "View and edit a working example notebook of a Pastas model in [MyBinder](https://mybinder.org/v2/gh/pastas/pastas/master?filepath=examples%2Fnotebooks%2F1_basic_model.ipynb)",
+        "View and edit a working example notebook of a Pastas model in [MyBinder](https://mybinder.org/v2/gh/pastas/pastas/master?filepath=notebooks%2F1_basic_model.ipynb)",
+        "View and edit a working example notebook of a Pastas model in [MyBinder](https://mybinder.org/v2/gh/pastas/pastas/dev?filepath=examples%2Fnotebooks%2F1_basic_model.ipynb)",
+        "The MyBinder link is broken; please run the notebooks locally."
+      ],
+      "golden_answer": "View and edit a working example notebook of a Pastas model in [MyBinder](https://mybinder.org/v2/gh/pastas/pastas/master?filepath=examples%2Fnotebooks%2F1_basic_model.ipynb)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions for the stable version incorrectly place the `pip install pastas` command before the creation and activation of the virtual environment, which will install the package in the global environment instead of the isolated one.",
+      "correction_candidates": [
+        "Move the `pip install pastas` command to be after the `source pastas-env/bin/activate` command.",
+        "Replace `python -m venv pastas-env` with `conda create -n pastas-env python=3.10`.",
+        "The order is correct, but the command should be `pip install pastas -e .`.",
+        "Remove the virtual environment instructions as they are not necessary with Anaconda."
+      ],
+      "golden_answer": "Move the `pip install pastas` command to be after the `source pastas-env/bin/activate` command."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_4_only_E2",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py migrate machina_forum` uses an incorrect app label. Migrations should be run without a specific label or with a correct one.",
+      "correction_candidates": [
+        "The correct command is `python manage.py migrate` to run all pending migrations for installed apps.",
+        "Remove the `machina_forum` argument, as it is not a valid migration label for the `migrate` command.",
+        "The migrate command should not have an argument in this case. It should be `python manage.py migrate`.",
+        "To fix this, use `python manage.py migrate`."
+      ],
+      "golden_answer": "The correct command is `python manage.py migrate` to run all pending migrations for installed apps."
+    }
+  ]
+}

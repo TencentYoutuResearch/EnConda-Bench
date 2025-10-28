@@ -1,0 +1,29 @@
+{
+  "readme": "lightkurve_lightkurve_error_readme_5",
+  "repo_name": "lightkurve_lightkurve",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order in editable install instructions - installing pip dependencies before setting up poetry environment",
+      "correction_candidates": [
+        "$ python -m pip install poetry\n$ poetry install",
+        "$ pip install poetry\n$ poetry install",
+        "$ poetry install\n$ pip install poetry",
+        "$ python -m pip install poetry\n$ poetry init\n$ poetry install"
+      ],
+      "golden_answer": "$ python -m pip install poetry\n$ poetry install"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Wrong pip install command used instead of poetry install for editable install",
+      "correction_candidates": [
+        "poetry install",
+        "python -m pip install -e .",
+        "pip install -e .",
+        "python setup.py develop"
+      ],
+      "golden_answer": "poetry install"
+    }
+  ]
+}

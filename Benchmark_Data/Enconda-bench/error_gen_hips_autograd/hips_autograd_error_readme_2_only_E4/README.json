@@ -1,0 +1,18 @@
+{
+  "readme": "hips_autograd_error_readme_2_only_E4",
+  "repo_name": "hips_autograd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the tutorial in the 'Documentation' section points to a non-existent path `documentation/tutorial.md` instead of the correct `docs/tutorial.md`.",
+      "correction_candidates": [
+        "Change the link path to `TUTORIAL.md`.",
+        "Change the link path to `docs/tutorial.md`.",
+        "Change the link path to `autograd/docs/tutorial.md`.",
+        "Change the link path to the absolute URL `https://github.com/HIPS/autograd/blob/master/docs/tutorial.md`."
+      ],
+      "golden_answer": "Change the link path to `docs/tutorial.md`."
+    }
+  ]
+}

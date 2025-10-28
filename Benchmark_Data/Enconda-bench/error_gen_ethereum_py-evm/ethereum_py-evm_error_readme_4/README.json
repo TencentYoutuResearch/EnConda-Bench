@@ -1,0 +1,29 @@
+{
+  "readme": "ethereum_py-evm_error_readme_4",
+  "repo_name": "ethereum_py-evm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The quickstart installation command attempts to install a non-existent package 'py-evm-core' alongside 'py-evm', which will cause pip to fail.",
+      "correction_candidates": [
+        "Change the command to 'python -m pip install py_evm'.",
+        "Run 'python -m pip install py-evm' and then 'python -m pip install py-evm-core' in separate commands.",
+        "Change the command to 'python -m pip install \"py-evm[core]\"'.",
+        "Change the command to 'python -m pip install py-evm'."
+      ],
+      "golden_answer": "Change the command to 'python -m pip install py-evm'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'pre-commit install' command is run before the project's development dependencies (which include pre-commit itself) are installed, causing the command to fail.",
+      "correction_candidates": [
+        "The command 'pre-commit install' should be moved after 'python -m pip install -e \".[dev]\"'.",
+        "Run 'pip install pre-commit' before 'pre-commit install'.",
+        "The command 'pre-commit install' should be run outside the virtual environment.",
+        "Replace 'pre-commit install' with 'make lint-install'."
+      ],
+      "golden_answer": "The command 'pre-commit install' should be moved after 'python -m pip install -e \".[dev]\"'."
+    }
+  ]
+}

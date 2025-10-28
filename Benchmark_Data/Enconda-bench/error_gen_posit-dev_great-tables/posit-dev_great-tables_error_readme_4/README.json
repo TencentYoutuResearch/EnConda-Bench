@@ -1,0 +1,29 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_4",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `libgdal-dev` as a required system dependency, which is not needed by the package.",
+      "correction_candidates": [
+        "Remove the prerequisite instruction to install `libgdal-dev`.",
+        "Replace `libgdal-dev` with `python3-dev`.",
+        "Clarify that `libgdal-dev` is an optional dependency for specific mapping features.",
+        "Provide installation commands for `libgdal-dev` on different operating systems."
+      ],
+      "golden_answer": "Remove the prerequisite instruction to install `libgdal-dev`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the Python code example, the `fmt_currency` method is called with an incorrect keyword argument `column` instead of `columns`.",
+      "correction_candidates": [
+        "Change the keyword argument from `column=` to `columns=` in the `.fmt_currency()` call.",
+        "Change `.fmt_currency(column=...` to `.fmt(gt.currency, columns=...`.",
+        "Split the `fmt_currency` call into four separate calls, one for each column.",
+        "Remove the `.fmt_currency()` line from the example."
+      ],
+      "golden_answer": "Change the keyword argument from `column=` to `columns=` in the `.fmt_currency()` call."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_3_only_E2",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to find new episodes in the module table uses an incorrect flag, `-r`, instead of the correct flag, `-s`, for specifying the subreddit.",
+      "correction_candidates": [
+        "Change the command to 'python holo.py -s [subreddit]'",
+        "Change the command to 'python holo.py --subreddit [subreddit]'",
+        "Change the command to 'python holo.py find --subreddit [subreddit]'",
+        "Change the command to 'python holo.py --run [subreddit]'"
+      ],
+      "golden_answer": "Change the command to 'python holo.py -s [subreddit]'"
+    }
+  ]
+}

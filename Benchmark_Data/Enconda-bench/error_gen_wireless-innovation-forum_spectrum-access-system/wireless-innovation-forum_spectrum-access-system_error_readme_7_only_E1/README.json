@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_7_only_E1",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependency tensorflow added to the installation list that is not mentioned in prerequisites",
+      "correction_candidates": [
+        "Remove pip3 install tensorflow from the conda installation commands",
+        "Add tensorflow to the prerequisites section before installing it",
+        "Replace tensorflow with another required package like numpy",
+        "Move tensorflow installation to the test harness section instead"
+      ],
+      "golden_answer": "Remove pip3 install tensorflow from the conda installation commands"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_5_only_E1",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Including unnecessary system dependencies that are not actually required for django-autocomplete-light",
+      "correction_candidates": [
+        "pip install django-autocomplete-light",
+        "sudo apt-get install python3-pip\npip install django-autocomplete-light",
+        "pip install django-autocomplete-light django-querysetsequence",
+        "sudo apt-get install git\npip install django-autocomplete-light"
+      ],
+      "golden_answer": "pip install django-autocomplete-light"
+    }
+  ]
+}

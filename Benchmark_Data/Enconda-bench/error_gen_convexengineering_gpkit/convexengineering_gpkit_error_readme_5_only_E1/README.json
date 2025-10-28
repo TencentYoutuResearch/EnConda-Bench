@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_5_only_E1",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Missing critical dependency installation for cvxopt solver",
+      "correction_candidates": [
+        "Add pip install cvxopt to the dependency installation commands",
+        "Add conda install cvxopt to the dependency installation commands",
+        "Add apt-get install cvxopt-dev to the dependency installation commands",
+        "Add pip install cvxpy cvxopt to the dependency installation commands"
+      ],
+      "golden_answer": "Add pip install cvxopt to the dependency installation commands"
+    }
+  ]
+}

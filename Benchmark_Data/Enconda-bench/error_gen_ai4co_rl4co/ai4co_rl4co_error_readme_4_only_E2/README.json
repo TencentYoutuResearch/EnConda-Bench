@@ -1,0 +1,18 @@
+{
+  "readme": "ai4co_rl4co_error_readme_4_only_E2",
+  "repo_name": "ai4co_rl4co",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install from source` command provides an invalid git URL, missing the `.git` suffix, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Add the `.git` suffix to the URL: `pip install -U git+https://github.com/ai4co/rl4co.git`.",
+        "Remove the `git+` prefix from the URL.",
+        "Replace the command with `pip install -U rl4co --index-url https://github.com/ai4co/rl4co`.",
+        "Add `@main` to the end of the URL to specify the branch: `pip install -U git+https://github.com/ai4co/rl4co@main`."
+      ],
+      "golden_answer": "Add the `.git` suffix to the URL: `pip install -U git+https://github.com/ai4co/rl4co.git`."
+    }
+  ]
+}

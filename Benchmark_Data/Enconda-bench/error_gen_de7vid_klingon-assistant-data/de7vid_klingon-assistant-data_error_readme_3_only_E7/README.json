@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_3_only_E7",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that `call_google_translate.py` requires Python 2.7, which is an outdated and likely incompatible version.",
+      "correction_candidates": [
+        "The script is compatible with Python 3 and does not require a specific version.",
+        "The script requires Python 3.6 or newer.",
+        "The script is written in Perl, not Python.",
+        "The Python 2.7 requirement should be removed as the script has been updated for Python 3."
+      ],
+      "golden_answer": "The Python 2.7 requirement should be removed as the script has been updated for Python 3."
+    }
+  ]
+}

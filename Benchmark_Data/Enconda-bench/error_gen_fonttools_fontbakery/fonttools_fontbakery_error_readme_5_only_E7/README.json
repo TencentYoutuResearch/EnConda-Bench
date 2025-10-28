@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_5_only_E7",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 2.7 which is outdated and incompatible with current Font Bakery versions",
+      "correction_candidates": [
+        "Make sure you have Python 3.8+ installed before proceeding with the installation.",
+        "Make sure you have Python 3.6 or higher installed before proceeding with the installation.",
+        "Make sure you have the latest Python version installed before proceeding with the installation.",
+        "Make sure you have Python 3.7+ installed before proceeding with the installation."
+      ],
+      "golden_answer": "Make sure you have Python 3.8+ installed before proceeding with the installation."
+    }
+  ]
+}

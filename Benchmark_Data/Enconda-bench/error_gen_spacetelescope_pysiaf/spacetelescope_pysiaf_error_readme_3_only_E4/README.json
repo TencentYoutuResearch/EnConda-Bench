@@ -1,0 +1,18 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_3_only_E4",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path to the Code of Conduct is incorrect. The file `CODE_OF_CONDUCT.md` is in the root directory, not in a `docs` subdirectory, so the link is broken.",
+      "correction_candidates": [
+        "[Code of Conduct](CODE_OF_CONDUCT.md)",
+        "[Code of Conduct](.github/CODE_OF_CONDUCT.md)",
+        "[Code of Conduct](https://github.com/spacetelescope/pysiaf/blob/master/CODE_OF_CONDUCT.md)",
+        "[Code of Conduct](conduct.md)"
+      ],
+      "golden_answer": "[Code of Conduct](CODE_OF_CONDUCT.md)"
+    }
+  ]
+}

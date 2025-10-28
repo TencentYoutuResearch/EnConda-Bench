@@ -1,0 +1,18 @@
+{
+  "readme": "mause_duckdb_engine_error_readme_3_only_E8",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "In the Alembic integration section, the dialect name is incorrectly specified as `__dialect__ = \"duckdb-engine\"`. SQLAlchemy's dialect system recognizes this dialect simply as `duckdb`.",
+      "correction_candidates": [
+        "__dialect__ = \"duckdb+psycopg2\"",
+        "__dialect__ = \"postgresql\"",
+        "__dialect__ = \"duckdb\"",
+        "__dialect__ = \"duck\""
+      ],
+      "golden_answer": "__dialect__ = \"duckdb\""
+    }
+  ]
+}

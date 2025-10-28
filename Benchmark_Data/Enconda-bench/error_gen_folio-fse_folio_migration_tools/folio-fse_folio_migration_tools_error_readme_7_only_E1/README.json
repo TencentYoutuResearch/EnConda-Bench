@@ -1,0 +1,18 @@
+{
+  "readme": "folio-fse_folio_migration_tools_error_readme_7_only_E1",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary additional dependencies listed in pip install command",
+      "correction_candidates": [
+        "python -m pip install folio_migration_tools",
+        "python -m pip install folio-migration-tools",
+        "pip install folio_migration_tools",
+        "python3 -m pip install folio_migration_tools"
+      ],
+      "golden_answer": "python -m pip install folio_migration_tools"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pika_pika_error_readme_1_only_E7",
+  "repo_name": "pika_pika",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Pika supports Python 3.5+, but the library actually requires Python 3.7 or newer.",
+      "correction_candidates": [
+        "Change the text to 'Supports Python 3.7+'.",
+        "Change the text to 'Supports Python 3.6+'.",
+        "Change the text to 'Supports Python 2.7 and 3.7+'.",
+        "Add a note saying 'Python 3.5 support is deprecated'."
+      ],
+      "golden_answer": "Change the text to 'Supports Python 3.7+'."
+    }
+  ]
+}

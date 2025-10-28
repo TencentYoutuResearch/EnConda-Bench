@@ -1,0 +1,18 @@
+{
+  "readme": "dnarayanan_powderday_error_readme_2_only_E6",
+  "repo_name": "dnarayanan_powderday",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README provides an installation command before directing the user to the full instructions, which can cause users to miss critical setup steps like creating a virtual environment or installing non-Python dependencies.",
+      "correction_candidates": [
+        "Move the installation command to the end of the README file.",
+        "Keep the command at the top but add a note: '(Dependencies must be installed first)'.",
+        "Remove the quick installation command and direct users solely to the documentation for proper installation.",
+        "Add a `conda install` equivalent command next to the `pip install` command."
+      ],
+      "golden_answer": "Remove the quick installation command and direct users solely to the documentation for proper installation."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "postgrespro_mamonsu_error_readme_5",
+  "repo_name": "postgrespro_mamonsu",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary python2-dev dependency to the deb build command which conflicts with python3-dev",
+      "correction_candidates": [
+        "$ apt-get install make dpkg-dev debhelper python3-dev python3-setuptools",
+        "$ apt-get install make dpkg-dev debhelper python3-dev python3-setuptools python3-pip",
+        "$ apt-get install make dpkg-dev debhelper python-dev python3-setuptools",
+        "$ apt-get install make dpkg-dev debhelper python3-dev python3-setuptools libpython3-dev"
+      ],
+      "golden_answer": "$ apt-get install make dpkg-dev debhelper python3-dev python3-setuptools"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax - missing 'zabbix' subcommand in template upload command",
+      "correction_candidates": [
+        "mamonsu zabbix template export template.xml",
+        "mamonsu template upload template.xml",
+        "mamonsu export zabbix template.xml",
+        "mamonsu zabbix upload template template.xml"
+      ],
+      "golden_answer": "mamonsu zabbix template export template.xml"
+    }
+  ]
+}

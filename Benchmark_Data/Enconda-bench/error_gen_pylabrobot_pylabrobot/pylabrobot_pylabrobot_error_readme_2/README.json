@@ -1,0 +1,29 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_2",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An installation command is provided with the `--no-deps` flag, which will prevent necessary dependencies from being installed, leading to runtime errors.",
+      "correction_candidates": [
+        "Change the command to `pip install pylabrobot`.",
+        "Remove the sentence \"You can install PyLabRobot with `pip install pylabrobot --no-deps`.\"",
+        "Change the command to `pip install \"pylabrobot[all]\"`.",
+        "Change the command to `python -m pip install pylabrobot`."
+      ],
+      "golden_answer": "Change the command to `pip install pylabrobot`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that PyLabRobot is built on Python 3.6+ features, while it actually requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change \"Python 3.6+\" to \"Python 3.8+\".",
+        "Change \"Python 3.6+\" to \"the latest version of Python\".",
+        "Change \"Python 3.6+\" to \"Python 3\".",
+        "Change \"Python 3.6+\" to \"Python >= 3.8\"."
+      ],
+      "golden_answer": "Change \"Python 3.6+\" to \"Python 3.8+\"."
+    }
+  ]
+}

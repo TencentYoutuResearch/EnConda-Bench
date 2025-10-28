@@ -1,0 +1,29 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_1",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the Lhotse package from PyPI is incorrect. The package name is 'lhotse', not 'lhotse-speech'.",
+      "correction_candidates": [
+        "pip install lhotse-speech",
+        "pip install lhotse",
+        "pip install lhotse[all]",
+        "pip install --upgrade lhotse-speech"
+      ],
+      "golden_answer": "pip install lhotse"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The development installation command includes a non-existent extra dependency named 'full', which will cause an error because it is not defined in setup.py.",
+      "correction_candidates": [
+        "pip install -e '.[dev, full]'",
+        "pip install -e '.[dev]'",
+        "pip install -e .",
+        "pip install -e '.[developer]'"
+      ],
+      "golden_answer": "pip install -e '.[dev]'"
+    }
+  ]
+}

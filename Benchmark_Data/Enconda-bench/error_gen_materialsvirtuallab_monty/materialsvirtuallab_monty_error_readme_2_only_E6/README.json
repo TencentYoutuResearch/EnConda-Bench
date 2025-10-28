@@ -1,0 +1,18 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_2_only_E6",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README presents the usage example before the installation instructions, which is a logical error as the package must be installed first.",
+      "correction_candidates": [
+        "Move the 'Installation' section to be before the 'Getting Started' section.",
+        "Combine the 'Installation' and 'Getting Started' sections into a single 'Setup' section.",
+        "Add a note in 'Getting Started' to install the package first.",
+        "Remove the 'Getting Started' section and place the example in the 'Installation' section."
+      ],
+      "golden_answer": "Move the 'Installation' section to be before the 'Getting Started' section."
+    }
+  ]
+}

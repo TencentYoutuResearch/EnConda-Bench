@@ -1,0 +1,18 @@
+{
+  "readme": "cvxgrp_cvxportfolio_error_readme_2_only_E7",
+  "repo_name": "cvxgrp_cvxportfolio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README vaguely states that testing is done against 'the latest stable python 3 version', removing the specific list of supported versions (3.8-3.12), which can cause compatibility confusion for users on older, but still supported, Python versions.",
+      "correction_candidates": [
+        "Restore the original text: 'We test against recent python versions (3.8, 3.9, 3.10, 3.11, 3.12)'.",
+        "Change the text to: 'We support Python 3.8 and newer'.",
+        "Add a link to the `test.yml` workflow file for users to check compatible versions.",
+        "Change the text to: 'We test against Python >=3.8, <=3.12'."
+      ],
+      "golden_answer": "Restore the original text: 'We test against recent python versions (3.8, 3.9, 3.10, 3.11, 3.12)'."
+    }
+  ]
+}

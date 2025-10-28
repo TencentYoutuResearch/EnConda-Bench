@@ -1,0 +1,18 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_3_only_E1",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install dependencies from `requirements.txt` is incorrect. It is missing the `-r` flag, which tells pip to install from a requirements file.",
+      "correction_candidates": [
+        "Change `pip install requirements.txt` to `pip install -f requirements.txt`.",
+        "Change `pip install requirements.txt` to `pip install -e .`.",
+        "Change `pip install requirements.txt` to `cat requirements.txt | xargs pip install`.",
+        "Change `pip install requirements.txt` to `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Change `pip install requirements.txt` to `pip install -r requirements.txt`."
+    }
+  ]
+}

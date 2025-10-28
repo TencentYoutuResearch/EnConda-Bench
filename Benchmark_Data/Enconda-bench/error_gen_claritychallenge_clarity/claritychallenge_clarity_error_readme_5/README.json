@@ -1,0 +1,29 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_5",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in incorrect order - pip install is executed before creating and activating the virtual environment",
+      "correction_candidates": [
+        "conda create --name clarity python=3.8\nconda activate clarity\n\npip install pyclarity",
+        "pip install pyclarity --user\nconda create --name clarity python=3.8\nconda activate clarity",
+        "conda create --name clarity python=3.8\npip install pyclarity\nconda activate clarity",
+        "python -m venv clarity\nsource clarity/bin/activate\npip install pyclarity"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8\nconda activate clarity\n\npip install pyclarity"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The pip install command references a non-existent requirements.txt file path instead of the current directory",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -r requirements.txt",
+        "pip install -e ./setup.py",
+        "pip install --editable ."
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

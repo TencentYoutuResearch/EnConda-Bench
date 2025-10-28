@@ -1,0 +1,18 @@
+{
+  "readme": "nonebot_nonebot2_error_readme_5_only_E2",
+  "repo_name": "nonebot_nonebot2",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax for installing pipx using pip instead of python -m pip install --user pipx",
+      "correction_candidates": [
+        "python -m pip install --user pipx",
+        "pip install --user pipx",
+        "python -m pip install pipx",
+        "pip3 install --user pipx"
+      ],
+      "golden_answer": "python -m pip install --user pipx"
+    }
+  ]
+}

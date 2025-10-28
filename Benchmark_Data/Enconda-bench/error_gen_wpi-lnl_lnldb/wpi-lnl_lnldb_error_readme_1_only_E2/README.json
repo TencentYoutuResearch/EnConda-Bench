@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_1_only_E2",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command 'python manage.py new_superuser' is incorrect. 'new_superuser' is not a valid Django management command.",
+      "correction_candidates": [
+        "The command should be 'python manage.py createsuperuser'.",
+        "The command should be 'python manage.py create_superuser'.",
+        "The command should be 'python manage.py dbshell' followed by a SQL INSERT statement.",
+        "The command should be 'python manage.py createsuperuser --username admin --email admin@example.com'."
+      ],
+      "golden_answer": "The command should be 'python manage.py createsuperuser'."
+    }
+  ]
+}

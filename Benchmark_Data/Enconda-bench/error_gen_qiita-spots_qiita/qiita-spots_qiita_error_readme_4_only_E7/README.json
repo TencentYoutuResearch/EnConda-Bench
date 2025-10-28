@@ -1,0 +1,18 @@
+{
+  "readme": "qiita-spots_qiita_error_readme_4_only_E7",
+  "repo_name": "qiita-spots_qiita",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The setup instructions specify using Python 2.7, which is end-of-life and incompatible with modern scientific Python libraries and likely Qiita itself.",
+      "correction_candidates": [
+        "Change the Python version in the `conda create` command to a supported version, such as `python=3.9`.",
+        "Remove the Python version specification to let conda install a recent, compatible version by default.",
+        "Change the command to `conda create -n qiita-dev python=3` to use any Python 3 version.",
+        "Add a note that Python 3.6 or newer is required."
+      ],
+      "golden_answer": "Change the Python version in the `conda create` command to a supported version, such as `python=3.9`."
+    }
+  ]
+}

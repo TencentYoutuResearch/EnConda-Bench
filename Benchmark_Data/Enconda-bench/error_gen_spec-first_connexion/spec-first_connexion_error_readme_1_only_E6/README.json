@@ -1,0 +1,18 @@
+{
+  "readme": "spec-first_connexion_error_readme_1_only_E6",
+  "repo_name": "spec-first_connexion",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Contributing' section, `pre-commit install` is run before `poetry install`. The pre-commit hooks might depend on packages that are only installed by `poetry install`, so the order should be reversed.",
+      "correction_candidates": [
+        "Run `poetry install --all-extras` before `pre-commit install`.",
+        "Run `poetry install --all-extras && pre-commit install`.",
+        "Run `pre-commit install` inside a `poetry shell`.",
+        "Remove the `pre-commit install` command as it is optional."
+      ],
+      "golden_answer": "Run `poetry install --all-extras` before `pre-commit install`."
+    }
+  ]
+}

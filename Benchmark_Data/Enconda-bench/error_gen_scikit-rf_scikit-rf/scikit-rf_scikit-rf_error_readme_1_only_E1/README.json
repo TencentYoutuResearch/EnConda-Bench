@@ -1,0 +1,18 @@
+{
+  "readme": "scikit-rf_scikit-rf_error_readme_1_only_E1",
+  "repo_name": "scikit-rf_scikit-rf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `python -m pip install scikit-rf-plot scikit-rf-visa` is incorrect for installing optional dependencies for GUI applications. It attempts to install non-existent packages.",
+      "correction_candidates": [
+        "python -m pip install scikit-rf[plot,visa]",
+        "python -m pip install scikit-rf --extras plot,visa",
+        "python -m pip install scikit-rf[all]",
+        "pip install scikit-rf-plot-visa"
+      ],
+      "golden_answer": "python -m pip install scikit-rf[plot,visa]"
+    }
+  ]
+}

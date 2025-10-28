@@ -1,0 +1,18 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_4_only_E1",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README suggests installing an old version of NumPy (`<1.20`) for compatibility, which is likely to cause dependency conflicts with `rlberry` and other modern libraries.",
+      "correction_candidates": [
+        "Update the command to `pip install \"numpy>=1.21\"`.",
+        "Remove the note and the command suggesting to downgrade NumPy.",
+        "Change the command to `pip install numpy --upgrade`.",
+        "Keep the note, as older NumPy versions are required for certain legacy systems."
+      ],
+      "golden_answer": "Remove the note and the command suggesting to downgrade NumPy."
+    }
+  ]
+}

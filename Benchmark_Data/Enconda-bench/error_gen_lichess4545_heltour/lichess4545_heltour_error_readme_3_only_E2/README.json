@@ -1,0 +1,18 @@
+{
+  "readme": "lichess4545_heltour_error_readme_3_only_E2",
+  "repo_name": "lichess4545_heltour",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `fab latestdb -R dev` has incorrect syntax. The role option `-R dev` must come before the task name `latestdb`.",
+      "correction_candidates": [
+        "Correct the command to `fab -R dev latestdb`.",
+        "Change the command to `fab --role dev latestdb`.",
+        "Remove the `-R dev` parameter and run `fab latestdb`.",
+        "Rewrite the command as `fab -R dev -- fab latestdb`."
+      ],
+      "golden_answer": "Correct the command to `fab -R dev latestdb`."
+    }
+  ]
+}

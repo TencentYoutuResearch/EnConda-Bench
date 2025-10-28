@@ -1,0 +1,18 @@
+{
+  "readme": "robotframework_robotframework_error_readme_2_only_E2",
+  "repo_name": "robotframework_robotframework",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The usage example for setting a command-line variable, 'robot --variable BROWSER=Firefox', incorrectly uses an equals sign '=' instead of the required colon ':' as a separator.",
+      "correction_candidates": [
+        "robot --variable BROWSER \"Firefox\" --outputdir results path/to/tests/",
+        "robot -v BROWSER=Firefox --outputdir results path/to/tests/",
+        "robot --set-variable BROWSER:Firefox --outputdir results path/to/tests/",
+        "robot --variable BROWSER:Firefox --outputdir results path/to/tests/"
+      ],
+      "golden_answer": "robot --variable BROWSER:Firefox --outputdir results path/to/tests/"
+    }
+  ]
+}

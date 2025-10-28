@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_rdmorganiser_rdmo_error_readme_merge_k3",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions include an unnecessary step to install the `numpy` package separately, which is either not required or already included in `requirements.txt`.",
+      "correction_candidates": [
+        "Change `pip install numpy` to `pip install --no-deps numpy`.",
+        "Remove the line `pip install numpy`.",
+        "Move the line `pip install numpy` to after `pip install -r requirements.txt`.",
+        "Change `pip install numpy` to `pip install pandas`."
+      ],
+      "golden_answer": "Remove the line `pip install numpy`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the development server is incorrect. `python manage.py startapp` is used for creating a new Django application, not for running the server.",
+      "correction_candidates": [
+        "Change `python manage.py startapp` to `python manage.py run`.",
+        "Change `python manage.py startapp` to `django-admin runserver`.",
+        "Change `python manage.py startapp` to `python manage.py runserver`.",
+        "Change `python manage.py startapp` to `python manage.py start`."
+      ],
+      "golden_answer": "Change `python manage.py startapp` to `python manage.py runserver`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the project requires Python 2.7, which is outdated and likely incompatible with the project's dependencies.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.6 or newer'.",
+        "Change 'Python 2.7' to 'the latest version of Python'.",
+        "Add a note that Python 2.7 can be used with a legacy version of pip.",
+        "Remove the note stating that Python 2.7 is required."
+      ],
+      "golden_answer": "Remove the note stating that Python 2.7 is required."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. It instructs to install packages with `pip` before creating and activating the virtual environment, which would install them globally.",
+      "correction_candidates": [
+        "Swap step 2 and step 3 to create the virtual environment before installing packages.",
+        "Combine step 2 and step 3 into a single step.",
+        "Add `sudo` to the `pip install` command to ensure global installation.",
+        "Remove the virtual environment creation step (step 3)."
+      ],
+      "golden_answer": "Swap step 2 and step 3 to create the virtual environment before installing packages."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install dependencies from `requirements.txt` is incorrect. It is missing the `-r` flag, which tells pip to install from a requirements file.",
+      "correction_candidates": [
+        "Change `pip install requirements.txt` to `pip install -f requirements.txt`.",
+        "Change `pip install requirements.txt` to `pip install -e .`.",
+        "Change `pip install requirements.txt` to `cat requirements.txt | xargs pip install`.",
+        "Change `pip install requirements.txt` to `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Change `pip install requirements.txt` to `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a configuration file at a non-existent path (`config/settings/local.py.example`), causing confusion and failure to configure the application.",
+      "correction_candidates": [
+        "Change the path to `rdmo/settings/local.py.example`.",
+        "Change the instruction to 'Create a new file named `config/settings/local.py`'.",
+        "Remove step 4, as there is no `config/settings/local.py.example` file in the repository.",
+        "Change the path to `settings/local.py.example`."
+      ],
+      "golden_answer": "Remove step 4, as there is no `config/settings/local.py.example` file in the repository."
+    }
+  ]
+}

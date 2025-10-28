@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_1_only_E1",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install piccolo[postgres]` may fail in some shells (like zsh) because it lacks quotes. The shell might interpret `[postgres]` as a glob pattern instead of part of the package name.",
+      "correction_candidates": [
+        "Run `pip install piccolo-postgres`.",
+        "Run `pip install piccolo --extras postgres`.",
+        "Run `pip install 'piccolo[postgres]'`.",
+        "Run `pip install piccolo postgres-driver`."
+      ],
+      "golden_answer": "Run `pip install 'piccolo[postgres]'`."
+    }
+  ]
+}

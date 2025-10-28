@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_3_only_E8",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The YAML in the runcard example has incorrect indentation, making it invalid. The keys `operation` and `parameters` and their children are not correctly indented under the sequence item `- id`.",
+      "correction_candidates": [
+        "Correct the indentation for the `operation` and `parameters` keys in the YAML example. The corrected block is:\n```yml\n- id: resonator spectroscopy high power\n  operation: resonator_spectroscopy\n  parameters:\n    freq_width: 10_000_000\n    freq_step: 500_000\n    amplitude: 0.4\n    power_level: high\n    nshots: 1024\n    relaxation_time: 5_000\n```",
+        "The `targets` key should be part of the main dictionary, not a separate item.",
+        "The list item `- id:` should be indented under `targets`.",
+        "The entire block from `- id:` onwards should be enclosed in quotes to be treated as a single string."
+      ],
+      "golden_answer": "Correct the indentation for the `operation` and `parameters` keys in the YAML example. The corrected block is:\n```yml\n- id: resonator spectroscopy high power\n  operation: resonator_spectroscopy\n  parameters:\n    freq_width: 10_000_000\n    freq_step: 500_000\n    amplitude: 0.4\n    power_level: high\n    nshots: 1024\n    relaxation_time: 5_000\n```"
+    }
+  ]
+}

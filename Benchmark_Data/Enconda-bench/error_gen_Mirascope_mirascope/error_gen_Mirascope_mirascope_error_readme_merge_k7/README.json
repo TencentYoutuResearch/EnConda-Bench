@@ -1,0 +1,161 @@
+{
+  "readme": "error_gen_Mirascope_mirascope_error_readme_merge_k7",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the optional `groq` dependency is incorrect. It suggests installing a separate package `mirascope-groq` instead of using the correct extra syntax.",
+      "correction_candidates": [
+        "pip install mirascope --with-groq",
+        "pip install mirascope[groq]",
+        "pip install mirascope groq",
+        "pip install mirascope --install-option=\"--with-groq\""
+      ],
+      "golden_answer": "pip install mirascope[groq]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The method to execute the `OpenAICall` is incorrect. The example uses `.run()` instead of the correct `.call()` method.",
+      "correction_candidates": [
+        "critique = editor.execute()",
+        "critique = editor.call()",
+        "critique = editor.invoke()",
+        "critique = editor.get_response()"
+      ],
+      "golden_answer": "critique = editor.call()"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Mirascope requires Python 3.7, which is outdated and contradicts the PyPI badge showing compatibility with modern Python versions.",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Mirascope requires Python 3.7 and will not work with newer versions.'",
+        "Change the sentence to 'Note: Mirascope requires Python 3.8 or newer.'",
+        "Change the sentence to 'Note: Mirascope is compatible with Python versions listed on its PyPI page.'",
+        "Change the sentence to 'Note: Mirascope requires Python >= 3.7.'"
+      ],
+      "golden_answer": "Remove the sentence 'Note: Mirascope requires Python 3.7 and will not work with newer versions.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the 'QuickStart' video thumbnail is incorrect, pointing to a non-existent 'docs/assets' directory and causing the image to not display.",
+      "correction_candidates": [
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `../assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `./assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `/assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `quickstart-screenshot-with-play-button.png`."
+      ],
+      "golden_answer": "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `./assets/quickstart-screenshot-with-play-button.png`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest creating and activating a virtual environment *after* installing the package, which is the wrong order. The package will be installed in the global environment instead of the virtual one.",
+      "correction_candidates": [
+        "Move the virtual environment creation instructions to be before the `pip install` command.",
+        "Remove the virtual environment creation instructions.",
+        "Change the instructions to `pip install mirascope --user` and then create the virtual environment.",
+        "Add `pip uninstall mirascope` before the virtual environment creation instructions to correct the installation."
+      ],
+      "golden_answer": "Move the virtual environment creation instructions to be before the `pip install` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install all optional dependencies is syntactically incorrect. `pip` does not have an `--all` flag for this purpose.",
+      "correction_candidates": [
+        "pip install mirascope[anthropic,groq,logfire]",
+        "pip install mirascope --with-all",
+        "pip install mirascope[all]",
+        "pip install mirascope --all-extras"
+      ],
+      "golden_answer": "pip install mirascope[all]"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The Python code block in the 'Chaining' section is missing its closing backticks, causing it to render incorrectly and merge with the following text.",
+      "correction_candidates": [
+        "Add `python` after the opening triple backticks.",
+        "Add a blank line before the closing triple backticks.",
+        "Add closing triple backticks (```) at the end of the code block, before the 'Of course...' paragraph.",
+        "Indent the entire code block by four spaces."
+      ],
+      "golden_answer": "Add closing triple backticks (```) at the end of the code block, before the 'Of course...' paragraph."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The method to extract structured data is incorrect. The example uses `.call()` which returns a `OpenAICallResponse` object, not the extracted `TaskDetails` model. This will cause the `isinstance` assertion to fail.",
+      "correction_candidates": [
+        "task_details = TaskExtractor(task=task).extract().model_dump()",
+        "task_details = TaskExtractor(task=task).extract()",
+        "task_details = TaskExtractor(task=task).call().tool",
+        "task_details = TaskExtractor.extract(task=task)"
+      ],
+      "golden_answer": "task_details = TaskExtractor(task=task).extract()"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pinned the package to a specific version (2.1.0) which may cause compatibility issues as the version may not exist or may become outdated",
+      "correction_candidates": [
+        "pip install mirascope",
+        "pip install mirascope>=2.0.0",
+        "pip install \"mirascope>=2.0,<3.0\"",
+        "pip install mirascope~=2.1"
+      ],
+      "golden_answer": "pip install mirascope"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installed mirascope before creating and activating the virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "python -m venv mirascope_env\nsource mirascope_env/bin/activate\npip install mirascope",
+        "python -m venv mirascope_env\npip install mirascope\nsource mirascope_env/bin/activate",
+        "source mirascope_env/bin/activate\npython -m venv mirascope_env\npip install mirascope",
+        "pip install mirascope\npython -m venv mirascope_env\nsource mirascope_env/bin/activate"
+      ],
+      "golden_answer": "python -m venv mirascope_env\nsource mirascope_env/bin/activate\npip install mirascope"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command 'pip install mirascope[anthropic]' without proper escaping or quoting for shell interpretation",
+      "correction_candidates": [
+        "pip install 'mirascope[anthropic]'",
+        "pip install \"mirascope[anthropic]\"",
+        "pip install mirascope\\[anthropic\\]",
+        "pip install mirascope[anthropic] --force-reinstall"
+      ],
+      "golden_answer": "pip install 'mirascope[anthropic]'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced image files in assets directory that may not exist in the repository structure",
+      "correction_candidates": [
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"https://github.com/Mirascope/mirascope/raw/main/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>",
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"./docs/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>",
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"https://raw.githubusercontent.com/Mirascope/mirascope/main/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>",
+        "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"./images/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>"
+      ],
+      "golden_answer": "<a href=\"https://www.youtube.com/watch?v=P44M_IC4YyY\"><img src=\"https://github.com/Mirascope/mirascope/raw/main/assets/overview-screenshot-with-play-button.png\" alt=\"Overview\" width=\"340\"></a>"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (torch transformers) that are not required for basic Mirascope installation",
+      "correction_candidates": [
+        "pip install mirascope",
+        "pip install mirascope numpy scipy",
+        "pip install mirascope pandas matplotlib",
+        "pip install mirascope requests beautifulsoup4"
+      ],
+      "golden_answer": "pip install mirascope"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Removed the tools parameter from OpenAICallParams but still expects tool functionality to work in the example",
+      "correction_candidates": [
+        "call_params = OpenAICallParams(model=\"gpt-4\", tools=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, functions=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, tool_choice=\"auto\", tools=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, enable_tools=True)"
+      ],
+      "golden_answer": "call_params = OpenAICallParams(model=\"gpt-4\", tools=[get_current_weather])"
+    }
+  ]
+}

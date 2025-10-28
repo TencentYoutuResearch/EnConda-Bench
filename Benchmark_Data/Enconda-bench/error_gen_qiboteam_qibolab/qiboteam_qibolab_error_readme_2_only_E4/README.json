@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibolab_error_readme_2_only_E4",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README provides contradictory information. It suggests creating a runcard for 'my_platform' but the first code example attempts to load a different platform named 'tiiq', which will cause a file not found error.",
+      "correction_candidates": [
+        "Create a second configuration file named tiiq.yml.",
+        "The platform name should be passed as an environment variable, not as a string.",
+        "In the example code, change create_platform(\"tiiq\") to create_platform(\"my_platform\") to match the configuration instructions.",
+        "In the example code, change create_platform(\"tiiq\") to qibo.set_platform(\"my_platform\")."
+      ],
+      "golden_answer": "In the example code, change create_platform(\"tiiq\") to create_platform(\"my_platform\") to match the configuration instructions."
+    }
+  ]
+}

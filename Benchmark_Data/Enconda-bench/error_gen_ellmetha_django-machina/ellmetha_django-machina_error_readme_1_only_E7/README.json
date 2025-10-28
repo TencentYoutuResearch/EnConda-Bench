@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_1_only_E7",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies an outdated and incompatible Django version (2.2+), while the package actually requires Django 3.2+.",
+      "correction_candidates": [
+        "Update the text to indicate the correct requirement is 'Django 3.2+'.",
+        "The project is compatible with Django 3.2 and later, not 2.2.",
+        "Change the Django version requirement to 'Django >= 3.2'.",
+        "The documentation states Django 3.2+ is required, so the README should be updated to match."
+      ],
+      "golden_answer": "Update the text to indicate the correct requirement is 'Django 3.2+'."
+    }
+  ]
+}

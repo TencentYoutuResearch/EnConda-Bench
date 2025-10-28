@@ -1,0 +1,29 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_1",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions tell the user to install pip dependencies globally before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "Move the `pip install` command to be the last step.",
+        "Create and activate the virtual environment *before* running `pip install -r requirements.txt`.",
+        "Run `pip install` with a `--user` flag to avoid global installation.",
+        "Use `pipenv install` instead of `pip` and `venv`."
+      ],
+      "golden_answer": "Create and activate the virtual environment *before* running `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the development server, `django-admin runserver`, is incorrect for running a project's local server.",
+      "correction_candidates": [
+        "Replace `django-admin runserver` with `python manage.py runserver`.",
+        "Use the command `python manage.py startapp` to initialize the server.",
+        "Change the command to `django-admin startproject`.",
+        "Run `runserver` directly from the command line."
+      ],
+      "golden_answer": "Replace `django-admin runserver` with `python manage.py runserver`."
+    }
+  ]
+}

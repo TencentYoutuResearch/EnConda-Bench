@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_3_only_E2",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command is missing the target directory '.', which is required to specify that the package in the current directory should be installed in editable mode.",
+      "correction_candidates": [
+        "pip install --editable .",
+        "pip install -e .",
+        "pip install --editable portingdb",
+        "python setup.py develop"
+      ],
+      "golden_answer": "pip install --editable ."
+    }
+  ]
+}

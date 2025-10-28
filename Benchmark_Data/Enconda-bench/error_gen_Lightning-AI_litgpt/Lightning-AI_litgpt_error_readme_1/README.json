@@ -1,0 +1,29 @@
+{
+  "readme": "Lightning-AI_litgpt_error_readme_1",
+  "repo_name": "Lightning-AI_litgpt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install litgpt` is incomplete. It installs the base package but misses the `[all]` extra, which is required for all dependencies including quantization, tokenizers, and other features.",
+      "correction_candidates": [
+        "pip install litgpt --all",
+        "pip install 'litgpt[all]'",
+        "pip install litgpt-all",
+        "pip install litgpt && pip install litgpt-extras"
+      ],
+      "golden_answer": "pip install 'litgpt[all]'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `curl` command to download the finance dataset for finetuning is missing the `-L` flag. This flag is necessary to follow HTTP redirects, and its absence may cause the download to fail or save an incorrect file from the Hugging Face repository.",
+      "correction_candidates": [
+        "wget https://huggingface.co/datasets/ksaw008/finance_alpaca/resolve/main/finance_alpaca.json -O my_custom_dataset.json",
+        "curl -o my_custom_dataset.json https://huggingface.co/datasets/ksaw008/finance_alpaca/resolve/main/finance_alpaca.json",
+        "curl -L https://huggingface.co/datasets/ksaw008/finance_alpaca/resolve/main/finance_alpaca.json -o my_custom_dataset.json",
+        "curl https://huggingface.co/datasets/ksaw008/finance_alpaca/resolve/main/finance_alpaca.json --output my_custom_dataset.json"
+      ],
+      "golden_answer": "curl -L https://huggingface.co/datasets/ksaw008/finance_alpaca/resolve/main/finance_alpaca.json -o my_custom_dataset.json"
+    }
+  ]
+}

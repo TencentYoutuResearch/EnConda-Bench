@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_reproject_error_readme_1",
+  "repo_name": "astropy_reproject",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions imply that `numpy` and `scipy` are the only major dependencies, failing to mention the essential `astropy` package.",
+      "correction_candidates": [
+        "The main dependency is `astropy`. Ensure it is installed by running `pip install astropy` before installing `reproject`.",
+        "Installation can be done via conda: `conda install -c conda-forge reproject`.",
+        "The `reproject` package requires `astropy`. It is typically installed automatically as a dependency, so a simple `pip install reproject` is sufficient.",
+        "You should install all dependencies from the `requirements.txt` file first using `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "The `reproject` package requires `astropy`. It is typically installed automatically as a dependency, so a simple `pip install reproject` is sufficient."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example usage of `reproject_interp` uses a non-existent keyword argument `target_wcs` instead of the correct one, `output_projection`.",
+      "correction_candidates": [
+        "reproject_interp(hdu_in, output_projection=wcs_out, shape_out=shape_out)",
+        "reproject_interp(input_data=hdu_in, output_projection=wcs_out, shape_out=shape_out)",
+        "reproject_interp(hdu_in, wcs_out, shape_out)",
+        "reproject_interp(hdu_in, projection=wcs_out, shape=shape_out)"
+      ],
+      "golden_answer": "reproject_interp(hdu_in, output_projection=wcs_out, shape_out=shape_out)"
+    }
+  ]
+}

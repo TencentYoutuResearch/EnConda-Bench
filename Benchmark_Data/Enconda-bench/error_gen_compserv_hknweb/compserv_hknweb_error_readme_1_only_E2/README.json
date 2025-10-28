@@ -1,0 +1,18 @@
+{
+  "readme": "compserv_hknweb_error_readme_1_only_E2",
+  "repo_name": "compserv_hknweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a superuser is incorrect. The Django management command `newuser` does not exist.",
+      "correction_candidates": [
+        "Replace `python manage.py newuser` with `django-admin createsuperuser`.",
+        "Replace `python manage.py newuser` with `python manage.py new_superuser`.",
+        "Replace `python manage.py newuser` with `python manage.py createsuperuser`.",
+        "Replace `python manage.py newuser` with `poetry run createsuperuser`."
+      ],
+      "golden_answer": "Replace `python manage.py newuser` with `python manage.py createsuperuser`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_2",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly ask the user to install a non-existent package `gpg-key-importer`. Yum handles GPG keys automatically when `gpgcheck=1` is set in the repo file.",
+      "correction_candidates": [
+        "Remove the line 'First, run `yum install gpg-key-importer` to ensure keys can be handled.' as this package is not needed and does not exist.",
+        "Replace 'yum install gpg-key-importer' with 'yum install gnupg2'.",
+        "The command 'yum install gpg-key-importer' is unnecessary; yum handles GPG keys automatically with the 'repo_gpgcheck=1' and 'gpgcheck=1' options.",
+        "Delete the step requiring the installation of 'gpg-key-importer'."
+      ],
+      "golden_answer": "Remove the line 'First, run `yum install gpg-key-importer` to ensure keys can be handled.' as this package is not needed and does not exist."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Auto generation' section for adding a new exporter, steps 2 and 3 are swapped. The user is instructed to add the exporter to the Makefile before its directory and default file have been created, which will cause the build to fail.",
+      "correction_candidates": [
+        "Swap the order of steps 2 and 3.",
+        "The correct order is: 1. Add to templating.yaml, 2. Create directory and .default file, 3. Add to Makefile, 4. Test build.",
+        "The step 'add this exporter to the list of AUTO_GENERATED exporters in Makefile' should be performed after creating the exporter directory and its default file.",
+        "Create the exporter directory and its default file before adding the exporter to the Makefile."
+      ],
+      "golden_answer": "The correct order is: 1. Add to templating.yaml, 2. Create directory and .default file, 3. Add to Makefile, 4. Test build."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "starsimhub_starsim_error_readme_1_only_E2",
+  "repo_name": "starsimhub_starsim",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for local installation 'pip install -e' is incomplete and will cause a syntax error because it is missing the path specifier.",
+      "correction_candidates": [
+        "run `pip install --editable .`",
+        "run `pip install -e .` (don't forget the dot at the end!).",
+        "run `pip install .`",
+        "run `python setup.py install`"
+      ],
+      "golden_answer": "run `pip install -e .` (don't forget the dot at the end!)."
+    }
+  ]
+}

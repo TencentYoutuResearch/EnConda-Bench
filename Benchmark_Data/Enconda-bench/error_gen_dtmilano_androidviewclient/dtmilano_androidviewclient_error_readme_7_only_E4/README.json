@@ -1,0 +1,18 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_7_only_E4",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "pip3 install androidviewclient --upgrade",
+        "pip3 install -r setup.py androidviewclient --upgrade",
+        "pip3 install -r pyproject.toml androidviewclient --upgrade",
+        "pip3 install -r environment.yml androidviewclient --upgrade"
+      ],
+      "golden_answer": "pip3 install androidviewclient --upgrade"
+    }
+  ]
+}

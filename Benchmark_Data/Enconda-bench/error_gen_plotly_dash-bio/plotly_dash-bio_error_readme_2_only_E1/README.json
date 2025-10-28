@@ -1,0 +1,18 @@
+{
+  "readme": "plotly_dash-bio_error_readme_2_only_E1",
+  "repo_name": "plotly_dash-bio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `dash-bio` package, which is essential for running the examples, is missing from the `pip install` command.",
+      "correction_candidates": [
+        "Add `dash-core-components` to the `pip install` command.",
+        "Add `dash-bio` to the `pip install` command.",
+        "Remove `Jupyterlab` from the `pip install` command as it is not required.",
+        "Replace `dash` with `dash-bio` in the `pip install` command."
+      ],
+      "golden_answer": "Add `dash-bio` to the `pip install` command."
+    }
+  ]
+}

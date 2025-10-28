@@ -1,0 +1,18 @@
+{
+  "readme": "strinking_futaba_error_readme_3_only_E1",
+  "repo_name": "strinking_futaba",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development dependencies uses the `--dev` flag, which is incorrect for recent versions of Poetry. The correct flag is `--with dev`.",
+      "correction_candidates": [
+        "$ poetry add --group dev",
+        "$ poetry install --only dev",
+        "$ poetry install --with dev",
+        "$ poetry install -G dev"
+      ],
+      "golden_answer": "$ poetry install --with dev"
+    }
+  ]
+}

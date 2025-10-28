@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_7_only_E1",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary Django and psycopg2-binary dependencies added to PostgreSQL installation command",
+      "correction_candidates": [
+        "pip install 'piccolo[postgres]'",
+        "pip install 'piccolo[postgres]' psycopg2-binary",
+        "pip install piccolo django psycopg2-binary",
+        "pip install --upgrade 'piccolo[postgres]' django"
+      ],
+      "golden_answer": "pip install 'piccolo[postgres]'"
+    }
+  ]
+}

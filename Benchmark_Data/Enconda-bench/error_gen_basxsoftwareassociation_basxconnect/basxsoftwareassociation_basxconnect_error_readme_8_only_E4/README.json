@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_8_only_E4",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-standard file path 'dependencies/requirements-dev.txt' that likely doesn't exist",
+      "correction_candidates": [
+        "Use the standard requirements file: `pip install -r requirements.txt`",
+        "Install from setup.py: `pip install -e .` for development installation",
+        "Check for requirements files in the root directory: `pip install -r requirements/dev.txt`",
+        "Use pyproject.toml: `pip install -e .[dev]` for development dependencies"
+      ],
+      "golden_answer": "Use the standard requirements file: `pip install -r requirements.txt`"
+    }
+  ]
+}

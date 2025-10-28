@@ -1,0 +1,18 @@
+{
+  "readme": "xknx_xknx_error_readme_2_only_E6",
+  "repo_name": "xknx_xknx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions advise installing pre-commit hooks before installing the required Python dependencies. This can cause the hooks to fail if they rely on tools that are not yet installed.",
+      "correction_candidates": [
+        "The steps should be: 1. Install requirements: `pip install -r requirements/testing.txt`, 2. Install pre-commit hook: `pre-commit install`",
+        "The steps should be combined: `pip install -r requirements/testing.txt && pre-commit install`",
+        "The `pre-commit install` step should be removed and handled by `tox`.",
+        "The steps should be: 1. `pre-commit install`, 2. `pip install -r requirements/testing.txt`, 3. `tox`"
+      ],
+      "golden_answer": "The steps should be: 1. Install requirements: `pip install -r requirements/testing.txt`, 2. Install pre-commit hook: `pre-commit install`"
+    }
+  ]
+}

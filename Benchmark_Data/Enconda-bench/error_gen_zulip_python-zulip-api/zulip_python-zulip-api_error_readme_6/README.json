@@ -1,0 +1,29 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_6",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing dependencies globally before setting up virtual environment, which can cause conflicts",
+      "correction_candidates": [
+        "Remove the pip install command from step 2 and install dependencies after activating the virtual environment",
+        "Use pip3 instead of pip for the dependency installation command",
+        "Add --user flag to the pip install command to install dependencies locally",
+        "Install dependencies using conda instead of pip"
+      ],
+      "golden_answer": "Remove the pip install command from step 2 and install dependencies after activating the virtual environment"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file path for activation script - should be in the venv directory, not config directory",
+      "correction_candidates": [
+        "source /.../python-zulip-api/.../activate",
+        "source /.../python-zulip-api/venv/bin/activate",
+        "source /.../python-zulip-api/bin/activate",
+        "source /.../python-zulip-api/scripts/activate"
+      ],
+      "golden_answer": "source /.../python-zulip-api/.../activate"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "benthayer_git-gud_error_readme_8_only_E2",
+  "repo_name": "benthayer_git-gud",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed the startup command from 'git gud' to 'git-gud start' which uses incorrect syntax with hyphens instead of spaces",
+      "correction_candidates": [
+        "git gud",
+        "gitgud",
+        "python -m git_gud",
+        "git gud init"
+      ],
+      "golden_answer": "git gud"
+    }
+  ]
+}

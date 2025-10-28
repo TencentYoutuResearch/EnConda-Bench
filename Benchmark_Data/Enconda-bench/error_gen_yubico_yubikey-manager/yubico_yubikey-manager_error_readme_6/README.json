@@ -1,0 +1,29 @@
+{
+  "readme": "yubico_yubikey-manager_error_readme_6",
+  "repo_name": "yubico_yubikey-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed the shell completion documentation link to point to a non-existent local file instead of the correct external URL",
+      "correction_candidates": [
+        "https://click.palletsprojects.com/en/8.0.x/shell-completion",
+        "https://click.palletsprojects.com/en/latest/shell-completion/",
+        "https://docs.python.org/3/library/click.html#shell-completion",
+        "https://github.com/pallets/click/blob/main/docs/shell-completion.rst"
+      ],
+      "golden_answer": "https://click.palletsprojects.com/en/8.0.x/shell-completion"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Removed the 'More information on shell completion (including instructions for zch) is' text, making the documentation reference incomplete",
+      "correction_candidates": [
+        "More information on shell completion (including instructions for zch) is available here:",
+        "Additional shell completion documentation (including zsh instructions) can be found at:",
+        "For complete shell completion setup instructions (including zsh), see:",
+        "Shell completion setup guide (with zsh support) is available at:"
+      ],
+      "golden_answer": "More information on shell completion (including instructions for zch) is available here:"
+    }
+  ]
+}

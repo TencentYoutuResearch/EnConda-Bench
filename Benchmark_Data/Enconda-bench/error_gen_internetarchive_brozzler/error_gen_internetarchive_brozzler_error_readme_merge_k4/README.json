@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_internetarchive_brozzler_error_readme_merge_k4",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the 'Requirements' section, the Python version is specified as 'Python 3', which is ambiguous. Brozzler requires Python 3.5 or later, and using an older version like 3.4 will cause errors.",
+      "correction_candidates": [
+        "Change `Python 3` to `Python >= 3.5`.",
+        "Change `Python 3` to `Python 3.5, 3.6, 3.7, or 3.8`.",
+        "Add a note saying `Python 3.4 and below are not supported`.",
+        "Change `Python 3` to `Python 3.5 or later`."
+      ],
+      "golden_answer": "Change `Python 3` to `Python 3.5 or later`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Getting Started' section, the command to start and log rethinkdb is `rethinkdb --log rethinkdb.log &`, which is incorrect. The rethinkdb command-line tool does not have a `--log` option for redirecting output.",
+      "correction_candidates": [
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb --logfile rethinkdb.log &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb &>>rethinkdb.log &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb > rethinkdb.log 2>&1 &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb --output rethinkdb.log --daemon`."
+      ],
+      "golden_answer": "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb &>>rethinkdb.log &`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Getting Started' section, the installation command is `pip install brozzler`. This is incorrect for running `brozzler-easy`, which requires extra dependencies (`pywb`, `warcprox`) that are only installed by using `pip install brozzler[easy]`.",
+      "correction_candidates": [
+        "Change `pip install brozzler` to `pip install brozzler-easy`.",
+        "Add `pip install pywb warcprox` after `pip install brozzler`.",
+        "Change `pip install brozzler` to `pip install brozzler --all-extras`.",
+        "Change `pip install brozzler` to `pip install brozzler[easy]`."
+      ],
+      "golden_answer": "Change `pip install brozzler` to `pip install brozzler[easy]`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Getting Started' instructions list the command to start rethinkdb after the command to start `brozzler-easy`. `brozzler-easy` needs to connect to a running RethinkDB instance on startup, so it will fail if the order is not corrected.",
+      "correction_candidates": [
+        "Move the `rethinkdb &>>rethinkdb.log &` command to be the first step in the 'Mac instructions' section.",
+        "Move the `rethinkdb &>>rethinkdb.log &` command to be right before the `brozzler-easy` command.",
+        "Add a `--rethinkdb-host` parameter to the `brozzler-easy` command.",
+        "Move the `rethinkdb &>>rethinkdb.log &` command to be before the `brozzler-new-site` command."
+      ],
+      "golden_answer": "Move the `rethinkdb &>>rethinkdb.log &` command to be right before the `brozzler-easy` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation and Usage' section, the command `brozzler-worker --warcprox=auto` is incorrect. The `--warcprox-auto` option is a boolean flag and does not take a value assigned with an equals sign.",
+      "correction_candidates": [
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox auto`.",
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox-auto`.",
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox`.",
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox-auto=true`."
+      ],
+      "golden_answer": "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox-auto`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Brozzler Wayback' section, the `pywb.yml` configuration example sets `archive_paths: warcs`. This is an incorrect file path because it is missing the trailing slash, which is explicitly noted as a requirement in the comment.",
+      "correction_candidates": [
+        "Change `archive_paths: warcs` to `archive_paths: './warcs/'`.",
+        "Remove the line `archive_paths: warcs` as it is not needed.",
+        "Change `archive_paths: warcs` to `archive_paths: 'warcs/'`.",
+        "Change `archive_paths: warcs` to `archive_paths: warcs/`."
+      ],
+      "golden_answer": "Change `archive_paths: warcs` to `archive_paths: warcs/`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The explanatory note for the `--warcprox-auto` flag, which is critical for understanding how to use it in a clustered deployment, has been removed from the 'Installation and Usage' section. This omission makes the option's purpose and requirements unclear.",
+      "correction_candidates": [
+        "Restore the deleted note that begins with '.. [*] A note about --warcprox-auto:'.",
+        "Add a link to the warcprox documentation next to the `--warcprox-auto` flag.",
+        "Change `--warcprox-auto` to `--warcprox-url http://localhost:8000` to make it more explicit.",
+        "Add a new section titled 'Clustered Deployments' explaining how to use `--warcprox-auto`."
+      ],
+      "golden_answer": "Restore the deleted note that begins with '.. [*] A note about --warcprox-auto:'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Brozzler Dashboard' section, the installation command is `pip install brozzler-dashboard`. This is incorrect because the dashboard is not a separate package but an optional component of the `brozzler` package, installed using extras syntax.",
+      "correction_candidates": [
+        "Change `pip install brozzler-dashboard` to `pip install brozzler --with-dashboard`.",
+        "Change `pip install brozzler-dashboard` to `pip install brozzler` and then `pip install flask`.",
+        "Change `pip install brozzler-dashboard` to `pip install brozzler[dashboard]`.",
+        "Add a note that `brozzler-dashboard` must be installed from a separate repository."
+      ],
+      "golden_answer": "Change `pip install brozzler-dashboard` to `pip install brozzler[dashboard]`."
+    }
+  ]
+}

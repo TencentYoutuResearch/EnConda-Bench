@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_3_only_E4",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to 'News Sources' points to 'https://github.com/flairNLP/fundus/supported_publishers.md', which is an incorrect URL and results in a 404 error. The path is missing the '/docs/' directory.",
+      "correction_candidates": [
+        "[News Sources](docs/supported_publishers.md)",
+        "[News Sources](/docs/supported_publishers.md)",
+        "[News Sources](https://github.com/flairNLP/fundus/blob/master/docs/supported_publishers.md)",
+        "[News Sources](https://fundus.dev/supported_publishers.md)"
+      ],
+      "golden_answer": "[News Sources](/docs/supported_publishers.md)"
+    }
+  ]
+}

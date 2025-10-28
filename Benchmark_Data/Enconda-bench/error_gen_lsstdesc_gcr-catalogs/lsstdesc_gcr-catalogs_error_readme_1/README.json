@@ -1,0 +1,29 @@
+{
+  "readme": "lsstdesc_gcr-catalogs_error_readme_1",
+  "repo_name": "lsstdesc_gcr-catalogs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the DESC Python environment is incorrect. `conda activate` is used for named conda environments, not for sourcing a setup script.",
+      "correction_candidates": [
+        "source /global/common/software/lsst/common/miniconda/setup_current_python.sh",
+        "./global/common/software/lsst/common/miniconda/setup_current_python.sh",
+        "bash /global/common/software/lsst/common/miniconda/setup_current_python.sh",
+        "conda source /global/common/software/lsst/common/miniconda/setup_current_python.sh"
+      ],
+      "golden_answer": "source /global/common/software/lsst/common/miniconda/setup_current_python.sh"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the example notebook 'GCRCatalogs Demo.ipynb' is broken because it points to the wrong path. The `examples/` directory is missing from the path.",
+      "correction_candidates": [
+        "- See [this notebook](examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`.",
+        "- See [this notebook](./examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`.",
+        "- See [this notebook](notebooks/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`.",
+        "- See [this notebook](/examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`."
+      ],
+      "golden_answer": "- See [this notebook](examples/GCRCatalogs%20Demo.ipynb) for a detailed tutorial on how to use `GCRCatalogs`."
+    }
+  ]
+}

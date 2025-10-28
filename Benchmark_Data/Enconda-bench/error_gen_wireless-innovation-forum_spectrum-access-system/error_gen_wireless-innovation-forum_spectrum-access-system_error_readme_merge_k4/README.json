@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_wireless-innovation-forum_spectrum-access-system_error_readme_merge_k4",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the venv installation example, the command to install packages from requirements.txt is placed before the command to activate the virtual environment, which will cause packages to be installed globally instead of in the venv.",
+      "correction_candidates": [
+        "The `pip install` command should be run after activating the virtual environment with `source ./winnf3/bin/activate`.",
+        "The `requirements.txt` file should be installed using `conda install --file requirements.txt`.",
+        "The `source` command should be replaced with `conda activate winnf3`.",
+        "The `pip install` command should be run before creating the virtual environment with `python3.11 -m venv ./winnf3`."
+      ],
+      "golden_answer": "The `pip install` command should be run after activating the virtual environment with `source ./winnf3/bin/activate`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a conda environment uses 'conda new', which is not a valid conda command for this purpose. The correct command is 'conda create'.",
+      "correction_candidates": [
+        "The command should be `conda create --name winnf3 python=3.11`.",
+        "The command should be `conda init winnf3 --python 3.11`.",
+        "The command should be `conda env new --name winnf3 python=3.11`.",
+        "The command should be `conda create -n winnf3 python=3.11`."
+      ],
+      "golden_answer": "The command should be `conda create --name winnf3 python=3.11`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions for the test harness list 'pip3 install python-jwt'. 'python-jwt' is an incorrect and unmaintained package. The correct package is 'PyJWT', which can be installed via 'pip3 install jwt'.",
+      "correction_candidates": [
+        "The package should be installed using conda: `conda install pyjwt`.",
+        "The correct package name is `jwt`, so the command should be `pip3 install jwt`.",
+        "The package should be installed with `pip3 install jsonwebtokens`.",
+        "The correct package is `PyJWT`, which should be installed via `pip3 install PyJWT`."
+      ],
+      "golden_answer": "The correct package name is `jwt`, so the command should be `pip3 install jwt`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the 'venv in Linux' example, the activation command provided is for Windows (`.\\winnf3\\Scripts\\activate`) instead of the correct command for Linux, causing confusion and failure on Linux systems.",
+      "correction_candidates": [
+        "The command should be `conda activate winnf3`.",
+        "The backslashes should be forward slashes: `./winnf3/Scripts/activate`.",
+        "The correct activation command for a venv on Linux is `source ./winnf3/bin/activate`.",
+        "The command is missing a preceding `./`, it should be `./winnf3/Scripts/activate`."
+      ],
+      "golden_answer": "The correct activation command for a venv on Linux is `source ./winnf3/bin/activate`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The conda command to create the environment specifies 'python=3.7', which contradicts the 'Code prerequisites' section that recommends Python 3.11.",
+      "correction_candidates": [
+        "The command should not specify a Python version, allowing conda to choose the latest stable version.",
+        "The command is correct, but the 'Code prerequisites' section should be updated to recommend Python 3.7.",
+        "The command should specify `python>=3.11` to allow for newer versions.",
+        "The command should specify `python=3.11` to match the version recommended in the 'Code prerequisites' section."
+      ],
+      "golden_answer": "The command should specify `python=3.11` to match the version recommended in the 'Code prerequisites' section."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced requirements file path is incorrect - should be requirements.txt not requirements_dev.txt",
+      "correction_candidates": [
+        "python -m pip install -r ./requirements.txt",
+        "pip install -r requirements.txt",
+        "python -m pip install -r requirements.txt",
+        "pip3 install -r ./requirements.txt"
+      ],
+      "golden_answer": "python -m pip install -r ./requirements.txt"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing requirements.txt after creating conda environment but before activating it, which is incorrect order",
+      "correction_candidates": [
+        "conda env create -f conda-environment.yml\nconda activate winnf3",
+        "conda activate winnf3\npython -m pip install -r ./requirements.txt",
+        "conda env create -f conda-environment.yml\npython -m pip install -r ./requirements.txt\nconda activate winnf3",
+        "conda create --name winnf3\nconda activate winnf3\npython -m pip install -r ./requirements.txt"
+      ],
+      "golden_answer": "conda env create -f conda-environment.yml\nconda activate winnf3"
+    }
+  ]
+}

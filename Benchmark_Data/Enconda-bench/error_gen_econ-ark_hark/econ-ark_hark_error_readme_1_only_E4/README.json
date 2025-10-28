@@ -1,0 +1,18 @@
+{
+  "readme": "econ-ark_hark_error_readme_1_only_E4",
+  "repo_name": "econ-ark_hark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The image URL `https://github.com/econ-ark/HARK/blob/master/Docs/images/usage-crra-utility-function.png` is incorrect, as the 'Documentation' directory has been misspelled as 'Docs', causing the image to not be displayed.",
+      "correction_candidates": [
+        "https://github.com/econ-ark/HARK/master/Documentation/images/usage-crra-utility-function.png",
+        "https://github.com/econ-ark/HARK/blob/main/Documentation/images/usage-crra-utility-function.png",
+        "https://github.com/econ-ark/HARK/blob/master/Documentation/images/usage-crra-utility-function.png",
+        "https://raw.githubusercontent.com/econ-ark/HARK/master/Documentation/images/usage-crra-utility-function.png"
+      ],
+      "golden_answer": "https://github.com/econ-ark/HARK/blob/master/Documentation/images/usage-crra-utility-function.png"
+    }
+  ]
+}

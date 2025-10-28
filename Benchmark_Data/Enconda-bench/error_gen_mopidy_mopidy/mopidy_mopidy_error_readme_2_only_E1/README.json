@@ -1,0 +1,18 @@
+{
+  "readme": "mopidy_mopidy_error_readme_2_only_E1",
+  "repo_name": "mopidy_mopidy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The development setup guide is missing a critical step to install system-level dependencies for GStreamer, which is required by Mopidy for audio processing. The `pip install` command will likely fail without it.",
+      "correction_candidates": [
+        "Add a note before `pip install`: 'Ensure GStreamer and its Python bindings are installed (e.g., `sudo apt-get install python3-gst-1.0` on Debian/Ubuntu).'",
+        "Add the command `pip install pygobject` before `pip install -e .`.",
+        "Change `pip install -e .` to `pip install -e .[gst]` to automatically handle GStreamer bindings.",
+        "Add a system command `sudo apt-get install libgstreamer1.0-dev gir1.2-gstreamer-1.0` before the pip install step."
+      ],
+      "golden_answer": "Add a note before `pip install`: 'Ensure GStreamer and its Python bindings are installed (e.g., `sudo apt-get install python3-gst-1.0` on Debian/Ubuntu).'"
+    }
+  ]
+}

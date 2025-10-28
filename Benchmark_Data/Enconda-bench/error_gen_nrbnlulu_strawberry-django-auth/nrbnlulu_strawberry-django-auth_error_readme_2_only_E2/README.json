@@ -1,0 +1,18 @@
+{
+  "readme": "nrbnlulu_strawberry-django-auth_error_readme_2_only_E2",
+  "repo_name": "nrbnlulu_strawberry-django-auth",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the development server is incorrect. `django-admin runserver` is not the standard command used within a Django project context.",
+      "correction_candidates": [
+        "python manage.py runserver",
+        "./manage.py runserver",
+        "django runserver",
+        "python -m django runserver"
+      ],
+      "golden_answer": "python manage.py runserver"
+    }
+  ]
+}

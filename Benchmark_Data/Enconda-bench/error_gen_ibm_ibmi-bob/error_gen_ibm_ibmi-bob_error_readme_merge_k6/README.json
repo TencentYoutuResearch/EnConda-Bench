@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_ibm_ibmi-bob_error_readme_merge_k6",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `bob build` is incorrect for invoking the build process, as the project uses GNU Make.",
+      "correction_candidates": [
+        "Run `make` in the project root to start the build.",
+        "Run `gobob` to start the build.",
+        "Run `build.sh` to start the build.",
+        "Run `bob --build all` to start the build."
+      ],
+      "golden_answer": "Run `make` in the project root to start the build."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that build settings are configured in a `build.config.json` file, but the project uses standard makefiles for configuration.",
+      "correction_candidates": [
+        "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`.",
+        "Configure your build settings in `iproj.json`.",
+        "Configure your build settings in `bob.properties`.",
+        "Run the `configure` script to generate build files."
+      ],
+      "golden_answer": "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "References a non-existent pip package 'bob-dependencies' that doesn't exist",
+      "correction_candidates": [
+        "Remove the pip install command entirely as Bob doesn't require Python dependencies",
+        "Change to 'pip install ibmi-bob' to install the correct package",
+        "Replace with 'npm install bob-dependencies' for Node.js installation",
+        "Use 'conda install bob-dependencies' instead of pip"
+      ],
+      "golden_answer": "Remove the pip install command entirely as Bob doesn't require Python dependencies"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References an invalid file path '/invalid/path/makefile' that doesn't exist",
+      "correction_candidates": [
+        "Change to 'bob --compile makefile' to use the default makefile in current directory",
+        "Replace with 'bob --compile ./src/makefile' to point to source directory",
+        "Use 'bob --build' without specifying a path to build the entire project",
+        "Change to 'bob --compile Rules.mk' to use the correct build file"
+      ],
+      "golden_answer": "Use 'bob --build' without specifying a path to build the entire project"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Shows incorrect order of commands - running 'make install' before 'bob --build' which is backwards",
+      "correction_candidates": [
+        "Change to 'bob --build && make install' to build first then install",
+        "Replace with just 'bob --build' as make install is not needed",
+        "Use 'bob --install && bob --build' for proper Bob-specific commands",
+        "Change to 'make clean && bob --build' to clean before building"
+      ],
+      "golden_answer": "Replace with just 'bob --build' as make install is not needed"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses invalid command syntax with '--target=invalid-target' parameter that doesn't exist in Bob",
+      "correction_candidates": [
+        "Change to 'bob --build' which is the correct basic build command",
+        "Replace with 'bob --make --all' for building all targets",
+        "Use 'bob --compile --source=src' to specify source directory",
+        "Change to 'bob --target all --compile' with correct parameter order"
+      ],
+      "golden_answer": "Change to 'bob --build' which is the correct basic build command"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Incorrectly states Bob requires Node.js and npm installation when it doesn't use JavaScript technologies",
+      "correction_candidates": [
+        "Remove Node.js requirement as Bob is a native IBM i build system",
+        "Change to Python and pip installation instructions instead",
+        "Replace with Java JDK installation requirements",
+        "Update to require Docker and container runtime installation"
+      ],
+      "golden_answer": "Remove Node.js requirement as Bob is a native IBM i build system"
+    }
+  ]
+}

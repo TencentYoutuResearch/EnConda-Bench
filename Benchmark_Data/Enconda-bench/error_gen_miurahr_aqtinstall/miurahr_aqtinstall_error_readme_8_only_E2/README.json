@@ -1,0 +1,18 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_8_only_E2",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax '--modules all' is used instead of the correct '-m all' flag",
+      "correction_candidates": [
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --module all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -modules all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --install-modules all"
+      ],
+      "golden_answer": "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all"
+    }
+  ]
+}

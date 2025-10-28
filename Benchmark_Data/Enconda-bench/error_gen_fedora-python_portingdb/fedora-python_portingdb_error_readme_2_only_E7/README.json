@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_2_only_E7",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README fails to specify the required Python version (3.7+), stating only 'Python 3', which can lead to compatibility errors if an older, unsupported version is used.",
+      "correction_candidates": [
+        "To install it, first set up a [Python virtual environment](...) with Python 3.7+.",
+        "To install it, first set up a [Python virtual environment](...) with the latest Python 3 version.",
+        "To install it, first set up a [Python virtual environment](...) with Python > 3.6.",
+        "To install it, first set up a [Python virtual environment](...) with Python >= 3.7."
+      ],
+      "golden_answer": "To install it, first set up a [Python virtual environment](...) with Python 3.7+."
+    }
+  ]
+}

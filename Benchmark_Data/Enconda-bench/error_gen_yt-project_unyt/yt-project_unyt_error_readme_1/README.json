@@ -1,0 +1,29 @@
+{
+  "readme": "yt-project_unyt_error_readme_1",
+  "repo_name": "yt-project_unyt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command incorrectly includes `yt` as a dependency, which is unnecessary.",
+      "correction_candidates": [
+        "To install, run `pip install unyt`.",
+        "To install, run `conda install unyt yt`.",
+        "To install, run `pip install unyt --no-deps` and then `pip install yt`.",
+        "To install, run `pip install yt-project`."
+      ],
+      "golden_answer": "To install, run `pip install unyt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states a requirement for Python <= 3.5, which is outdated and wrong.",
+      "correction_candidates": [
+        "This package requires Python 3.",
+        "This package requires Python >= 3.6.",
+        "The package is pure Python, so there are no version limitations.",
+        "Remove the sentence specifying a Python version requirement, as it is handled by the package metadata."
+      ],
+      "golden_answer": "Remove the sentence specifying a Python version requirement, as it is handled by the package metadata."
+    }
+  ]
+}

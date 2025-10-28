@@ -1,0 +1,18 @@
+{
+  "readme": "islandora_documentation_error_readme_1_only_E2",
+  "repo_name": "islandora_documentation",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `mkdocs run` is not a valid `mkdocs` command for starting the development server.",
+      "correction_candidates": [
+        "mkdocs serve",
+        "mkdocs start",
+        "mkdocs --run",
+        "python -m mkdocs serve"
+      ],
+      "golden_answer": "mkdocs serve"
+    }
+  ]
+}

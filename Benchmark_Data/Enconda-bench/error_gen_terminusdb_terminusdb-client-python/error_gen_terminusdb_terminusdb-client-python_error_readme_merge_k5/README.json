@@ -1,0 +1,117 @@
+{
+  "readme": "error_gen_terminusdb_terminusdb-client-python_error_readme_merge_k5",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `Requirements` section incorrectly lists TerminusDB v9.0, which is incompatible with the client version v10.0 mentioned in the `Release Notes` section.",
+      "correction_candidates": [
+        "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB >=v10.0](https://github.com/terminusdb/terminusdb-server)`.",
+        "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB latest](https://github.com/terminusdb/terminusdb-server)`.",
+        "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB v10.0](https://github.com/terminusdb/terminusdb-server)`.",
+        "In the `Release Notes` section, change `TerminusDB Client v10.0 works with TerminusDB v10.0` to `TerminusDB Client v10.0 works with TerminusDB v9.0`."
+      ],
+      "golden_answer": "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB v10.0](https://github.com/terminusdb/terminusdb-server)`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the client with dataframe support is incorrect. It uses `[df]` instead of the correct extra identifier `[dataframe]`.",
+      "correction_candidates": [
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client[dataframe]`.",
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client --with dataframe`.",
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client-dataframe`.",
+        "Change `python -m pip install terminusdb-client[df]` to `pip install terminusdb-client[pandas]`."
+      ],
+      "golden_answer": "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client[dataframe]`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the `Testing` section, the steps are in the wrong logical order. It instructs the user to install dependencies *before* cloning the repository, which is impossible.",
+      "correction_candidates": [
+        "Swap step 1 (`poetry install`) and step 2 (`git clone ...`).",
+        "Combine the two steps into a single instruction: `git clone ... && cd terminusdb-client-python && poetry install`.",
+        "Delete step 1 (`poetry install`) as cloning the repository is sufficient.",
+        "Move step 1 (`poetry install`) to after step 3 (running pytest)."
+      ],
+      "golden_answer": "Swap step 1 (`poetry install`) and step 2 (`git clone ...`)."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the `Testing` section, the dependency installation command `poetry install` is incorrect because it does not install the development dependencies (like pytest and tox) required to run the tests. The correct command is `make init` or `poetry install --with dev`.",
+      "correction_candidates": [
+        "Change `$ poetry install` to `$ make init`.",
+        "Change `$ poetry install` to `$ poetry install --with dev,test`.",
+        "Change `$ poetry install` to `$ pip install -e .[dev]`.",
+        "Change `$ poetry install` to `$ poetry update`."
+      ],
+      "golden_answer": "Change `$ poetry install` to `$ make init`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the `Release Notes` section, the link to the release notes file is broken. It points to `RELEASENOTES.md` instead of the correct `RELEASE_NOTES.md`.",
+      "correction_candidates": [
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](RELEASE_NOTES.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](release_notes.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](CHANGELOG.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](docs/release-notes.md)`."
+      ],
+      "golden_answer": "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](RELEASE_NOTES.md)`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `Scaffolding CLI tool` section, the command for importing a CSV is incorrect. It uses `tdbpy import --file grades.csv` which is not a valid command.",
+      "correction_candidates": [
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy importcsv grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy csv --import grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy import grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy --file grades.csv importcsv --na=error`."
+      ],
+      "golden_answer": "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy importcsv grades.csv --na=error`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `Installation` section is missing the command for a standard installation. It only shows how to install with the `[dataframe]` extra, which forces an unnecessary dependency on users who only need the core client.",
+      "correction_candidates": [
+        "Add the standard installation command `python -m pip install terminusdb-client` before the section for installing with dataframe support.",
+        "Change `python -m pip install terminusdb-client[dataframe]` to `python -m pip install terminusdb-client` and add a note that pandas must be installed separately.",
+        "Remove the `[dataframe]` option from the `pip install` command, as it should be installed by default.",
+        "Add a new section titled 'Core Installation' with the command `python -m pip install terminusdb-client-core`."
+      ],
+      "golden_answer": "Add the standard installation command `python -m pip install terminusdb-client` before the section for installing with dataframe support."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the `Usage` section, a misleading comment `# The client automatically connects to the server, no need for client.connect()` has been added. This is incorrect, as `client.connect()` is a required step to establish a connection.",
+      "correction_candidates": [
+        "Remove the comment `# The client automatically connects to the server, no need for client.connect()`.",
+        "Change the comment to `# The client must explicitly connect to the server.`.",
+        "Remove the line `client.connect()` as the comment says it is not needed.",
+        "Change `client.connect()` to `client.connect(auto=True)`."
+      ],
+      "golden_answer": "Remove the comment `# The client automatically connects to the server, no need for client.connect()`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (numpy pandas) to the basic installation command",
+      "correction_candidates": [
+        "python -m pip install terminusdb-client",
+        "python -m pip install terminusdb-client[dataframe]",
+        "python -m pip install terminusdb-client --upgrade",
+        "python -m pip install terminusdb-client scipy matplotlib"
+      ],
+      "golden_answer": "python -m pip install terminusdb-client"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Removed poetry installation step before running tests, creating incorrect execution order",
+      "correction_candidates": [
+        "Install all development dependencies using poetry",
+        "Install all development dependencies using pip",
+        "Install all development dependencies using conda",
+        "Install all development dependencies using pipenv"
+      ],
+      "golden_answer": "Install all development dependencies using poetry"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_1",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to install the package uses an incorrect flag `--update`. The correct flag for upgrading a package with pip is `--upgrade`.",
+      "correction_candidates": [
+        "pip update micropy-cli",
+        "pip install --upgrade micropy-cli",
+        "pip --upgrade install micropy-cli",
+        "pip install micropy-cli --latest"
+      ],
+      "golden_answer": "pip install --upgrade micropy-cli"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the `micropy.json` file is located inside the `.micropy/` folder. It should be in the project root, alongside the `.micropy/` folder.",
+      "correction_candidates": [
+        "Restore the original text stating that two items are added: a `.micropy/` folder and a `micropy.json` file.",
+        "Change the text to state that the `micropy.json` file is created in the user's home directory.",
+        "Change the text to state that the `.micropy/` folder is created inside a `src/` directory.",
+        "Change the text to state that a `micropy.ini` file is created instead of `micropy.json`."
+      ],
+      "golden_answer": "Restore the original text stating that two items are added: a `.micropy/` folder and a `micropy.json` file."
+    }
+  ]
+}

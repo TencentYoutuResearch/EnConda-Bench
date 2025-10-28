@@ -1,0 +1,18 @@
+{
+  "readme": "sasview_sasview_error_readme_4_only_E2",
+  "repo_name": "sasview_sasview",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `sasmodels -version` uses incorrect syntax for the version flag. The long-form option should use a double dash (`--`).",
+      "correction_candidates": [
+        "The correct command is `sasmodels --version`.",
+        "The correct command is `sasmodels -v`.",
+        "The command should be `sasmodels version`.",
+        "The command should be `python -m sasmodels.cli --version`."
+      ],
+      "golden_answer": "The correct command is `sasmodels --version`."
+    }
+  ]
+}

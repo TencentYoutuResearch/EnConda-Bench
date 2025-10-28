@@ -1,0 +1,29 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_6",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent dependencies.txt file instead of requirements.txt",
+      "correction_candidates": [
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r requirements.txt`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r setup.cfg`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r pyproject.toml`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -e .`."
+      ],
+      "golden_answer": "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command syntax 'gsutil --help' instead of 'gsutil help'",
+      "correction_candidates": [
+        "Run the \"gsutil help\" command for a list of the built-in gsutil help topics.",
+        "Run the \"gsutil -h\" command for a list of the built-in gsutil help topics.",
+        "Run the \"gsutil help topics\" command for a list of the built-in gsutil help topics.",
+        "Run the \"gsutil help commands\" command for a list of the built-in gsutil help topics."
+      ],
+      "golden_answer": "Run the \"gsutil help\" command for a list of the built-in gsutil help topics."
+    }
+  ]
+}

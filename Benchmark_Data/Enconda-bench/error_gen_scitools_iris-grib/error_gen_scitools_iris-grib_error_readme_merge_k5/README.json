@@ -1,0 +1,117 @@
+{
+  "readme": "error_gen_scitools_iris-grib_error_readme_merge_k5",
+  "repo_name": "scitools_iris-grib",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest installing with pip but fail to mention the required non-Python dependency `eccodes`, which must be installed separately before `iris-grib` can function.",
+      "correction_candidates": [
+        "Install the `eccodes` library using your system's package manager (e.g., `sudo apt-get install libeccodes-dev` or `brew install eccodes`) before running pip install.",
+        "Run `pip install eccodes iris-grib` to install all dependencies automatically.",
+        "The recommended installation method is using conda: `conda install -c conda-forge iris-grib`.",
+        "Download the `eccodes` wheel file manually from the ECMWF website and install it with `pip`."
+      ],
+      "golden_answer": "Install the `eccodes` library using your system's package manager (e.g., `sudo apt-get install libeccodes-dev` or `brew install eccodes`) before running pip install."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command is incorrect, attempting to install `iris` and `grib` as two separate packages instead of the single `iris-grib` package.",
+      "correction_candidates": [
+        "Correct the command to `pip install iris-grib`.",
+        "Correct the command to `pip install scitools-iris-grib`.",
+        "Correct the command to `pip install 'iris-grib'`.",
+        "Correct the command to `pip install iris_grib`."
+      ],
+      "golden_answer": "Correct the command to `pip install iris-grib`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions specify installing `iris==2.4.0`, which is an outdated version and incompatible with the latest `iris-grib`, causing version conflicts.",
+      "correction_candidates": [
+        "Remove the version specifier to install the latest compatible version: `pip install iris`.",
+        "Change the command to `pip install iris>=3.1.0 iris-grib` to ensure a compatible version of Iris is installed.",
+        "Install `iris-grib` using conda, as it handles dependency resolution automatically: `conda install -c conda-forge iris-grib`.",
+        "Use the command `pip install iris-grib --no-dependencies` and manage the Iris version manually."
+      ],
+      "golden_answer": "Change the command to `pip install iris>=3.1.0 iris-grib` to ensure a compatible version of Iris is installed."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly place the `pip install` command before the command to activate the virtual environment, causing packages to be installed globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the `source venv/bin/activate` command before the `pip install` command.",
+        "Combine the commands into a single line: `python3 -m venv venv && source venv/bin/activate && pip install iris==2.4.0 iris-grib`.",
+        "Remove the virtual environment steps and install the package globally.",
+        "Replace `source venv/bin/activate` with `conda activate myenv`."
+      ],
+      "golden_answer": "Move the `source venv/bin/activate` command before the `pip install` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation guide incorrectly instructs users to install the `gribapi` library, which is deprecated and has been replaced by `eccodes`.",
+      "correction_candidates": [
+        "Replace the instruction to install `gribapi` with the instruction to install `eccodes`.",
+        "Install `iris-grib` using conda (`conda install -c conda-forge iris-grib`), which automatically installs the correct `eccodes` dependency.",
+        "Remove the instruction to install `gribapi` as `pip` will handle it automatically.",
+        "Install both `gribapi` and `eccodes` for backward compatibility."
+      ],
+      "golden_answer": "Replace the instruction to install `gribapi` with the instruction to install `eccodes`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The usage example references a sample data file at `data/example.grib2`, but this file does not exist in the project repository.",
+      "correction_candidates": [
+        "Replace the path `data/example.grib2` with a valid path to a user-provided GRIB file, e.g., `'<path-to-your-grib-file>'`.",
+        "Add a step to download a sample GRIB file from a public source before running the example code.",
+        "Use the `iris.sample_data` module to load a sample dataset instead of a local file.",
+        "Create a dummy file at `data/example.grib2` before running the script."
+      ],
+      "golden_answer": "Replace the path `data/example.grib2` with a valid path to a user-provided GRIB file, e.g., `'<path-to-your-grib-file>'`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command specifies the outdated `scitools` channel instead of the recommended `conda-forge` channel, which may lead to installation failure or outdated packages.",
+      "correction_candidates": [
+        "Change the command to `conda install -c conda-forge iris-grib`.",
+        "Change the command to `conda install -c scitools -c conda-forge iris-grib`.",
+        "Remove the channel flag and run `conda install iris-grib`, assuming `conda-forge` is in the user's default channels.",
+        "Change the command to `conda install iris-grib --channel conda-forge`."
+      ],
+      "golden_answer": "Change the command to `conda install -c conda-forge iris-grib`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The README states that the `eccodes` library is a prerequisite for pip installation but provides no instructions or guidance on how to install this system-level dependency.",
+      "correction_candidates": [
+        "Add instructions for installing `eccodes` using common package managers, such as `sudo apt-get install libeccodes-dev` for Debian/Ubuntu or `brew install eccodes` for macOS.",
+        "Recommend using conda for installation, as it handles the `eccodes` dependency automatically: `conda install -c conda-forge iris-grib`.",
+        "Provide a link to the official ECMWF `eccodes` installation documentation.",
+        "Remove the mention of `eccodes` and let the user discover the missing dependency upon failure."
+      ],
+      "golden_answer": "Add instructions for installing `eccodes` using common package managers, such as `sudo apt-get install libeccodes-dev` for Debian/Ubuntu or `brew install eccodes` for macOS."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements file path that likely doesn't exist in the repository structure",
+      "correction_candidates": [
+        "Use 'pip install iris-grib' to install directly from PyPI",
+        "Change path to 'pip install -r requirements.txt' (without the ./requirements/ subdirectory)",
+        "Install from the repository with 'pip install git+https://github.com/SciTools/iris-grib.git'",
+        "Use 'pip install -e .' for development installation from the current directory"
+      ],
+      "golden_answer": "Use 'pip install iris-grib' to install directly from PyPI"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax using -r flag with a non-existent requirements file path",
+      "correction_candidates": [
+        "Fix the command to 'pip install iris-grib' for standard installation",
+        "Use 'pip install -r requirements.txt' if a requirements file exists in the root",
+        "Change to 'pip install --requirement requirements.txt' using the full flag name",
+        "Use 'pip install -e .[dev]' for development dependencies"
+      ],
+      "golden_answer": "Fix the command to 'pip install iris-grib' for standard installation"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "google-deepmind_acme_error_readme_3",
+  "repo_name": "google-deepmind_acme",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv acme` is used, which may default to an unsupported Python 2 installation on some systems, leading to compatibility issues. `python3` should be used explicitly.",
+      "correction_candidates": [
+        "python3 -m venv acme",
+        "virtualenv -p python3 acme",
+        "conda create -n acme python=3.8",
+        "Ensure your system's default 'python' is aliased to 'python3' before running."
+      ],
+      "golden_answer": "python3 -m venv acme"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment is incorrect (`source acme/activate`). The correct path to the activation script is `acme/bin/activate`.",
+      "correction_candidates": [
+        ". acme/bin/activate",
+        "source acme/bin/activate",
+        "acme\\Scripts\\activate.bat",
+        "cd acme && source bin/activate"
+      ],
+      "golden_answer": "source acme/bin/activate"
+    }
+  ]
+}

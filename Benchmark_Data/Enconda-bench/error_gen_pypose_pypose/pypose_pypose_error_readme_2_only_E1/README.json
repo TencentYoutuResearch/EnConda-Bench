@@ -1,0 +1,18 @@
+{
+  "readme": "pypose_pypose_error_readme_2_only_E1",
+  "repo_name": "pypose_pypose",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install PyTorch, a critical dependency, has been removed. The installation will fail without it.",
+      "correction_candidates": [
+        "Add the sentence 'On Ubuntu, macOS, or Windows, install PyTorch, then run:' before the pip command.",
+        "Add the command `pip install torch` before the command `pip install -r requirements.txt`.",
+        "Add 'torch' to the first line of the `requirements.txt` file.",
+        "Add a new step: '1. Prerequisite: Install PyTorch by running `pip install pytorch`.'"
+      ],
+      "golden_answer": "Add the sentence 'On Ubuntu, macOS, or Windows, install PyTorch, then run:' before the pip command."
+    }
+  ]
+}

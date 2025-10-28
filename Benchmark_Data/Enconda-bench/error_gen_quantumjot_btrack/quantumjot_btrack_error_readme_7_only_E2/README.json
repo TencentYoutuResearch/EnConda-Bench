@@ -1,0 +1,18 @@
+{
+  "readme": "quantumjot_btrack_error_readme_7_only_E2",
+  "repo_name": "quantumjot_btrack",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used invalid pip parameter '--python-version 2.7' which is not a valid pip install option",
+      "correction_candidates": [
+        "pip install btrack",
+        "python2.7 -m pip install btrack",
+        "pip3 install btrack",
+        "conda install -c conda-forge btrack"
+      ],
+      "golden_answer": "pip install btrack"
+    }
+  ]
+}

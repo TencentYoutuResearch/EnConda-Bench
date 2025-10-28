@@ -1,0 +1,18 @@
+{
+  "readme": "neurogym_neurogym_error_readme_1_only_E2",
+  "repo_name": "neurogym_neurogym",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -e` is missing the target directory `.` which is required to specify that the installation should apply to the current directory.",
+      "correction_candidates": [
+        "pip install --editable .",
+        "pip install .",
+        "pip install -e .",
+        "pip install -e neurogym"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

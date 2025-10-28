@@ -1,0 +1,18 @@
+{
+  "readme": "datamol-io_graphium_error_readme_4_only_E2",
+  "repo_name": "datamol-io_graphium",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for fine-tuning uses an incorrect and unclear syntax (`--finetuning admet`) for hydra's config composition. This will fail because it's not the correct way to add a config group.",
+      "correction_candidates": [
+        "graphium-train finetuning=admet",
+        "graphium-train --config-name finetuning/admet",
+        "graphium-train +finetuning=admet",
+        "graphium-train --finetune-config admet.yaml"
+      ],
+      "golden_answer": "graphium-train +finetuning=admet"
+    }
+  ]
+}

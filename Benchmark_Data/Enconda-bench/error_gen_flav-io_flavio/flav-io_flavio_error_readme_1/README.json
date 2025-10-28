@@ -1,0 +1,29 @@
+{
+  "readme": "flav-io_flavio_error_readme_1",
+  "repo_name": "flav-io_flavio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions incorrectly state that Python 2.7 is required, which is an outdated and likely incompatible version for modern scientific packages.",
+      "correction_candidates": [
+        "Replace 'you need Python 2.7' with 'you need Python 3.7 or newer'.",
+        "Replace 'you need Python 2.7' with 'you need the latest version of Python 3'.",
+        "The package is compatible with both Python 2.7 and 3.x, so the line should be removed.",
+        "To install flavio, you need Python 3.6 or newer."
+      ],
+      "golden_answer": "Replace 'you need Python 2.7' with 'you need Python 3.7 or newer'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip install command uses an incorrect package name 'flav.io' instead of the correct name 'flavio'.",
+      "correction_candidates": [
+        "Replace `pip install flav.io` with `pip install flavio`.",
+        "Replace `pip install flav.io` with `pip install flav-io`.",
+        "Replace `pip install flav.io` with `python -m pip install flavio`.",
+        "Replace `pip install flav.io` with `pip install git+https://github.com/flav-io/flavio.git`."
+      ],
+      "golden_answer": "Replace `pip install flav.io` with `pip install flavio`."
+    }
+  ]
+}

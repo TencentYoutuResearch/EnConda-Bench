@@ -1,0 +1,18 @@
+{
+  "readme": "pytest-dev_pytest-xdist_error_readme_4_only_E1",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes `pytest-n`, which is an unnecessary and non-existent package.",
+      "correction_candidates": [
+        "Change `pip install pytest-xdist pytest-n` to `pip install pytest-xdist`.",
+        "Change `pip install pytest-xdist pytest-n` to `pip install pytest pytest-xdist`.",
+        "Change `pip install pytest-xdist pytest-n` to `pip install 'pytest-xdist[n]'`.",
+        "Run the commands separately: `pip install pytest-xdist` and then `pip install pytest-n`."
+      ],
+      "golden_answer": "Change `pip install pytest-xdist pytest-n` to `pip install pytest-xdist`."
+    }
+  ]
+}

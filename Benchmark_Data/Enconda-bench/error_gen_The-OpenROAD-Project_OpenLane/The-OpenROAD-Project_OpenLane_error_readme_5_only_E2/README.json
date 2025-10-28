@@ -1,0 +1,18 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_5_only_E2",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect make command 'make install' instead of 'make' for OpenLane setup",
+      "correction_candidates": [
+        "make",
+        "make setup",
+        "make build",
+        "make configure"
+      ],
+      "golden_answer": "make"
+    }
+  ]
+}

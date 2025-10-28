@@ -1,0 +1,29 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_1",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install testing dependencies lists an incorrect package name, `py.test`, instead of the correct package `pytest`.",
+      "correction_candidates": [
+        "pip install pytest",
+        "pip install pytest --upgrade",
+        "python -m pip install py-test",
+        "pip install 'pytest-cov'"
+      ],
+      "golden_answer": "pip install pytest"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to execute the test suite, `pytest --run`, uses a non-existent flag `--run`, which causes the command to fail.",
+      "correction_candidates": [
+        "pytest",
+        "python -m pytest",
+        "py.test",
+        "pytest --execute"
+      ],
+      "golden_answer": "pytest"
+    }
+  ]
+}

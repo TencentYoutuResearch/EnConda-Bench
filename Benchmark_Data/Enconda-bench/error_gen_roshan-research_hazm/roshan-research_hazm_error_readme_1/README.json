@@ -1,0 +1,29 @@
+{
+  "readme": "roshan-research_hazm_error_readme_1",
+  "repo_name": "roshan-research_hazm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install hazm torch` incorrectly bundles the 'torch' library as a mandatory dependency, while it is only required for optional features like word embeddings.",
+      "correction_candidates": [
+        "Change the command to `pip install hazm`.",
+        "Change the command to `pip install hazm[full]`.",
+        "Change the command to `pip install hazm` and add a note that `torch` is needed for some modules.",
+        "Change the command to `pip install hazm[torch]`."
+      ],
+      "golden_answer": "Change the command to `pip install hazm`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `Usage` section, the example for the `Lemmatizer` uses an assignment operator (`=`) instead of a function call, which will cause a `TypeError`.",
+      "correction_candidates": [
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize('می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer('می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize(text='می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `Lemmatizer.lemmatize('می‌روم')`."
+      ],
+      "golden_answer": "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize('می‌روم')`."
+    }
+  ]
+}

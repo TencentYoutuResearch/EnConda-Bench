@@ -1,0 +1,29 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_1",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to create the conda environment (`conda env create`) is placed after the commands to activate it and install packages into it, which will fail.",
+      "correction_candidates": [
+        "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`.",
+        "Combine the environment creation and package installation into a single script.",
+        "Use `mamba env create` instead of `conda env create` for faster resolution.",
+        "Remove the `conda env create` step and install directly into the base environment."
+      ],
+      "golden_answer": "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install .` is used, but the documentation incorrectly claims this installs the package in editable mode. The correct flag `-e` is missing.",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install --editable .",
+        "python setup.py develop",
+        "pip install -e roiextractors"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

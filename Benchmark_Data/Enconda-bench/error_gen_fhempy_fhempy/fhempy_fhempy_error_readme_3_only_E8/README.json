@@ -1,0 +1,18 @@
+{
+  "readme": "fhempy_fhempy_error_readme_3_only_E8",
+  "repo_name": "fhempy_fhempy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "A critical warning, advising users not to run the peer setup command on their main FHEM instance, has been removed. This could lead to users accidentally misconfiguring their primary FHEM system.",
+      "correction_candidates": [
+        "Add the note: `This command should be run as the 'pi' user.`",
+        "Add the warning: `### WARNING: DO THIS COMMAND ONLY ON REMOTE PEER, NOT ON YOUR FHEM INSTANCE ###`",
+        "Add the note: `This script will install a systemd service.`",
+        "Add the warning: `### WARNING: THIS COMMAND REQUIRES SUDO PRIVILEGES ###`"
+      ],
+      "golden_answer": "Add the warning: `### WARNING: DO THIS COMMAND ONLY ON REMOTE PEER, NOT ON YOUR FHEM INSTANCE ###`"
+    }
+  ]
+}

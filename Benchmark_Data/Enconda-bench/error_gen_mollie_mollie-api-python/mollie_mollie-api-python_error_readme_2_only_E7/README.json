@@ -1,0 +1,18 @@
+{
+  "readme": "mollie_mollie-api-python_error_readme_2_only_E7",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Requirements' section specifies 'Python >= 3.6', but the library's v3 client actually requires Python 3.8 or newer. Using an older Python version like 3.6 or 3.7 will lead to installation or runtime errors.",
+      "correction_candidates": [
+        "Change the requirement to 'Python >= 3.8'.",
+        "Change the requirement to 'Python 3.8+'.",
+        "Change the requirement to 'Python >= 3.7'.",
+        "Add a note saying 'Python 3.6 and 3.7 are supported with older versions of this client'."
+      ],
+      "golden_answer": "Change the requirement to 'Python >= 3.8'."
+    }
+  ]
+}

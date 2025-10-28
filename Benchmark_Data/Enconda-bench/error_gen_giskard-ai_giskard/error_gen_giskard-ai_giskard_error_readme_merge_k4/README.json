@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_giskard-ai_giskard_error_readme_merge_k4",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install giskard -U` is missing the `[llm]` extra, which is required to install dependencies for LLM-related features used in the quickstart.",
+      "correction_candidates": [
+        "pip install \"giskard[llm,rag]\" -U",
+        "pip install giskard-llm -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard --all-extras -U"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install langchain tiktoken \"pypdf<=3.17.0\" --no-deps` incorrectly uses the `--no-deps` flag, which prevents pip from installing the necessary dependencies for these packages, leading to runtime errors.",
+      "correction_candidates": [
+        "pip install langchain tiktoken \"pypdf<=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --force-reinstall",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --ignore-installed",
+        "pip install langchain tiktoken pypdf"
+      ],
+      "golden_answer": "pip install langchain tiktoken \"pypdf<=3.17.0\""
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `pip install langchain tiktoken \"pypdf==4.0.0\"` installs a version of `pypdf` that has breaking changes and is likely incompatible with the `PyPDFLoader` used in the code, causing potential errors.",
+      "correction_candidates": [
+        "pip install langchain tiktoken \"pypdf\"",
+        "pip install langchain tiktoken \"pypdf>=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf~=3.17\""
+      ],
+      "golden_answer": "pip install langchain tiktoken \"pypdf<=3.17.0\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL provided to `PyPDFLoader` for the IPCC report is incorrect, leading to a file not found error when the loader tries to fetch the document.",
+      "correction_candidates": [
+        "loader = PyPDFLoader(\"IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://raw.githubusercontent.com/giskard-ai/giskard/main/IPCC_AR6_SYR_LongerReport.pdf\")"
+      ],
+      "golden_answer": "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf\")"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install giskard-client -U` installs an incorrect and outdated package. The correct package is `giskard`.",
+      "correction_candidates": [
+        "pip install giskard -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard-ai -U",
+        "pip install giskard --upgrade"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The code imports libraries like `langchain` and `tiktoken` before the `pip install` command that installs them. The installation step must come before the import statements.",
+      "correction_candidates": [
+        "Place the `pip install` command at the very top of the 'Build a LLM agent' section, before any Python code.",
+        "Combine the `pip install` command with the main giskard installation at the top of the README.",
+        "Create a `requirements.txt` file with the dependencies and instruct the user to install it first.",
+        "Move the import statements to be inside the `model_predict` function."
+      ],
+      "golden_answer": "Place the `pip install` command at the very top of the 'Build a LLM agent' section, before any Python code."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The function call `giskard.scan(giskard_model, \"deep\")` is incorrect. The `scan` function does not accept a string like 'deep' as a second positional argument, causing a syntax error.",
+      "correction_candidates": [
+        "scan_results = giskard.scan(model=giskard_model)",
+        "scan_results = giskard.scan(giskard_model)",
+        "scan_results = giskard.scan(giskard_model, params={\"level\": \"deep\"})",
+        "scan_results = giskard.deep_scan(giskard_model)"
+      ],
+      "golden_answer": "scan_results = giskard.scan(giskard_model)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The code for generating a RAG test set attempts to load a file with `pd.read_csv(\"knowledge_base.csv\")`, but this file is not provided or explained how to create, leading to a `FileNotFoundError`.",
+      "correction_candidates": [
+        "Replace `pd.read_csv(\"knowledge_base.csv\")` with a clear placeholder like `pd.read_csv(\"path/to/your/knowledge_base.csv\")` and explain that the user must provide their own file.",
+        "Provide a sample `knowledge_base.csv` file or a link to download one.",
+        "Replace `pd.read_csv(\"knowledge_base.csv\")` with code that uses the previously created `db` object as the knowledge base.",
+        "Change the code to `df = pd.DataFrame({'text': ['Sample text 1', 'Sample text 2']})` to create a minimal example dataframe directly in the code."
+      ],
+      "golden_answer": "Replace `pd.read_csv(\"knowledge_base.csv\")` with a clear placeholder like `pd.read_csv(\"path/to/your/knowledge_base.csv\")` and explain that the user must provide their own file."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mollie_mollie-api-python_error_readme_3_only_E4",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'OAuth2' section, the command to run the OAuth example app uses an incorrect file path: `python examples/oauth_app.py`. The correct path is `examples/oauth/oauth_app.py`.",
+      "correction_candidates": [
+        "Change the command to `python examples/oauth/oauth_app.py`.",
+        "Change the command to `cd examples/oauth && python oauth_app.py`.",
+        "Change the command to `python oauth_app.py` and add a note to `cd` into the `examples/oauth` directory first.",
+        "Change the command to `python examples/oauth/app.py`."
+      ],
+      "golden_answer": "Change the command to `python examples/oauth/oauth_app.py`."
+    }
+  ]
+}

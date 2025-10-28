@@ -1,0 +1,29 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_6",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Running setup.py install after pip install is incorrect order and redundant",
+      "correction_candidates": [
+        "Remove the setup.py install command and use only pip install testfixtures",
+        "Run setup.py install first, then pip install testfixtures",
+        "Use python -m pip install testfixtures instead of setup.py",
+        "Clone the repository first: git clone repo_url && cd testfixtures && python setup.py install"
+      ],
+      "golden_answer": "Remove the setup.py install command and use only pip install testfixtures"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The setup.py file path is not specified and may not exist in the current directory",
+      "correction_candidates": [
+        "Specify the full path: python /path/to/testfixtures/setup.py install",
+        "Change to the source directory first: cd testfixtures && python setup.py install",
+        "Download the source code first: wget https://pypi.org/project/testfixtures/source.tar.gz",
+        "Use the current directory setup.py: python ./setup.py install"
+      ],
+      "golden_answer": "Change to the source directory first: cd testfixtures && python setup.py install"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_kevinmusgrave_pytorch-metric-learning_error_readme_merge_k4",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary dependency, `pandas`, is listed in the 'Other dependencies' section.",
+      "correction_candidates": [
+        "Remove `pandas` from the list of dependencies.",
+        "Change `pandas` to `scipy` in the list of dependencies.",
+        "Specify the version for pandas: `pandas>=1.0`.",
+        "Move `pandas` to the `[with-hooks]` installation extra."
+      ],
+      "golden_answer": "Remove `pandas` from the list of dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the development version uses the incorrect flag `--dev` instead of `--pre`.",
+      "correction_candidates": [
+        "pip install pytorch-metric-learning --pre",
+        "pip install pytorch-metric-learning --dev-version",
+        "pip install pytorch-metric-learning-dev",
+        "pip install pytorch-metric-learning==dev"
+      ],
+      "golden_answer": "pip install pytorch-metric-learning --pre"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Windows installation command specifies `torch===1.5.0`, which conflicts with the library's requirement of `torch >= 1.6`.",
+      "correction_candidates": [
+        "pip install torch===1.7.0 torchvision===0.8.0 -f https://download.pytorch.org/whl/torch_stable.html",
+        "pip install torch>=1.6.0 -f https://download.pytorch.org/whl/torch_stable.html",
+        "pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html",
+        "Remove the Windows-specific installation instructions."
+      ],
+      "golden_answer": "pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to format code points to a non-existent script path `./scripts/format.sh` instead of the correct `./format_code.sh`.",
+      "correction_candidates": [
+        "Change the command to `bash ./format_code.sh`.",
+        "Change the command to `sh format_code.sh`.",
+        "Change the command to `./format_code.sh`.",
+        "Change the command to `black . && isort .`."
+      ],
+      "golden_answer": "Change the command to `./format_code.sh`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The code formatting instructions incorrectly advise running the format script `./format_code.sh` before installing the necessary tools (`black`, `isort`).",
+      "correction_candidates": [
+        "Combine the commands into a single line: `pip install black isort && ./format_code.sh`.",
+        "Swap the order of the two commands, so `pip install black isort` is executed first.",
+        "Remove the `./format_code.sh` script and instruct users to run `black .` and `isort .` directly.",
+        "Add `sudo` to the `./format_code.sh` command."
+      ],
+      "golden_answer": "Swap the order of the two commands, so `pip install black isort` is executed first."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid --install-option parameter to pip install command",
+      "correction_candidates": [
+        "pip install pytorch-metric-learning[with-hooks]",
+        "pip install pytorch-metric-learning[with-hooks] --force-reinstall",
+        "pip install pytorch-metric-learning[with-hooks] --upgrade",
+        "pip install pytorch-metric-learning[with-hooks] --no-cache-dir"
+      ],
+      "golden_answer": "pip install pytorch-metric-learning[with-hooks]"
+    }
+  ]
+}

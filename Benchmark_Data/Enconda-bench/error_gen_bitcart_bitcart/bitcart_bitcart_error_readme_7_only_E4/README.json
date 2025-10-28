@@ -1,0 +1,18 @@
+{
+  "readme": "bitcart_bitcart_error_readme_7_only_E4",
+  "repo_name": "bitcart_bitcart",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Wrong file extension for pip install - using config.yaml instead of requirements.txt",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install -r requirements.pip",
+        "pip install -r dependencies.txt",
+        "pip install -r setup.cfg"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_Mirascope_mirascope_error_readme_merge_k2",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the optional `groq` dependency is incorrect. It suggests installing a separate package `mirascope-groq` instead of using the correct extra syntax.",
+      "correction_candidates": [
+        "pip install mirascope --with-groq",
+        "pip install mirascope[groq]",
+        "pip install mirascope groq",
+        "pip install mirascope --install-option=\"--with-groq\""
+      ],
+      "golden_answer": "pip install mirascope[groq]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The method to execute the `OpenAICall` is incorrect. The example uses `.run()` instead of the correct `.call()` method.",
+      "correction_candidates": [
+        "critique = editor.execute()",
+        "critique = editor.call()",
+        "critique = editor.invoke()",
+        "critique = editor.get_response()"
+      ],
+      "golden_answer": "critique = editor.call()"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Mirascope requires Python 3.7, which is outdated and contradicts the PyPI badge showing compatibility with modern Python versions.",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Mirascope requires Python 3.7 and will not work with newer versions.'",
+        "Change the sentence to 'Note: Mirascope requires Python 3.8 or newer.'",
+        "Change the sentence to 'Note: Mirascope is compatible with Python versions listed on its PyPI page.'",
+        "Change the sentence to 'Note: Mirascope requires Python >= 3.7.'"
+      ],
+      "golden_answer": "Remove the sentence 'Note: Mirascope requires Python 3.7 and will not work with newer versions.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the 'QuickStart' video thumbnail is incorrect, pointing to a non-existent 'docs/assets' directory and causing the image to not display.",
+      "correction_candidates": [
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `../assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `./assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `/assets/quickstart-screenshot-with-play-button.png`.",
+        "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `quickstart-screenshot-with-play-button.png`."
+      ],
+      "golden_answer": "Change the image source path from `./docs/assets/quickstart-screenshot-with-play-button.png` to `./assets/quickstart-screenshot-with-play-button.png`."
+    }
+  ]
+}

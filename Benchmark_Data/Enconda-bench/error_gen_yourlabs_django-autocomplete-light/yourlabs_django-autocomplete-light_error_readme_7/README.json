@@ -1,0 +1,29 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_7",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version conflict between stated requirements (Django>=2.0) and installation command (Django==3.1.0), creating compatibility confusion",
+      "correction_candidates": [
+        "pip install django-autocomplete-light",
+        "pip install django-autocomplete-light Django>=2.0",
+        "pip install django-autocomplete-light==3.8.5 Django>=2.0",
+        "pip install django-autocomplete-light Django==4.2"
+      ],
+      "golden_answer": "pip install django-autocomplete-light"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Conflicting version information between requirements section and features section regarding Django 4.2 support",
+      "correction_candidates": [
+        "This package requires Django>=2.0 and Python>=3.6. Django 4.2 support starting DAL 3.10.",
+        "This package requires Django>=4.2 and Python>=3.8. For earlier Django versions, use DAL < 3.10.",
+        "This package requires Django>=2.0 and Python>=3.5. For Django 4.2 support, use DAL >= 3.10.",
+        "This package requires Django>=1.11 and Python>=3.5. Django 4.2 support available in all versions."
+      ],
+      "golden_answer": "This package requires Django>=2.0 and Python>=3.5. For Django 4.2 support, use DAL >= 3.10."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "litex-hub_litex-boards_error_readme_2",
+  "repo_name": "litex-hub_litex-boards",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly mandates the use of Python 3.6, which is an outdated version and may cause dependency issues, while the project supports more recent Python versions.",
+      "correction_candidates": [
+        "You must use Python 2.7 for this project.",
+        "Python 3.9 or higher is required.",
+        "This project is compatible with any version of Python 3.",
+        "Remove the sentence specifying the Python 3.6 version requirement."
+      ],
+      "golden_answer": "Remove the sentence specifying the Python 3.6 version requirement."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly instructs users to install a non-existent `litex-core` package from pip. LiteX installation is typically done by cloning repositories, not through a single pip package.",
+      "correction_candidates": [
+        "Install the required package with: pip install litex",
+        "The correct package is 'litescope', install with: pip install litescope",
+        "Remove the instruction to install the 'litex-core' package.",
+        "Install the required package with: conda install -c litex-hub litex-core"
+      ],
+      "golden_answer": "Remove the instruction to install the 'litex-core' package."
+    }
+  ]
+}

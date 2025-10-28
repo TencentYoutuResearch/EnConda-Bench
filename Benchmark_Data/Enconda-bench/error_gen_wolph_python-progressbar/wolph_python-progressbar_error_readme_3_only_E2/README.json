@@ -1,0 +1,18 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_3_only_E2",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Context wrapper' code example, the `bar.update()` method is called without an argument, which will raise a TypeError because it expects the current progress value.",
+      "correction_candidates": [
+        "bar.update(i + 1)",
+        "bar.update(value=i)",
+        "bar.increment()",
+        "bar.update(i)"
+      ],
+      "golden_answer": "bar.update(i)"
+    }
+  ]
+}

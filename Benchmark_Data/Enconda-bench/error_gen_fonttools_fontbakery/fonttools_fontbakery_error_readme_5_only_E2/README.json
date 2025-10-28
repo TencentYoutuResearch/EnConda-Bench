@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_5_only_E2",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used invalid command syntax with incorrect parameter format for output file",
+      "correction_candidates": [
+        "To run Font Bakery on your fonts, use the command: `fontbakery check-universal --html report.html *.ttf`",
+        "To run Font Bakery on your fonts, use the command: `fontbakery check-universal *.ttf --html report.html`",
+        "To run Font Bakery on your fonts, use the command: `fontbakery check-googlefonts --html report.html *.ttf`",
+        "To run Font Bakery on your fonts, use the command: `fontbakery check-universal --output report.html *.ttf`"
+      ],
+      "golden_answer": "To run Font Bakery on your fonts, use the command: `fontbakery check-universal --html report.html *.ttf`"
+    }
+  ]
+}

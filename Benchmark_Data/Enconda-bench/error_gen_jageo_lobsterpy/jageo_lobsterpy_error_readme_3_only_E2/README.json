@@ -1,0 +1,18 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_3_only_E2",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `lobsterpy plot --bonds 1,2` uses an incorrect flag and syntax to specify which bonds to plot.",
+      "correction_candidates": [
+        "``lobsterpy plot --bonds \"1 2\"`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot 1,2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot --bond 1 --bond 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot 1 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``."
+      ],
+      "golden_answer": "``lobsterpy plot 1 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``."
+    }
+  ]
+}

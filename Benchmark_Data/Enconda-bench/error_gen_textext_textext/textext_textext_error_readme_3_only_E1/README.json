@@ -1,0 +1,18 @@
+{
+  "readme": "textext_textext_error_readme_3_only_E1",
+  "repo_name": "textext_textext",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that Python 2.7 is a required dependency, but recent versions of Inkscape and TexText use Python 3.",
+      "correction_candidates": [
+        "Change the requirement from 'Python 2.7' to 'Python 3.5+'.",
+        "Change the requirement from 'Python 2.7' to 'the Python version bundled with Inkscape'.",
+        "Change the requirement from 'Python 2.7' to 'any Python 3 version'.",
+        "Remove the sentence stating that Python 2.7 is required."
+      ],
+      "golden_answer": "Remove the sentence stating that Python 2.7 is required."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_2_only_E6",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions tell the user to `pip install twine` before creating and activating the virtual environment. This installs Twine in the global or user site-packages, defeating the purpose of the virtual environment for this tool.",
+      "correction_candidates": [
+        "Reverse the order: create and activate the virtual environment first, then run `pip install twine`.",
+        "Use `pipx install twine` to install Twine in an isolated environment separate from the project.",
+        "Run `pip install twine --user` before creating the virtual environment.",
+        "After activating the virtual environment, run `pip install --upgrade twine`."
+      ],
+      "golden_answer": "Reverse the order: create and activate the virtual environment first, then run `pip install twine`."
+    }
+  ]
+}

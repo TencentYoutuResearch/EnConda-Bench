@@ -1,0 +1,18 @@
+{
+  "readme": "ucoproject_uco_error_readme_7_only_E7",
+  "repo_name": "ucoproject_uco",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies support for Python 2.7 which is deprecated and incompatible with modern dependencies",
+      "correction_candidates": [
+        "Change to Python 3.8+ as the minimum requirement",
+        "Specify only Python 3.6+ without mentioning Python 2.7",
+        "Update to require Python 3.9+ for better compatibility",
+        "Change to Python 3.7+ as the minimum supported version"
+      ],
+      "golden_answer": "Specify only Python 3.6+ without mentioning Python 2.7"
+    }
+  ]
+}

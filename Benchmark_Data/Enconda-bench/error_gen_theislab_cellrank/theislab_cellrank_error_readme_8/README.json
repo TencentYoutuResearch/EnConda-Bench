@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_cellrank_error_readme_8",
+  "repo_name": "theislab_cellrank",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing a non-existent setup_cellrank.py script that users would not have",
+      "correction_candidates": [
+        "pip install cellrank to get started",
+        "python -c \"import cellrank; print('CellRank installed successfully')\"",
+        "Download the setup script from the official repository first",
+        "conda install cellrank to validate installation"
+      ],
+      "golden_answer": "pip install cellrank to get started"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using incorrect API calls with non-existent methods and invalid function names",
+      "correction_candidates": [
+        "import cellrank as cr; adata = cr.datasets.pancreas(); cr.tl.velocity_graph(adata); cr.tl.terminal_states(adata)",
+        "import cellrank as cr; cr.settings.verbosity = 2; adata = cr.datasets.pancreas(); cr.tl.velocity_kernel(adata)",
+        "import cellrank as cr; adata = cr.datasets.pancreas_preprocessed(); cr.tl.compute_transition_matrix(adata)",
+        "import cellrank as cr; adata = cr.datasets.pancreas(); k = cr.kernels.VelocityKernel(adata).compute_transition_matrix()"
+      ],
+      "golden_answer": "import cellrank as cr; adata = cr.datasets.pancreas(); cr.tl.velocity_graph(adata); cr.tl.terminal_states(adata)"
+    }
+  ]
+}

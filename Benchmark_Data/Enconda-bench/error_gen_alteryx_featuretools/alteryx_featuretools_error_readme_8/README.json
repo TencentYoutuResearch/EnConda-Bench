@@ -1,0 +1,29 @@
+{
+  "readme": "alteryx_featuretools_error_readme_8",
+  "repo_name": "alteryx_featuretools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using unnecessary and potentially harmful flags",
+      "correction_candidates": [
+        "Use the standard python -m pip install featuretools command without additional flags",
+        "Replace with pip install --upgrade featuretools for safer upgrade functionality",
+        "Use conda install command instead of pip for better dependency management",
+        "Add --user flag instead of --force for user-level installation"
+      ],
+      "golden_answer": "Use the standard python -m pip install featuretools command without additional flags"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement claiming Python 2.7 compatibility for Dask",
+      "correction_candidates": [
+        "Remove the Python 2.7 requirement note as it's outdated and incorrect",
+        "Change the requirement to Python 3.8+ for modern Dask compatibility",
+        "Update to specify Python 3.7+ as the minimum requirement for Dask support",
+        "Replace with a note about requiring Python 3.6+ for all featuretools functionality"
+      ],
+      "golden_answer": "Remove the Python 2.7 requirement note as it's outdated and incorrect"
+    }
+  ]
+}

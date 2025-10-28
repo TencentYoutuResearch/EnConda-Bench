@@ -1,0 +1,18 @@
+{
+  "readme": "microsoft_torchgeo_error_readme_3_only_E8",
+  "repo_name": "microsoft_torchgeo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The YAML configuration file for the LightningCLI example has incorrect indentation. The `init_args` and `dict_kwargs` keys are at the same level as `data`, but they should be nested underneath it. This will cause a parsing error when LightningCLI tries to read the file.",
+      "correction_candidates": [
+        "Correct the indentation so that `init_args` and `dict_kwargs` are nested under the `data` key.",
+        "Convert the config file format from YAML to JSON.",
+        "Remove the `data` key and move its children to the top level.",
+        "Wrap the entire YAML block in quotes to treat it as a string."
+      ],
+      "golden_answer": "Correct the indentation so that `init_args` and `dict_kwargs` are nested under the `data` key."
+    }
+  ]
+}

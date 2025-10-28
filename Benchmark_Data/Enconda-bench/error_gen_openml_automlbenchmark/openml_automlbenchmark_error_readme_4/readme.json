@@ -1,0 +1,29 @@
+{
+  "readme": "openml_automlbenchmark_error_readme_4",
+  "repo_name": "openml_automlbenchmark",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install automl-benchmark` is incorrect. It attempts to install a potentially non-existent or wrong package from PyPI instead of installing the project from the cloned source code.",
+      "correction_candidates": [
+        "Clone the repository and run `pip install -e .` from the root directory.",
+        "pip install openml-automlbenchmark",
+        "pip install git+https://github.com/openml/automlbenchmark.git",
+        "conda install automl-benchmark"
+      ],
+      "golden_answer": "Clone the repository and run `pip install -e .` from the root directory."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `runbenchmark.py GAMA --task_id 146825` uses an invalid parameter `--task_id`. The correct parameter to specify a task is `--task` or `-t`.",
+      "correction_candidates": [
+        "runbenchmark.py GAMA --task 146825",
+        "runbenchmark.py GAMA --task=146825",
+        "runbenchmark.py GAMA -t 146825",
+        "runbenchmark.py GAMA 146825"
+      ],
+      "golden_answer": "runbenchmark.py GAMA --task 146825"
+    }
+  ]
+}

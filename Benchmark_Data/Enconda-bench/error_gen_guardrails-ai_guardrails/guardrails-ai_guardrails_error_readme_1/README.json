@@ -1,0 +1,29 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_1",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The main package installation command in the 'Installation' section is incorrect; it uses the wrong package name 'guardrails' instead of 'guardrails-ai'.",
+      "correction_candidates": [
+        "pip install guardrails",
+        "pip install guardrails-ai",
+        "pip install guardrailsai",
+        "pip install guardrails.ai"
+      ],
+      "golden_answer": "pip install guardrails-ai"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install a validator from Guardrails Hub is incorrect. It uses 'guardrails install' instead of the correct 'guardrails hub install'.",
+      "correction_candidates": [
+        "guardrails hub add hub://guardrails/regex_match",
+        "guardrails get hub://guardrails/regex_match",
+        "guardrails install hub://guardrails/regex_match",
+        "guardrails hub install hub://guardrails/regex_match"
+      ],
+      "golden_answer": "guardrails hub install hub://guardrails/regex_match"
+    }
+  ]
+}

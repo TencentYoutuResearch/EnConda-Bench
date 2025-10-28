@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_1_only_E2",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `bob build` is incorrect for invoking the build process, as the project uses GNU Make.",
+      "correction_candidates": [
+        "Run `make` in the project root to start the build.",
+        "Run `gobob` to start the build.",
+        "Run `build.sh` to start the build.",
+        "Run `bob --build all` to start the build."
+      ],
+      "golden_answer": "Run `make` in the project root to start the build."
+    }
+  ]
+}

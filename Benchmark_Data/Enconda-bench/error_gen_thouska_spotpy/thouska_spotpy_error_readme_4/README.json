@@ -1,0 +1,29 @@
+{
+  "readme": "thouska_spotpy_error_readme_4",
+  "repo_name": "thouska_spotpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The source installation instructions incorrectly state that `py-gdal` is a required dependency. This package does not exist on PyPI, and `spotpy` does not list GDAL as a direct dependency, causing confusion and installation failure.",
+      "correction_candidates": [
+        "Remove the line instructing to install `py-gdal`.",
+        "Replace `pip install py-gdal` with `pip install gdal`.",
+        "Replace `pip install py-gdal` with `conda install gdal`.",
+        "Mark the `py-gdal` dependency as optional."
+      ],
+      "golden_answer": "Remove the line instructing to install `py-gdal`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Contributing' section, the `git commit` command is missing the `-m` flag for the message, which will cause the command to fail or open a text editor, contrary to the one-line command shown.",
+      "correction_candidates": [
+        "git commit -m \"Add some feature\"",
+        "git commit --message \"Add some feature\"",
+        "git commit -a -m \"Add some feature\"",
+        "git commit -message \"Add some feature\""
+      ],
+      "golden_answer": "git commit -m \"Add some feature\""
+    }
+  ]
+}

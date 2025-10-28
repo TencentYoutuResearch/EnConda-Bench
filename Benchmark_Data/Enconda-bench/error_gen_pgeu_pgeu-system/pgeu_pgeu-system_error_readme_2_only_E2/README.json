@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_2_only_E2",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python3 -m venv --virtual .venv` uses a non-existent flag `--virtual`, causing the command to fail.",
+      "correction_candidates": [
+        "Remove the `--virtual` flag. The correct command is `python3 -m venv .venv`.",
+        "Replace `python3 -m venv --virtual .venv` with `virtualenv .venv`.",
+        "Change the flag to `--name`: `python3 -m venv --name .venv`.",
+        "Correct the command to `python3 --m venv .venv`."
+      ],
+      "golden_answer": "Remove the `--virtual` flag. The correct command is `python3 -m venv .venv`."
+    }
+  ]
+}

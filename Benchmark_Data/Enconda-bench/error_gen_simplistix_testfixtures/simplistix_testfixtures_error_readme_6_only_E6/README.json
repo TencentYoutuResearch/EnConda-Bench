@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_6_only_E6",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Running setup.py install after pip install is incorrect order and redundant",
+      "correction_candidates": [
+        "Remove the setup.py install command and use only pip install testfixtures",
+        "Run setup.py install first, then pip install testfixtures",
+        "Use python -m pip install testfixtures instead of setup.py",
+        "Clone the repository first: git clone repo_url && cd testfixtures && python setup.py install"
+      ],
+      "golden_answer": "Remove the setup.py install command and use only pip install testfixtures"
+    }
+  ]
+}

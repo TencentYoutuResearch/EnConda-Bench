@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_1_only_E2",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the linter is given as `lint`, but the script is not in the user's PATH, so this will fail. The correct command requires a path.",
+      "correction_candidates": [
+        "The command should be `python3 ./tools/lint`.",
+        "The command should be `./tools/lint`.",
+        "You must add the `tools` directory to your system's PATH variable first.",
+        "The linter is run with `pytest --lint`."
+      ],
+      "golden_answer": "The command should be `./tools/lint`."
+    }
+  ]
+}

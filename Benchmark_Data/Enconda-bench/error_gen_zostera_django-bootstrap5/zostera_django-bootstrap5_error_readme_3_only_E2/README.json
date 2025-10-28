@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap5_error_readme_3_only_E2",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the example app is incorrect. It suggests using `python example/manage.py runserver`, which may fail without the prerequisite setup steps handled by the correct `make example` command.",
+      "correction_candidates": [
+        "The command should be `cd example && python manage.py runserver`.",
+        "Before running `runserver`, you must first run `python example/manage.py migrate`.",
+        "The correct command to run the example is `make example`.",
+        "The command should be `django-admin runserver --settings=example.settings`."
+      ],
+      "golden_answer": "The correct command to run the example is `make example`."
+    }
+  ]
+}

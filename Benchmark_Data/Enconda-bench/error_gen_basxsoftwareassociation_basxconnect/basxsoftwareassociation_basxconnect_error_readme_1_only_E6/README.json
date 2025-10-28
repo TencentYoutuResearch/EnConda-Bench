@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_1_only_E6",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions tell the user to install pip dependencies globally before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "Move the `pip install` command to be the last step.",
+        "Create and activate the virtual environment *before* running `pip install -r requirements.txt`.",
+        "Run `pip install` with a `--user` flag to avoid global installation.",
+        "Use `pipenv install` instead of `pip` and `venv`."
+      ],
+      "golden_answer": "Create and activate the virtual environment *before* running `pip install -r requirements.txt`."
+    }
+  ]
+}

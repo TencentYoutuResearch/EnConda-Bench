@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf_error_readme_1_only_E1",
+  "repo_name": "asdf-format_asdf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `$ pip install asdf gwcs` installs `gwcs`, an unnecessary dependency for the core `asdf` package.",
+      "correction_candidates": [
+        "$ pip install asdf",
+        "$ pip install asdf-core",
+        "$ pip install asdf --no-deps",
+        "$ pip install asdf -e ."
+      ],
+      "golden_answer": "$ pip install asdf"
+    }
+  ]
+}

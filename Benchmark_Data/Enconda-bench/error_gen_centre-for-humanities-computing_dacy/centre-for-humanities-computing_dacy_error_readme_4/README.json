@@ -1,0 +1,29 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_4",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command suggests using `conda install dacy`, but the package is distributed on PyPI and should be installed with `pip`. The conda command is likely to fail without specifying a channel like conda-forge, which isn't mentioned.",
+      "correction_candidates": [
+        "pip install dacy",
+        "conda install -c conda-forge dacy",
+        "python -m pip install dacy",
+        "pip install dacy -f https://pypi.org/simple"
+      ],
+      "golden_answer": "pip install dacy"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The usage example `for model in dacy.models:` is missing parentheses to call the `models` function. This will cause a TypeError because it attempts to iterate over a function object.",
+      "correction_candidates": [
+        "for model in dacy.models():",
+        "from dacy import models; for model in models():",
+        "for model in dacy.list_models():",
+        "for model in dacy.models.list():"
+      ],
+      "golden_answer": "for model in dacy.models():"
+    }
+  ]
+}

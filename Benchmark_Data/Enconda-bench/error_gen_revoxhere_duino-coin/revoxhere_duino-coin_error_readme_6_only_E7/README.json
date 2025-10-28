@@ -1,0 +1,18 @@
+{
+  "readme": "revoxhere_duino-coin_error_readme_6_only_E7",
+  "repo_name": "revoxhere_duino-coin",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Using Python 2 instead of Python 3 in Linux installation commands",
+      "correction_candidates": [
+        "Change all python2 references to python3",
+        "Add version specification like python>=3.6",
+        "Use python without version number",
+        "Install both python2 and python3 packages"
+      ],
+      "golden_answer": "Change all python2 references to python3"
+    }
+  ]
+}

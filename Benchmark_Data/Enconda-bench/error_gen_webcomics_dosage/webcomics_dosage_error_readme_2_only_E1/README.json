@@ -1,0 +1,18 @@
+{
+  "readme": "webcomics_dosage_error_readme_2_only_E1",
+  "repo_name": "webcomics_dosage",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pipx` installation command is presented as installing all optional features, but it omits the `css` extra, which is required for some comics.",
+      "correction_candidates": [
+        "Change the command to `pipx install dosage[all]`.",
+        "Change the command to `pipx install dosage[css,bash]`.",
+        "Change the command to `pipx install dosage --include-deps`.",
+        "Add a separate command `pip install cssselect` after the pipx command."
+      ],
+      "golden_answer": "Change the command to `pipx install dosage[css,bash]`."
+    }
+  ]
+}

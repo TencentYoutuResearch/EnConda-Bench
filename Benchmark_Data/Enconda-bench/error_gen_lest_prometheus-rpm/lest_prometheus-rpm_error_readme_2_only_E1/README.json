@@ -1,0 +1,18 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_2_only_E1",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly ask the user to install a non-existent package `gpg-key-importer`. Yum handles GPG keys automatically when `gpgcheck=1` is set in the repo file.",
+      "correction_candidates": [
+        "Remove the line 'First, run `yum install gpg-key-importer` to ensure keys can be handled.' as this package is not needed and does not exist.",
+        "Replace 'yum install gpg-key-importer' with 'yum install gnupg2'.",
+        "The command 'yum install gpg-key-importer' is unnecessary; yum handles GPG keys automatically with the 'repo_gpgcheck=1' and 'gpgcheck=1' options.",
+        "Delete the step requiring the installation of 'gpg-key-importer'."
+      ],
+      "golden_answer": "Remove the line 'First, run `yum install gpg-key-importer` to ensure keys can be handled.' as this package is not needed and does not exist."
+    }
+  ]
+}

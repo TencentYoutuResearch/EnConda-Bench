@@ -1,0 +1,29 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_7",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect method name 'begin' used instead of 'start' for DialogManager",
+      "correction_candidates": [
+        "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.open(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.launch(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.init(MySG.first, mode=StartMode.RESET_STACK)"
+      ],
+      "golden_answer": "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Missing required import for StartMode enum which is used in the code example",
+      "correction_candidates": [
+        "from aiogram_dialog import StartMode",
+        "from aiogram_dialog.manager import StartMode",
+        "from aiogram_dialog.enums import StartMode",
+        "from aiogram_dialog.api import StartMode"
+      ],
+      "golden_answer": "from aiogram_dialog import StartMode"
+    }
+  ]
+}

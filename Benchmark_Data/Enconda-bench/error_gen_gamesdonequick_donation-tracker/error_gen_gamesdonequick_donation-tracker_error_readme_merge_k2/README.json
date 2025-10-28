@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_gamesdonequick_donation-tracker_error_readme_merge_k2",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is specified as 'Python 3.8+', which is too broad and may lead to using an untested or incompatible future Python version.",
+      "correction_candidates": [
+        "Python >= 3.8",
+        "Python 3.8 to 3.12",
+        "Python 3.10",
+        "Python 3.8, 3.9, 3.10, 3.11, or 3.12"
+      ],
+      "golden_answer": "Python 3.8 to 3.12"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install --edit donation-tracker' is incorrect. The '--edit' flag is not a valid option for pip install.",
+      "correction_candidates": [
+        "pip install -e donation-tracker",
+        "pip install --editable ./donation-tracker",
+        "pip install donation-tracker --dev",
+        "python setup.py develop"
+      ],
+      "golden_answer": "pip install -e donation-tracker"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands to install and clone the repository are in the wrong order. 'pip install -e donation-tracker' attempts to install from a local directory that has not been created yet by 'git clone'.",
+      "correction_candidates": [
+        "First run `git clone git@github.com:GamesDoneQuick/donation-tracker`, then `pip install -e donation-tracker`.",
+        "Run `pip install git+https://github.com/GamesDoneQuick/donation-tracker.git@master` instead of cloning and installing locally.",
+        "Run `git clone git@github.com:GamesDoneQuick/donation-tracker` and then `python setup.py install` inside the new directory.",
+        "Run `pip install -e ./donation-tracker` after cloning the repository."
+      ],
+      "golden_answer": "First run `git clone git@github.com:GamesDoneQuick/donation-tracker`, then `pip install -e donation-tracker`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command 'pip install django' does not specify a version, which can lead to installing a future version of Django that is incompatible with the project.",
+      "correction_candidates": [
+        "pip install \"django<6.0\"",
+        "pip install django==5.0.*",
+        "pip install django~=5.0",
+        "pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install django~=5.0"
+    }
+  ]
+}

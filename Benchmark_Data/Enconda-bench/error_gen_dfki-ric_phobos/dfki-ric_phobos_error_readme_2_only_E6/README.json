@@ -1,0 +1,18 @@
+{
+  "readme": "dfki-ric_phobos_error_readme_2_only_E6",
+  "repo_name": "dfki-ric_phobos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The CLI installation steps are in the wrong logical order. The instructions say to install the package with `pip install .` before installing its dependencies with the `install_requirements.py` script, which will cause the installation to fail.",
+      "correction_candidates": [
+        "First run `pip install .`, then `cd ..` and `python3 phobos/install_requirements.py`.",
+        "Run `pip install --no-deps .` and then `python3 install_requirements.py`.",
+        "First, install dependencies with `python3 install_requirements.py`, then install the package with `pip install .`.",
+        "Run `pip install . && python3 install_requirements.py`."
+      ],
+      "golden_answer": "First, install dependencies with `python3 install_requirements.py`, then install the package with `pip install .`."
+    }
+  ]
+}

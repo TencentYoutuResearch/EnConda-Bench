@@ -1,0 +1,18 @@
+{
+  "readme": "matthiasvalvekens_pyhanko_error_readme_1_only_E7",
+  "repo_name": "matthiasvalvekens_pyhanko",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 3.6 is supported, but the project requires Python 3.8 or later, which will cause installation or runtime failures.",
+      "correction_candidates": [
+        "PyHanko requires Python 3.8 or later.",
+        "PyHanko requires Python 3.7 or later.",
+        "PyHanko is compatible with Python 3.",
+        "PyHanko requires Python 3.6 or newer."
+      ],
+      "golden_answer": "PyHanko requires Python 3.8 or later."
+    }
+  ]
+}

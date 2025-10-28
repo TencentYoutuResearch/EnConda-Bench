@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_6_only_E1",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (tensorflow pytorch) that are not required for the basic pyclarity installation",
+      "correction_candidates": [
+        "pip install pyclarity",
+        "pip install pyclarity numpy scipy",
+        "pip install pyclarity --no-deps",
+        "pip install pyclarity[all]"
+      ],
+      "golden_answer": "pip install pyclarity"
+    }
+  ]
+}

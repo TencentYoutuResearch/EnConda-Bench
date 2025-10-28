@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_wagtailmenus_error_readme_2",
+  "repo_name": "jazzband_wagtailmenus",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install wagtail-menus` is incorrect; the correct package name on PyPI is `wagtailmenus`.",
+      "correction_candidates": [
+        "Run `pip install wagtailmenus`",
+        "Run `pip install wagtailmenu`",
+        "Run `pip install wagtail_menus`",
+        "Clone the repository and run `python setup.py install`"
+      ],
+      "golden_answer": "Run `pip install wagtailmenus`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The README suggests running a non-existent management command `python manage.py init_menus`. The package does not provide this command.",
+      "correction_candidates": [
+        "Remove the line `python manage.py init_menus`, as no such setup command is required.",
+        "Replace `init_menus` with the correct command: `python manage.py create_menus`.",
+        "The correct command is `python manage.py wagtailmenus_setup`.",
+        "You must first run `python manage.py makemigrations wagtailmenus` and then `python manage.py migrate`."
+      ],
+      "golden_answer": "Remove the line `python manage.py init_menus`, as no such setup command is required."
+    }
+  ]
+}

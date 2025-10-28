@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_3_only_E2",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pump example uses an incorrect method name `run_for` and an incorrect parameter `time` instead of the correct `run_for_duration` method and `duration` parameter.",
+      "correction_candidates": [
+        "await p.run_for_duration(speed=100, duration=30)",
+        "await p.run_duration(speed=100, duration=30)",
+        "await p.run_for_duration(rpm=100, seconds=30)",
+        "await p.run(speed=100, duration=30)"
+      ],
+      "golden_answer": "await p.run_for_duration(speed=100, duration=30)"
+    }
+  ]
+}

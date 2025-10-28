@@ -1,0 +1,18 @@
+{
+  "readme": "dbiir_uer-py_error_readme_1_only_E4",
+  "repo_name": "dbiir_uer-py",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `pretrain.py` command provides an incorrect path `models/base_config.json` for the configuration file, which should be `models/bert/base_config.json`.",
+      "correction_candidates": [
+        "Change the path to `models/bert/base_config.json`.",
+        "Change the path to `config/bert/base_config.json`.",
+        "Move the `base_config.json` file from `models/bert/` to `models/`.",
+        "Change the path to `models/config/base_config.json`."
+      ],
+      "golden_answer": "Change the path to `models/bert/base_config.json`."
+    }
+  ]
+}

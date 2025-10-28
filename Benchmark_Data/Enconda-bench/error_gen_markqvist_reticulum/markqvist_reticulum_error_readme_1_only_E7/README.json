@@ -1,0 +1,18 @@
+{
+  "readme": "markqvist_reticulum_error_readme_1_only_E7",
+  "repo_name": "markqvist_reticulum",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Reticulum requires Python 2.7, but the project is based on Python 3.",
+      "correction_candidates": [
+        "Remove the sentence 'Note that Reticulum is legacy software and requires Python 2.7 to function correctly.'",
+        "Change the sentence to 'Note that Reticulum is legacy software and requires Python 3.6 or newer to function correctly.'",
+        "Add a note saying 'Reticulum can be run with either Python 2.7 or Python 3, but Python 3 is recommended.'",
+        "Change the sentence to 'Note that Reticulum requires the `python27` package to be installed.'"
+      ],
+      "golden_answer": "Remove the sentence 'Note that Reticulum is legacy software and requires Python 2.7 to function correctly.'"
+    }
+  ]
+}

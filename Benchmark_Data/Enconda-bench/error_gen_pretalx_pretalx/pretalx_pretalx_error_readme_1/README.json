@@ -1,0 +1,29 @@
+{
+  "readme": "pretalx_pretalx_error_readme_1",
+  "repo_name": "pretalx_pretalx",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The local setup instructions install dependencies with pip before creating and activating the virtual environment, which pollutes the global Python environment.",
+      "correction_candidates": [
+        "The `python -m venv venv` command should be run before `git clone`.",
+        "Use `pip3` instead of `pip` to ensure the correct Python version is used.",
+        "The `pip install` command should be run after the `source venv/bin/activate` command.",
+        "The `pip install` command should be moved to the end of the script."
+      ],
+      "golden_answer": "The `pip install` command should be run after the `source venv/bin/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the development server is incorrect. `python manage.py run` is not a valid Django management command.",
+      "correction_candidates": [
+        "The command should be `python manage.py runserver`.",
+        "The command should be `python manage.py start`.",
+        "The command should be `pretalx runserver`.",
+        "The command should be `python manage.py startapp`."
+      ],
+      "golden_answer": "The command should be `python manage.py runserver`."
+    }
+  ]
+}

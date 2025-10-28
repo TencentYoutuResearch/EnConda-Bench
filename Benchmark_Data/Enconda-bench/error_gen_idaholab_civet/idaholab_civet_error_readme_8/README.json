@@ -1,0 +1,29 @@
+{
+  "readme": "idaholab_civet_error_readme_8",
+  "repo_name": "idaholab_civet",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent configuration file path /etc/civet/default.conf",
+      "correction_candidates": [
+        "Change to ./config/default.conf in project directory",
+        "Use examples/sample_config.conf instead",
+        "Reference config/civet.conf.example file",
+        "Create configuration from template in docs folder"
+      ],
+      "golden_answer": "Change to ./config/default.conf in project directory"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "References non-existent civet-config-parser package",
+      "correction_candidates": [
+        "Remove the civet-config-parser dependency entirely",
+        "Use standard text editor for configuration files",
+        "Replace with built-in configuration management",
+        "Install pyyaml for YAML configuration parsing"
+      ],
+      "golden_answer": "Remove the civet-config-parser dependency entirely"
+    }
+  ]
+}

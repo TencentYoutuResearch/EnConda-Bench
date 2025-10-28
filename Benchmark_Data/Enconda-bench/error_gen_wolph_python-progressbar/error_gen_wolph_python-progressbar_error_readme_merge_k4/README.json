@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_wolph_python-progressbar_error_readme_merge_k4",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip installation command refers to `progressbar`, which is the original, abandoned package, instead of the correct `progressbar2` for this forked version.",
+      "correction_candidates": [
+        "pip install python-progressbar",
+        "pip install progressbar2",
+        "pip install progress-bar-2",
+        "pip install progressbar --upgrade"
+      ],
+      "golden_answer": "pip install progressbar2"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "An incorrect note has been added stating that the package requires Python 2.7, which is misleading as the library supports modern Python versions.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7 compatibility.",
+        "Change the note to specify Python 3.6+ is required.",
+        "Change the note to state the package is compatible with both Python 2 and 3.",
+        "Add a command `pip install progressbar2 --python-version 2.7`."
+      ],
+      "golden_answer": "Remove the note about Python 2.7 compatibility."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The GPG verification command incorrectly references a local file `mykey.asc` instead of the signature file `progressbar2-<version>.tar.gz.asc` that accompanies the release download.",
+      "correction_candidates": [
+        "gpg --import mykey.asc && gpg --verify progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz.asc progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz.asc"
+      ],
+      "golden_answer": "gpg --verify progressbar2-<version>.tar.gz.asc progressbar2-<version>.tar.gz"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Context wrapper' code example, the `bar.update()` method is called without an argument, which will raise a TypeError because it expects the current progress value.",
+      "correction_candidates": [
+        "bar.update(i + 1)",
+        "bar.update(value=i)",
+        "bar.increment()",
+        "bar.update(i)"
+      ],
+      "golden_answer": "bar.update(i)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `easy_install` command uses an incorrect package name `progressbar-2` instead of the correct `progressbar2`.",
+      "correction_candidates": [
+        "easy_install progressbar",
+        "easy_install \"progressbar2\"",
+        "easy_install progressbar2",
+        "python -m easy_install progressbar-2"
+      ],
+      "golden_answer": "easy_install progressbar2"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the logging example, `logging.basicConfig()` is called before `progressbar.streams.wrap_stderr()`, which is the wrong order. The stream must be wrapped before the logging handler is initialized to prevent garbled output.",
+      "correction_candidates": [
+        "Remove the `logging.basicConfig()` line entirely.",
+        "Swap the `logging.basicConfig()` and `progressbar.streams.wrap_stderr()` lines to wrap stderr first.",
+        "Replace `logging.basicConfig()` with `logging.basicConfig(stream=progressbar.streams.stderr)`.",
+        "Add `progressbar.streams.flush()` after `logging.basicConfig()`."
+      ],
+      "golden_answer": "Swap the `logging.basicConfig()` and `progressbar.streams.wrap_stderr()` lines to wrap stderr first."
+    }
+  ]
+}

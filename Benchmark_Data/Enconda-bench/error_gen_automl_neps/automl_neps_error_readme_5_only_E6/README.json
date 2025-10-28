@@ -1,0 +1,18 @@
+{
+  "readme": "automl_neps_error_readme_5_only_E6",
+  "repo_name": "automl_neps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added pip install -r requirements.txt before poetry install, which is incorrect order since poetry should handle dependencies",
+      "correction_candidates": [
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install",
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install --dev",
+        "git clone git@github.com:automl/neps.git\ncd neps\npip install -e .",
+        "git clone git@github.com:automl/neps.git\ncd neps\nconda install poetry\npoetry install"
+      ],
+      "golden_answer": "git clone git@github.com:automl/neps.git\ncd neps\npoetry install"
+    }
+  ]
+}

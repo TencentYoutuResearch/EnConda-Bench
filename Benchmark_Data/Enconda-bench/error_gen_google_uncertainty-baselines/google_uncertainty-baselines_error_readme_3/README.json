@@ -1,0 +1,29 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_3",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instruction for using datasets in a notebook incorrectly advises disabling eager execution (`tf.compat.v1.disable_eager_execution()`), which is the opposite of what is needed and will cause errors.",
+      "correction_candidates": [
+        "one may need to activate tf earger execution mode `tf.compat.v1.enable_eager_execution()`.",
+        "one must use TensorFlow 1.x by running `%tensorflow_version 1.x`.",
+        "eager execution is not supported and should be disabled.",
+        "one must wrap the dataset loading in a `tf.function`."
+      ],
+      "golden_answer": "one may need to activate tf earger execution mode `tf.compat.v1.enable_eager_execution()`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions for adding a new dataset reference an incorrect file path 'docs/references.md' for bibtex entries; the correct file is 'references.md' in the root directory.",
+      "correction_candidates": [
+        "Add the bibtex reference to `references.md`.",
+        "Add the bibtex reference to `CITATIONS.md`.",
+        "Add the bibtex reference to the main `README.md`.",
+        "Add the bibtex reference to `docs/bibtex.bib`."
+      ],
+      "golden_answer": "Add the bibtex reference to `references.md`."
+    }
+  ]
+}

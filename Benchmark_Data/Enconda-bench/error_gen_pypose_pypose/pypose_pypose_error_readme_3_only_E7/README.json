@@ -1,0 +1,18 @@
+{
+  "readme": "pypose_pypose_error_readme_3_only_E7",
+  "repo_name": "pypose_pypose",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "A specific, potentially outdated version of PyTorch (`torch==1.9.0`) is hardcoded in the instructions. This can cause compatibility issues with other dependencies or prevent the user from using a newer, recommended version.",
+      "correction_candidates": [
+        "Change `pip install torch==1.9.0` to `pip install torch>=2.0.0`.",
+        "Remove the specific command `by running 'pip install torch==1.9.0'` and simply instruct the user to install PyTorch from the official website.",
+        "Change the instruction to 'install PyTorch (version 1.9.0 or higher)'.",
+        "Keep the command but add a note: '(or a more recent version from pytorch.org)'."
+      ],
+      "golden_answer": "Remove the specific command `by running 'pip install torch==1.9.0'` and simply instruct the user to install PyTorch from the official website."
+    }
+  ]
+}

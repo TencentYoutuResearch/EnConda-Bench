@@ -1,0 +1,29 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_6",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility error - specifies Django 2.0+ but changelog shows only Django 1.10 support",
+      "correction_candidates": [
+        "Change Django requirement to Django 1.8+ to match the changelog",
+        "Update requirement to Django 1.10+ based on the latest changelog entry",
+        "Specify Django 1.6-1.10 to show the supported version range",
+        "Remove specific Django version and just say Django (compatible versions listed in setup.py)"
+      ],
+      "golden_answer": "Update requirement to Django 1.10+ based on the latest changelog entry"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Command syntax error - python manage.py migrate assumes Django project structure that may not exist",
+      "correction_candidates": [
+        "Replace with python setup.py install to properly install the package",
+        "Use django-admin startproject myproject first, then python manage.py migrate",
+        "Change to python -m django migrate after proper project setup",
+        "Replace with pip install -e . for development installation"
+      ],
+      "golden_answer": "Use django-admin startproject myproject first, then python manage.py migrate"
+    }
+  ]
+}

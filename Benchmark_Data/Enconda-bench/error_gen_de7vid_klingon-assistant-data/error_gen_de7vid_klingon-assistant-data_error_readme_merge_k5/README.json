@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_de7vid_klingon-assistant-data_error_readme_merge_k5",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command syntax provided for `review_changes.sh` is incorrect. The script uses positional arguments for language and commit, not named flags like `--language`.",
+      "correction_candidates": [
+        "The script `review_changes.sh` takes a language code and an optional commit as positional arguments.",
+        "The script should be called as `sh review_changes.sh <lang> [commit]`.",
+        "The script `review_changes.sh` requires a configuration file to specify the language and commit.",
+        "The correct command is `review_changes.sh <language_code> [commit_hash]`."
+      ],
+      "golden_answer": "The script `review_changes.sh` takes a language code and an optional commit as positional arguments."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the `write_db.sh` script is in the `scripts/` directory of the current repository, but it is actually located in the separate Android app repository.",
+      "correction_candidates": [
+        "The `write_db.sh` script is located in the root of the Android repository.",
+        "The `write_db.sh` script must be downloaded from the Android repository's releases page.",
+        "The `write_db.sh` script is located in the separate `klingon-assistant-android` repository.",
+        "The `write_db.sh` script is part of the `klingon-assistant` main repo, not the data repo."
+      ],
+      "golden_answer": "The `write_db.sh` script is located in the separate `klingon-assistant-android` repository."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary and likely incorrect Python dependency `google-api-python-client` is listed as a requirement for the `call_google_translate.py` script.",
+      "correction_candidates": [
+        "The script has no external dependencies that need to be installed via pip.",
+        "The correct dependency is `pip install google-cloud-translate`.",
+        "The script's dependencies are listed in a `requirements.txt` file in the `scripts` directory.",
+        "Remove the instruction to install `google-api-python-client` as it is included with standard Python distributions."
+      ],
+      "golden_answer": "The script has no external dependencies that need to be installed via pip."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The README gives a confusing and incorrect instruction to avoid using `blank.xml`, contradicting the template's purpose and suggesting a cumbersome alternative.",
+      "correction_candidates": [
+        "The `blank.xml` file is a template and should be used for creating new entries.",
+        "To create a new entry, run the `create_entry.py` script which uses `blank.xml` automatically.",
+        "The `blank.xml` file should be copied to a new file name, then edited.",
+        "The instruction is incorrect; `blank.xml` is the designated template for new entries."
+      ],
+      "golden_answer": "The `blank.xml` file is a template and should be used for creating new entries."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that `call_google_translate.py` requires Python 2.7, which is an outdated and likely incompatible version.",
+      "correction_candidates": [
+        "The script is compatible with Python 3 and does not require a specific version.",
+        "The script requires Python 3.6 or newer.",
+        "The script is written in Perl, not Python.",
+        "The Python 2.7 requirement should be removed as the script has been updated for Python 3."
+      ],
+      "golden_answer": "The Python 2.7 requirement should be removed as the script has been updated for Python 3."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The README provides a non-existent command (`python commit_submissions.py --auto`) for using the `commit_submissions.py` script.",
+      "correction_candidates": [
+        "The `commit_submissions.py` script is run without any arguments.",
+        "The README should be corrected to remove the fake `--auto` flag from the command example.",
+        "The correct command is `python scripts/commit_submissions.py`.",
+        "The `commit_submissions.py` script does not create commits automatically; it prepares them. The command example is misleading."
+      ],
+      "golden_answer": "The README should be corrected to remove the fake `--auto` flag from the command example."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Specified an outdated version of googletrans dependency that may cause installation or compatibility issues",
+      "correction_candidates": [
+        "First, install the required dependencies by running `pip install googletrans`.",
+        "First, install the required dependencies by running `pip install googletrans>=4.0.0`.",
+        "First, install the required dependencies by running `pip install googletrans==4.0.0`.",
+        "First, install the required dependencies by running `pip install googletrans-py`."
+      ],
+      "golden_answer": "First, install the required dependencies by running `pip install googletrans>=4.0.0`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Dependency installation instruction is placed after mentioning the script usage instead of at the beginning of the setup process",
+      "correction_candidates": [
+        "Move the pip install command to appear before mentioning the script usage",
+        "Place the dependency installation at the very beginning of the README file",
+        "Put the installation command in a separate Prerequisites section",
+        "Add the pip install command to the end of the paragraph after script instructions"
+      ],
+      "golden_answer": "Move the pip install command to appear before mentioning the script usage"
+    }
+  ]
+}

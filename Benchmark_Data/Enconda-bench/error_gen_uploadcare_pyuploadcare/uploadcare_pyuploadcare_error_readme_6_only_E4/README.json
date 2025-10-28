@@ -1,0 +1,18 @@
+{
+  "readme": "uploadcare_pyuploadcare_error_readme_6_only_E4",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "File path in the basic usage example references a non-existent config directory",
+      "correction_candidates": [
+        "sample-file.jpeg",
+        "assets/sample-file.jpeg",
+        "images/sample-file.jpeg",
+        "data/sample-file.jpeg"
+      ],
+      "golden_answer": "sample-file.jpeg"
+    }
+  ]
+}

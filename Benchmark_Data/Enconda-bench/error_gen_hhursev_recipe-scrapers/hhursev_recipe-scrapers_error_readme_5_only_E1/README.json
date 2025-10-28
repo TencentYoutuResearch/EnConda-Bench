@@ -1,0 +1,18 @@
+{
+  "readme": "hhursev_recipe-scrapers_error_readme_5_only_E1",
+  "repo_name": "hhursev_recipe-scrapers",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies beautifulsoup4 and lxml to the installation command",
+      "correction_candidates": [
+        "pip install recipe-scrapers",
+        "pip install recipe-scrapers requests",
+        "pip install recipe-scrapers beautifulsoup4",
+        "pip install recipe-scrapers lxml"
+      ],
+      "golden_answer": "pip install recipe-scrapers"
+    }
+  ]
+}

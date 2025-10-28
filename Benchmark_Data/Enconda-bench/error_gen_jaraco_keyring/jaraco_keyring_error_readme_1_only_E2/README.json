@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_keyring_error_readme_1_only_E2",
+  "repo_name": "jaraco_keyring",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Command-line Utility' section, the example command 'keyring set system:username' uses a colon to separate service and username, which is incorrect syntax. The command expects space-separated arguments.",
+      "correction_candidates": [
+        "keyring set --service system --username username",
+        "keyring set system username",
+        "keyring set \"system\" \"username\"",
+        "keyring --set system username"
+      ],
+      "golden_answer": "keyring set system username"
+    }
+  ]
+}

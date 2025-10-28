@@ -1,0 +1,29 @@
+{
+  "readme": "piskvorky_smart_open_error_readme_1",
+  "repo_name": "piskvorky_smart_open",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install all optional dependencies uses an incorrect flag. `pip install smart_open --all` is not a valid pip command for installing extras.",
+      "correction_candidates": [
+        "pip install smart_open --extras all",
+        "pip install smart_open[all]",
+        "pip install \"smart_open[all]\"",
+        "pip install smart_open --all-dependencies"
+      ],
+      "golden_answer": "pip install smart_open[all]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the test suite is incorrect. `pytest` does not have a `--run-all` flag.",
+      "correction_candidates": [
+        "pytest smart_open/tests/",
+        "python -m pytest smart_open",
+        "pytest smart_open",
+        "py.test --full smart_open"
+      ],
+      "golden_answer": "pytest smart_open"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_5_only_E6",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "System dependencies are installed after running the bot, which is incorrect order - they should be installed before setting up the virtual environment",
+      "correction_candidates": [
+        "Move step 4 to be step 1, before installing library requirements",
+        "Install system dependencies before step 1 by adding them as step 0",
+        "Combine system dependencies with library requirements in step 1",
+        "Remove system dependencies installation from quick install section entirely"
+      ],
+      "golden_answer": "Move step 4 to be step 1, before installing library requirements"
+    }
+  ]
+}

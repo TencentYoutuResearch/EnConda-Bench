@@ -1,0 +1,18 @@
+{
+  "readme": "mollie_mollie-api-python_error_readme_1_only_E6",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Installation' section, the command to install `flask` is placed before the virtual environment is created and activated. Dependencies should be installed after activating the virtual environment to keep them isolated.",
+      "correction_candidates": [
+        "Move the `$ pip install flask` command to be after the `$ source .venv/bin/activate` command.",
+        "Combine the flask installation with the client installation: `$ pip install flask -e .`",
+        "Delete the `$ pip install flask` command.",
+        "Move the virtual environment creation steps to the very top of the 'Installation' section."
+      ],
+      "golden_answer": "Move the `$ pip install flask` command to be after the `$ source .venv/bin/activate` command."
+    }
+  ]
+}

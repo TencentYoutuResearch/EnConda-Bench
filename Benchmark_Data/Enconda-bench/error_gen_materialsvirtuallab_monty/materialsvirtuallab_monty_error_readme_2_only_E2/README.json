@@ -1,0 +1,18 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_2_only_E2",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install monty.py` is incorrect. The package name on PyPI is `monty`, not `monty.py`.",
+      "correction_candidates": [
+        "Change the command to `pip install monty`.",
+        "Change the command to `python -m pip install monty`.",
+        "Change the command to `pip install monty-python`.",
+        "Change the command to `pip install from monty`."
+      ],
+      "golden_answer": "Change the command to `pip install monty`."
+    }
+  ]
+}

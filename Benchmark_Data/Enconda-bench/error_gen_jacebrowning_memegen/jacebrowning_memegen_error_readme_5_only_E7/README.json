@@ -1,0 +1,18 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_5_only_E7",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies using outdated Python 2.7 instead of Python 3, which is deprecated and incompatible with modern dependencies",
+      "correction_candidates": [
+        "Make sure you have Python 3.8 or higher installed for compatibility",
+        "Ensure you have Python 3.6+ installed for optimal performance",
+        "Use Python 3.7 or later for full feature support",
+        "Install Python 3.9 or newer for the best experience"
+      ],
+      "golden_answer": "Make sure you have Python 3.8 or higher installed for compatibility"
+    }
+  ]
+}

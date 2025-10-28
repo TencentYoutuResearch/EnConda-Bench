@@ -1,0 +1,29 @@
+{
+  "readme": "zostera_django-bootstrap3_error_readme_6",
+  "repo_name": "zostera_django-bootstrap3",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7+ and Django 1.8+ version requirements which are no longer supported",
+      "correction_candidates": [
+        "This package requires Python 3.8+ and Django 3.2+ for current support.",
+        "This package requires a combination of Python and Django that is currently supported.",
+        "This package requires Python 3.6+ and Django 2.2+ minimum versions.",
+        "This package supports Python 3.7+ and Django 3.0+ as minimum requirements."
+      ],
+      "golden_answer": "This package requires a combination of Python and Django that is currently supported."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Includes unnecessary jquery-ui dependency in the pip install command",
+      "correction_candidates": [
+        "pip install django-bootstrap3",
+        "pip install django-bootstrap3 bootstrap",
+        "pip install django-bootstrap3 django",
+        "pip install django-bootstrap3 --no-deps"
+      ],
+      "golden_answer": "pip install django-bootstrap3"
+    }
+  ]
+}

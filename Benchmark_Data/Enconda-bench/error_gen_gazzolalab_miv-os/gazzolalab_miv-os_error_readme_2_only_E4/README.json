@@ -1,0 +1,18 @@
+{
+  "readme": "gazzolalab_miv-os_error_readme_2_only_E4",
+  "repo_name": "gazzolalab_miv-os",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contribution guideline points to `docs/CONTRIBUTING.md`, but the file is located in the root directory of the repository.",
+      "correction_candidates": [
+        "Change the link path to `CONTRIBUTING.md`.",
+        "Change the link path to `../CONTRIBUTING.md`.",
+        "Change the link path to `/.github/CONTRIBUTING.md`.",
+        "Change the link path to the full GitHub URL for the file."
+      ],
+      "golden_answer": "Change the link path to `CONTRIBUTING.md`."
+    }
+  ]
+}

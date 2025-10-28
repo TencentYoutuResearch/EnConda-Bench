@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_tensorflow_model-analysis_error_readme_merge_k3",
+  "repo_name": "tensorflow_model-analysis",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Build TFMA from source' section, the command to install the locally built wheel uses a wildcard `*`, which is not a standard way to specify a package for pip and may fail depending on the shell.",
+      "correction_candidates": [
+        "pip3 install tensorflow_model_analysis-<version>-py3-none-any.whl",
+        "pip3 install tensorflow_model_analysis",
+        "pip3 install dist/tensorflow_model_analysis-*.whl",
+        "python3 setup.py install"
+      ],
+      "golden_answer": "pip3 install tensorflow_model_analysis-<version>-py3-none-any.whl"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "In the 'Jupyter Lab 3.0.x' installation instructions, the version for `jupyterlab_widgets` is specified as `2.0.0`, which is incorrect for JupyterLab 3.0.x and can cause dependency conflicts. The correct version is `1.0.0`.",
+      "correction_candidates": [
+        "pip install jupyterlab_widgets==1.0.0",
+        "pip install jupyterlab_widgets",
+        "pip install ipywidgets",
+        "jupyter labextension install @jupyter-widgets/jupyterlab-manager"
+      ],
+      "golden_answer": "pip install jupyterlab_widgets==1.0.0"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Build TFMA from source' section, the instructions clone the repository before creating and activating the virtual environment, which is the wrong order and may cause dependencies to be installed in the wrong location.",
+      "correction_candidates": [
+        "The `git clone` and `cd` commands should be run after creating and activating the virtual environment.",
+        "The `python3 -m venv` command should be run inside the cloned `model-analysis` directory.",
+        "The `pip3 install` command should be run before activating the virtual environment.",
+        "No virtual environment is needed; run `pip3 install --user setuptools wheel` before cloning."
+      ],
+      "golden_answer": "The `git clone` and `cd` commands should be run after creating and activating the virtual environment."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Installation' section fails to mention that TensorFlow is a required peer dependency that must be installed separately. This omission will lead to an ImportError at runtime.",
+      "correction_candidates": [
+        "Restore the note stating that TensorFlow must be installed separately, for example: `pip install tensorflow`.",
+        "The `tensorflow` dependency is optional for basic features.",
+        "Run `pip install tensorflow-model-analysis[tensorflow]` to install it automatically.",
+        "Add a note saying that `tensorflow-cpu` must be installed, not `tensorflow`."
+      ],
+      "golden_answer": "Restore the note stating that TensorFlow must be installed separately, for example: `pip install tensorflow`."
+    }
+  ]
+}

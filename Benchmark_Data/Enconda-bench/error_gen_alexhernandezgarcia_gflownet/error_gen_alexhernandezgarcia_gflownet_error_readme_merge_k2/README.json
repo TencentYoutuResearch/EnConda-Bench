@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_alexhernandezgarcia_gflownet_error_readme_merge_k2",
+  "repo_name": "alexhernandezgarcia_gflownet",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to activate the virtual environment is placed before the command to create it, which will cause the activation to fail.",
+      "correction_candidates": [
+        "The `source` command should come after `python3.10 -m venv ...`.",
+        "The virtual environment must be created before it can be activated.",
+        "Run `python3.10 -m venv ~/envs/gflownet` before `source ~/envs/gflownet/bin/activate`.",
+        "Swap the first two lines in the installation script."
+      ],
+      "golden_answer": "The `source` command should come after `python3.10 -m venv ...`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to specify the GFlowNet model uses a colon `:` instead of an equals sign `=` for assigning the value `trajectorybalance`, which is incorrect Hydra syntax.",
+      "correction_candidates": [
+        "Replace `gflownet:trajectorybalance` with `gflownet=trajectorybalance`.",
+        "Use `--gflownet trajectorybalance` instead.",
+        "The correct syntax is `gflownet=trajectorybalance`.",
+        "Change the colon to an equals sign: `gflownet=trajectorybalance`."
+      ],
+      "golden_answer": "Replace `gflownet:trajectorybalance` with `gflownet=trajectorybalance`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The specific required versions for Python and CUDA have been removed, which can lead to compatibility issues if the user installs an incompatible version.",
+      "correction_candidates": [
+        "Specify the required versions: `python 3.10` and `cuda 11.8`.",
+        "Add back the version requirements: `python 3.10` and `cuda 11.8`.",
+        "The project requires `python 3.10` and `cuda 11.8`.",
+        "Restore the text to state that `python 3.10` and `cuda 11.8` are required."
+      ],
+      "golden_answer": "The project requires `python 3.10` and `cuda 11.8`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install .` is missing the `[all]` tag, which prevents optional but potentially necessary dependencies for molecules or materials from being installed.",
+      "correction_candidates": [
+        "Use `pip install .[dev,materials,molecules]` to install all dependencies.",
+        "Change `pip install .` to `pip install .[all]`.",
+        "Append `[all]` to the pip install command to include all optional dependencies.",
+        "The command should be `pip install -e '.[all]'` for a complete installation."
+      ],
+      "golden_answer": "Change `pip install .` to `pip install .[all]`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "timbrel_gitsavvy_error_readme_3_only_E2",
+  "repo_name": "timbrel_gitsavvy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example keybinding for opening the inline diff uses an incorrect command 'gs_show_inline_diff'. The correct command is 'gs_inline_diff'.",
+      "correction_candidates": [
+        "Change the command in the keybinding to `gs_inline_diff`.",
+        "Change the command in the keybinding to `git: inline_diff`.",
+        "Change the command in the keybinding to `gitsavvy_inline_diff`.",
+        "Change the command in the keybinding to `gs_diff`, and add the argument `\"args\": {\"inline\": true}`."
+      ],
+      "golden_answer": "Change the command in the keybinding to `gs_inline_diff`."
+    }
+  ]
+}

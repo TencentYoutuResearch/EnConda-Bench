@@ -1,0 +1,18 @@
+{
+  "readme": "valory-xyz_trader_error_readme_6_only_E4",
+  "repo_name": "valory-xyz_trader",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed keys.json filename to config.json which does not exist and breaks the file reference",
+      "correction_candidates": [
+        "Change config.json back to keys.json",
+        "Update the file creation command to generate config.json instead",
+        "Use credentials.json as the filename",
+        "Reference both keys.json and config.json files"
+      ],
+      "golden_answer": "Change config.json back to keys.json"
+    }
+  ]
+}

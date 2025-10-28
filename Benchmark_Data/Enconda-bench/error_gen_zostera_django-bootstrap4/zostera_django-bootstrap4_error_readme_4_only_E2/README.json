@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap4_error_readme_4_only_E2",
+  "repo_name": "zostera_django-bootstrap4",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the example application is incorrect. It should be `make example`, but it is listed as `python example/manage.py runserver`.",
+      "correction_candidates": [
+        "The command should be `django-admin runserver --settings=example.settings`.",
+        "The command should be `make example` as specified in the Makefile.",
+        "The command should be `cd example && python manage.py runserver`.",
+        "The command should be `make run-example`."
+      ],
+      "golden_answer": "The command should be `make example` as specified in the Makefile."
+    }
+  ]
+}

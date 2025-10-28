@@ -1,0 +1,18 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_2_only_E7",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the project requires Python 2.7, which is an outdated and unsupported version for this library.",
+      "correction_candidates": [
+        "This project requires Python 3.7 or newer.",
+        "This project requires Python 3.",
+        "The minimum required Python version is 3.6+.",
+        "This project requires the latest version of Python."
+      ],
+      "golden_answer": "This project requires Python 3.7 or newer."
+    }
+  ]
+}

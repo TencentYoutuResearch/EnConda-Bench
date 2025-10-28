@@ -1,0 +1,29 @@
+{
+  "readme": "open-pulse_openpulse_error_readme_2",
+  "repo_name": "open-pulse_openpulse",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified too broadly as 'Python 3', which could lead to compatibility issues if a user has an older or much newer, incompatible version of Python 3. The project requires a more specific version.",
+      "correction_candidates": [
+        "Change the requirement to: **Install Python 3.9.0 or later** ([download](https://www.python.org/downloads/release/python-390/)).",
+        "Change the requirement to: **Install the latest version of Python**.",
+        "Change the requirement to: **Install Python 3.9.0** ([download](https://www.python.org/downloads/release/python-390/)).",
+        "Change the requirement to: **Install Anaconda with Python 3**."
+      ],
+      "golden_answer": "Change the requirement to: **Install Python 3.9.0 or later** ([download](https://www.python.org/downloads/release/python-390/))."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The instructions suggest running the application before installing its dependencies with 'poetry install'.",
+      "correction_candidates": [
+        "The `poetry install` command should be executed before the `poetry run python pulse` command.",
+        "The `poetry run python pulse` command should be run from a different directory.",
+        "The commands should be combined into a single line: `poetry install && poetry run python pulse`",
+        "The `poetry install` command is optional and can be skipped."
+      ],
+      "golden_answer": "The `poetry install` command should be executed before the `poetry run python pulse` command."
+    }
+  ]
+}

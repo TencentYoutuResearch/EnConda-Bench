@@ -1,0 +1,18 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_1_only_E1",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip installation command refers to `progressbar`, which is the original, abandoned package, instead of the correct `progressbar2` for this forked version.",
+      "correction_candidates": [
+        "pip install python-progressbar",
+        "pip install progressbar2",
+        "pip install progress-bar-2",
+        "pip install progressbar --upgrade"
+      ],
+      "golden_answer": "pip install progressbar2"
+    }
+  ]
+}

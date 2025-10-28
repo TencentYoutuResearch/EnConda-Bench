@@ -1,0 +1,18 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_1_only_E1",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `scipy` as a minimal dependency, which is not required for the core functionality of CmdStanPy.",
+      "correction_candidates": [
+        "Remove `scipy` from the dependency list. The correct list is: `numpy`, `pandas`.",
+        "Add `matplotlib` to the dependency list as it is also required for plotting.",
+        "Change the dependency list to only `numpy`, as `pandas` is optional.",
+        "Specify the version for scipy: `scipy>=1.5`."
+      ],
+      "golden_answer": "Remove `scipy` from the dependency list. The correct list is: `numpy`, `pandas`."
+    }
+  ]
+}

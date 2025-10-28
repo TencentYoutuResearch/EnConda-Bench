@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_5_only_E4",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that may not exist in the repository",
+      "correction_candidates": [
+        "Use pip install django instead of pip install -r requirements.txt",
+        "Replace requirements.txt with setup.py dependencies or provide the actual requirements file",
+        "Install dependencies manually: pip install django jquery-python",
+        "Remove the requirements.txt reference and use pip install -e . instead"
+      ],
+      "golden_answer": "Replace requirements.txt with setup.py dependencies or provide the actual requirements file"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "readme": "error_gen_jazzband_tablib_error_readme_merge_k5",
+  "repo_name": "jazzband_tablib",
+  "level": "level9",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly recommends Python 2.7 for full compatibility, which is an end-of-life version and not supported by current releases of tablib.",
+      "correction_candidates": [
+        "Remove the note recommending Python 2.7.",
+        "Change the note to recommend Python 3.7 or newer, in line with the package's actual support.",
+        "Refer to the 'Supported Python versions' badge for accurate compatibility information.",
+        "Update the note to say 'Requires the latest version of Python 3'."
+      ],
+      "golden_answer": "Remove the note recommending Python 2.7."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have a logical order error, advising the user to install the package globally before creating and activating a virtual environment.",
+      "correction_candidates": [
+        "Reverse the order of operations: instruct the user to create and activate the virtual environment first, then run `pip install tablib`.",
+        "Replace the instructions with a guide on using `pipx` for tool installation.",
+        "Remove the virtual environment steps entirely.",
+        "Add `sudo` to the `pip install tablib` command to ensure the global installation works."
+      ],
+      "golden_answer": "Reverse the order of operations: instruct the user to create and activate the virtual environment first, then run `pip install tablib`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Prerequisites' section incorrectly requires installing a non-existent version of pandas (`pandas==99.0`) and presents it as a mandatory dependency.",
+      "correction_candidates": [
+        "Remove the entire 'Prerequisites' section, as pandas is an optional dependency.",
+        "Change `pip install pandas==99.0` to `pip install pandas`.",
+        "Replace the section with instructions on how to install optional formats, e.g., `pip install 'tablib[pandas]'`.",
+        "Change `pandas==99.0` to a recent, valid version like `pandas>=1.0`."
+      ],
+      "golden_answer": "Remove the entire 'Prerequisites' section, as pandas is an optional dependency."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to a `project_docs/` directory for finding local documentation, but the correct directory name is `docs`.",
+      "correction_candidates": [
+        "Change the directory path from `project_docs/` to `docs/`.",
+        "Remove the sentence about local documentation entirely.",
+        "Change `project_docs/` to `docs/build/html/` to point to the built documentation.",
+        "Add a note that the user must first run a command like `make docs` to create the `project_docs/` directory."
+      ],
+      "golden_answer": "Change the directory path from `project_docs/` to `docs/`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installation section includes unnecessary system dependencies (libxml2-dev, libxslt1-dev, python3-dev) that are not actually required for tablib",
+      "correction_candidates": [
+        "Remove the system dependencies line and keep only: pip install tablib",
+        "Replace with: sudo apt-get install python3-pip && pip install tablib",
+        "Change to: pip install --upgrade pip && pip install tablib",
+        "Use: conda install -c conda-forge tablib"
+      ],
+      "golden_answer": "Remove the system dependencies line and keep only: pip install tablib"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - pip install should come after system dependency installation, not on the same line",
+      "correction_candidates": [
+        "Separate the commands into two lines with pip install after the apt-get command",
+        "Move pip install tablib to a separate code block after the system dependencies",
+        "Add && between the apt-get and pip commands to ensure proper sequencing",
+        "Create a virtual environment first, then install system dependencies, then pip install"
+      ],
+      "golden_answer": "Separate the commands into two lines with pip install after the apt-get command"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements.txt file that doesn't exist in the tablib repository",
+      "correction_candidates": [
+        "Remove the reference to requirements.txt and use pip install tablib instead",
+        "Change requirements.txt to setup.py for installation",
+        "Replace with reference to pyproject.toml file",
+        "Use pip install -e . for development installation"
+      ],
+      "golden_answer": "Remove the reference to requirements.txt and use pip install tablib instead"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The code example uses incorrect method name 'export' instead of the correct tablib API",
+      "correction_candidates": [
+        "Change data.export('csv') to data.csv",
+        "Replace with print(data.dict) to show the data structure",
+        "Use data.json instead of data.export('csv')",
+        "Change to data.export_csv() method call"
+      ],
+      "golden_answer": "Change data.export('csv') to data.csv"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pins to a specific old version (0.12.1) instead of allowing users to get the latest version",
+      "correction_candidates": [
+        "Remove version pinning and use pip install tablib",
+        "Change to pip install tablib>=1.0.0 for minimum version requirement",
+        "Use pip install --upgrade tablib to get the latest version",
+        "Specify pip install 'tablib>=0.14.0' for a more recent minimum"
+      ],
+      "golden_answer": "Remove version pinning and use pip install tablib"
+    }
+  ]
+}

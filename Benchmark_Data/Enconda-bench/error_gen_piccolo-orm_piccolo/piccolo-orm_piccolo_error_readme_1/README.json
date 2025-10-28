@@ -1,0 +1,29 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_1",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install piccolo[postgres]` may fail in some shells (like zsh) because it lacks quotes. The shell might interpret `[postgres]` as a glob pattern instead of part of the package name.",
+      "correction_candidates": [
+        "Run `pip install piccolo-postgres`.",
+        "Run `pip install piccolo --extras postgres`.",
+        "Run `pip install 'piccolo[postgres]'`.",
+        "Run `pip install piccolo postgres-driver`."
+      ],
+      "golden_answer": "Run `pip install 'piccolo[postgres]'`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `piccolo asgi new --orm piccolo` is incorrect. The `--orm` flag is not a valid parameter for this command.",
+      "correction_candidates": [
+        "Run `piccolo new asgi`.",
+        "Run `piccolo asgi new`.",
+        "Run `piccolo asgi new --with-orm=piccolo`.",
+        "Run `piccolo asgi create`."
+      ],
+      "golden_answer": "Run `piccolo asgi new`."
+    }
+  ]
+}

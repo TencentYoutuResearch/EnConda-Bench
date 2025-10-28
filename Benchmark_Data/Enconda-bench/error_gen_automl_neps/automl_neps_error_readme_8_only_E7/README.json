@@ -1,0 +1,18 @@
+{
+  "readme": "automl_neps_error_readme_8_only_E7",
+  "repo_name": "automl_neps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified a fixed version (1.2.3) for neural-pipeline-search that likely doesn't exist, creating version compatibility issues",
+      "correction_candidates": [
+        "pip install neural-pipeline-search",
+        "pip install neural-pipeline-search>=0.1.0",
+        "pip install neural-pipeline-search --pre",
+        "pip install neural-pipeline-search~=0.9.0"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    }
+  ]
+}

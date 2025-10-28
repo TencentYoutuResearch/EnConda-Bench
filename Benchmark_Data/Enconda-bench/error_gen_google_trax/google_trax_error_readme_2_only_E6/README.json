@@ -1,0 +1,18 @@
+{
+  "readme": "google_trax_error_readme_2_only_E6",
+  "repo_name": "google_trax",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the 'General Setup' code block, `import trax.fastmath` is called before `!pip install -q -U trax`, which will cause an `ImportError` because the module is used before it is installed.",
+      "correction_candidates": [
+        "Move `import trax.fastmath` to after the `!pip install` command.",
+        "Remove the line `import trax.fastmath`.",
+        "Change `import trax.fastmath` to `import trax`.",
+        "Replace the entire setup block with a single line: `!pip install -q -U trax && import trax`"
+      ],
+      "golden_answer": "Remove the line `import trax.fastmath`."
+    }
+  ]
+}

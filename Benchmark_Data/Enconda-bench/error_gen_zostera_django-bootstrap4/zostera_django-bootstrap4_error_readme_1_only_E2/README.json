@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap4_error_readme_1_only_E2",
+  "repo_name": "zostera_django-bootstrap4",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command uses an incorrect package name 'django-bootstrap-4' instead of the correct 'django-bootstrap4'.",
+      "correction_candidates": [
+        "pip install django-bootstrap-v4",
+        "pip install django-bootstrap4 --upgrade",
+        "pip install django-bootstrap4",
+        "python -m pip install django-bootstrap4"
+      ],
+      "golden_answer": "pip install django-bootstrap4"
+    }
+  ]
+}

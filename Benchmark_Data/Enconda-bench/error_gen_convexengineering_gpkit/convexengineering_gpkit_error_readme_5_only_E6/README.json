@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_5_only_E6",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong order - dependencies are installed before creating virtual environment",
+      "correction_candidates": [
+        "Create virtual environment first, then install dependencies inside it",
+        "Install GPkit first, then install the dependencies afterwards",
+        "Use conda to create environment and install all packages together",
+        "Install dependencies globally, then create virtual environment for GPkit only"
+      ],
+      "golden_answer": "Create virtual environment first, then install dependencies inside it"
+    }
+  ]
+}

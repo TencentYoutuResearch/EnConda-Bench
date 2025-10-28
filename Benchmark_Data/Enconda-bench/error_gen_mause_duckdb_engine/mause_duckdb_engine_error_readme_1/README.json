@@ -1,0 +1,29 @@
+{
+  "readme": "mause_duckdb_engine_error_readme_1",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install duckdb_engine` is incorrect because it uses an underscore instead of a hyphen. The correct package name on PyPI is `duckdb-engine`.",
+      "correction_candidates": [
+        "pip install duckdb-engine",
+        "pip install duckdb engine",
+        "pip install duckdb --driver=engine",
+        "conda install duckdb-engine"
+      ],
+      "golden_answer": "pip install duckdb-engine"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The SQLAlchemy connection string `duckdb:/:memory:` is syntactically incorrect for creating an in-memory database. It is missing the required `//` after the `duckdb:` prefix.",
+      "correction_candidates": [
+        "create_engine(\"duckdb:///:memory:\")",
+        "create_engine(\"duckdb:memory:\")",
+        "create_engine(\"duckdb://memory\")",
+        "create_engine(\"duckdb://\")"
+      ],
+      "golden_answer": "create_engine(\"duckdb:///:memory:\")"
+    }
+  ]
+}

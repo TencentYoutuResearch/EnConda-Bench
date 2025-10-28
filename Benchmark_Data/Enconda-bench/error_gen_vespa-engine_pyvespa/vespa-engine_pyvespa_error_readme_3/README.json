@@ -1,0 +1,29 @@
+{
+  "readme": "vespa-engine_pyvespa_error_readme_3",
+  "repo_name": "vespa-engine_pyvespa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the vespacli README points to the `main` branch, but the repository's default branch is `master`, resulting in a 404 error.",
+      "correction_candidates": [
+        "The link should point to the `master` branch: `https://github.com/vespa-engine/pyvespa/tree/master/vespacli`.",
+        "The link should be a relative path to the file: `./vespacli/README.md`.",
+        "The vespacli README has been moved to the root directory.",
+        "The repository's default branch should be renamed from `master` to `main` to match the link."
+      ],
+      "golden_answer": "The link should point to the `master` branch: `https://github.com/vespa-engine/pyvespa/tree/master/vespacli`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `ruff --fix .` for running the linter manually is syntactically incorrect.",
+      "correction_candidates": [
+        "The correct command to check for errors is `ruff check .`.",
+        "The correct command to format files is `ruff format .`.",
+        "The correct command to check for errors and apply fixes is `ruff check . --fix`.",
+        "The command should be `ruff . --fix`."
+      ],
+      "golden_answer": "The correct command to check for errors and apply fixes is `ruff check . --fix`."
+    }
+  ]
+}

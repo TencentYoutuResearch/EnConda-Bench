@@ -1,0 +1,29 @@
+{
+  "readme": "hhursev_recipe-scrapers_error_readme_1",
+  "repo_name": "hhursev_recipe-scrapers",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command `pip install -r requirements-dev.txt` is executed before activating the virtual environment, causing dependencies to be installed globally instead of within the isolated environment.",
+      "correction_candidates": [
+        "Move `pip install -r requirements-dev.txt` to after the `source .venv/bin/activate` command.",
+        "Replace `pip install -r requirements-dev.txt` with `python -m pip install -r requirements-dev.txt`.",
+        "Remove the `python -m venv .venv` command and install dependencies globally.",
+        "Add `sudo` before `pip install -r requirements-dev.txt` to ensure correct permissions."
+      ],
+      "golden_answer": "Move `pip install -r requirements-dev.txt` to after the `source .venv/bin/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unittests, `python unittest`, is syntactically incorrect. It should use the `-m` flag to execute the `unittest` module.",
+      "correction_candidates": [
+        "Replace `python unittest` with `python -m unittest discover`.",
+        "Replace `python unittest` with `python test.py`.",
+        "Replace `python unittest` with `python -m unittest`.",
+        "Replace `python unittest` with `pytest`."
+      ],
+      "golden_answer": "Replace `python unittest` with `python -m unittest`."
+    }
+  ]
+}

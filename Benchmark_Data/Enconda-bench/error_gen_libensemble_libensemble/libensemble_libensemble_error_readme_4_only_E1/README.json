@@ -1,0 +1,18 @@
+{
+  "readme": "libensemble_libensemble_error_readme_4_only_E1",
+  "repo_name": "libensemble_libensemble",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly advise installing numpy separately, which is redundant as it is a core dependency of libEnsemble and will be installed automatically by pip.",
+      "correction_candidates": [
+        "Replace the two `pip install` commands with a single command: `pip install libensemble`.",
+        "Change the commands to `pip install \"numpy<2\" libensemble`.",
+        "Combine the commands into `pip install numpy libensemble`.",
+        "Remove the line `pip install numpy`."
+      ],
+      "golden_answer": "Replace the two `pip install` commands with a single command: `pip install libensemble`."
+    }
+  ]
+}

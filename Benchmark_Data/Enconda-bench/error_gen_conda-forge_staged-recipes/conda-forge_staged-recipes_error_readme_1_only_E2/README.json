@@ -1,0 +1,18 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_1_only_E2",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate a recipe with grayskull uses an incorrect flag `--pypi` instead of the correct subcommand `pypi`.",
+      "correction_candidates": [
+        "grayskull pypi PACKAGE_NAME_HERE",
+        "grayskull generate pypi PACKAGE_NAME_HERE",
+        "grayskull from pypi PACKAGE_NAME_HERE",
+        "grayskull --from-pypi PACKAGE_NAME_HERE"
+      ],
+      "golden_answer": "grayskull pypi PACKAGE_NAME_HERE"
+    }
+  ]
+}

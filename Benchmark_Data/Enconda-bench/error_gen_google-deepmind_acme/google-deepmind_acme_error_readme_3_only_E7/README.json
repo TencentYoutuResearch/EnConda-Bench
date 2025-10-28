@@ -1,0 +1,18 @@
+{
+  "readme": "google-deepmind_acme_error_readme_3_only_E7",
+  "repo_name": "google-deepmind_acme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv acme` is used, which may default to an unsupported Python 2 installation on some systems, leading to compatibility issues. `python3` should be used explicitly.",
+      "correction_candidates": [
+        "python3 -m venv acme",
+        "virtualenv -p python3 acme",
+        "conda create -n acme python=3.8",
+        "Ensure your system's default 'python' is aliased to 'python3' before running."
+      ],
+      "golden_answer": "python3 -m venv acme"
+    }
+  ]
+}

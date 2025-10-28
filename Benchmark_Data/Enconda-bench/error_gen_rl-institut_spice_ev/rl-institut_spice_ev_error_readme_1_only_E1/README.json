@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_1_only_E1",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README states Matplotlib is a required dependency for plotting but does not include it in the installation instructions, leading to a `ModuleNotFoundError` when using the `--visual` flag.",
+      "correction_candidates": [
+        "To install `spice_ev` and its required dependencies run: `pip install -e .[all]`",
+        "To install `spice_ev` as a package run: `pip install -e .`. Then install plotting dependencies: `pip install matplotlib`",
+        "SpiceEV just has an optional dependency on Matplotlib. Everything else uses the Python (>= 3.6) standard library.",
+        "To install `spice_ev` as a package run: `pip install -e .[plotting]`"
+      ],
+      "golden_answer": "SpiceEV just has an optional dependency on Matplotlib. Everything else uses the Python (>= 3.6) standard library."
+    }
+  ]
+}

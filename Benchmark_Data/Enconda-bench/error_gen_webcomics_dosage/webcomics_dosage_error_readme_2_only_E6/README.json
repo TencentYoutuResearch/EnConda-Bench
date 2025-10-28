@@ -1,0 +1,18 @@
+{
+  "readme": "webcomics_dosage_error_readme_2_only_E6",
+  "repo_name": "webcomics_dosage",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for development setup incorrectly advise installing the package before creating and activating a virtual environment, which defeats the purpose of the virtual environment.",
+      "correction_candidates": [
+        "Reverse the steps: first create and activate a virtual environment, then run the pip install command.",
+        "Remove the mention of a virtual environment as it is optional.",
+        "Add a step to run `pip uninstall dosage` before creating the virtual environment.",
+        "Specify that the pip install command should use the `--user` flag if not in a virtual environment."
+      ],
+      "golden_answer": "Reverse the steps: first create and activate a virtual environment, then run the pip install command."
+    }
+  ]
+}

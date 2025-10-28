@@ -1,0 +1,18 @@
+{
+  "readme": "cltk_cltk_error_readme_4_only_E1",
+  "repo_name": "cltk_cltk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install pip using `python get-pip.py` is incomplete and potentially confusing. It doesn't explain where to get `get-pip.py`, and modern Python installations usually include pip.",
+      "correction_candidates": [
+        "Replace the instruction with `python -m ensurepip --upgrade`.",
+        "Remove the instruction about installing pip, as it's a standard tool.",
+        "Add a link to the official pip installation guide: `https://pip.pypa.io/en/stable/installation/`.",
+        "Change the command to `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` followed by `python get-pip.py`."
+      ],
+      "golden_answer": "Remove the instruction about installing pip, as it's a standard tool."
+    }
+  ]
+}

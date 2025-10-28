@@ -1,0 +1,18 @@
+{
+  "readme": "folio-fse_folio_migration_tools_error_readme_1_only_E2",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to test the pipenv installation is incorrect; it is missing the 'run' keyword needed to execute a command within the pipenv environment.",
+      "correction_candidates": [
+        "Change the command to `pipenv run python3 -m folio_migration_tools -h`.",
+        "First run `pipenv shell` to enter the environment, then run `python3 -m folio_migration_tools -h`.",
+        "Change the command to `pipenv exec python3 -m folio_migration_tools -h`.",
+        "Change the command to `python3 -m folio_migration_tools -h` assuming pipenv adds scripts to the PATH."
+      ],
+      "golden_answer": "Change the command to `pipenv run python3 -m folio_migration_tools -h`."
+    }
+  ]
+}

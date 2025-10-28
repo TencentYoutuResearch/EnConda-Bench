@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_5_only_E7",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned installation to a specific version (2.1.0) which may not exist or be the latest compatible version, creating version compatibility issues",
+      "correction_candidates": [
+        "Remove the version specification and use: pip install briefcase",
+        "Use the latest version specifier: pip install briefcase>=2.0.0",
+        "Install from development branch: pip install git+https://github.com/beeware/briefcase.git",
+        "Use version range: pip install briefcase~=2.0"
+      ],
+      "golden_answer": "Remove the version specification and use: pip install briefcase"
+    }
+  ]
+}

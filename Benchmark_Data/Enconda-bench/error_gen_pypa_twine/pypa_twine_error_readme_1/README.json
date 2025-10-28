@@ -1,0 +1,29 @@
+{
+  "readme": "pypa_twine_error_readme_1",
+  "repo_name": "pypa_twine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install twine-wheel` is incorrect. The package on PyPI is named `twine`, not `twine-wheel`.",
+      "correction_candidates": [
+        "Run `pip install twine`.",
+        "Run `pip install twine-package`.",
+        "Download the wheel from PyPI and install it directly.",
+        "Run `python -m pip install pypa/twine`."
+      ],
+      "golden_answer": "Run `pip install twine`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `twine --upload dist/*` is syntactically incorrect. `upload` is a subcommand, not an option, so it should not be preceded by dashes.",
+      "correction_candidates": [
+        "The correct command is `twine upload dist/*`.",
+        "The correct command is `twine -u dist/*`.",
+        "The correct command is `twine --push dist/*`.",
+        "The correct command is `python -m twine --upload dist/*`."
+      ],
+      "golden_answer": "The correct command is `twine upload dist/*`."
+    }
+  ]
+}

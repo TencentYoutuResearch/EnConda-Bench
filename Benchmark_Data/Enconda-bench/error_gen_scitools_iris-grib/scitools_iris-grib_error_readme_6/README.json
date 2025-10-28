@@ -1,0 +1,29 @@
+{
+  "readme": "scitools_iris-grib_error_readme_6",
+  "repo_name": "scitools_iris-grib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements file path that likely doesn't exist in the repository structure",
+      "correction_candidates": [
+        "Use 'pip install iris-grib' to install directly from PyPI",
+        "Change path to 'pip install -r requirements.txt' (without the ./requirements/ subdirectory)",
+        "Install from the repository with 'pip install git+https://github.com/SciTools/iris-grib.git'",
+        "Use 'pip install -e .' for development installation from the current directory"
+      ],
+      "golden_answer": "Use 'pip install iris-grib' to install directly from PyPI"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax using -r flag with a non-existent requirements file path",
+      "correction_candidates": [
+        "Fix the command to 'pip install iris-grib' for standard installation",
+        "Use 'pip install -r requirements.txt' if a requirements file exists in the root",
+        "Change to 'pip install --requirement requirements.txt' using the full flag name",
+        "Use 'pip install -e .[dev]' for development dependencies"
+      ],
+      "golden_answer": "Fix the command to 'pip install iris-grib' for standard installation"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_2_only_E6",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly place the `pip install` command before the creation and activation of the virtual environment, which would install packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install` command to after the virtual environment is activated.",
+        "Run `pip install` with the `--user` flag to avoid installing packages globally.",
+        "Combine the commands into a single line: `python -m venv .venv && source .venv/bin/activate && pip install -e .[test]`",
+        "Remove the virtual environment steps as they are optional for development."
+      ],
+      "golden_answer": "Move the `pip install` command to after the virtual environment is activated."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "fhempy_fhempy_error_readme_2_only_E6",
+  "repo_name": "fhempy_fhempy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for the long peer setup install `fhempy` globally before creating and activating the virtual environment, which is the wrong order.",
+      "correction_candidates": [
+        "First, install fhempy with `pip3 install --upgrade fhempy`, then create the venv with `python3 -m venv .fhempy/fhempy_venv`, and finally activate it with `source .fhempy/fhempy_venv/bin/activate`.",
+        "First, create the venv with `python3 -m venv .fhempy/fhempy_venv`, then activate it with `source .fhempy/fhempy_venv/bin/activate`, and finally install fhempy with `pip3 install --upgrade fhempy`.",
+        "First, activate the venv with `source .fhempy/fhempy_venv/bin/activate`, then install fhempy with `pip3 install --upgrade fhempy`, and finally create the venv with `python3 -m venv .fhempy/fhempy_venv`.",
+        "First, create the venv with `python3 -m venv .fhempy/fhempy_venv`, then install fhempy with `pip3 install --upgrade fhempy`, and finally activate it with `source .fhempy/fhempy_venv/bin/activate`."
+      ],
+      "golden_answer": "First, create the venv with `python3 -m venv .fhempy/fhempy_venv`, then activate it with `source .fhempy/fhempy_venv/bin/activate`, and finally install fhempy with `pip3 install --upgrade fhempy`."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "readme": "error_gen_python-control_python-control_error_readme_merge_k5",
+  "repo_name": "python-control_python-control",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The pip installation instructions incorrectly place the `control` package installation before its optional but recommended dependency `slycot`, which should be installed first.",
+      "correction_candidates": [
+        "Run `pip install control slycot` to install both at once.",
+        "The order is correct, but a flag is missing: `pip install control --with-slycot`.",
+        "The commands should be `pip install slycot` followed by `pip install control`.",
+        "Run `pip install slycot` and then `pip install control --no-deps`."
+      ],
+      "golden_answer": "The commands should be `pip install slycot` followed by `pip install control`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests, `pytest --v`, uses an incorrect flag for verbosity, which should be `-v`.",
+      "correction_candidates": [
+        "The correct command is `pytest -v`.",
+        "The correct command is `pytest --verbose`.",
+        "The correct command is `pytest test -v`.",
+        "The correct command is `pytest --verbosity=1`."
+      ],
+      "golden_answer": "The correct command is `pytest -v`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README recommends an outdated version of matplotlib (2.x), which may cause compatibility issues with modern features of the library or other dependencies.",
+      "correction_candidates": [
+        "The text should be `The package requires numpy, scipy, and matplotlib (version 3.0 or newer)`.",
+        "The version constraint is not necessary and should be removed. The sentence should be `The package requires numpy, scipy, and matplotlib.`",
+        "The text should be `The package requires numpy, scipy, and matplotlib (any version is fine).`",
+        "The text should be `The package requires numpy, scipy, and matplotlib (version 2.x is mandatory).`"
+      ],
+      "golden_answer": "The version constraint is not necessary and should be removed. The sentence should be `The package requires numpy, scipy, and matplotlib.`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `git clone` command provides an incorrect URL for the source code repository, which will result in a 'repository not found' error.",
+      "correction_candidates": [
+        "The correct URL is `https://github.com/python-control/python-control`.",
+        "The correct command is `git clone https://github.com/python-control/python-control.git`.",
+        "The protocol should be SSH: `git clone git@github.com:python-control/python-control.git`.",
+        "The repository name is wrong, it should be `python_control`: `git clone https://github.com/python-control/python_control.git`."
+      ],
+      "golden_answer": "The correct command is `git clone https://github.com/python-control/python-control.git`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package on Google Colab uses the incorrect package name `python-control`. The correct name on PyPI is `control`.",
+      "correction_candidates": [
+        "The command should be `!pip install control-lib`.",
+        "The command should be `!pip install control`.",
+        "The command should be `!pip install pycontrol`.",
+        "The command should be `!pip install 'python-control-lib'`."
+      ],
+      "golden_answer": "The command should be `!pip install control`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for installing from source incorrectly state that `pip install .` should be run before cloning or downloading the source code, which is impossible as the command must be run inside the source directory.",
+      "correction_candidates": [
+        "The command should be `pip install git+https://github.com/python-control/python-control.git` instead of `pip install .`.",
+        "The user must first download the source, navigate into the directory, and then run `pip install .`.",
+        "The command should be `pip install . --src .`",
+        "The user should run `pip download python-control` first, then `pip install .`."
+      ],
+      "golden_answer": "The user must first download the source, navigate into the directory, and then run `pip install .`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added tensorflow as an unnecessary dependency that is not actually required by the python-control library",
+      "correction_candidates": [
+        "The package requires numpy, scipy, and matplotlib.",
+        "The package requires numpy, scipy, matplotlib, and pandas.",
+        "The package requires numpy, scipy, matplotlib, and pytorch.",
+        "The package requires numpy, scipy, matplotlib, and scikit-learn."
+      ],
+      "golden_answer": "The package requires numpy, scipy, and matplotlib."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used pip install command instead of conda install command in the conda installation section",
+      "correction_candidates": [
+        "conda install -c conda-forge control slycot",
+        "conda-forge install control slycot",
+        "conda add -c conda-forge control slycot",
+        "conda get -c conda-forge control slycot"
+      ],
+      "golden_answer": "conda install -c conda-forge control slycot"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Changed the installation order to install control before slycot, which can cause dependency issues since slycot should be installed first",
+      "correction_candidates": [
+        "pip install slycot   # optional; see below\npip install control",
+        "pip install control slycot",
+        "pip install -r requirements.txt\npip install control",
+        "pip install --upgrade pip\npip install control\npip install slycot"
+      ],
+      "golden_answer": "pip install slycot   # optional; see below\npip install control"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "No specific version compatibility information provided for critical dependencies, which could lead to version conflicts",
+      "correction_candidates": [
+        "The package requires numpy>=1.17, scipy>=1.3, and matplotlib>=3.0.",
+        "The package requires numpy, scipy, and matplotlib. Please ensure you have Python 3.7 or later.",
+        "The package requires the latest versions of numpy, scipy, and matplotlib.",
+        "The package requires numpy (tested with 1.20+), scipy (tested with 1.7+), and matplotlib (tested with 3.3+)."
+      ],
+      "golden_answer": "The package requires numpy>=1.17, scipy>=1.3, and matplotlib>=3.0."
+    }
+  ]
+}

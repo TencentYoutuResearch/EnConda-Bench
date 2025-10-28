@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf-standard_error_readme_2_only_E7",
+  "repo_name": "asdf-format_asdf-standard",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instruction to 'Install Python on your system' is too generic and does not specify a version. This project requires a specific version range (Python 3.8+) for compatibility.",
+      "correction_candidates": [
+        "Update the instruction to: 'Install Python 3.8 or newer.'",
+        "Update the instruction to: 'Install the latest version of Python 2.'",
+        "The project is compatible with any Python version, so no change is needed.",
+        "Update the instruction to: 'Install Anaconda Python.'"
+      ],
+      "golden_answer": "Update the instruction to: 'Install Python 3.8 or newer.'"
+    }
+  ]
+}

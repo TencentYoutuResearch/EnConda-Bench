@@ -1,0 +1,18 @@
+{
+  "readme": "roshan-research_hazm_error_readme_1_only_E1",
+  "repo_name": "roshan-research_hazm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install hazm torch` incorrectly bundles the 'torch' library as a mandatory dependency, while it is only required for optional features like word embeddings.",
+      "correction_candidates": [
+        "Change the command to `pip install hazm`.",
+        "Change the command to `pip install hazm[full]`.",
+        "Change the command to `pip install hazm` and add a note that `torch` is needed for some modules.",
+        "Change the command to `pip install hazm[torch]`."
+      ],
+      "golden_answer": "Change the command to `pip install hazm`."
+    }
+  ]
+}

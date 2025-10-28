@@ -1,0 +1,29 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_2",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Lhotse only supports Python 3.7, while it actually supports version 3.7 and later.",
+      "correction_candidates": [
+        "Lhotse supports Python version 3.7 only.",
+        "Lhotse supports Python versions 3.7 through 3.9.",
+        "Lhotse supports Python 3 and later.",
+        "Lhotse supports Python version 3.7 and later."
+      ],
+      "golden_answer": "Lhotse supports Python version 3.7 and later."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The development installation instructions list the installation and directory change commands before the `git clone` command, which is logically incorrect as the repository must be cloned first before changing into its directory and installing dependencies.",
+      "correction_candidates": [
+        "First `cd lhotse` and `pip install -e '.[dev]'`, then `git clone https://github.com/lhotse-speech/lhotse`.",
+        "First, clone the repository with `git clone https://github.com/lhotse-speech/lhotse`, then `cd lhotse` and run `pip install -e '.[dev]'`.",
+        "First `pip install -e '.[dev]'`, then `git clone https://github.com/lhotse-speech/lhotse` and `cd lhotse`.",
+        "First `git clone https://github.com/lhotse-speech/lhotse`, then `pip install -e '.[dev]'` and `cd lhotse`."
+      ],
+      "golden_answer": "First, clone the repository with `git clone https://github.com/lhotse-speech/lhotse`, then `cd lhotse` and run `pip install -e '.[dev]'`."
+    }
+  ]
+}

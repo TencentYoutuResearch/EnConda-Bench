@@ -1,0 +1,18 @@
+{
+  "readme": "ansible_ansible-zuul-jobs_error_readme_5_only_E6",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating and activating the virtual environment, which is the incorrect order",
+      "correction_candidates": [
+        "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "virtualenv venv\n. venv/bin/activate\npip install -r requirements.txt",
+        "python3 -m venv venv\nvenv/bin/activate\npip install -r requirements.txt",
+        "conda create -n myenv python=3.8\nconda activate myenv\npip install -r requirements.txt"
+      ],
+      "golden_answer": "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt"
+    }
+  ]
+}

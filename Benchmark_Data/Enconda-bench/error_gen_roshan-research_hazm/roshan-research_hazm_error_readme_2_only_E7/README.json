@@ -1,0 +1,18 @@
+{
+  "readme": "roshan-research_hazm_error_readme_2_only_E7",
+  "repo_name": "roshan-research_hazm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `Installation` section incorrectly states that the library is only compatible with Python 2.7, which is outdated and contradicts the PyPI badge showing compatibility with modern Python versions (e.g., 3.8, 3.9, 3.10).",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Hazm is compatible with Python 2.7 only.'",
+        "Change the sentence to 'Note: Hazm requires Python 3.7 or newer.'",
+        "Change the sentence to 'Note: Hazm is not compatible with Python 2.'",
+        "Replace the sentence with a link to the PyPI page for version information."
+      ],
+      "golden_answer": "Remove the sentence 'Note: Hazm is compatible with Python 2.7 only.'"
+    }
+  ]
+}

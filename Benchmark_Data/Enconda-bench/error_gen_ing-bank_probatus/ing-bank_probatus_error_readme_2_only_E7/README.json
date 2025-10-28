@@ -1,0 +1,18 @@
+{
+  "readme": "ing-bank_probatus_error_readme_2_only_E7",
+  "repo_name": "ing-bank_probatus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package requires Python 2.7, which is outdated and not supported.",
+      "correction_candidates": [
+        "Remove the sentence stating that Python 2.7 is required.",
+        "Change the required version to 'Python > 3.6'.",
+        "Add a note saying 'For Python 2.7, use an older version of probatus'.",
+        "Replace the sentence with 'Check the PyPI badge for Python version compatibility'."
+      ],
+      "golden_answer": "Remove the sentence stating that Python 2.7 is required."
+    }
+  ]
+}

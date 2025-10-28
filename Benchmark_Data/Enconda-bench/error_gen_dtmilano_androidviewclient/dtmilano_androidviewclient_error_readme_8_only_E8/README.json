@@ -1,0 +1,18 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_8_only_E8",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Logical inconsistency - using --upgrade flag with a pinned version number makes the upgrade flag ineffective",
+      "correction_candidates": [
+        "pip3 install androidviewclient==15.2.0",
+        "pip3 install androidviewclient --upgrade",
+        "pip3 install androidviewclient>=15.2.0 --upgrade",
+        "pip3 install androidviewclient~=15.2.0 --upgrade"
+      ],
+      "golden_answer": "pip3 install androidviewclient --upgrade"
+    }
+  ]
+}

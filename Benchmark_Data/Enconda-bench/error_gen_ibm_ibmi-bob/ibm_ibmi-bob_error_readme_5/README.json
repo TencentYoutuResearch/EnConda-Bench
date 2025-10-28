@@ -1,0 +1,29 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_5",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "References a non-existent pip package 'bob-dependencies' that doesn't exist",
+      "correction_candidates": [
+        "Remove the pip install command entirely as Bob doesn't require Python dependencies",
+        "Change to 'pip install ibmi-bob' to install the correct package",
+        "Replace with 'npm install bob-dependencies' for Node.js installation",
+        "Use 'conda install bob-dependencies' instead of pip"
+      ],
+      "golden_answer": "Remove the pip install command entirely as Bob doesn't require Python dependencies"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References an invalid file path '/invalid/path/makefile' that doesn't exist",
+      "correction_candidates": [
+        "Change to 'bob --compile makefile' to use the default makefile in current directory",
+        "Replace with 'bob --compile ./src/makefile' to point to source directory",
+        "Use 'bob --build' without specifying a path to build the entire project",
+        "Change to 'bob --compile Rules.mk' to use the correct build file"
+      ],
+      "golden_answer": "Use 'bob --build' without specifying a path to build the entire project"
+    }
+  ]
+}

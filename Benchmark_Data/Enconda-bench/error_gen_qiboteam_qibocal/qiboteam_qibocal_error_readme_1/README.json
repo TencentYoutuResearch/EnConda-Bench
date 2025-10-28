@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_1",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the developer instructions, `pre-commit install` is executed before `poetry install`. This may cause an error because the pre-commit hooks might depend on packages that have not yet been installed.",
+      "correction_candidates": [
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npre-commit install\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npoetry run pre-commit install\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npre-commit install\npoetry install --no-dev\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry shell\npoetry install\npre-commit install\n```"
+      ],
+      "golden_answer": "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npre-commit install\n```"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a protocol uses an invalid option `--o` for specifying the output folder, which should be `-o`.",
+      "correction_candidates": [
+        "The correct command is: `qq auto <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> --output <output_folder>`",
+        "The correct command is: `qq auto --runcard <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> -output <output_folder>`"
+      ],
+      "golden_answer": "The correct command is: `qq auto <runcard> -o <output_folder>`"
+    }
+  ]
+}

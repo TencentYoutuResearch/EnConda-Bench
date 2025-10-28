@@ -1,0 +1,18 @@
+{
+  "readme": "microsoftgraph_msgraph-sdk-python-core_error_readme_2_only_E6",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions show how to configure the authentication provider (Step 2) before telling the user to install the required packages (Step 3), which is an incorrect logical order.",
+      "correction_candidates": [
+        "Combine the installation and configuration steps into a single step.",
+        "Move the 'Install the required packages' step to be before the 'Configure an Authentication Provider Object' step.",
+        "Move the 'Register your application' step to be last.",
+        "Add a note at the beginning of the 'Getting started' section to install all packages first."
+      ],
+      "golden_answer": "Move the 'Install the required packages' step to be before the 'Configure an Authentication Provider Object' step."
+    }
+  ]
+}

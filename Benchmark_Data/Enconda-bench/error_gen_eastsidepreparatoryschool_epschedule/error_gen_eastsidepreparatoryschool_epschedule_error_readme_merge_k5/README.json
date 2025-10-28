@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_eastsidepreparatoryschool_epschedule_error_readme_merge_k5",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install dependencies from a file is incorrect because it is missing the '-r' flag.",
+      "correction_candidates": [
+        "Change `pip install requirements.txt` to `pip install -r requirements.txt`.",
+        "Change `pip install requirements.txt` to `python -m pip install requirements.txt`.",
+        "Change `pip install requirements.txt` to `pip install --file requirements.txt`.",
+        "Change `pip install requirements.txt` to `pip requirements.txt`."
+      ],
+      "golden_answer": "Change `pip install requirements.txt` to `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions incorrectly state that the `service_account.json` file should be placed in a `config` subfolder, but the application expects it in the root project directory.",
+      "correction_candidates": [
+        "Create a `config` directory in the `epschedule` folder and place the `service_account.json` file there.",
+        "Change the instruction to place `service_account.json` in the user's home directory.",
+        "Change the instruction to place `service_account.json` in the `epschedule` folder.",
+        "Rename `service_account.json` to `config.json` and place it in the `epschedule` folder."
+      ],
+      "golden_answer": "Change the instruction to place `service_account.json` in the `epschedule` folder."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install Python dependencies from `requirements.txt` is missing entirely, which will lead to a `ModuleNotFoundError` when the user tries to run the application.",
+      "correction_candidates": [
+        "Add the command `pip install pytest black isort` after `cd epschedule`.",
+        "Add the command `python setup.py install` after `cd epschedule`.",
+        "Add the command `pip install gcloud` after `cd epschedule`.",
+        "Add the command `pip install -r requirements.txt` after `cd epschedule`."
+      ],
+      "golden_answer": "Add the command `pip install -r requirements.txt` after `cd epschedule`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests is incorrect. The project uses the pytest framework, which is invoked with the `pytest` command, not by executing a file.",
+      "correction_candidates": [
+        "Change `python tests.py` to `pytest`.",
+        "Change `python tests.py` to `pytest tests/`.",
+        "Change `python tests.py` to `python -m unittest discover`.",
+        "Change `python tests.py` to `./run_tests.sh`."
+      ],
+      "golden_answer": "Change `python tests.py` to `pytest`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The URL for accessing the local server has the wrong port number (8000 instead of 8080), which will prevent the user from viewing the application.",
+      "correction_candidates": [
+        "Change the URL to `http://localhost:8000/`.",
+        "Change the URL to `http://127.0.0.1:8080/`.",
+        "Change the URL to `http://localhost:8080/`.",
+        "Change the run command to `python main.py --port=8000`."
+      ],
+      "golden_answer": "Change the URL to `http://localhost:8080/`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file name 'credentials.json' instead of 'service_account.json'",
+      "correction_candidates": [
+        "which should be renamed to `service_account.json` and put in your `epschedule` folder",
+        "which should be renamed to `auth.json` and put in your `epschedule` folder",
+        "which should be renamed to `config.json` and put in your `epschedule` folder",
+        "which should be renamed to `keys.json` and put in your `epschedule` folder"
+      ],
+      "golden_answer": "which should be renamed to `service_account.json` and put in your `epschedule` folder"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specifies unversioned 'Python' instead of 'Python 3.7+' which creates version compatibility issues",
+      "correction_candidates": [
+        "all you need are `git`, Python 3.7+, and `pip`",
+        "all you need are `git`, Python 3.6+, and `pip`",
+        "all you need are `git`, Python 3+, and `pip`",
+        "all you need are `git`, Python 3.8+, and `pip`"
+      ],
+      "golden_answer": "all you need are `git`, Python 3.7+, and `pip`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command 'python app.py' instead of 'python main.py'",
+      "correction_candidates": [
+        "```python main.py```",
+        "```python server.py```",
+        "```python run.py```",
+        "```python start.py```"
+      ],
+      "golden_answer": "```python main.py```"
+    }
+  ]
+}

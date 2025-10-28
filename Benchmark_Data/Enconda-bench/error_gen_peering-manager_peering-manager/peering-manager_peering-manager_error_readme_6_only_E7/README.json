@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_6_only_E7",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version compatibility - includes outdated Python 2.7 and older Python 3 versions",
+      "correction_candidates": [
+        "Tested Python versions are 3.10, 3.11 and 3.12.",
+        "Tested Python versions are 3.9, 3.10, 3.11 and 3.12.",
+        "Tested Python versions are 3.8 and above.",
+        "Tested Python versions are any Python 3.x version."
+      ],
+      "golden_answer": "Tested Python versions are 3.10, 3.11 and 3.12."
+    }
+  ]
+}

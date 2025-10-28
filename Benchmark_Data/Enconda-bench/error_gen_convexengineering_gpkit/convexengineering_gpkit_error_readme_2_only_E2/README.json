@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_2_only_E2",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install gp-kit` is incorrect; the package name on PyPI is `gpkit`.",
+      "correction_candidates": [
+        "`pip install gpkit`",
+        "`pip install --upgrade gpkit`",
+        "`python -m pip install gpkit`",
+        "`conda install -c conda-forge gpkit`"
+      ],
+      "golden_answer": "`pip install gpkit`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "censys_censys-python_error_readme_8_only_E7",
+  "repo_name": "censys_censys-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned the censys package to a specific outdated version '1.2.3' in the pip install command, which may cause compatibility issues",
+      "correction_candidates": [
+        "pip install censys",
+        "pip install censys>=2.0.0",
+        "pip install 'censys>=1.0,<3.0'",
+        "pip install censys --pre"
+      ],
+      "golden_answer": "pip install censys"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pureqml_qmlcore_error_readme_3",
+  "repo_name": "pureqml_qmlcore",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement in the 'Prerequisites' section is too vague ('A recent version of Python'). This can lead to compatibility issues as the toolchain supports both Python 2 and 3, and the user might install an incompatible version.",
+      "correction_candidates": [
+        "Specify that Python 3.6+ is required.",
+        "Change 'A recent version of Python is required' to 'Any modern Python (2 or 3) will go well'.",
+        "Specify that Python 2.7 is required.",
+        "The documentation should state that the `python-future` library is used for compatibility."
+      ],
+      "golden_answer": "Change 'A recent version of Python is required' to 'Any modern Python (2 or 3) will go well'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command line option for minification is incorrect. The long form is documented as '--minimize' but the actual implementation is '--minify'.",
+      "correction_candidates": [
+        "In 'build tool command line options', replace '--minimize' with '--minify'.",
+        "The correct option is `-minify`.",
+        "The option is `-M`.",
+        "The option should be `--min`."
+      ],
+      "golden_answer": "In 'build tool command line options', replace '--minimize' with '--minify'."
+    }
+  ]
+}

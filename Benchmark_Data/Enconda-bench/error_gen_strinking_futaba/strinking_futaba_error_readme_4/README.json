@@ -1,0 +1,29 @@
+{
+  "readme": "strinking_futaba_error_readme_4",
+  "repo_name": "strinking_futaba",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions unnecessarily install `black` and `pylint` globally using pip, while they should be managed as development dependencies by Poetry.",
+      "correction_candidates": [
+        "Remove the `pip3 install black` and `pip3 install pylint` commands.",
+        "Move the `pip3 install black` and `pip3 install pylint` commands to the 'Development' section.",
+        "Replace the `pip3` install commands with `poetry add black pylint --group dev`.",
+        "Change the commands to `poetry run pip install black pylint`."
+      ],
+      "golden_answer": "Remove the `pip3 install black` and `pip3 install pylint` commands."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "A critical instruction for configuring the database URL in `config.toml` is missing, leaving the user to guess the correct value.",
+      "correction_candidates": [
+        "Add a comment `# set database.url to \"postgresql://postgres:password@localhost\"` after the `cp` command.",
+        "Add a note saying 'You must edit config.toml to set the correct database connection string.'",
+        "Modify the `cp` command to `sed 's/database.url = .*/database.url = \"postgresql:\\/\\/postgres:password@localhost\"/' misc/config.toml > config.toml`.",
+        "Add a comment `# configure the database URL in config.toml`."
+      ],
+      "golden_answer": "Add a comment `# set database.url to \"postgresql://postgres:password@localhost\"` after the `cp` command."
+    }
+  ]
+}

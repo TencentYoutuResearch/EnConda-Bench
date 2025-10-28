@@ -1,0 +1,29 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_5",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version specified as 2.7 which is incompatible with Django and modern dependencies",
+      "correction_candidates": [
+        "python 3.9",
+        "python 3.8+",
+        "python >= 3.7",
+        "python 3.x"
+      ],
+      "golden_answer": "python 3.9"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command for installing pre-commit - should use 'run' to execute in pipenv environment",
+      "correction_candidates": [
+        "pipenv run pre-commit install",
+        "pip install pre-commit && pre-commit install",
+        "pipenv install --dev pre-commit && pipenv run pre-commit install",
+        "python -m pip install pre-commit"
+      ],
+      "golden_answer": "pipenv run pre-commit install"
+    }
+  ]
+}

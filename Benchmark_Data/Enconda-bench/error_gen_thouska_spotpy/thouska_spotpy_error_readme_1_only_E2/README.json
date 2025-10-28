@@ -1,0 +1,18 @@
+{
+  "readme": "thouska_spotpy_error_readme_1_only_E2",
+  "repo_name": "thouska_spotpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `conda install` command `conda spotpy install` has incorrect syntax. The package name should follow the `install` subcommand.",
+      "correction_candidates": [
+        "conda install spotpy",
+        "conda install -c conda-forge spotpy",
+        "conda add spotpy",
+        "install conda spotpy"
+      ],
+      "golden_answer": "conda install spotpy"
+    }
+  ]
+}

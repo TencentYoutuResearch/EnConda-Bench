@@ -1,0 +1,18 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_5_only_E1",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (torch and tensorflow) to the installation command that are not required for basic Guardrails functionality",
+      "correction_candidates": [
+        "pip install guardrails-ai",
+        "pip install guardrails-ai numpy pandas",
+        "pip install guardrails-ai --upgrade",
+        "pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install guardrails-ai"
+    }
+  ]
+}

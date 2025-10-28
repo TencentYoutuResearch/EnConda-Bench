@@ -1,0 +1,18 @@
+{
+  "readme": "jackdewinter_pymarkdown_error_readme_5_only_E2",
+  "repo_name": "jackdewinter_pymarkdown",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid command syntax with wrong parameter name",
+      "correction_candidates": [
+        "Change --scan-path to --scan as the correct parameter name",
+        "Replace with pymarkdown scan ./docs/ using the proper scan subcommand",
+        "Use pymarkdown lint ./docs/ as the standard linting command",
+        "Correct to pymarkdown --help to show available options first"
+      ],
+      "golden_answer": "Replace with pymarkdown scan ./docs/ using the proper scan subcommand"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "matthiasvalvekens_pyhanko_error_readme_1_only_E2",
+  "repo_name": "matthiasvalvekens_pyhanko",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to get help is `pyhanko help`, which is incorrect for a `click`-based CLI. The correct command is `pyhanko --help`.",
+      "correction_candidates": [
+        "Built-in help: run `pyhanko -h` to get started",
+        "Built-in help: run `pyhanko help` to get started",
+        "Built-in help: run `pyhanko --usage` to get started",
+        "Built-in help: run `pyhanko --help` to get started"
+      ],
+      "golden_answer": "Built-in help: run `pyhanko --help` to get started"
+    }
+  ]
+}

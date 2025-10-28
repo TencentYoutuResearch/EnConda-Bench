@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_2_only_E1",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'pipenv' dependency is missing from the system dependencies list, but it is required to manage Python packages and run commands.",
+      "correction_candidates": [
+        "Add 'pip' to the system dependencies list.",
+        "Add 'pipenv' to the system dependencies list.",
+        "Add 'virtualenv' to the system dependencies list.",
+        "Remove the mention of 'pipenv' from the pre-commit command in the Kodestil section."
+      ],
+      "golden_answer": "Add 'pipenv' to the system dependencies list."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "scikit-rf_scikit-rf_error_readme_3_only_E6",
+  "repo_name": "scikit-rf_scikit-rf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions attempt to run the GUI applications before installing their required dependencies, which will cause the commands to fail.",
+      "correction_candidates": [
+        "Move the installation command `python -m pip install scikit-rf[plot,visa]` before the commands to run the apps.",
+        "Combine the commands into a single line: `python -m pip install scikit-rf[plot,visa] && data-grabber`.",
+        "First, install dependencies with `pip install pyqt5 pyside2`, then run the apps.",
+        "Run `python -m scikit_rf.data_grabber` instead of `data-grabber`."
+      ],
+      "golden_answer": "Move the installation command `python -m pip install scikit-rf[plot,visa]` before the commands to run the apps."
+    }
+  ]
+}

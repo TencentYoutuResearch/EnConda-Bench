@@ -1,0 +1,18 @@
+{
+  "readme": "menpo_menpo_error_readme_2_only_E6",
+  "repo_name": "menpo_menpo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The usage instructions incorrectly tell the user to run `jupyter notebook` before installing it.",
+      "correction_candidates": [
+        "1. Conda install Jupyter notebook: `conda install jupyter ipython notebook`\n  2. Download the [latest version of the notebooks][notebooks_gh]\n  3. Run `jupyter notebook`",
+        "1. Download the [latest version of the notebooks][notebooks_gh]\n  2. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`\n  3. Run `jupyter notebook`",
+        "1. Run `jupyter notebook`\n  2. Download the [latest version of the notebooks][notebooks_gh]\n  3. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`",
+        "1. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`\n  2. Run `jupyter notebook` and download the notebooks from the interface."
+      ],
+      "golden_answer": "1. Download the [latest version of the notebooks][notebooks_gh]\n  2. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`\n  3. Run `jupyter notebook`"
+    }
+  ]
+}

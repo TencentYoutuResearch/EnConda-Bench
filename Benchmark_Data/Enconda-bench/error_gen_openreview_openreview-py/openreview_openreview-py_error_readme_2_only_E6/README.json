@@ -1,0 +1,18 @@
+{
+  "readme": "openreview_openreview-py_error_readme_2_only_E6",
+  "repo_name": "openreview_openreview-py",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly tell the user to run `pytest` before starting the required OpenReview API and web services, which will cause all tests to fail as they cannot connect to the backend.",
+      "correction_candidates": [
+        "Once all three services are running, start the tests:\n```bash\npytest\n```",
+        "Run pytest after starting the OpenReview API V1, API V2, and Web services.",
+        "Start the OpenReview services and then run pytest in a separate terminal.",
+        "Before running pytest, ensure the OpenReview services are active on ports 3000, 3001, and 3030."
+      ],
+      "golden_answer": "Once all three services are running, start the tests:\n```bash\npytest\n```"
+    }
+  ]
+}

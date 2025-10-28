@@ -1,0 +1,18 @@
+{
+  "readme": "vkbottle_vkbottle_error_readme_5_only_E6",
+  "repo_name": "vkbottle_vkbottle",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order of development setup steps - installing dependencies before creating virtual environment",
+      "correction_candidates": [
+        "Сначала создайте виртуальную среду, затем установите зависимости разработки из requirements.txt",
+        "Сначала установите Python 3.8+, затем создайте виртуальную среду",
+        "Сначала клонируйте репозиторий, затем установите зависимости разработки",
+        "Сначала установите git, затем клонируйте репозиторий и создайте виртуальную среду"
+      ],
+      "golden_answer": "Сначала создайте виртуальную среду, затем установите зависимости разработки из requirements.txt"
+    }
+  ]
+}

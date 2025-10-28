@@ -1,0 +1,29 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_2",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that Django is a required dependency, when it is an optional one for specific features.",
+      "correction_candidates": [
+        "Remove the phrase 'first ensure you have django installed, then'.",
+        "Change the sentence to 'To install, run pip. For Django support, also install django: `pip install django`'.",
+        "Change the sentence to 'To install with optional django support, run: `pip install testfixtures[django]`'.",
+        "Change the sentence to 'Django is an optional dependency.'"
+      ],
+      "golden_answer": "Remove the phrase 'first ensure you have django installed, then'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The contribution instructions have the wrong logical order: it tells the user to install the package in editable mode before cloning the git repository.",
+      "correction_candidates": [
+        "Swap the order of the `git clone` and `pip install -e .` commands.",
+        "Replace the two commands with: `git clone https://github.com/simplistix/testfixtures.git && cd testfixtures && pip install -e .`",
+        "Remove the `pip install -e .` command as it is not needed to clone the repository.",
+        "Correct the commands to: `git clone https://github.com/simplistix/testfixtures.git; cd testfixtures; pip install -e .`"
+      ],
+      "golden_answer": "Swap the order of the `git clone` and `pip install -e .` commands."
+    }
+  ]
+}

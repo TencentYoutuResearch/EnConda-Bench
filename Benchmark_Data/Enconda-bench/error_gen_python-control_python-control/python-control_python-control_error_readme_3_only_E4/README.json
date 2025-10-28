@@ -1,0 +1,18 @@
+{
+  "readme": "python-control_python-control_error_readme_3_only_E4",
+  "repo_name": "python-control_python-control",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `git clone` command provides an incorrect URL for the source code repository, which will result in a 'repository not found' error.",
+      "correction_candidates": [
+        "The correct URL is `https://github.com/python-control/python-control`.",
+        "The correct command is `git clone https://github.com/python-control/python-control.git`.",
+        "The protocol should be SSH: `git clone git@github.com:python-control/python-control.git`.",
+        "The repository name is wrong, it should be `python_control`: `git clone https://github.com/python-control/python_control.git`."
+      ],
+      "golden_answer": "The correct command is `git clone https://github.com/python-control/python-control.git`."
+    }
+  ]
+}

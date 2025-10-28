@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_gymrek-lab_TRTools_error_readme_merge_k4",
+  "repo_name": "gymrek-lab_TRTools",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to upgrade pip, `pip --upgrade install pip`, is syntactically incorrect.",
+      "correction_candidates": [
+        "pip upgrade pip",
+        "pip install pip --upgrade",
+        "pip install --upgrade pip",
+        "pip install upgrade pip"
+      ],
+      "golden_answer": "pip install --upgrade pip"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the 'From source' installation instructions, the command to install dependencies with poetry is placed before the command to create the conda environment, which is the wrong order.",
+      "correction_candidates": [
+        "Run `conda install poetry` and then `poetry install` inside the base environment.",
+        "Run `conda env create -n trtools -f dev-env.yml` and then `conda run -n trtools poetry install`.",
+        "Run `poetry install` and then `conda env create -n trtools -f dev-env.yml`.",
+        "Run `conda env create -n trtools -f dev-env.yml` and then `poetry shell` followed by `pip install -e .`."
+      ],
+      "golden_answer": "Run `conda env create -n trtools -f dev-env.yml` and then `conda run -n trtools poetry install`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that TRTools supports Python 3.6, but it only supports versions 3.8 and higher.",
+      "correction_candidates": [
+        "Change the sentence to 'TRTools supports all Python 3 versions.'",
+        "Change the sentence to 'TRTools supports Python versions 3.8 and up.'",
+        "Remove the sentence about Python version support.",
+        "Change the sentence to 'TRTools supports Python versions 3.7 and up.'"
+      ],
+      "golden_answer": "Change the sentence to 'TRTools supports Python versions 3.8 and up.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The optional conda installation command is missing the `bcftools` package, even though the accompanying text states it should be installed with `ART`.",
+      "correction_candidates": [
+        "Change the command to `conda install -c conda-forge -c bioconda bcftools`.",
+        "Add a new command `conda install -c bioconda bcftools` after the `art` installation command.",
+        "Change the command to `conda install -c bioconda bcftools art`.",
+        "Change the command to `conda install -c conda-forge -c bioconda bcftools art`."
+      ],
+      "golden_answer": "Change the command to `conda install -c conda-forge -c bioconda bcftools art`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect filename reference 'development-env.yml' instead of the correct 'dev-env.yml' file",
+      "correction_candidates": [
+        "conda env create -n trtools -f dev-env.yml",
+        "conda env create -n trtools -f env-dev.yml",
+        "conda env create -n trtools -f dev-environment.yml",
+        "conda env create -n trtools -f develop.yml"
+      ],
+      "golden_answer": "conda env create -n trtools -f dev-env.yml"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect test command 'pytest trtools/' instead of the correct 'test_trtools.sh' script",
+      "correction_candidates": [
+        "test_trtools.sh",
+        "python -m pytest trtools/",
+        "pytest --cov=trtools",
+        "run_tests.py"
+      ],
+      "golden_answer": "test_trtools.sh"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement stating 'Python versions 2.7 and up' when it should be 'Python versions 3.8 and up'",
+      "correction_candidates": [
+        "Note: TRTools supports Python versions 3.8 and up.",
+        "Note: TRTools supports Python versions 3.6 and up.",
+        "Note: TRTools requires Python 3.8 or higher.",
+        "Note: TRTools is compatible with Python 3.7+."
+      ],
+      "golden_answer": "Note: TRTools supports Python versions 3.8 and up."
+    }
+  ]
+}

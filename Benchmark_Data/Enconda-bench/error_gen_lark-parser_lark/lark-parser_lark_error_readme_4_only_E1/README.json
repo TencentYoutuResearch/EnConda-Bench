@@ -1,0 +1,18 @@
+{
+  "readme": "lark-parser_lark_error_readme_4_only_E1",
+  "repo_name": "lark-parser_lark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes 'nearley', an unrelated package. Lark can import grammars from Nearley.js, but does not require any 'nearley' pip package to be installed.",
+      "correction_candidates": [
+        "Correct the command to `$ pip install lark --upgrade`.",
+        "Correct the command to `$ pip install lark-parser --upgrade`.",
+        "Correct the command to `$ pip install lark-nearley-converter --upgrade`.",
+        "Run the commands separately: `$ pip install lark --upgrade` and then `$ pip install nearley --upgrade`."
+      ],
+      "golden_answer": "Correct the command to `$ pip install lark --upgrade`."
+    }
+  ]
+}

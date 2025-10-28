@@ -1,0 +1,18 @@
+{
+  "readme": "menpo_menpo_error_readme_7_only_E7",
+  "repo_name": "menpo_menpo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Added outdated Python version compatibility information (Python 2.7 and 3.4+) that conflicts with the stated support for Python 3.6-3.9",
+      "correction_candidates": [
+        "Make sure to install Python 3.6+ for compatibility.",
+        "Make sure to install Python 3.8+ for optimal performance.",
+        "Ensure you have Python 3.6 or higher installed.",
+        "Python 3.7 or later is recommended for full feature support."
+      ],
+      "golden_answer": "Make sure to install Python 3.6+ for compatibility."
+    }
+  ]
+}

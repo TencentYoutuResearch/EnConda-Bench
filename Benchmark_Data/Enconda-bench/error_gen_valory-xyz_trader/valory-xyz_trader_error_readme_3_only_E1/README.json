@@ -1,0 +1,18 @@
+{
+  "readme": "valory-xyz_trader_error_readme_3_only_E1",
+  "repo_name": "valory-xyz_trader",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `--update-packages` flag is missing from the `autonomy packages sync` command. This can lead to using stale or incorrect locally cached package versions, causing dependency issues.",
+      "correction_candidates": [
+        "autonomy packages sync --update-packages",
+        "autonomy packages lock --update",
+        "autonomy packages sync --dev",
+        "autonomy packages pull"
+      ],
+      "golden_answer": "autonomy packages sync --update-packages"
+    }
+  ]
+}

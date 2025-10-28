@@ -1,0 +1,18 @@
+{
+  "readme": "piskvorky_smart_open_error_readme_2_only_E7",
+  "repo_name": "piskvorky_smart_open",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that version 2.0.0 was the last to support Python 2.7. The correct version is 1.10.1.",
+      "correction_candidates": [
+        "Change `smart_open 2.0.0` to `smart_open 1.10.0`",
+        "Change `smart_open 2.0.0` to `the latest 1.x release`",
+        "Change `smart_open 2.0.0` to `smart_open 1.10.1`",
+        "Change `smart_open 2.0.0` to `smart_open 2.0.0-py2`"
+      ],
+      "golden_answer": "Change `smart_open 2.0.0` to `smart_open 1.10.1`"
+    }
+  ]
+}

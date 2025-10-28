@@ -1,0 +1,18 @@
+{
+  "readme": "google-deepmind_acme_error_readme_1_only_E2",
+  "repo_name": "google-deepmind_acme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install from the cloned GitHub repository has a syntax error, using a comma instead of a period to specify the local package.",
+      "correction_candidates": [
+        "pip install -e .[jax,tf,testing,envs]",
+        "pip install setup.py[jax,tf,testing,envs]",
+        "pip install .[jax,tf,testing,envs]",
+        "pip install --path . [jax,tf,testing,envs]"
+      ],
+      "golden_answer": "pip install .[jax,tf,testing,envs]"
+    }
+  ]
+}

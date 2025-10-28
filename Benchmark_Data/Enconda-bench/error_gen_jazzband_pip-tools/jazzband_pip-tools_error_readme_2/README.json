@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_pip-tools_error_readme_2",
+  "repo_name": "jazzband_pip-tools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the layered requirements example, `dev-requirements.in` tries to use a non-existent file `base-requirements.txt` as a constraint instead of the generated `requirements.txt`.",
+      "correction_candidates": [
+        "The `dev-requirements.in` file should contain `-r requirements.txt`.",
+        "The `dev-requirements.in` file should contain `-c requirements.txt`.",
+        "The `dev-requirements.in` file should contain `--constraint requirements.txt`.",
+        "The `dev-requirements.in` file should contain `-c requirements.in`."
+      ],
+      "golden_answer": "The `dev-requirements.in` file should contain `-c requirements.txt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The `.pre-commit-config.yaml` example is missing the mandatory `rev` key, which specifies the version of the `pip-tools` repository to use, making the configuration invalid.",
+      "correction_candidates": [
+        "Add `version: 7.4.1` to the hook configuration.",
+        "Add `tag: 7.4.1` to the hook configuration.",
+        "Add `rev: <latest-version-tag>` to the hook configuration, for example `rev: 7.4.1`.",
+        "Add `revision: 7.4.1` to the hook configuration."
+      ],
+      "golden_answer": "Add `rev: <latest-version-tag>` to the hook configuration, for example `rev: 7.4.1`."
+    }
+  ]
+}

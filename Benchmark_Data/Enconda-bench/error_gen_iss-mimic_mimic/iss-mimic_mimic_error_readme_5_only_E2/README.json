@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_5_only_E2",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax using setup.py install instead of proper installation method",
+      "correction_candidates": [
+        "To run the telemetry display program, first execute `pip install -e .` then run `python -m mimic --config config.json`",
+        "To run the telemetry display program, first execute `python -m pip install .` then run `python main.py --config=config.json`",
+        "To run the telemetry display program, first execute `pip install .` then run `python main.py --config config.json`",
+        "To run the telemetry display program, first execute `python setup.py develop` then run `python src/main.py --config config.json`"
+      ],
+      "golden_answer": "To run the telemetry display program, first execute `pip install .` then run `python main.py --config config.json`"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "flav-io_flavio_error_readme_3",
+  "repo_name": "flav-io_flavio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The installation command `pip install -c config.ini` incorrectly references a non-existent or wrongly purposed configuration file. The `-c` flag is for constraints files, not general installation.",
+      "correction_candidates": [
+        "Replace the installation block with instructions to install from PyPI: `pip install flavio`.",
+        "The command is incorrect. To install from source, clone the repository and run `pip install .`.",
+        "The configuration file is `setup.cfg`, so the command should be `pip install -e .` which uses that file.",
+        "Create a `config.ini` file with `flavio` and then run the command."
+      ],
+      "golden_answer": "Replace the installation block with instructions to install from PyPI: `pip install flavio`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to run tests, `pytest --run-all`, uses an invalid and non-existent option for pytest.",
+      "correction_candidates": [
+        "Replace `pytest --run-all` with `pytest`.",
+        "Replace `pytest --run-all` with `python -m unittest discover`.",
+        "The correct command is `pytest --runall`.",
+        "Replace `pytest --run-all` with `python run_tests.py`."
+      ],
+      "golden_answer": "Replace `pytest --run-all` with `pytest`."
+    }
+  ]
+}

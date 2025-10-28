@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_qiboteam_qibocal_error_readme_merge_k2",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the developer instructions, `pre-commit install` is executed before `poetry install`. This may cause an error because the pre-commit hooks might depend on packages that have not yet been installed.",
+      "correction_candidates": [
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npre-commit install\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npoetry run pre-commit install\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npre-commit install\npoetry install --no-dev\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry shell\npoetry install\npre-commit install\n```"
+      ],
+      "golden_answer": "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npre-commit install\n```"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a protocol uses an invalid option `--o` for specifying the output folder, which should be `-o`.",
+      "correction_candidates": [
+        "The correct command is: `qq auto <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> --output <output_folder>`",
+        "The correct command is: `qq auto --runcard <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> -output <output_folder>`"
+      ],
+      "golden_answer": "The correct command is: `qq auto <runcard> -o <output_folder>`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The standard installation instructions are incomplete. The `pip install .` command is missing, so the user will clone the repository but not install the package.",
+      "correction_candidates": [
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install .\n```",
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install -e .\n```",
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npython setup.py install\n```",
+        "The installation commands are:\n```sh\npip install git+https://github.com/qiboteam/qibocal.git\n```"
+      ],
+      "golden_answer": "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install .\n```"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command for uploading reports suggests a fixed, non-existent path `reports/latest` instead of the variable `<output_folder>` that the user should provide.",
+      "correction_candidates": [
+        "The command is `qq upload <output_folder>`, where `<output_folder>` is the path to the generated report directory.",
+        "The command is `qq upload`, which will prompt you for the folder path.",
+        "The command is `qq upload --path reports/latest`.",
+        "The command is `qq upload <output_folder>`. You must first navigate into the parent directory of `<output_folder>`."
+      ],
+      "golden_answer": "The command is `qq upload <output_folder>`, where `<output_folder>` is the path to the generated report directory."
+    }
+  ]
+}

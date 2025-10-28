@@ -1,0 +1,18 @@
+{
+  "readme": "lark-parser_lark_error_readme_2_only_E7",
+  "repo_name": "lark-parser_lark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Lark runs on 'Python 3.6 only', while it is compatible with a wide range of Python versions.",
+      "correction_candidates": [
+        "Change 'Run on Python 3.6 only' to 'Run on every Python interpreter'.",
+        "Change 'Run on Python 3.6 only' to 'Run on Python 3.6+.'",
+        "Change 'Run on Python 3.6 only' to 'Run on Python 2.7 and 3.5+.'",
+        "Remove the entire line about Python compatibility."
+      ],
+      "golden_answer": "Change 'Run on Python 3.6 only' to 'Run on every Python interpreter'."
+    }
+  ]
+}

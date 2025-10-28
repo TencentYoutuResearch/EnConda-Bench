@@ -1,0 +1,29 @@
+{
+  "readme": "litex-hub_litex-boards_error_readme_4",
+  "repo_name": "litex-hub_litex-boards",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest an incorrect order of operations, stating that the user should flash the board before running the build command. The correct process is to build the design first to generate the bitstream, and then load/flash it to the board.",
+      "correction_candidates": [
+        "Remove the note about the order of operations.",
+        "The correct order is to run the build command, then flash the board manually using the vendor tools.",
+        "The note should say: 'Make sure to run the software compilation before the gateware compilation.'",
+        "The `--build` and `--load` flags can be run in any order."
+      ],
+      "golden_answer": "Remove the note about the order of operations."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that a `sim_config.json` file is required to run a simulation. This file is not part of the standard LiteX simulation workflow, and no such file is provided, which will confuse the user.",
+      "correction_candidates": [
+        "The simulation is configured with a 'sim.config' file, not 'sim_config.json'.",
+        "Remove the sentence requiring the creation of 'sim_config.json'.",
+        "The simulation is configured by passing arguments directly to litex_sim.py.",
+        "The configuration file is named 'config.json' and is located in the 'sim' subdirectory."
+      ],
+      "golden_answer": "Remove the sentence requiring the creation of 'sim_config.json'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "lagolunatic_wwrando_error_readme_3_only_E4",
+  "repo_name": "lagolunatic_wwrando",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The dependency installation command incorrectly refers to `requirements_dev.txt`, a file that does not exist in the repository, instead of the correct `requirements.txt`.",
+      "correction_candidates": [
+        "Change the filename in the command from `requirements_dev.txt` to `requirements.txt`.",
+        "Change the filename in the command from `requirements_dev.txt` to `requirements_full.txt`.",
+        "Instruct the user to rename the `requirements.txt` file to `requirements_dev.txt` before running the command.",
+        "Change the command to `pip install -r requirements.txt -r requirements_full.txt`."
+      ],
+      "golden_answer": "Change the filename in the command from `requirements_dev.txt` to `requirements.txt`."
+    }
+  ]
+}

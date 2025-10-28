@@ -1,0 +1,29 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_7",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed installation path to include an extra battery_notes subdirectory that would cause incorrect file placement",
+      "correction_candidates": [
+        "Change path to `<config directory>/custom_components` without the extra battery_notes folder",
+        "Update to `<config directory>/custom_components/ha-battery-notes` to match repository name",
+        "Correct to `<config directory>/integrations/battery_notes` for proper Home Assistant structure",
+        "Fix to `<config directory>/custom_components/battery-notes` using hyphen instead of underscore"
+      ],
+      "golden_answer": "Change path to `<config directory>/custom_components` without the extra battery_notes folder"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Added reference to non-existent installation guide file path",
+      "correction_candidates": [
+        "Remove the reference to `docs/installation/setup.md` as this file doesn't exist",
+        "Change to reference the existing documentation at the provided URL instead",
+        "Update path to `docs/setup/installation.md` for correct file location",
+        "Replace with link to `README.md` installation section"
+      ],
+      "golden_answer": "Remove the reference to `docs/installation/setup.md` as this file doesn't exist"
+    }
+  ]
+}

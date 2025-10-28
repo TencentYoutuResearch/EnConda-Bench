@@ -1,0 +1,18 @@
+{
+  "readme": "elifesciences_elife-bot_error_readme_2_only_E7",
+  "repo_name": "elifesciences_elife-bot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly specifies that the project is only compatible with Python 2.7, which is an outdated and likely incorrect version constraint for a modern project.",
+      "correction_candidates": [
+        "Remove the sentence \"Note: This project is only compatible with Python 2.7 and may not work with other versions.\"",
+        "Change the sentence to \"This project is compatible with Python 3.6+.\"",
+        "Change the test command to `python3 -m pytest...` to specify Python 3.",
+        "Add a note: \"Please check the project's configuration files for specific Python version requirements.\""
+      ],
+      "golden_answer": "Remove the sentence \"Note: This project is only compatible with Python 2.7 and may not work with other versions.\""
+    }
+  ]
+}

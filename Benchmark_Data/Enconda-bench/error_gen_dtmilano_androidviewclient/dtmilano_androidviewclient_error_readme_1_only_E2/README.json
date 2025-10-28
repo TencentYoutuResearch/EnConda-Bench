@@ -1,0 +1,18 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_1_only_E2",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip3 install androidviewclient --update` is incorrect. The `--update` flag is not a valid pip command for upgrading a package; the correct flag is `--upgrade`.",
+      "correction_candidates": [
+        "pip3 install androidviewclient --upgrade",
+        "pip3 install androidviewclient --latest",
+        "pip3 install --update androidviewclient",
+        "pip3 install androidviewclient -U"
+      ],
+      "golden_answer": "pip3 install androidviewclient --upgrade"
+    }
+  ]
+}

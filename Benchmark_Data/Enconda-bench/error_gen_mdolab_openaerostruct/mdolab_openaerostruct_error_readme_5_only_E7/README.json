@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_5_only_E7",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python minimum version listed as 2.7 which is incompatible with modern dependencies and contradicts the actual supported range",
+      "correction_candidates": [
+        "| Python             | 3.8    | 3.11   |",
+        "| Python             | 3.6    | 3.12   |",
+        "| Python             | 3.7    | latest |",
+        "| Python             | 3.9    | 3.11   |"
+      ],
+      "golden_answer": "| Python             | 3.8    | 3.11   |"
+    }
+  ]
+}

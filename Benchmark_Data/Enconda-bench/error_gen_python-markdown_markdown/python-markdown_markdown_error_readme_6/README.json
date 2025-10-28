@@ -1,0 +1,29 @@
+{
+  "readme": "python-markdown_markdown_error_readme_6",
+  "repo_name": "python-markdown_markdown",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Shows running 'python setup.py install' after 'pip install markdown' which is incorrect order and redundant",
+      "correction_candidates": [
+        "Remove the 'python setup.py install' line entirely",
+        "Replace both commands with 'pip install markdown' only",
+        "Move 'python setup.py install' before 'pip install markdown'",
+        "Change to 'pip install -e .' for development installation"
+      ],
+      "golden_answer": "Remove the 'python setup.py install' line entirely"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'python setup.py install' command is outdated and may cause installation issues",
+      "correction_candidates": [
+        "python -m pip install .",
+        "pip install -e .",
+        "python -m build && pip install dist/*.whl",
+        "conda install markdown"
+      ],
+      "golden_answer": "python -m pip install ."
+    }
+  ]
+}

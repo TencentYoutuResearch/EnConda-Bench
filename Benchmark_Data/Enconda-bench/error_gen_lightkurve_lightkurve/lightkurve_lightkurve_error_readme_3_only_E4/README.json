@@ -1,0 +1,18 @@
+{
+  "readme": "lightkurve_lightkurve_error_readme_3_only_E4",
+  "repo_name": "lightkurve_lightkurve",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the authors list in the 'Contact' section points to a non-existent file `CONTRIBUTORS.md` instead of the correct `AUTHORS.rst`.",
+      "correction_candidates": [
+        "Change `CONTRIBUTORS.md` back to `AUTHORS.rst`.",
+        "Change the text to link to the GitHub contributors page.",
+        "Remove the link and the phrase `the authors`.",
+        "Create a new file named `CONTRIBUTORS.md` with the author information."
+      ],
+      "golden_answer": "Change `CONTRIBUTORS.md` back to `AUTHORS.rst`."
+    }
+  ]
+}

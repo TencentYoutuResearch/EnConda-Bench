@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_6_only_E2",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed the pip install command from 'pip install skrub -U' to 'pip install skrub --upgrade' which uses incorrect syntax",
+      "correction_candidates": [
+        "Change to pip install skrub -U",
+        "Change to pip install --upgrade skrub",
+        "Change to pip install skrub --update",
+        "Change to pip3 install skrub --upgrade"
+      ],
+      "golden_answer": "Change to pip install --upgrade skrub"
+    }
+  ]
+}

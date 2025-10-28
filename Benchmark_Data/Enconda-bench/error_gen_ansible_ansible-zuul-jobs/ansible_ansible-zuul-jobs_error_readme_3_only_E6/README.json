@@ -1,0 +1,18 @@
+{
+  "readme": "ansible_ansible-zuul-jobs_error_readme_3_only_E6",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The dependencies are installed (step 2) before the virtual environment is activated (step 3), causing them to be installed in the system's global Python environment instead of the project's isolated venv.",
+      "correction_candidates": [
+        "Move step 3 (`source .venv/bin/activate`) to be before step 2 (`pip install ...`).",
+        "Change step 2 to `.venv/bin/pip install ansible ansible-lint`.",
+        "Remove the virtual environment steps and install globally.",
+        "Run `deactivate` before step 2."
+      ],
+      "golden_answer": "Move step 3 (`source .venv/bin/activate`) to be before step 2 (`pip install ...`)."
+    }
+  ]
+}

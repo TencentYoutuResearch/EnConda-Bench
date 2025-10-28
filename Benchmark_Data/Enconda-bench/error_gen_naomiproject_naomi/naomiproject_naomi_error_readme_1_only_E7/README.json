@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_1_only_E7",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation note incorrectly states that Python 2.7 is required, which conflicts with the Python 3.5 badge and the use of `python3` in commands, causing version incompatibility.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7. The project requires Python 3.5 or newer.",
+        "Update the Python badge to `v2.7` to match the installation note.",
+        "Change the `python3 -m venv venv` command to `python -m venv venv`.",
+        "Add a step to install Python 2.7 using `sudo apt-get install python2.7`."
+      ],
+      "golden_answer": "Remove the note about Python 2.7. The project requires Python 3.5 or newer."
+    }
+  ]
+}

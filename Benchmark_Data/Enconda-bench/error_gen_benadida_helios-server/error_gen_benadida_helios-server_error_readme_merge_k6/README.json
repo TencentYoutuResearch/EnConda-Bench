@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_benadida_helios-server_error_readme_merge_k6",
+  "repo_name": "benadida_helios-server",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The python dependencies are installed globally using pip before the virtual environment is created and activated, which is the wrong order.",
+      "correction_candidates": [
+        "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally.",
+        "You must run `pip install --user -r requirements.txt` to install packages for the current user.",
+        "The virtual environment should be created in the system's root directory, not the project directory.",
+        "You should install dependencies one by one instead of using `requirements.txt`."
+      ],
+      "golden_answer": "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py startserver 8000` is incorrect for starting a Django development server. The correct command is `runserver`.",
+      "correction_candidates": [
+        "The command to start the development server should be `python manage.py runserver 8000`.",
+        "The command should be `python manage.py run`.",
+        "You need to specify the IP address, for example: `python manage.py startserver 0.0.0.0:8000`.",
+        "Use `django-admin startserver 8000` instead of `manage.py`."
+      ],
+      "golden_answer": "The command to start the development server should be `python manage.py runserver 8000`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The dependency installation step `pip install django` is incomplete. It will miss all other project dependencies listed in `requirements.txt`.",
+      "correction_candidates": [
+        "To install all necessary dependencies, you should use the command `pip install -r requirements.txt`.",
+        "You also need to install `psycopg2-binary` and `gunicorn` manually.",
+        "The command should be `pip install django --upgrade` to get the latest version.",
+        "You should run `pip freeze > requirements.txt` first to generate the dependencies file."
+      ],
+      "golden_answer": "To install all necessary dependencies, you should use the command `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating and activating virtual environment",
+      "correction_candidates": [
+        "python -m venv helios_env\nsource helios_env/bin/activate\npip install -r requirements.txt",
+        "virtualenv helios_env\n. helios_env/bin/activate\npip install -r requirements.txt",
+        "conda create -n helios_env python=3.8\nconda activate helios_env\npip install -r requirements.txt",
+        "python3 -m venv helios_env\nhelios_env/bin/activate\npip install -r requirements.txt"
+      ],
+      "golden_answer": "python -m venv helios_env\nsource helios_env/bin/activate\npip install -r requirements.txt"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Including unnecessary nodejs and npm dependencies that are not needed for this Python application",
+      "correction_candidates": [
+        "sudo apt-get install python3-dev libssl-dev libffi-dev postgresql-server-dev-all",
+        "sudo apt-get install python3-dev libssl-dev postgresql-dev",
+        "sudo apt-get install python3-dev libffi-dev postgresql-server-dev-all",
+        "sudo apt-get install build-essential python3-dev libssl-dev libffi-dev"
+      ],
+      "golden_answer": "sudo apt-get install python3-dev libssl-dev libffi-dev postgresql-server-dev-all"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect path 'config/dependencies.txt' instead of standard 'requirements.txt'",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install -r setup/requirements.txt",
+        "pip install -r dependencies/requirements.txt",
+        "pip install -r src/requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using invalid syntax 'pip install -r requirements.txt==1.2.3' which treats requirements file as a package with version",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install --requirement requirements.txt",
+        "pip install -r requirements.txt --upgrade",
+        "python -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Providing vague version compatibility statement 'Python 2.x or 3.x' without specific version requirements",
+      "correction_candidates": [
+        "Note: This system requires Python 3.8 or higher for optimal compatibility.",
+        "Note: This system requires Python 3.6+ for compatibility with modern dependencies.",
+        "Note: This system requires Python 3.7 or later versions.",
+        "Note: This system requires Python >= 3.8 for full feature support."
+      ],
+      "golden_answer": "Note: This system requires Python 3.8 or higher for optimal compatibility."
+    }
+  ]
+}

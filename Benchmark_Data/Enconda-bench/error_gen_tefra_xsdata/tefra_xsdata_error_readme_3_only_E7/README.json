@@ -1,0 +1,18 @@
+{
+  "readme": "tefra_xsdata_error_readme_3_only_E7",
+  "repo_name": "tefra_xsdata",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that xsData requires Python 2.7. According to the PyPI badge and package information, it requires Python 3.8+.",
+      "correction_candidates": [
+        "Install a legacy version of xsData compatible with Python 2.7.",
+        "Use `python2.7 -m pip install xsdata[cli,lxml,soap]` to install.",
+        "Remove the sentence stating it requires Python 2.7. xsData requires Python 3.8 or newer.",
+        "The note is correct, you must use a Python 2 environment."
+      ],
+      "golden_answer": "Remove the sentence stating it requires Python 2.7. xsData requires Python 3.8 or newer."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "folio-fse_folio_migration_tools_error_readme_4_only_E1",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the `pipenv install` command is incorrect. It uses an underscore ('folio_migration_tools') instead of the correct hyphen ('folio-migration-tools'), which will cause the installation to fail.",
+      "correction_candidates": [
+        "Change the package name to `folio-migration-tools`.",
+        "Change the package name to `FOLIO-Migration-Tools`.",
+        "Change the command to `pipenv install 'folio-migration-tools'`.",
+        "Change the command to `pipenv install -e git+https://github.com/FOLIO-FSE/folio_migration_tools.git#egg=folio_migration_tools`."
+      ],
+      "golden_answer": "Change the package name to `folio-migration-tools`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_1_only_E4",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The code example for the Hamilton STAR robot references a layout file at a non-existent path \"layouts/hamilton-layout.json\" without instructions to create this directory or noting that it is a placeholder.",
+      "correction_candidates": [
+        "deck = Deck.load_from_json_file(\"hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"./hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"pylabrobot/resources/hamilton-layout.json\")",
+        "deck = Deck.load_from_json(\"hamilton-layout.json\")"
+      ],
+      "golden_answer": "deck = Deck.load_from_json_file(\"hamilton-layout.json\")"
+    }
+  ]
+}

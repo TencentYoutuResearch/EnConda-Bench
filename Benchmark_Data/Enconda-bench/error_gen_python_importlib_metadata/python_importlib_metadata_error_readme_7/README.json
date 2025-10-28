@@ -1,0 +1,29 @@
+{
+  "readme": "python_importlib_metadata_error_readme_7",
+  "repo_name": "python_importlib_metadata",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect documentation URL path pointing to non-existent config/setup.html",
+      "correction_candidates": [
+        "https://importlib-metadata.readthedocs.io/",
+        "https://importlib-metadata.readthedocs.io/en/latest/",
+        "https://importlib-metadata.readthedocs.io/en/stable/",
+        "https://importlib-metadata.readthedocs.io/docs/"
+      ],
+      "golden_answer": "https://importlib-metadata.readthedocs.io/"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement stating Python 2.7 compatibility when the package requires Python 3.8+",
+      "correction_candidates": [
+        "This package requires Python 3.8 or later for compatibility",
+        "This package requires Python 3.6 or later for compatibility",
+        "This package requires Python 3.10 or later for compatibility",
+        "This package supports all Python versions from 3.7+"
+      ],
+      "golden_answer": "This package requires Python 3.8 or later for compatibility"
+    }
+  ]
+}

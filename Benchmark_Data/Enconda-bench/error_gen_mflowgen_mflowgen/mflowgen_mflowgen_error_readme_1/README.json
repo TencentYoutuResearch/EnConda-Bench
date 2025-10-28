@@ -1,0 +1,29 @@
+{
+  "readme": "mflowgen_mflowgen_error_readme_1",
+  "repo_name": "mflowgen_mflowgen",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install mflow` attempts to install a package with the wrong name, which is not the correct package for this tool.",
+      "correction_candidates": [
+        "pip install mflow-gen",
+        "pip install mflowgen",
+        "pip install --upgrade mflow",
+        "python -m pip install mflow"
+      ],
+      "golden_answer": "pip install mflowgen"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `mflowgen --run --design ...` uses an incorrect flag format. The `run` command should not be preceded by double dashes.",
+      "correction_candidates": [
+        "mflowgen-run --design path/to/your/design",
+        "mflowgen run --design path/to/your/design",
+        "mflowgen execute --design path/to/your/design",
+        "mflowgen --design path/to/your/design --run"
+      ],
+      "golden_answer": "mflowgen run --design path/to/your/design"
+    }
+  ]
+}

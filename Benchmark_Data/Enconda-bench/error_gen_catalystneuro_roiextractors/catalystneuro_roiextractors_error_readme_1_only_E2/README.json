@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_1_only_E2",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install .` is used, but the documentation incorrectly claims this installs the package in editable mode. The correct flag `-e` is missing.",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install --editable .",
+        "python setup.py develop",
+        "pip install -e roiextractors"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

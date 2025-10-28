@@ -1,0 +1,18 @@
+{
+  "readme": "neurogym_neurogym_error_readme_5_only_E2",
+  "repo_name": "neurogym_neurogym",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The full install command references 'last command' but the previous commands are now in wrong order",
+      "correction_candidates": [
+        "pip install -e '.[all]'",
+        "pip install -e . --all",
+        "pip install neurogym[all]",
+        "pip install -e '[all]'"
+      ],
+      "golden_answer": "pip install -e '.[all]'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_3_only_E8",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The description for the `protoc` subcommand is misleading. It claims the command validates syntax, but its actual purpose in `protoletariat` is to generate `FileDescriptorSet` bytes for import rewriting.",
+      "correction_candidates": [
+        "Change the description to: \"Uses `protoc` to generate `FileDescriptorSet` bytes\"",
+        "Change the description to: \"Wraps the `protoc` compiler to fix imports\"",
+        "Change the description to: \"Generates Python code using `protoc` and a `FileDescriptorSet`\"",
+        "Change the description to: \"Interfaces with the `protoc` binary to get dependency information\""
+      ],
+      "golden_answer": "Change the description to: \"Uses `protoc` to generate `FileDescriptorSet` bytes\""
+    }
+  ]
+}

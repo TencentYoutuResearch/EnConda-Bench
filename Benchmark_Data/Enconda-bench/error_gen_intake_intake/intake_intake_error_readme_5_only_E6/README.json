@@ -1,0 +1,18 @@
+{
+  "readme": "intake_intake_error_readme_5_only_E6",
+  "repo_name": "intake_intake",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Moved 'Install intake using pip install -e .' step before 'Use pytest to run tests' which creates incorrect logical order",
+      "correction_candidates": [
+        "Move 'Install intake using pip install -e .' after 'Use pytest to run tests'",
+        "Move 'Install intake using pip install -e .' before 'Create development Python environment'",
+        "Move 'Install intake using pip install -e .' after 'Create development Python environment' and before 'Use pytest to run tests'",
+        "Remove the 'Install intake using pip install -e .' step entirely"
+      ],
+      "golden_answer": "Move 'Install intake using pip install -e .' after 'Create development Python environment' and before 'Use pytest to run tests'"
+    }
+  ]
+}

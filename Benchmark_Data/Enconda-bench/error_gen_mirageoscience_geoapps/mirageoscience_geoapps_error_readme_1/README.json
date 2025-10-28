@@ -1,0 +1,29 @@
+{
+  "readme": "mirageoscience_geoapps_error_readme_1",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The main banner image is linked to a specific, outdated release candidate version ('v0.10.0-rc.2') instead of the main branch, which may result in displaying an old or broken image.",
+      "correction_candidates": [
+        "Update the image URL to point to the `main` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/main/docs/images/index_page.png`",
+        "Update the image URL to point to the `develop` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/develop/docs/images/index_page.png`",
+        "Remove the image directive entirely.",
+        "Update the image URL to point to the `latest` tag: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/latest/docs/images/index_page.png`"
+      ],
+      "golden_answer": "Update the image URL to point to the `main` branch: `.. image:: https://github.com/MiraGeoscience/geoapps/raw/main/docs/images/index_page.png`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states 'this project requires Python 3.7 to run', which may conflict with the Python versions badge and cause confusion about actual compatibility.",
+      "correction_candidates": [
+        "Remove the sentence 'Please note that this project requires Python 3.7 to run.'",
+        "Change the sentence to 'Please note that this project requires Python >= 3.8 to run.' to match the likely supported versions.",
+        "Remove the `pyversions` badge to avoid contradiction.",
+        "Change the sentence to 'Check the `pyversions` badge for compatibility details.'"
+      ],
+      "golden_answer": "Remove the sentence 'Please note that this project requires Python 3.7 to run.'"
+    }
+  ]
+}

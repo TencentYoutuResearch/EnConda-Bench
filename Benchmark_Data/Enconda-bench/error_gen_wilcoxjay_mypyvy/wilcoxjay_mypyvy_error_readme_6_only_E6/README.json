@@ -1,0 +1,18 @@
+{
+  "readme": "wilcoxjay_mypyvy_error_readme_6_only_E6",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Placed virtual environment setup suggestion after pip install command instead of before it",
+      "correction_candidates": [
+        "Move the virtual environment suggestion before the pip install command",
+        "Create a virtual environment first, then activate it before installing packages",
+        "Set up virtual environment after installing all system dependencies but before pip packages",
+        "Initialize virtual environment in a separate Dependencies section before package installation"
+      ],
+      "golden_answer": "Move the virtual environment suggestion before the pip install command"
+    }
+  ]
+}

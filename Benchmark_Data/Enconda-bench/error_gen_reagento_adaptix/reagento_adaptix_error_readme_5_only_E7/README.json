@@ -1,0 +1,18 @@
+{
+  "readme": "reagento_adaptix_error_readme_5_only_E7",
+  "repo_name": "reagento_adaptix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect version specified in pip install command - version 2.5.0 instead of the correct 3.0.0b7",
+      "correction_candidates": [
+        "pip install adaptix==3.0.0b7",
+        "pip install adaptix>=3.0.0",
+        "pip install adaptix==3.0.0",
+        "pip install adaptix==3.0.0b6"
+      ],
+      "golden_answer": "pip install adaptix==3.0.0b7"
+    }
+  ]
+}

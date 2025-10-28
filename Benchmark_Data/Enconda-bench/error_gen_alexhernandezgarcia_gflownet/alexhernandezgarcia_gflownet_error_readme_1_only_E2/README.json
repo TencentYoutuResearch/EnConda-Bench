@@ -1,0 +1,18 @@
+{
+  "readme": "alexhernandezgarcia_gflownet_error_readme_1_only_E2",
+  "repo_name": "alexhernandezgarcia_gflownet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to specify the GFlowNet model uses a colon `:` instead of an equals sign `=` for assigning the value `trajectorybalance`, which is incorrect Hydra syntax.",
+      "correction_candidates": [
+        "Replace `gflownet:trajectorybalance` with `gflownet=trajectorybalance`.",
+        "Use `--gflownet trajectorybalance` instead.",
+        "The correct syntax is `gflownet=trajectorybalance`.",
+        "Change the colon to an equals sign: `gflownet=trajectorybalance`."
+      ],
+      "golden_answer": "Replace `gflownet:trajectorybalance` with `gflownet=trajectorybalance`."
+    }
+  ]
+}

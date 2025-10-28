@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_7_only_E2",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed installation command to use 'python2' instead of 'python', which is incorrect for modern Python environments",
+      "correction_candidates": [
+        "$ python -m pip install briefcase",
+        "$ python3 -m pip install briefcase",
+        "$ pip install briefcase",
+        "$ py -m pip install briefcase"
+      ],
+      "golden_answer": "$ python -m pip install briefcase"
+    }
+  ]
+}

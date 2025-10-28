@@ -1,0 +1,29 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_8",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary specific dependency versions that may conflict with dacy's own requirements",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy[all]",
+        "pip install dacy --upgrade",
+        "pip install dacy spacy transformers torch"
+      ],
+      "golden_answer": "pip install dacy"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pinned old versions of dependencies that may be incompatible with current dacy version",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy>=2.0.0",
+        "pip install dacy transformers>=4.20.0 torch>=1.11.0 spacy>=3.4.0",
+        "pip install dacy[transformers]"
+      ],
+      "golden_answer": "pip install dacy"
+    }
+  ]
+}

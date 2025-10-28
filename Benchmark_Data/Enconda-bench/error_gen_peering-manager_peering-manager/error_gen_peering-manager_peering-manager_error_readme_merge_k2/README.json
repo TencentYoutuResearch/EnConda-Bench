@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_peering-manager_peering-manager_error_readme_merge_k2",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README specifies an incorrect path `config/requirements.txt` for the requirements file. The file is located in the root directory.",
+      "correction_candidates": [
+        "Change the path from `config/requirements.txt` to `requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `./requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `project/requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `docs/requirements.txt`."
+      ],
+      "golden_answer": "Change the path from `config/requirements.txt` to `requirements.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly advise installing Python packages globally before creating a virtual environment. The correct order is to create the virtual environment first, then install packages inside it.",
+      "correction_candidates": [
+        "Reverse the order of operations: first, instruct the user to create a virtual environment, and then install the requirements inside it.",
+        "Remove the `sudo` from the `pip install` command.",
+        "Advise installing packages into the user's home directory with `pip install --user` before creating a virtual environment.",
+        "Combine the steps into a single instruction: `virtualenv venv && source venv/bin/activate && pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Reverse the order of operations: first, instruct the user to create a virtual environment, and then install the requirements inside it."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README misleadingly states that the project is compatible with 'any version of Python 3'. This is too broad and likely incorrect, as older, unsupported Python 3 versions (e.g., 3.6) may not work. The original README correctly specified tested versions.",
+      "correction_candidates": [
+        "Change 'This project is compatible with any version of Python 3.' to 'Tested Python versions are 3.10, 3.11 and 3.12.'",
+        "Change 'This project is compatible with any version of Python 3.' to 'This project requires Python 3.10 or newer.'",
+        "Change 'This project is compatible with any version of Python 3.' to 'This project is compatible with Python 3.12 only.'",
+        "Remove the sentence 'This project is compatible with any version of Python 3.'"
+      ],
+      "golden_answer": "Change 'This project is compatible with any version of Python 3.' to 'Tested Python versions are 3.10, 3.11 and 3.12.'"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instruction to create a `production.json` file is incorrect and misleading. Django applications like this one are typically configured via a `settings.py` file, not a separate JSON file.",
+      "correction_candidates": [
+        "Remove the sentence: \"Before running, you must create a `production.json` file to store your database credentials.\"",
+        "Change the sentence to refer to the Django settings file, for example: \"Configuration is handled in the `settings.py` file.\"",
+        "Change the file name to `config.yaml`.",
+        "Change the file name to `.env` and mention using environment variables."
+      ],
+      "golden_answer": "Remove the sentence: \"Before running, you must create a `production.json` file to store your database credentials.\""
+    }
+  ]
+}

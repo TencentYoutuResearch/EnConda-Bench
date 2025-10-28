@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_pygeo_error_readme_4_only_E2",
+  "repo_name": "mdolab_pygeo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `conda create` command uses an incorrect long-form flag `--n` to name the environment. The correct flag is `--name` or the short-form `-n`.",
+      "correction_candidates": [
+        "Correct the command to `conda create --name pygeo_env python=3.9`.",
+        "Correct the command to `conda create -n pygeo_env python=3.9`.",
+        "Use a different command structure: `conda create python=3.9 --name pygeo_env`.",
+        "Create the environment from a file: `conda env create -f environment.yml`."
+      ],
+      "golden_answer": "Correct the command to `conda create --name pygeo_env python=3.9`."
+    }
+  ]
+}

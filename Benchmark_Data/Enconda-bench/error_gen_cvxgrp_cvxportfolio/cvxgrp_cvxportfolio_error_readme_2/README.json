@@ -1,0 +1,29 @@
+{
+  "readme": "cvxgrp_cvxportfolio_error_readme_2",
+  "repo_name": "cvxgrp_cvxportfolio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README vaguely states that testing is done against 'the latest stable python 3 version', removing the specific list of supported versions (3.8-3.12), which can cause compatibility confusion for users on older, but still supported, Python versions.",
+      "correction_candidates": [
+        "Restore the original text: 'We test against recent python versions (3.8, 3.9, 3.10, 3.11, 3.12)'.",
+        "Change the text to: 'We support Python 3.8 and newer'.",
+        "Add a link to the `test.yml` workflow file for users to check compatible versions.",
+        "Change the text to: 'We test against Python >=3.8, <=3.12'."
+      ],
+      "golden_answer": "Restore the original text: 'We test against recent python versions (3.8, 3.9, 3.10, 3.11, 3.12)'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to activate the virtual environment, `source venv/bin/activate`, uses an incorrect directory name `venv`. The setup command `make env` creates a directory named `env`.",
+      "correction_candidates": [
+        "Change the command to `source .env/bin/activate`.",
+        "Change the command to `source env/bin/activate`.",
+        "Advise the user to first rename the `env` directory to `venv`.",
+        "Change the command to `. env/bin/activate`."
+      ],
+      "golden_answer": "Change the command to `source env/bin/activate`."
+    }
+  ]
+}

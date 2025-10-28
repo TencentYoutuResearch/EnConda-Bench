@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_revoxhere_duino-coin_error_readme_merge_k4",
+  "repo_name": "revoxhere_duino-coin",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The Linux manual installation command is missing the `python3-pip` package, which is required to run the `pip` command in the next step.",
+      "correction_candidates": [
+        "In the `apt install` command, add the `python3-pip` package.",
+        "Replace `python3 -m pip install` with `python3 -m easy_install`.",
+        "Run `sudo apt install python3-pip` as a separate command before `git clone`.",
+        "Remove the line `python3 -m pip install -r requirements.txt` as the packages are already installed."
+      ],
+      "golden_answer": "In the `apt install` command, add the `python3-pip` package."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Windows pip installation command is missing the `-r` flag, causing pip to try to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change `py -m pip install requirements.txt` to `py -m pip install -r requirements.txt`.",
+        "Change `py -m pip install requirements.txt` to `pip install from requirements.txt`.",
+        "Manually open `requirements.txt` and install each package one by one using `py -m pip install <package_name>`.",
+        "Change `py -m pip install requirements.txt` to `py -m pip install --requirements requirements.txt`."
+      ],
+      "golden_answer": "Change `py -m pip install requirements.txt` to `py -m pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The Linux installation instructions attempt to install pip dependencies from `requirements.txt` before cloning the repository, so the file is not yet available.",
+      "correction_candidates": [
+        "Move the `python3 -m pip install -r requirements.txt` command to be after the `cd duino-coin` command.",
+        "Combine the `git clone` and `pip install` commands into a single line.",
+        "Change `requirements.txt` to `https://github.com/revoxhere/duino-coin/blob/master/requirements.txt`.",
+        "Remove the `cd duino-coin` command as it is not needed."
+      ],
+      "golden_answer": "Move the `python3 -m pip install -r requirements.txt` command to be after the `cd duino-coin` command."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Windows installation guide omits the critical instruction to add Python to the system's PATH, which can cause the `py` and `pip` commands to fail with a 'command not found' error.",
+      "correction_candidates": [
+        "Add a note specifying that during Python installation, the user must check the box to 'Add Python to PATH'.",
+        "Replace `py` with the full path to the python executable, e.g., `C:\\Python39\\python.exe`.",
+        "Instruct the user to run the commands from the Python IDE (IDLE) instead of the command prompt.",
+        "Add a step to install a specific version of Python, like Python 3.9, which automatically adds itself to PATH."
+      ],
+      "golden_answer": "Add a note specifying that during Python installation, the user must check the box to 'Add Python to PATH'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect dependency file path in Windows installation command (dependencies.txt instead of requirements.txt)",
+      "correction_candidates": [
+        "py -m pip install -r requirements.txt",
+        "py -m pip install -r setup.py",
+        "py -m pip install -r package.json",
+        "py -m pip install -r install.txt"
+      ],
+      "golden_answer": "py -m pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before downloading the installation script in Raspberry Pi section",
+      "correction_candidates": [
+        "Move pip install command after wget and chmod commands",
+        "Remove the pip install command entirely from this section",
+        "Replace pip install with apt-get install command",
+        "Change pip install to use sudo permissions"
+      ],
+      "golden_answer": "Move pip install command after wget and chmod commands"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Using Python 2 instead of Python 3 in Linux installation commands",
+      "correction_candidates": [
+        "Change all python2 references to python3",
+        "Add version specification like python>=3.6",
+        "Use python without version number",
+        "Install both python2 and python3 packages"
+      ],
+      "golden_answer": "Change all python2 references to python3"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax with --version parameter in Windows pip install command",
+      "correction_candidates": [
+        "py -m pip install -r requirements.txt",
+        "python -m pip install -r requirements.txt",
+        "pip3 install -r requirements.txt",
+        "py -3 -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "py -m pip install -r requirements.txt"
+    }
+  ]
+}

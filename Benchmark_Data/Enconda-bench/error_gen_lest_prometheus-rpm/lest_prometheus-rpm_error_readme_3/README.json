@@ -1,0 +1,29 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_3",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The yum repository configuration hardcodes the CentOS version to '7' in the baseurl, which will cause it to fail on CentOS 8 and 9. It should use the `$releasever` variable.",
+      "correction_candidates": [
+        "In the baseurl, replace 'el/7' with 'el/$releasever' to support multiple CentOS versions.",
+        "The baseurl should be 'https://packagecloud.io/prometheus-rpm/release/el/$releasever/$basearch'.",
+        "Change the baseurl to 'https://packagecloud.io/prometheus-rpm/release/el/latest/$basearch'.",
+        "Update the baseurl to use the '$releasever' variable for dynamic version detection, i.e., '.../el/$releasever/$basearch'."
+      ],
+      "golden_answer": "In the baseurl, replace 'el/7' with 'el/$releasever' to support multiple CentOS versions."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command to build a single package, `make build node_exporter`, is incorrect. The 'build' subcommand is not used with make for this target.",
+      "correction_candidates": [
+        "The command is 'make TARGET=node_exporter'.",
+        "Remove the 'build' argument; the command should be 'make node_exporter'.",
+        "Use 'make --package node_exporter' instead of 'make build node_exporter'.",
+        "The build target is specified directly, so run 'make build PKG=node_exporter'."
+      ],
+      "golden_answer": "Remove the 'build' argument; the command should be 'make node_exporter'."
+    }
+  ]
+}

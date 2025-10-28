@@ -1,0 +1,29 @@
+{
+  "readme": "has2k1_plotnine_error_readme_4",
+  "repo_name": "has2k1_plotnine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing with conda is incorrect. It incorrectly uses `conda-forge` as the command instead of specifying it as the channel for the `conda install` command.",
+      "correction_candidates": [
+        "Change the command to \"$ conda install plotnine --from conda-forge\".",
+        "Change the command to \"$ conda install -c conda-forge plotnine\".",
+        "Change the command to \"$ pip install plotnine -f https://conda.anaconda.org/conda-forge/\".",
+        "Change the command to \"$ conda install anaconda/plotnine\"."
+      ],
+      "golden_answer": "Change the command to \"$ conda install -c conda-forge plotnine\"."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction for ensuring consistent test images is incorrect. It suggests installing `freetype-py`, which is the wrong package and procedure. The correct procedure is to build `matplotlib` from source to link against the system's FreeType library correctly.",
+      "correction_candidates": [
+        "Replace the command with \"$ pip install matplotlib --no-binary matplotlib\" and update the explanatory text to mention installing matplotlib from source.",
+        "Change the command to \"$ brew install freetype\" for macOS users.",
+        "Change the command to \"$ pip install --upgrade --force-reinstall matplotlib\".",
+        "Add a note that this step is only required for Windows."
+      ],
+      "golden_answer": "Replace the command with \"$ pip install matplotlib --no-binary matplotlib\" and update the explanatory text to mention installing matplotlib from source."
+    }
+  ]
+}

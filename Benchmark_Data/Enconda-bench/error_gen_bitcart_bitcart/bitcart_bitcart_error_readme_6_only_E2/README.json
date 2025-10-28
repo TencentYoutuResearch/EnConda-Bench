@@ -1,0 +1,18 @@
+{
+  "readme": "bitcart_bitcart_error_readme_6_only_E2",
+  "repo_name": "bitcart_bitcart",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid npm command that doesn't exist for this Python project",
+      "correction_candidates": [
+        "pip install bitcart",
+        "python setup.py install",
+        "git clone https://github.com/bitcart/bitcart && cd bitcart && pip install -e .",
+        "docker run -d bitcart/bitcart"
+      ],
+      "golden_answer": "pip install bitcart"
+    }
+  ]
+}

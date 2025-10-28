@@ -1,0 +1,18 @@
+{
+  "readme": "roboflow_supervision_error_readme_2_only_E1",
+  "repo_name": "roboflow_supervision",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install supervision[full]` attempts to install an optional dependency group named 'full' which does not exist for this package, causing a `pip` error.",
+      "correction_candidates": [
+        "pip install supervision",
+        "pip install supervision --all-extras",
+        "pip install supervision[all]",
+        "pip install \"supervision[full]\""
+      ],
+      "golden_answer": "pip install supervision"
+    }
+  ]
+}

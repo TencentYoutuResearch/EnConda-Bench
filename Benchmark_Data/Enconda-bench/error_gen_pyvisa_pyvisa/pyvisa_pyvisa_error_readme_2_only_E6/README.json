@@ -1,0 +1,18 @@
+{
+  "readme": "pyvisa_pyvisa_error_readme_2_only_E6",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest creating a virtual environment after installing the package, which is the wrong order. The environment should be created and activated before installation.",
+      "correction_candidates": [
+        "Move the 'Recommended Setup' section to be before the 'Installation' section and recommend running installation commands inside the virtual environment.",
+        "Delete the 'Recommended Setup' section entirely.",
+        "Change the instruction to 'It is recommended to create a virtual environment *before* installing packages.'",
+        "The `pip install` command should be run inside the virtual environment."
+      ],
+      "golden_answer": "Move the 'Recommended Setup' section to be before the 'Installation' section and recommend running installation commands inside the virtual environment."
+    }
+  ]
+}

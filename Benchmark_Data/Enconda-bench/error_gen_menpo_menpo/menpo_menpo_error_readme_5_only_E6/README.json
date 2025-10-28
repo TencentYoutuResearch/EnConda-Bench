@@ -1,0 +1,18 @@
+{
+  "readme": "menpo_menpo_error_readme_5_only_E6",
+  "repo_name": "menpo_menpo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Mixed pip and conda installation commands in wrong order, showing pip install before conda install for the same package",
+      "correction_candidates": [
+        "conda install -c conda-forge menpo",
+        "pip install menpo && conda install -c conda-forge menpo",
+        "conda create -n menpo && conda install -c conda-forge menpo",
+        "conda install menpo"
+      ],
+      "golden_answer": "conda install -c conda-forge menpo"
+    }
+  ]
+}

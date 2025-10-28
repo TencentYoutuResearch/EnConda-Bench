@@ -1,0 +1,18 @@
+{
+  "readme": "mopidy_mopidy_error_readme_1_only_E2",
+  "repo_name": "mopidy_mopidy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `mopidy --create-config` is invalid for running the server. The correct command to simply run Mopidy is `mopidy`, and to print a default configuration is `mopidy config`.",
+      "correction_candidates": [
+        "Replace `mopidy --create-config` with `mopidy` to start the server.",
+        "Replace `mopidy --create-config` with `mopidy config > ~/.config/mopidy/mopidy.conf` to create a configuration file.",
+        "Replace `mopidy --create-config` with `mopidy --save-config`.",
+        "Remove the line `mopidy --create-config` entirely as Mopidy creates a default config path on first run."
+      ],
+      "golden_answer": "Replace `mopidy --create-config` with `mopidy` to start the server."
+    }
+  ]
+}

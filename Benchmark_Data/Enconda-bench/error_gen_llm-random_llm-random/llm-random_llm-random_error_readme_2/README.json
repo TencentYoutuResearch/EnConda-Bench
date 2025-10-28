@@ -1,0 +1,29 @@
+{
+  "readme": "llm-random_llm-random_error_readme_2",
+  "repo_name": "llm-random_llm-random",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions omit the step of installing dependencies from a requirements file, incorrectly suggesting manual installation of a few packages.",
+      "correction_candidates": [
+        "This will create a virtual environment, install requirements and set up git hooks.",
+        "This will create a virtual environment, install requirements from `requirements.txt` and set up git hooks.",
+        "Run `pip install -e .` after running the script to install all necessary dependencies.",
+        "This will create a virtual environment and set up git hooks. Then run `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "This will create a virtual environment, install requirements and set up git hooks."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the baseline experiment configuration template is incorrect, referencing `config/` instead of `configs/`.",
+      "correction_candidates": [
+        "Use the baseline configuration as a template, which is in `configs/test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `lizrd/configs/test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `configs/test_baseline.yaml`."
+      ],
+      "golden_answer": "Use the baseline configuration as a template, which is in `configs/test/test_baseline.yaml`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "vacanza_python-holidays_error_readme_2_only_E7",
+  "repo_name": "vacanza_python-holidays",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library only supports Python 3.7. The PyPI badge shows support for a wider range of Python versions (3.8, 3.9, 3.10, 3.11, 3.12).",
+      "correction_candidates": [
+        "Change the sentence to 'Note: This library currently only supports Python 3.7 and above.'",
+        "Remove the sentence 'Note: This library currently only supports Python 3.7.'",
+        "Change the sentence to 'Note: This library supports Python 2.7 and 3.7.'",
+        "Update the Python versions badge to only show support for Python 3.7."
+      ],
+      "golden_answer": "Remove the sentence 'Note: This library currently only supports Python 3.7.'"
+    }
+  ]
+}

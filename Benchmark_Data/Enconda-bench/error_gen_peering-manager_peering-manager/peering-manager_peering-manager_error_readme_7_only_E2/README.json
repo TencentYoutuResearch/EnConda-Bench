@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_7_only_E2",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax mixing installation command with setup approach description",
+      "correction_candidates": [
+        "The best way to start setting up this tool is to use **pip** within a **virtualenv**.",
+        "The best way to start setting up this tool is to run **pip install -r requirements.txt** after creating a **virtualenv**.",
+        "The best way to start setting up this tool is to use **conda install** within a **conda environment**.",
+        "The best way to start setting up this tool is to execute **python setup.py install** in a **virtualenv**."
+      ],
+      "golden_answer": "The best way to start setting up this tool is to use **pip** within a **virtualenv**."
+    }
+  ]
+}

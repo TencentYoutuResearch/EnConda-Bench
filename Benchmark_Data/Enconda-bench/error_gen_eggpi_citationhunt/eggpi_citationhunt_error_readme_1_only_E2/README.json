@@ -1,0 +1,18 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_1_only_E2",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `webservice` command to start the service uses an incorrect parameter `--start`. The correct syntax is to use `start` as a subcommand without dashes.",
+      "correction_candidates": [
+        "Replace `webservice --backend=kubernetes python3.9 --start` with `webservice --backend=kubernetes python3.9 start`.",
+        "Change the command to `webservice start --backend=kubernetes python3.9`.",
+        "Replace `--start` with `run`.",
+        "The command is correct, but requires `sudo` privileges to run."
+      ],
+      "golden_answer": "Replace `webservice --backend=kubernetes python3.9 --start` with `webservice --backend=kubernetes python3.9 start`."
+    }
+  ]
+}

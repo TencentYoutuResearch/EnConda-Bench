@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_7_only_E1",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing taipy package with version constraint when the repository is archived and users should refer to the main taipy repository instead",
+      "correction_candidates": [
+        "Remove the pip install command since the repository is archived",
+        "Change to pip install taipy-core for the specific archived component",
+        "Add instructions to clone the main taipy repository instead",
+        "Update the command to pip install taipy[all] for full installation"
+      ],
+      "golden_answer": "Remove the pip install command since the repository is archived"
+    }
+  ]
+}

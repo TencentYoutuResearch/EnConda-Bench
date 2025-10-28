@@ -1,0 +1,18 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_1_only_E2",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to build all packages is `make --all`, which is incorrect syntax for the make utility. It should be `make all`.",
+      "correction_candidates": [
+        "make all",
+        "make build all",
+        "make build --all",
+        "make-all"
+      ],
+      "golden_answer": "make all"
+    }
+  ]
+}

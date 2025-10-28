@@ -1,0 +1,18 @@
+{
+  "readme": "bradyajohnston_molecularnodes_error_readme_4_only_E1",
+  "repo_name": "bradyajohnston_molecularnodes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README instructs users to manually install Python packages using pip. This is incorrect because the addon manages its own dependencies internally upon first activation.",
+      "correction_candidates": [
+        "Change `pip install` to `conda install -c conda-forge`.",
+        "Add the `--user` flag to the `pip install` command.",
+        "The packages should be installed into Blender's internal Python environment, not the system Python.",
+        "The addon handles the installation of its own dependencies; this command is unnecessary and may cause issues."
+      ],
+      "golden_answer": "The addon handles the installation of its own dependencies; this command is unnecessary and may cause issues."
+    }
+  ]
+}

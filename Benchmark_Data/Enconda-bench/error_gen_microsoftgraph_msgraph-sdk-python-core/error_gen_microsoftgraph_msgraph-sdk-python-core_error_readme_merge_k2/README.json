@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_microsoftgraph_msgraph-sdk-python-core_error_readme_merge_k2",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies Python 3.6+ as a prerequisite, but the library's async features require Python 3.8+, which may cause compatibility issues.",
+      "correction_candidates": [
+        "Change the prerequisite to `Python 3.7+`.",
+        "Change the prerequisite to `Python 3.8+`.",
+        "Add a note saying `asyncio` must be installed separately for Python 3.6.",
+        "Change the prerequisite to `Python 3.6+ or Python 2.7+`."
+      ],
+      "golden_answer": "Change the prerequisite to `Python 3.8+`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are missing the `azure-identity` package, which is required for the authentication provider shown in the example code.",
+      "correction_candidates": [
+        "Add `pip3 install azure.identity.aio` to the installation commands.",
+        "Add `pip3 install azure-identity` to the installation commands.",
+        "Replace `pip3 install msgraph-core` with `pip3 install msgraph-core[azure]` to install optional dependencies.",
+        "Add `pip3 install microsoft-authentication-library-for-python` to the installation commands."
+      ],
+      "golden_answer": "Add `pip3 install azure-identity` to the installation commands."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions show how to configure the authentication provider (Step 2) before telling the user to install the required packages (Step 3), which is an incorrect logical order.",
+      "correction_candidates": [
+        "Combine the installation and configuration steps into a single step.",
+        "Move the 'Install the required packages' step to be before the 'Configure an Authentication Provider Object' step.",
+        "Move the 'Register your application' step to be last.",
+        "Add a note at the beginning of the 'Getting started' section to install all packages first."
+      ],
+      "golden_answer": "Move the 'Install the required packages' step to be before the 'Configure an Authentication Provider Object' step."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install msgraph-core==latest` uses invalid syntax. The `==latest` tag is not a valid way to specify the latest version in pip.",
+      "correction_candidates": [
+        "Change the command to `pip install msgraph-core --latest`.",
+        "Change the command to `pip install msgraph-core --upgrade`.",
+        "Change the command to `pip install msgraph-core`.",
+        "Change the command to `pip install msgraph-core@latest`."
+      ],
+      "golden_answer": "Change the command to `pip install msgraph-core`."
+    }
+  ]
+}

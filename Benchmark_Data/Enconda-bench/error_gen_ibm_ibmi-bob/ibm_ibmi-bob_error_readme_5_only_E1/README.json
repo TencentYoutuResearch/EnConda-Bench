@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_5_only_E1",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "References a non-existent pip package 'bob-dependencies' that doesn't exist",
+      "correction_candidates": [
+        "Remove the pip install command entirely as Bob doesn't require Python dependencies",
+        "Change to 'pip install ibmi-bob' to install the correct package",
+        "Replace with 'npm install bob-dependencies' for Node.js installation",
+        "Use 'conda install bob-dependencies' instead of pip"
+      ],
+      "golden_answer": "Remove the pip install command entirely as Bob doesn't require Python dependencies"
+    }
+  ]
+}

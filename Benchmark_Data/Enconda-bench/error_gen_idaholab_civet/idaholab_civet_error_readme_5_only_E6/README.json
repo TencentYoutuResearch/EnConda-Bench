@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_5_only_E6",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing dependencies before creating and activating virtual environment",
+      "correction_candidates": [
+        "Move virtual environment activation before pip install commands",
+        "Create virtual environment with python -m venv venv first",
+        "Use conda environment instead of venv",
+        "Install system-wide without virtual environment"
+      ],
+      "golden_answer": "Move virtual environment activation before pip install commands"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "spec-first_connexion_error_readme_3",
+  "repo_name": "spec-first_connexion",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The gunicorn command in the 'Running your application' section incorrectly specifies the worker class as `uvicorn_worker`. The correct value is `uvicorn.workers.UvicornWorker`.",
+      "correction_candidates": [
+        "$ gunicorn -k uvicorn.workers.UvicornWorker run:app",
+        "$ gunicorn --worker-class uvicorn.workers.UvicornWorker run:app",
+        "$ gunicorn -k uvicorn run:app",
+        "$ gunicorn -w 4 -k uvicorn.workers.UvicornWorker run:app"
+      ],
+      "golden_answer": "$ gunicorn -k uvicorn.workers.UvicornWorker run:app"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Contributing' section incorrectly states that 'Older versions of Python like 3.6 are supported.' Connexion 3 requires Python 3.8 or higher, which can cause compatibility issues for developers.",
+      "correction_candidates": [
+        "Remove the sentence: 'Older versions of Python like 3.6 are supported.'",
+        "Change 'Older versions of Python like 3.6 are supported.' to 'Connexion requires Python 3.8 or newer.'",
+        "Change the poetry command to `poetry env use python3.8` before installing.",
+        "Add a check for the Python version to the pre-commit hooks."
+      ],
+      "golden_answer": "Change 'Older versions of Python like 3.6 are supported.' to 'Connexion requires Python 3.8 or newer.'"
+    }
+  ]
+}

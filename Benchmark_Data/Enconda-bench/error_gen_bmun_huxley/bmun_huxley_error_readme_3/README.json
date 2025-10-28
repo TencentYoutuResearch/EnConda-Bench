@@ -1,0 +1,29 @@
+{
+  "readme": "bmun_huxley_error_readme_3",
+  "repo_name": "bmun_huxley",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `pip install` command points to a non-existent `requirements.txt` file in the project root, while the actual dependencies are located in `requirements/local.txt`.",
+      "correction_candidates": [
+        "Change the file path in the command to `pip install -r requirements/local.txt`.",
+        "Create a `requirements.txt` file by running `pip freeze > requirements.txt`.",
+        "Move the `local.txt` file from the `requirements` directory to the project root and rename it to `requirements.txt`.",
+        "Run `pip install django djangorestframework psycopg2` instead of using a requirements file."
+      ],
+      "golden_answer": "Change the file path in the command to `pip install -r requirements/local.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The instructions suggest using `./manage.py createdb` to set up the database, but this is not a standard Django management command and will fail.",
+      "correction_candidates": [
+        "Change the command to `python manage.py initdb`.",
+        "The database should be created using the native PostgreSQL command `createdb huxley` in the shell, after ensuring the user has the correct permissions.",
+        "The command should be `python manage.py db create`.",
+        "Remove this step, as `migrate` will create the database automatically."
+      ],
+      "golden_answer": "The database should be created using the native PostgreSQL command `createdb huxley` in the shell, after ensuring the user has the correct permissions."
+    }
+  ]
+}

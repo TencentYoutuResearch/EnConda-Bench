@@ -1,0 +1,18 @@
+{
+  "readme": "datamol-io_graphium_error_readme_1_only_E6",
+  "repo_name": "datamol-io_graphium",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation commands are in the wrong order. `pip install` is run before activating the mamba environment, which means the package will be installed in the wrong environment.",
+      "correction_candidates": [
+        "pip install --no-deps -e . && mamba activate graphium",
+        "mamba activate graphium && pip install --no-deps -e .",
+        "mamba install graphium && pip install --no-deps -e .",
+        "conda activate graphium && pip install -e ."
+      ],
+      "golden_answer": "mamba activate graphium && pip install --no-deps -e ."
+    }
+  ]
+}

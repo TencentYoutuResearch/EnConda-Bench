@@ -1,0 +1,18 @@
+{
+  "readme": "castagnait_plugin.video.netflix_error_readme_2_only_E2",
+  "repo_name": "castagnait_plugin.video.netflix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README suggests using a non-existent context menu option 'Disable sync' to exclude a show from auto-update.",
+      "correction_candidates": [
+        "The correct context menu option is `Exclude from library update`.",
+        "The correct context menu option is `Netflix: Maintenance -> Exclude from sync`.",
+        "The correct context menu option is `Manage -> Exclude from auto update`.",
+        "The correct context menu option is `Exclude from auto update`."
+      ],
+      "golden_answer": "The correct context menu option is `Exclude from auto update`."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_lightkurve_lightkurve_error_readme_merge_k2",
+  "repo_name": "lightkurve_lightkurve",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that Lightkurve requires Python 2.7, which is outdated and incompatible. The package requires a modern version of Python 3.",
+      "correction_candidates": [
+        "Remove the sentence stating that Lightkurve requires Python 2.7.",
+        "Change the sentence to state that Lightkurve is compatible with Python 3.8 and higher.",
+        "Replace 'Python 2.7' with 'the latest version of Python 3'.",
+        "Add a note that while Python 2.7 is mentioned, Python 3 is recommended."
+      ],
+      "golden_answer": "Remove the sentence stating that Lightkurve requires Python 2.7."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands to clone the repository and change into the new directory are in the wrong logical order. The user is instructed to `cd` into the directory before it has been created by `git clone`.",
+      "correction_candidates": [
+        "Swap the `cd lightkurve` and `git clone` commands. The correct order is `git clone` first, then `cd`.",
+        "Combine the commands into a single line: `$ git clone https://github.com/lightkurve/lightkurve.git && cd lightkurve`.",
+        "Replace `$ cd lightkurve` with `$ mkdir lightkurve && cd lightkurve`.",
+        "Remove the `$ cd lightkurve` command entirely."
+      ],
+      "golden_answer": "Swap the `cd lightkurve` and `git clone` commands. The correct order is `git clone` first, then `cd`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package from the cloned source directory is incorrect. It uses `pip install lightkurve`, which installs from PyPI, instead of `pip install .`, which installs from the local directory.",
+      "correction_candidates": [
+        "Change `$ python -m pip install lightkurve` to `$ python -m pip install .`",
+        "Change `$ python -m pip install lightkurve` to `$ python setup.py install`",
+        "Add the `--no-index --find-links=.` flags to the existing command.",
+        "Change `$ python -m pip install lightkurve` to `$ python -m pip install -e .`"
+      ],
+      "golden_answer": "Change `$ python -m pip install lightkurve` to `$ python -m pip install .`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the authors list in the 'Contact' section points to a non-existent file `CONTRIBUTORS.md` instead of the correct `AUTHORS.rst`.",
+      "correction_candidates": [
+        "Change `CONTRIBUTORS.md` back to `AUTHORS.rst`.",
+        "Change the text to link to the GitHub contributors page.",
+        "Remove the link and the phrase `the authors`.",
+        "Create a new file named `CONTRIBUTORS.md` with the author information."
+      ],
+      "golden_answer": "Change `CONTRIBUTORS.md` back to `AUTHORS.rst`."
+    }
+  ]
+}

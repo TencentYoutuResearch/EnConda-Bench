@@ -1,0 +1,18 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_5_only_E2",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command using pip2 instead of pip3 for Python 3 installation",
+      "correction_candidates": [
+        "pip3 install androidviewclient --upgrade",
+        "python -m pip install androidviewclient --upgrade",
+        "pip install androidviewclient --upgrade",
+        "conda install androidviewclient --upgrade"
+      ],
+      "golden_answer": "pip3 install androidviewclient --upgrade"
+    }
+  ]
+}

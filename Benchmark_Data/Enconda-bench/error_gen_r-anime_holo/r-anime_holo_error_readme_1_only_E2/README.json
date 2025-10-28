@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_1_only_E2",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to set up the database is incorrect. The `--setup` flag is used instead of the correct `-m setup` module command.",
+      "correction_candidates": [
+        "python src/holo.py -m setup_database",
+        "python src/holo.py --init-db",
+        "python src/holo.py setup",
+        "python src/holo.py -m setup"
+      ],
+      "golden_answer": "python src/holo.py -m setup"
+    }
+  ]
+}

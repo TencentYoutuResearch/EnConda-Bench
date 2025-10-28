@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_1_only_E7",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "A sentence incorrectly states that the library is only for Python 2, while it supports modern Python versions as well.",
+      "correction_candidates": [
+        "Remove the sentence 'This library is designed for use with Python 2.'",
+        "Change the sentence to 'This library supports Python 2.7 and 3.5+.'",
+        "Change the sentence to 'This library is primarily for Python 3, with legacy support for Python 2.'",
+        "Add a note: 'For Python 3, please install version 7.0.0 or later.'"
+      ],
+      "golden_answer": "Remove the sentence 'This library is designed for use with Python 2.'"
+    }
+  ]
+}

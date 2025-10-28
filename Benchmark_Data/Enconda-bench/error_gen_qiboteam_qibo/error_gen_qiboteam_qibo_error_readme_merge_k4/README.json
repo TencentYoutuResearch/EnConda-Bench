@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_qiboteam_qibo_error_readme_merge_k4",
+  "repo_name": "qiboteam_qibo",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install \"qibo[tensorflow-gpu]\"` is incorrect because 'tensorflow-gpu' is not a valid installation extra for Qibo. This will cause a dependency resolution error.",
+      "correction_candidates": [
+        "pip install \"qibo[tensorflow]\"",
+        "pip install \"qibo[cupy]\"",
+        "pip install \"qibo[all]\"",
+        "pip install qibo tensorflow"
+      ],
+      "golden_answer": "pip install \"qibo[all]\""
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The statement 'Qibo is only compatible with Python 3.8' is incorrect and overly restrictive. The PyPI badge indicates compatibility with a wider range of Python versions.",
+      "correction_candidates": [
+        "Qibo is compatible with Python versions 3.8 and newer.",
+        "Please refer to the `pyproject.toml` file for the exact list of supported Python versions.",
+        "The recommended Python version for Qibo is 3.10.",
+        "Remove the sentence specifying the Python version."
+      ],
+      "golden_answer": "Qibo is compatible with Python versions 3.8 and newer."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. `pip install` is executed before the virtual environment is created and activated, causing the package to be installed in the global Python environment instead of the isolated one.",
+      "correction_candidates": [
+        "The `pip install` command should be run after activating the virtual environment with `source venv/bin/activate`.",
+        "Correct order: `python3 -m venv venv`, then `source venv/bin/activate`, then `pip install 'qibo[all]'`.",
+        "Move the line `pip install qibo --extras all` to be the last step in the installation process.",
+        "Activate the environment using `source venv/bin/activate` before installing any packages."
+      ],
+      "golden_answer": "Correct order: `python3 -m venv venv`, then `source venv/bin/activate`, then `pip install 'qibo[all]'`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install qibo --extras all` uses an invalid syntax for installing optional dependencies. The correct syntax uses brackets, like `qibo[all]`.",
+      "correction_candidates": [
+        "pip install \"qibo[all]\"",
+        "pip install qibo --install-option=\"--with-all-extras\"",
+        "python -m pip install qibo --all",
+        "pip install qibo && pip install qibo-tensorflow qibo-cupy"
+      ],
+      "golden_answer": "pip install \"qibo[all]\""
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the first code example, the line `final_state = circuit(initial_state)` will raise a `NameError` because the `initial_state` variable is not defined anywhere in the example.",
+      "correction_candidates": [
+        "Change `final_state = circuit(initial_state)` to `final_state = circuit()` to use the default initial state.",
+        "Define the initial state before using it, for example: `import numpy as np; initial_state = np.zeros(2**15); initial_state[0] = 1`.",
+        "The `circuit` object is called directly. The line should be `final_state = circuit()`.",
+        "Replace `circuit(initial_state)` with `circuit.execute()`."
+      ],
+      "golden_answer": "Change `final_state = circuit(initial_state)` to `final_state = circuit()` to use the default initial state."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the second example, `c.execute(100)` is incorrect. The number of shots must be passed as a keyword argument, `nshots`, not as a positional argument.",
+      "correction_candidates": [
+        "The `execute` method requires the `nshots` keyword argument. The line should be `result = c.execute(nshots=100)`.",
+        "Change `result = c.execute(100)` to `result = c(nshots=100)` to use the circuit's `__call__` method.",
+        "The correct syntax is `result = c(shots=100)`.",
+        "The number of shots should be passed as a dictionary: `result = c.execute(options={'nshots': 100})`."
+      ],
+      "golden_answer": "Change `result = c.execute(100)` to `result = c(nshots=100)` to use the circuit's `__call__` method."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Installation command references a requirements file path that likely doesn't exist in the repository",
+      "correction_candidates": [
+        "Use 'pip install qibo' instead of referencing a requirements file",
+        "Change path to 'requirements.txt' in the root directory",
+        "Use 'pip install -e .' for development installation",
+        "Reference the correct path 'requirements/dev-requirements.txt'"
+      ],
+      "golden_answer": "Use 'pip install qibo' instead of referencing a requirements file"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "States that Qibo requires Python 2.7, which is outdated and incompatible with modern quantum computing libraries",
+      "correction_candidates": [
+        "Qibo requires Python 3.8 or later for optimal performance",
+        "Qibo supports Python 3.6+ with some features requiring 3.9+",
+        "Remove the Python version requirement statement entirely",
+        "Qibo requires Python 3.7 or later with NumPy 1.19+"
+      ],
+      "golden_answer": "Qibo requires Python 3.8 or later for optimal performance"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "ucoproject_uco_error_readme_6_only_E2",
+  "repo_name": "ucoproject_uco",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax using non-existent --config parameter for setup.py install",
+      "correction_candidates": [
+        "Use pip install . to install the package from the current directory",
+        "Use python setup.py install without any parameters",
+        "Use python setup.py build followed by python setup.py install",
+        "Use pip install -e . for development installation"
+      ],
+      "golden_answer": "Use python setup.py install without any parameters"
+    }
+  ]
+}

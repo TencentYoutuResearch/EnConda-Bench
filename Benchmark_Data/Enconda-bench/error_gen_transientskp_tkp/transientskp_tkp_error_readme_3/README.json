@@ -1,0 +1,29 @@
+{
+  "readme": "transientskp_tkp_error_readme_3",
+  "repo_name": "transientskp_tkp",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `apt-get install` command is missing the `-y` flag, which will cause the installation process to hang while waiting for user confirmation, breaking any automated setup scripts.",
+      "correction_candidates": [
+        "The command should be run without `sudo`.",
+        "The `apt-get update` command is unnecessary and should be removed.",
+        "The `-y` flag should be added to automatically confirm the installation: `sudo apt-get install -y python3-dev libpq-dev`.",
+        "The command should use `aptitude` instead: `sudo aptitude install python3-dev libpq-dev`."
+      ],
+      "golden_answer": "The `-y` flag should be added to automatically confirm the installation: `sudo apt-get install -y python3-dev libpq-dev`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to install Python dependencies points to a non-existent file `requirements/dev.txt`. The correct file is likely `requirements.txt` in the project root.",
+      "correction_candidates": [
+        "The command should be `pip install -e .` to install in editable mode from `setup.py`.",
+        "The correct file path is `requirements.txt`, so the command should be `pip install -r requirements.txt`.",
+        "You need to create the `requirements/dev.txt` file first by copying it from an example file.",
+        "The correct command is `pip install -r requirements/requirements.txt`."
+      ],
+      "golden_answer": "The correct file path is `requirements.txt`, so the command should be `pip install -r requirements.txt`."
+    }
+  ]
+}

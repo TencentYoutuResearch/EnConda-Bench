@@ -1,0 +1,18 @@
+{
+  "readme": "pika_pika_error_readme_1_only_E2",
+  "repo_name": "pika_pika",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `basic_publish` example uses an incorrect keyword argument `message` instead of `body`.",
+      "correction_candidates": [
+        "Change `message=b'Test message.'` to `body=b'Test message.'`",
+        "Change `channel.basic_publish` to `channel.publish`.",
+        "Change `message=b'Test message.'` to `payload=b'Test message.'`",
+        "Add `properties=pika.BasicProperties(content_type='text/plain', delivery_mode=1)` to the `basic_publish` call."
+      ],
+      "golden_answer": "Change `message=b'Test message.'` to `body=b'Test message.'`"
+    }
+  ]
+}

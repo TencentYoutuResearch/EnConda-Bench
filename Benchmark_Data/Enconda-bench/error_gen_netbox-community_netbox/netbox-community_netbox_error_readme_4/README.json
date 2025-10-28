@@ -1,0 +1,29 @@
+{
+  "readme": "netbox-community_netbox_error_readme_4",
+  "repo_name": "netbox-community_netbox",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions attempt to install system services (PostgreSQL and Redis) using `pip`, which is incorrect. `pip` is for Python packages, and these services must be installed using a system package manager like `apt` or `yum`.",
+      "correction_candidates": [
+        "Replace `pip install postgresql redis` with `sudo apt-get install postgresql redis-server`.",
+        "Change the command to `sudo pip install postgresql-server redis-server`.",
+        "Run `pip install psycopg2-binary redis` instead, which are the correct Python clients.",
+        "Remove the step, as these are optional dependencies."
+      ],
+      "golden_answer": "Replace `pip install postgresql redis` with `sudo apt-get install postgresql redis-server`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. It instructs to run database migrations (`manage.py migrate`) before configuring the database connection in `configuration.py` and before installing the necessary Python dependencies (like Django) via `pip`.",
+      "correction_candidates": [
+        "Move the 'Apply Database Migrations' step to be the last step, after configuration and dependency installation.",
+        "Reorder the steps to be: 1. System Dependencies, 2. Python Dependencies, 3. Configure NetBox, 4. Apply Migrations.",
+        "Combine all commands into a single script to ensure correct order.",
+        "Run `python3 manage.py migrate --no-deps` to skip dependency checks."
+      ],
+      "golden_answer": "Reorder the steps to be: 1. System Dependencies, 2. Python Dependencies, 3. Configure NetBox, 4. Apply Migrations."
+    }
+  ]
+}

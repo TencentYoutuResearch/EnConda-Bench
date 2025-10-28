@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_6_only_E4",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file path for activation script - should be in the venv directory, not config directory",
+      "correction_candidates": [
+        "source /.../python-zulip-api/.../activate",
+        "source /.../python-zulip-api/venv/bin/activate",
+        "source /.../python-zulip-api/bin/activate",
+        "source /.../python-zulip-api/scripts/activate"
+      ],
+      "golden_answer": "source /.../python-zulip-api/.../activate"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_4_only_E7",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README provides a vague Python version requirement ('a recent version of Python 3'), which can lead to users trying to install on an unsupported version like Python 3.7.",
+      "correction_candidates": [
+        "Mpmath requires Python 3.8 or later versions.",
+        "Mpmath requires Python >= 3.8.",
+        "Mpmath requires Python version 3.8, 3.9, 3.10, 3.11, 3.12, or 3.13.",
+        "Mpmath requires Python 3.8 or a newer version."
+      ],
+      "golden_answer": "Mpmath requires Python 3.8 or later versions."
+    }
+  ]
+}

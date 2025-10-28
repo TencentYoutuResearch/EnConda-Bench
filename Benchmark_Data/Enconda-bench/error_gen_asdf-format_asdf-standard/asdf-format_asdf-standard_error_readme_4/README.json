@@ -1,0 +1,29 @@
+{
+  "readme": "asdf-format_asdf-standard_error_readme_4",
+  "repo_name": "asdf-format_asdf-standard",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for development tools is missing the 'pre-commit' package, which is necessary for running the git hooks mentioned in the next step.",
+      "correction_candidates": [
+        "Add `pre-commit` to the `pip install` command: `pip install black isort pre-commit`.",
+        "Install pre-commit separately using `pip install --user pre-commit`.",
+        "The project does not require pre-commit for development, it's optional.",
+        "Install pre-commit using `conda install -c conda-forge pre-commit`."
+      ],
+      "golden_answer": "Add `pre-commit` to the `pip install` command: `pip install black isort pre-commit`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'sphinx-build docs docs/_build' is syntactically incorrect for building HTML documentation. It is missing the builder name flag, `-b`, and should specify the output format (e.g., 'html').",
+      "correction_candidates": [
+        "sphinx-build -b html docs/ docs/_build/html",
+        "make html",
+        "sphinx-build --builder html --source-dir docs --output-dir docs/_build",
+        "cd docs && sphinx-build . _build"
+      ],
+      "golden_answer": "sphinx-build -b html docs/ docs/_build/html"
+    }
+  ]
+}

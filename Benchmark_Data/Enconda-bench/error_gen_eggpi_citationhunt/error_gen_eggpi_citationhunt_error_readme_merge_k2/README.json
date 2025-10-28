@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_eggpi_citationhunt_error_readme_merge_k2",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `pip install` command is executed before the `git clone` command. This will fail because the `citationhunt/requirements.txt` file does not exist until the repository is cloned.",
+      "correction_candidates": [
+        "Execute `pip install git+https://github.com/eggpi/citationhunt.git#egg=citationhunt` before the `git clone` command.",
+        "Correct the order by executing `git clone https://github.com/eggpi/citationhunt.git` before `pip install -r citationhunt/requirements.txt`.",
+        "Change the command to `pip install requests` since that is the main dependency.",
+        "Remove the `pip install` command entirely and run it after starting the webservice."
+      ],
+      "golden_answer": "Correct the order by executing `git clone https://github.com/eggpi/citationhunt.git` before `pip install -r citationhunt/requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `webservice` command to start the service uses an incorrect parameter `--start`. The correct syntax is to use `start` as a subcommand without dashes.",
+      "correction_candidates": [
+        "Replace `webservice --backend=kubernetes python3.9 --start` with `webservice --backend=kubernetes python3.9 start`.",
+        "Change the command to `webservice start --backend=kubernetes python3.9`.",
+        "Replace `--start` with `run`.",
+        "The command is correct, but requires `sudo` privileges to run."
+      ],
+      "golden_answer": "Replace `webservice --backend=kubernetes python3.9 --start` with `webservice --backend=kubernetes python3.9 start`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The symbolic link command `ln -s ../citationhunt www/python/src` uses an incorrect relative path. From the user's home directory (`~`), the `www/python/src` link target requires a source path of `../../citationhunt`, not `../citationhunt`.",
+      "correction_candidates": [
+        "Use an absolute path instead: `ln -s ~/citationhunt www/python/src`.",
+        "Correct the relative path in the command to `ln -s ../../citationhunt www/python/src`.",
+        "First `cd www/python` and then run `ln -s ../../citationhunt src`.",
+        "Clone the repository directly into the `www/python` directory."
+      ],
+      "golden_answer": "Correct the relative path in the command to `ln -s ../../citationhunt www/python/src`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command is missing the `-r` flag. Without it, pip attempts to install a package named 'citationhunt/requirements.txt' from PyPI instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Add the `-r` flag to the command: `pip install -r citationhunt/requirements.txt`.",
+        "Use the long-form flag: `pip install --requirement citationhunt/requirements.txt`.",
+        "First change directory with `cd citationhunt` and then run `pip install -r requirements.txt`.",
+        "Replace the command with `pip install -e ./citationhunt`."
+      ],
+      "golden_answer": "Add the `-r` flag to the command: `pip install -r citationhunt/requirements.txt`."
+    }
+  ]
+}

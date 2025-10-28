@@ -1,0 +1,29 @@
+{
+  "readme": "bmun_huxley_error_readme_1",
+  "repo_name": "bmun_huxley",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally before the virtual environment is created and activated, which can lead to system-wide package conflicts.",
+      "correction_candidates": [
+        "Move the `pip install` command to be after the `source venv/bin/activate` command.",
+        "Run `pip install --user -r requirements/local.txt` to install dependencies for the current user.",
+        "Remove the virtual environment setup and install dependencies globally.",
+        "Use `conda` instead of `venv` for environment management."
+      ],
+      "golden_answer": "Move the `pip install` command to be after the `source venv/bin/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the Django development server is incorrect. `./manage.py run` is not a valid Django management command.",
+      "correction_candidates": [
+        "Use the command `python manage.py start` to run the server.",
+        "Correct the command to `./manage.py runserver`.",
+        "Use the command `django-admin runserver` instead.",
+        "The command should be `python run.py`."
+      ],
+      "golden_answer": "Correct the command to `./manage.py runserver`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_8_only_E8",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Import statement references non-existent or internal module gpkit.tools.docstring",
+      "correction_candidates": [
+        "Remove the import gpkit.tools.docstring line entirely",
+        "Change to import gpkit.tools.autosweep as common alternative",
+        "Change to from gpkit import Variable, Model only",
+        "Change to import gpkit.constraints as more relevant import"
+      ],
+      "golden_answer": "Remove the import gpkit.tools.docstring line entirely"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "emdgroup_baybe_error_readme_4",
+  "repo_name": "emdgroup_baybe",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package in editable mode with 'dev' extras is missing quotes around '.[dev]'. This will be misinterpreted by many shells and lead to a syntax error.",
+      "correction_candidates": [
+        "pip install -e '.[dev]'",
+        "pip install -e . --extras dev",
+        "pip install --editable \".[dev]\"",
+        "pip install -e .[dev] --verbose"
+      ],
+      "golden_answer": "pip install -e '.[dev]'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The recommended command for installing optional dependencies includes 'deploy', which is not a valid dependency group listed in the README. This will cause pip to fail with a 'no such extra' error.",
+      "correction_candidates": [
+        "pip install 'baybe[chem,simulation]'",
+        "pip install 'baybe[chem]' 'baybe[deploy]'",
+        "pip install 'baybe[all]'",
+        "pip install 'baybe[chem,onnx,simulation]'"
+      ],
+      "golden_answer": "pip install 'baybe[chem,simulation]'"
+    }
+  ]
+}

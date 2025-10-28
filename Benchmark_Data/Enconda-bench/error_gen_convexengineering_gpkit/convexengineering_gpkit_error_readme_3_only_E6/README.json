@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_3_only_E6",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Quick Install guide incorrectly instructs users to install GPkit before installing a required solver, which should be done first.",
+      "correction_candidates": [
+        "Combine the two steps into one: `pip install mosek gpkit`",
+        "Swap the order of the two installation steps.",
+        "Remove the quick install guide and link to the official installation documentation.",
+        "Add a step to create a virtual environment before installation."
+      ],
+      "golden_answer": "Swap the order of the two installation steps."
+    }
+  ]
+}

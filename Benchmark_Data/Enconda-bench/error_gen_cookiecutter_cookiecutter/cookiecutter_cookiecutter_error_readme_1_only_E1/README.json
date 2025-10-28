@@ -1,0 +1,18 @@
+{
+  "readme": "cookiecutter_cookiecutter_error_readme_1_only_E1",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily advise installing the `jinja2` dependency separately, which is already included as a dependency of `cookiecutter`.",
+      "correction_candidates": [
+        "Remove the `pip install jinja2` command as it is an unnecessary step.",
+        "Change `pip install jinja2` to `pip install jinja2 --upgrade`.",
+        "Move the `pip install jinja2` command to after the `pipx install cookiecutter` command.",
+        "Replace `pip install jinja2` with `pipx inject cookiecutter jinja2`."
+      ],
+      "golden_answer": "Remove the `pip install jinja2` command as it is an unnecessary step."
+    }
+  ]
+}

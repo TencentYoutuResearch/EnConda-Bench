@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_folio-fse_folio_migration_tools_error_readme_merge_k2",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions for 'pip and venv' incorrectly place the 'pip install' command before the virtual environment has been created and activated.",
+      "correction_candidates": [
+        "Move the pip installation step to be after the virtual environment creation and activation steps.",
+        "Combine the commands into a single line: `python -m venv ./.venv && source .venv/bin/activate && python -m pip install folio_migration_tools`.",
+        "Remove the virtual environment steps as they are optional.",
+        "Change the installation command to `pip install --user folio_migration_tools` to avoid needing a virtual environment."
+      ],
+      "golden_answer": "Move the pip installation step to be after the virtual environment creation and activation steps."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to test the pipenv installation is incorrect; it is missing the 'run' keyword needed to execute a command within the pipenv environment.",
+      "correction_candidates": [
+        "Change the command to `pipenv run python3 -m folio_migration_tools -h`.",
+        "First run `pipenv shell` to enter the environment, then run `python3 -m folio_migration_tools -h`.",
+        "Change the command to `pipenv exec python3 -m folio_migration_tools -h`.",
+        "Change the command to `python3 -m folio_migration_tools -h` assuming pipenv adds scripts to the PATH."
+      ],
+      "golden_answer": "Change the command to `pipenv run python3 -m folio_migration_tools -h`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment is missing the 'source' keyword. Without it, the script runs in a subshell and does not activate the environment for the user's current session in most standard shells (like bash, zsh).",
+      "correction_candidates": [
+        "Change the command to `source .venv/bin/activate`.",
+        "Change the command to `. .venv/bin/activate` which is a valid alias for source.",
+        "Advise the user to run `chmod +x .venv/bin/activate` before executing the line.",
+        "Replace the line with instructions for Windows: `cd .venv/Scripts/ && activate && cd ../..`."
+      ],
+      "golden_answer": "Change the command to `source .venv/bin/activate`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the `pipenv install` command is incorrect. It uses an underscore ('folio_migration_tools') instead of the correct hyphen ('folio-migration-tools'), which will cause the installation to fail.",
+      "correction_candidates": [
+        "Change the package name to `folio-migration-tools`.",
+        "Change the package name to `FOLIO-Migration-Tools`.",
+        "Change the command to `pipenv install 'folio-migration-tools'`.",
+        "Change the command to `pipenv install -e git+https://github.com/FOLIO-FSE/folio_migration_tools.git#egg=folio_migration_tools`."
+      ],
+      "golden_answer": "Change the package name to `folio-migration-tools`."
+    }
+  ]
+}

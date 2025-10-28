@@ -1,0 +1,29 @@
+{
+  "readme": "openreview_openreview-py_error_readme_2",
+  "repo_name": "openreview_openreview-py",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The prerequisite is stated as 'Python 3', which is too general. The library requires Python 3.6 or newer, and using an older version like 3.5 could lead to compatibility errors.",
+      "correction_candidates": [
+        "Python 3.6 or newer is required to use openreview-py.",
+        "Python >= 3.6 is required to use openreview-py.",
+        "Python 3.6 is required to use openreview-py.",
+        "The latest version of Python 3 is required to use openreview-py."
+      ],
+      "golden_answer": "Python 3.6 or newer is required to use openreview-py."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly tell the user to run `pytest` before starting the required OpenReview API and web services, which will cause all tests to fail as they cannot connect to the backend.",
+      "correction_candidates": [
+        "Once all three services are running, start the tests:\n```bash\npytest\n```",
+        "Run pytest after starting the OpenReview API V1, API V2, and Web services.",
+        "Start the OpenReview services and then run pytest in a separate terminal.",
+        "Before running pytest, ensure the OpenReview services are active on ports 3000, 3001, and 3030."
+      ],
+      "golden_answer": "Once all three services are running, start the tests:\n```bash\npytest\n```"
+    }
+  ]
+}

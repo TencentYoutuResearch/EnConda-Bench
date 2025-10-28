@@ -1,0 +1,18 @@
+{
+  "readme": "ethereum_py-evm_error_readme_4_only_E1",
+  "repo_name": "ethereum_py-evm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The quickstart installation command attempts to install a non-existent package 'py-evm-core' alongside 'py-evm', which will cause pip to fail.",
+      "correction_candidates": [
+        "Change the command to 'python -m pip install py_evm'.",
+        "Run 'python -m pip install py-evm' and then 'python -m pip install py-evm-core' in separate commands.",
+        "Change the command to 'python -m pip install \"py-evm[core]\"'.",
+        "Change the command to 'python -m pip install py-evm'."
+      ],
+      "golden_answer": "Change the command to 'python -m pip install py-evm'."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "oarriaga_paz_error_readme_6",
+  "repo_name": "oarriaga_paz",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid pytest command with non-existent --config parameter",
+      "correction_candidates": [
+        "pytest tests",
+        "pytest -c pytest.ini tests",
+        "pytest --config-file=pytest.ini tests",
+        "python -m pytest tests"
+      ],
+      "golden_answer": "pytest tests"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced pytest.ini configuration file that may not exist in the project",
+      "correction_candidates": [
+        "Remove the --config=pytest.ini parameter entirely",
+        "Use pytest --help to see available configuration options",
+        "Create a pytest.ini file first before referencing it",
+        "Use pyproject.toml for pytest configuration instead"
+      ],
+      "golden_answer": "Remove the --config=pytest.ini parameter entirely"
+    }
+  ]
+}

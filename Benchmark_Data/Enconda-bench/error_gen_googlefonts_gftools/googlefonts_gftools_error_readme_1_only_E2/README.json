@@ -1,0 +1,18 @@
+{
+  "readme": "googlefonts_gftools_error_readme_1_only_E2",
+  "repo_name": "googlefonts_gftools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `gftools compare-font` command example is missing the second font file argument required for comparison, which will cause the command to fail.",
+      "correction_candidates": [
+        "gftools compare-font font1.ttf --vs font2.ttf",
+        "gftools compare-font font1.ttf font2.ttf",
+        "gftools compare font1.ttf font2.ttf",
+        "gftools compare-font --fonts font1.ttf font2.ttf"
+      ],
+      "golden_answer": "gftools compare-font font1.ttf font2.ttf"
+    }
+  ]
+}

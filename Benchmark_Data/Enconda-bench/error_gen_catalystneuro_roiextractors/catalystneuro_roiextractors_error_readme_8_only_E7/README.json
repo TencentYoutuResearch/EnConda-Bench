@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_8_only_E7",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Used 'pip2' which refers to Python 2, but roiextractors requires Python 3",
+      "correction_candidates": [
+        "pip install roiextractors",
+        "pip3 install roiextractors",
+        "python -m pip install roiextractors",
+        "python3 -m pip install roiextractors"
+      ],
+      "golden_answer": "pip install roiextractors"
+    }
+  ]
+}

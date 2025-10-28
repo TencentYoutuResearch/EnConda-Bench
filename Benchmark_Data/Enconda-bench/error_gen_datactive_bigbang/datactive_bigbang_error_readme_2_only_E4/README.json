@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_2_only_E4",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided to the `--file` argument is incorrect, pointing to a non-existent directory and file (`example/url.txt` instead of `examples/urls.txt`).",
+      "correction_candidates": [
+        "Replace `--file example/url.txt` with `--file examples/urls.txt`.",
+        "The file is located in the root directory, so use `--file urls.txt`.",
+        "Create a new directory named `example` and a file `url.txt` inside it.",
+        "The correct flag is `--urls-file`, not `--file`."
+      ],
+      "golden_answer": "Replace `--file example/url.txt` with `--file examples/urls.txt`."
+    }
+  ]
+}

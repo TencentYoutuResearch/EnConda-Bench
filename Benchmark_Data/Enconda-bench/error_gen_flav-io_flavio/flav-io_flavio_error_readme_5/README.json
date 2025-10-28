@@ -1,0 +1,29 @@
+{
+  "readme": "flav-io_flavio_error_readme_5",
+  "repo_name": "flav-io_flavio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation instructions show installing dependencies with pip before setting up a virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "Create a virtual environment first using python -m venv flavio-env, activate it, then install dependencies",
+        "Use conda to create an isolated environment before installing any packages",
+        "Install dependencies system-wide using apt-get install python3-numpy python3-scipy python3-matplotlib",
+        "Remove the pip install step entirely and rely on setup.py to handle dependencies"
+      ],
+      "golden_answer": "Create a virtual environment first using python -m venv flavio-env, activate it, then install dependencies"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses deprecated python setup.py install command instead of modern pip installation",
+      "correction_candidates": [
+        "Replace with pip install . to install from source directory",
+        "Use python -m pip install --editable . for development installation",
+        "Change to pip install flavio to install from PyPI",
+        "Use conda install flavio from conda-forge channel"
+      ],
+      "golden_answer": "Replace with pip install . to install from source directory"
+    }
+  ]
+}

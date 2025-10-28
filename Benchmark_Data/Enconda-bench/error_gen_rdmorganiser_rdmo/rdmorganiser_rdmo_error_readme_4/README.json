@@ -1,0 +1,29 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_4",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README includes a poorly formatted and confusing instruction to run `syncdb`, which is a deprecated command in modern Django versions and is not the correct procedure.",
+      "correction_candidates": [
+        "Replace `python manage.py syncdb --no-input` with `python manage.py showmigrations`.",
+        "Correct the formatting and command to: 'Optionally, you can run `python manage.py dbshell` to inspect the database.'.",
+        "Change `syncdb` to `migrate --fake-initial`.",
+        "Remove the entire line about running `syncdb`."
+      ],
+      "golden_answer": "Remove the entire line about running `syncdb`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py makemigrations` is used instead of `python manage.py migrate`. `makemigrations` creates migration files but does not apply them to the database, leaving the setup incomplete.",
+      "correction_candidates": [
+        "Change `python manage.py makemigrations` to `python manage.py migrate`.",
+        "Add the command `python manage.py migrate` after `python manage.py makemigrations`.",
+        "Change `python manage.py makemigrations` to `python manage.py sqlmigrate`.",
+        "Change `python manage.py makemigrations` to `python manage.py migrate --run-syncdb`."
+      ],
+      "golden_answer": "Change `python manage.py makemigrations` to `python manage.py migrate`."
+    }
+  ]
+}

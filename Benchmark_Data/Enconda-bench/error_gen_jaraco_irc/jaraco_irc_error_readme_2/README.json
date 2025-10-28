@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_irc_error_readme_2",
+  "repo_name": "jaraco_irc",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The name of the example script `irccat` is misspelled as `irc_cat` in the documentation, which would cause a file not found error if a user tries to run it with that name.",
+      "correction_candidates": [
+        "The script is located in the `examples/` directory, not `scripts/`.",
+        "The script is named `irccat.py`, so it should be referenced as such.",
+        "The script name is `irccat`, not `irc_cat`.",
+        "The script `irc_cat` has been renamed to `irc-cat`."
+      ],
+      "golden_answer": "The script name is `irccat`, not `irc_cat`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the optional `schedule` package is incorrect. The package name on PyPI is `schedule`, not `schedule-lib`.",
+      "correction_candidates": [
+        "To use it, install the package via `pip install python-schedule`.",
+        "To use it, install the package via `pip install schedule`.",
+        "The `schedule` package is included as an extra, install with `pip install irc[schedule]`.",
+        "The `schedule` package is built-in and requires no separate installation."
+      ],
+      "golden_answer": "To use it, install the package via `pip install schedule`."
+    }
+  ]
+}

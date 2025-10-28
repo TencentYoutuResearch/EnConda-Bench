@@ -1,0 +1,18 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_7_only_E2",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command uses incorrect parameter syntax with single dashes instead of double dashes",
+      "correction_candidates": [
+        "python translate.py --input data/ --output translations/",
+        "python translate.py -i data/ -o translations/",
+        "python translate.py --input=data/ --output=translations/",
+        "python scripts/translate.py --input data/ --output translations/"
+      ],
+      "golden_answer": "python translate.py --input data/ --output translations/"
+    }
+  ]
+}

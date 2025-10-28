@@ -1,0 +1,18 @@
+{
+  "readme": "robotframework_robotframework_error_readme_1_only_E1",
+  "repo_name": "robotframework_robotframework",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command unnecessarily includes the 'selenium' package, which is a separate library and not part of the core Robot Framework installation.",
+      "correction_candidates": [
+        "pip install robotframework",
+        "pip install robotframework-seleniumlibrary",
+        "pip install robotframework --no-deps",
+        "pip install robotframework && pip install selenium"
+      ],
+      "golden_answer": "pip install robotframework"
+    }
+  ]
+}

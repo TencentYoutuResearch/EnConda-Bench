@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_1_only_E4",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path to the season configuration file in the setup instructions is incorrect. It points to a `configs/` directory instead of `season_configs/`.",
+      "correction_candidates": [
+        "python src/holo.py -m edit season_configs/[season]_[year].yaml",
+        "python src/holo.py -m edit season-configs/[season]_[year].yaml",
+        "python src/holo.py -m load configs/[season]_[year].yaml",
+        "python src/holo.py -m edit --config season_configs/[season]_[year].yaml"
+      ],
+      "golden_answer": "python src/holo.py -m edit season_configs/[season]_[year].yaml"
+    }
+  ]
+}

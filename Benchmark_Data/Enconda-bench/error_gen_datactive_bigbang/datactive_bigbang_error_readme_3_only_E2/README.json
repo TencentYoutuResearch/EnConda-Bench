@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_3_only_E2",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests contains a typo in the directory path (`test/unit` instead of `tests/unit`), which will cause pytest to fail to find the tests.",
+      "correction_candidates": [
+        "The correct command is `python -m pytest test/unit`.",
+        "The correct command is `pytest tests/unit`.",
+        "Run `cd tests/unit` first, then run `pytest`.",
+        "The correct command is `pytest --all` to run all tests in the repository."
+      ],
+      "golden_answer": "The correct command is `pytest tests/unit`."
+    }
+  ]
+}

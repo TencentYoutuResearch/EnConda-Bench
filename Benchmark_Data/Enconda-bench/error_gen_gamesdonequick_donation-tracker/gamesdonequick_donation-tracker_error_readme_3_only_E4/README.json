@@ -1,0 +1,18 @@
+{
+  "readme": "gamesdonequick_donation-tracker_error_readme_3_only_E4",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instruction to edit 'donation-tracker/urls.py' is incorrect. Based on the 'django-admin startproject tracker_development' command, the project's URL configuration file would be located at 'tracker_development/urls.py'.",
+      "correction_candidates": [
+        "Edit the `tracker/urls.py` file.",
+        "Edit the `tracker_development/urls.py` file.",
+        "Create a new `urls.py` in the root directory.",
+        "Edit the `tracker_development/settings.py` file to define the URLs."
+      ],
+      "golden_answer": "Edit the `tracker_development/urls.py` file."
+    }
+  ]
+}

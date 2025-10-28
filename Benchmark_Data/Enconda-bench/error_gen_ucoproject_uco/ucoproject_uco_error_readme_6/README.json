@@ -1,0 +1,29 @@
+{
+  "readme": "ucoproject_uco_error_readme_6",
+  "repo_name": "ucoproject_uco",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax using non-existent --config parameter for setup.py install",
+      "correction_candidates": [
+        "Use pip install . to install the package from the current directory",
+        "Use python setup.py install without any parameters",
+        "Use python setup.py build followed by python setup.py install",
+        "Use pip install -e . for development installation"
+      ],
+      "golden_answer": "Use python setup.py install without any parameters"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a config file path that likely doesn't exist in the repository",
+      "correction_candidates": [
+        "Remove the --config parameter entirely as it's not a valid setup.py option",
+        "Change the path to ./uco.cfg which is more likely to exist",
+        "Use --global-option instead of --config for configuration",
+        "Reference the config file as requirements.txt instead"
+      ],
+      "golden_answer": "Remove the --config parameter entirely as it's not a valid setup.py option"
+    }
+  ]
+}

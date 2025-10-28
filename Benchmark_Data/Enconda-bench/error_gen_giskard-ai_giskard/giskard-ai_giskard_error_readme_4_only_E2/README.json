@@ -1,0 +1,18 @@
+{
+  "readme": "giskard-ai_giskard_error_readme_4_only_E2",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The function call `giskard.scan(giskard_model, \"deep\")` is incorrect. The `scan` function does not accept a string like 'deep' as a second positional argument, causing a syntax error.",
+      "correction_candidates": [
+        "scan_results = giskard.scan(model=giskard_model)",
+        "scan_results = giskard.scan(giskard_model)",
+        "scan_results = giskard.scan(giskard_model, params={\"level\": \"deep\"})",
+        "scan_results = giskard.deep_scan(giskard_model)"
+      ],
+      "golden_answer": "scan_results = giskard.scan(giskard_model)"
+    }
+  ]
+}

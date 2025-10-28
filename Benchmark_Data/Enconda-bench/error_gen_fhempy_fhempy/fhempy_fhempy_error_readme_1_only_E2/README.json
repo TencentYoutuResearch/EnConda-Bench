@@ -1,0 +1,18 @@
+{
+  "readme": "fhempy_fhempy_error_readme_1_only_E2",
+  "repo_name": "fhempy_fhempy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `define` command for setting up the local fhempy instance is incomplete and missing the required `fhempy` argument.",
+      "correction_candidates": [
+        "define fhempy_local fhempy",
+        "define fhempy_local BindingsIo fhempy",
+        "define fhempy_local BindingsIo:fhempy",
+        "define fhempy BindingsIo fhempy_local"
+      ],
+      "golden_answer": "define fhempy_local BindingsIo fhempy"
+    }
+  ]
+}

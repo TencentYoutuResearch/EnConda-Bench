@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_5_only_E7",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Removed specific Python version requirements (3.9, 3.10, 3.11, or 3.12) making it unclear which Python versions are supported",
+      "correction_candidates": [
+        "To install Pastas, a working version of Python 3.9, 3.10, 3.11, or 3.12 has to be installed on your computer.",
+        "To install Pastas, Python 3.8 or higher is required on your computer.",
+        "To install Pastas, any version of Python 3.x has to be installed on your computer.",
+        "To install Pastas, Python version 3.6 or later must be installed on your computer."
+      ],
+      "golden_answer": "To install Pastas, a working version of Python 3.9, 3.10, 3.11, or 3.12 has to be installed on your computer."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_6_only_E4",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced a non-existent configuration file path /etc/pyftpdlib/config.ini",
+      "correction_candidates": [
+        "For advanced configuration, refer to the documentation at https://pyftpdlib.readthedocs.io/en/latest/tutorial.html for configuration options.",
+        "For advanced configuration, create your own configuration file and pass it to your Python script.",
+        "For advanced configuration, modify the server parameters directly in your Python code as shown in the API usage section.",
+        "For advanced configuration, use environment variables or command line arguments as documented."
+      ],
+      "golden_answer": "For advanced configuration, refer to the documentation at https://pyftpdlib.readthedocs.io/en/latest/tutorial.html for configuration options."
+    }
+  ]
+}

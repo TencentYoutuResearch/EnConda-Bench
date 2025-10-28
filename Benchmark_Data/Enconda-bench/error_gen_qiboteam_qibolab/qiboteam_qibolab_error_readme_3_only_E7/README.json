@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibolab_error_readme_3_only_E7",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library is compatible with Python 3.7, while the PyPI badge and package classifiers indicate it requires Python 3.8 or newer.",
+      "correction_candidates": [
+        "You must use `pip3.7` to install the package for Python 3.7.",
+        "The library is compatible with all versions of Python 3.",
+        "The library requires Python 3.7 but with the `python-dev` package installed.",
+        "The library requires Python 3.8 or newer, as indicated by its PyPI classifiers."
+      ],
+      "golden_answer": "The library requires Python 3.8 or newer, as indicated by its PyPI classifiers."
+    }
+  ]
+}

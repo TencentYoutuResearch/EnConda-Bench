@@ -1,0 +1,18 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_4_only_E1",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the `openssl` package is missing the `-c conda-forge` channel flag, which is necessary to find the correct package version for the build environment.",
+      "correction_candidates": [
+        "conda install openssl -c conda-forge",
+        "conda install -c defaults openssl",
+        "pip install pyopenssl",
+        "conda install openssl --channel=conda-forge"
+      ],
+      "golden_answer": "conda install openssl -c conda-forge"
+    }
+  ]
+}

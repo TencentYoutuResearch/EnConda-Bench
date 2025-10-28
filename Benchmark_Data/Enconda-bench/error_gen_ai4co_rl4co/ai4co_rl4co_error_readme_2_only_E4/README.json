@@ -1,0 +1,18 @@
+{
+  "readme": "ai4co_rl4co_error_readme_2_only_E4",
+  "repo_name": "ai4co_rl4co",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README provides an incorrect file path to the experiment configurations directory, referencing `config/experiments/` instead of the correct `configs/experiment/`.",
+      "correction_candidates": [
+        "Change the path `config/experiments/` to `experiments/`.",
+        "Change the path `config/experiments/` to `configs/`.",
+        "Correct the path from `config/experiments/` to `configs/experiment/`.",
+        "Change the path `config/experiments/` to `./configs/experiment/`."
+      ],
+      "golden_answer": "Correct the path from `config/experiments/` to `configs/experiment/`."
+    }
+  ]
+}

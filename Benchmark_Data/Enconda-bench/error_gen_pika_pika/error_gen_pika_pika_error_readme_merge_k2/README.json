@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_pika_pika_error_readme_merge_k2",
+  "repo_name": "pika_pika",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `basic_publish` example uses an incorrect keyword argument `message` instead of `body`.",
+      "correction_candidates": [
+        "Change `message=b'Test message.'` to `body=b'Test message.'`",
+        "Change `channel.basic_publish` to `channel.publish`.",
+        "Change `message=b'Test message.'` to `payload=b'Test message.'`",
+        "Add `properties=pika.BasicProperties(content_type='text/plain', delivery_mode=1)` to the `basic_publish` call."
+      ],
+      "golden_answer": "Change `message=b'Test message.'` to `body=b'Test message.'`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to an example file at `scripts/consume_recover.py`, but the correct path is `examples/consume_recover.py`.",
+      "correction_candidates": [
+        "Change the file path to `examples/consume_recover.py`.",
+        "Change the file path to `examples/recovery/consume_recover.py`.",
+        "Change the file path to `pika/examples/consume_recover.py`.",
+        "Remove the sentence mentioning the file path."
+      ],
+      "golden_answer": "Change the file path to `examples/consume_recover.py`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly suggests a logical order where `add_callback_threadsafe` should be called before the callback function is defined, which would cause a `NameError` in Python.",
+      "correction_candidates": [
+        "Remove the sentence suggesting to schedule the callback before defining the function.",
+        "Move the sentence to appear after the `ack_message` function definition.",
+        "Change the sentence to 'Ensure the callback function is defined before it is scheduled with `add_callback_threadsafe`'.",
+        "Rewrite the example to use a lambda function to avoid a separate definition."
+      ],
+      "golden_answer": "Remove the sentence suggesting to schedule the callback before defining the function."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_2",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Getting Started' section, the installation command is `pip install brozzler`. This is incorrect for running `brozzler-easy`, which requires extra dependencies (`pywb`, `warcprox`) that are only installed by using `pip install brozzler[easy]`.",
+      "correction_candidates": [
+        "Change `pip install brozzler` to `pip install brozzler-easy`.",
+        "Add `pip install pywb warcprox` after `pip install brozzler`.",
+        "Change `pip install brozzler` to `pip install brozzler --all-extras`.",
+        "Change `pip install brozzler` to `pip install brozzler[easy]`."
+      ],
+      "golden_answer": "Change `pip install brozzler` to `pip install brozzler[easy]`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Getting Started' instructions list the command to start rethinkdb after the command to start `brozzler-easy`. `brozzler-easy` needs to connect to a running RethinkDB instance on startup, so it will fail if the order is not corrected.",
+      "correction_candidates": [
+        "Move the `rethinkdb &>>rethinkdb.log &` command to be the first step in the 'Mac instructions' section.",
+        "Move the `rethinkdb &>>rethinkdb.log &` command to be right before the `brozzler-easy` command.",
+        "Add a `--rethinkdb-host` parameter to the `brozzler-easy` command.",
+        "Move the `rethinkdb &>>rethinkdb.log &` command to be before the `brozzler-new-site` command."
+      ],
+      "golden_answer": "Move the `rethinkdb &>>rethinkdb.log &` command to be right before the `brozzler-easy` command."
+    }
+  ]
+}

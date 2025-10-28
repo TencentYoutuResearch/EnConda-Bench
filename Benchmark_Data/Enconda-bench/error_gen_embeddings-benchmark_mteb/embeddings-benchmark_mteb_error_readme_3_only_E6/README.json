@@ -1,0 +1,18 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_3_only_E6",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Installation' section is placed after the 'Usage' section. Users will likely try to run the code from the 'Usage' section before seeing how to install the required package, leading to a `ModuleNotFoundError`.",
+      "correction_candidates": [
+        "Move the 'Installation' section to be before the 'Usage' section.",
+        "Add a note at the beginning of the 'Usage' section to install the package first.",
+        "Create a new 'Getting Started' section that includes both installation and basic usage.",
+        "Combine the 'Installation' and 'Usage' sections."
+      ],
+      "golden_answer": "Move the 'Installation' section to be before the 'Usage' section."
+    }
+  ]
+}

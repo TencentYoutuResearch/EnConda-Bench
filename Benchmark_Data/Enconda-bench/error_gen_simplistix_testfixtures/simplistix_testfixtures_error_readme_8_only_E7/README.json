@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_8_only_E7",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version conflict - using pip3 (Python 3) but claiming Python 2.7 compatibility",
+      "correction_candidates": [
+        "Use pip instead of pip3 for Python 2.7 compatibility",
+        "Change requirement to Python 3.6+ since using pip3",
+        "Specify both Python versions: Compatible with Python 2.7 and 3.6+",
+        "Remove version specification: pip install testfixtures"
+      ],
+      "golden_answer": "Change requirement to Python 3.6+ since using pip3"
+    }
+  ]
+}

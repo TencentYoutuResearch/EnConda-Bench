@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_8_only_E2",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax - lfs-admin and lfs commands don't exist for this package",
+      "correction_candidates": [
+        "Replace with standard Django commands: django-admin startproject and python manage.py runserver",
+        "Use python setup.py install and python manage.py runserver instead",
+        "Change to pip install django-lfs and python -m django runserver",
+        "Replace with python -m lfs.manage setup and python -m lfs.manage runserver"
+      ],
+      "golden_answer": "Replace with standard Django commands: django-admin startproject and python manage.py runserver"
+    }
+  ]
+}

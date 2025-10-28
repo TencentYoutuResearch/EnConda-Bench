@@ -1,0 +1,18 @@
+{
+  "readme": "apiflask_apiflask_error_readme_1_only_E7",
+  "repo_name": "apiflask_apiflask",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is stated as 'Python 3+', which is too broad and may cause users to try running it on unsupported older Python 3 versions like 3.6 or 3.7, leading to compatibility issues.",
+      "correction_candidates": [
+        "Change the requirement to `Python 3.8+`.",
+        "Change the requirement to `Python >= 3.8`.",
+        "Change the requirement to `Python 3.8 or newer`.",
+        "Change the requirement to `Python 3.6+`."
+      ],
+      "golden_answer": "Change the requirement to `Python 3.8+`."
+    }
+  ]
+}

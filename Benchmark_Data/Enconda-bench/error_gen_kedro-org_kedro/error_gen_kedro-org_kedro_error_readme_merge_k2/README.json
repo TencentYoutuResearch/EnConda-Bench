@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_kedro-org_kedro_error_readme_merge_k2",
+  "repo_name": "kedro-org_kedro",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `jupyter` is a required dependency that must be installed before installing Kedro.",
+      "correction_candidates": [
+        "Jupyter is not a required dependency for the core Kedro framework and does not need to be installed first.",
+        "Jupyter is included with the `pip install kedro` command and does not need to be installed separately.",
+        "You should install Jupyter with conda using `conda install jupyter` for better compatibility.",
+        "Kedro's notebook support is an optional extra, installable with `pip install kedro[notebooks]`."
+      ],
+      "golden_answer": "Jupyter is not a required dependency for the core Kedro framework and does not need to be installed first."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly advise creating and activating a virtual environment *after* installing the package, which installs Kedro globally instead of inside the isolated environment.",
+      "correction_candidates": [
+        "The virtual environment should be created and activated *before* running `pip install kedro`.",
+        "Run `pip install kedro --user` before creating the virtual environment.",
+        "The `pip install kedro` command automatically creates a virtual environment.",
+        "Move the `kedro` installation into the virtual environment directory after creating it."
+      ],
+      "golden_answer": "The virtual environment should be created and activated *before* running `pip install kedro`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install from the `main` branch uses an incorrect URL format (`/tree/main`), which is for browsing the repository on GitHub, not for `pip` installation.",
+      "correction_candidates": [
+        "pip install git+https://github.com/kedro-org/kedro.git",
+        "pip install git+https://github.com/kedro-org/kedro@main",
+        "git clone https://github.com/kedro-org/kedro && cd kedro && pip install .",
+        "pip install https://github.com/kedro-org/kedro/archive/main.zip"
+      ],
+      "golden_answer": "pip install git+https://github.com/kedro-org/kedro@main"
+    }
+  ]
+}

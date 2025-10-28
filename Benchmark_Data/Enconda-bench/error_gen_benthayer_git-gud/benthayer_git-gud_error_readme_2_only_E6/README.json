@@ -1,0 +1,18 @@
+{
+  "readme": "benthayer_git-gud_error_readme_2_only_E6",
+  "repo_name": "benthayer_git-gud",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly suggest running `git gud` before specifying that the command must be run inside a new empty directory, which can cause the tool to fail or modify an unintended directory.",
+      "correction_candidates": [
+        "To get started, you need to initialize Git Gud in an empty directory. Once in the directory, run `git gud`.",
+        "To get started, first run `git gud init` in an empty directory.",
+        "Run `git gud` in a new directory to get started.",
+        "To get started, you need to initialize Git Gud in an empty directory."
+      ],
+      "golden_answer": "To get started, you need to initialize Git Gud in an empty directory."
+    }
+  ]
+}

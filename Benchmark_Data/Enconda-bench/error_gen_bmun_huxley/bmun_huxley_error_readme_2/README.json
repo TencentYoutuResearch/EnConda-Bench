@@ -1,0 +1,29 @@
+{
+  "readme": "bmun_huxley_error_readme_2",
+  "repo_name": "bmun_huxley",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions omit the installation of PostgreSQL client libraries, which are a necessary system dependency for the `psycopg2` Python package to build correctly.",
+      "correction_candidates": [
+        "Add a step to install `postgresql` and its development libraries (e.g., `sudo apt-get install postgresql libpq-dev` on Debian/Ubuntu).",
+        "Install `psycopg2-binary` instead of `psycopg2` to avoid the need for system libraries.",
+        "Switch the database backend from PostgreSQL to SQLite for easier setup.",
+        "Specify `psycopg2==2.8.0` in `requirements/local.txt` as it has fewer dependencies."
+      ],
+      "golden_answer": "Add a step to install `postgresql` and its development libraries (e.g., `sudo apt-get install postgresql libpq-dev` on Debian/Ubuntu)."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instructions specify an outdated version of Node.js (v10.x), which may cause `npm install` to fail due to incompatibility with modern frontend dependencies.",
+      "correction_candidates": [
+        "The instructions should recommend using a recent LTS Node.js version (e.g., 18.x or higher).",
+        "Run `npm install --legacy-peer-deps` to ignore version conflicts.",
+        "Remove the Node.js version requirement entirely.",
+        "Use `yarn` instead of `npm` as it handles versioning better."
+      ],
+      "golden_answer": "The instructions should recommend using a recent LTS Node.js version (e.g., 18.x or higher)."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_8",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version conflict - using pip3 (Python 3) but claiming Python 2.7 compatibility",
+      "correction_candidates": [
+        "Use pip instead of pip3 for Python 2.7 compatibility",
+        "Change requirement to Python 3.6+ since using pip3",
+        "Specify both Python versions: Compatible with Python 2.7 and 3.6+",
+        "Remove version specification: pip install testfixtures"
+      ],
+      "golden_answer": "Change requirement to Python 3.6+ since using pip3"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Specific version 6.18.5 may not exist or be outdated, potentially causing installation failure",
+      "correction_candidates": [
+        "Use latest version: pip3 install testfixtures",
+        "Use version range: pip3 install testfixtures>=6.0.0",
+        "Check available versions: pip3 install testfixtures==",
+        "Install from development branch: pip3 install git+https://github.com/simplistix/testfixtures.git"
+      ],
+      "golden_answer": "Use latest version: pip3 install testfixtures"
+    }
+  ]
+}

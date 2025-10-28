@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_wind-python_windpowerlib_error_readme_merge_k3",
+  "repo_name": "wind-python_windpowerlib",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Optional Packages' section, the pip command to install the matplotlib library is misspelled as 'matplot', which will cause the installation to fail.",
+      "correction_candidates": [
+        "pip install python-matplotlib",
+        "pip install matplotlib",
+        "conda install matplotlib",
+        "pip install mplot"
+      ],
+      "golden_answer": "pip install matplotlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Contributing' section, the command to install the package in editable mode uses the incorrect '--editable' flag instead of the correct '-e' shorthand, which will cause the command to fail.",
+      "correction_candidates": [
+        "pip install -e /path/to/the/repository",
+        "pip install --develop /path/to/the/repository",
+        "python setup.py develop",
+        "pip install --dev-mode /path/to/the/repository"
+      ],
+      "golden_answer": "pip install -e /path/to/the/repository"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the example weather data file points to an incorrect path ('.../example/data/weather.csv' instead of '.../example/weather.csv'), which will result in a 'File Not Found' error.",
+      "correction_candidates": [
+        "* `Example weather data file <https://raw.githubusercontent.com/wind-python/windpowerlib/master/example/weather.csv>`",
+        "* `Example weather data file <https://github.com/wind-python/windpowerlib/blob/master/example/weather.csv>`",
+        "* `Example weather data file <https://raw.githubusercontent.com/wind-python/windpowerlib/master/data/weather.csv>`",
+        "* `Example weather data file <https://raw.githubusercontent.com/wind-python/windpowerlib/dev/example/weather.csv>`"
+      ],
+      "golden_answer": "* `Example weather data file <https://raw.githubusercontent.com/wind-python/windpowerlib/master/example/weather.csv>`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the dependency for running Jupyter notebooks is incorrect. It specifies 'jupyter-notebook' as the package name, which is wrong and will fail. The instruction should use the correct package, 'notebook'.",
+      "correction_candidates": [
+        "To run the notebook you also need to install `notebook` using pip.",
+        "To run the notebook you also need to install `jupyter` using pip.",
+        "To run the notebook you also need to install `jupyterlab` using pip.",
+        "To run the notebook you also need to install `ipython[notebook]` using pip."
+      ],
+      "golden_answer": "To run the notebook you also need to install `notebook` using pip."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Use internal data' subsection, the python code snippet to update local turbine data from the OEDB is missing the parentheses '()' to call the function 'store_turbine_data_from_oedb', which will result in the function not being executed.",
+      "correction_candidates": [
+        "store_turbine_data_from_oedb.run()",
+        "store_turbine_data_from_oedb()",
+        "execute(store_turbine_data_from_oedb)",
+        "call store_turbine_data_from_oedb"
+      ],
+      "golden_answer": "store_turbine_data_from_oedb()"
+    }
+  ]
+}

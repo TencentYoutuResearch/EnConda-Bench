@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_ciscotestautomation_genieparser_error_readme_merge_k2",
+  "repo_name": "ciscotestautomation_genieparser",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command is incomplete. It installs the base 'pyats' package but omits the '[full]' extra, which is required to install all components including genieparser.",
+      "correction_candidates": [
+        "$ pip install pyats --all",
+        "$ pip install pyats-full",
+        "$ pip install 'pyats[full]'",
+        "$ pip install pyats && pip install genie"
+      ],
+      "golden_answer": "$ pip install 'pyats[full]'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The development setup commands are in the wrong order. 'make develop' is executed before changing into the 'genieparser' directory, which will cause the command to fail.",
+      "correction_candidates": [
+        "bash$ make -C genieparser develop",
+        "bash$ cd genieparser && make develop",
+        "bash$ cd genieparser; make develop",
+        "bash$ cd genieparser\nbash$ make develop"
+      ],
+      "golden_answer": "bash$ cd genieparser\nbash$ make develop"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for the changelog template in the text is incorrect ('changelog/templates/template.rst'), while the hyperlink points to the correct location. This can cause confusion for users trying to find the file locally.",
+      "correction_candidates": [
+        "[changelogs/undistributed/template.rst](...)",
+        "[changelog/undistributed/template.rst](...)",
+        "[changelog/template.rst](...)",
+        "[undistributed/template.rst](...)"
+      ],
+      "golden_answer": "[changelog/undistributed/template.rst](...)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "robbievanleeuwen_section-properties_error_readme_1_only_E2",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command uses the incorrect package name 'section-properties' instead of 'sectionproperties'.",
+      "correction_candidates": [
+        "Change `pip install section-properties` to `pip install sectionproperties`.",
+        "Change `pip install section-properties` to `pip install section.properties`.",
+        "Change `pip install section-properties` to `pip install section_properties`.",
+        "Change `pip install section-properties` to `pip install 'sectionproperties'`."
+      ],
+      "golden_answer": "Change `pip install section-properties` to `pip install sectionproperties`."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_skmin-lab_unixmd_error_readme_merge_k3",
+  "repo_name": "skmin-lab_unixmd",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is too vague, specifying only 'Python 3', which might lead users with versions older than 3.6 to encounter compatibility issues.",
+      "correction_candidates": [
+        "Python 3.6 or later",
+        "Python >= 3.6",
+        "Python 3.6+",
+        "Python version 3.6 is required"
+      ],
+      "golden_answer": "Python 3.6 or later"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The build command uses the incorrect flag '--build-lib' instead of '-b' to specify the build directory, which can lead to build failure or incorrect output location.",
+      "correction_candidates": [
+        "$ python3 setup.py build_ext -b ./src/build",
+        "$ python3 setup.py build --build-base=./src/build",
+        "$ python3 setup.py build_ext --inplace",
+        "$ python3 setup.py install --prefix=./src/build"
+      ],
+      "golden_answer": "$ python3 setup.py build_ext -b ./src/build"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instruction to run the test appears before the necessary `export PYTHONPATH` command, causing a `ModuleNotFoundError` because the Python interpreter cannot locate the PyUNIxMD package.",
+      "correction_candidates": [
+        "Move the `export PYTHONPATH=$PYUNIXMDHOME/src:$PYTHONPATH` command to be before the `python3 run.py >& log` command.",
+        "Add `sys.path.append('$PYUNIXMDHOME/src')` to the beginning of `run.py`.",
+        "Run the test using `python3 -m src.run >& log` from the `$PYUNIXMDHOME` directory.",
+        "Install the package using `python3 setup.py install` before running the test."
+      ],
+      "golden_answer": "Move the `export PYTHONPATH=$PYUNIXMDHOME/src:$PYTHONPATH` command to be before the `python3 run.py >& log` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The build command for polariton dynamics incorrectly specifies the output directory as './src/build', which is the same as the standard build, potentially overwriting files or causing conflicts.",
+      "correction_candidates": [
+        "$ python3 setup.py build_qed_ext -b ./src/build_qed",
+        "$ python3 setup.py build_qed_ext --build-base ./src/build_qed",
+        "$ python3 setup.py build_qed_ext --inplace",
+        "$ python3 setup.py build_ext --with-qed -b ./src/build_qed"
+      ],
+      "golden_answer": "$ python3 setup.py build_qed_ext -b ./src/build_qed"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the test examples is incorrect, pointing to a non-existent 'test' directory instead of the correct 'examples' directory.",
+      "correction_candidates": [
+        "$PYUNIXMDHOME/examples/qm/Eh-Shin_Metiu",
+        "./examples/qm/Eh-Shin_Metiu",
+        "$PYUNIXMDHOME/Eh-Shin_Metiu",
+        "The examples are in the 'examples' directory."
+      ],
+      "golden_answer": "$PYUNIXMDHOME/examples/qm/Eh-Shin_Metiu"
+    }
+  ]
+}

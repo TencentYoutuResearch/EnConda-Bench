@@ -1,0 +1,18 @@
+{
+  "readme": "wind-python_windpowerlib_error_readme_1_only_E2",
+  "repo_name": "wind-python_windpowerlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Contributing' section, the command to install the package in editable mode uses the incorrect '--editable' flag instead of the correct '-e' shorthand, which will cause the command to fail.",
+      "correction_candidates": [
+        "pip install -e /path/to/the/repository",
+        "pip install --develop /path/to/the/repository",
+        "python setup.py develop",
+        "pip install --dev-mode /path/to/the/repository"
+      ],
+      "golden_answer": "pip install -e /path/to/the/repository"
+    }
+  ]
+}

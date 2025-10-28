@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_scvelo_error_readme_5",
+  "repo_name": "theislab_scvelo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added installation section with unnecessary dependency scanpy with specific version that may cause conflicts",
+      "correction_candidates": [
+        "Remove the scanpy installation command entirely and keep only pip install scvelo",
+        "Change to conda install -c conda-forge scvelo to use conda instead",
+        "Replace with pip install scvelo[all] to install with all optional dependencies",
+        "Update to conda install scanpy scvelo to install both packages together"
+      ],
+      "golden_answer": "Remove the scanpy installation command entirely and keep only pip install scvelo"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong logical order - installing specific scanpy version after scvelo could cause dependency conflicts",
+      "correction_candidates": [
+        "Install scanpy first, then scvelo: conda install scanpy==1.7.0 followed by pip install scvelo",
+        "Use a single command: pip install scvelo scanpy==1.7.0",
+        "Create virtual environment first, then install dependencies in correct order",
+        "Install both packages simultaneously: conda install scvelo scanpy==1.7.0"
+      ],
+      "golden_answer": "Install scanpy first, then scvelo: conda install scanpy==1.7.0 followed by pip install scvelo"
+    }
+  ]
+}

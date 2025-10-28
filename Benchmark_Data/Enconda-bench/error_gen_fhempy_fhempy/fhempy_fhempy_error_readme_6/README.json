@@ -1,0 +1,29 @@
+{
+  "readme": "fhempy_fhempy_error_readme_6",
+  "repo_name": "fhempy_fhempy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Changed the order of peer setup steps, installing fhempy before setting up and activating the virtual environment",
+      "correction_candidates": [
+        "Move pip3 install --upgrade fhempy after activating the virtual environment",
+        "Replace pip3 install --upgrade fhempy with python -m pip install --upgrade fhempy and move it after venv activation",
+        "Change the order to: create venv, activate venv, then install fhempy within the activated environment",
+        "Remove the pip3 install step entirely and let the systemd script handle the installation"
+      ],
+      "golden_answer": "Change the order to: create venv, activate venv, then install fhempy within the activated environment"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Removed the leading slash from the flowchart image path, making it a relative path that may not exist",
+      "correction_candidates": [
+        "Change flowchart.png to /flowchart.png to use absolute path",
+        "Change flowchart.png to ./flowchart.png for explicit relative path",
+        "Change flowchart.png to images/flowchart.png assuming it's in an images directory",
+        "Change flowchart.png to docs/flowchart.png assuming it's in a docs directory"
+      ],
+      "golden_answer": "Change flowchart.png to /flowchart.png to use absolute path"
+    }
+  ]
+}

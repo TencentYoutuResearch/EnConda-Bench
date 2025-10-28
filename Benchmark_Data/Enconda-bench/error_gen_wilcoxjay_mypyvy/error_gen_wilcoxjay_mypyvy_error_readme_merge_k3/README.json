@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_wilcoxjay_mypyvy_error_readme_merge_k3",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The specified minimum Python version is 3.6, but the correct required version is 3.8.",
+      "correction_candidates": [
+        "You need python version 3.8 or higher.",
+        "You need python version 3.7 or higher.",
+        "You need the latest version of python3.",
+        "You need python version 3.9 or higher."
+      ],
+      "golden_answer": "You need python version 3.8 or higher."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command-line flag `--d=5` for specifying the depth in the `bmc` example is an incorrect abbreviation; the correct flag is `--depth=5`.",
+      "correction_candidates": [
+        "python3 src/mypyvy.py bmc --depth=5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc -depth 5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc --set-depth 5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc --depth 5 --safety=mutex examples/lockserv.pyv"
+      ],
+      "golden_answer": "python3 src/mypyvy.py bmc --depth=5 --safety=mutex examples/lockserv.pyv"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced wrong filename 'dependencies.txt' instead of 'requirements.txt' for pip install command",
+      "correction_candidates": [
+        "python3 -m pip install -r requirements.txt",
+        "python3 -m pip install -r setup.txt",
+        "pip install -r requirements.txt",
+        "python -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "python3 -m pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command 'check' instead of 'verify' for the verify mode example",
+      "correction_candidates": [
+        "python3 src/mypyvy.py verify examples/lockserv.pyv",
+        "python3 src/mypyvy.py validate examples/lockserv.pyv",
+        "python3 src/mypyvy.py test examples/lockserv.pyv",
+        "python3 src/mypyvy.py run examples/lockserv.pyv"
+      ],
+      "golden_answer": "python3 src/mypyvy.py verify examples/lockserv.pyv"
+    }
+  ]
+}

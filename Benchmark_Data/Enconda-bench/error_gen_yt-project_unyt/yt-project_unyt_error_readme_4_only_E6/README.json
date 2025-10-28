@@ -1,0 +1,18 @@
+{
+  "readme": "yt-project_unyt_error_readme_4_only_E6",
+  "repo_name": "yt-project_unyt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The manual installation instructions are in the wrong logical order, suggesting to install `unyt` before its dependency `numpy`.",
+      "correction_candidates": [
+        "The dependencies are installed automatically. The section should be replaced with: `pip install unyt`.",
+        "First, install numpy using `pip install numpy`. Then, install unyt with `pip install unyt`.",
+        "Install all dependencies at once with `pip install unyt numpy sympy`.",
+        "Create a virtual environment, then run `pip install numpy unyt`."
+      ],
+      "golden_answer": "The dependencies are installed automatically. The section should be replaced with: `pip install unyt`."
+    }
+  ]
+}

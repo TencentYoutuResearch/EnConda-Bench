@@ -1,0 +1,29 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_5",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (numpy pandas) to the basic installation command",
+      "correction_candidates": [
+        "python -m pip install terminusdb-client",
+        "python -m pip install terminusdb-client[dataframe]",
+        "python -m pip install terminusdb-client --upgrade",
+        "python -m pip install terminusdb-client scipy matplotlib"
+      ],
+      "golden_answer": "python -m pip install terminusdb-client"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Removed poetry installation step before running tests, creating incorrect execution order",
+      "correction_candidates": [
+        "Install all development dependencies using poetry",
+        "Install all development dependencies using pip",
+        "Install all development dependencies using conda",
+        "Install all development dependencies using pipenv"
+      ],
+      "golden_answer": "Install all development dependencies using poetry"
+    }
+  ]
+}

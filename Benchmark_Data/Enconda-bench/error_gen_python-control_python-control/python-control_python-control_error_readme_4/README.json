@@ -1,0 +1,29 @@
+{
+  "readme": "python-control_python-control_error_readme_4",
+  "repo_name": "python-control_python-control",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package on Google Colab uses the incorrect package name `python-control`. The correct name on PyPI is `control`.",
+      "correction_candidates": [
+        "The command should be `!pip install control-lib`.",
+        "The command should be `!pip install control`.",
+        "The command should be `!pip install pycontrol`.",
+        "The command should be `!pip install 'python-control-lib'`."
+      ],
+      "golden_answer": "The command should be `!pip install control`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for installing from source incorrectly state that `pip install .` should be run before cloning or downloading the source code, which is impossible as the command must be run inside the source directory.",
+      "correction_candidates": [
+        "The command should be `pip install git+https://github.com/python-control/python-control.git` instead of `pip install .`.",
+        "The user must first download the source, navigate into the directory, and then run `pip install .`.",
+        "The command should be `pip install . --src .`",
+        "The user should run `pip download python-control` first, then `pip install .`."
+      ],
+      "golden_answer": "The user must first download the source, navigate into the directory, and then run `pip install .`."
+    }
+  ]
+}

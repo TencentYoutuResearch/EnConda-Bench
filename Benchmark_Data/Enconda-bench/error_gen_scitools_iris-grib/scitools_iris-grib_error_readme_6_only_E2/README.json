@@ -1,0 +1,18 @@
+{
+  "readme": "scitools_iris-grib_error_readme_6_only_E2",
+  "repo_name": "scitools_iris-grib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax using -r flag with a non-existent requirements file path",
+      "correction_candidates": [
+        "Fix the command to 'pip install iris-grib' for standard installation",
+        "Use 'pip install -r requirements.txt' if a requirements file exists in the root",
+        "Change to 'pip install --requirement requirements.txt' using the full flag name",
+        "Use 'pip install -e .[dev]' for development dependencies"
+      ],
+      "golden_answer": "Fix the command to 'pip install iris-grib' for standard installation"
+    }
+  ]
+}

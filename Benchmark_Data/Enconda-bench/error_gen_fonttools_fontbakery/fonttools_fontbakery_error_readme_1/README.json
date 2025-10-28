@@ -1,0 +1,29 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_1",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a requirement for Python 3.7, which is an outdated and likely unsupported version for the current release of fontbakery.",
+      "correction_candidates": [
+        "Font Bakery requires Python 3.7 or newer to run.",
+        "The Python version requirement is listed on the PyPI page.",
+        "Remove the sentence specifying 'Font Bakery requires Python 3.7 to run.'",
+        "Font Bakery requires Python 3.8 or higher, as indicated by the project's packaging files."
+      ],
+      "golden_answer": "Remove the sentence specifying 'Font Bakery requires Python 3.7 to run.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `fontbakery check-googlefonts --font myfont.ttf` is syntactically incorrect. The tool expects font files as positional arguments, not with a `--font` flag.",
+      "correction_candidates": [
+        "Change the example to: `fontbakery check --profile googlefonts myfont.ttf`",
+        "Change the example to: `fontbakery check-googlefonts -f myfont.ttf`",
+        "Change the example to: `fontbakery check-googlefonts myfont.ttf`",
+        "Change the example to: `fontbakery --check googlefonts myfont.ttf`"
+      ],
+      "golden_answer": "Change the example to: `fontbakery check-googlefonts myfont.ttf`"
+    }
+  ]
+}

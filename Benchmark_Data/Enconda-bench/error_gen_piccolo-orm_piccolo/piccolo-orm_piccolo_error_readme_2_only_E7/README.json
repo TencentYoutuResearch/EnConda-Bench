@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_2_only_E7",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that Piccolo is compatible with Python 3.6, but it requires a newer version of Python due to its use of modern language features.",
+      "correction_candidates": [
+        "Change the requirement to 'Python 3.8 and above'.",
+        "Change the requirement to 'Python 2.7 and 3.6+'.",
+        "Add a note that Python 3.6 requires an older version of Piccolo.",
+        "Remove the sentence mentioning Python 3.6 compatibility."
+      ],
+      "golden_answer": "Remove the sentence mentioning Python 3.6 compatibility."
+    }
+  ]
+}

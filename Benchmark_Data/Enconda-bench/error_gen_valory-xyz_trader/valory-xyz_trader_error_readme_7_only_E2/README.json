@@ -1,0 +1,18 @@
+{
+  "readme": "valory-xyz_trader_error_readme_7_only_E2",
+  "repo_name": "valory-xyz_trader",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed autonomy build-image command to autonomy create-image which is incorrect syntax",
+      "correction_candidates": [
+        "autonomy build-image",
+        "autonomy make-image",
+        "autonomy generate-image",
+        "autonomy setup-image"
+      ],
+      "golden_answer": "autonomy build-image"
+    }
+  ]
+}

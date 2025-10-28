@@ -1,0 +1,29 @@
+{
+  "readme": "beeware_briefcase_error_readme_2",
+  "repo_name": "beeware_briefcase",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that `cookiecutter` is a required prerequisite that must be installed separately, when it is managed by Briefcase itself.",
+      "correction_candidates": [
+        "Remove the sentence about installing `cookiecutter` as it is not a required prerequisite.",
+        "Change `pip install cookiecutter` to `pip install briefcase[templates]`.",
+        "Combine the installations into `pip install briefcase cookiecutter`.",
+        "Change the prerequisite to `pip install jinja2`."
+      ],
+      "golden_answer": "Remove the sentence about installing `cookiecutter` as it is not a required prerequisite."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly claims that Briefcase only supports Python 3.8, which contradicts the project's actual compatibility shown in the badge.",
+      "correction_candidates": [
+        "Change 'Python 3.8' to 'Python 3.7 or newer'.",
+        "Replace the sentence with 'Briefcase is compatible with all Python versions listed in the badge above.'",
+        "Change 'Python 3.8' to 'the latest stable version of Python 3'.",
+        "Remove the sentence 'Note: Briefcase currently only supports Python 3.8. For other versions, you may encounter unexpected errors.'"
+      ],
+      "golden_answer": "Remove the sentence 'Note: Briefcase currently only supports Python 3.8. For other versions, you may encounter unexpected errors.'"
+    }
+  ]
+}

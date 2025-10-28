@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_6_only_E7",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7 requirement which is deprecated and incompatible",
+      "correction_candidates": [
+        "Change to 'Python 3.8 or higher' for modern compatibility",
+        "Remove Python version requirement as Bob doesn't need Python",
+        "Update to 'Python 3.6 or higher' for broader compatibility",
+        "Change to 'Python 3.10 or higher' for latest features"
+      ],
+      "golden_answer": "Remove Python version requirement as Bob doesn't need Python"
+    }
+  ]
+}

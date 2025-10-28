@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_pajbot_pajbot_error_readme_merge_k5",
+  "repo_name": "pajbot_pajbot",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the installation script is incorrect. It is missing the '.sh' extension and uses 'sh', which might not be the intended execution method.",
+      "correction_candidates": [
+        "Run the command: source ./scripts/venvinstall.sh",
+        "Run the command: ./scripts/venvinstall.sh",
+        "Run the command: bash venvinstall.sh",
+        "Run the command: ./venvinstall.sh"
+      ],
+      "golden_answer": "Run the command: ./scripts/venvinstall.sh"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the example configuration file is incorrect. The directory is 'configs', not 'config'.",
+      "correction_candidates": [
+        "Copy from ./configs/example.ini to ./config.ini",
+        "Copy from ./config.ini.example to ./config.ini",
+        "Rename ./configs/example.ini to config.ini",
+        "Copy from ./example.ini to ./config.ini"
+      ],
+      "golden_answer": "Copy from ./configs/example.ini to ./config.ini"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified ambiguously as '3.x', which does not inform the user of the specific minimal version needed for compatibility.",
+      "correction_candidates": [
+        "Specify the minimal supported Python version is 3.9.",
+        "Specify the minimal supported Python version is 3.6.",
+        "Specify the supported Python versions are 3.8, 3.9, and 3.10.",
+        "State that any Python 3 version is supported."
+      ],
+      "golden_answer": "Specify the minimal supported Python version is 3.9."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly tell the user to run `pip install -r requirements.txt` directly, bypassing the provided installation script which handles virtual environment creation and other setup tasks.",
+      "correction_candidates": [
+        "The correct command is pip install .",
+        "The correct command is ./scripts/install_dependencies.sh",
+        "The correct command is ./scripts/venvinstall.sh",
+        "The correct command is python -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "The correct command is ./scripts/venvinstall.sh"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the bot is `python main.py`, which may fail if the user is not in the correct virtual environment. The original command `./main.py` likely uses a shebang to ensure the correct interpreter is used.",
+      "correction_candidates": [
+        "The correct command to run the bot is ./main.py",
+        "The correct command is python3.9 ./main.py",
+        "The correct command is py main.py",
+        "The correct command is python -m main"
+      ],
+      "golden_answer": "The correct command to run the bot is ./main.py"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary system dependencies are listed that are not actually required for pajbot installation",
+      "correction_candidates": [
+        "Remove libssl-dev libffi-dev python3-dev as they are not needed",
+        "Replace with only libssl-dev as the single required dependency",
+        "Change to postgresql-dev libxml2-dev dependencies instead",
+        "Keep only python3-dev and remove the other two dependencies"
+      ],
+      "golden_answer": "Remove libssl-dev libffi-dev python3-dev as they are not needed"
+    }
+  ]
+}

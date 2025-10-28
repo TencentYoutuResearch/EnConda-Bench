@@ -1,0 +1,18 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_4_only_E6",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the logging example, `logging.basicConfig()` is called before `progressbar.streams.wrap_stderr()`, which is the wrong order. The stream must be wrapped before the logging handler is initialized to prevent garbled output.",
+      "correction_candidates": [
+        "Remove the `logging.basicConfig()` line entirely.",
+        "Swap the `logging.basicConfig()` and `progressbar.streams.wrap_stderr()` lines to wrap stderr first.",
+        "Replace `logging.basicConfig()` with `logging.basicConfig(stream=progressbar.streams.stderr)`.",
+        "Add `progressbar.streams.flush()` after `logging.basicConfig()`."
+      ],
+      "golden_answer": "Swap the `logging.basicConfig()` and `progressbar.streams.wrap_stderr()` lines to wrap stderr first."
+    }
+  ]
+}

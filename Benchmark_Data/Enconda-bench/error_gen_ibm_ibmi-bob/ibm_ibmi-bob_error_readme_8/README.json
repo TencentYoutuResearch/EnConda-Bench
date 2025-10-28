@@ -1,0 +1,29 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_8",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Incorrectly states Bob requires Node.js and npm installation when it doesn't use JavaScript technologies",
+      "correction_candidates": [
+        "Remove Node.js requirement as Bob is a native IBM i build system",
+        "Change to Python and pip installation instructions instead",
+        "Replace with Java JDK installation requirements",
+        "Update to require Docker and container runtime installation"
+      ],
+      "golden_answer": "Remove Node.js requirement as Bob is a native IBM i build system"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Claims Bob requires outdated GNU Make 2.x and is incompatible with modern 4.x versions",
+      "correction_candidates": [
+        "Update to 'GNU Make 4.0 or higher for full compatibility'",
+        "Change to 'GNU Make 3.8 or higher' for broader compatibility",
+        "Remove GNU Make version requirement entirely",
+        "Specify 'GNU Make 4.3 or higher for optimal performance'"
+      ],
+      "golden_answer": "Update to 'GNU Make 4.0 or higher for full compatibility'"
+    }
+  ]
+}

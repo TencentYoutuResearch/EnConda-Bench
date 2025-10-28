@@ -1,0 +1,18 @@
+{
+  "readme": "cvxgrp_cvxportfolio_error_readme_2_only_E4",
+  "repo_name": "cvxgrp_cvxportfolio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to activate the virtual environment, `source venv/bin/activate`, uses an incorrect directory name `venv`. The setup command `make env` creates a directory named `env`.",
+      "correction_candidates": [
+        "Change the command to `source .env/bin/activate`.",
+        "Change the command to `source env/bin/activate`.",
+        "Advise the user to first rename the `env` directory to `venv`.",
+        "Change the command to `. env/bin/activate`."
+      ],
+      "golden_answer": "Change the command to `source env/bin/activate`."
+    }
+  ]
+}

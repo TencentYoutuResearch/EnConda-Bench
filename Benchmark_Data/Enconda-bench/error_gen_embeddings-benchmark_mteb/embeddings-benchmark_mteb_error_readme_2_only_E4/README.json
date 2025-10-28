@@ -1,0 +1,18 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_2_only_E4",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the example script `run_mteb.py` is broken as the file does not exist at the specified path. The correct filename is `run_mteb_english.py`.",
+      "correction_candidates": [
+        "Change the link to point to 'examples/run_mteb.py'.",
+        "Change the link to point to 'mteb/scripts/run_mteb_english.py'.",
+        "Change the link to point to 'scripts/run_mteb_english.py'.",
+        "Change the link to point to the 'mteb/mtebscripts' repository."
+      ],
+      "golden_answer": "Change the link to point to 'scripts/run_mteb_english.py'."
+    }
+  ]
+}

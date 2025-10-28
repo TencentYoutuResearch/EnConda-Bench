@@ -1,0 +1,29 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_1",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version is specified as 'python 3', which is ambiguous and can lead to compatibility issues as it doesn't specify the required minor version.",
+      "correction_candidates": [
+        "Change 'python 3' to 'python > 3.6'.",
+        "Change 'python 3' to 'python 3.9'.",
+        "Change 'python 3' to 'python'.",
+        "Change 'python 3' to 'python 3.9+'."
+      ],
+      "golden_answer": "Change 'python 3' to 'python 3.9'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install pre-commit hooks is 'pipenv pre-commit install', which is incorrect. Commands executed within the pipenv environment should be prefixed with 'run'.",
+      "correction_candidates": [
+        "Change 'pipenv pre-commit install' to 'pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv shell && pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv install pre-commit'."
+      ],
+      "golden_answer": "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'."
+    }
+  ]
+}

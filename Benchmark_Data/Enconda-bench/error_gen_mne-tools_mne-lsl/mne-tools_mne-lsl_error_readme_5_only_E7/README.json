@@ -1,0 +1,18 @@
+{
+  "readme": "mne-tools_mne-lsl_error_readme_5_only_E7",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from ≥ 3.9 to ≥ 2.7, creating version compatibility issues",
+      "correction_candidates": [
+        "MNE-LSL supports `python ≥ 3.9` and is available on",
+        "MNE-LSL supports `python ≥ 3.8` and is available on",
+        "MNE-LSL supports `python ≥ 3.10` and is available on",
+        "MNE-LSL supports `python ≥ 3.7` and is available on"
+      ],
+      "golden_answer": "MNE-LSL supports `python ≥ 3.9` and is available on"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "ajenti_ajenti_error_readme_3_only_E8",
+  "repo_name": "ajenti_ajenti",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The 'Development Setup' section is too vague and lacks specific commands or steps for setting up the environment, installing dependencies, or running the application.",
+      "correction_candidates": [
+        "Add a link to the specific development setup page in the documentation.",
+        "Replace the vague text with a complete, step-by-step guide, including commands for creating a virtual environment, installing dependencies from `requirements.txt`, and running the development server.",
+        "Add a note specifying that Python 3 and pip are required.",
+        "Add a command to clone the repository: `git clone https://github.com/ajenti/ajenti.git`."
+      ],
+      "golden_answer": "Replace the vague text with a complete, step-by-step guide, including commands for creating a virtual environment, installing dependencies from `requirements.txt`, and running the development server."
+    }
+  ]
+}

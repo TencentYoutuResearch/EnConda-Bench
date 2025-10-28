@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_project-improv_improv_error_readme_merge_k2",
+  "repo_name": "project-improv_improv",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package requires Python 2.7, which is an end-of-life version. The PyPI badge indicates compatibility with modern Python 3 versions.",
+      "correction_candidates": [
+        "The note should be updated to state that `improv` is compatible with Python 3.7 and higher.",
+        "The note should be removed, as the PyPI badge already shows compatible Python versions.",
+        "The note should state that `improv` works with both Python 2.7 and Python 3.x.",
+        "The note should recommend using the latest stable version of Python 3."
+      ],
+      "golden_answer": "The note should be updated to state that `improv` is compatible with Python 3.7 and higher."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install from improv` is syntactically incorrect and will fail.",
+      "correction_candidates": [
+        "The command should be `pip install improv`.",
+        "The command should be `python -m pip install improv` to ensure the correct pip is used.",
+        "The command should be `pip install 'improv'` with quotes around the package name.",
+        "The package should be installed from GitHub using `pip install git+https://github.com/project-improv/improv.git`."
+      ],
+      "golden_answer": "The command should be `pip install improv`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The Quick Start guide mandates installing the `caiman` package. This is a heavy, specialized dependency that is not required for the core functionality of `improv` and whose installation is more complex than a simple pip command.",
+      "correction_candidates": [
+        "The `caiman` dependency should be installed as an extra, using `pip install improv[caiman]`.",
+        "The instruction to install `caiman` should be moved to the documentation for specific examples that require it.",
+        "Users should be instructed to install `caiman` from its official GitHub repository, not PyPI.",
+        "The command should be `pip install caiman --no-deps` to avoid dependency conflicts."
+      ],
+      "golden_answer": "The instruction to install `caiman` should be moved to the documentation for specific examples that require it."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the demo, `python examples/zebrafish_demo --visualize=true`, is incorrect. It uses a non-existent script path and an improper syntax for the boolean flag.",
+      "correction_candidates": [
+        "The command is invalid because the script does not exist at that path.",
+        "The correct command to run the demo is `improv run-demo zebrafish`.",
+        "The boolean flag should be passed as `--visualize`, not `--visualize=true`.",
+        "The command should be run as a module: `python -m improv.examples.zebrafish_demo --visualize`."
+      ],
+      "golden_answer": "The correct command to run the demo is `improv run-demo zebrafish`."
+    }
+  ]
+}

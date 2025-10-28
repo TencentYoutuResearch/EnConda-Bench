@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_4_only_E1",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions attempt to install system services (PostgreSQL and Redis) using `pip`, which is incorrect. `pip` is for Python packages, and these services must be installed using a system package manager like `apt` or `yum`.",
+      "correction_candidates": [
+        "Replace `pip install postgresql redis` with `sudo apt-get install postgresql redis-server`.",
+        "Change the command to `sudo pip install postgresql-server redis-server`.",
+        "Run `pip install psycopg2-binary redis` instead, which are the correct Python clients.",
+        "Remove the step, as these are optional dependencies."
+      ],
+      "golden_answer": "Replace `pip install postgresql redis` with `sudo apt-get install postgresql redis-server`."
+    }
+  ]
+}

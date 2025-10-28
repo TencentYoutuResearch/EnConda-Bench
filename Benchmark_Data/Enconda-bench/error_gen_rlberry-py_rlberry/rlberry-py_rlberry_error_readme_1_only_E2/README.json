@@ -1,0 +1,18 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_1_only_E2",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install -u rlberry` is incorrect. The flag `-u` is not a valid flag for upgrading a package; the correct flag is `-U` or `--upgrade`.",
+      "correction_candidates": [
+        "pip install rlberry",
+        "pip install --upgrade rlberry",
+        "pip install rlberry --update",
+        "pip install -U rlberry"
+      ],
+      "golden_answer": "pip install -U rlberry"
+    }
+  ]
+}

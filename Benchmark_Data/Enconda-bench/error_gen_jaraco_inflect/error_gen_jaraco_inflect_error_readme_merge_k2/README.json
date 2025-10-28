@@ -1,0 +1,29 @@
+{
+  "readme": "error_gen_jaraco_inflect_error_readme_merge_k2",
+  "repo_name": "jaraco_inflect",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip3 install inflection` uses the wrong package name. The correct package name on PyPI is `inflect`.",
+      "correction_candidates": [
+        "pip install inflect",
+        "pip install py-inflect",
+        "conda install inflect",
+        "pip install --upgrade inflect"
+      ],
+      "golden_answer": "pip install inflect"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Getting Started' section instructs the user to run a python script using the library before installing it, which is the wrong order and will fail.",
+      "correction_candidates": [
+        "Correct the logical order by showing the `pip install inflect` command before the `python inflect.py` command.",
+        "Remove the `python inflect.py` command entirely as it's not a standard way to demonstrate a library.",
+        "Change `python inflect.py` to `python -m inflect` to suggest a module-based execution.",
+        "Add a `git clone` step before the `python inflect.py` command to ensure the file exists."
+      ],
+      "golden_answer": "Correct the logical order by showing the `pip install inflect` command before the `python inflect.py` command."
+    }
+  ]
+}

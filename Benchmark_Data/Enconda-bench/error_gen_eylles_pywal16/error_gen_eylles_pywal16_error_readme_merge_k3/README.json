@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_eylles_pywal16_error_readme_merge_k3",
+  "repo_name": "eylles_pywal16",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists 'nodejs' as a required dependency for installation.",
+      "correction_candidates": [
+        "Pywal16 requires Python 3.6+, `pip`, and `imagemagick`.",
+        "Pywal16 requires Python 3.6+ and `pip`. Install it by running:\n`pip install pywal16`",
+        "Pywal16 requires Python 3.6+, `pip`, and `go`.",
+        "Pywal16 requires Python 3.6+ and `pip`. Install it by running:\n`sudo apt-get install pywal16`"
+      ],
+      "golden_answer": "Pywal16 requires Python 3.6+ and `pip`. Install it by running:\n`pip install pywal16`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to generate a palette from an image uses an incorrect flag '--image'.",
+      "correction_candidates": [
+        "To generate a palette from an image, run:\n`wal -i \"path/to/your/image.jpg\"`",
+        "To generate a palette from an image, run:\n`wal image \"path/to/your/image.jpg\"`",
+        "To generate a palette from an image, run:\n`wal --set \"path/to/your/image.jpg\"`",
+        "To generate a palette from an image, run:\n`wal -img \"path/to/your/image.jpg\"`"
+      ],
+      "golden_answer": "To generate a palette from an image, run:\n`wal -i \"path/to/your/image.jpg\"`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the license badge points to a non-existent 'LICENSE' file instead of 'LICENSE.md'.",
+      "correction_candidates": [
+        "<a href=\"./LICENSE.md\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>",
+        "<a href=\"./docs/LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>",
+        "<a href=\"https://github.com/eylles/pywal16/blob/master/LICENSE.md\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>",
+        "<a href=\"./LICENSE.txt\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>"
+      ],
+      "golden_answer": "<a href=\"./LICENSE.md\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command uses the incorrect package name 'py-wal' instead of the correct 'pywal16'.",
+      "correction_candidates": [
+        "You can install the latest release from PyPI:\n`pip install pywal`",
+        "You can install the latest release from PyPI:\n`pip install pywal16`",
+        "You can install the latest release from PyPI:\n`pip install python-wal`",
+        "You can install the latest release from PyPI:\n`pip install wal16`"
+      ],
+      "golden_answer": "You can install the latest release from PyPI:\n`pip install pywal16`"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "dlubal-software_rfem_python_client_error_readme_4",
+  "repo_name": "dlubal-software_rfem_python_client",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The description of 'initModel.py' specifies an incorrect server port (8000). The default and correct port for the RFEM Web Service is 8081.",
+      "correction_candidates": [
+        "Change the port number in the description from `8000` to the correct default, `8081`.",
+        "Change the port number to `808X` to indicate it is configurable.",
+        "Remove the specific port number and state that it connects to the RFEM Web Service.",
+        "Add a note that the port must match the one configured in RFEM's Web Services options, which defaults to 8081."
+      ],
+      "golden_answer": "Change the port number in the description from `8000` to the correct default, `8081`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instruction for installing the Python package is vague. It does not provide the specific package name or a direct installation command, making it difficult for users to install.",
+      "correction_candidates": [
+        "Add the explicit command: `pip install RFEM`.",
+        "Specify the package name is 'RFEM' and link to its PyPi page.",
+        "Provide installation examples for both pip and conda.",
+        "Change the text to: 'To install, run `pip install RFEM` in your terminal.'"
+      ],
+      "golden_answer": "Add the explicit command: `pip install RFEM`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "tefra_xsdata_error_readme_2_only_E2",
+  "repo_name": "tefra_xsdata",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate models uses an incorrect flag `--pkg`. The correct flag for specifying the output package is `--package`.",
+      "correction_candidates": [
+        "xsdata tests/fixtures/primer/order.xsd -p tests.fixtures.primer",
+        "xsdata tests/fixtures/primer/order.xsd --package=tests.fixtures.primer",
+        "xsdata --package tests.fixtures.primer tests/fixtures/primer/order.xsd",
+        "xsdata tests/fixtures/primer/order.xsd --package tests.fixtures.primer"
+      ],
+      "golden_answer": "xsdata tests/fixtures/primer/order.xsd --package tests.fixtures.primer"
+    }
+  ]
+}

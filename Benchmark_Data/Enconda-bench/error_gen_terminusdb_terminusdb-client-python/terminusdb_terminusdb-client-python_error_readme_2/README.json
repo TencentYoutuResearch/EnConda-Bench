@@ -1,0 +1,29 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_2",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the `Testing` section, the steps are in the wrong logical order. It instructs the user to install dependencies *before* cloning the repository, which is impossible.",
+      "correction_candidates": [
+        "Swap step 1 (`poetry install`) and step 2 (`git clone ...`).",
+        "Combine the two steps into a single instruction: `git clone ... && cd terminusdb-client-python && poetry install`.",
+        "Delete step 1 (`poetry install`) as cloning the repository is sufficient.",
+        "Move step 1 (`poetry install`) to after step 3 (running pytest)."
+      ],
+      "golden_answer": "Swap step 1 (`poetry install`) and step 2 (`git clone ...`)."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the `Testing` section, the dependency installation command `poetry install` is incorrect because it does not install the development dependencies (like pytest and tox) required to run the tests. The correct command is `make init` or `poetry install --with dev`.",
+      "correction_candidates": [
+        "Change `$ poetry install` to `$ make init`.",
+        "Change `$ poetry install` to `$ poetry install --with dev,test`.",
+        "Change `$ poetry install` to `$ pip install -e .[dev]`.",
+        "Change `$ poetry install` to `$ poetry update`."
+      ],
+      "golden_answer": "Change `$ poetry install` to `$ make init`."
+    }
+  ]
+}

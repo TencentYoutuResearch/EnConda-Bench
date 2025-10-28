@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_6_only_E2",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed pip command syntax from 'python -m pip' to just 'pip' inconsistently",
+      "correction_candidates": [
+        "python -m pip install terminusdb-client[dataframe]",
+        "pip3 install terminusdb-client[dataframe]",
+        "pipx install terminusdb-client[dataframe]",
+        "conda install terminusdb-client[dataframe]"
+      ],
+      "golden_answer": "python -m pip install terminusdb-client[dataframe]"
+    }
+  ]
+}

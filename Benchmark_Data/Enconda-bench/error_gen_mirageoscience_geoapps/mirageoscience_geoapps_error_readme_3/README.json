@@ -1,0 +1,29 @@
+{
+  "readme": "mirageoscience_geoapps_error_readme_3",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The 'Download the latest' link incorrectly points to a zip archive of the `master` branch, but the repository's default branch is `main`, causing the link to be broken.",
+      "correction_candidates": [
+        "Change the branch name in the URL from `master` to `main`: `.../archive/main.zip`",
+        "Change the branch name in the URL from `master` to `develop`: `.../archive/develop.zip`",
+        "Remove the 'Download the latest' link entirely.",
+        "Change the link to point to the GitHub releases page instead of a direct download."
+      ],
+      "golden_answer": "Change the branch name in the URL from `master` to `main`: `.../archive/main.zip`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the third-party software notices points to a non-existent file `THIRD_PARTY.rst`. The correct filename is `THIRD_PARTY_SOFTWARE.rst`.",
+      "correction_candidates": [
+        "Correct the link target and definition to point to `THIRD_PARTY_SOFTWARE.rst`.",
+        "Change the link to an absolute URL pointing to the file on GitHub.",
+        "Remove the 'Third Party Software' section.",
+        "Correct the link target and definition to point to `LICENSE.rst`."
+      ],
+      "golden_answer": "Correct the link target and definition to point to `THIRD_PARTY_SOFTWARE.rst`."
+    }
+  ]
+}

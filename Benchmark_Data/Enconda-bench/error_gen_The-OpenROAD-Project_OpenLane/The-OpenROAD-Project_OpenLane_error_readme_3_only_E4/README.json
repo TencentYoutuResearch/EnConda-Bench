@@ -1,0 +1,18 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_3_only_E4",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the git repository is incorrect due to a case-sensitivity issue ('OpenLANE' instead of 'OpenLane'). This will cause the 'git clone' command to fail with a 'repository not found' error.",
+      "correction_candidates": [
+        "git clone https://github.com/The-OpenROAD-Project/OpenLane.git",
+        "git clone https://github.com/efabless/openlane",
+        "git clone git@github.com:The-OpenROAD-Project/OpenLane.git",
+        "git clone https://github.com/The-OpenROAD-Project/OpenLane"
+      ],
+      "golden_answer": "git clone https://github.com/The-OpenROAD-Project/OpenLane"
+    }
+  ]
+}

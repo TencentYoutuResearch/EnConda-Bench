@@ -1,0 +1,29 @@
+{
+  "readme": "openml_automlbenchmark_error_readme_5",
+  "repo_name": "openml_automlbenchmark",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "To get started, first create your virtual environment with `python -m venv automl_env` and then install the required dependencies using `pip install -r requirements.txt`.",
+        "To get started, first setup conda environment with `conda create -n automl_env python=3.8` and then install dependencies using `pip install -r requirements.txt`.",
+        "To get started, first activate your system Python and then install dependencies using `pip install -r requirements.txt` followed by creating virtual environment.",
+        "To get started, first install Python 3.8+ and then create virtual environment using `python -m venv automl_env` before installing dependencies."
+      ],
+      "golden_answer": "To get started, first create your virtual environment with `python -m venv automl_env` and then install the required dependencies using `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specifying invalid Python versions (Python 2.7 is deprecated and Python 4.0 doesn't exist)",
+      "correction_candidates": [
+        "Requires Python 3.7+ for optimal performance",
+        "Requires Python 3.6 or Python 3.8+ for optimal performance",
+        "Requires Python 2.7+ or Python 3.9+ for optimal performance",
+        "Requires the latest Python version for optimal performance"
+      ],
+      "golden_answer": "Requires Python 3.7+ for optimal performance"
+    }
+  ]
+}

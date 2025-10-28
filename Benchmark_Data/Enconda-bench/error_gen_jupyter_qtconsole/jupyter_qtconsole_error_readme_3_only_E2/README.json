@@ -1,0 +1,18 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_3_only_E2",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application, `jupyter-qtconsole`, is incorrect. The correct command is `jupyter qtconsole`.",
+      "correction_candidates": [
+        "Change the command to `jupyter-console`.",
+        "Change the command to `jupyter qtconsole`.",
+        "Change the command to `ipython qtconsole`.",
+        "Change the command to `python -m qtconsole`."
+      ],
+      "golden_answer": "Change the command to `jupyter qtconsole`."
+    }
+  ]
+}

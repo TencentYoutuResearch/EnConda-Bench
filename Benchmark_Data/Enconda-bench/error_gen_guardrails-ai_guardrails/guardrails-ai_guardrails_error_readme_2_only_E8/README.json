@@ -1,0 +1,18 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_2_only_E8",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The code example for generating structured data is missing the required 'engine' parameter in the `guard()` call, which will cause the OpenAI API call to fail.",
+      "correction_candidates": [
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, engine='gpt-3.5-turbo-instruct')",
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, model='gpt-3.5-turbo-instruct')",
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create)",
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, llm='gpt-3.5-turbo-instruct')"
+      ],
+      "golden_answer": "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, engine='gpt-3.5-turbo-instruct')"
+    }
+  ]
+}

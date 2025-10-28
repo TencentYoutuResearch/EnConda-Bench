@@ -1,0 +1,18 @@
+{
+  "readme": "dj-stripe_dj-stripe_error_readme_3_only_E4",
+  "repo_name": "dj-stripe_dj-stripe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the Stripe logo, `./assets/stripe_logo.svg`, is incorrect. The file does not exist at this location, causing the image to be broken.",
+      "correction_candidates": [
+        "Change the image path to the correct location: `./logos/stripe_blurple.svg`.",
+        "Change the image path to use a full URL from the web.",
+        "Remove the image tag entirely.",
+        "Change the image path to `/logos/stripe_blurple.svg`."
+      ],
+      "golden_answer": "Change the image path to the correct location: `./logos/stripe_blurple.svg`."
+    }
+  ]
+}

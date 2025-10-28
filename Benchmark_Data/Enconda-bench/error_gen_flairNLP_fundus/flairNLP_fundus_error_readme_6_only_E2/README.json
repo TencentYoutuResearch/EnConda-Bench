@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_6_only_E2",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added unnecessary --upgrade flag to the pip install command which could cause version conflicts during initial installation",
+      "correction_candidates": [
+        "pip install fundus",
+        "pip install -e fundus",
+        "pip install fundus --user",
+        "pip install fundus --force-reinstall"
+      ],
+      "golden_answer": "pip install fundus"
+    }
+  ]
+}

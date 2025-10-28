@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_8_only_E7",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.8+ to 3.11+ which is too restrictive and excludes many users with older Python versions",
+      "correction_candidates": [
+        "Fundus requires Python 3.8+.",
+        "Fundus requires Python 3.9+.",
+        "Fundus requires Python 3.10+.",
+        "Fundus requires Python 3.12+."
+      ],
+      "golden_answer": "Fundus requires Python 3.8+."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "commaai_comma10k_error_readme_1",
+  "repo_name": "commaai_comma10k",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the viewer script is incorrect. 'python view.py' will fail because the script is named 'viewer.py'.",
+      "correction_candidates": [
+        "Run <pre>./viewer.py</pre> to see them with the mask overlay.",
+        "Run <pre>python viewer.py</pre> to see them with the mask overlay.",
+        "Run <pre>view.py</pre> to see them with the mask overlay.",
+        "Run <pre>python view</pre> to see them with the mask overlay."
+      ],
+      "golden_answer": "Run <pre>./viewer.py</pre> to see them with the mask overlay."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The directory for the primary PNG image files is incorrectly named 'images/' instead of the correct 'imgs/'.",
+      "correction_candidates": [
+        "imgs/  -- The PNG image files",
+        "img/  -- The PNG image files",
+        "images/png/  -- The PNG image files",
+        "PNGs/  -- The PNG image files"
+      ],
+      "golden_answer": "imgs/  -- The PNG image files"
+    }
+  ]
+}

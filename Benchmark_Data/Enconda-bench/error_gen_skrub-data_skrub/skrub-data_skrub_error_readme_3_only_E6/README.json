@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_3_only_E6",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly advises installing the package globally before creating a virtual environment, which is against best practices and can lead to dependency conflicts.",
+      "correction_candidates": [
+        "Remove the sentence advising to install skrub globally first.",
+        "Rewrite the advice to: 'It is highly recommended to install skrub inside a virtual environment.'",
+        "Change the advice to: 'First, create a virtual environment, then activate it, and finally install skrub.'",
+        "Move the sentence about global installation to a 'System-Wide Installation' subsection and add a warning."
+      ],
+      "golden_answer": "Remove the sentence advising to install skrub globally first."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_webcomics_dosage_error_readme_merge_k2",
+  "repo_name": "webcomics_dosage",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The development installation command has incorrect syntax, placing the extras `[css,bash,dev]` before the package path `.`, which will cause pip to fail.",
+      "correction_candidates": [
+        "Correct the command to `pip install -e . --extras css,bash,dev`.",
+        "Correct the command to `pip install --editable .[css,bash,dev]`.",
+        "Correct the command to `pip install -e .[css,bash,dev]`.",
+        "Correct the command to `pip install -e . [css,bash,dev]`."
+      ],
+      "golden_answer": "Correct the command to `pip install -e .[css,bash,dev]`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `pipx` installation command is presented as installing all optional features, but it omits the `css` extra, which is required for some comics.",
+      "correction_candidates": [
+        "Change the command to `pipx install dosage[all]`.",
+        "Change the command to `pipx install dosage[css,bash]`.",
+        "Change the command to `pipx install dosage --include-deps`.",
+        "Add a separate command `pip install cssselect` after the pipx command."
+      ],
+      "golden_answer": "Change the command to `pipx install dosage[css,bash]`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for development setup incorrectly advise installing the package before creating and activating a virtual environment, which defeats the purpose of the virtual environment.",
+      "correction_candidates": [
+        "Reverse the steps: first create and activate a virtual environment, then run the pip install command.",
+        "Remove the mention of a virtual environment as it is optional.",
+        "Add a step to run `pip uninstall dosage` before creating the virtual environment.",
+        "Specify that the pip install command should use the `--user` flag if not in a virtual environment."
+      ],
+      "golden_answer": "Reverse the steps: first create and activate a virtual environment, then run the pip install command."
+    }
+  ]
+}

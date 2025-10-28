@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_1_only_E1",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The provided `pip install` command includes the `--no-dependencies` flag, which prevents the installation of required libraries like `pyasn1` and `pysmi`.",
+      "correction_candidates": [
+        "Change the command to `pip install pysnmplib`.",
+        "Change the command to `pip install pysnmplib --only-binary :all:`.",
+        "Change the command to `pip install pysnmplib[crypto]` to include all dependencies.",
+        "Change the command to `pip3 install pysnmplib`."
+      ],
+      "golden_answer": "Change the command to `pip install pysnmplib`."
+    }
+  ]
+}

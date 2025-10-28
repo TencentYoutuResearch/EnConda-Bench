@@ -1,0 +1,29 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_3",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions mandate installing the `PyMySQL` package, which is an alternative database driver, not a required dependency for `django-mysql`.",
+      "correction_candidates": [
+        "Replace `pip install PyMySQL` with `pip install mysqlclient`.",
+        "Remove the step for installing `PyMySQL` as it's not a direct dependency.",
+        "Change the second command to `pip install django-mysql[pymysql]` and combine the steps.",
+        "Explain that either `PyMySQL` or `mysqlclient` can be used, but `mysqlclient` is recommended."
+      ],
+      "golden_answer": "Remove the step for installing `PyMySQL` as it's not a direct dependency."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions specify a hardcoded file path `myproject/settings/base.py` for the Django settings, which is a common pattern but not guaranteed to exist in all projects.",
+      "correction_candidates": [
+        "Change the path to the more standard `myproject/settings.py`.",
+        "Refer to \"your project's settings file\" instead of a specific path.",
+        "Provide alternative paths, such as `config/settings.py` or `project/settings.py`.",
+        "Remove the file path and just instruct the user to add the app to `INSTALLED_APPS` in their settings."
+      ],
+      "golden_answer": "Refer to \"your project's settings file\" instead of a specific path."
+    }
+  ]
+}

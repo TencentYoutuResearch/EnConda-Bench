@@ -1,0 +1,29 @@
+{
+  "readme": "microsoft_torchgeo_error_readme_2",
+  "repo_name": "microsoft_torchgeo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have the steps in the wrong logical order. It tells the user to install torchgeo first, and then upgrade pip. The correct order is to ensure build tools like pip are up-to-date before installing packages.",
+      "correction_candidates": [
+        "The commands should be run in the opposite order: first upgrade pip, then install torchgeo.",
+        "Remove the pip upgrade command as it's not always necessary.",
+        "Add `python -m venv .venv` before the installation commands.",
+        "Change `$ python -m pip install --upgrade pip` to `pip install --upgrade pip`."
+      ],
+      "golden_answer": "The commands should be run in the opposite order: first upgrade pip, then install torchgeo."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example code for Landsat datasets hardcodes a specific, non-standard file path `/data/torchgeo/landsat7` and `/data/torchgeo/landsat8` and implies the user must have data in this exact location without instructions to create it. This will cause a FileNotFoundError for most users. The original placeholder `...` was better.",
+      "correction_candidates": [
+        "Change `root` from a hardcoded path back to the placeholder `root=\"...\"` to indicate the user should provide their own path.",
+        "Add a note: `Make sure to create the /data/torchgeo directory and place your data there.`",
+        "Change the root path to a relative path like `root=\"./data\"`.",
+        "Change the dataset to one that can be automatically downloaded, like `CDL(root=\"data\", download=True)`."
+      ],
+      "golden_answer": "Change `root` from a hardcoded path back to the placeholder `root=\"...\"` to indicate the user should provide their own path."
+    }
+  ]
+}

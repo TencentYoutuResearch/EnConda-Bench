@@ -1,0 +1,18 @@
+{
+  "readme": "flav-io_flavio_error_readme_7_only_E1",
+  "repo_name": "flav-io_flavio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Pins very old versions of numpy, scipy, and matplotlib that are likely incompatible with modern Python versions",
+      "correction_candidates": [
+        "Remove version pinning and use pip install flavio numpy scipy matplotlib",
+        "Update to recent versions like numpy>=1.20.0 scipy>=1.7.0 matplotlib>=3.5.0",
+        "Use pip install flavio[all] to install with recommended dependency versions",
+        "Specify minimum versions like numpy>=1.18.0 scipy>=1.5.0 matplotlib>=3.0.0"
+      ],
+      "golden_answer": "Remove version pinning and use pip install flavio numpy scipy matplotlib"
+    }
+  ]
+}

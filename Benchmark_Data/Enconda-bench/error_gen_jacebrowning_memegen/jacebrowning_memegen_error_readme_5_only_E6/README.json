@@ -1,0 +1,18 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_5_only_E6",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Instructs to install development dependencies before main dependencies, which is the wrong order",
+      "correction_candidates": [
+        "First install the main requirements.txt file, then install dependencies from requirements-dev.txt",
+        "Install requirements.txt first, followed by requirements-dev.txt for development setup",
+        "Begin with pip install -r requirements.txt, then proceed with requirements-dev.txt",
+        "Start by installing production dependencies from requirements.txt, then add development dependencies"
+      ],
+      "golden_answer": "First install the main requirements.txt file, then install dependencies from requirements-dev.txt"
+    }
+  ]
+}

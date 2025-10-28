@@ -1,0 +1,18 @@
+{
+  "readme": "reagento_adaptix_error_readme_4_only_E1",
+  "repo_name": "reagento_adaptix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The second example uses the `sqlalchemy` library, but it is not included in the installation instructions. A note was added to mention the dependency, but the command itself was not fixed, leading to an `ImportError`.",
+      "correction_candidates": [
+        "Add `sqlalchemy` to the installation command: `pip install adaptix==3.0.0b7 sqlalchemy`.",
+        "Change the installation command to `pip install \"adaptix[sqlalchemy]==3.0.0b7\"`.",
+        "Add a separate installation command `pip install sqlalchemy` before the example.",
+        "Remove the example that uses `sqlalchemy`."
+      ],
+      "golden_answer": "Add `sqlalchemy` to the installation command: `pip install adaptix==3.0.0b7 sqlalchemy`."
+    }
+  ]
+}

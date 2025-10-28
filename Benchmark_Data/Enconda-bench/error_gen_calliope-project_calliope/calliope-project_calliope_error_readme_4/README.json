@@ -1,0 +1,29 @@
+{
+  "readme": "calliope-project_calliope_error_readme_4",
+  "repo_name": "calliope-project_calliope",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command is missing the `-c conda-forge` channel argument, which is necessary to locate the `calliope` package.",
+      "correction_candidates": [
+        "Add `-c conda-forge` to the `mamba create` command.",
+        "Add a separate command `conda config --add channels conda-forge` before the installation command.",
+        "Replace `mamba` with `pip` using `pip install calliope`.",
+        "Change the command to `mamba create -n calliope -c conda-forge python && conda activate calliope && mamba install calliope`."
+      ],
+      "golden_answer": "Add `-c conda-forge` to the `mamba create` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The README provides a fictitious command `calliope run-example` to run examples, which does not exist.",
+      "correction_candidates": [
+        "Remove the sentence 'You can run them directly using the command `calliope run-example --name urban_scale`.'",
+        "Replace `calliope run-example --name urban_scale` with a Python script example, like `python -c 'import calliope; calliope.examples.urban_scale()'`",
+        "Change the command to `calliope examples --run urban_scale`.",
+        "Change the command to `python -m calliope.examples.urban_scale`."
+      ],
+      "golden_answer": "Remove the sentence 'You can run them directly using the command `calliope run-example --name urban_scale`.'"
+    }
+  ]
+}

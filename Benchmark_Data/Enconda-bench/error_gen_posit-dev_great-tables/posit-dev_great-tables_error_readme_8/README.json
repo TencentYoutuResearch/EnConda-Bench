@@ -1,0 +1,29 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_8",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Shows activating virtual environment after pip install, which is incorrect order - should activate before installing",
+      "correction_candidates": [
+        "Remove the second activation command since environment is already activated",
+        "Move the activation command before pip install",
+        "Replace with deactivation command instead",
+        "Change to conda environment activation"
+      ],
+      "golden_answer": "Remove the second activation command since environment is already activated"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Redundant virtual environment activation command after pip install when environment should already be active",
+      "correction_candidates": [
+        "Replace with pip install --upgrade great_tables",
+        "Replace with pip list to verify installation",
+        "Replace with python -c \"import great_tables; print('Installation successful')\"",
+        "Remove the redundant activation line entirely"
+      ],
+      "golden_answer": "Remove the redundant activation line entirely"
+    }
+  ]
+}

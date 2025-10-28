@@ -1,0 +1,29 @@
+{
+  "readme": "tefra_xsdata_error_readme_2",
+  "repo_name": "tefra_xsdata",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands is incorrect. The `xsdata` command is shown before the `pip install` command, but `xsdata` must be installed before it can be executed.",
+      "correction_candidates": [
+        "The `xsdata` command should be run from a different directory.",
+        "The commands should be combined: `pip install xsdata[cli,lxml,soap] && xsdata ...`",
+        "Run the `pip install` command before the `xsdata` command.",
+        "You need to run `python setup.py install` first."
+      ],
+      "golden_answer": "Run the `pip install` command before the `xsdata` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate models uses an incorrect flag `--pkg`. The correct flag for specifying the output package is `--package`.",
+      "correction_candidates": [
+        "xsdata tests/fixtures/primer/order.xsd -p tests.fixtures.primer",
+        "xsdata tests/fixtures/primer/order.xsd --package=tests.fixtures.primer",
+        "xsdata --package tests.fixtures.primer tests/fixtures/primer/order.xsd",
+        "xsdata tests/fixtures/primer/order.xsd --package tests.fixtures.primer"
+      ],
+      "golden_answer": "xsdata tests/fixtures/primer/order.xsd --package tests.fixtures.primer"
+    }
+  ]
+}

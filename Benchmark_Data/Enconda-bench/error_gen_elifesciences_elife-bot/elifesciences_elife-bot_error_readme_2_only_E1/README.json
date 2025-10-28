@@ -1,0 +1,18 @@
+{
+  "readme": "elifesciences_elife-bot_error_readme_2_only_E1",
+  "repo_name": "elifesciences_elife-bot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that the `django` library must be installed manually, which is not a dependency for this project and contradicts that dependencies are handled by builder libraries.",
+      "correction_candidates": [
+        "Remove the sentence \"First, ensure you have installed `django` by running `pip install django`.\"",
+        "Replace `pip install django` with `pip install -r requirements.txt`.",
+        "Change the sentence to \"Dependencies are managed by eLife builder libraries.\"",
+        "Remove the entire \"Installation and tests\" section as it is handled by builder libraries."
+      ],
+      "golden_answer": "Remove the sentence \"First, ensure you have installed `django` by running `pip install django`.\""
+    }
+  ]
+}

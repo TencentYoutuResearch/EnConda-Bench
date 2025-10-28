@@ -1,0 +1,29 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_5",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip packages before installing system dependencies, which could cause compilation issues",
+      "correction_candidates": [
+        "Install system dependencies first: sudo apt-get install python3-dev libffi-dev, then pip install monty numpy scipy",
+        "Use conda instead: conda install monty numpy scipy python3-dev libffi-dev",
+        "Install in a virtual environment: python -m venv env && source env/bin/activate && pip install monty numpy scipy",
+        "Install using package manager: sudo apt-get install python3-monty python3-numpy python3-scipy"
+      ],
+      "golden_answer": "Install system dependencies first: sudo apt-get install python3-dev libffi-dev, then pip install monty numpy scipy"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary heavy dependencies (numpy and scipy) that are not actually required by Monty",
+      "correction_candidates": [
+        "Remove the numpy>=2.0.0 and scipy>=1.8.0 dependencies as they are not required by Monty",
+        "Replace with lighter dependencies: requires only setuptools and wheel",
+        "Change to optional dependencies: numpy and scipy are optional for advanced features",
+        "Update to correct dependencies: requires python>=3.8 and no additional packages"
+      ],
+      "golden_answer": "Remove the numpy>=2.0.0 and scipy>=1.8.0 dependencies as they are not required by Monty"
+    }
+  ]
+}

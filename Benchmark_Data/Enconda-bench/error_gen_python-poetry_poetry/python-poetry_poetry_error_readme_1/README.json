@@ -1,0 +1,29 @@
+{
+  "readme": "python-poetry_poetry_error_readme_1",
+  "repo_name": "python-poetry_poetry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the `pyproject.toml` example, the specified Python version `python = '>=3.5'` is incompatible with the `aiohttp = '^3.8.1'` dependency, which requires Python 3.6 or newer.",
+      "correction_candidates": [
+        "Change the python version to `python = '>=3.6'` to meet the requirement of aiohttp.",
+        "Remove the `aiohttp` dependency entirely.",
+        "Change the aiohttp version to `aiohttp = '<3.8'`.",
+        "Change the python version to `python = '~3.5'`."
+      ],
+      "golden_answer": "Change the python version to `python = '>=3.6'` to meet the requirement of aiohttp."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `pyproject.toml` example, the script definition `my-script: \"my_package.main\"` uses a colon instead of an equals sign, which is invalid TOML syntax for key-value pairs.",
+      "correction_candidates": [
+        "my-script = \"my_package:main\"",
+        "my-script: \"my_package:main()\"",
+        "script = \"my-script:my_package.main\"",
+        "my-script = [\"my_package:main\"]"
+      ],
+      "golden_answer": "my-script = \"my_package:main\""
+    }
+  ]
+}

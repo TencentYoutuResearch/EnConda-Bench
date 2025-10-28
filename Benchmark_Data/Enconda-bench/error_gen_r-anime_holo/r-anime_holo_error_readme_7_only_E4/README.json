@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_7_only_E4",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file path 'config/seasons/' instead of 'season_configs/' for season configuration files",
+      "correction_candidates": [
+        "Change 'config/seasons/' to 'season_configs/'",
+        "Update path to 'configs/season_data/'",
+        "Use 'data/season_configs/' as the correct path",
+        "Change to 'settings/seasons/' directory"
+      ],
+      "golden_answer": "Change 'config/seasons/' to 'season_configs/'"
+    }
+  ]
+}

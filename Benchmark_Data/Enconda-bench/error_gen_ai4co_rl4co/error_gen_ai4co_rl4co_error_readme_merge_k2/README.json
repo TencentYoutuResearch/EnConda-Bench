@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_ai4co_rl4co_error_readme_merge_k2",
+  "repo_name": "ai4co_rl4co",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for local development incorrectly state to run `pip install -e .` before cloning the repository, which will fail because the necessary `setup.py` file is not present.",
+      "correction_candidates": [
+        "Combine the commands into a single line: `git clone https://github.com/ai4co/rl4co && cd rl4co && pip install -e .`",
+        "Replace the commands with `pip install --editable git+https://github.com/ai4co/rl4co#egg=rl4co`.",
+        "Swap the two lines. The `git clone` command must be executed before `pip install -e .`.",
+        "Add `python setup.py develop` after the `git clone` command and remove `pip install -e .`."
+      ],
+      "golden_answer": "Swap the two lines. The `git clone` command must be executed before `pip install -e .`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README provides an incorrect file path to the experiment configurations directory, referencing `config/experiments/` instead of the correct `configs/experiment/`.",
+      "correction_candidates": [
+        "Change the path `config/experiments/` to `experiments/`.",
+        "Change the path `config/experiments/` to `configs/`.",
+        "Correct the path from `config/experiments/` to `configs/experiment/`.",
+        "Change the path `config/experiments/` to `./configs/experiment/`."
+      ],
+      "golden_answer": "Correct the path from `config/experiments/` to `configs/experiment/`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for a hyperparameter sweep uses an incorrect syntax `lr=[...]`. Hydra expects a comma-separated list for multirun sweeps, not a Python list format.",
+      "correction_candidates": [
+        "Change `model.optimizer.lr=[1e-3,1e-4,1e-5]` to `model.optimizer.lr=1e-3,1e-4,1e-5`.",
+        "Change `model.optimizer.lr=[1e-3,1e-4,1e-5]` to `model.optimizer.lr '1e-3,1e-4,1e-5'`.",
+        "Change `-m` to `--multirun` and use the original syntax `model.optimizer.lr=1e-3,1e-4,1e-5`.",
+        "Enclose the list in quotes: `model.optimizer.lr='1e-3,1e-4,1e-5'`."
+      ],
+      "golden_answer": "Change `model.optimizer.lr=[1e-3,1e-4,1e-5]` to `model.optimizer.lr=1e-3,1e-4,1e-5`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install from source` command provides an invalid git URL, missing the `.git` suffix, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Add the `.git` suffix to the URL: `pip install -U git+https://github.com/ai4co/rl4co.git`.",
+        "Remove the `git+` prefix from the URL.",
+        "Replace the command with `pip install -U rl4co --index-url https://github.com/ai4co/rl4co`.",
+        "Add `@main` to the end of the URL to specify the branch: `pip install -U git+https://github.com/ai4co/rl4co@main`."
+      ],
+      "golden_answer": "Add the `.git` suffix to the URL: `pip install -U git+https://github.com/ai4co/rl4co.git`."
+    }
+  ]
+}

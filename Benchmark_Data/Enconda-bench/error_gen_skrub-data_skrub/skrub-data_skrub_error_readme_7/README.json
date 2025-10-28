@@ -1,0 +1,29 @@
+{
+  "readme": "skrub-data_skrub_error_readme_7",
+  "repo_name": "skrub-data_skrub",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement to Python 2.7+ which is outdated and incompatible with modern libraries",
+      "correction_candidates": [
+        "Change to Python 3.8+",
+        "Change to Python 3.6+",
+        "Remove version specification entirely",
+        "Change to Python 3.9+"
+      ],
+      "golden_answer": "Change to Python 3.8+"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Added specific version pinning (==0.1.0) to conda install command which may cause compatibility issues",
+      "correction_candidates": [
+        "Remove version specification: conda install -c conda-forge skrub",
+        "Change to latest version: conda install -c conda-forge skrub>=2.0",
+        "Use version range: conda install -c conda-forge 'skrub>=0.1.0,<1.0'",
+        "Change to development version: conda install -c conda-forge skrub-dev"
+      ],
+      "golden_answer": "Remove version specification: conda install -c conda-forge skrub"
+    }
+  ]
+}

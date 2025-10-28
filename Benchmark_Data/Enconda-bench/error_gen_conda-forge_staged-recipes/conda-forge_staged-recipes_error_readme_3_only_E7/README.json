@@ -1,0 +1,18 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_3_only_E7",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "FAQ #7 incorrectly suggests using the outdated `python setup.py install` command for older Python versions, which is a discouraged practice in conda environments and can lead to compatibility issues.",
+      "correction_candidates": [
+        "Remove the sentence suggesting `python setup.py install` as it is a discouraged practice.",
+        "Change the suggestion to `{{ PYTHON }} setup.py install`, which is the correct way to invoke it within conda-build.",
+        "Clarify that `python setup.py install` should only be used if `pip install` fails.",
+        "Replace `python setup.py install` with `conda build .` as the alternative."
+      ],
+      "golden_answer": "Remove the sentence suggesting `python setup.py install` as it is a discouraged practice."
+    }
+  ]
+}

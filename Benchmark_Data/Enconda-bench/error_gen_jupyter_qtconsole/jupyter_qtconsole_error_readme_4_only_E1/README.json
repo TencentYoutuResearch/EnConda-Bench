@@ -1,0 +1,18 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_4_only_E1",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The conda installation guide incorrectly states that the Qt requirement is not automatically installed, leading to an unnecessary, separate `conda install pyqt5` command.",
+      "correction_candidates": [
+        "Restore the original text: \"**Note:** If the Qtconsole is installed using conda, it will **automatically** install the Qt requirement as well.\" and remove the `conda install pyqt5` command.",
+        "Change the command to `conda install qtconsole pyqt5`.",
+        "Change the text to: \"**Note:** Conda may install the Qt requirement, but it is best to install it explicitly.\"",
+        "Change the command to `conda install qtconsole -c conda-forge`."
+      ],
+      "golden_answer": "Restore the original text: \"**Note:** If the Qtconsole is installed using conda, it will **automatically** install the Qt requirement as well.\" and remove the `conda install pyqt5` command."
+    }
+  ]
+}

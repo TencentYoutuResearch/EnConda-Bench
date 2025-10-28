@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_2_only_E1",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include 'pip install beautifulsoup4', which is an unnecessary dependency. The 'fundus' package manages its own dependencies automatically when installed.",
+      "correction_candidates": [
+        "pip install lxml beautifulsoup4",
+        "pip install fundus[parsing]",
+        "Remove the line 'pip install beautifulsoup4'. 'fundus' handles its own dependencies.",
+        "pip install --upgrade beautifulsoup4"
+      ],
+      "golden_answer": "Remove the line 'pip install beautifulsoup4'. 'fundus' handles its own dependencies."
+    }
+  ]
+}

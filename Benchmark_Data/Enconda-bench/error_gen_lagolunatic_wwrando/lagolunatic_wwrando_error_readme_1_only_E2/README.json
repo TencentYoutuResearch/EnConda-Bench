@@ -1,0 +1,18 @@
+{
+  "readme": "lagolunatic_wwrando_error_readme_1_only_E2",
+  "repo_name": "lagolunatic_wwrando",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is missing the `--recurse-submodules` flag, which is necessary to download required submodules for the project, causing failures later in the process.",
+      "correction_candidates": [
+        "Change the command to `git clone --recurse-submodules https://github.com/LagoLunatic/wwrando.git`.",
+        "Add a new command after cloning: `git submodule update --init --recursive`.",
+        "Change the command to `git clone --recursive https://github.com/LagoLunatic/wwrando.git`.",
+        "Change the command to `git clone --depth 1 --recurse-submodules https://github.com/LagoLunatic/wwrando.git`."
+      ],
+      "golden_answer": "Change the command to `git clone --recurse-submodules https://github.com/LagoLunatic/wwrando.git`."
+    }
+  ]
+}

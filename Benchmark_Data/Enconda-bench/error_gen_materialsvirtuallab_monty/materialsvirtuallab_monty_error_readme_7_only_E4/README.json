@@ -1,0 +1,18 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_7_only_E4",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent system path /etc/monty/config.ini for configuration file",
+      "correction_candidates": [
+        "Install directly with pip: pip install monty",
+        "Clone from GitHub: git clone https://github.com/materialsvirtuallab/monty.git && cd monty && pip install .",
+        "Download from PyPI: pip install monty --no-deps && pip install -r requirements.txt",
+        "Use conda-forge: conda install -c conda-forge monty"
+      ],
+      "golden_answer": "Install directly with pip: pip install monty"
+    }
+  ]
+}

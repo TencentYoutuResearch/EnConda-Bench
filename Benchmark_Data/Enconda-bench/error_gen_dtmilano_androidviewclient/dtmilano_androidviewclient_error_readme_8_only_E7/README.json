@@ -1,0 +1,18 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_8_only_E7",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility error - specifies an outdated version 15.2.0 which conflicts with the --upgrade flag and may not support Python 3.6+",
+      "correction_candidates": [
+        "pip3 install androidviewclient --upgrade",
+        "pip3 install androidviewclient>=20.0.0 --upgrade",
+        "pip3 install androidviewclient==20.5.0 --upgrade",
+        "pip3 install \"androidviewclient>=20.0.0\" --upgrade"
+      ],
+      "golden_answer": "pip3 install androidviewclient --upgrade"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_tablib_error_readme_6",
+  "repo_name": "jazzband_tablib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements.txt file that doesn't exist in the tablib repository",
+      "correction_candidates": [
+        "Remove the reference to requirements.txt and use pip install tablib instead",
+        "Change requirements.txt to setup.py for installation",
+        "Replace with reference to pyproject.toml file",
+        "Use pip install -e . for development installation"
+      ],
+      "golden_answer": "Remove the reference to requirements.txt and use pip install tablib instead"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The code example uses incorrect method name 'export' instead of the correct tablib API",
+      "correction_candidates": [
+        "Change data.export('csv') to data.csv",
+        "Replace with print(data.dict) to show the data structure",
+        "Use data.json instead of data.export('csv')",
+        "Change to data.export_csv() method call"
+      ],
+      "golden_answer": "Change data.export('csv') to data.csv"
+    }
+  ]
+}

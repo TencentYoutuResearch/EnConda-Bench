@@ -1,0 +1,29 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_4",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `ln -s` command is executed before `git clone`. This will fail because it attempts to create a symbolic link to `../../citationhunt`, a directory that does not yet exist.",
+      "correction_candidates": [
+        "Move the `git clone` command to be before the `ln -s` command.",
+        "Add the `--force` flag to the `ln` command: `ln -s --force ../../citationhunt www/python/src`.",
+        "Create the directory manually with `mkdir ../../citationhunt` before running `ln -s`.",
+        "Use an absolute path: `ln -s /data/project/citationhunt/citationhunt www/python/src`."
+      ],
+      "golden_answer": "Move the `git clone` command to be before the `ln -s` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `kubectl create` command specifies an incorrect path for the configuration file. The file `compute_fixed_snippets.yaml` is located in the `k8s` directory, not the `scripts` directory.",
+      "correction_candidates": [
+        "Change the directory in the path from `scripts/` to `k8s/`.",
+        "Copy the `compute_fixed_snippets.yaml` file from `k8s` to `scripts` before running the command.",
+        "Run the command from within the `citationhunt` directory: `(cd citationhunt; kubectl create --validate=true -f k8s/compute_fixed_snippets.yaml)`.",
+        "The path is correct, but the file is missing from the repository and should be created manually."
+      ],
+      "golden_answer": "Change the directory in the path from `scripts/` to `k8s/`."
+    }
+  ]
+}

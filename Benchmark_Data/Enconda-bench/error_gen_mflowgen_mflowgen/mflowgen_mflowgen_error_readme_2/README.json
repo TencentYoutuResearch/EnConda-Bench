@@ -1,0 +1,29 @@
+{
+  "readme": "mflowgen_mflowgen_error_readme_2",
+  "repo_name": "mflowgen_mflowgen",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. `pip install mflowgen` is run before the virtual environment is created and activated, causing the package to be installed in the global or user site-packages instead of the isolated environment.",
+      "correction_candidates": [
+        "First, create the virtual environment with `python3 -m venv venv`, then install the package with `pip install mflowgen`, and finally activate the environment with `source venv/bin/activate`.",
+        "First, create the virtual environment with `python3 -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package with `pip install mflowgen`.",
+        "First, install the package with `pip install mflowgen`, then create the virtual environment with `python3 -m venv venv`, and finally activate it with `source venv/bin/activate`.",
+        "First, activate the environment with `source venv/bin/activate`, then create it with `python3 -m venv venv`, and finally install the package with `pip install mflowgen`."
+      ],
+      "golden_answer": "First, create the virtual environment with `python3 -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package with `pip install mflowgen`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv venv` is ambiguous and may fail or use an incorrect Python version on systems where `python` points to Python 2 or is not available.",
+      "correction_candidates": [
+        "Use the command `python -m venv venv --python=python3` to ensure Python 3 is used.",
+        "Use the command `py -3 -m venv venv` to create the virtual environment.",
+        "Use the command `python3 -m venv venv` for clarity and to ensure Python 3 is used.",
+        "Use the command `virtualenv venv` as an alternative."
+      ],
+      "golden_answer": "Use the command `python3 -m venv venv` for clarity and to ensure Python 3 is used."
+    }
+  ]
+}

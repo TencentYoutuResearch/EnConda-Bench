@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_2_only_E4",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The image URL for the entity set diagram points to a non-existent `master` branch instead of the correct `main` branch, resulting in a broken image link.",
+      "correction_candidates": [
+        "https://github.com/alteryx/featuretools/blob/main/docs/source/_static/images/entity_set.png?raw=true",
+        "https://raw.githubusercontent.com/alteryx/featuretools/main/docs/source/_static/images/entity_set.png",
+        "docs/source/_static/images/entity_set.png",
+        "https://github.com/alteryx/featuretools/raw/main/docs/source/_static/images/entity_set.png"
+      ],
+      "golden_answer": "https://github.com/alteryx/featuretools/blob/main/docs/source/_static/images/entity_set.png?raw=true"
+    }
+  ]
+}

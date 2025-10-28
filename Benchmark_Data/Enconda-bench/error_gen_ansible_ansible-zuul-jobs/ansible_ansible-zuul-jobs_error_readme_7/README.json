@@ -1,0 +1,29 @@
+{
+  "readme": "ansible_ansible-zuul-jobs_error_readme_7",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installs unnecessary dependency 'zuul-client' that is not needed for basic zuul job definitions",
+      "correction_candidates": [
+        "pip install --user ansible tox",
+        "pip install --user ansible zuul",
+        "pip install --user ansible pyyaml",
+        "pip install --user ansible jinja2 tox"
+      ],
+      "golden_answer": "pip install --user ansible tox"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses invalid tox parameter combination '--parallel auto --recreate' which causes syntax error",
+      "correction_candidates": [
+        "tox -p auto -r",
+        "tox --parallel --recreate",
+        "tox -e py38 --recreate",
+        "tox --parallel=auto"
+      ],
+      "golden_answer": "tox -p auto -r"
+    }
+  ]
+}

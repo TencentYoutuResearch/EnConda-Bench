@@ -1,0 +1,29 @@
+{
+  "readme": "python-control_python-control_error_readme_8",
+  "repo_name": "python-control_python-control",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed the Slycot repository URL to an incorrect path that doesn't exist",
+      "correction_candidates": [
+        "https://github.com/python-control/Slycot",
+        "https://github.com/python-control/slycot-python",
+        "https://github.com/control-systems/Slycot",
+        "https://github.com/scipy/Slycot"
+      ],
+      "golden_answer": "https://github.com/python-control/Slycot"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Added an invalid pytest parameter --config=pytest.ini which is not a valid pytest option",
+      "correction_candidates": [
+        "pytest -v",
+        "pytest -v -c pytest.ini",
+        "pytest -v --tb=short",
+        "pytest -v --verbose"
+      ],
+      "golden_answer": "pytest -v"
+    }
+  ]
+}

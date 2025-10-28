@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_hazyresearch_meerkat_error_readme_merge_k3",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install meerkat` is incorrect. The package on PyPI is named `meerkat-ml`, so this command will fail.",
+      "correction_candidates": [
+        "pip install meerkat-ml",
+        "pip install 'meerkat'",
+        "conda install meerkat",
+        "pip install meerkatml"
+      ],
+      "golden_answer": "pip install meerkat-ml"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The demo command `mk demo image-gallery-tutorial --copy` uses an incorrect demo name, which does not exist.",
+      "correction_candidates": [
+        "mk demo tutorial-image-gallery --copy",
+        "meerkat demo image-gallery-tutorial --copy",
+        "mk demo --list",
+        "mk demo tutorial-image-gallery"
+      ],
+      "golden_answer": "mk demo tutorial-image-gallery --copy"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly suggests that a GPU-enabled PyTorch installation is a mandatory prerequisite for all users, which is not true.",
+      "correction_candidates": [
+        "Change the text to: '> **_GPU Install (Optional)_**: If you want to use Meerkat with a GPU...'",
+        "Remove the GPU installation note entirely.",
+        "Move the `pip install meerkat-ml` command before the GPU note.",
+        "Comment out the GPU install note using <!-- ... -->."
+      ],
+      "golden_answer": "Change the text to: '> **_GPU Install (Optional)_**: If you want to use Meerkat with a GPU...'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an underscore (`meerkat_ml`) instead of a hyphen (`meerkat-ml`), which will fail as the package name on PyPI is `meerkat-ml`.",
+      "correction_candidates": [
+        "pip install meerkat-ml",
+        "pip install 'meerkat-ml'",
+        "python -m pip install meerkat-ml",
+        "pip install --user meerkat-ml"
+      ],
+      "golden_answer": "pip install meerkat-ml"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `torchaudio` and the non-existent `torchvideo` are mandatory dependencies for basic use, when they are optional dependencies for specific data types.",
+      "correction_candidates": [
+        "Correct the text to: '> **_Optional Dependencies_**: some parts of Meerkat rely on optional dependencies e.g. audio processing may rely on utilities from `torchaudio`.'",
+        "Revert the section to its original commented-out state using <!-- ... -->.",
+        "Remove the dependency note entirely.",
+        "Correct the packages to `torchaudio` and `torchvision` and clarify they are optional extras."
+      ],
+      "golden_answer": "Correct the text to: '> **_Optional Dependencies_**: some parts of Meerkat rely on optional dependencies e.g. audio processing may rely on utilities from `torchaudio`.'"
+    }
+  ]
+}

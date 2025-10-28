@@ -1,0 +1,29 @@
+{
+  "readme": "flask-middleware_flask-security_error_readme_4",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install -U Flask-Security` installs the original, unmaintained package, not the intended 'Flask-Security-Too' fork.",
+      "correction_candidates": [
+        "Change 'pip install -U Flask-Security' to 'pip install -U Flask-Security-Too'.",
+        "Add the repository URL: 'pip install -U git+https://github.com/Flask-Middleware/flask-security.git'.",
+        "The package name is case-sensitive; it should be 'flask-security'.",
+        "Change the command to 'pip install Flask-Security-Fork'."
+      ],
+      "golden_answer": "Change 'pip install -U Flask-Security' to 'pip install -U Flask-Security-Too'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to verify the installation, `python -c \"import Flask_Security_Too\"`, will fail because the package is imported as `flask_security`, not `Flask_Security_Too`.",
+      "correction_candidates": [
+        "The correct import name is 'flask_security'. The command should be 'python -c \"import flask_security\"'.",
+        "The correct import name is 'FlaskSecurity'. The command should be 'python -c \"import FlaskSecurity\"'.",
+        "Use 'pip show Flask-Security-Too' to verify the installation instead.",
+        "Python imports are case-insensitive, so this command should work."
+      ],
+      "golden_answer": "The correct import name is 'flask_security'. The command should be 'python -c \"import flask_security\"'."
+    }
+  ]
+}

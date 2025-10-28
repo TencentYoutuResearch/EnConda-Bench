@@ -1,0 +1,18 @@
+{
+  "readme": "xknx_xknx_error_readme_3_only_E1",
+  "repo_name": "xknx_xknx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The development setup instructs to `pip install xknx`, which installs the published package from PyPI, not the local development dependencies from the requirements file.",
+      "correction_candidates": [
+        "Install requirements: `pip install .`",
+        "Install requirements: `pip install -e .[dev]`",
+        "Install requirements: `pip install --no-cache-dir -r requirements/testing.txt`",
+        "Install requirements: `pip install -r requirements/testing.txt`"
+      ],
+      "golden_answer": "Install requirements: `pip install -r requirements/testing.txt`"
+    }
+  ]
+}

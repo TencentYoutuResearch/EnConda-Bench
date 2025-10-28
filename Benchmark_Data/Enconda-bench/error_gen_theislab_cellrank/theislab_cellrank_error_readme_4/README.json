@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_cellrank_error_readme_4",
+  "repo_name": "theislab_cellrank",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest installing an optional dependency group named `plot` (`cellrank[plot]`), which does not exist.",
+      "correction_candidates": [
+        "Remove the section about installing the `plot` extra, as it does not exist.",
+        "Change `cellrank[plot]` to `cellrank[docs]` as the `docs` extra includes plotting libraries like `sphinx`.",
+        "Change the command to `pip install cellrank matplotlib seaborn`.",
+        "Correct the extra to `cellrank[plotting]`, assuming 'plotting' is the correct name."
+      ],
+      "golden_answer": "Remove the section about installing the `plot` extra, as it does not exist."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Python code in the Quick Start example has a syntax error: a missing comma in the `g.compute_schur` function call.",
+      "correction_candidates": [
+        "Add a comma after `n_components=4` in the `g.compute_schur` function call.",
+        "Move `n_components=4` to a new line and indent it.",
+        "Combine the two lines into one: `g.compute_schur(n_components=4, cluster_key=\"clusters\")`.",
+        "Remove the line `g.compute_schur(n_components=4`."
+      ],
+      "golden_answer": "Add a comma after `n_components=4` in the `g.compute_schur` function call."
+    }
+  ]
+}

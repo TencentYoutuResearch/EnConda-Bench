@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_4_only_E2",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to build the static website uses an incorrect argument `--freeze` instead of the positional command `freeze`.",
+      "correction_candidates": [
+        "python elsasite.py freeze",
+        "python -m elsasite freeze",
+        "python elsasite.py build",
+        "./elsasite.py freeze"
+      ],
+      "golden_answer": "python elsasite.py freeze"
+    }
+  ]
+}

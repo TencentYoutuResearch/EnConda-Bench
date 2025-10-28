@@ -1,0 +1,29 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_2",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `sudo apt-get install make` is for Debian-based Linux systems and is not the correct way to ensure GNU Make is available on IBM i, which typically uses `yum` for package management.",
+      "correction_candidates": [
+        "On IBM i, install GNU Make by running `yum install gmake`.",
+        "On IBM i, install GNU Make by running `install-gmake`.",
+        "On IBM i, install GNU Make by running `apt-get install gmake`.",
+        "GNU Make is pre-installed on all IBM i systems."
+      ],
+      "golden_answer": "On IBM i, install GNU Make by running `yum install gmake`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that build settings are configured in a `build.config.json` file, but the project uses standard makefiles for configuration.",
+      "correction_candidates": [
+        "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`.",
+        "Configure your build settings in `iproj.json`.",
+        "Configure your build settings in `bob.properties`.",
+        "Run the `configure` script to generate build files."
+      ],
+      "golden_answer": "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`."
+    }
+  ]
+}

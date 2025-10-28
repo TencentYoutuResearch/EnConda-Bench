@@ -1,0 +1,29 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_6",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version incompatibility between Python2.7 and Django 2.2 or later",
+      "correction_candidates": [
+        "Change 'Python2.7' to 'Python3.x'",
+        "Change 'Django 2.2 or later' to 'Django 1.11 or earlier'",
+        "Change 'Python2.7' to 'Python3.6+'",
+        "Change the entire sentence to 'LNLDB now runs under Python3.8 and Django 3.2 or later'"
+      ],
+      "golden_answer": "Change 'Python2.7' to 'Python3.x'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependencies nodejs, npm, webpack added to Linux installation command",
+      "correction_candidates": [
+        "Remove 'nodejs npm webpack' from the apt-get install command",
+        "Move 'nodejs npm webpack' to a separate installation step",
+        "Replace 'nodejs npm webpack' with 'build-essential'",
+        "Change 'nodejs npm webpack' to 'python3-setuptools python3-wheel'"
+      ],
+      "golden_answer": "Remove 'nodejs npm webpack' from the apt-get install command"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_6_only_E2",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid command line parameters --port and --directory that don't exist for pyftpdlib",
+      "correction_candidates": [
+        "$ python3 -m pyftpdlib --write",
+        "$ python3 -m pyftpdlib --write --help",
+        "$ python3 -m pyftpdlib -w -p 2121 -d /tmp",
+        "$ python3 -m pyftpdlib --write -p 2121"
+      ],
+      "golden_answer": "$ python3 -m pyftpdlib -w -p 2121 -d /tmp"
+    }
+  ]
+}

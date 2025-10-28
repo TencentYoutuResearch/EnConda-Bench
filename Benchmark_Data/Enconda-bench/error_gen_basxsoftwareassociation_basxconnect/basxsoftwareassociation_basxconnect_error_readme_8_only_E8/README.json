@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_8_only_E8",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Missing critical setup steps like database migration and environment configuration",
+      "correction_candidates": [
+        "Add database migration step: run `python manage.py migrate` before starting the server",
+        "Include virtual environment creation: `python -m venv venv && source venv/bin/activate` before pip install",
+        "Add environment configuration: copy `.env.example` to `.env` and configure settings",
+        "Include static files collection: run `python manage.py collectstatic` for production setup"
+      ],
+      "golden_answer": "Add database migration step: run `python manage.py migrate` before starting the server"
+    }
+  ]
+}

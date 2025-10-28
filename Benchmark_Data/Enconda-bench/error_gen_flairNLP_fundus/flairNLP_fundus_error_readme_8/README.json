@@ -1,0 +1,29 @@
+{
+  "readme": "flairNLP_fundus_error_readme_8",
+  "repo_name": "flairNLP_fundus",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned installation to a specific version (1.2.3) that may not exist or be outdated, preventing users from getting the latest version",
+      "correction_candidates": [
+        "pip install fundus",
+        "pip install fundus>=1.0.0",
+        "pip install fundus~=1.2.0",
+        "pip install fundus==latest"
+      ],
+      "golden_answer": "pip install fundus"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.8+ to 3.11+ which is too restrictive and excludes many users with older Python versions",
+      "correction_candidates": [
+        "Fundus requires Python 3.8+.",
+        "Fundus requires Python 3.9+.",
+        "Fundus requires Python 3.10+.",
+        "Fundus requires Python 3.12+."
+      ],
+      "golden_answer": "Fundus requires Python 3.8+."
+    }
+  ]
+}

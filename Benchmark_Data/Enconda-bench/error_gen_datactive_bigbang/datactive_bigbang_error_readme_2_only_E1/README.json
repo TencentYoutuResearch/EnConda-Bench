@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_2_only_E1",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install .` does not install the development dependencies (like `pytest` or `jupyter`), which are required for running examples and tests.",
+      "correction_candidates": [
+        "Replace `pip install .` with `pip install bigbang`.",
+        "Replace `pip install .` with `pip install -r requirements.txt`.",
+        "Replace `pip install .` with `pip install \".[dev]\"`.",
+        "Run `pip install pytest jupyter` separately after `pip install .`."
+      ],
+      "golden_answer": "Replace `pip install .` with `pip install \".[dev]\"`."
+    }
+  ]
+}

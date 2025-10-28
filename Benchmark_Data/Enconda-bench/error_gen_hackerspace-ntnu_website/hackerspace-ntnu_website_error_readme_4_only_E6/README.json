@@ -1,0 +1,18 @@
+{
+  "readme": "hackerspace-ntnu_website_error_readme_4_only_E6",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions say to run `pre-commit install` before `pip install -r requirements.txt`. This will fail because the `pre-commit` package itself has not been installed yet.",
+      "correction_candidates": [
+        "Run `pip install pre-commit` before `pre-commit install`.",
+        "Combine the commands: `pre-commit install && pip install -r requirements.txt`.",
+        "Swap the order of the `pip install` and `pre-commit install` steps.",
+        "Remove the `pre-commit install` step as it is optional for development."
+      ],
+      "golden_answer": "Swap the order of the `pip install` and `pre-commit install` steps."
+    }
+  ]
+}

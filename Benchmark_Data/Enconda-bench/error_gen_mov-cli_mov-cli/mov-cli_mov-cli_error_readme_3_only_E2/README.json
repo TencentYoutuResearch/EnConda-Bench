@@ -1,0 +1,18 @@
+{
+  "readme": "mov-cli_mov-cli_error_readme_3_only_E2",
+  "repo_name": "mov-cli_mov-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `mov-cli --query youtube blender studio` is incorrect. The flag for searching is `-s` or `--scraper`, not `--query`.",
+      "correction_candidates": [
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli -s youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli --search youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli -q youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli search --scraper youtube blender studio`."
+      ],
+      "golden_answer": "Replace `mov-cli --query youtube blender studio` with `mov-cli -s youtube blender studio`."
+    }
+  ]
+}

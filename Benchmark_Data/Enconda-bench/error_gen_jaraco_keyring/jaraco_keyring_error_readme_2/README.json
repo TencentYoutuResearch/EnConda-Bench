@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_keyring_error_readme_2",
+  "repo_name": "jaraco_keyring",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Using Keyring on Ubuntu 16.04' section, the 'pip install' commands are executed before the virtual environment is activated with 'source py3/bin/activate'. This causes the packages to be installed in the global Python environment instead of the isolated virtual environment.",
+      "correction_candidates": [
+        "Use `py3/bin/pip install` instead of `pip install`.",
+        "Add `sudo` to the `pip install` commands.",
+        "Move the `pip install` commands after the `source py3/bin/activate` command.",
+        "Remove the `source py3/bin/activate` line entirely."
+      ],
+      "golden_answer": "Move the `pip install` commands after the `source py3/bin/activate` command."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Compatibility - macOS' section incorrectly states that Python 3.7 or later is required for macOS Big Sur support. According to the linked issue #525, the correct minimum version is Python 3.8.7.",
+      "correction_candidates": [
+        "Change \"Python 3.7 or later\" to \"Python 3.8 or later\".",
+        "Change \"Python 3.7 or later\" to \"the latest version of Python 3\".",
+        "Change \"Python 3.7 or later\" to \"Python 3.9 or later\".",
+        "Change \"Python 3.7 or later\" to \"Python 3.8.7 or later\"."
+      ],
+      "golden_answer": "Change \"Python 3.7 or later\" to \"Python 3.8.7 or later\"."
+    }
+  ]
+}

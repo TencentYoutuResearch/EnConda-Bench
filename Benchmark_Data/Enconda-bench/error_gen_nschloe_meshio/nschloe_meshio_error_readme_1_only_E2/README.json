@@ -1,0 +1,18 @@
+{
+  "readme": "nschloe_meshio_error_readme_1_only_E2",
+  "repo_name": "nschloe_meshio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `meshio --convert input.msh output.vtk` is incorrect. `meshio` uses subcommands like `convert`, not flags like `--convert`, which will result in a command-line argument parsing error.",
+      "correction_candidates": [
+        "meshio -c input.msh output.vtk",
+        "meshio convert -i input.msh -o output.vtk",
+        "meshio convert input.msh output.vtk",
+        "meshio convert input.msh > output.vtk"
+      ],
+      "golden_answer": "meshio convert input.msh output.vtk"
+    }
+  ]
+}

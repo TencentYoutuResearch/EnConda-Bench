@@ -1,0 +1,29 @@
+{
+  "readme": "iree-org_iree-llvm-sandbox_error_readme_2",
+  "repo_name": "iree-org_iree-llvm-sandbox",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instructions unnecessarily mandate Python 3.6, which is outdated and may cause compatibility issues with recent dependencies.",
+      "correction_candidates": [
+        "Change 'Python 3.6' to 'Python 3.10' to use a more modern version.",
+        "Change 'Python 3.6' to 'the latest version of Python'.",
+        "Add a check 'python --version' to ensure the version is exactly 3.6.",
+        "Remove the line 'Make sure you are using Python 3.6 for this setup.' as the project is compatible with modern Python 3 versions."
+      ],
+      "golden_answer": "Remove the line 'Make sure you are using Python 3.6 for this setup.' as the project is compatible with modern Python 3 versions."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to 'requirements.txt' incorrectly points to the build directory instead of the source directory, causing a 'file not found' error.",
+      "correction_candidates": [
+        "The command should be 'python -m pip install -r ${IREE_LLVM_SANDBOX_SOURCE_DIR}/requirements.txt'.",
+        "The command should be 'python -m pip install -r requirements.txt' after cd'ing into the source directory.",
+        "You should copy 'requirements.txt' from the source directory to the build directory before running the command.",
+        "The command should be 'python -m pip install -r ../requirements.txt'."
+      ],
+      "golden_answer": "The command should be 'python -m pip install -r ${IREE_LLVM_SANDBOX_SOURCE_DIR}/requirements.txt'."
+    }
+  ]
+}

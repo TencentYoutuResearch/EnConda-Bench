@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_7_only_E7",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies very old versions of numpy and requests that may have security vulnerabilities and compatibility issues",
+      "correction_candidates": [
+        "For installation, make sure you have numpy>=1.21.0 and requests>=2.28.0 installed, as these versions provide the latest security updates and compatibility with modern Python versions",
+        "For installation, make sure you have the latest versions of numpy and requests installed by running `pip install --upgrade numpy requests`",
+        "For installation, make sure you have numpy>=1.20.0 and requests>=2.27.0 installed, which are the minimum recommended versions for security and stability",
+        "For installation, install the dependencies using `pip install -r requirements.txt` which will automatically install the correct versions of numpy and requests"
+      ],
+      "golden_answer": "For installation, make sure you have numpy>=1.21.0 and requests>=2.28.0 installed, as these versions provide the latest security updates and compatibility with modern Python versions"
+    }
+  ]
+}

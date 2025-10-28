@@ -1,0 +1,29 @@
+{
+  "readme": "mpmath_mpmath_error_readme_1",
+  "repo_name": "mpmath_mpmath",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.7 is supported, which is outdated and will cause installation or runtime failures as the package requires a much newer version.",
+      "correction_candidates": [
+        "Mpmath requires Python 3.6 or later versions.",
+        "Mpmath requires Python 3.8 or later versions.",
+        "Mpmath requires Python 2.7 and 3.8 or later versions.",
+        "Mpmath requires Python 3.8 only."
+      ],
+      "golden_answer": "Mpmath requires Python 3.8 or later versions."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install --source .` is invalid for installing a package from a local source directory.",
+      "correction_candidates": [
+        "pip install .",
+        "python setup.py install .",
+        "pip install -e .",
+        "pip install from-source ."
+      ],
+      "golden_answer": "pip install ."
+    }
+  ]
+}

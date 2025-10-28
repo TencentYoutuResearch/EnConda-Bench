@@ -1,0 +1,18 @@
+{
+  "readme": "ansible_molecule_error_readme_4_only_E2",
+  "repo_name": "ansible_molecule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command `molecule --run ...` is invalid. `--run` is not a valid top-level option for the molecule command.",
+      "correction_candidates": [
+        "molecule ...",
+        "molecule test -- ...",
+        "molecule --help",
+        "molecule subcommand --run ..."
+      ],
+      "golden_answer": "molecule ..."
+    }
+  ]
+}

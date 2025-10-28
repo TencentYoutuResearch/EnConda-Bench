@@ -1,0 +1,18 @@
+{
+  "readme": "skmin-lab_unixmd_error_readme_1_only_E2",
+  "repo_name": "skmin-lab_unixmd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The build command uses the incorrect flag '--build-lib' instead of '-b' to specify the build directory, which can lead to build failure or incorrect output location.",
+      "correction_candidates": [
+        "$ python3 setup.py build_ext -b ./src/build",
+        "$ python3 setup.py build --build-base=./src/build",
+        "$ python3 setup.py build_ext --inplace",
+        "$ python3 setup.py install --prefix=./src/build"
+      ],
+      "golden_answer": "$ python3 setup.py build_ext -b ./src/build"
+    }
+  ]
+}

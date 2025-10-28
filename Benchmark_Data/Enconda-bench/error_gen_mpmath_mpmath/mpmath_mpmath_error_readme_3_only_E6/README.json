@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_3_only_E6",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly instructs users to run tests before installing the package, which is the wrong order and will fail because the package and its dependencies are not yet installed.",
+      "correction_candidates": [
+        "Change 'Before installing, you should first run the unit tests...' to 'After installing, the unit tests can be run...'",
+        "Replace 'Before installing, you should first run the unit tests...' with 'The unit tests in mpmath/tests/ can be run...'",
+        "Change 'Before installing, you should first run the unit tests...' to 'To contribute, you should first run the unit tests...'",
+        "Move the entire 'Running tests' section to be after the 'Download & installation' section."
+      ],
+      "golden_answer": "Replace 'Before installing, you should first run the unit tests...' with 'The unit tests in mpmath/tests/ can be run...'"
+    }
+  ]
+}

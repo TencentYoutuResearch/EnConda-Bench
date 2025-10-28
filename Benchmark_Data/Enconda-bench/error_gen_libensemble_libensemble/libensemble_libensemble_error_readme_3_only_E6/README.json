@@ -1,0 +1,18 @@
+{
+  "readme": "libensemble_libensemble_error_readme_3_only_E6",
+  "repo_name": "libensemble_libensemble",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest installing the package globally and only then mention creating a virtual environment, which is the wrong order and bad practice.",
+      "correction_candidates": [
+        "Move the recommendation to use a virtual environment to before the `pip install` command.",
+        "Replace the instructions with: `python -m venv venv && source venv/bin/activate && pip install libensemble`.",
+        "Change `pip install libensemble` to `pip install --user libensemble`.",
+        "Remove the sentence about creating a virtual environment."
+      ],
+      "golden_answer": "Move the recommendation to use a virtual environment to before the `pip install` command."
+    }
+  ]
+}

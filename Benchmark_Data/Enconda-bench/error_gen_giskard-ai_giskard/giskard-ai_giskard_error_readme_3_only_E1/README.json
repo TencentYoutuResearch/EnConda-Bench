@@ -1,0 +1,18 @@
+{
+  "readme": "giskard-ai_giskard_error_readme_3_only_E1",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install giskard-client -U` installs an incorrect and outdated package. The correct package is `giskard`.",
+      "correction_candidates": [
+        "pip install giskard -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard-ai -U",
+        "pip install giskard --upgrade"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    }
+  ]
+}

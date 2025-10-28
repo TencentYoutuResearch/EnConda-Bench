@@ -1,0 +1,18 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_4_only_E2",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "An incorrect example command `gsutil create bucket <bucket_name>` is provided for creating a bucket. The correct command is `gsutil mb gs://<bucket_name>`.",
+      "correction_candidates": [
+        "Change the command to `gsutil mb gs://<bucket_name>`.",
+        "Change the command to `gsutil mkbucket gs://<bucket_name>`.",
+        "Change the command to `gcloud storage buckets create gs://<bucket_name>`.",
+        "Remove the incorrect example command entirely."
+      ],
+      "golden_answer": "Change the command to `gsutil mb gs://<bucket_name>`."
+    }
+  ]
+}

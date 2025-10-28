@@ -1,0 +1,29 @@
+{
+  "readme": "python-poetry_poetry_error_readme_6",
+  "repo_name": "python-poetry_poetry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command syntax 'poetry init --name myproject' instead of proper Poetry initialization command",
+      "correction_candidates": [
+        "poetry init",
+        "poetry new myproject",
+        "poetry init --no-interaction",
+        "poetry create myproject"
+      ],
+      "golden_answer": "poetry init"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specified an outdated numpy version (1.19.0) that may have compatibility issues with modern Python versions",
+      "correction_candidates": [
+        "poetry add requests numpy",
+        "poetry add requests numpy^1.21.0",
+        "poetry add requests \"numpy>=1.20.0\"",
+        "poetry add requests numpy~=1.24.0"
+      ],
+      "golden_answer": "poetry add requests numpy"
+    }
+  ]
+}

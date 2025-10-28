@@ -1,0 +1,29 @@
+{
+  "readme": "wilcoxjay_mypyvy_error_readme_1",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install Python packages from `requirements.txt` is syntactically incorrect. It is missing the `-r` flag.",
+      "correction_candidates": [
+        "python3 -m pip install -r requirements.txt",
+        "pip install --requirements requirements.txt",
+        "python3 -m pip install from-file requirements.txt",
+        "cat requirements.txt | xargs python3 -m pip install"
+      ],
+      "golden_answer": "python3 -m pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the main executable script `mypyvy.py` is incorrect in the first example; it is located in the `src` directory, but the command shown omits `src/`.",
+      "correction_candidates": [
+        "python3 src/mypyvy.py verify examples/lockserv.pyv",
+        "./mypyvy.py verify examples/lockserv.pyv",
+        "python3 mypyvy/mypyvy.py verify examples/lockserv.pyv",
+        "run mypyvy verify examples/lockserv.pyv"
+      ],
+      "golden_answer": "python3 src/mypyvy.py verify examples/lockserv.pyv"
+    }
+  ]
+}

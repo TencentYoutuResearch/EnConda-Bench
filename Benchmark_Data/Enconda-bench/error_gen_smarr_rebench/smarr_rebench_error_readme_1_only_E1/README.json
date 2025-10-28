@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_1_only_E1",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the `cpuset` dependency on Ubuntu is incorrect. It uses `cpuset-tools`, which is not the correct package name, causing the installation to fail.",
+      "correction_candidates": [
+        "On Ubuntu: `apt-get install cpuset`",
+        "On Ubuntu: `apt install cpuset`",
+        "On Ubuntu: `sudo apt install cpuset-utils`",
+        "On Ubuntu: `pip install cpuset`"
+      ],
+      "golden_answer": "On Ubuntu: `apt install cpuset`"
+    }
+  ]
+}

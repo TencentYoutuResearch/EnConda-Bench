@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_2_only_E6",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order; `pip install` is executed before the virtual environment is created and activated, which would install the package in the global Python environment.",
+      "correction_candidates": [
+        "Reorder the commands to create and activate the virtual environment before running pip install.",
+        "The `pip instal django-machina` command should be run after `source venv/bin/activate`.",
+        "The correct order is: 1. `python -m venv venv`, 2. `source venv/bin/activate`, 3. `pip instal django-machina`.",
+        "You must set up the virtual environment first, then install packages into it."
+      ],
+      "golden_answer": "Reorder the commands to create and activate the virtual environment before running pip install."
+    }
+  ]
+}

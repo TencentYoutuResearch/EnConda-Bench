@@ -1,0 +1,18 @@
+{
+  "readme": "censys_censys-python_error_readme_3_only_E4",
+  "repo_name": "censys_censys-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the examples directory is incorrect. The README refers to `example/`, but the correct directory name is `examples/`.",
+      "correction_candidates": [
+        "The examples located in the `examples/` directory...",
+        "The examples located in the `docs/examples/` directory...",
+        "The examples located in the `scripts/` directory...",
+        "The examples located in the `tests/` directory..."
+      ],
+      "golden_answer": "The examples located in the `examples/` directory..."
+    }
+  ]
+}

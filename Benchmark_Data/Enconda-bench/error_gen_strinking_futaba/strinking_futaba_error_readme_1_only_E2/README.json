@@ -1,0 +1,18 @@
+{
+  "readme": "strinking_futaba_error_readme_1_only_E2",
+  "repo_name": "strinking_futaba",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the bot passes the config file as an argument instead of redirecting it to stdin, which will cause the application to fail.",
+      "correction_candidates": [
+        "python3 -m futaba --config config.toml",
+        "python3 futaba.py <config.toml>",
+        "python3 -m futaba < config.toml",
+        "futaba --config config.toml"
+      ],
+      "golden_answer": "python3 -m futaba < config.toml"
+    }
+  ]
+}

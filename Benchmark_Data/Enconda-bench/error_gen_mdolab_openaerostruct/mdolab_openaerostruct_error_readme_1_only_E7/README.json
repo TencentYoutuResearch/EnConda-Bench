@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_1_only_E7",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The text states that 'Python 3.6 or newer is required,' which contradicts the dependency table that lists Python 3.8 as the oldest supported version.",
+      "correction_candidates": [
+        "Remove the sentence 'Python 3.6 or newer is required.'",
+        "Change the sentence to 'Python 3.8 or newer is required.'",
+        "Update the dependency table to list Python 3.6 as the oldest supported version.",
+        "Add a note that only Python 3.8+ is officially supported, though 3.6 may work."
+      ],
+      "golden_answer": "Remove the sentence 'Python 3.6 or newer is required.'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "fixator10_fixator10-cogs_error_readme_1_only_E7",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `[p]repo add` command specifies the `master` branch, which is incompatible with Red-DiscordBot V3. The correct branch is `V3`.",
+      "correction_candidates": [
+        "Change 'master' to 'V3' in the command.",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs V3",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs --branch V3",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs"
+      ],
+      "golden_answer": "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs V3"
+    }
+  ]
+}

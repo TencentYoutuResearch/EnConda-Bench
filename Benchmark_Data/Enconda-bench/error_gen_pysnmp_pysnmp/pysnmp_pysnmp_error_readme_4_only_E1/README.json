@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_4_only_E1",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install pysnmp` installs an older, unmaintained version of the library instead of the correct `pysnmplib` package, which is a fork.",
+      "correction_candidates": [
+        "Change the command to `pip install pysnmplib`.",
+        "Change the command to `pip install pysnmp --upgrade`.",
+        "Add a note that `pysnmp` is the legacy package and `pysnmplib` is the modern one.",
+        "Change the command to `pip install pysnmp-lextudio` which is another fork."
+      ],
+      "golden_answer": "Change the command to `pip install pysnmplib`."
+    }
+  ]
+}

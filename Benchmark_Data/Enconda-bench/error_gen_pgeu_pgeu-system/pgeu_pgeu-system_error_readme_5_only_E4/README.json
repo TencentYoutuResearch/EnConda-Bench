@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_5_only_E4",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that may not exist in the repository",
+      "correction_candidates": [
+        "pip install django psycopg2-binary celery redis",
+        "pip install -r requirements/base.txt",
+        "pip install -e .",
+        "pip install django>=3.2 psycopg2>=2.8 celery>=5.0"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

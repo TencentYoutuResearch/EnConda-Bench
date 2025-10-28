@@ -1,0 +1,18 @@
+{
+  "readme": "timbrel_gitsavvy_error_readme_1_only_E2",
+  "repo_name": "timbrel_gitsavvy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example keybinding for opening the status view uses an incorrect command 'gs_status'. The correct command is 'gs_show_status'.",
+      "correction_candidates": [
+        "Change the command in the keybinding to `gs_show_status`.",
+        "Change the command in the keybinding to `gitsavvy_status`.",
+        "Change the command in the keybinding to `git: status`.",
+        "Change the command in the keybinding to `show_status_view`."
+      ],
+      "golden_answer": "Change the command in the keybinding to `gs_show_status`."
+    }
+  ]
+}

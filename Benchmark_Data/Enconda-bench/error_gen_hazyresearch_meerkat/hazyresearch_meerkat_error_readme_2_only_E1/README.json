@@ -1,0 +1,18 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_2_only_E1",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly suggests that a GPU-enabled PyTorch installation is a mandatory prerequisite for all users, which is not true.",
+      "correction_candidates": [
+        "Change the text to: '> **_GPU Install (Optional)_**: If you want to use Meerkat with a GPU...'",
+        "Remove the GPU installation note entirely.",
+        "Move the `pip install meerkat-ml` command before the GPU note.",
+        "Comment out the GPU install note using <!-- ... -->."
+      ],
+      "golden_answer": "Change the text to: '> **_GPU Install (Optional)_**: If you want to use Meerkat with a GPU...'"
+    }
+  ]
+}

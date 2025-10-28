@@ -1,0 +1,18 @@
+{
+  "readme": "markqvist_reticulum_error_readme_2_only_E1",
+  "repo_name": "markqvist_reticulum",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Dependencies' section omits `pyserial` from the list of required packages for a default install, even though it is required for serial interface functionality.",
+      "correction_candidates": [
+        "Add `pyserial` to the list of dependencies.",
+        "Add `[pyserial](https://github.com/pyserial/pyserial)` to the list of dependencies.",
+        "Remove the entire paragraph that mentions using `rnspure` if `pyserial` is not supported.",
+        "Add a note saying `pyserial` is an optional dependency for serial port communication."
+      ],
+      "golden_answer": "Add `[pyserial](https://github.com/pyserial/pyserial)` to the list of dependencies."
+    }
+  ]
+}

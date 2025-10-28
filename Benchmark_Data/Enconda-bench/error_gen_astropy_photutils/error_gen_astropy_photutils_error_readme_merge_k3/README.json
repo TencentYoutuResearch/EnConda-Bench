@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_astropy_photutils_error_readme_merge_k3",
+  "repo_name": "astropy_photutils",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides an incorrect PyPI package name `photoutils` for installation, which will fail due to a typo.",
+      "correction_candidates": [
+        "Install using the correct package name: `pip install photutils`.",
+        "The package should be installed from source: `git clone https://github.com/astropy/photutils.git && python setup.py install`.",
+        "Use conda to install the package: `conda install -c conda-forge photutils`.",
+        "The package name is `astro-photutils`, so run `pip install astro-photutils`."
+      ],
+      "golden_answer": "Install using the correct package name: `pip install photutils`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the license file incorrectly points to `LICENSE.md`, which does not exist in the repository; the correct file is `LICENSE.rst`.",
+      "correction_candidates": [
+        "Correct the link to point to the `LICENSE.rst` file.",
+        "The license file is located in the `docs` directory, so the path should be `docs/LICENSE.rst`.",
+        "The license file is named `COPYING`, not `LICENSE.md`.",
+        "Remove the link and rely on the text description of the license."
+      ],
+      "golden_answer": "Correct the link to point to the `LICENSE.rst` file."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The suggested command `cat CITATION` to view citation details is incorrect because the file is not in the repository root and is named `CITATION.rst`.",
+      "correction_candidates": [
+        "The command is incorrect because the file is not in the current working directory after installation.",
+        "Use `less photutils/CITATION.rst` to view the file from the repository root.",
+        "The command should be `photutils --citation`.",
+        "Remove the command and direct users to the `CITATION` file link provided."
+      ],
+      "golden_answer": "Remove the command and direct users to the `CITATION` file link provided."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The README presents a usage example at the very beginning, before any context or installation instructions, which is a logical order error.",
+      "correction_candidates": [
+        "Move the 'Usage Example' section to after the main description and the link to the installation documentation.",
+        "Delete the 'Usage Example' section and refer users to the official documentation for examples.",
+        "Add a note at the beginning of the 'Usage Example' section: 'Please install the package first by following the instructions below.'",
+        "Add the installation command `pip install photutils` directly inside the 'Usage Example' section."
+      ],
+      "golden_answer": "Delete the 'Usage Example' section and refer users to the official documentation for examples."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that the `requests` library is a core dependency that must be installed manually, which is false and unnecessary.",
+      "correction_candidates": [
+        "Remove the 'Dependencies' section, as package managers like pip handle dependency installation automatically.",
+        "Correct the dependency from `requests` to `astropy`.",
+        "State that `requests` is an optional, not a core, dependency.",
+        "Change the instruction to `pip install photutils`, which will install all necessary dependencies."
+      ],
+      "golden_answer": "Remove the 'Dependencies' section, as package managers like pip handle dependency installation automatically."
+    }
+  ]
+}

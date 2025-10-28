@@ -1,0 +1,29 @@
+{
+  "readme": "bdaiinstitute_spatialmath-python_error_readme_2",
+  "repo_name": "bdaiinstitute_spatialmath-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands for installing from GitHub is incorrect. The `cd` command is used before the `git clone` command, which will fail because the directory does not exist yet.",
+      "correction_candidates": [
+        "Swap the `cd spatialmath-python` and `git clone ...` commands.",
+        "Remove the `cd spatialmath-python` command.",
+        "Change `cd spatialmath-python` to `mkdir spatialmath-python && cd spatialmath-python`.",
+        "Replace the two lines with `git clone https://github.com/bdaiinstitute/spatialmath-python.git && cd spatialmath-python`."
+      ],
+      "golden_answer": "Swap the `cd spatialmath-python` and `git clone ...` commands."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path in the link to the 'gentle introduction' notebook is incorrect (`notebook` instead of `notebooks`), leading to a 404 error.",
+      "correction_candidates": [
+        "Change `.../notebook/...` to `.../notebooks/...` in the URL.",
+        "Change `.../blob/master/...` to `.../tree/master/...` in the URL.",
+        "Change `gentle-introduction.ipynb` to `introduction.ipynb`.",
+        "Remove the link entirely."
+      ],
+      "golden_answer": "Change `.../notebook/...` to `.../notebooks/...` in the URL."
+    }
+  ]
+}

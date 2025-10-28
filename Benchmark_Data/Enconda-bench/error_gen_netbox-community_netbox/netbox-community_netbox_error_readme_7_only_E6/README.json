@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_7_only_E6",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect installation order - installing pip dependencies before creating and activating virtual environment",
+      "correction_candidates": [
+        "To set up NetBox, first create a virtual environment with `python -m venv netbox_env`, then activate it using `source netbox_env/bin/activate`, and finally install pip dependencies using `pip install -r requirements.txt`.",
+        "To set up NetBox, first create a virtual environment with `python -m venv netbox_env`, activate it using `source netbox_env/bin/activate`, then install pip dependencies using `pip install -r requirements.txt`.",
+        "To set up NetBox, create a virtual environment with `python -m venv netbox_env`, then activate it using `source netbox_env/bin/activate`, and install pip dependencies using `pip install -r requirements.txt`.",
+        "To set up NetBox, first install Python, then create a virtual environment with `python -m venv netbox_env`, activate it using `source netbox_env/bin/activate`, and install pip dependencies using `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "To set up NetBox, first create a virtual environment with `python -m venv netbox_env`, then activate it using `source netbox_env/bin/activate`, and finally install pip dependencies using `pip install -r requirements.txt`."
+    }
+  ]
+}

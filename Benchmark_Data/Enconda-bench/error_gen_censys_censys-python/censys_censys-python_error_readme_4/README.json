@@ -1,0 +1,29 @@
+{
+  "readme": "censys_censys-python_error_readme_4",
+  "repo_name": "censys_censys-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `poetry add censys` is used to add a new dependency from PyPI, not to install existing project dependencies from a `poetry.lock` file. The correct command is `poetry install`.",
+      "correction_candidates": [
+        "poetry install --no-dev",
+        "poetry install",
+        "pip install -e .",
+        "poetry update"
+      ],
+      "golden_answer": "poetry install"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instruction for configuring ASM credentials incorrectly states to run `censys config` and shows the same command in the example block. The correct command for ASM is `censys asm config`.",
+      "correction_candidates": [
+        "...you can configure your ASM credentials by running `censys asm config`...",
+        "...you can configure your ASM credentials by running `censys config --asm`...",
+        "...you can configure your ASM credentials by editing the `~/.censys/censys.cfg` file directly...",
+        "...you can configure your ASM credentials by running `censys asm init`..."
+      ],
+      "golden_answer": "...you can configure your ASM credentials by running `censys asm config`..."
+    }
+  ]
+}

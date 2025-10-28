@@ -1,0 +1,18 @@
+{
+  "readme": "llm-random_llm-random_error_readme_1_only_E6",
+  "repo_name": "llm-random_llm-random",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests that `./start-dev.sh` installs requirements before creating the virtual environment, which is the wrong logical order.",
+      "correction_candidates": [
+        "This will set up git hooks, create a virtual environment, and then install requirements.",
+        "Run `pip install -r requirements.txt` first, then run `./start-dev.sh`.",
+        "This will install system-wide requirements and then create a local virtual environment.",
+        "This will create a virtual environment, install requirements and set up git hooks."
+      ],
+      "golden_answer": "This will create a virtual environment, install requirements and set up git hooks."
+    }
+  ]
+}

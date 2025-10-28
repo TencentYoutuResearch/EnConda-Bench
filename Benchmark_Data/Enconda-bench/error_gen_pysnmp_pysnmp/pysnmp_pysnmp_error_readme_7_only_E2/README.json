@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_7_only_E2",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Missing python3 command specification in the example execution, using just python instead",
+      "correction_candidates": [
+        "Change python to python3 in the example commands",
+        "Use python -m instead of direct script execution",
+        "Add #!/usr/bin/env python3 shebang explanation",
+        "Specify the full path to the Python interpreter"
+      ],
+      "golden_answer": "Change python to python3 in the example commands"
+    }
+  ]
+}

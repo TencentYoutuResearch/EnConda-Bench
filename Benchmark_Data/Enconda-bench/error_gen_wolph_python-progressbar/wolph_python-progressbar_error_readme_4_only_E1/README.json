@@ -1,0 +1,18 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_4_only_E1",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `easy_install` command uses an incorrect package name `progressbar-2` instead of the correct `progressbar2`.",
+      "correction_candidates": [
+        "easy_install progressbar",
+        "easy_install \"progressbar2\"",
+        "easy_install progressbar2",
+        "python -m easy_install progressbar-2"
+      ],
+      "golden_answer": "easy_install progressbar2"
+    }
+  ]
+}

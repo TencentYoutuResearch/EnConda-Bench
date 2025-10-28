@@ -1,0 +1,18 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_1_only_E2",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The initial setup command is incorrectly listed as 'make install', which is not a valid target. The correct command is 'make'.",
+      "correction_candidates": [
+        "$ make setup",
+        "$ make",
+        "$ ./install.sh",
+        "$ pip install ."
+      ],
+      "golden_answer": "$ make"
+    }
+  ]
+}

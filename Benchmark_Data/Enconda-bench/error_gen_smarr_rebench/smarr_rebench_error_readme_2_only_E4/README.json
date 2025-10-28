@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_2_only_E4",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the example YAML configuration, the `default_data_file` is set to `'data/example.data'`, which implies that a `data/` directory must exist. However, there are no instructions to create this directory, which will cause a file path error when ReBench tries to write the data file.",
+      "correction_candidates": [
+        "`default_data_file: 'example.data'`",
+        "`default_data_file: './example.data'`",
+        "Add a step `mkdir data` before running `rebench`.",
+        "Remove the `default_data_file` line to use the default behavior."
+      ],
+      "golden_answer": "`default_data_file: 'example.data'`"
+    }
+  ]
+}

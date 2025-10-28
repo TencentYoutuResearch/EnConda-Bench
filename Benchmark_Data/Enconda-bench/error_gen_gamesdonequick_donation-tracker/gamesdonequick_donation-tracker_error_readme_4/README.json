@@ -1,0 +1,29 @@
+{
+  "readme": "gamesdonequick_donation-tracker_error_readme_4",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Requirements' section lists 'pre-commit' as a dependency but omits the command to install it, which will cause the 'pre-commit install' command in the 'Development Quick Start' section to fail.",
+      "correction_candidates": [
+        "Add `pre-commit` to a `requirements-dev.txt` file and run `pip install -r requirements-dev.txt`.",
+        "The `pre-commit` requirement should be specified as: `pre-commit` (`pip install pre-commit`).",
+        "Run `pipx install pre-commit`.",
+        "Run `brew install pre-commit` for macOS users."
+      ],
+      "golden_answer": "The `pre-commit` requirement should be specified as: `pre-commit` (`pip install pre-commit`)."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the INSTALLED_APPS list, 'paypal.standard.ipn' is misspelled as 'paypal.ipn'. This will cause an ImportError when Django tries to load the application.",
+      "correction_candidates": [
+        "Change 'paypal.ipn' to 'paypal.standard.ipn'.",
+        "Change 'paypal.ipn' to 'django_paypal.ipn'.",
+        "Remove the 'paypal.ipn' line as it is optional.",
+        "Change 'paypal.ipn' to 'paypal'."
+      ],
+      "golden_answer": "Change 'paypal.ipn' to 'paypal.standard.ipn'."
+    }
+  ]
+}

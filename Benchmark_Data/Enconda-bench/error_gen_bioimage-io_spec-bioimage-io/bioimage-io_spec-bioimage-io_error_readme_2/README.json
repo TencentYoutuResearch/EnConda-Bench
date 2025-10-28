@@ -1,0 +1,29 @@
+{
+  "readme": "bioimage-io_spec-bioimage-io_error_readme_2",
+  "repo_name": "bioimage-io_spec-bioimage-io",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that PyYAML supports YAML 1.2, while it does not, leading to potential parsing issues. The recommended package is `ruyaml`.",
+      "correction_candidates": [
+        "Note that the Python package PyYAML does not support YAML 1.2 .",
+        "Note that only Python 3.8+ with PyYAML supports YAML 1.2 .",
+        "Note that the Python package PyYAML has limited support for YAML 1.2 .",
+        "Note that the Python package PyYAML is deprecated in favor of ruaml for YAML 1.2 support."
+      ],
+      "golden_answer": "Note that the Python package PyYAML does not support YAML 1.2 ."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the examples in the 'Examples' section is broken due to an incorrect directory name in the URL.",
+      "correction_candidates": [
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example_descriptions/examples.md",
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example/examples.md",
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/docs/examples.md",
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example_descriptions/README.md"
+      ],
+      "golden_answer": "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example_descriptions/examples.md"
+    }
+  ]
+}

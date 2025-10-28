@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf-standard_error_readme_4_only_E1",
+  "repo_name": "asdf-format_asdf-standard",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for development tools is missing the 'pre-commit' package, which is necessary for running the git hooks mentioned in the next step.",
+      "correction_candidates": [
+        "Add `pre-commit` to the `pip install` command: `pip install black isort pre-commit`.",
+        "Install pre-commit separately using `pip install --user pre-commit`.",
+        "The project does not require pre-commit for development, it's optional.",
+        "Install pre-commit using `conda install -c conda-forge pre-commit`."
+      ],
+      "golden_answer": "Add `pre-commit` to the `pip install` command: `pip install black isort pre-commit`."
+    }
+  ]
+}

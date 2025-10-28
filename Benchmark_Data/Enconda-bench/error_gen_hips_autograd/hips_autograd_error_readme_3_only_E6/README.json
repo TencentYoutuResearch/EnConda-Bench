@@ -1,0 +1,18 @@
+{
+  "readme": "hips_autograd_error_readme_3_only_E6",
+  "repo_name": "hips_autograd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise creating and activating a virtual environment *after* installing the package, which defeats the purpose of environment isolation.",
+      "correction_candidates": [
+        "Remove the sentence about creating a virtual environment after installation.",
+        "Change the sentence to: 'It is recommended to create and activate a virtual environment *before* running the installation commands to isolate the package.'",
+        "Change the sentence to: 'First, run `python -m venv autograd-env`, then `source autograd-env/bin/activate`, then `pip install autograd`.'",
+        "Change the sentence to: 'Use `pip install --user autograd` to avoid needing a virtual environment.'"
+      ],
+      "golden_answer": "Remove the sentence about creating a virtual environment after installation."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "biothings_biothings.api_error_readme_1_only_E7",
+  "repo_name": "biothings_biothings.api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command to install an editable version is missing the branch specifier (`@0.12.x`), which will install the default branch instead of the specified version, potentially causing version compatibility issues.",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/biothings/biothings.api.git@0.12.x#egg=biothings[web_extra]",
+        "pip install --editable git+https://github.com/biothings/biothings.api.git#egg=biothings[web_extra] --branch 0.12.x",
+        "pip install -e git+https://github.com/biothings/biothings.api.git#egg=biothings[web_extra] --version 0.12.x",
+        "git clone -b 0.12.x https://github.com/biothings/biothings.api.git && pip install -e ./biothings.api[web_extra]"
+      ],
+      "golden_answer": "pip install -e git+https://github.com/biothings/biothings.api.git@0.12.x#egg=biothings[web_extra]"
+    }
+  ]
+}

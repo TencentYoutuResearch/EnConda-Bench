@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_pip-tools_error_readme_1_only_E2",
+  "repo_name": "jazzband_pip-tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to update a specific package is incorrect. It uses the non-existent `--update-package` flag instead of the correct `--upgrade-package` flag.",
+      "correction_candidates": [
+        "Use the `--upgrade-pkg django` flag.",
+        "Use the `--upgrade-package django` flag.",
+        "Use the `pip-compile --upgrade --package django` command.",
+        "Use the `pip-compile -U django` command."
+      ],
+      "golden_answer": "Use the `--upgrade-package django` flag."
+    }
+  ]
+}

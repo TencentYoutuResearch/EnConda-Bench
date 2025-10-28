@@ -1,0 +1,29 @@
+{
+  "readme": "reagento_adaptix_error_readme_7",
+  "repo_name": "reagento_adaptix",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed pip to pip3 with --user flag which may cause issues in some environments and is not the standard recommendation",
+      "correction_candidates": [
+        "pip install adaptix==3.0.0b7",
+        "python -m pip install adaptix==3.0.0b7",
+        "pip install --upgrade adaptix==3.0.0b7",
+        "python3 -m pip install adaptix==3.0.0b7"
+      ],
+      "golden_answer": "pip install adaptix==3.0.0b7"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version compatibility information - states Python 2.7+ is supported when modern libraries typically require Python 3.8+",
+      "correction_candidates": [
+        "Note: Adaptix requires Python 3.8+ for compatibility.",
+        "Note: Adaptix requires Python 3.7+ for full feature support.",
+        "Note: Adaptix requires Python 3.9+ for optimal performance.",
+        "Note: Adaptix requires Python 3.6+ for basic functionality."
+      ],
+      "golden_answer": "Note: Adaptix requires Python 3.8+ for compatibility."
+    }
+  ]
+}

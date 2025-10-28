@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_6_only_E1",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary and conflicting dependency listed - discord.py should not be installed alongside nextcord",
+      "correction_candidates": [
+        "Remove the discord.py dependency entirely from the optional packages list",
+        "Replace discord.py with aiofiles for file handling operations",
+        "Change discord.py to py-cord for migration compatibility",
+        "Modify discord.py entry to specify it's for development testing only"
+      ],
+      "golden_answer": "Remove the discord.py dependency entirely from the optional packages list"
+    }
+  ]
+}

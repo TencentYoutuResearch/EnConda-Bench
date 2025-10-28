@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_scvelo_error_readme_1_only_E2",
+  "repo_name": "theislab_scvelo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install scvelo --upgrade-all' is invalid because '--upgrade-all' is not a valid flag for pip.",
+      "correction_candidates": [
+        "pip install scvelo --upgrade",
+        "pip install --upgrade scvelo",
+        "pip install -U scvelo",
+        "pip install scvelo"
+      ],
+      "golden_answer": "pip install -U scvelo"
+    }
+  ]
+}

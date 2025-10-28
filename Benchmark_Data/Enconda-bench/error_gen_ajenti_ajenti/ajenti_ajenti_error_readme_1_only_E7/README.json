@@ -1,0 +1,18 @@
+{
+  "readme": "ajenti_ajenti_error_readme_1_only_E7",
+  "repo_name": "ajenti_ajenti",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The setup guide incorrectly specifies Python 2.7 for development, but the project has been migrated to Python 3.",
+      "correction_candidates": [
+        "Make sure you have Python 3.6 or higher installed on your system.",
+        "Make sure you have Python 2.7 or Python 3 installed on your system.",
+        "Make sure you have the latest version of Python 2 installed on your system.",
+        "Make sure you have Python 3 installed on your system, preferably version 3.5."
+      ],
+      "golden_answer": "Make sure you have Python 3.6 or higher installed on your system."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "islandora_documentation_error_readme_2",
+  "repo_name": "islandora_documentation",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation lists key dependencies but does not specify versions or refer to a `requirements.txt` file, which can lead to version compatibility issues when a developer tries to install them manually.",
+      "correction_candidates": [
+        "The README should instruct users to install dependencies from a version-pinned requirements.txt file, for example: 'pip install -r requirements.txt'.",
+        "The README should specify exact versions for each package, like 'mkdocs==1.2.3'.",
+        "The README should state the required Python version.",
+        "The listed dependencies are incorrect."
+      ],
+      "golden_answer": "The README should instruct users to install dependencies from a version-pinned requirements.txt file, for example: 'pip install -r requirements.txt'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions install dependencies globally before creating and activating the project's virtual environment, which defeats the purpose of using a virtual environment.",
+      "correction_candidates": [
+        "The 'pip install' command should be run after the 'source venv/bin/activate' command.",
+        "You should run 'pip install -r requirements.txt --user' instead.",
+        "The commands should be combined into 'python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt'.",
+        "Create the virtual environment first, then install dependencies."
+      ],
+      "golden_answer": "The 'pip install' command should be run after the 'source venv/bin/activate' command."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mause_duckdb_engine_error_readme_3_only_E2",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to register a pandas DataFrame, `conn.execute(text(\"register\"), name=\"test_df\", df=df)`, is syntactically incorrect for SQLAlchemy 1.4+. The parameters should be passed in a dictionary as the second argument, not as keyword arguments to `execute`.",
+      "correction_candidates": [
+        "conn.execute(text(\"register 'test_df' from df\"))",
+        "conn.execute(text(\"register(:name, :df)\"), {\"name\": \"test_df\", \"df\": df})",
+        "conn.register(\"test_df\", df)",
+        "conn.execute(\"register\", (\"test_df\", df))"
+      ],
+      "golden_answer": "conn.execute(text(\"register(:name, :df)\"), {\"name\": \"test_df\", \"df\": df})"
+    }
+  ]
+}

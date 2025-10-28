@@ -1,0 +1,18 @@
+{
+  "readme": "brainglobe_brainrender_error_readme_3",
+  "repo_name": "brainglobe_brainrender",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly show the `pip install brainrender` command before the commands to create and activate a virtual environment. This installs the package in the global environment, not the isolated one.",
+      "correction_candidates": [
+        "The commands for creating and activating the virtual environment should be executed before the `pip install brainrender` command.",
+        "The `pip install brainrender` command should be removed, as the virtual environment includes it.",
+        "The commands should be combined into a single line: `python -m venv brainrender-env && source brainrender-env/bin/activate && pip install brainrender`.",
+        "The virtual environment commands are not necessary and should be removed."
+      ],
+      "golden_answer": "The commands for creating and activating the virtual environment should be executed before the `pip install brainrender` command."
+    }
+  ]
+}

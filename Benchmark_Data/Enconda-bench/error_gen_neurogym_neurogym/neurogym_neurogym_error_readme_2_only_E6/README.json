@@ -1,0 +1,18 @@
+{
+  "readme": "neurogym_neurogym_error_readme_2_only_E6",
+  "repo_name": "neurogym_neurogym",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation commands are in the wrong logical order. The `pip install -e .` command must be run from within the `neurogym` directory, but the instructions list it before the `cd neurogym` command.",
+      "correction_candidates": [
+        "pip install -e ./neurogym\ncd neurogym",
+        "cd neurogym\npip install -e .",
+        "pip install -e neurogym\ncd neurogym",
+        "git clone https://github.com/neurogym/neurogym.git && pip install -e ."
+      ],
+      "golden_answer": "cd neurogym\npip install -e ."
+    }
+  ]
+}

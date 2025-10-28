@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_3_only_E7",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that llvmlite is only compatible with Python 3.9, when it actually supports versions 3.9 through 3.12.",
+      "correction_candidates": [
+        "llvmlite has been tested with Python 3.9 -- 3.12 and is likely to work with greater versions.",
+        "llvmlite has been tested with Python 3.7 -- 3.12 and is likely to work with greater versions.",
+        "llvmlite has been tested with Python 3.9 and higher.",
+        "llvmlite is compatible with any Python 3.x version."
+      ],
+      "golden_answer": "llvmlite has been tested with Python 3.9 -- 3.12 and is likely to work with greater versions."
+    }
+  ]
+}

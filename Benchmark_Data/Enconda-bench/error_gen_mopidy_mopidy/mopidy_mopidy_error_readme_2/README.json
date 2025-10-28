@@ -1,0 +1,29 @@
+{
+  "readme": "mopidy_mopidy_error_readme_2",
+  "repo_name": "mopidy_mopidy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The development setup guide is missing a critical step to install system-level dependencies for GStreamer, which is required by Mopidy for audio processing. The `pip install` command will likely fail without it.",
+      "correction_candidates": [
+        "Add a note before `pip install`: 'Ensure GStreamer and its Python bindings are installed (e.g., `sudo apt-get install python3-gst-1.0` on Debian/Ubuntu).'",
+        "Add the command `pip install pygobject` before `pip install -e .`.",
+        "Change `pip install -e .` to `pip install -e .[gst]` to automatically handle GStreamer bindings.",
+        "Add a system command `sudo apt-get install libgstreamer1.0-dev gir1.2-gstreamer-1.0` before the pip install step."
+      ],
+      "golden_answer": "Add a note before `pip install`: 'Ensure GStreamer and its Python bindings are installed (e.g., `sudo apt-get install python3-gst-1.0` on Debian/Ubuntu).'"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instructions force the installation of `Pykka==1.2.1`, an outdated version that is incompatible with the current version of Mopidy and will cause dependency conflicts or runtime errors.",
+      "correction_candidates": [
+        "Remove the line `pip install Pykka==1.2.1`, as the correct version is specified by the project's own dependencies.",
+        "Change `pip install Pykka==1.2.1` to `pip install -U Pykka` to get the latest version.",
+        "Look up the correct version of Pykka in `setup.cfg` and update the command accordingly.",
+        "Change `pip install Pykka==1.2.1` to `pip install 'Pykka>=2.0'`."
+      ],
+      "golden_answer": "Remove the line `pip install Pykka==1.2.1`, as the correct version is specified by the project's own dependencies."
+    }
+  ]
+}

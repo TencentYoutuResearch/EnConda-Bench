@@ -1,0 +1,18 @@
+{
+  "readme": "pureqml_qmlcore_error_readme_3_only_E2",
+  "repo_name": "pureqml_qmlcore",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command line option for minification is incorrect. The long form is documented as '--minimize' but the actual implementation is '--minify'.",
+      "correction_candidates": [
+        "In 'build tool command line options', replace '--minimize' with '--minify'.",
+        "The correct option is `-minify`.",
+        "The option is `-M`.",
+        "The option should be `--min`."
+      ],
+      "golden_answer": "In 'build tool command line options', replace '--minimize' with '--minify'."
+    }
+  ]
+}

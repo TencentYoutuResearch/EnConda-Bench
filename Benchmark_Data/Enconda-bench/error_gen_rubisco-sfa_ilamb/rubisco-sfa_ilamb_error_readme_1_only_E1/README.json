@@ -1,0 +1,18 @@
+{
+  "readme": "rubisco-sfa_ilamb_error_readme_1_only_E1",
+  "repo_name": "rubisco-sfa_ilamb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions list a dependency `numby` which does not exist; the correct package name is `numpy`.",
+      "correction_candidates": [
+        "pip install numpy pandas netCDF4 matplotlib",
+        "conda install numpy pandas netCDF4 matplotlib",
+        "pip install ilamb --no-deps && pip install numpy pandas netCDF4 matplotlib",
+        "pip install num-py pandas netCDF4 matplotlib"
+      ],
+      "golden_answer": "pip install numpy pandas netCDF4 matplotlib"
+    }
+  ]
+}

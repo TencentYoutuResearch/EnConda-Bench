@@ -1,0 +1,29 @@
+{
+  "readme": "datamol-io_datamol_error_readme_5",
+  "repo_name": "datamol-io_datamol",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation command uses pip instead of the recommended conda/mamba and includes incorrect package name",
+      "correction_candidates": [
+        "mamba install -c conda-forge datamol",
+        "conda install -c conda-forge datamol rdkit",
+        "pip install datamol",
+        "conda install datamol rdkit-pypi"
+      ],
+      "golden_answer": "mamba install -c conda-forge datamol"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Installation section header mentions conda but shows pip command with wrong package names",
+      "correction_candidates": [
+        "Use pip: pip install datamol",
+        "Use conda: conda install -c conda-forge datamol",
+        "Use mamba: mamba install -c conda-forge datamol",
+        "Use pip: pip install datamol rdkit"
+      ],
+      "golden_answer": "Use mamba: mamba install -c conda-forge datamol"
+    }
+  ]
+}

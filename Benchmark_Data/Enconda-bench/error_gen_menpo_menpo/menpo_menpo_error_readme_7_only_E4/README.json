@@ -1,0 +1,18 @@
+{
+  "readme": "menpo_menpo_error_readme_7_only_E4",
+  "repo_name": "menpo_menpo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed the notebooks link to point to a direct archive download instead of the releases page",
+      "correction_candidates": [
+        "https://github.com/menpo/menpo-notebooks/releases",
+        "https://github.com/menpo/menpo-notebooks/tags",
+        "https://github.com/menpo/menpo-notebooks/archive/latest.zip",
+        "https://github.com/menpo/menpo-notebooks/downloads"
+      ],
+      "golden_answer": "https://github.com/menpo/menpo-notebooks/releases"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_5_only_E2",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed the installation command from 'python -m pip install briefcase' to 'pip install briefcase==2.1.0', which uses direct pip instead of python module and pins to a specific version that may not exist or be compatible",
+      "correction_candidates": [
+        "$ python -m pip install briefcase",
+        "$ pip3 install briefcase",
+        "$ python3 -m pip install briefcase",
+        "$ pip install briefcase"
+      ],
+      "golden_answer": "$ python -m pip install briefcase"
+    }
+  ]
+}

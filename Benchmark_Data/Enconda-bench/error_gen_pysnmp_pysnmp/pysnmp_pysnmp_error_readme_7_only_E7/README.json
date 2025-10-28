@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_7_only_E7",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinning to a specific outdated version 1.4.2 which may not exist or be compatible",
+      "correction_candidates": [
+        "Remove version specification to install the latest version",
+        "Use a version range like pysnmplib>=1.0.0",
+        "Pin to the current stable version pysnmplib==6.0.7",
+        "Add --pre flag to install pre-release versions"
+      ],
+      "golden_answer": "Remove version specification to install the latest version"
+    }
+  ]
+}

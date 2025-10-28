@@ -1,0 +1,18 @@
+{
+  "readme": "columnflow_columnflow_error_readme_7_only_E7",
+  "repo_name": "columnflow_columnflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 2.7 as a requirement when modern projects like columnflow require Python 3.x",
+      "correction_candidates": [
+        "Change Python 2.7 to Python 3.8 or higher",
+        "Remove the Python version requirement entirely",
+        "Change to Python 3.6+ for broader compatibility",
+        "Specify Python 3.9+ as the minimum requirement"
+      ],
+      "golden_answer": "Change Python 2.7 to Python 3.8 or higher"
+    }
+  ]
+}

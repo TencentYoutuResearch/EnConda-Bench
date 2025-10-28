@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_dfki-ric_phobos_error_readme_merge_k2",
+  "repo_name": "dfki-ric_phobos",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The CLI installation steps are in the wrong logical order. The instructions say to install the package with `pip install .` before installing its dependencies with the `install_requirements.py` script, which will cause the installation to fail.",
+      "correction_candidates": [
+        "First run `pip install .`, then `cd ..` and `python3 phobos/install_requirements.py`.",
+        "Run `pip install --no-deps .` and then `python3 install_requirements.py`.",
+        "First, install dependencies with `python3 install_requirements.py`, then install the package with `pip install .`.",
+        "Run `pip install . && python3 install_requirements.py`."
+      ],
+      "golden_answer": "First, install dependencies with `python3 install_requirements.py`, then install the package with `pip install .`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for the Blender dependency installation script is incorrect. It points to `scripts/install_requirements.py`, but the file is located in the `phobos` subdirectory.",
+      "correction_candidates": [
+        "${BLENDER_EXECUTABLE} -b --python ../install_requirements.py",
+        "${BLENDER_EXECUTABLE} -b --python phobos/install_requirements.py",
+        "${BLENDER_EXECUTABLE} -b --python install_requirements.py",
+        "${BLENDER_EXECUTABLE} -b --python requirements/install.py"
+      ],
+      "golden_answer": "${BLENDER_EXECUTABLE} -b --python install_requirements.py"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for CLI installation, `pip install phobos.zip`, is incorrect. This command is for installing from a zip archive, not a local source directory. The correct command is `pip install .`.",
+      "correction_candidates": [
+        "pip install .",
+        "python setup.py install",
+        "pip install -e .",
+        "pip install phobos"
+      ],
+      "golden_answer": "pip install ."
+    }
+  ]
+}

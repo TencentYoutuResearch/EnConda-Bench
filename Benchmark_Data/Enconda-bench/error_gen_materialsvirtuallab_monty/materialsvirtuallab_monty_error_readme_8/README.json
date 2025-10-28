@@ -1,0 +1,29 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_8",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies overly restrictive exact Python patch versions instead of minimum versions",
+      "correction_candidates": [
+        "Change to minimum version requirements: Python 3.6+ is supported",
+        "Use range specification: Python 3.6-3.11 are supported",
+        "Simplify to major versions: Python 3.7 or higher recommended",
+        "Update to current standards: Python 3.8+ required for optimal performance"
+      ],
+      "golden_answer": "Change to minimum version requirements: Python 3.6+ is supported"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Mixes Python import code with shell pip command in the same code block, creating confusion",
+      "correction_candidates": [
+        "Separate into two blocks: installation commands first, then Python usage examples",
+        "Remove pip command from Python code block and show only import examples",
+        "Move pip install to a separate Installation section above the Quick Start",
+        "Replace with proper code block structure using different language tags"
+      ],
+      "golden_answer": "Separate into two blocks: installation commands first, then Python usage examples"
+    }
+  ]
+}

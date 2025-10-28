@@ -1,0 +1,18 @@
+{
+  "readme": "commaai_comma10k_error_readme_7_only_E7",
+  "repo_name": "commaai_comma10k",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python 2.7 requirement when modern projects should use Python 3.x",
+      "correction_candidates": [
+        "This project requires Python 3.8+ for optimal performance and modern library compatibility",
+        "This project works with Python 3.6 or higher, with Python 3.9+ recommended",
+        "Remove the Python version requirement entirely as it's not specified elsewhere",
+        "This project requires Python 3.7-3.11 for compatibility with all dependencies"
+      ],
+      "golden_answer": "This project requires Python 3.8+ for optimal performance and modern library compatibility"
+    }
+  ]
+}

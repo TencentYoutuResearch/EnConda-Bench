@@ -1,0 +1,29 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_1",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `pip install` command is executed before the `git clone` command. This will fail because the `citationhunt/requirements.txt` file does not exist until the repository is cloned.",
+      "correction_candidates": [
+        "Execute `pip install git+https://github.com/eggpi/citationhunt.git#egg=citationhunt` before the `git clone` command.",
+        "Correct the order by executing `git clone https://github.com/eggpi/citationhunt.git` before `pip install -r citationhunt/requirements.txt`.",
+        "Change the command to `pip install requests` since that is the main dependency.",
+        "Remove the `pip install` command entirely and run it after starting the webservice."
+      ],
+      "golden_answer": "Correct the order by executing `git clone https://github.com/eggpi/citationhunt.git` before `pip install -r citationhunt/requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `webservice` command to start the service uses an incorrect parameter `--start`. The correct syntax is to use `start` as a subcommand without dashes.",
+      "correction_candidates": [
+        "Replace `webservice --backend=kubernetes python3.9 --start` with `webservice --backend=kubernetes python3.9 start`.",
+        "Change the command to `webservice start --backend=kubernetes python3.9`.",
+        "Replace `--start` with `run`.",
+        "The command is correct, but requires `sudo` privileges to run."
+      ],
+      "golden_answer": "Replace `webservice --backend=kubernetes python3.9 --start` with `webservice --backend=kubernetes python3.9 start`."
+    }
+  ]
+}

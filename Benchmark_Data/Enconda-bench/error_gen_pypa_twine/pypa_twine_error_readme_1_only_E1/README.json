@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_1_only_E1",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install twine-wheel` is incorrect. The package on PyPI is named `twine`, not `twine-wheel`.",
+      "correction_candidates": [
+        "Run `pip install twine`.",
+        "Run `pip install twine-package`.",
+        "Download the wheel from PyPI and install it directly.",
+        "Run `python -m pip install pypa/twine`."
+      ],
+      "golden_answer": "Run `pip install twine`."
+    }
+  ]
+}

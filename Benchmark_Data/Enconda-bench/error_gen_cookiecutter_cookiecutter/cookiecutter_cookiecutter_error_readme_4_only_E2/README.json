@@ -1,0 +1,18 @@
+{
+  "readme": "cookiecutter_cookiecutter_error_readme_4_only_E2",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The Python API usage example incorrectly calls `cookiecutter.create()`, which is not a valid function. The correct function call is `cookiecutter()`.",
+      "correction_candidates": [
+        "Change `cookiecutter.create(...)` to `cookiecutter(...)`.",
+        "Change `cookiecutter.create(...)` to `cookiecutter.main.cookiecutter(...)`.",
+        "Change `from cookiecutter.main import cookiecutter` to `from cookiecutter import api` and use `api.cookiecutter(...)`.",
+        "Change `cookiecutter.create(...)` to `cookiecutter.generate(...)`."
+      ],
+      "golden_answer": "Change `cookiecutter.create(...)` to `cookiecutter(...)`."
+    }
+  ]
+}

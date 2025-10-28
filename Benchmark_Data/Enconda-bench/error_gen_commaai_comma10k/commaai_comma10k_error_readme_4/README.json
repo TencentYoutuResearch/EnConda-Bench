@@ -1,0 +1,29 @@
+{
+  "readme": "commaai_comma10k_error_readme_4",
+  "repo_name": "commaai_comma10k",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The contribution instructions have a logical order error, telling users to fork the repository and start labeling *before* claiming a task in the spreadsheet. This can lead to multiple people working on the same image.",
+      "correction_candidates": [
+        "Move the step \"Visit the Google Spreadsheet...\" to be step 1, before forking and labeling.",
+        "Combine the forking and spreadsheet steps into a single step.",
+        "Add a note before step 1 saying \"Important: Make sure to check the spreadsheet first to see if an image is already being worked on.\"",
+        "Remove the step about the Google Spreadsheet entirely and tell users to coordinate on Discord."
+      ],
+      "golden_answer": "Move the step \"Visit the Google Spreadsheet...\" to be step 1, before forking and labeling."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The animated GIF showing an example mask is referenced as 'sample_animation.gif', which does not exist in the repository. The correct filename is 'sample.gif'.",
+      "correction_candidates": [
+        "Change the image reference from 'sample_animation.gif' back to 'sample.gif'.",
+        "Change the image reference to 'assets/sample.gif'.",
+        "Remove the animated GIF section entirely.",
+        "Change the alt text to \"Animated GIF not found\" and leave the broken link."
+      ],
+      "golden_answer": "Change the image reference from 'sample_animation.gif' back to 'sample.gif'."
+    }
+  ]
+}

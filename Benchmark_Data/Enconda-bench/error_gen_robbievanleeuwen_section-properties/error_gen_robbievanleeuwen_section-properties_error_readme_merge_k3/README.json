@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_robbievanleeuwen_section-properties_error_readme_merge_k3",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command uses the incorrect package name 'section-properties' instead of 'sectionproperties'.",
+      "correction_candidates": [
+        "Change `pip install section-properties` to `pip install sectionproperties`.",
+        "Change `pip install section-properties` to `pip install section.properties`.",
+        "Change `pip install section-properties` to `pip install section_properties`.",
+        "Change `pip install section-properties` to `pip install 'sectionproperties'`."
+      ],
+      "golden_answer": "Change `pip install section-properties` to `pip install sectionproperties`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the license file is incorrect, pointing to a non-existent 'LICENSE.md' file instead of 'LICENSE'.",
+      "correction_candidates": [
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/main/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/raw/master/LICENSE`."
+      ],
+      "golden_answer": "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package only supports Python 3.7, which is an unnecessary and inaccurate version restriction.",
+      "correction_candidates": [
+        "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'",
+        "Change the sentence to 'Note: `sectionproperties` supports Python 3.7 and newer.'",
+        "Change the sentence to 'Refer to the Python Version badge for compatibility details.'",
+        "Change the sentence to 'Note: `sectionproperties` is tested on Python 3.7+.'"
+      ],
+      "golden_answer": "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily ask the user to install `numpy` and `scipy` manually, when they are dependencies that pip will handle automatically.",
+      "correction_candidates": [
+        "Remove the `pip install numpy scipy` command.",
+        "Add a note explaining that `numpy` and `scipy` are installed automatically as dependencies.",
+        "Change the commands to `pip install sectionproperties[all]`.",
+        "Combine the commands into one line: `pip install numpy scipy sectionproperties`."
+      ],
+      "golden_answer": "Remove the `pip install numpy scipy` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to install from the git repository is syntactically incorrect because it is missing the '.git' suffix on the URL.",
+      "correction_candidates": [
+        "Change the command to `pip install git+https://github.com/robbievanleeuwen/section-properties.git`.",
+        "Change the installation method to `pip install sectionproperties`.",
+        "Change the command to `git clone https://github.com/robbievanleeuwen/section-properties.git && cd section-properties && pip install .`.",
+        "Change the command to `pip install https://github.com/robbievanleeuwen/section-properties/archive/master.zip`."
+      ],
+      "golden_answer": "Change the command to `pip install git+https://github.com/robbievanleeuwen/section-properties.git`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link in the 'Features' section is broken, pointing to a non-existent 'features.html' page within the documentation.",
+      "correction_candidates": [
+        "Change the link to `https://sectionproperties.readthedocs.io/en/stable/user_guide.html`.",
+        "Change the link to point to the documentation homepage: `https://sectionproperties.readthedocs.io/`.",
+        "Remove the 'Features' section entirely as the information is in the docs.",
+        "Change the link to `https://github.com/robbievanleeuwen/section-properties#features`."
+      ],
+      "golden_answer": "Change the link to `https://sectionproperties.readthedocs.io/en/stable/user_guide.html`."
+    }
+  ]
+}

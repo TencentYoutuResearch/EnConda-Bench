@@ -1,0 +1,29 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_3",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the PyPI installation section, the package is installed with `pip install py-clarity`. The correct package name on PyPI is `pyclarity`, without a hyphen.",
+      "correction_candidates": [
+        "pip install pyclarity",
+        "pip install py_clarity",
+        "pip install clarity",
+        "pip install 'py-clarity'"
+      ],
+      "golden_answer": "pip install pyclarity"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Modified binaural STOI (MBSTOI)' tool points to an incorrect path `./clarity/mbstoi/mbstoi.py`. The file is located inside the `evaluator` subdirectory.",
+      "correction_candidates": [
+        "Change the path to `./clarity/evaluator/mbstoi/mbstoi.py`",
+        "Change the path to `./evaluator/mbstoi/mbstoi.py`",
+        "Change the path to `./clarity/evaluator/mbstoi.py`",
+        "Change the path to `./clarity/tools/mbstoi/mbstoi.py`"
+      ],
+      "golden_answer": "Change the path to `./clarity/evaluator/mbstoi/mbstoi.py`"
+    }
+  ]
+}

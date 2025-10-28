@@ -1,0 +1,18 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_2_only_E7",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Lhotse only supports Python 3.7, while it actually supports version 3.7 and later.",
+      "correction_candidates": [
+        "Lhotse supports Python version 3.7 only.",
+        "Lhotse supports Python versions 3.7 through 3.9.",
+        "Lhotse supports Python 3 and later.",
+        "Lhotse supports Python version 3.7 and later."
+      ],
+      "golden_answer": "Lhotse supports Python version 3.7 and later."
+    }
+  ]
+}

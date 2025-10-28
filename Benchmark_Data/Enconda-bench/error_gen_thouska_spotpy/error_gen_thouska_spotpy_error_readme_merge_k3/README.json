@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_thouska_spotpy_error_readme_merge_k3",
+  "repo_name": "thouska_spotpy",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command uses an incorrect package name `spot` instead of `spotpy`, which will cause the installation to fail or install the wrong package.",
+      "correction_candidates": [
+        "pip install spotpy",
+        "pip install spot-py",
+        "pip install thousand-spotpy",
+        "python -m pip install spot"
+      ],
+      "golden_answer": "pip install spotpy"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `conda install` command `conda spotpy install` has incorrect syntax. The package name should follow the `install` subcommand.",
+      "correction_candidates": [
+        "conda install spotpy",
+        "conda install -c conda-forge spotpy",
+        "conda add spotpy",
+        "install conda spotpy"
+      ],
+      "golden_answer": "conda install spotpy"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The `pip install` command pins the package to version `1.4.0`, which is an old version and may not be compatible with modern environments or contain the latest features.",
+      "correction_candidates": [
+        "pip install spotpy",
+        "pip install spotpy --upgrade",
+        "pip install spotpy>=1.5.0",
+        "pip install spotpy-latest"
+      ],
+      "golden_answer": "pip install spotpy"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the examples in the 'Getting started' section is incorrect. It points to `.../tree/master/examples` but the correct path is `.../tree/master/spotpy/examples`.",
+      "correction_candidates": [
+        "Change the link to https://github.com/thouska/spotpy/tree/master/spotpy/examples",
+        "Change the link to https://github.com/thouska/spotpy/tree/master/docs/examples",
+        "Change the link to https://github.com/thouska/spotpy/examples",
+        "Change the link to the main repository page: https://github.com/thouska/spotpy/"
+      ],
+      "golden_answer": "Change the link to https://github.com/thouska/spotpy/tree/master/spotpy/examples"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Purpose' section, the example code `sampler.sample --iterations 10000` is not valid Python syntax for calling a method with an argument. It should use parentheses.",
+      "correction_candidates": [
+        "sampler.sample(10000)",
+        "sampler.sample(iterations=10000)",
+        "sampler.sample(n=10000)",
+        "sampler.sample_runs(10000)"
+      ],
+      "golden_answer": "sampler.sample(10000)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The `conda` installation commands are in the wrong order. `conda install spotpy` is executed before adding the `conda-forge` channel, which will cause the installation to fail as the package may not be in the default channels.",
+      "correction_candidates": [
+        "Move `conda install spotpy` to be the last command in the sequence.",
+        "Combine the commands into one: `conda install -c conda-forge spotpy --channel-priority strict`",
+        "Remove the `conda config` commands and use `conda install -c conda-forge spotpy`.",
+        "The order is correct, but the channel should be `defaults`."
+      ],
+      "golden_answer": "Move `conda install spotpy` to be the last command in the sequence."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "matchms_matchms_error_readme_2_only_E1",
+  "repo_name": "matchms_matchms",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The developer installation instructions omit the 'conda install rdkit' step, which is a critical dependency that should be installed via conda before other packages are installed with pip.",
+      "correction_candidates": [
+        "pip install --editable .[dev,rdkit]",
+        "pip install rdkit && pip install --editable .[dev]",
+        "Add the line `conda install -c conda-forge rdkit` before the `pip install` command.",
+        "Add the line `conda install rdkit` after creating the environment."
+      ],
+      "golden_answer": "Add the line `conda install -c conda-forge rdkit` before the `pip install` command."
+    }
+  ]
+}

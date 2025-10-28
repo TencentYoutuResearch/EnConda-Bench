@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_zulip_python-zulip-api_error_readme_merge_k2",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions say to activate the virtual environment before running the provision script that creates it, which is logically impossible.",
+      "correction_candidates": [
+        "You must create the virtual environment manually with `python3 -m venv` before activating it.",
+        "The `provision` script should be run before activating the virtual environment.",
+        "The correct command is `source /.../python-zulip-api/.../activate` and it should be run after `./tools/provision` prints the path.",
+        "First run `python3 ./tools/provision`, then run the `source` command that the script prints."
+      ],
+      "golden_answer": "First run `python3 ./tools/provision`, then run the `source` command that the script prints."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the linter is given as `lint`, but the script is not in the user's PATH, so this will fail. The correct command requires a path.",
+      "correction_candidates": [
+        "The command should be `python3 ./tools/lint`.",
+        "The command should be `./tools/lint`.",
+        "You must add the `tools` directory to your system's PATH variable first.",
+        "The linter is run with `pytest --lint`."
+      ],
+      "golden_answer": "The command should be `./tools/lint`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README removes the mention that the project requires Python 3 and changes the setup command from `python3` to `python`. This can cause errors on systems where `python` defaults to Python 2.",
+      "correction_candidates": [
+        "The setup command should be `py ./tools/provision` to use the Python launcher for Windows.",
+        "The project requires Python 3, so the command should be `python3 ./tools/provision` and the text should specify the Python 3 requirement.",
+        "The text should be updated to say 'The source code is written in Python 3 or newer'.",
+        "The command should be `python -m tools.provision`."
+      ],
+      "golden_answer": "The project requires Python 3, so the command should be `python3 ./tools/provision` and the text should specify the Python 3 requirement."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the provision script is incorrect. It is located in `tools/`, not `scripts/`.",
+      "correction_candidates": [
+        "The command should be `python3 ./tools/provision`.",
+        "The script is in the wrong directory; it should be moved to `scripts/`.",
+        "The path is incorrect. It should be `python3 provision`.",
+        "Change directory to `tools` and run `python3 provision`."
+      ],
+      "golden_answer": "The command should be `python3 ./tools/provision`."
+    }
+  ]
+}

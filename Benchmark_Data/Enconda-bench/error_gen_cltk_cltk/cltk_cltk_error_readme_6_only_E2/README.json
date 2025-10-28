@@ -1,0 +1,18 @@
+{
+  "readme": "cltk_cltk_error_readme_6_only_E2",
+  "repo_name": "cltk_cltk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip command syntax using --config-file parameter that doesn't exist for pip install",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip install cltk --user",
+        "$ pip install cltk --upgrade",
+        "$ pip install -r requirements.txt"
+      ],
+      "golden_answer": "$ pip install cltk"
+    }
+  ]
+}

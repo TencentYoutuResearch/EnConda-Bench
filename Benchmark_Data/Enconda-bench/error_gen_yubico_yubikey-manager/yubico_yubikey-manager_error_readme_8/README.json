@@ -1,0 +1,29 @@
+{
+  "readme": "yubico_yubikey-manager_error_readme_8",
+  "repo_name": "yubico_yubikey-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Removed the angle brackets from the shell completion command, causing incorrect command substitution syntax",
+      "correction_candidates": [
+        "$ source <(_YKMAN_COMPLETE=bash_source ykman | sudo tee /etc/bash_completion.d/ykman)",
+        "$ source <(_YKMAN_COMPLETE=bash_source ykman) | sudo tee /etc/bash_completion.d/ykman",
+        "$ _YKMAN_COMPLETE=bash_source ykman | sudo tee /etc/bash_completion.d/ykman",
+        "$ eval \"$(_YKMAN_COMPLETE=bash_source ykman)\" | sudo tee /etc/bash_completion.d/ykman"
+      ],
+      "golden_answer": "$ source <(_YKMAN_COMPLETE=bash_source ykman | sudo tee /etc/bash_completion.d/ykman)"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Changed the pipe placement in shell completion command, creating incorrect syntax that would not work properly",
+      "correction_candidates": [
+        "The command should use process substitution with angle brackets to properly source the completion script",
+        "Shell completion requires proper command substitution syntax with parentheses inside angle brackets",
+        "The pipe operator should be inside the process substitution, not outside the source command",
+        "Process substitution syntax requires the entire command to be enclosed within angle brackets"
+      ],
+      "golden_answer": "The pipe operator should be inside the process substitution, not outside the source command"
+    }
+  ]
+}

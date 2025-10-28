@@ -1,0 +1,18 @@
+{
+  "readme": "open-power_op-test_error_readme_1_only_E2",
+  "repo_name": "open-power_op-test",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to list available test suites uses an incorrect parameter `--show-suites` instead of the correct one.",
+      "correction_candidates": [
+        "`./op-test --bmc-type AMI --run-suite list`",
+        "`./op-test --bmc-type AMI --list-suites`",
+        "`./op-test --list`",
+        "`./op-test --help suites`"
+      ],
+      "golden_answer": "`./op-test --bmc-type AMI --list-suites`"
+    }
+  ]
+}

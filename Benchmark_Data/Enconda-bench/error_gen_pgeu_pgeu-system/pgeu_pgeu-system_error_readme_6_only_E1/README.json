@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_6_only_E1",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing incorrect package name 'postgresql-dev' instead of the correct package name",
+      "correction_candidates": [
+        "sudo apt-get install libpq-dev python3-dev",
+        "sudo apt-get install postgresql-client-dev python3-dev",
+        "sudo apt-get install postgresql-server-dev-all python3-dev",
+        "sudo apt-get install postgresql-contrib python3-dev"
+      ],
+      "golden_answer": "sudo apt-get install libpq-dev python3-dev"
+    }
+  ]
+}

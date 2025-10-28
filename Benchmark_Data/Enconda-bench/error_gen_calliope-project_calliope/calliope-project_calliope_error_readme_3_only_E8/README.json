@@ -1,0 +1,18 @@
+{
+  "readme": "calliope-project_calliope_error_readme_3_only_E8",
+  "repo_name": "calliope-project_calliope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "A confusing and incorrect statement was added, claiming that YAML files must be manually compiled, which is not true for Calliope.",
+      "correction_candidates": [
+        "Remove the sentence 'Note that all YAML files must be manually compiled into a single file before running a model.'",
+        "Change the sentence to 'Calliope automatically compiles all model files.'",
+        "Change the sentence to 'Model definitions can be split across multiple YAML files which are combined at runtime.'",
+        "Replace 'manually compiled' with 'validated using a linter'."
+      ],
+      "golden_answer": "Remove the sentence 'Note that all YAML files must be manually compiled into a single file before running a model.'"
+    }
+  ]
+}

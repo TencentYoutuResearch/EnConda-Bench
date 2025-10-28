@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_7_only_E4",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Documentation link points to nonexistent path /nonexistent.html instead of /index.html",
+      "correction_candidates": [
+        "http://llvmlite.pydata.org/en/latest/install/index.html",
+        "http://llvmlite.pydata.org/en/latest/install/build.html",
+        "http://llvmlite.pydata.org/en/latest/install/setup.html",
+        "http://llvmlite.pydata.org/en/latest/install/manual.html"
+      ],
+      "golden_answer": "http://llvmlite.pydata.org/en/latest/install/index.html"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_has2k1_plotnine_error_readme_merge_k3",
+  "repo_name": "has2k1_plotnine",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The primary installation command `pip install plotnine` is missing, leaving only the commands for installing optional extras, which is confusing for a standard installation.",
+      "correction_candidates": [
+        "Add the line \"$ pip install plotnine --default\" at the beginning of the pip installation list.",
+        "Change \"$ pip install 'plotnine[extra]'\" to \"$ pip install plotnine\".",
+        "Add the line \"$ pip install plotnine             # 1. should be sufficient for most\" at the beginning of the pip installation list.",
+        "Add a note explaining that 'plotnine[extra]' is the new standard installation method."
+      ],
+      "golden_answer": "Add the line \"$ pip install plotnine             # 1. should be sufficient for most\" at the beginning of the pip installation list."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the development version from GitHub is syntactically incorrect. It's missing the `git+https://` prefix required by pip for installing from a git repository.",
+      "correction_candidates": [
+        "Change the command to \"$ git clone https://github.com/has2k1/plotnine.git && cd plotnine && pip install -e .\".",
+        "Change the command to \"$ pip install git+https://github.com/has2k1/plotnine.git\".",
+        "Change the command to \"$ pip install --git https://github.com/has2k1/plotnine.git\".",
+        "Change the command to \"$ pip install from-git https://github.com/has2k1/plotnine.git\"."
+      ],
+      "golden_answer": "Change the command to \"$ pip install git+https://github.com/has2k1/plotnine.git\"."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the first example image is incorrect (`./docs/images/...` instead of `./doc/images/...`), which will result in a broken image link.",
+      "correction_candidates": [
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"https://raw.githubusercontent.com/has2k1/plotnine/main/doc/images/readme-image-1.png\".",
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\".",
+        "Create a symbolic link from 'docs' to 'doc' in the repository root.",
+        "Remove the \"./\" from the beginning of the path."
+      ],
+      "golden_answer": "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\"."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly suggest installing matplotlib from source as a corrective step after tests fail, rather than as a necessary prerequisite to ensure consistent test outcomes. The setup should be done before running tests.",
+      "correction_candidates": [
+        "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time.",
+        "Add a command \"pip uninstall matplotlib\" before the reinstall command.",
+        "Move the entire \"Testing\" section to be before the \"Installation\" section.",
+        "Replace the text with \"If tests fail, run 'pip install matplotlib --force-reinstall' and try again\"."
+      ],
+      "golden_answer": "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing with conda is incorrect. It incorrectly uses `conda-forge` as the command instead of specifying it as the channel for the `conda install` command.",
+      "correction_candidates": [
+        "Change the command to \"$ conda install plotnine --from conda-forge\".",
+        "Change the command to \"$ conda install -c conda-forge plotnine\".",
+        "Change the command to \"$ pip install plotnine -f https://conda.anaconda.org/conda-forge/\".",
+        "Change the command to \"$ conda install anaconda/plotnine\"."
+      ],
+      "golden_answer": "Change the command to \"$ conda install -c conda-forge plotnine\"."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction for ensuring consistent test images is incorrect. It suggests installing `freetype-py`, which is the wrong package and procedure. The correct procedure is to build `matplotlib` from source to link against the system's FreeType library correctly.",
+      "correction_candidates": [
+        "Replace the command with \"$ pip install matplotlib --no-binary matplotlib\" and update the explanatory text to mention installing matplotlib from source.",
+        "Change the command to \"$ brew install freetype\" for macOS users.",
+        "Change the command to \"$ pip install --upgrade --force-reinstall matplotlib\".",
+        "Add a note that this step is only required for Windows."
+      ],
+      "golden_answer": "Replace the command with \"$ pip install matplotlib --no-binary matplotlib\" and update the explanatory text to mention installing matplotlib from source."
+    }
+  ]
+}

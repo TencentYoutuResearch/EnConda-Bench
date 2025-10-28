@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_simplistix_testfixtures_error_readme_merge_k4",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "A sentence incorrectly states that the library is only for Python 2, while it supports modern Python versions as well.",
+      "correction_candidates": [
+        "Remove the sentence 'This library is designed for use with Python 2.'",
+        "Change the sentence to 'This library supports Python 2.7 and 3.5+.'",
+        "Change the sentence to 'This library is primarily for Python 3, with legacy support for Python 2.'",
+        "Add a note: 'For Python 3, please install version 7.0.0 or later.'"
+      ],
+      "golden_answer": "Remove the sentence 'This library is designed for use with Python 2.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip install command uses an incorrect package name 'test-fixtures' instead of the correct 'testfixtures'.",
+      "correction_candidates": [
+        "pip install testfixtures",
+        "pip install \"testfixtures\"",
+        "python -m pip install testfixtures",
+        "pip install testfixtures --user"
+      ],
+      "golden_answer": "pip install testfixtures"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that Django is a required dependency, when it is an optional one for specific features.",
+      "correction_candidates": [
+        "Remove the phrase 'first ensure you have django installed, then'.",
+        "Change the sentence to 'To install, run pip. For Django support, also install django: `pip install django`'.",
+        "Change the sentence to 'To install with optional django support, run: `pip install testfixtures[django]`'.",
+        "Change the sentence to 'Django is an optional dependency.'"
+      ],
+      "golden_answer": "Remove the phrase 'first ensure you have django installed, then'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The contribution instructions have the wrong logical order: it tells the user to install the package in editable mode before cloning the git repository.",
+      "correction_candidates": [
+        "Swap the order of the `git clone` and `pip install -e .` commands.",
+        "Replace the two commands with: `git clone https://github.com/simplistix/testfixtures.git && cd testfixtures && pip install -e .`",
+        "Remove the `pip install -e .` command as it is not needed to clone the repository.",
+        "Correct the commands to: `git clone https://github.com/simplistix/testfixtures.git; cd testfixtures; pip install -e .`"
+      ],
+      "golden_answer": "Swap the order of the `git clone` and `pip install -e .` commands."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions for running tests incorrectly specify `nose` as a dependency, but the project uses `pytest`.",
+      "correction_candidates": [
+        "Replace '`nose`' with '`pytest`'.",
+        "Replace the sentence with 'Install the development dependencies: `pip install -e .[test]`'.",
+        "Replace '`nose`' with '`pytest` and `pytest-cov`'.",
+        "Remove the phrase 'first install `nose`, then'."
+      ],
+      "golden_answer": "Replace the sentence with 'Install the development dependencies: `pip install -e .[test]`'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python setup.py test` is a deprecated method for running tests and will not work in modern environments.",
+      "correction_candidates": [
+        "Replace `python setup.py test` with `pytest`.",
+        "Replace `python setup.py test` with `tox`.",
+        "Replace `python setup.py test` with `python -m pytest`.",
+        "Remove the 'Running Tests' section entirely as it's for contributors, not users."
+      ],
+      "golden_answer": "Replace `python setup.py test` with `pytest`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Running setup.py install after pip install is incorrect order and redundant",
+      "correction_candidates": [
+        "Remove the setup.py install command and use only pip install testfixtures",
+        "Run setup.py install first, then pip install testfixtures",
+        "Use python -m pip install testfixtures instead of setup.py",
+        "Clone the repository first: git clone repo_url && cd testfixtures && python setup.py install"
+      ],
+      "golden_answer": "Remove the setup.py install command and use only pip install testfixtures"
+    }
+  ]
+}

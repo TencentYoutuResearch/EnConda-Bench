@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_5_only_E6",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing the library before creating and activating a virtual environment, which is the wrong order",
+      "correction_candidates": [
+        "Create and activate the virtual environment first, then install the library",
+        "Install all dependencies globally without using a virtual environment",
+        "Use conda instead of pip and venv for environment management",
+        "Install the library after deactivating the virtual environment"
+      ],
+      "golden_answer": "Create and activate the virtual environment first, then install the library"
+    }
+  ]
+}

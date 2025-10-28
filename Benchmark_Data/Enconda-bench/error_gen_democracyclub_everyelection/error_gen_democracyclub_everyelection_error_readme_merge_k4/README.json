@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_democracyclub_everyelection_error_readme_merge_k4",
+  "repo_name": "democracyclub_everyelection",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions install dependencies globally before creating and activating the virtual environment, which defeats the purpose of using a virtual environment.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be the last step.",
+        "Create and activate the virtual environment before installing dependencies.",
+        "The order is correct, but you should use `pip3` instead of `pip`.",
+        "Remove the virtual environment steps as they are not necessary if packages are installed globally."
+      ],
+      "golden_answer": "Create and activate the virtual environment before installing dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py test` is used to run tests, which is incorrect for this project as it is specific to the Django framework.",
+      "correction_candidates": [
+        "The correct command to run tests is `pytest`.",
+        "The command should be `python -m unittest discover`.",
+        "You need to install Django first with `pip install django`.",
+        "The command should be `py.test`."
+      ],
+      "golden_answer": "The correct command to run tests is `pytest`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Prerequisites' section only lists 'Python' without specifying a version, which can lead to compatibility issues if the project relies on features from a specific version like Python 3.8+.",
+      "correction_candidates": [
+        "The Python version should be specified, for example, 'Python 3.8+'.",
+        "The prerequisite should be 'Python 2.7'.",
+        "The prerequisite should be 'Python 3'.",
+        "The prerequisite section is fine, Python version doesn't matter."
+      ],
+      "golden_answer": "The Python version should be specified, for example, 'Python 3.8+'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install requirements.txt` attempts to install a package named 'requirements.txt' from PyPI instead of installing the packages listed within the file, because the '-r' flag is missing.",
+      "correction_candidates": [
+        "The command should be `pip install -r requirements.txt`.",
+        "The command should be `pip install --requirements requirements.txt`.",
+        "The file should be renamed to `install.txt` and the command should be `pip install -r install.txt`.",
+        "Run `cat requirements.txt | xargs pip install`."
+      ],
+      "golden_answer": "The command should be `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to install dependencies points to `requirements/base.txt`, but the standard file is `requirements.txt` in the root directory, which will cause a 'file not found' error.",
+      "correction_candidates": [
+        "You should create a `requirements/` directory and move `requirements.txt` into it as `base.txt`.",
+        "The correct command is `pip install -r requirements.txt`.",
+        "The command should be `pip install -r reqs.txt`.",
+        "The path is correct, but you need to run `git submodule update --init` first."
+      ],
+      "golden_answer": "The correct command is `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction `pip install django` is redundant and unnecessary because Django is already listed as a dependency in `requirements.txt`.",
+      "correction_candidates": [
+        "The `pip install django` command should be removed.",
+        "You should specify a version, e.g., `pip install django==3.2`.",
+        "The `pip install django` command should be moved after `pip install -r requirements.txt`.",
+        "`requirements.txt` should be edited to remove the `django` line."
+      ],
+      "golden_answer": "The `pip install django` command should be removed."
+    }
+  ]
+}

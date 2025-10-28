@@ -1,0 +1,18 @@
+{
+  "readme": "calliope-project_calliope_error_readme_2_only_E4",
+  "repo_name": "calliope-project_calliope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the example models is broken, pointing to a non-existent path (`master/example_models`) instead of the correct one.",
+      "correction_candidates": [
+        "Correct the URL to `https://github.com/calliope-project/calliope/tree/main/src/calliope/example_models`.",
+        "Correct the URL to `https://github.com/calliope-project/calliope/tree/main/examples`.",
+        "Remove the link and just mention that examples are included.",
+        "Correct the URL to `https://github.com/calliope-project/calliope/blob/main/src/calliope/example_models`."
+      ],
+      "golden_answer": "Correct the URL to `https://github.com/calliope-project/calliope/tree/main/src/calliope/example_models`."
+    }
+  ]
+}

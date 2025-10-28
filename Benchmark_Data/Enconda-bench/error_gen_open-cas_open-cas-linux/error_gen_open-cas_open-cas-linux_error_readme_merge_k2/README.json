@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_open-cas_open-cas-linux_error_readme_merge_k2",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. The './configure' script should be run after installing python dependencies from 'requirements.txt', as it may check for them.",
+      "correction_candidates": [
+        "The correct order is: `python3 -m pip install -r requirements.txt`, then `./configure`, then `make`, then `make install`.",
+        "The correct order is: `make`, then `./configure`, then `python3 -m pip install -r requirements.txt`, then `make install`.",
+        "The correct order is: `./configure`, then `make`, then `make install`, then `python3 -m pip install -r requirements.txt`.",
+        "The correct order is: `make install`, then `./configure`, then `python3 -m pip install -r requirements.txt`, then `make`."
+      ],
+      "golden_answer": "The correct order is: `python3 -m pip install -r requirements.txt`, then `./configure`, then `make`, then `make install`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'dnf install' command is missing a wildcard '*' to match the full RPM package name, which includes version and architecture details. This will likely result in a 'file not found' error.",
+      "correction_candidates": [
+        "dnf install ./packages/open-cas-linux.rpm",
+        "dnf install ./packages/*.rpm",
+        "dnf install ./packages/open-cas-linux-*.rpm",
+        "dnf install ./packages/open-cas-linux*.rpm"
+      ],
+      "golden_answer": "dnf install ./packages/open-cas-linux*.rpm"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The note about fixing a boot issue incorrectly advises forcing SELinux relabelling in 'enforcing mode'. This is dangerous and incorrect; it should be done in 'permissive mode' first.",
+      "correction_candidates": [
+        "force SELinux relabelling in permissive mode on your filesystem.",
+        "force SELinux relabelling in disabled mode on your filesystem.",
+        "disable SELinux entirely.",
+        "force SELinux relabelling using restorecon on the filesystem."
+      ],
+      "golden_answer": "force SELinux relabelling in permissive mode on your filesystem."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to navigate to the test directory is `cd tests/functional`, but the correct directory name is `test/functional` (singular 'test').",
+      "correction_candidates": [
+        "Go to test directory `cd test/functional`.",
+        "Go to test directory `cd functional-tests`.",
+        "Go to test directory `cd tests`.",
+        "Go to test directory `cd functional`."
+      ],
+      "golden_answer": "Go to test directory `cd test/functional`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_5_only_E6",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip package before installing system dependencies, which should be done first",
+      "correction_candidates": [
+        "sudo apt-get install python3-dev libxml2-dev\npip install django-autocomplete-light",
+        "pip install --upgrade pip\nsudo apt-get install python3-dev libxml2-dev\npip install django-autocomplete-light",
+        "python -m venv venv\nsource venv/bin/activate\nsudo apt-get install python3-dev libxml2-dev\npip install django-autocomplete-light",
+        "sudo apt-get update\nsudo apt-get install python3-dev libxml2-dev\npip install django-autocomplete-light"
+      ],
+      "golden_answer": "sudo apt-get install python3-dev libxml2-dev\npip install django-autocomplete-light"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_4_only_E8",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The URL for accessing the local server has the wrong port number (8000 instead of 8080), which will prevent the user from viewing the application.",
+      "correction_candidates": [
+        "Change the URL to `http://localhost:8000/`.",
+        "Change the URL to `http://127.0.0.1:8080/`.",
+        "Change the URL to `http://localhost:8080/`.",
+        "Change the run command to `python main.py --port=8000`."
+      ],
+      "golden_answer": "Change the URL to `http://localhost:8080/`."
+    }
+  ]
+}

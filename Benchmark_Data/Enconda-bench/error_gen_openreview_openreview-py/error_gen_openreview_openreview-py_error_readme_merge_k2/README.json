@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_openreview_openreview-py_error_readme_merge_k2",
+  "repo_name": "openreview_openreview-py",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The prerequisite is stated as 'Python 3', which is too general. The library requires Python 3.6 or newer, and using an older version like 3.5 could lead to compatibility errors.",
+      "correction_candidates": [
+        "Python 3.6 or newer is required to use openreview-py.",
+        "Python >= 3.6 is required to use openreview-py.",
+        "Python 3.6 is required to use openreview-py.",
+        "The latest version of Python 3 is required to use openreview-py."
+      ],
+      "golden_answer": "Python 3.6 or newer is required to use openreview-py."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly tell the user to run `pytest` before starting the required OpenReview API and web services, which will cause all tests to fail as they cannot connect to the backend.",
+      "correction_candidates": [
+        "Once all three services are running, start the tests:\n```bash\npytest\n```",
+        "Run pytest after starting the OpenReview API V1, API V2, and Web services.",
+        "Start the OpenReview services and then run pytest in a separate terminal.",
+        "Before running pytest, ensure the OpenReview services are active on ports 3000, 3001, and 3030."
+      ],
+      "golden_answer": "Once all three services are running, start the tests:\n```bash\npytest\n```"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `git clone` command uses an incorrect URL (`openreview_py.git` with an underscore instead of a hyphen), which will cause the clone operation to fail because the repository does not exist at that URL.",
+      "correction_candidates": [
+        "git clone https://github.com/openreview/openreview-py.git",
+        "git clone git@github.com:openreview/openreview-py.git",
+        "git clone https://github.com/openreview/openreview-py",
+        "gh repo clone openreview/openreview-py"
+      ],
+      "golden_answer": "git clone https://github.com/openreview/openreview-py.git"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The example usage code shows literal strings 'username' and 'password' instead of placeholders, which could mislead a user into trying to connect with these incorrect credentials, causing an authentication failure.",
+      "correction_candidates": [
+        "username='<your username>', password='<your password>'",
+        "username=YOUR_OPENREVIEW_USERNAME, password=YOUR_OPENREVIEW_PASSWORD",
+        "username='... your username ...', password='... your password ...'",
+        "// Replace with your OpenReview credentials\nclient = openreview.Client(baseurl='https://api.openreview.net', username='<your username>', password='<your password>')"
+      ],
+      "golden_answer": "username='<your username>', password='<your password>'"
+    }
+  ]
+}

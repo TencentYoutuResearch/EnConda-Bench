@@ -1,0 +1,18 @@
+{
+  "readme": "marimo-team_marimo_error_readme_4_only_E7",
+  "repo_name": "marimo-team_marimo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions incorrectly state that marimo requires Python 3.6. According to its PyPI page, marimo requires Python 3.8 or newer.",
+      "correction_candidates": [
+        "Remove the text '(requires Python 3.6):'",
+        "Change the text to '(requires Python 3.8+):'",
+        "Change the text to '(requires Python >= 3.8):'",
+        "Change the text to '(requires Python 3.7 or newer):'"
+      ],
+      "golden_answer": "Remove the text '(requires Python 3.6):'"
+    }
+  ]
+}

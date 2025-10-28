@@ -1,0 +1,29 @@
+{
+  "readme": "error_gen_bradyajohnston_molecularnodes_error_readme_merge_k2",
+  "repo_name": "bradyajohnston_molecularnodes",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README instructs users to manually install Python packages using pip. This is incorrect because the addon manages its own dependencies internally upon first activation.",
+      "correction_candidates": [
+        "Change `pip install` to `conda install -c conda-forge`.",
+        "Add the `--user` flag to the `pip install` command.",
+        "The packages should be installed into Blender's internal Python environment, not the system Python.",
+        "The addon handles the installation of its own dependencies; this command is unnecessary and may cause issues."
+      ],
+      "golden_answer": "The addon handles the installation of its own dependencies; this command is unnecessary and may cause issues."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `git clone --shallow` is syntactically incorrect. The correct flag to perform a shallow clone is `--depth 1`.",
+      "correction_candidates": [
+        "Change `git clone --shallow` to `git clone --depth 1`.",
+        "Change `git clone --shallow` to `git clone --depth=1`.",
+        "Change `git clone --shallow` to `git clone --single-branch`.",
+        "Change `git clone --shallow` to `git clone` and remove the text about repository size."
+      ],
+      "golden_answer": "Change `git clone --shallow` to `git clone --depth 1`."
+    }
+  ]
+}

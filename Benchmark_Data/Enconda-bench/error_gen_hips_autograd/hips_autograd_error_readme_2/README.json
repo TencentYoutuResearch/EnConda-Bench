@@ -1,0 +1,29 @@
+{
+  "readme": "hips_autograd_error_readme_2",
+  "repo_name": "hips_autograd",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the tutorial in the 'Documentation' section points to a non-existent path `documentation/tutorial.md` instead of the correct `docs/tutorial.md`.",
+      "correction_candidates": [
+        "Change the link path to `TUTORIAL.md`.",
+        "Change the link path to `docs/tutorial.md`.",
+        "Change the link path to `autograd/docs/tutorial.md`.",
+        "Change the link path to the absolute URL `https://github.com/HIPS/autograd/blob/master/docs/tutorial.md`."
+      ],
+      "golden_answer": "Change the link path to `docs/tutorial.md`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "An incorrect note has been added stating that Autograd requires Python 2.7 and is not compatible with Python 3, which is false and misleading.",
+      "correction_candidates": [
+        "Change the note to specify 'Autograd requires Python 3.6 or newer.'",
+        "Change the note to state 'Autograd is compatible with both Python 2.7 and Python 3.'",
+        "Remove the note about Python 2.7 compatibility.",
+        "Add a `python_requires` check to the installation command."
+      ],
+      "golden_answer": "Remove the note about Python 2.7 compatibility."
+    }
+  ]
+}

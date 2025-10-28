@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_pysmt_pysmt_error_readme_merge_k3",
+  "repo_name": "pysmt_pysmt",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that a system-level package `python-mathsat` must be installed, which is not the standard procedure and the package may not exist.",
+      "correction_candidates": [
+        "Remove the instruction to install `python-mathsat`. The `pysmt-install` script handles solver installation.",
+        "The instruction should be to install `mathsat` from source, not via a system package manager.",
+        "The package is actually called `libmathsat-dev`, not `python-mathsat`.",
+        "The correct way is to use `pip install mathsat-python` before installing pysmt."
+      ],
+      "golden_answer": "Remove the instruction to install `python-mathsat`. The `pysmt-install` script handles solver installation."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The package name in the pip install command is incorrect (`pysmt-lib` instead of `pysmt`), which will cause the installation to fail.",
+      "correction_candidates": [
+        "The command should be `pip install pysmt`.",
+        "The command should be `pip install pySMT`.",
+        "The package is named `pysmt`, so the command is `pip install pysmt`.",
+        "The correct package name is `pysmt`, not `pysmt-lib`."
+      ],
+      "golden_answer": "The command should be `pip install pysmt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example file path for the SMT-LIB solver, `/usr/bin/local/mathsat`, is non-standard and likely incorrect.",
+      "correction_candidates": [
+        "The path should be a placeholder like `path = ['/path/to/your/solver/binary']` to indicate it needs to be changed.",
+        "The path should be corrected to `/usr/local/bin/mathsat`.",
+        "The example path `/tmp/mathsat` from the original README is a better example of a user-provided location.",
+        "The path should point to the user's home directory, e.g., `path = ['~/.smt_solvers/mathsat/bin/mathsat']`."
+      ],
+      "golden_answer": "The example path `/tmp/mathsat` from the original README is a better example of a user-provided location."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that solvers must be installed manually, omitting the existence of the helpful `pysmt-install` script.",
+      "correction_candidates": [
+        "Restore the original text explaining that the `pysmt-install` script can be used to install solvers automatically.",
+        "Add a note saying 'Alternatively, you can use the `pysmt-install` command to simplify solver installation'.",
+        "Replace the manual installation paragraph with instructions on how to use `pysmt-install --msat` and other commands.",
+        "The instructions should mention that `pip install pysmt` also installs the `pysmt-install` command, which automates solver setup."
+      ],
+      "golden_answer": "Restore the original text explaining that the `pysmt-install` script can be used to install solvers automatically."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The 'Solvers Support' table incorrectly swaps the supported theories for Z3 and MathSAT, misleadingly attributing NRA/NIA support to MathSAT instead of Z3.",
+      "correction_candidates": [
+        "Swap the 'Supported Theories' entries for MathSAT and Z3 back to their correct descriptions.",
+        "Correct the MathSAT theories to 'UF, LIA, LRA, BV, AX' and the Z3 theories to 'UF, LIA, LRA, BV, AX, NRA, NIA'.",
+        "The table should be corrected to show that Z3 supports NRA and NIA, while MathSAT does not.",
+        "Restore the original table where MathSAT supports 'UF, LIA, LRA, BV, AX' and Z3 supports 'UF, LIA, LRA, BV, AX, NRA, NIA'."
+      ],
+      "golden_answer": "Correct the MathSAT theories to 'UF, LIA, LRA, BV, AX' and the Z3 theories to 'UF, LIA, LRA, BV, AX, NRA, NIA'."
+    }
+  ]
+}

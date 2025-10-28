@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_7_only_E2",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pytest command with non-existent --enable-solver parameters",
+      "correction_candidates": [
+        "Change to python -m pytest gpkit/tests/ without the --enable-solver flags",
+        "Change to python -m pytest gpkit/tests/ -v --tb=short",
+        "Change to python -m unittest discover gpkit.tests",
+        "Change to python -m pytest gpkit/tests/ --solver=mosek --solver=cvxopt"
+      ],
+      "golden_answer": "Change to python -m pytest gpkit/tests/ without the --enable-solver flags"
+    }
+  ]
+}

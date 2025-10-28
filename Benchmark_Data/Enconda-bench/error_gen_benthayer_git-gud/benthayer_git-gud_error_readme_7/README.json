@@ -1,0 +1,29 @@
+{
+  "readme": "benthayer_git-gud_error_readme_7",
+  "repo_name": "benthayer_git-gud",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Removed the specific Python version requirement '>=3.6', making it unclear what Python version is needed",
+      "correction_candidates": [
+        "You'll need to have Python >=3.6 installed in your system for Git Gud to work.",
+        "You'll need to have Python 3.x installed in your system for Git Gud to work.",
+        "You'll need to have a recent version of Python installed in your system for Git Gud to work.",
+        "You'll need to have Python (version 3 or higher) installed in your system for Git Gud to work."
+      ],
+      "golden_answer": "You'll need to have Python >=3.6 installed in your system for Git Gud to work."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Added instruction to download a configuration file from a non-existent path 'https://github.com/benthayer/git-gud/config/setup.yaml'",
+      "correction_candidates": [
+        "Remove the instruction about downloading the configuration file entirely.",
+        "Make sure to clone the repository from https://github.com/benthayer/git-gud before installation.",
+        "Make sure to download the source code from https://github.com/benthayer/git-gud/releases before installation.",
+        "Make sure to check the documentation at https://github.com/benthayer/git-gud/blob/main/README.md before installation."
+      ],
+      "golden_answer": "Remove the instruction about downloading the configuration file entirely."
+    }
+  ]
+}

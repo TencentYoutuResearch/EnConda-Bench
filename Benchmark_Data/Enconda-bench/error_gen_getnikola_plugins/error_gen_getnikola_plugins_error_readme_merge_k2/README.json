@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_getnikola_plugins_error_readme_merge_k2",
+  "repo_name": "getnikola_plugins",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The format specified for `requirements-nonpy.txt` is incorrect, using a comma instead of a double colon `::` as a separator, which will cause dependency parsing to fail.",
+      "correction_candidates": [
+        "The format is `Human-friendly name: http://download/link`.",
+        "The format is `http://download/link (Human-friendly name)`.",
+        "The format is `Human-friendly name = http://download/link`.",
+        "The format is `Human-friendly name::http://download/link`."
+      ],
+      "golden_answer": "The format is `Human-friendly name::http://download/link`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example `.plugin` file is missing the `[Core]` section header, which is a required part of the INI file format and will lead to a parsing error.",
+      "correction_candidates": [
+        "Replace the incorrect `ini` block with:\n```ini\n[Core]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\n\n[Nikola]\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```",
+        "Replace the incorrect `ini` block with:\n```ini\n[Plugin]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\n\n[Nikola]\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```",
+        "Replace the incorrect `ini` block with:\n```ini\n[Nikola]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```",
+        "Replace the incorrect `ini` block with:\n```yaml\nCore:\n  Name: plugin-name\n  Module: plugin-name\n  Tests: test-suite\n\nNikola:\n  MinVersion: version-number\n...\n```"
+      ],
+      "golden_answer": "Replace the incorrect `ini` block with:\n```ini\n[Core]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\n\n[Nikola]\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The documentation incorrectly states that plugins listed in `requirements-plugins.txt` are not installed automatically, misleading the user to perform a manual installation step that is not needed.",
+      "correction_candidates": [
+        "If you depend on another Nikola plugin, put it in the `requirements.txt` file, pip will install it automatically.",
+        "If you depend on another Nikola plugin, you must instruct the user to install it manually in your `README.md`.",
+        "If you depend on another Nikola plugin, put it in the `requirements-plugins.txt` file, Nikola will install these when installing your plugin.",
+        "If you depend on another Nikola plugin, put it in the `requirements-plugins.txt` file, Nikola will prompt the user to install it."
+      ],
+      "golden_answer": "If you depend on another Nikola plugin, put it in the `requirements-plugins.txt` file, Nikola will install these when installing your plugin."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The documentation incorrectly states that a `conf.py` file is mandatory, while it should be an optional `conf.py.sample` file.",
+      "correction_candidates": [
+        "The `conf.py` file is optional and should be placed in the repository's root directory.",
+        "The `conf.py.sample` file is optional. If there are any config options you need for your plugin, put them here.",
+        "The `conf.py.sample` file is mandatory for all plugins with configuration options.",
+        "The `config.ini` file should be used for plugin options instead of `conf.py.sample`."
+      ],
+      "golden_answer": "The `conf.py.sample` file is optional. If there are any config options you need for your plugin, put them here."
+    }
+  ]
+}

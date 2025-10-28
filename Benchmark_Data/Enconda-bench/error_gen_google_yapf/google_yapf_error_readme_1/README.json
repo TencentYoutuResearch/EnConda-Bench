@@ -1,0 +1,29 @@
+{
+  "readme": "google_yapf_error_readme_1",
+  "repo_name": "google_yapf",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides an incorrect package name for installing YAPF from PyPI.",
+      "correction_candidates": [
+        "pip install yapf",
+        "pip install google-yapf",
+        "pip install py-yapf",
+        "pip install yapf --from-google"
+      ],
+      "golden_answer": "pip install yapf"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The long-form command-line option for in-place editing is incorrect in the usage help text.",
+      "correction_candidates": [
+        "The correct flag is `--in-place`.",
+        "The correct flag is `--in_place`.",
+        "The correct flag is `-in-place`.",
+        "The correct flag is `--in-place-edit`."
+      ],
+      "golden_answer": "The correct flag is `--in-place`."
+    }
+  ]
+}

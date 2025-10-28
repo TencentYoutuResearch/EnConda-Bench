@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_1_only_E1",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for Dask support uses an incorrect extra identifier (`[dask-support]` instead of `[dask]`), which will fail.",
+      "correction_candidates": [
+        "python -m pip install \"featuretools[dask]\"",
+        "python -m pip install featuretools dask",
+        "python -m pip install \"featuretools[dask-complete]\"",
+        "pip install featuretools-dask"
+      ],
+      "golden_answer": "python -m pip install \"featuretools[dask]\""
+    }
+  ]
+}

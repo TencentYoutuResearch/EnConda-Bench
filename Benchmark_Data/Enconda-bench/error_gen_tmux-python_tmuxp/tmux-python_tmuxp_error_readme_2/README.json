@@ -1,0 +1,29 @@
+{
+  "readme": "tmux-python_tmuxp_error_readme_2",
+  "repo_name": "tmux-python_tmuxp",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to load a local session file is given as `tmuxp load mysession`, which incorrectly implies loading from a config directory, not the current working directory as intended by the example's context.",
+      "correction_candidates": [
+        "$ tmuxp load -f ./mysession.yaml",
+        "$ tmuxp attach mysession.yaml",
+        "$ tmuxp load ./mysession.yaml",
+        "$ tmuxp import ./mysession.yaml"
+      ],
+      "golden_answer": "$ tmuxp load ./mysession.yaml"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README states that the project supports Python 3.5 and greater, but it actually requires Python 3.8 or newer, which can lead to installation or runtime errors on older Python versions.",
+      "correction_candidates": [
+        "python support: >= 3.6",
+        "python support: >= 3.8, pypy, pypy3",
+        "python support: == 3.8",
+        "python support: >= 3.7"
+      ],
+      "golden_answer": "python support: >= 3.8, pypy, pypy3"
+    }
+  ]
+}

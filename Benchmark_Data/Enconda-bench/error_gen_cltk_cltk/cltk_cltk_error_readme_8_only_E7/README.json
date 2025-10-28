@@ -1,0 +1,18 @@
+{
+  "readme": "cltk_cltk_error_readme_8_only_E7",
+  "repo_name": "cltk_cltk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Outdated Python version requirements that include unsupported Python 2.7 and very old Python 3.4+",
+      "correction_candidates": [
+        "For the CLTK's latest version (requires Python 3.8+):",
+        "For the CLTK's latest version (requires Python 3.7 or higher):",
+        "For the CLTK's latest version (compatible with Python 3.6-3.11):",
+        "For the CLTK's latest version (requires Python 3.9+ recommended):"
+      ],
+      "golden_answer": "For the CLTK's latest version (requires Python 3.8+):"
+    }
+  ]
+}

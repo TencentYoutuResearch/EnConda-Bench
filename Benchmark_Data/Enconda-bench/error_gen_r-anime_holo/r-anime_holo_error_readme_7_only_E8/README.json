@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_7_only_E8",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Missing critical explanation about installing Python dependencies before running setup commands",
+      "correction_candidates": [
+        "Add step to install dependencies with 'pip install -r requirements.txt' before step 2",
+        "Include virtual environment setup instructions before dependency installation",
+        "Add note about checking Python version compatibility before installation",
+        "Insert step to verify all requirements are met before database setup"
+      ],
+      "golden_answer": "Add step to install dependencies with 'pip install -r requirements.txt' before step 2"
+    }
+  ]
+}

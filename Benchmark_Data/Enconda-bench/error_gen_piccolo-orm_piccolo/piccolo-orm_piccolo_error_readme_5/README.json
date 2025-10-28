@@ -1,0 +1,29 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_5",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Missing quotes around package name with extras in pip install command for PostgreSQL driver",
+      "correction_candidates": [
+        "pip install 'piccolo[postgres]'",
+        "pip install \"piccolo[postgres]\"",
+        "pip install piccolo\\[postgres\\]",
+        "pip install --upgrade piccolo[postgres]"
+      ],
+      "golden_answer": "pip install 'piccolo[postgres]'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "System dependencies installation step placed after pip installation instead of before",
+      "correction_candidates": [
+        "Move the system dependencies installation before all pip install commands",
+        "Remove the system dependencies installation step entirely",
+        "Add the system dependencies installation after the virtual environment setup",
+        "Place the system dependencies installation at the end of the installation section"
+      ],
+      "golden_answer": "Move the system dependencies installation before all pip install commands"
+    }
+  ]
+}

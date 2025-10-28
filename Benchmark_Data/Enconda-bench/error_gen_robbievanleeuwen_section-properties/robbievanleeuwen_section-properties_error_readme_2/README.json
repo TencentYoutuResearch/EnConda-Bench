@@ -1,0 +1,29 @@
+{
+  "readme": "robbievanleeuwen_section-properties_error_readme_2",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package only supports Python 3.7, which is an unnecessary and inaccurate version restriction.",
+      "correction_candidates": [
+        "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'",
+        "Change the sentence to 'Note: `sectionproperties` supports Python 3.7 and newer.'",
+        "Change the sentence to 'Refer to the Python Version badge for compatibility details.'",
+        "Change the sentence to 'Note: `sectionproperties` is tested on Python 3.7+.'"
+      ],
+      "golden_answer": "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily ask the user to install `numpy` and `scipy` manually, when they are dependencies that pip will handle automatically.",
+      "correction_candidates": [
+        "Remove the `pip install numpy scipy` command.",
+        "Add a note explaining that `numpy` and `scipy` are installed automatically as dependencies.",
+        "Change the commands to `pip install sectionproperties[all]`.",
+        "Combine the commands into one line: `pip install numpy scipy sectionproperties`."
+      ],
+      "golden_answer": "Remove the `pip install numpy scipy` command."
+    }
+  ]
+}

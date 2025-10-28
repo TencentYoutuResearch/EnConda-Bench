@@ -1,0 +1,29 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_5",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement - changed from 3.10 to 3.8 which may cause compatibility issues",
+      "correction_candidates": [
+        "Installation requires Python 3.10 or later.",
+        "Installation requires Python 3.9 or later.",
+        "Installation requires Python 3.11 or later.",
+        "Installation requires Python 3.7 or later."
+      ],
+      "golden_answer": "Installation requires Python 3.10 or later."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary cryptography dependency to pip install command",
+      "correction_candidates": [
+        "$ pip install neo3-boa",
+        "$ pip install neo3-boa setuptools",
+        "$ pip install neo3-boa requests",
+        "$ pip install neo3-boa wheel"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "robbievanleeuwen_section-properties_error_readme_4_only_E4",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link in the 'Features' section is broken, pointing to a non-existent 'features.html' page within the documentation.",
+      "correction_candidates": [
+        "Change the link to `https://sectionproperties.readthedocs.io/en/stable/user_guide.html`.",
+        "Change the link to point to the documentation homepage: `https://sectionproperties.readthedocs.io/`.",
+        "Remove the 'Features' section entirely as the information is in the docs.",
+        "Change the link to `https://github.com/robbievanleeuwen/section-properties#features`."
+      ],
+      "golden_answer": "Change the link to `https://sectionproperties.readthedocs.io/en/stable/user_guide.html`."
+    }
+  ]
+}

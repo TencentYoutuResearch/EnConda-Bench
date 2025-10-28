@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibo_error_readme_4_only_E2",
+  "repo_name": "qiboteam_qibo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the second example, `c.execute(100)` is incorrect. The number of shots must be passed as a keyword argument, `nshots`, not as a positional argument.",
+      "correction_candidates": [
+        "The `execute` method requires the `nshots` keyword argument. The line should be `result = c.execute(nshots=100)`.",
+        "Change `result = c.execute(100)` to `result = c(nshots=100)` to use the circuit's `__call__` method.",
+        "The correct syntax is `result = c(shots=100)`.",
+        "The number of shots should be passed as a dictionary: `result = c.execute(options={'nshots': 100})`."
+      ],
+      "golden_answer": "Change `result = c.execute(100)` to `result = c(nshots=100)` to use the circuit's `__call__` method."
+    }
+  ]
+}

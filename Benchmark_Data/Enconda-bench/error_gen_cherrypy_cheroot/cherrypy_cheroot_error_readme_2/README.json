@@ -1,0 +1,29 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_2",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the project requires Python 2.7, which is an outdated and unsupported version for this library.",
+      "correction_candidates": [
+        "This project requires Python 3.7 or newer.",
+        "This project requires Python 3.",
+        "The minimum required Python version is 3.6+.",
+        "This project requires the latest version of Python."
+      ],
+      "golden_answer": "This project requires Python 3.7 or newer."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly place the `pip install` command before the creation and activation of the virtual environment, which would install packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install` command to after the virtual environment is activated.",
+        "Run `pip install` with the `--user` flag to avoid installing packages globally.",
+        "Combine the commands into a single line: `python -m venv .venv && source .venv/bin/activate && pip install -e .[test]`",
+        "Remove the virtual environment steps as they are optional for development."
+      ],
+      "golden_answer": "Move the `pip install` command to after the virtual environment is activated."
+    }
+  ]
+}

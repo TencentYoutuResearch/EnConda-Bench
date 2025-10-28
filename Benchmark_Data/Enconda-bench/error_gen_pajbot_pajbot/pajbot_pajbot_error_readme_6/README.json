@@ -1,0 +1,29 @@
+{
+  "readme": "pajbot_pajbot_error_readme_6",
+  "repo_name": "pajbot_pajbot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Wrong file extension used for venvinstall script - should be .sh not .py",
+      "correction_candidates": [
+        "Change ./scripts/venvinstall.py to ./scripts/venvinstall.sh",
+        "Change ./scripts/venvinstall.py to python ./scripts/venvinstall.py",
+        "Change ./scripts/venvinstall.py to ./scripts/install.sh",
+        "Change ./scripts/venvinstall.py to bash ./scripts/venvinstall.py"
+      ],
+      "golden_answer": "Change ./scripts/venvinstall.py to ./scripts/venvinstall.sh"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect path for example config file - should be ./configs/example.ini not ./config/example.ini",
+      "correction_candidates": [
+        "Change ./config/example.ini to ./configs/example.ini",
+        "Change ./config/example.ini to ./examples/config.ini",
+        "Change ./config/example.ini to ./config/config.ini.example",
+        "Change ./config/example.ini to ./settings/example.ini"
+      ],
+      "golden_answer": "Change ./config/example.ini to ./configs/example.ini"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_4_only_E1",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `Installation` section is missing the command for a standard installation. It only shows how to install with the `[dataframe]` extra, which forces an unnecessary dependency on users who only need the core client.",
+      "correction_candidates": [
+        "Add the standard installation command `python -m pip install terminusdb-client` before the section for installing with dataframe support.",
+        "Change `python -m pip install terminusdb-client[dataframe]` to `python -m pip install terminusdb-client` and add a note that pandas must be installed separately.",
+        "Remove the `[dataframe]` option from the `pip install` command, as it should be installed by default.",
+        "Add a new section titled 'Core Installation' with the command `python -m pip install terminusdb-client-core`."
+      ],
+      "golden_answer": "Add the standard installation command `python -m pip install terminusdb-client` before the section for installing with dataframe support."
+    }
+  ]
+}

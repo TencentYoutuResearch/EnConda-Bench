@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_embeddings-benchmark_mteb_error_readme_merge_k2",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install mteb-benchmark` is incorrect. The package is not found under this name on PyPI, causing an installation failure.",
+      "correction_candidates": [
+        "pip install massive-text-embedding-benchmark",
+        "pip install mteb",
+        "conda install mteb",
+        "pip install mteb --from-github"
+      ],
+      "golden_answer": "pip install mteb"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The CLI command `mteb run --m ...` uses an incorrect flag `--m`. The correct flag for specifying the model is a single-dashed `-m`, causing a command-line argument parsing error.",
+      "correction_candidates": [
+        "mteb run --model sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run -model sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run -m sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run --model_name sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "golden_answer": "mteb run -m sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the example script `run_mteb.py` is broken as the file does not exist at the specified path. The correct filename is `run_mteb_english.py`.",
+      "correction_candidates": [
+        "Change the link to point to 'examples/run_mteb.py'.",
+        "Change the link to point to 'mteb/scripts/run_mteb_english.py'.",
+        "Change the link to point to 'scripts/run_mteb_english.py'.",
+        "Change the link to point to the 'mteb/mtebscripts' repository."
+      ],
+      "golden_answer": "Change the link to point to 'scripts/run_mteb_english.py'."
+    }
+  ]
+}

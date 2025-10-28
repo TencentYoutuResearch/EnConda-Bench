@@ -1,0 +1,18 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_4_only_E4",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Advanced Usage' section, the link for 'how to add a new task' points to a non-existent file `docs/new_dataset_guide.md`. This results in a 404 error.",
+      "correction_candidates": [
+        "Correct the link to point to 'CONTRIBUTING.md'.",
+        "Correct the link to point to 'docs/adding_a_model.md'.",
+        "Remove the link entirely.",
+        "Correct the link to point to 'docs/adding_a_dataset.md'."
+      ],
+      "golden_answer": "Correct the link to point to 'docs/adding_a_dataset.md'."
+    }
+  ]
+}

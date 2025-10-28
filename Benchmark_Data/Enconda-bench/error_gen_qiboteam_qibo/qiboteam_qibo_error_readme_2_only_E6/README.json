@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibo_error_readme_2_only_E6",
+  "repo_name": "qiboteam_qibo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. `pip install` is executed before the virtual environment is created and activated, causing the package to be installed in the global Python environment instead of the isolated one.",
+      "correction_candidates": [
+        "The `pip install` command should be run after activating the virtual environment with `source venv/bin/activate`.",
+        "Correct order: `python3 -m venv venv`, then `source venv/bin/activate`, then `pip install 'qibo[all]'`.",
+        "Move the line `pip install qibo --extras all` to be the last step in the installation process.",
+        "Activate the environment using `source venv/bin/activate` before installing any packages."
+      ],
+      "golden_answer": "Correct order: `python3 -m venv venv`, then `source venv/bin/activate`, then `pip install 'qibo[all]'`."
+    }
+  ]
+}

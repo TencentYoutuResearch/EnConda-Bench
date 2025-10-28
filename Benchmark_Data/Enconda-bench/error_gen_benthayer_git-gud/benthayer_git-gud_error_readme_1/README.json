@@ -1,0 +1,29 @@
+{
+  "readme": "benthayer_git-gud_error_readme_1",
+  "repo_name": "benthayer_git-gud",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README mentions that Python is required but does not specify the version, which can lead to compatibility issues if an older, unsupported version of Python is used.",
+      "correction_candidates": [
+        "You'll need to have the latest version of Python 3 installed in your system for Git Gud to work.",
+        "You'll need to have Python 3.6 installed in your system for Git Gud to work.",
+        "You'll need to have Python 3 installed in your system for Git Gud to work.",
+        "You'll need to have Python >=3.6 installed in your system for Git Gud to work."
+      ],
+      "golden_answer": "You'll need to have Python >=3.6 installed in your system for Git Gud to work."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip3 install git gud` is incorrect because it tries to install two separate packages, 'git' and 'gud', instead of the single 'git-gud' package.",
+      "correction_candidates": [
+        "pip3 install git-gud",
+        "pip3 install \"git-gud\"",
+        "pip install git-gud",
+        "python3 -m pip install git-gud"
+      ],
+      "golden_answer": "pip3 install git-gud"
+    }
+  ]
+}

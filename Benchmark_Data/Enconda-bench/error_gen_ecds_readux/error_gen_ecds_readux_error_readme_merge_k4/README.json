@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_ecds_readux_error_readme_merge_k4",
+  "repo_name": "ecds_readux",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The user is instructed to install Python packages with pip before creating and activating the virtual environment, which leads to installing packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the 'pip install' command block to be after the 'source venv/bin/activate' command.",
+        "Run 'pip install' with the --user flag to install packages for the current user.",
+        "Create the virtual environment using 'virtualenv venv' instead of 'python3 -m venv venv'.",
+        "Add 'sudo' before the 'pip install' command to install packages system-wide."
+      ],
+      "golden_answer": "Move the 'pip install' command block to be after the 'source venv/bin/activate' command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'python manage.py runserver --cert-file cert.crt' is incorrect because the standard 'runserver' command does not accept the '--cert-file' argument. The correct command is 'runserver_plus'.",
+      "correction_candidates": [
+        "Replace 'runserver' with 'runserver_plus' to use the django-extensions command that supports SSL certificates.",
+        "Remove the '--cert-file cert.crt' argument from the command.",
+        "Install a package like 'stunnel' to handle SSL termination separately.",
+        "Change the command to 'python manage.py runserver 0.0.0.0:3000 --insecure'."
+      ],
+      "golden_answer": "Replace 'runserver' with 'runserver_plus' to use the django-extensions command that supports SSL certificates."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The required version range for Elasticsearch is missing, which can lead to installing an incompatible version (e.g., 8.x) that will not work without code changes.",
+      "correction_candidates": [
+        "Specify the compatible Elasticsearch version range as '(>7.0, <7.14.0)'.",
+        "Specify the compatible Elasticsearch version as '7.13'.",
+        "Update the code to support the latest version of Elasticsearch.",
+        "Downgrade the Elasticsearch client library in 'requirements/local.txt' to an older version."
+      ],
+      "golden_answer": "Specify the compatible Elasticsearch version range as '(>7.0, <7.14.0)'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The source path for the local settings file template is incorrect ('settings/local.dst' instead of 'config/settings/local.dst'), causing a 'file not found' error when the user tries to copy it.",
+      "correction_candidates": [
+        "Change the source path from 'settings/local.dst' to 'config/settings/local.dst'.",
+        "Create a new file 'config/settings/local.py' manually and copy the contents from the main settings file.",
+        "Run a script to generate the local settings file automatically.",
+        "Change the destination path to 'settings/local.py' to match the source directory."
+      ],
+      "golden_answer": "Change the source path from 'settings/local.dst' to 'config/settings/local.dst'."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The example ELASTICSEARCH_URL is missing the required 'http://' protocol prefix. This will cause the application to fail when trying to connect to Elasticsearch.",
+      "correction_candidates": [
+        "Add the 'http://' protocol prefix to the ELASTICSEARCH_URL value.",
+        "Change the URL to 'localhost:9200' and configure credentials in local.py.",
+        "Use 'https://' if Elasticsearch is configured with TLS/SSL.",
+        "Remove the user and password from the URL and set them in a different environment variable."
+      ],
+      "golden_answer": "Add the 'http://' protocol prefix to the ELASTICSEARCH_URL value."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly place the 'loaddata' command before the 'migrate' command. Data cannot be loaded into database tables that have not yet been created by running migrations.",
+      "correction_candidates": [
+        "Run 'python manage.py migrate' before 'python manage.py loaddata'.",
+        "Combine the commands into a single line: 'python manage.py migrate && python manage.py loaddata ...'.",
+        "Run 'python manage.py makemigrations' before 'loaddata'.",
+        "Use the '--database' flag with 'loaddata' to specify the target database."
+      ],
+      "golden_answer": "Run 'python manage.py migrate' before 'python manage.py loaddata'."
+    }
+  ]
+}

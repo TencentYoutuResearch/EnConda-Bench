@@ -1,0 +1,18 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_2_only_E4",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The symbolic link command `ln -s ../citationhunt www/python/src` uses an incorrect relative path. From the user's home directory (`~`), the `www/python/src` link target requires a source path of `../../citationhunt`, not `../citationhunt`.",
+      "correction_candidates": [
+        "Use an absolute path instead: `ln -s ~/citationhunt www/python/src`.",
+        "Correct the relative path in the command to `ln -s ../../citationhunt www/python/src`.",
+        "First `cd www/python` and then run `ln -s ../../citationhunt src`.",
+        "Clone the repository directly into the `www/python` directory."
+      ],
+      "golden_answer": "Correct the relative path in the command to `ln -s ../../citationhunt www/python/src`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "censys_censys-python_error_readme_3",
+  "repo_name": "censys_censys-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to enable tab completion is incorrect and will not work as written. It needs to be evaluated by the shell using `eval`.",
+      "correction_candidates": [
+        "source \"$(register-python-argcomplete censys)\"",
+        "eval \"$(register-python-argcomplete censys)\"",
+        "enable-python-argcomplete censys",
+        "echo \"register-python-argcomplete censys\" >> ~/.bashrc"
+      ],
+      "golden_answer": "eval \"$(register-python-argcomplete censys)\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the examples directory is incorrect. The README refers to `example/`, but the correct directory name is `examples/`.",
+      "correction_candidates": [
+        "The examples located in the `examples/` directory...",
+        "The examples located in the `docs/examples/` directory...",
+        "The examples located in the `scripts/` directory...",
+        "The examples located in the `tests/` directory..."
+      ],
+      "golden_answer": "The examples located in the `examples/` directory..."
+    }
+  ]
+}

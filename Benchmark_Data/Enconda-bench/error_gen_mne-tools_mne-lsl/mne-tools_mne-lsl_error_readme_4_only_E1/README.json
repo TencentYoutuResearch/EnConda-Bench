@@ -1,0 +1,18 @@
+{
+  "readme": "mne-tools_mne-lsl_error_readme_4_only_E1",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README adds an unnecessary and incorrect installation step, instructing users to install `liblsl` from a third-party conda channel, when it is already included as a dependency in the `mne-lsl` conda-forge package.",
+      "correction_candidates": [
+        "The `liblsl` dependency is automatically installed when using `conda install -c conda-forge mne-lsl`, so the extra step is not needed.",
+        "Remove the instruction to install `liblsl` from the `tstenner` channel.",
+        "The correct command is `conda install -c conda-forge liblsl`.",
+        "You should install `liblsl` from the official LSL website before using conda."
+      ],
+      "golden_answer": "The `liblsl` dependency is automatically installed when using `conda install -c conda-forge mne-lsl`, so the extra step is not needed."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "rollbar_pyrollbar_error_readme_1",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git commit` command in the 'Contributing' section is syntactically incorrect because it is missing the `-m` flag to specify the commit message.",
+      "correction_candidates": [
+        "Commit your changes (```git commit -am 'Added some feature'```)",
+        "Commit your changes (```git commit -m 'Added some feature'```)",
+        "Commit your changes (```git commit --message 'Added some feature'```)",
+        "Commit your changes (```git commit -a -m 'Added some feature'```)"
+      ],
+      "golden_answer": "Commit your changes (```git commit -am 'Added some feature'```)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the test directory is specified as `tests/`, but the correct path is `rollbar/test`.",
+      "correction_candidates": [
+        "Tests are in `rollbar/test`.",
+        "Tests are in `rollbar/test/`.",
+        "Tests are in the `rollbar/test` directory.",
+        "Tests are in `rollbar/test`. To run the tests: `python setup.py test`"
+      ],
+      "golden_answer": "Tests are in `rollbar/test`. To run the tests: `python setup.py test`"
+    }
+  ]
+}

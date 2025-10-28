@@ -1,0 +1,18 @@
+{
+  "readme": "bitcart_bitcart_error_readme_6_only_E7",
+  "repo_name": "bitcart_bitcart",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement - specifying Python 2.7 instead of Python 3",
+      "correction_candidates": [
+        "Bitcart requires Python 3.7 or higher and Node.js for optimal performance.",
+        "Bitcart requires Python 3.6+ for core functionality.",
+        "Bitcart requires Python 3.8 or later versions.",
+        "Bitcart is compatible with Python 3.9 and above."
+      ],
+      "golden_answer": "Bitcart requires Python 3.7 or higher and Node.js for optimal performance."
+    }
+  ]
+}

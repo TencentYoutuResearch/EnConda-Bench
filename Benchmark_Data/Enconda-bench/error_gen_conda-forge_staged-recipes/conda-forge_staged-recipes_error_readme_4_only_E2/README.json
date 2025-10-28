@@ -1,0 +1,18 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_4_only_E2",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for generating a sha256 hash using openssl has an incorrect parameter format; it uses a dash `-sha256` when it should be a subcommand `sha256`.",
+      "correction_candidates": [
+        "openssl sha256sum your_sdist.tar.gz",
+        "openssl sha256 your_sdist.tar.gz",
+        "sha256sum your_sdist.tar.gz",
+        "openssl dgst -sha256 your_sdist.tar.gz"
+      ],
+      "golden_answer": "openssl sha256 your_sdist.tar.gz"
+    }
+  ]
+}

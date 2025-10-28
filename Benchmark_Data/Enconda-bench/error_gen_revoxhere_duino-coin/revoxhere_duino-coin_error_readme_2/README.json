@@ -1,0 +1,29 @@
+{
+  "readme": "revoxhere_duino-coin_error_readme_2",
+  "repo_name": "revoxhere_duino-coin",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Linux installation instructions attempt to install pip dependencies from `requirements.txt` before cloning the repository, so the file is not yet available.",
+      "correction_candidates": [
+        "Move the `python3 -m pip install -r requirements.txt` command to be after the `cd duino-coin` command.",
+        "Combine the `git clone` and `pip install` commands into a single line.",
+        "Change `requirements.txt` to `https://github.com/revoxhere/duino-coin/blob/master/requirements.txt`.",
+        "Remove the `cd duino-coin` command as it is not needed."
+      ],
+      "golden_answer": "Move the `python3 -m pip install -r requirements.txt` command to be after the `cd duino-coin` command."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Windows installation guide omits the critical instruction to add Python to the system's PATH, which can cause the `py` and `pip` commands to fail with a 'command not found' error.",
+      "correction_candidates": [
+        "Add a note specifying that during Python installation, the user must check the box to 'Add Python to PATH'.",
+        "Replace `py` with the full path to the python executable, e.g., `C:\\Python39\\python.exe`.",
+        "Instruct the user to run the commands from the Python IDE (IDLE) instead of the command prompt.",
+        "Add a step to install a specific version of Python, like Python 3.9, which automatically adds itself to PATH."
+      ],
+      "golden_answer": "Add a note specifying that during Python installation, the user must check the box to 'Add Python to PATH'."
+    }
+  ]
+}

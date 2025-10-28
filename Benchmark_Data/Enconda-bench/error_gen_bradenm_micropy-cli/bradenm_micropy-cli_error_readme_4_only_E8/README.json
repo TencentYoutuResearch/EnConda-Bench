@@ -1,0 +1,18 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_4_only_E8",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README incorrectly advises committing the `.micropy/` folder to version control. This folder contains locally generated files and symlinks specific to a user's environment and should be ignored.",
+      "correction_candidates": [
+        "The `.micropy/` folder should not be committed; it should be added to `.gitignore`.",
+        "Only the `stubs` subdirectory within `.micropy/` should be committed.",
+        "The `.micropy/` folder should be renamed to `.micropy-cache` before committing.",
+        "The `.micropy/` folder should be committed, but the `micropy.json` file should be ignored."
+      ],
+      "golden_answer": "The `.micropy/` folder should not be committed; it should be added to `.gitignore`."
+    }
+  ]
+}

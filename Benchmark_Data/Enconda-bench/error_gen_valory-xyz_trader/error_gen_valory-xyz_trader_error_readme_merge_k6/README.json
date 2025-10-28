@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_valory-xyz_trader_error_readme_merge_k6",
+  "repo_name": "valory-xyz_trader",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly place the 'poetry install && poetry shell' command before cloning the repository. This will fail because the 'pyproject.toml' file, which poetry needs, does not exist yet.",
+      "correction_candidates": [
+        "Move the `git clone https://github.com/valory-xyz/trader.git` command before `poetry install && poetry shell`.",
+        "Run `poetry new trader` before `poetry install`.",
+        "Combine the commands into `git clone ... && cd trader && poetry install && poetry shell`.",
+        "Run `poetry init` in the current directory before `poetry install`."
+      ],
+      "golden_answer": "Move the `git clone https://github.com/valory-xyz/trader.git` command before `poetry install && poetry shell`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command `cp path/to/keys.json ./abci_build/` copies the key file to the wrong directory. The `autonomy build-image` command expects `keys.json` in the project's root directory (`.`), not in `./abci_build/`.",
+      "correction_candidates": [
+        "cp path/to/keys.json ./trader/",
+        "cp path/to/keys.json .",
+        "mv path/to/keys.json .",
+        "cp path/to/keys.json ./packages/valory/services/trader/"
+      ],
+      "golden_answer": "cp path/to/keys.json ."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `--update-packages` flag is missing from the `autonomy packages sync` command. This can lead to using stale or incorrect locally cached package versions, causing dependency issues.",
+      "correction_candidates": [
+        "autonomy packages sync --update-packages",
+        "autonomy packages lock --update",
+        "autonomy packages sync --dev",
+        "autonomy packages pull"
+      ],
+      "golden_answer": "autonomy packages sync --update-packages"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The `PROMPT_TEMPLATE` environment variable is defined across multiple lines in the bash script without the proper syntax for a multi-line string, which will cause a shell error during export.",
+      "correction_candidates": [
+        "export PROMPT_TEMPLATE=\"With the given question \\\"@{question}\\\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?\"",
+        "export PROMPT_TEMPLATE='With the given question \"@{question}\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?'",
+        "export PROMPT_TEMPLATE='With the given question \"@{question}\" \\ and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, \\ what are the respective probabilities of `p_yes` and `p_no` occurring?'",
+        "export PROMPT_TEMPLATE=$(echo 'With the given question \"@{question}\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?')"
+      ],
+      "golden_answer": "export PROMPT_TEMPLATE='With the given question \"@{question}\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The value for the '--ipfs-node' parameter in the 'autonomy init' command is in an incorrect format. It requires a multiaddress format (e.g., /dns/...) but is given as a simple domain name.",
+      "correction_candidates": [
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"/ip4/127.0.0.1/tcp/5001\"",
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"https://registry.autonolas.tech\"",
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"/dns/registry.autonolas.tech/tcp/443/https\"",
+        "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"registry.autonolas.tech:443\""
+      ],
+      "golden_answer": "autonomy init --reset --author valory --remote --ipfs --ipfs-node \"/dns/registry.autonolas.tech/tcp/443/https\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a file named 'package.json' to find the service hash, but the correct filename is 'packages.json'. This typo will prevent the user from finding the correct file and value.",
+      "correction_candidates": [
+        "Correct the filename in the text to `service.yaml`.",
+        "Correct the filename in the text to `packages.json`.",
+        "Correct the filename in the text to `trader.json`.",
+        "Correct the filename and the link to point to `package.json`."
+      ],
+      "golden_answer": "Correct the filename in the text to `packages.json`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.10 to 3.8, creating version compatibility issues",
+      "correction_candidates": [
+        "Python `== 3.10`",
+        "Python `>= 3.8`",
+        "Python `== 3.9`",
+        "Python `>= 3.10`"
+      ],
+      "golden_answer": "Python `== 3.10`"
+    }
+  ]
+}

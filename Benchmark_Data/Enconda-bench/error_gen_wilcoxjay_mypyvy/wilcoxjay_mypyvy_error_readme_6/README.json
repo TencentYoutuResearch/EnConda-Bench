@@ -1,0 +1,29 @@
+{
+  "readme": "wilcoxjay_mypyvy_error_readme_6",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Placed virtual environment setup suggestion after pip install command instead of before it",
+      "correction_candidates": [
+        "Move the virtual environment suggestion before the pip install command",
+        "Create a virtual environment first, then activate it before installing packages",
+        "Set up virtual environment after installing all system dependencies but before pip packages",
+        "Initialize virtual environment in a separate Dependencies section before package installation"
+      ],
+      "golden_answer": "Move the virtual environment suggestion before the pip install command"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Missing installation instructions for z3 dependency",
+      "correction_candidates": [
+        "Add installation command: pip install z3-solver",
+        "Add installation command: sudo apt-get install z3",
+        "Add installation command: conda install z3",
+        "Add installation command: python3 -m pip install z3"
+      ],
+      "golden_answer": "Add installation command: pip install z3-solver"
+    }
+  ]
+}

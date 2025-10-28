@@ -1,0 +1,29 @@
+{
+  "readme": "nextcord_nextcord_error_readme_6",
+  "repo_name": "nextcord_nextcord",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary and conflicting dependency listed - discord.py should not be installed alongside nextcord",
+      "correction_candidates": [
+        "Remove the discord.py dependency entirely from the optional packages list",
+        "Replace discord.py with aiofiles for file handling operations",
+        "Change discord.py to py-cord for migration compatibility",
+        "Modify discord.py entry to specify it's for development testing only"
+      ],
+      "golden_answer": "Remove the discord.py dependency entirely from the optional packages list"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip install command syntax - missing quotes around package with extras on Windows",
+      "correction_candidates": [
+        "py -3 -m pip install -U \"nextcord[voice]\"",
+        "py -3 -m pip install -U 'nextcord[voice]'",
+        "py -3 -m pip install -U nextcord\\[voice\\]",
+        "py -3 -m pip install --upgrade \"nextcord[voice]\""
+      ],
+      "golden_answer": "py -3 -m pip install -U \"nextcord[voice]\""
+    }
+  ]
+}

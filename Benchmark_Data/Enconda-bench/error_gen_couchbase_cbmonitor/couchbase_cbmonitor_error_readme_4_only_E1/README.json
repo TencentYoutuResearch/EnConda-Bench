@@ -1,0 +1,18 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_4_only_E1",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The prerequisite 'Django 2.0' is unnecessary as the project is a static report generator and does not use the Django framework.",
+      "correction_candidates": [
+        "Remove '* Django 2.0' from the prerequisites list.",
+        "Change '* Django 2.0' to '* Flask'.",
+        "Add a note explaining that Django is an optional dependency.",
+        "Replace '* Django 2.0' with the actual web framework used."
+      ],
+      "golden_answer": "Remove '* Django 2.0' from the prerequisites list."
+    }
+  ]
+}

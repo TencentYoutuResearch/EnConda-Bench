@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_6_only_E2",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Typo in pip install command - missing 'l' in 'install'",
+      "correction_candidates": [
+        "$ pip install great_tables",
+        "$ pip install-tables great_tables",
+        "$ pip installer great_tables",
+        "$ pip install great-tables"
+      ],
+      "golden_answer": "$ pip install great_tables"
+    }
+  ]
+}

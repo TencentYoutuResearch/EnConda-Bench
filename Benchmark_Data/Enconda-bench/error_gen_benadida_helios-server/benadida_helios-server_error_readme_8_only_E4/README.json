@@ -1,0 +1,18 @@
+{
+  "readme": "benadida_helios-server_error_readme_8_only_E4",
+  "repo_name": "benadida_helios-server",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect configuration file path 'settings/local.py' that may not exist",
+      "correction_candidates": [
+        "Configure database settings by editing the main configuration in `helios/settings.py`:",
+        "Configure database settings by editing the main configuration in `config/settings.py`:",
+        "Configure database settings by editing the main configuration in `helios_server/settings.py`:",
+        "Configure database settings by editing the main configuration in `local_settings.py`:"
+      ],
+      "golden_answer": "Configure database settings by editing the main configuration in `helios/settings.py`:"
+    }
+  ]
+}

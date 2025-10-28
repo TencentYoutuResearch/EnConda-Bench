@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_2_only_E7",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that PyLabRobot is built on Python 3.6+ features, while it actually requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change \"Python 3.6+\" to \"Python 3.8+\".",
+        "Change \"Python 3.6+\" to \"the latest version of Python\".",
+        "Change \"Python 3.6+\" to \"Python 3\".",
+        "Change \"Python 3.6+\" to \"Python >= 3.8\"."
+      ],
+      "golden_answer": "Change \"Python 3.6+\" to \"Python 3.8+\"."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "valory-xyz_trader_error_readme_6_only_E1",
+  "repo_name": "valory-xyz_trader",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary Node.js dependency that is not required for this Python-based service",
+      "correction_candidates": [
+        "Remove the Node.js requirement entirely",
+        "Change Node.js version to >= 18.0.0",
+        "Replace Node.js with npm requirement",
+        "Add yarn as an alternative to Node.js"
+      ],
+      "golden_answer": "Remove the Node.js requirement entirely"
+    }
+  ]
+}

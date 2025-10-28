@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_4_only_E1",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README omits Redis from the list of requirements. Redis is a critical dependency for caching and task processing, and the application will not function correctly without it.",
+      "correction_candidates": [
+        "Add Redis back to the list of required technologies: '...with a [PostgreSQL](https://www.postgresql.org) database, [Redis](https://redis.io/) for caching/task processing and requires Python 3...'",
+        "Add Memcached to the list of required technologies.",
+        "Add a note that a caching service is optional.",
+        "Add RabbitMQ to the list of required technologies."
+      ],
+      "golden_answer": "Add Redis back to the list of required technologies: '...with a [PostgreSQL](https://www.postgresql.org) database, [Redis](https://redis.io/) for caching/task processing and requires Python 3...'"
+    }
+  ]
+}

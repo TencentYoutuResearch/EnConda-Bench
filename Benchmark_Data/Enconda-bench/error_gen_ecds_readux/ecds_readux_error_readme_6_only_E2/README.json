@@ -1,0 +1,18 @@
+{
+  "readme": "ecds_readux_error_readme_6_only_E2",
+  "repo_name": "ecds_readux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Using an invalid pytest flag --invalid-flag in the test command",
+      "correction_candidates": [
+        "Remove the --invalid-flag parameter",
+        "Replace --invalid-flag with --verbose",
+        "Replace --invalid-flag with --cov",
+        "Replace --invalid-flag with -v"
+      ],
+      "golden_answer": "Remove the --invalid-flag parameter"
+    }
+  ]
+}

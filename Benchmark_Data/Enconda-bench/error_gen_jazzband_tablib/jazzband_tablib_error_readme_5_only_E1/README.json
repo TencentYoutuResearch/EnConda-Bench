@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_tablib_error_readme_5_only_E1",
+  "repo_name": "jazzband_tablib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation section includes unnecessary system dependencies (libxml2-dev, libxslt1-dev, python3-dev) that are not actually required for tablib",
+      "correction_candidates": [
+        "Remove the system dependencies line and keep only: pip install tablib",
+        "Replace with: sudo apt-get install python3-pip && pip install tablib",
+        "Change to: pip install --upgrade pip && pip install tablib",
+        "Use: conda install -c conda-forge tablib"
+      ],
+      "golden_answer": "Remove the system dependencies line and keep only: pip install tablib"
+    }
+  ]
+}

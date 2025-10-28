@@ -1,0 +1,18 @@
+{
+  "readme": "open-pulse_openpulse_error_readme_1_only_E2",
+  "repo_name": "open-pulse_openpulse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application is incorrect. It attempts to run 'pulse' directly with poetry, but it should be executed as a Python script.",
+      "correction_candidates": [
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse.py`",
+        "In the same folder, enter the following command in the terminal: `poetry shell` then `python pulse`",
+        "In the same folder, enter the following command in the terminal: `python pulse`",
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse`"
+      ],
+      "golden_answer": "In the same folder, enter the following command in the terminal: `poetry run python pulse`"
+    }
+  ]
+}

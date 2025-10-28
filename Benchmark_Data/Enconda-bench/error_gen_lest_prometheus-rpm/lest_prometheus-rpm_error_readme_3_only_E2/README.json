@@ -1,0 +1,18 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_3_only_E2",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command to build a single package, `make build node_exporter`, is incorrect. The 'build' subcommand is not used with make for this target.",
+      "correction_candidates": [
+        "The command is 'make TARGET=node_exporter'.",
+        "Remove the 'build' argument; the command should be 'make node_exporter'.",
+        "Use 'make --package node_exporter' instead of 'make build node_exporter'.",
+        "The build target is specified directly, so run 'make build PKG=node_exporter'."
+      ],
+      "golden_answer": "Remove the 'build' argument; the command should be 'make node_exporter'."
+    }
+  ]
+}

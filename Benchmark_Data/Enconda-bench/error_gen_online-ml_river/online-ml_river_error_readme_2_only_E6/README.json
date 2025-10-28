@@ -1,0 +1,18 @@
+{
+  "readme": "online-ml_river_error_readme_2_only_E6",
+  "repo_name": "online-ml_river",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The code example incorrectly updates the model with `learn_one` before making a prediction for the same instance. In online validation (Prequential evaluation), the model should first predict and then learn.",
+      "correction_candidates": [
+        "Swap the `model.learn_one(x, y)` and `y_pred = model.predict_one(x)` lines to predict before training on the instance.",
+        "Remove the `metric.update` line as it is computationally expensive inside the loop.",
+        "Combine prediction and learning into a single `model.learn_predict_one(x, y)` call.",
+        "The `model.learn_one(x, y)` call should come first to ensure the model is initialized before prediction."
+      ],
+      "golden_answer": "Swap the `model.learn_one(x, y)` and `y_pred = model.predict_one(x)` lines to predict before training on the instance."
+    }
+  ]
+}

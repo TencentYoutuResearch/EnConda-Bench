@@ -1,0 +1,18 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_3_only_E4",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The installation instructions refer to a file path `requirements/base.txt` that does not exist in the project repository.",
+      "correction_candidates": [
+        "The command should be `pip install django-registration`.",
+        "The correct file path is `requirements.txt`.",
+        "The command should be `pip install -e .` to install from project source.",
+        "Remove the instruction to install from a requirements file."
+      ],
+      "golden_answer": "The command should be `pip install django-registration`."
+    }
+  ]
+}

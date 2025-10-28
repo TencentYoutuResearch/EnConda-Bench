@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_dbiir_uer-py_error_readme_merge_k2",
+  "repo_name": "dbiir_uer-py",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `preprocess.py` command uses an incorrect parameter `--input_path` instead of `--corpus_path` to specify the input corpus file.",
+      "correction_candidates": [
+        "Change `--input_path` to `--corpus_path`.",
+        "Change `--input_path` to `--data_path`.",
+        "Remove the `--input_path` parameter and let the script use the default.",
+        "Change the command to `python3 preprocess.py --corpus corpora/book_review_bert.txt ...`"
+      ],
+      "golden_answer": "Change `--input_path` to `--corpus_path`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `pretrain.py` command provides an incorrect path `models/base_config.json` for the configuration file, which should be `models/bert/base_config.json`.",
+      "correction_candidates": [
+        "Change the path to `models/bert/base_config.json`.",
+        "Change the path to `config/bert/base_config.json`.",
+        "Move the `base_config.json` file from `models/bert/` to `models/`.",
+        "Change the path to `models/config/base_config.json`."
+      ],
+      "golden_answer": "Change the path to `models/bert/base_config.json`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The dependency `six = 1.12.0` in the Requirements section uses invalid syntax for specifying a version. Pip expects `==` for exact versions or `>=` for minimum versions.",
+      "correction_candidates": [
+        "Change `six = 1.12.0` to `six >= 1.12.0`.",
+        "Change `six = 1.12.0` to `six == 1.12.0`.",
+        "Remove the version specification, changing it to just `six`.",
+        "Change `six = 1.12.0` to `six~=1.12`."
+      ],
+      "golden_answer": "Change `six = 1.12.0` to `six >= 1.12.0`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The `Quickstart` section incorrectly places the fine-tuning step (`run_classifier.py`) before the pre-training step (`pretrain.py`), which is a logical error in the workflow.",
+      "correction_candidates": [
+        "Swap the `pretrain.py` command block with the `finetune/run_classifier.py` command block to ensure pre-training happens before fine-tuning.",
+        "Remove the `pretrain.py` step as it is optional and use the downloaded model directly for fine-tuning.",
+        "Run the `finetune/run_classifier.py` script first, then `pretrain.py` to further improve the model.",
+        "Combine the two steps into a single script."
+      ],
+      "golden_answer": "Swap the `pretrain.py` command block with the `finetune/run_classifier.py` command block to ensure pre-training happens before fine-tuning."
+    }
+  ]
+}

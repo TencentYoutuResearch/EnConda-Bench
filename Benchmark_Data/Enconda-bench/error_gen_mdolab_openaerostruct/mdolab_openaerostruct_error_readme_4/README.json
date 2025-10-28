@@ -1,0 +1,29 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_4",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly list `Cython` as a required dependency. It is not listed in the dependency table and is not needed to install or run the package.",
+      "correction_candidates": [
+        "Remove the sentence stating that `Cython` is a required dependency.",
+        "Change 'required' to 'optional' in the sentence about Cython.",
+        "Add Cython to the dependency table as an optional dependency.",
+        "Add a note explaining that Cython is only needed for developers who want to compile C extensions."
+      ],
+      "golden_answer": "Remove the sentence stating that `Cython` is a required dependency."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The first BibTeX citation block for the Jasa 2018a article is malformed because it is missing a final closing brace `}`. This will cause parsing errors in citation management software.",
+      "correction_candidates": [
+        "Add a closing brace `}` at the end of the `@article{Jasa2018a, ...}` block.",
+        "Remove the entire malformed BibTeX block.",
+        "Replace the malformed block with a correctly formatted one.",
+        "Add a comment above the block warning that it is incomplete."
+      ],
+      "golden_answer": "Add a closing brace `}` at the end of the `@article{Jasa2018a, ...}` block."
+    }
+  ]
+}

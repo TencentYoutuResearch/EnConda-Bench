@@ -1,0 +1,29 @@
+{
+  "readme": "open-pulse_openpulse_error_readme_4",
+  "repo_name": "open-pulse_openpulse",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the Poetry dependency manager is incorrect. It installs 'poetry-core' instead of the full 'poetry' package, which includes the necessary command-line interface.",
+      "correction_candidates": [
+        "Start by installing the poetry module using the command: `pip install poetry`",
+        "Start by installing the poetry module using the command: `pip install --user poetry`",
+        "Start by installing the poetry module using the command: `python -m pip install poetry`",
+        "Start by installing the poetry module using the command: `pipx install poetry`"
+      ],
+      "golden_answer": "Start by installing the poetry module using the command: `pip install poetry`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to run the application references a non-existent entry point file 'main.py'. The correct entry point script is 'pulse'.",
+      "correction_candidates": [
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse`",
+        "In the same folder, enter the following command in the terminal: `poetry run python run.py`",
+        "In the same folder, enter the following command in the terminal: `poetry run python app.py`",
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse.py`"
+      ],
+      "golden_answer": "In the same folder, enter the following command in the terminal: `poetry run python pulse`"
+    }
+  ]
+}

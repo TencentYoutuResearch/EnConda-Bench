@@ -1,0 +1,29 @@
+{
+  "readme": "pypa_twine_error_readme_2",
+  "repo_name": "pypa_twine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README claims Twine is compatible with Python 2.7, but the |python-versions| badge shows it requires Python 3.8+, creating a version compatibility conflict.",
+      "correction_candidates": [
+        "Remove the sentence stating it is compatible with Python 2.7.",
+        "Change the sentence to 'Twine requires Python 3.8 or newer.'",
+        "Install an older version of Twine that supports Python 2.7.",
+        "Update the |python-versions| badge to include Python 2.7."
+      ],
+      "golden_answer": "Remove the sentence stating it is compatible with Python 2.7."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions tell the user to `pip install twine` before creating and activating the virtual environment. This installs Twine in the global or user site-packages, defeating the purpose of the virtual environment for this tool.",
+      "correction_candidates": [
+        "Reverse the order: create and activate the virtual environment first, then run `pip install twine`.",
+        "Use `pipx install twine` to install Twine in an isolated environment separate from the project.",
+        "Run `pip install twine --user` before creating the virtual environment.",
+        "After activating the virtual environment, run `pip install --upgrade twine`."
+      ],
+      "golden_answer": "Reverse the order: create and activate the virtual environment first, then run `pip install twine`."
+    }
+  ]
+}

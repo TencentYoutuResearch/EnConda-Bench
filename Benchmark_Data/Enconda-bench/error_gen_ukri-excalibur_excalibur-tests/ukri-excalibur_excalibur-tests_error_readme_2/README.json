@@ -1,0 +1,29 @@
+{
+  "readme": "ukri-excalibur_excalibur-tests_error_readme_2",
+  "repo_name": "ukri-excalibur_excalibur-tests",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The `pip install` command is listed before the `git clone` command, which means the `requirements.txt` file would not be available.",
+      "correction_candidates": [
+        "Reorder the steps to: 1. Clone the repository, 2. Navigate into the project directory, 3. Install the required packages.",
+        "Combine steps 2 and 3 into a single line: `git clone ... && cd ...`",
+        "Add a step before step 1: `git init`",
+        "Remove step 3, as cloning automatically creates the directory."
+      ],
+      "golden_answer": "Reorder the steps to: 1. Clone the repository, 2. Navigate into the project directory, 3. Install the required packages."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Getting Started' section is missing instructions for setting up a virtual environment, which is a best practice for Python projects.",
+      "correction_candidates": [
+        "Add a step to create and activate a virtual environment (e.g., `python -m venv venv` and `source venv/bin/activate`) before installing packages.",
+        "Suggest using `conda` to manage the environment: `conda create -n excalibur python=3.9`.",
+        "Add a note that dependencies will be installed globally.",
+        "Replace `pip` with `pipx` to ensure dependencies are isolated."
+      ],
+      "golden_answer": "Add a step to create and activate a virtual environment (e.g., `python -m venv venv` and `source venv/bin/activate`) before installing packages."
+    }
+  ]
+}

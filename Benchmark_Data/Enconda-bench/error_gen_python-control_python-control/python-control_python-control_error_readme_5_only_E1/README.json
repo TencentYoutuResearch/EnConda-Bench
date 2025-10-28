@@ -1,0 +1,18 @@
+{
+  "readme": "python-control_python-control_error_readme_5_only_E1",
+  "repo_name": "python-control_python-control",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added tensorflow as an unnecessary dependency that is not actually required by the python-control library",
+      "correction_candidates": [
+        "The package requires numpy, scipy, and matplotlib.",
+        "The package requires numpy, scipy, matplotlib, and pandas.",
+        "The package requires numpy, scipy, matplotlib, and pytorch.",
+        "The package requires numpy, scipy, matplotlib, and scikit-learn."
+      ],
+      "golden_answer": "The package requires numpy, scipy, and matplotlib."
+    }
+  ]
+}

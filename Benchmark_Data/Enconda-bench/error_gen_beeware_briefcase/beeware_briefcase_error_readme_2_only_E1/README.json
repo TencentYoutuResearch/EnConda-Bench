@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_2_only_E1",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that `cookiecutter` is a required prerequisite that must be installed separately, when it is managed by Briefcase itself.",
+      "correction_candidates": [
+        "Remove the sentence about installing `cookiecutter` as it is not a required prerequisite.",
+        "Change `pip install cookiecutter` to `pip install briefcase[templates]`.",
+        "Combine the installations into `pip install briefcase cookiecutter`.",
+        "Change the prerequisite to `pip install jinja2`."
+      ],
+      "golden_answer": "Remove the sentence about installing `cookiecutter` as it is not a required prerequisite."
+    }
+  ]
+}

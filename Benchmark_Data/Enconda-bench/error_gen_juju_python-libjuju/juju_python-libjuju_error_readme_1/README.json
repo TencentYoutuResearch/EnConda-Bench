@@ -1,0 +1,29 @@
+{
+  "readme": "juju_python-libjuju_error_readme_1",
+  "repo_name": "juju_python-libjuju",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3+' which is too broad and may lead to using an incompatible older Python 3 version, as the library relies on modern asyncio features.",
+      "correction_candidates": [
+        "Change `Python 3+` to `Python >= 3.9`.",
+        "Change `Python 3+` to `Python 3.9/3.10`.",
+        "Change `Python 3+` to `Python 3.10`.",
+        "Add a note: 'Python 3.8 or lower is not supported'."
+      ],
+      "golden_answer": "Change `Python 3+` to `Python 3.9/3.10`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The REPL example is missing the 'await' keyword for the 'model.connect_current()' coroutine, which will cause a 'coroutine was never awaited' runtime warning and prevent the connection from being established.",
+      "correction_candidates": [
+        "Replace `model.connect_current()` with `jasyncio.run(model.connect_current())`.",
+        "Replace `model.connect_current()` with `await model.connect()`.",
+        "Replace `model.connect_current()` with `await model.connect_current()`.",
+        "Add `import jasyncio` and run `jasyncio.run(model.connect_current())`."
+      ],
+      "golden_answer": "Replace `model.connect_current()` with `await model.connect_current()`."
+    }
+  ]
+}

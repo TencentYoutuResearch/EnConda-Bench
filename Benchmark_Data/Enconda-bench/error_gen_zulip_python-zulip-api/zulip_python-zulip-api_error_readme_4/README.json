@@ -1,0 +1,29 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_4",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly place the `cd python-zulip-api` command before the `git clone` command, which will fail because the directory does not yet exist.",
+      "correction_candidates": [
+        "You must create the directory with `mkdir python-zulip-api` before changing into it.",
+        "The `git clone` command should be run before the `cd` command.",
+        "First run `git clone https://github.com/<your_username>/python-zulip-api.git`, then `cd python-zulip-api`.",
+        "The `git clone` command creates the directory, so the `cd` command is not needed."
+      ],
+      "golden_answer": "First run `git clone https://github.com/<your_username>/python-zulip-api.git`, then `cd python-zulip-api`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is given as `python tests`, which is incorrect. `tests` is a directory, not an executable script.",
+      "correction_candidates": [
+        "The command should be `python -m pytest`.",
+        "The correct command is `pytest`.",
+        "The command should be `./tools/run-tests`.",
+        "You should run `python setup.py test`."
+      ],
+      "golden_answer": "The correct command is `pytest`."
+    }
+  ]
+}

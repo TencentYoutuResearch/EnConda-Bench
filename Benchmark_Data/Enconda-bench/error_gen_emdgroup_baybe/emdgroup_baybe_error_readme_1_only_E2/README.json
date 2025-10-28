@@ -1,0 +1,18 @@
+{
+  "readme": "emdgroup_baybe_error_readme_1_only_E2",
+  "repo_name": "emdgroup_baybe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command in the 'Quick Start' section has incorrect syntax, which will cause the command to fail.",
+      "correction_candidates": [
+        "install pip baybe",
+        "pip install baybe",
+        "pip install baybe --upgrade",
+        "python -m pip install baybe"
+      ],
+      "golden_answer": "pip install baybe"
+    }
+  ]
+}

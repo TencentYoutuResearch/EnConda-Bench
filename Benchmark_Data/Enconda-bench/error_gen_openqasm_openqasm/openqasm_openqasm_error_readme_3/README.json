@@ -1,0 +1,29 @@
+{
+  "readme": "openqasm_openqasm_error_readme_3",
+  "repo_name": "openqasm_openqasm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a non-existent `./install.sh` script for installation, which will cause a 'file not found' error.",
+      "correction_candidates": [
+        "Installation should be done using `pip install -e .` from the project root.",
+        "The script is located in the `scripts/` directory: `./scripts/install.sh`.",
+        "The script must be made executable first with `chmod +x install.sh`.",
+        "Installation should be done by running `python setup.py install`."
+      ],
+      "golden_answer": "Installation should be done using `pip install -e .` from the project root."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The text mentions that the installation will include a dependency named `openqasm-helpers`, which is a fictitious and non-existent package.",
+      "correction_candidates": [
+        "The correct package name is `qasm-helpers`.",
+        "Remove the mention of the non-existent `openqasm-helpers` package.",
+        "The dependencies are `antlr4-python3-runtime` and `numpy`.",
+        "All required dependencies are listed in the `requirements.txt` file."
+      ],
+      "golden_answer": "Remove the mention of the non-existent `openqasm-helpers` package."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_tablib_error_readme_5_only_E6",
+  "repo_name": "jazzband_tablib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - pip install should come after system dependency installation, not on the same line",
+      "correction_candidates": [
+        "Separate the commands into two lines with pip install after the apt-get command",
+        "Move pip install tablib to a separate code block after the system dependencies",
+        "Add && between the apt-get and pip commands to ensure proper sequencing",
+        "Create a virtual environment first, then install system dependencies, then pip install"
+      ],
+      "golden_answer": "Separate the commands into two lines with pip install after the apt-get command"
+    }
+  ]
+}

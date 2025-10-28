@@ -1,0 +1,112 @@
+# Agent Configuration File
+# For intelligent agent-based environment configuration analysis
+
+# Agent Basic Configuration
+agent:
+  # Agent type: simple, real, integrated
+  type: "simple"
+  # Model configuration
+  model_name: "gpt-4"
+  max_tokens: 4000
+  temperature: 0.1
+  # API configuration
+  api_key: "your-api-key-here"
+  base_url: "https://api.openai.com/v1"
+  timeout: 120
+
+# Environment Configuration
+environment:
+  # Environment type: local, docker, sandbox
+  type: "local"
+  # Working directory
+  work_dir: "./agent_workspace"
+  # Timeout in seconds
+  timeout: 300
+  # Enable safe mode
+  safe_mode: true
+
+# Task Configuration
+task:
+  # Maximum number of iterations
+  max_iterations: 5
+  # Output format: json_with_script, detailed_report
+  output_format: "json_with_script"
+  # Enable interactive analysis
+  interactive_analysis: true
+  # Enable test verification
+  enable_testing: false
+
+# Tools Configuration
+tools:
+  bash:
+    enabled: true
+    timeout: 60
+    safe_commands_only: true
+  python:
+    enabled: true
+    version: "3.8+"
+    virtual_env: true
+  file_operations:
+    enabled: true
+    read_only: false
+    max_file_size: "10MB"
+
+# Data Processing Configuration
+data:
+  # Data root directory
+  data_root_dir: "./benchmark_data"
+  # Source code root directory
+  source_root_dir: "./source_repos"
+  # Sampling configuration
+  sampling:
+    enabled: false
+    sample_size: 100
+    random_seed: 42
+
+# Output Configuration
+output:
+  # Output root directory
+  output_dir: "./output"
+  # Generate verbose logging
+  verbose_logging: true
+  # Save agent execution trajectory
+  save_trajectory: true
+  # Save intermediate results
+  save_intermediate: false
+
+# Processing Configuration
+processing:
+  # Number of concurrent workers
+  max_workers: 1
+  # Maximum retry attempts on failure
+  max_retries: 3
+  # Retry delay in seconds
+  retry_delay: 10
+  # Skip already processed files
+  skip_existing: true
+
+# Security Configuration
+security:
+  # Forbidden command patterns
+  forbidden_commands:
+    - "rm -rf"
+    - "sudo"
+    - "chmod 777"
+    - "wget"
+    - "curl"
+  # Allowed file extensions
+  allowed_extensions:
+    - ".py"
+    - ".txt"
+    - ".md"
+    - ".yaml"
+    - ".json"
+    - ".sh"
+  # Maximum file size
+  max_file_size: "50MB"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "./logs/agent_analysis.log"

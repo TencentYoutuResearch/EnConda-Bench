@@ -1,0 +1,18 @@
+{
+  "readme": "pokepetter_ursina_error_readme_3_only_E2",
+  "repo_name": "pokepetter_ursina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python setup.py install` is used instead of `python setup.py develop`. This prevents changes in the cloned source code from being immediately available, which is the goal of a development install.",
+      "correction_candidates": [
+        "Change `python setup.py install` to `python setup.py develop`.",
+        "Change `python setup.py install` to `pip install -e .` which is the modern equivalent.",
+        "Change `python setup.py install` to `python setup.py build` followed by `python setup.py install`.",
+        "Change `python setup.py install` to `pip install .`."
+      ],
+      "golden_answer": "Change `python setup.py install` to `python setup.py develop`."
+    }
+  ]
+}

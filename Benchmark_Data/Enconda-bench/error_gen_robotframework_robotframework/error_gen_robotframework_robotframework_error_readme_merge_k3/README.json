@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_robotframework_robotframework_error_readme_merge_k3",
+  "repo_name": "robotframework_robotframework",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command unnecessarily includes the 'selenium' package, which is a separate library and not part of the core Robot Framework installation.",
+      "correction_candidates": [
+        "pip install robotframework",
+        "pip install robotframework-seleniumlibrary",
+        "pip install robotframework --no-deps",
+        "pip install robotframework && pip install selenium"
+      ],
+      "golden_answer": "pip install robotframework"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README vaguely states 'Robot Framework runs on Python 3' but omits the specific minimum required version (Python 3.8), which can cause installation failure on older Python 3 versions.",
+      "correction_candidates": [
+        "Robot Framework requires Python 3.6 or newer.",
+        "Robot Framework requires the latest version of Python 3.",
+        "Robot Framework requires Python 3.8 or newer and runs also on `PyPy <http://pypy.org>`_.",
+        "Robot Framework is compatible with all Python 3.x versions."
+      ],
+      "golden_answer": "Robot Framework requires Python 3.8 or newer and runs also on `PyPy <http://pypy.org>`_."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example test case references a resource file using the path 'resources/login.resource', implying a directory structure that is not mentioned or set up, which will likely cause a file not found error.",
+      "correction_candidates": [
+        "Resource          login.resource",
+        "Resource          ./login.resource",
+        "Resource          ${CURDIR}/login.resource",
+        "Import Resource   resources/login.resource"
+      ],
+      "golden_answer": "Resource          login.resource"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The usage example for setting a command-line variable, 'robot --variable BROWSER=Firefox', incorrectly uses an equals sign '=' instead of the required colon ':' as a separator.",
+      "correction_candidates": [
+        "robot --variable BROWSER \"Firefox\" --outputdir results path/to/tests/",
+        "robot -v BROWSER=Firefox --outputdir results path/to/tests/",
+        "robot --set-variable BROWSER:Firefox --outputdir results path/to/tests/",
+        "robot --variable BROWSER:Firefox --outputdir results path/to/tests/"
+      ],
+      "golden_answer": "robot --variable BROWSER:Firefox --outputdir results path/to/tests/"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install robotframework==4.1.3` pins the installation to a specific, outdated version that is primarily for Python 2 compatibility, which is incorrect for modern Python environments and lacks current features.",
+      "correction_candidates": [
+        "pip install robotframework",
+        "pip install --upgrade robotframework",
+        "pip install robotframework>=6.0",
+        "pip install robotframework-latest"
+      ],
+      "golden_answer": "pip install robotframework"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have a logical order error: they install robotframework globally first, then create and activate a virtual environment. The package should be installed after activating the venv to keep it isolated.",
+      "correction_candidates": [
+        "The commands should be:\n\n    python -m venv .venv\n    source .venv/bin/activate\n    pip install robotframework\n",
+        "The commands should be:\n\n    pip install --user robotframework\n    python -m venv .venv\n    source .venv/bin/activate\n",
+        "The commands should be:\n\n    python -m venv .venv\n    pip install robotframework\n",
+        "The commands should be:\n\n    pip install robotframework\n    python -m venv --system-site-packages .venv\n    source .venv/bin/activate\n"
+      ],
+      "golden_answer": "The commands should be:\n\n    python -m venv .venv\n    source .venv/bin/activate\n    pip install robotframework\n"
+    }
+  ]
+}

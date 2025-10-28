@@ -1,0 +1,29 @@
+{
+  "readme": "platformio_platformio-core_error_readme_1",
+  "repo_name": "platformio_platformio-core",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that Python 2.7 is required, which is outdated and incompatible. It should specify a modern, compatible Python version.",
+      "correction_candidates": [
+        "To install PlatformIO Core, you need Python 3.6 or newer and pip.",
+        "To install PlatformIO Core, you need Python and pip. Python 2 or 3 is supported.",
+        "To install PlatformIO Core, you need Python 3.9 and pip.",
+        "To install PlatformIO Core, you need the latest version of Python and pip."
+      ],
+      "golden_answer": "To install PlatformIO Core, you need Python 3.6 or newer and pip."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes the `requests` package, which is not a required dependency for installing PlatformIO Core.",
+      "correction_candidates": [
+        "pip install -U platformio",
+        "pip install -U platformio --no-deps",
+        "pip install platformio",
+        "pip install -U platformio[core]"
+      ],
+      "golden_answer": "pip install -U platformio"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_6",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version mismatch between Python 3.9 mentioned in prerequisites and Python 3.11 recommended in NOTE section",
+      "correction_candidates": [
+        "Python 3.11 (https://www.python.org/downloads/release/python-3117/)",
+        "Python 3.9 (https://www.python.org/downloads/release/python-390/)",
+        "Python 3.10 (https://www.python.org/downloads/release/python-3100/)",
+        "Python 3.8 (https://www.python.org/downloads/release/python-380/)"
+      ],
+      "golden_answer": "Python 3.11 (https://www.python.org/downloads/release/python-3117/)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing packages before creating and activating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "Create a venv\n```shell\n    python3.11 -m venv ./winnf3\n```\nActivate a venv\n```shell\n    source ./winnf3/bin/activate\n```\nInstall packages\n```shell\n    python -m pip install -r ./requirements.txt\n```",
+        "Install packages\n```shell\n    pip install -r ./requirements.txt\n```\nCreate a venv\n```shell\n    python3.11 -m venv ./winnf3\n```\nActivate a venv\n```shell\n    source ./winnf3/bin/activate\n```",
+        "Activate a venv\n```shell\n    source ./winnf3/bin/activate\n```\nCreate a venv\n```shell\n    python3.11 -m venv ./winnf3\n```\nInstall packages\n```shell\n    python -m pip install -r ./requirements.txt\n```",
+        "Create and activate venv\n```shell\n    python3.11 -m venv ./winnf3 && source ./winnf3/bin/activate\n```\nInstall packages\n```shell\n    python -m pip install -r ./requirements.txt\n```"
+      ],
+      "golden_answer": "Create a venv\n```shell\n    python3.11 -m venv ./winnf3\n```\nActivate a venv\n```shell\n    source ./winnf3/bin/activate\n```\nInstall packages\n```shell\n    python -m pip install -r ./requirements.txt\n```"
+    }
+  ]
+}

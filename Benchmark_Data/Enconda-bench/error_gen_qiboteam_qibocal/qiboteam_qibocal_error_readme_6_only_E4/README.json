@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_6_only_E4",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References 'requirements.txt' file that doesn't exist in the repository for installation",
+      "correction_candidates": [
+        "Change 'pip install -r requirements.txt' to 'pip install .'",
+        "Replace with 'pip install -e .' for editable installation",
+        "Use 'python setup.py install' instead of pip install command",
+        "Change to 'pip install -r pyproject.toml'"
+      ],
+      "golden_answer": "Change 'pip install -r requirements.txt' to 'pip install .'"
+    }
+  ]
+}

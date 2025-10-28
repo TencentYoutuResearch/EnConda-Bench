@@ -1,0 +1,29 @@
+{
+  "readme": "ukri-excalibur_excalibur-tests_error_readme_4",
+  "repo_name": "ukri-excalibur_excalibur-tests",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command in the 'Installation' section is incomplete; it fails to specify the requirements file.",
+      "correction_candidates": [
+        "Change the command to `pip install -r requirements.txt`",
+        "Change the command to `pip install -e .`",
+        "Change the command to `pip install reframe-hpc`",
+        "Add a note that users must manually install dependencies like `numpy` and `pandas`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for running a benchmark uses an incorrect flag `-s` to specify the system. The correct flag for the ReFrame framework is typically `--system`.",
+      "correction_candidates": [
+        "Replace `-s archer2` with `--system archer2:login`",
+        "Replace `-s archer2` with `-p archer2`",
+        "Replace `-s archer2` with `--partition=archer2`",
+        "Replace `-s archer2` with `--env-name=archer2`"
+      ],
+      "golden_answer": "Replace `-s archer2` with `--system archer2:login`"
+    }
+  ]
+}

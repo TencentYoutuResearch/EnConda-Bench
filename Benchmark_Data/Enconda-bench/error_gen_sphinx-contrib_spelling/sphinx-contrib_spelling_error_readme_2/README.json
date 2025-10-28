@@ -1,0 +1,29 @@
+{
+  "readme": "sphinx-contrib_spelling_error_readme_2",
+  "repo_name": "sphinx-contrib_spelling",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only compatible with Python 2.7 and not Python 3.",
+      "correction_candidates": [
+        "This package is compatible with Python 3.5 and higher.",
+        "This package is compatible with modern Python versions (3.7+).",
+        "This package is compatible with both Python 2.7 and Python 3.5+.",
+        "This package requires Python 3.6+."
+      ],
+      "golden_answer": "This package is compatible with both Python 2.7 and Python 3.5+."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The documentation incorrectly specifies that the custom wordlist file must be placed in the `_static` directory, when it should be relative to the conf.py file.",
+      "correction_candidates": [
+        "The wordlist file should be placed in the `_templates` directory.",
+        "The wordlist file can be placed anywhere, but the path in `conf.py` must be absolute.",
+        "The wordlist file should be placed in the same directory as `conf.py`.",
+        "The wordlist file path should be relative to the configuration directory (where `conf.py` is located)."
+      ],
+      "golden_answer": "The wordlist file path should be relative to the configuration directory (where `conf.py` is located)."
+    }
+  ]
+}

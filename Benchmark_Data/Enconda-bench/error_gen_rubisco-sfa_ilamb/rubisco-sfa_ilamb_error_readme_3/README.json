@@ -1,0 +1,29 @@
+{
+  "readme": "rubisco-sfa_ilamb_error_readme_3",
+  "repo_name": "rubisco-sfa_ilamb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs the user to point to a local file `./data/quantiles_Whittaker_cmip5v6.parquet` without providing the file or instructions on how to download it.",
+      "correction_candidates": [
+        "The instructions should link to the database file on GitHub for download.",
+        "The file is included in the pip package and the path should be relative to the installation directory.",
+        "The file should be specified with an absolute path, not a relative one.",
+        "The instructions should specify cloning the repository to get the data file."
+      ],
+      "golden_answer": "The instructions should link to the database file on GitHub for download."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions for installing from source are missing a critical build dependency, `cython`, which is required to compile some package components.",
+      "correction_candidates": [
+        "The instructions should include installing `cython` before `pip install .`",
+        "The instructions should use `python setup.py install` instead of `pip install .`",
+        "The instructions are missing the `setuptools` dependency.",
+        "The repository should be cloned with `--recursive` to fetch submodules."
+      ],
+      "golden_answer": "The instructions should include installing `cython` before `pip install .`"
+    }
+  ]
+}

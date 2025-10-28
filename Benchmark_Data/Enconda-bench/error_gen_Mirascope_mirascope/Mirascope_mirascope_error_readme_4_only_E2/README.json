@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_4_only_E2",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The method to extract structured data is incorrect. The example uses `.call()` which returns a `OpenAICallResponse` object, not the extracted `TaskDetails` model. This will cause the `isinstance` assertion to fail.",
+      "correction_candidates": [
+        "task_details = TaskExtractor(task=task).extract().model_dump()",
+        "task_details = TaskExtractor(task=task).extract()",
+        "task_details = TaskExtractor(task=task).call().tool",
+        "task_details = TaskExtractor.extract(task=task)"
+      ],
+      "golden_answer": "task_details = TaskExtractor(task=task).extract()"
+    }
+  ]
+}

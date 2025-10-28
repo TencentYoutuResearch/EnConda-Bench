@@ -1,0 +1,18 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_5_only_E4",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced requirements file has incorrect filename 'dependencies.txt' instead of 'requirements.txt'",
+      "correction_candidates": [
+        "python3 -m pip install -r requirements.txt",
+        "python3 -m pip install -r setup.txt",
+        "python3 -m pip install -r packages.txt",
+        "python3 -m pip install -r install.txt"
+      ],
+      "golden_answer": "python3 -m pip install -r requirements.txt"
+    }
+  ]
+}

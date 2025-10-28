@@ -1,0 +1,18 @@
+{
+  "readme": "uriyyo_fastapi-pagination_error_readme_5_only_E6",
+  "repo_name": "uriyyo_fastapi-pagination",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Moved add_pagination call before endpoint definition, breaking logical order",
+      "correction_candidates": [
+        "Move add_pagination(app) to the end of the code block after all endpoints are defined",
+        "Place add_pagination(app) at the beginning before importing modules",
+        "Call add_pagination(app) inside the get_users function",
+        "Remove add_pagination(app) entirely as it's not needed"
+      ],
+      "golden_answer": "Move add_pagination(app) to the end of the code block after all endpoints are defined"
+    }
+  ]
+}

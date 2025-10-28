@@ -1,0 +1,29 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_1",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `Requirements` section incorrectly lists TerminusDB v9.0, which is incompatible with the client version v10.0 mentioned in the `Release Notes` section.",
+      "correction_candidates": [
+        "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB >=v10.0](https://github.com/terminusdb/terminusdb-server)`.",
+        "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB latest](https://github.com/terminusdb/terminusdb-server)`.",
+        "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB v10.0](https://github.com/terminusdb/terminusdb-server)`.",
+        "In the `Release Notes` section, change `TerminusDB Client v10.0 works with TerminusDB v10.0` to `TerminusDB Client v10.0 works with TerminusDB v9.0`."
+      ],
+      "golden_answer": "In the `Requirements` section, change `- [TerminusDB v9.0](https://github.com/terminusdb/terminusdb-server)` to `- [TerminusDB v10.0](https://github.com/terminusdb/terminusdb-server)`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the client with dataframe support is incorrect. It uses `[df]` instead of the correct extra identifier `[dataframe]`.",
+      "correction_candidates": [
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client[dataframe]`.",
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client --with dataframe`.",
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client-dataframe`.",
+        "Change `python -m pip install terminusdb-client[df]` to `pip install terminusdb-client[pandas]`."
+      ],
+      "golden_answer": "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client[dataframe]`."
+    }
+  ]
+}

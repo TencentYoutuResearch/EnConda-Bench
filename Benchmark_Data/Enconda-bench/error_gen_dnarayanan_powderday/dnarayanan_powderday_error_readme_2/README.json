@@ -1,0 +1,29 @@
+{
+  "readme": "dnarayanan_powderday_error_readme_2",
+  "repo_name": "dnarayanan_powderday",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README provides an installation command before directing the user to the full instructions, which can cause users to miss critical setup steps like creating a virtual environment or installing non-Python dependencies.",
+      "correction_candidates": [
+        "Move the installation command to the end of the README file.",
+        "Keep the command at the top but add a note: '(Dependencies must be installed first)'.",
+        "Remove the quick installation command and direct users solely to the documentation for proper installation.",
+        "Add a `conda install` equivalent command next to the `pip install` command."
+      ],
+      "golden_answer": "Remove the quick installation command and direct users solely to the documentation for proper installation."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The provided pip command `pip install powderday --nodeps` uses an incorrect flag. The correct flag is `--no-deps`, causing the command to fail.",
+      "correction_candidates": [
+        "Change the command to `pip install powderday --no-dependencies`.",
+        "Correct the command to `pip install powderday --no-deps`.",
+        "Change the command to `pip install powderday --ignore-installed`.",
+        "The command should be `pip install powderday` without any flags, as dependencies should be handled by pip."
+      ],
+      "golden_answer": "Correct the command to `pip install powderday --no-deps`."
+    }
+  ]
+}

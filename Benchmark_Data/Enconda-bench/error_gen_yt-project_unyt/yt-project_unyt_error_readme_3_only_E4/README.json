@@ -1,0 +1,18 @@
+{
+  "readme": "yt-project_unyt_error_readme_3_only_E4",
+  "repo_name": "yt-project_unyt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the yt project logo is incorrect, causing the image to be missing.",
+      "correction_candidates": [
+        "Correct the image path to `https://raw.githubusercontent.com/yt-project/unyt/master/docs/_static/yt_logo_small.png`.",
+        "Correct the image path to `https://raw.githubusercontent.com/yt-project/unyt/main/docs/_static/yt_logo.png`.",
+        "Remove the image as it is not essential.",
+        "Correct the image path to `../docs/_static/yt_logo_small.png`."
+      ],
+      "golden_answer": "Correct the image path to `https://raw.githubusercontent.com/yt-project/unyt/master/docs/_static/yt_logo_small.png`."
+    }
+  ]
+}

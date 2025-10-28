@@ -1,0 +1,18 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_4_only_E2",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `--in-place` flag is a boolean switch and should not be given an argument. The example command incorrectly passes `true` to it.",
+      "correction_candidates": [
+        "Change `--in-place true` to `--in-place`.",
+        "Change `--in-place true` to `--in-place=true`.",
+        "Remove the `--in-place true` flag and pipe the output to a new file.",
+        "Change `--in-place true` to `--in-place-overwrite`."
+      ],
+      "golden_answer": "Change `--in-place true` to `--in-place`."
+    }
+  ]
+}

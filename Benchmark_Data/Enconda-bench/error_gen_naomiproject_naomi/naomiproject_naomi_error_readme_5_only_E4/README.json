@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_5_only_E4",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file path specified for configuration - using a specific file path instead of extraction directory",
+      "correction_candidates": [
+        "Make sure to extract the files to a directory of your choice for proper configuration.",
+        "Make sure to extract the files to your home directory and configure settings as needed.",
+        "Make sure to extract the files to `/home/naomi/` directory for proper configuration.",
+        "Make sure to extract the files and place the configuration in `~/.naomi/config/` directory."
+      ],
+      "golden_answer": "Make sure to extract the files to a directory of your choice for proper configuration."
+    }
+  ]
+}

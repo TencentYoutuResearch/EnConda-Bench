@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_kerneltuner_kernel_tuner_error_readme_merge_k4",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the example code, `tune_params` is incorrectly formatted as a list of tuples instead of a dictionary, which will cause a syntax or type error in the `tune_kernel` function.",
+      "correction_candidates": [
+        "tune_params = {'block_size_x': [32, 64, 128, 256, 512]}",
+        "tune_params = dict(block_size_x=[32, 64, 128, 256, 512])",
+        "tune_params = \"block_size_x: [32, 64, 128, 256, 512]\"",
+        "params = {'block_size_x': [32, 64, 128, 256, 512]}"
+      ],
+      "golden_answer": "tune_params = {'block_size_x': [32, 64, 128, 256, 512]}"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The `pip install` command is listed before the instruction to install the prerequisite CUDA/OpenCL/HIP compilers, which could cause the installation to fail or the package to not find the necessary backend.",
+      "correction_candidates": [
+        "Swap the first two bullet points in the 'Installation' section so that compiler installation comes before the `pip install` command.",
+        "The `pip install` command will automatically install the required compilers.",
+        "The order does not matter as the package will prompt for compiler location on first run.",
+        "Combine the two steps into one command: `install-compilers && pip install kernel_tuner[...]`"
+      ],
+      "golden_answer": "Swap the first two bullet points in the 'Installation' section so that compiler installation comes before the `pip install` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the 'Getting Started' guide in the Resources section points to a non-existent page (`quick_start.html` instead of `quickstart.html`), resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/quickstart.html`.",
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/getting_started.html`.",
+        "Remove the link as the documentation is deprecated.",
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/latest/quickstart.html`."
+      ],
+      "golden_answer": "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/quickstart.html`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions incorrectly state that the package requires Python 2.7, which is outdated and incompatible with modern scientific Python packages. This will likely cause installation or runtime errors.",
+      "correction_candidates": [
+        "Remove the line 'Note: This package requires Python 2.7.'",
+        "Change the line to 'Note: This package requires Python 3.6 or newer.'",
+        "The package is compatible with both Python 2 and 3.",
+        "Use `pip2` to install the package for Python 2.7."
+      ],
+      "golden_answer": "Remove the line 'Note: This package requires Python 2.7.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the example, the kernel name passed to `tune_kernel` is 'vector_add_kernel', but the kernel defined in the string is named 'vector_add'. This mismatch will cause an error when the tuner tries to find the kernel.",
+      "correction_candidates": [
+        "Change the first argument of `tune_kernel` from 'vector_add_kernel' to 'vector_add'.",
+        "Rename the kernel in the kernel string to `__global__ void vector_add_kernel(...)`.",
+        "Pass the kernel name as a keyword argument: `tune_kernel(kernel_name='vector_add', ...)`",
+        "The kernel name is optional and can be removed from the function call."
+      ],
+      "golden_answer": "Change the first argument of `tune_kernel` from 'vector_add_kernel' to 'vector_add'."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The README includes a misleading statement that Kernel Tuner 'Automatically rewrites your Python code into optimized CUDA C++,' which is not a feature of the tool and will confuse users about its core functionality.",
+      "correction_candidates": [
+        "Remove the bullet point: '- Automatically rewrites your Python code into optimized CUDA C++'",
+        "Clarify that this feature is experimental and must be enabled with a special flag.",
+        "Change the statement to 'Works with tools like Numba or CuPy to transpile Python'.",
+        "This feature is only available in the enterprise version of Kernel Tuner."
+      ],
+      "golden_answer": "Remove the bullet point: '- Automatically rewrites your Python code into optimized CUDA C++'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses the incorrect package name `kernel-tuner` (with a hyphen) instead of the correct `kernel_tuner` (with an underscore), which will cause the installation to fail with a 'package not found' error.",
+      "correction_candidates": [
+        "Replace all instances of `kernel-tuner` with `kernel_tuner` in the `pip install` commands.",
+        "Use quotes around the package name: `pip install 'kernel-tuner[cuda]'`.",
+        "The package was renamed; both `kernel-tuner` and `kernel_tuner` are valid aliases.",
+        "Use conda, as it correctly resolves the package name: `conda install kernel-tuner`."
+      ],
+      "golden_answer": "Replace all instances of `kernel-tuner` with `kernel_tuner` in the `pip install` commands."
+    }
+  ]
+}

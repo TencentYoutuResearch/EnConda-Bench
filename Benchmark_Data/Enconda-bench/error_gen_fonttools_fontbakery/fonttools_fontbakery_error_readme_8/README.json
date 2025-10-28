@@ -1,0 +1,29 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_8",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrectly states Font Bakery requires only Python 3.5 and is incompatible with newer versions",
+      "correction_candidates": [
+        "Font Bakery supports Python 3.8+ and is regularly updated to work with current Python versions.",
+        "Font Bakery requires Python 3.6 or newer and is compatible with the latest Python releases.",
+        "Font Bakery works with Python 3.7+ and is actively maintained for modern Python versions.",
+        "Font Bakery supports Python 3.8 through 3.12 and is tested against current Python versions."
+      ],
+      "golden_answer": "Font Bakery supports Python 3.8+ and is regularly updated to work with current Python versions."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used invalid command syntax with non-existent --profile and --check-all parameters",
+      "correction_candidates": [
+        "Run Font Bakery with: `fontbakery check-universal fonts/*.ttf`",
+        "Run Font Bakery with: `fontbakery check-googlefonts fonts/*.ttf`",
+        "Run Font Bakery with: `fontbakery check-opentype fonts/*.ttf`",
+        "Run Font Bakery with: `fontbakery check-fontval fonts/*.ttf`"
+      ],
+      "golden_answer": "Run Font Bakery with: `fontbakery check-universal fonts/*.ttf`"
+    }
+  ]
+}

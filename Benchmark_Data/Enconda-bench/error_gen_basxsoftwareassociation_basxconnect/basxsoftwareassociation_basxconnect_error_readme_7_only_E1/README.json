@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_7_only_E1",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Lists unnecessary and potentially conflicting dependencies that may not be required for basxconnect",
+      "correction_candidates": [
+        "Install only essential dependencies: `sudo apt-get install python3-dev libpq-dev` and `pip install django psycopg2-binary`",
+        "Use `pip install -r requirements.txt` to install only the dependencies specified in the project requirements",
+        "Install minimal system packages: `sudo apt-get install build-essential python3-pip` then install Python packages via pip",
+        "Run `sudo apt-get install git python3-venv` and create virtual environment before installing any Python packages"
+      ],
+      "golden_answer": "Install only essential dependencies: `sudo apt-get install python3-dev libpq-dev` and `pip install django psycopg2-binary`"
+    }
+  ]
+}

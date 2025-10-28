@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_2_only_E7",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command `pip install rebench==0.9` pins the installation to a specific, outdated version. This can lead to compatibility issues or missing features described in the documentation, which refers to version 1.0 and later.",
+      "correction_candidates": [
+        "`pip install rebench`",
+        "`pip install rebench --upgrade`",
+        "`pip install 'rebench>=1.0'`",
+        "`python3 -m pip install rebench`"
+      ],
+      "golden_answer": "`pip install rebench`"
+    }
+  ]
+}

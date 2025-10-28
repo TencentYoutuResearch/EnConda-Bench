@@ -1,0 +1,18 @@
+{
+  "readme": "wind-python_windpowerlib_error_readme_2_only_E7",
+  "repo_name": "wind-python_windpowerlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions incorrectly state that the library is compatible with Python 2, which could lead users to attempt installation in an unsupported environment.",
+      "correction_candidates": [
+        "The windpowerlib is designed for Python 3 and tested on Python >= 3.10.",
+        "The windpowerlib is designed for Python 3 only.",
+        "The windpowerlib is designed for the latest Python version.",
+        "The windpowerlib is designed for Python > 3.9."
+      ],
+      "golden_answer": "The windpowerlib is designed for Python 3 and tested on Python >= 3.10."
+    }
+  ]
+}

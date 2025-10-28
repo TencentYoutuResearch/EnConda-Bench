@@ -1,0 +1,18 @@
+{
+  "readme": "skmin-lab_unixmd_error_readme_4_only_E4",
+  "repo_name": "skmin-lab_unixmd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to add utility scripts to the PYTHONPATH points to an incorrect directory (`$PYUNIXMDHOME/scripts`) instead of the correct one (`$PYUNIXMDHOME/util`).",
+      "correction_candidates": [
+        "$ export PYTHONPATH=$PYUNIXMDHOME/utils:$PYTHONPATH",
+        "$ export PYTHONPATH=$(pwd)/util:$PYTHONPATH",
+        "The utility scripts are located in the `util` directory, not `scripts`.",
+        "$ export PYTHONPATH=$PYUNIXMDHOME/util:$PYTHONPATH"
+      ],
+      "golden_answer": "$ export PYTHONPATH=$PYUNIXMDHOME/util:$PYTHONPATH"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_5_only_E7",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Inconsistent Python version usage - using python2 in step 3 while the project is written in Python 3",
+      "correction_candidates": [
+        "python3 ./tools/provision",
+        "python ./tools/provision",
+        "python3.8 ./tools/provision",
+        "python3 ./tools/setup"
+      ],
+      "golden_answer": "python3 ./tools/provision"
+    }
+  ]
+}

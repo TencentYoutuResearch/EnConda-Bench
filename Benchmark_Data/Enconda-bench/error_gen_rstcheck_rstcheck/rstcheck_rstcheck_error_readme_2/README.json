@@ -1,0 +1,29 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_2",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "A 'Quick Start' section is placed before the 'Installation' section, suggesting the user can run the command before installing the package.",
+      "correction_candidates": [
+        "Move the 'Quick Start' section to be after the 'Installation' section.",
+        "Delete the 'Quick Start' section entirely.",
+        "Combine the 'Quick Start' section with the 'Examples' section.",
+        "Add a note in 'Quick Start' that installation is required first."
+      ],
+      "golden_answer": "Move the 'Quick Start' section to be after the 'Installation' section."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary and incorrect dependency 'check-rst' is listed as a required installation step.",
+      "correction_candidates": [
+        "Remove the line '$ pip install check-rst'.",
+        "Change '$ pip install check-rst' to '$ pip install rst-lint'.",
+        "Combine the installations into '$ pip install check-rst rstcheck'.",
+        "Replace '$ pip install check-rst' with '$ apt-get install rst-checker'."
+      ],
+      "golden_answer": "Remove the line '$ pip install check-rst'."
+    }
+  ]
+}

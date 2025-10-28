@@ -1,0 +1,18 @@
+{
+  "readme": "skmin-lab_unixmd_error_readme_2_only_E6",
+  "repo_name": "skmin-lab_unixmd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instruction to run the test appears before the necessary `export PYTHONPATH` command, causing a `ModuleNotFoundError` because the Python interpreter cannot locate the PyUNIxMD package.",
+      "correction_candidates": [
+        "Move the `export PYTHONPATH=$PYUNIXMDHOME/src:$PYTHONPATH` command to be before the `python3 run.py >& log` command.",
+        "Add `sys.path.append('$PYUNIXMDHOME/src')` to the beginning of `run.py`.",
+        "Run the test using `python3 -m src.run >& log` from the `$PYUNIXMDHOME` directory.",
+        "Install the package using `python3 setup.py install` before running the test."
+      ],
+      "golden_answer": "Move the `export PYTHONPATH=$PYUNIXMDHOME/src:$PYTHONPATH` command to be before the `python3 run.py >& log` command."
+    }
+  ]
+}

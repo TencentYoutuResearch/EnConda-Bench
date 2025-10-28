@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_andreidrang_python-rucaptcha_error_readme_merge_k3",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README claims full support for Python 3.8, but the changelog for v6.0 explicitly states that Python 3.8 support was dropped.",
+      "correction_candidates": [
+        "Change the sentence to 'Full support for Python 3.9 and newer is guaranteed.'",
+        "Install a version compatible with Python 3.8, like `pip install python-rucaptcha<6.0`.",
+        "Remove the sentence 'Full support for Python 3.8 and newer is guaranteed.'",
+        "Update the changelog to remove the mention of dropping Python 3.8 support."
+      ],
+      "golden_answer": "Remove the sentence 'Full support for Python 3.8 and newer is guaranteed.'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions state to run tests before setting the required `RUCAPTCHA_KEY` environment variable, which will cause the tests to fail due to a missing API key.",
+      "correction_candidates": [
+        "Combine the steps into one command: `RUCAPTCHA_KEY=YOUR_KEY make tests`.",
+        "The tests can be run without an API key by using a specific flag: `make tests --no-api-key`.",
+        "The environment variable should be set in a `.env` file, not manually.",
+        "Reverse the order of the steps: first set the environment variable, then run `make tests`."
+      ],
+      "golden_answer": "Reverse the order of the steps: first set the environment variable, then run `make tests`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command uses `python_rucaptcha` with an underscore, but the correct package name on PyPI is `python-rucaptcha` with a hyphen, which will cause the installation to fail.",
+      "correction_candidates": [
+        "pip install rucaptcha",
+        "python -m pip install python-rucaptcha",
+        "pip install 'python-rucaptcha'",
+        "pip install python-rucaptcha"
+      ],
+      "golden_answer": "pip install python-rucaptcha"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The image path for finding the API key is incorrect (`docs/img.png`), causing the image to not display. The correct path is `files/img.png`.",
+      "correction_candidates": [
+        "The image is deprecated; remove the entire line.",
+        "Change the image path from `.../docs/img.png` to `.../files/img.png`.",
+        "Change the image path from `.../docs/img.png` to `.../assets/img.png`.",
+        "The image link is an absolute URL and should be `https://raw.githubusercontent.com/AndreiDrang/python-rucaptcha/master/files/img.png`."
+      ],
+      "golden_answer": "Change the image path from `.../docs/img.png` to `.../files/img.png`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installation command includes deprecated pydantic version that conflicts with v6.0 changelog stating library stopped using pydantic",
+      "correction_candidates": [
+        "pip install python-rucaptcha",
+        "pip install python-rucaptcha msgspec",
+        "pip install python-rucaptcha pydantic",
+        "pip install python-rucaptcha --upgrade"
+      ],
+      "golden_answer": "pip install python-rucaptcha"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "apiflask_apiflask_error_readme_2",
+  "repo_name": "apiflask_apiflask",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command unnecessarily includes the `flask` package. Since `apiflask` lists `flask` as a dependency, `pip` will install it automatically, and specifying it manually could lead to version conflicts.",
+      "correction_candidates": [
+        "Change the command to `$ pip3 install apiflask`.",
+        "Change the command to `$ pip3 install apiflask` and add a note to run `pip install flask` separately.",
+        "Change the command to `$ pip3 install flask && pip3 install apiflask`.",
+        "Change the command to `$ pip3 install apiflask[flask]`."
+      ],
+      "golden_answer": "Change the command to `$ pip3 install apiflask`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions suggest saving the example code as `main.py`, but the subsequent `flask run` command will fail because it looks for `app.py` or `wsgi.py` by default.",
+      "correction_candidates": [
+        "Change the filename to `app.py`.",
+        "Keep the filename as `main.py` and change the run command to `$ flask --app main run`.",
+        "Change the filename to `wsgi.py`.",
+        "Add a line `export FLASK_APP=main.py` before the `flask run` command."
+      ],
+      "golden_answer": "Change the filename to `app.py`."
+    }
+  ]
+}

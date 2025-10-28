@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_wolph_python-progressbar_error_readme_merge_k2",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip installation command refers to `progressbar`, which is the original, abandoned package, instead of the correct `progressbar2` for this forked version.",
+      "correction_candidates": [
+        "pip install python-progressbar",
+        "pip install progressbar2",
+        "pip install progress-bar-2",
+        "pip install progressbar --upgrade"
+      ],
+      "golden_answer": "pip install progressbar2"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "An incorrect note has been added stating that the package requires Python 2.7, which is misleading as the library supports modern Python versions.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7 compatibility.",
+        "Change the note to specify Python 3.6+ is required.",
+        "Change the note to state the package is compatible with both Python 2 and 3.",
+        "Add a command `pip install progressbar2 --python-version 2.7`."
+      ],
+      "golden_answer": "Remove the note about Python 2.7 compatibility."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The GPG verification command incorrectly references a local file `mykey.asc` instead of the signature file `progressbar2-<version>.tar.gz.asc` that accompanies the release download.",
+      "correction_candidates": [
+        "gpg --import mykey.asc && gpg --verify progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz.asc progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz.asc"
+      ],
+      "golden_answer": "gpg --verify progressbar2-<version>.tar.gz.asc progressbar2-<version>.tar.gz"
+    }
+  ]
+}

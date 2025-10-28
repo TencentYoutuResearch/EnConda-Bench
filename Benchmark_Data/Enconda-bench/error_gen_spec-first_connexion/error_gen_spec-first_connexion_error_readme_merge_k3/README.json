@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_spec-first_connexion_error_readme_merge_k3",
+  "repo_name": "spec-first_connexion",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation' section, the command to install multiple extras uses a space instead of a comma as a separator inside the brackets, which is incorrect syntax.",
+      "correction_candidates": [
+        "$ pip install connexion[swagger-ui] connexion[uvicorn]",
+        "$ pip install \"connexion[swagger-ui,uvicorn]\"",
+        "$ pip install connexion --extras swagger-ui,uvicorn",
+        "$ pip install connexion[swagger-ui,uvicorn]"
+      ],
+      "golden_answer": "$ pip install connexion[swagger-ui,uvicorn]"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Contributing' section, `pre-commit install` is run before `poetry install`. The pre-commit hooks might depend on packages that are only installed by `poetry install`, so the order should be reversed.",
+      "correction_candidates": [
+        "Run `poetry install --all-extras` before `pre-commit install`.",
+        "Run `poetry install --all-extras && pre-commit install`.",
+        "Run `pre-commit install` inside a `poetry shell`.",
+        "Remove the `pre-commit install` command as it is optional."
+      ],
+      "golden_answer": "Run `poetry install --all-extras` before `pre-commit install`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `uvicorn` extra, which is required to use the `app.run()` method for development, has been removed from the list of optional dependencies in the 'Installation' section. This will cause an error for users trying to use `app.run()`.",
+      "correction_candidates": [
+        "Add `- `uvicorn`: Enables to run the your application using `app.run()` for development instead of using an external ASGI server.` back to the list of extras.",
+        "Remove the `app.run()` example from the 'Running your application' section.",
+        "Change the installation example to `$ pip install connexion[swagger-ui] uvicorn`.",
+        "Add a note stating that `uvicorn` must be installed separately to use `app.run()`."
+      ],
+      "golden_answer": "Add `- `uvicorn`: Enables to run the your application using `app.run()` for development instead of using an external ASGI server.` back to the list of extras."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the `openapi.yaml` example, the `operationId` is set to `app.post_greeting`. However, the corresponding Python code is in a file named `run.py`, so the correct `operationId` should be `run.post_greeting`.",
+      "correction_candidates": [
+        "Rename the file in the example from `run.py` to `app.py`.",
+        "Change `operationId: app.post_greeting` to `operationId: run.post_greeting`.",
+        "Change `app.add_api(\"openapi.yaml\")` to `app.add_api(\"openapi.yaml\", resolver=RelativeResolver(\"run\"))`.",
+        "In `run.py`, move the `post_greeting` function inside a class named `app`."
+      ],
+      "golden_answer": "Change `operationId: app.post_greeting` to `operationId: run.post_greeting`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The gunicorn command in the 'Running your application' section incorrectly specifies the worker class as `uvicorn_worker`. The correct value is `uvicorn.workers.UvicornWorker`.",
+      "correction_candidates": [
+        "$ gunicorn -k uvicorn.workers.UvicornWorker run:app",
+        "$ gunicorn --worker-class uvicorn.workers.UvicornWorker run:app",
+        "$ gunicorn -k uvicorn run:app",
+        "$ gunicorn -w 4 -k uvicorn.workers.UvicornWorker run:app"
+      ],
+      "golden_answer": "$ gunicorn -k uvicorn.workers.UvicornWorker run:app"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Contributing' section incorrectly states that 'Older versions of Python like 3.6 are supported.' Connexion 3 requires Python 3.8 or higher, which can cause compatibility issues for developers.",
+      "correction_candidates": [
+        "Remove the sentence: 'Older versions of Python like 3.6 are supported.'",
+        "Change 'Older versions of Python like 3.6 are supported.' to 'Connexion requires Python 3.8 or newer.'",
+        "Change the poetry command to `poetry env use python3.8` before installing.",
+        "Add a check for the Python version to the pre-commit hooks."
+      ],
+      "golden_answer": "Change 'Older versions of Python like 3.6 are supported.' to 'Connexion requires Python 3.8 or newer.'"
+    }
+  ]
+}

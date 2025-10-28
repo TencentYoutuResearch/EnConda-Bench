@@ -1,0 +1,29 @@
+{
+  "readme": "democracyclub_uk-polling-stations_error_readme_2",
+  "repo_name": "democracyclub_uk-polling-stations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `apt-get install` command for Ubuntu setup is missing the `postgis` package, which is a required system dependency for the project.",
+      "correction_candidates": [
+        "The `postgresql-14-postgis-3` package includes `postgis`, so no change is needed.",
+        "Add `postgis` to the `apt-get install` command list for Ubuntu.",
+        "Run `sudo apt-get install postgis` in a separate command after the main package installation.",
+        "The `postgis` package should be installed via `pip` instead of `apt-get`."
+      ],
+      "golden_answer": "Add `postgis` to the `apt-get install` command list for Ubuntu."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to create the local config file (`cp polling_stations/local.example.py...`) uses an incorrect source path, as the example file is located in the `settings` subdirectory.",
+      "correction_candidates": [
+        "The command should be `mv polling_stations/settings/local.example.py polling_stations/settings/local.py`.",
+        "Correct the source path in the `cp` command to `polling_stations/settings/local.example.py`.",
+        "The command should be `cp polling_stations/settings.py polling_stations/settings/local.py`.",
+        "Create the `polling_stations/settings/local.py` file manually and copy the contents from `local.example.py`."
+      ],
+      "golden_answer": "Correct the source path in the `cp` command to `polling_stations/settings/local.example.py`."
+    }
+  ]
+}

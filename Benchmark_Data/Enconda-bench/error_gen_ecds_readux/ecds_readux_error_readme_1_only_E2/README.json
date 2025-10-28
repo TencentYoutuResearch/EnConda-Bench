@@ -1,0 +1,18 @@
+{
+  "readme": "ecds_readux_error_readme_1_only_E2",
+  "repo_name": "ecds_readux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command 'python manage.py runserver --cert-file cert.crt' is incorrect because the standard 'runserver' command does not accept the '--cert-file' argument. The correct command is 'runserver_plus'.",
+      "correction_candidates": [
+        "Replace 'runserver' with 'runserver_plus' to use the django-extensions command that supports SSL certificates.",
+        "Remove the '--cert-file cert.crt' argument from the command.",
+        "Install a package like 'stunnel' to handle SSL termination separately.",
+        "Change the command to 'python manage.py runserver 0.0.0.0:3000 --insecure'."
+      ],
+      "golden_answer": "Replace 'runserver' with 'runserver_plus' to use the django-extensions command that supports SSL certificates."
+    }
+  ]
+}

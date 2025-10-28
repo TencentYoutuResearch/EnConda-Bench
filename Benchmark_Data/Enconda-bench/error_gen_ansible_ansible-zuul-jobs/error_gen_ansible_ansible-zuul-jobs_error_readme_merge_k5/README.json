@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_ansible_ansible-zuul-jobs_error_readme_merge_k5",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The dependencies are installed (step 2) before the virtual environment is activated (step 3), causing them to be installed in the system's global Python environment instead of the project's isolated venv.",
+      "correction_candidates": [
+        "Move step 3 (`source .venv/bin/activate`) to be before step 2 (`pip install ...`).",
+        "Change step 2 to `.venv/bin/pip install ansible ansible-lint`.",
+        "Remove the virtual environment steps and install globally.",
+        "Run `deactivate` before step 2."
+      ],
+      "golden_answer": "Move step 3 (`source .venv/bin/activate`) to be before step 2 (`pip install ...`)."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `pip install ansible` installs the latest version of Ansible, which may be incompatible with the syntax used in older Zuul jobs. A specific version range should be used.",
+      "correction_candidates": [
+        "pip install \"ansible-core<2.15\" ansible-lint",
+        "pip install ansible==2.9 ansible-lint",
+        "pip install ansible ansible-lint --upgrade",
+        "pip install ansible-base ansible-lint"
+      ],
+      "golden_answer": "pip install \"ansible-core<2.15\" ansible-lint"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction says to install `yamllint`, but the required tool for properly linting Ansible and Zuul files is `ansible-lint`. `yamllint` only checks for YAML syntax and misses Ansible-specific issues.",
+      "correction_candidates": [
+        "pip install ansible-lint",
+        "pip install yamllint ansible",
+        "pip install -r requirements-lint.txt",
+        "pip install yamllint ansible-lint"
+      ],
+      "golden_answer": "pip install ansible-lint"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `tox -e lint` is used, but the project is not configured with a `tox.ini` file that defines a `lint` environment, so the command will fail.",
+      "correction_candidates": [
+        "ansible-lint .",
+        "tox",
+        "yamllint .",
+        "make lint"
+      ],
+      "golden_answer": "ansible-lint ."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating and activating the virtual environment, which is the incorrect order",
+      "correction_candidates": [
+        "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "virtualenv venv\n. venv/bin/activate\npip install -r requirements.txt",
+        "python3 -m venv venv\nvenv/bin/activate\npip install -r requirements.txt",
+        "conda create -n myenv python=3.8\nconda activate myenv\npip install -r requirements.txt"
+      ],
+      "golden_answer": "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated and potentially incompatible versions of ansible and zuul",
+      "correction_candidates": [
+        "pip install ansible zuul",
+        "pip install ansible>=6.0.0 zuul>=8.0.0",
+        "pip install ansible==7.1.0 zuul==9.2.0",
+        "pip install 'ansible<8.0' 'zuul<10.0'"
+      ],
+      "golden_answer": "pip install ansible zuul"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installs unnecessary dependency 'zuul-client' that is not needed for basic zuul job definitions",
+      "correction_candidates": [
+        "pip install --user ansible tox",
+        "pip install --user ansible zuul",
+        "pip install --user ansible pyyaml",
+        "pip install --user ansible jinja2 tox"
+      ],
+      "golden_answer": "pip install --user ansible tox"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "xknx_xknx_error_readme_1_only_E2",
+  "repo_name": "xknx_xknx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pre-commit init` is used, which initializes a new pre-commit configuration, instead of `pre-commit install` which installs the hooks from the existing configuration file.",
+      "correction_candidates": [
+        "Install pre-commit hook: `pre-commit run --all-files`",
+        "Install pre-commit hook: `pre-commit install --install-hooks`",
+        "Install pre-commit hook: `git pre-commit install`",
+        "Install pre-commit hook: `pre-commit install`"
+      ],
+      "golden_answer": "Install pre-commit hook: `pre-commit install`"
+    }
+  ]
+}

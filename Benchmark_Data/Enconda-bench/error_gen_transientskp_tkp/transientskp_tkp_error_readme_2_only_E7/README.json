@@ -1,0 +1,18 @@
+{
+  "readme": "transientskp_tkp_error_readme_2_only_E7",
+  "repo_name": "transientskp_tkp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Using `python` instead of `python3` to create the virtual environment can cause version incompatibility issues on systems where `python` defaults to Python 2.",
+      "correction_candidates": [
+        "The command should explicitly use `python3`: `python3 -m venv venv`.",
+        "You should use `virtualenv` instead of `venv`: `virtualenv venv`.",
+        "You should run `sudo update-alternatives --config python` to set the default Python version.",
+        "The project is compatible with both Python 2 and Python 3."
+      ],
+      "golden_answer": "The command should explicitly use `python3`: `python3 -m venv venv`."
+    }
+  ]
+}

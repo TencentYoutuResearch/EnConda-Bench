@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_owid_etl_error_readme_merge_k3",
+  "repo_name": "owid_etl",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README suggests installing dependencies using `pip install -r requirements.txt`, but this project uses Poetry for dependency management and a `requirements.txt` file may not be present or up-to-date.",
+      "correction_candidates": [
+        "Install dependencies using Poetry: `poetry install`",
+        "First, install Poetry with `pip install poetry`, then run `poetry install`.",
+        "Generate a requirements file with `poetry export -f requirements.txt --output requirements.txt` and then run `pip install -r requirements.txt`.",
+        "Install dependencies using pipenv: `pipenv install`"
+      ],
+      "golden_answer": "Install dependencies using Poetry: `poetry install`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `etl --run my_step --grapher` is syntactically incorrect. The `--run` flag is not a valid way to specify the action; `run` should be a positional argument.",
+      "correction_candidates": [
+        "Run a step with the command: `etl run my_step --grapher`",
+        "Run a step with the command: `etl my_step --grapher`",
+        "Execute a step with the command: `python -m etl.run my_step --grapher`",
+        "Run a step with the command: `etl --step my_step --grapher`"
+      ],
+      "golden_answer": "Run a step with the command: `etl run my_step --grapher`"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly list installing dependencies with `poetry install` before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "Reverse the order of the steps: first create the virtual environment, then install dependencies.",
+        "Poetry handles its own virtual environment; simply run `poetry install` after cloning.",
+        "Run `poetry shell` to create and activate the virtual environment, then run `poetry install`.",
+        "Run `python -m venv .venv`, then `poetry install`, then `source .venv/bin/activate`."
+      ],
+      "golden_answer": "Reverse the order of the steps: first create the virtual environment, then install dependencies."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly advise running `pip install etl`, which installs a public package from PyPI instead of the local project tool and is redundant with `poetry install`.",
+      "correction_candidates": [
+        "Change `pip install etl` to `pip install .`",
+        "Run `pip install -e .` to install the package in editable mode.",
+        "Remove the `pip install etl` command.",
+        "Run `pip install etl-owid` instead."
+      ],
+      "golden_answer": "Remove the `pip install etl` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `etl grapher ...` uses an incorrect subcommand 'grapher'. The `grapher` functionality is an option for the `run` command.",
+      "correction_candidates": [
+        "Correct the command to `etl run data/garden/institution/2023-11-29/ggdc --grapher --private`",
+        "Change `etl grapher` to `etl run`.",
+        "The command is `etl build --grapher data/garden/institution/2023-11-29/ggdc --private`",
+        "Run the grapher step separately: `etl grapher-update data/garden/institution/2023-11-29/ggdc --private`"
+      ],
+      "golden_answer": "Correct the command to `etl run data/garden/institution/2023-11-29/ggdc --grapher --private`"
+    }
+  ]
+}

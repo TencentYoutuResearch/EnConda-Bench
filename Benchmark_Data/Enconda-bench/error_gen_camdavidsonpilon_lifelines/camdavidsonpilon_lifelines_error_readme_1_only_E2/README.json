@@ -1,0 +1,18 @@
+{
+  "readme": "camdavidsonpilon_lifelines_error_readme_1_only_E2",
+  "repo_name": "camdavidsonpilon_lifelines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install --upgrade lifelines` uses incorrect syntax for flags. The package name should come before the options.",
+      "correction_candidates": [
+        "Replace `pip install --upgrade lifelines` with `pip install lifelines`.",
+        "The correct command is `pip install lifelines --upgrade`.",
+        "Change the command to `python -m pip install --upgrade lifelines`.",
+        "The command should be `pip install lifelines -U` which is a valid shorthand."
+      ],
+      "golden_answer": "The correct command is `pip install lifelines --upgrade`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "microsoftgraph_msgraph-sdk-python-core_error_readme_6",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependency 'requests-oauthlib' that is not required for msgraph-core",
+      "correction_candidates": [
+        "Remove pip3 install requests-oauthlib line entirely",
+        "Replace requests-oauthlib with kiota-abstractions",
+        "Change requests-oauthlib to microsoft-kiota-authentication-azure",
+        "Keep only msgraph-core and azure-identity installations"
+      ],
+      "golden_answer": "Remove pip3 install requests-oauthlib line entirely"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Code tries to use 'credential' variable before it is defined, causing a logical order error",
+      "correction_candidates": [
+        "credential=EnvironmentCredential()\nauth_provider = AzureIdentityAuthenticationProvider(credential)",
+        "auth_provider = AzureIdentityAuthenticationProvider(EnvironmentCredential())",
+        "credential = EnvironmentCredential()\nauth_provider = AzureIdentityAuthenticationProvider(credential)",
+        "Move credential definition above auth_provider initialization"
+      ],
+      "golden_answer": "credential=EnvironmentCredential()\nauth_provider = AzureIdentityAuthenticationProvider(credential)"
+    }
+  ]
+}

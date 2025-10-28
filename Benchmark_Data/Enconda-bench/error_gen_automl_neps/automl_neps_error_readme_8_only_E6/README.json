@@ -1,0 +1,18 @@
+{
+  "readme": "automl_neps_error_readme_8_only_E6",
+  "repo_name": "automl_neps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Placed 'cd neps' after 'poetry install' instead of before it, which is incorrect execution order",
+      "correction_candidates": [
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install",
+        "git clone git@github.com:automl/neps.git\ncd neps\npip install -e .",
+        "git clone git@github.com:automl/neps.git\ncd neps\npython setup.py install",
+        "git clone git@github.com:automl/neps.git\ncd neps\nconda env create -f environment.yml"
+      ],
+      "golden_answer": "git clone git@github.com:automl/neps.git\ncd neps\npoetry install"
+    }
+  ]
+}

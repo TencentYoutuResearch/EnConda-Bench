@@ -1,0 +1,18 @@
+{
+  "readme": "dj-stripe_dj-stripe_error_readme_1_only_E1",
+  "repo_name": "dj-stripe_dj-stripe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily advise running `pip install stripe` separately. The `dj-stripe` package automatically installs the correct version of the `stripe` library as a dependency, and installing it manually can cause version conflicts.",
+      "correction_candidates": [
+        "Remove the `pip install stripe` command from the installation instructions.",
+        "Change `pip install stripe` to `pip install stripe==5.4.0`.",
+        "Move the `pip install stripe` command to after the `pip install dj-stripe` command.",
+        "Change `pip install stripe` to `pip install -U stripe`."
+      ],
+      "golden_answer": "Remove the `pip install stripe` command from the installation instructions."
+    }
+  ]
+}

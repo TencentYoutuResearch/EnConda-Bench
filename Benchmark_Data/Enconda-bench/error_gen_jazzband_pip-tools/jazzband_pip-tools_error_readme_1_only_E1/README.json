@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_pip-tools_error_readme_1_only_E1",
+  "repo_name": "jazzband_pip-tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command incorrectly installs `pip` itself instead of `pip-tools`.",
+      "correction_candidates": [
+        "(venv) $ python -m pip install pip-tools",
+        "(venv) $ pip install pip-tools",
+        "(venv) $ python -m pip install piptools",
+        "(venv) $ python -m pip install pip-tool"
+      ],
+      "golden_answer": "(venv) $ python -m pip install pip-tools"
+    }
+  ]
+}

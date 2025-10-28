@@ -1,0 +1,18 @@
+{
+  "readme": "intake_intake_error_readme_6_only_E4",
+  "repo_name": "intake_intake",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed file path from 'scripts/ci/environment-py311.yml' to 'scripts/requirements/environment-py311.yml' which is an incorrect path",
+      "correction_candidates": [
+        "scripts/ci/environment-py311.yml",
+        "requirements/environment-py311.yml",
+        "ci/environment-py311.yml",
+        "scripts/environment-py311.yml"
+      ],
+      "golden_answer": "scripts/ci/environment-py311.yml"
+    }
+  ]
+}

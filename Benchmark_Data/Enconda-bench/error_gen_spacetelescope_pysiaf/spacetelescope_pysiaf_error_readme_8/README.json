@@ -1,0 +1,29 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_8",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Extremely outdated Python version requirement (2.6) that is no longer supported",
+      "correction_candidates": [
+        "This package is supported in python 3.8 and 3.9",
+        "This package requires python 3.6 or later",
+        "This package supports python 3.7+",
+        "This package is compatible with python 3.8, 3.9, and 3.10"
+      ],
+      "golden_answer": "This package is supported in python 3.8 and 3.9"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using conda install command with packages that may not be available or correctly named in conda",
+      "correction_candidates": [
+        "`pip install pysiaf`",
+        "`conda install -c conda-forge pysiaf`",
+        "`pip install pysiaf matplotlib numpy`",
+        "`conda install pysiaf -c anaconda`"
+      ],
+      "golden_answer": "`pip install pysiaf`"
+    }
+  ]
+}

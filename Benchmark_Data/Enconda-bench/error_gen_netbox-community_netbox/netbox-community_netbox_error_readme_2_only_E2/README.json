@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_2_only_E2",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the development server uses an invalid parameter `--port 8000`. The correct syntax does not use the `--port` flag.",
+      "correction_candidates": [
+        "Change the command to `python3 manage.py runserver 8000`.",
+        "Change the command to `python3 manage.py runserver -p 8000`.",
+        "Change the command to `python3 manage.py runserver --port=8000`.",
+        "Change the command to `python3 manage.py startserver --port 8000`."
+      ],
+      "golden_answer": "Change the command to `python3 manage.py runserver 8000`."
+    }
+  ]
+}

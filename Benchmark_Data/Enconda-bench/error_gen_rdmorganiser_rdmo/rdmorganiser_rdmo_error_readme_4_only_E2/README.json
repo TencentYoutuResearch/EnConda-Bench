@@ -1,0 +1,18 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_4_only_E2",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py makemigrations` is used instead of `python manage.py migrate`. `makemigrations` creates migration files but does not apply them to the database, leaving the setup incomplete.",
+      "correction_candidates": [
+        "Change `python manage.py makemigrations` to `python manage.py migrate`.",
+        "Add the command `python manage.py migrate` after `python manage.py makemigrations`.",
+        "Change `python manage.py makemigrations` to `python manage.py sqlmigrate`.",
+        "Change `python manage.py makemigrations` to `python manage.py migrate --run-syncdb`."
+      ],
+      "golden_answer": "Change `python manage.py makemigrations` to `python manage.py migrate`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_8_only_E1",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Specific version 6.18.5 may not exist or be outdated, potentially causing installation failure",
+      "correction_candidates": [
+        "Use latest version: pip3 install testfixtures",
+        "Use version range: pip3 install testfixtures>=6.0.0",
+        "Check available versions: pip3 install testfixtures==",
+        "Install from development branch: pip3 install git+https://github.com/simplistix/testfixtures.git"
+      ],
+      "golden_answer": "Use latest version: pip3 install testfixtures"
+    }
+  ]
+}

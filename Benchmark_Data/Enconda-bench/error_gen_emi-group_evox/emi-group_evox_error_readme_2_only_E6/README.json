@@ -1,0 +1,18 @@
+{
+  "readme": "emi-group_evox_error_readme_2_only_E6",
+  "repo_name": "emi-group_evox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Quick Start example attempts to run the workflow with `workflow.step(state)` before the state is initialized with `workflow.init(key)`, which is a logical order error.",
+      "correction_candidates": [
+        "Move the `for` loop (run step) after the `state = workflow.init(key)` line.",
+        "Combine the init and step into a single line: `state = workflow.run(key, 100)`.",
+        "Initialize state inside the loop: `for i in range(100): state = workflow.init(key); state = workflow.step(state)`.",
+        "Remove the `workflow.init(key)` step and let `workflow.step` handle initialization."
+      ],
+      "golden_answer": "Move the `for` loop (run step) after the `state = workflow.init(key)` line."
+    }
+  ]
+}

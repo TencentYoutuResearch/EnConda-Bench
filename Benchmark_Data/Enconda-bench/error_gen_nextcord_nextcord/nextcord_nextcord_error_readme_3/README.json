@@ -1,0 +1,29 @@
+{
+  "readme": "nextcord_nextcord_error_readme_3",
+  "repo_name": "nextcord_nextcord",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The list of required Linux packages includes `libssl-dev`, which is not a necessary dependency for installing nextcord with voice support.",
+      "correction_candidates": [
+        "Remove `libffi-dev` from the list of packages.",
+        "Replace `libssl-dev` with `openssl-dev` in the list of packages.",
+        "Remove `libssl-dev` from the list of packages.",
+        "Remove `python-dev` from the list of packages."
+      ],
+      "golden_answer": "Remove `libssl-dev` from the list of packages."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the examples directory is broken. It incorrectly points to a singular `example` directory instead of the correct plural `examples` directory.",
+      "correction_candidates": [
+        "Change the link `.../blob/master/example/` to point to `.../tree/master/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/main/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/master/docs/examples/`.",
+        "Change the link `.../blob/master/example/` to point to `.../blob/master/examples/`."
+      ],
+      "golden_answer": "Change the link `.../blob/master/example/` to point to `.../blob/master/examples/`."
+    }
+  ]
+}

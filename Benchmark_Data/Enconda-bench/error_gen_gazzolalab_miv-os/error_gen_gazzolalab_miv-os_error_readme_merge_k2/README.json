@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_gazzolalab_miv-os_error_readme_merge_k2",
+  "repo_name": "gazzolalab_miv-os",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3+' which is too broad and may cause users to attempt installation with incompatible older Python 3 versions. The package requires Python 3.8 or newer.",
+      "correction_candidates": [
+        "MiV-OS is compatible with Python.",
+        "MiV-OS is compatible with Python 3.8+.",
+        "MiV-OS is compatible with Python 3.6, 3.7, 3.8, 3.9.",
+        "MiV-OS is compatible with the latest version of Python."
+      ],
+      "golden_answer": "MiV-OS is compatible with Python 3.8+."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install miv_os` is incorrect. The package name on PyPI uses a hyphen (MiV-OS), not an underscore.",
+      "correction_candidates": [
+        "pip install MiV-OS",
+        "pip install miv-os-package",
+        "pip install \"MiV_OS\"",
+        "pip install git+https://github.com/GazzolaLab/MiV-OS.git"
+      ],
+      "golden_answer": "pip install MiV-OS"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily ask the user to manually install `numpy`. `numpy` is a dependency of MiV-OS and will be installed automatically by pip.",
+      "correction_candidates": [
+        "Remove the line `$ pip install numpy`.",
+        "Add `scipy` to the manual installation: `$ pip install numpy scipy`.",
+        "Move the `$ pip install numpy` command after `$ pip install MiV-OS`.",
+        "Specify a version for numpy: `$ pip install numpy==1.21.0`."
+      ],
+      "golden_answer": "Remove the line `$ pip install numpy`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contribution guideline points to `docs/CONTRIBUTING.md`, but the file is located in the root directory of the repository.",
+      "correction_candidates": [
+        "Change the link path to `CONTRIBUTING.md`.",
+        "Change the link path to `../CONTRIBUTING.md`.",
+        "Change the link path to `/.github/CONTRIBUTING.md`.",
+        "Change the link path to the full GitHub URL for the file."
+      ],
+      "golden_answer": "Change the link path to `CONTRIBUTING.md`."
+    }
+  ]
+}

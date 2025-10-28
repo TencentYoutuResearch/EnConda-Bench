@@ -1,0 +1,18 @@
+{
+  "readme": "spotify_luigi_error_readme_1_only_E2",
+  "repo_name": "spotify_luigi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install Luigi with TOML support is incorrect. `luigi-toml` is not the correct package name or syntax.",
+      "correction_candidates": [
+        "Run ``pip install luigi[toml]`` to install Luigi with `TOML-based configs` support.",
+        "Run ``pip install luigi --extra toml`` to install Luigi with `TOML-based configs` support.",
+        "Run ``pip install luigi; pip install toml`` to install Luigi with `TOML-based configs` support.",
+        "Run ``pip install 'luigi[toml]'`` to install Luigi with `TOML-based configs` support."
+      ],
+      "golden_answer": "Run ``pip install luigi[toml]`` to install Luigi with `TOML-based configs` support."
+    }
+  ]
+}

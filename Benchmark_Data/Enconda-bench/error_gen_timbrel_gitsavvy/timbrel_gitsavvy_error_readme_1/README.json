@@ -1,0 +1,29 @@
+{
+  "readme": "timbrel_gitsavvy_error_readme_1",
+  "repo_name": "timbrel_gitsavvy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that a 'recent' version of Git is required, but does not specify the minimum version number, which can cause compatibility issues for users with older Git installations.",
+      "correction_candidates": [
+        "Change the note to: **Note:** GitSavvy requires Git versions at or greater than 2.18.0. However, it is highly recommended to use a more recent version of Git, as some advanced rebasing features in GitSavvy require at least version 2.38.0.",
+        "Change the note to: **Note:** GitSavvy requires the latest stable version of Git.",
+        "Change the note to: **Note:** GitSavvy requires Git version 2.0 or newer.",
+        "Change the note to: **Note:** GitSavvy is compatible with any version of Git released after 2018."
+      ],
+      "golden_answer": "Change the note to: **Note:** GitSavvy requires Git versions at or greater than 2.18.0. However, it is highly recommended to use a more recent version of Git, as some advanced rebasing features in GitSavvy require at least version 2.38.0."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example keybinding for opening the status view uses an incorrect command 'gs_status'. The correct command is 'gs_show_status'.",
+      "correction_candidates": [
+        "Change the command in the keybinding to `gs_show_status`.",
+        "Change the command in the keybinding to `gitsavvy_status`.",
+        "Change the command in the keybinding to `git: status`.",
+        "Change the command in the keybinding to `show_status_view`."
+      ],
+      "golden_answer": "Change the command in the keybinding to `gs_show_status`."
+    }
+  ]
+}

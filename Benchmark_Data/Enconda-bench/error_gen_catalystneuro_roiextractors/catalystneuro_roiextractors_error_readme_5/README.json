@@ -1,0 +1,29 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_5",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (opencv-python tensorflow) to the pip install command that are not required for roiextractors",
+      "correction_candidates": [
+        "pip install roiextractors",
+        "pip install roiextractors numpy scipy",
+        "pip install roiextractors[all]",
+        "pip install --upgrade roiextractors"
+      ],
+      "golden_answer": "pip install roiextractors"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order of installation steps - pip install is executed before creating and activating the conda environment",
+      "correction_candidates": [
+        "git clone https://github.com/catalystneuro/roiextractors\ncd roiextractors\nconda env create roiextractors_env\nconda activate roiextractors_env\npip install -e .",
+        "git clone https://github.com/catalystneuro/roiextractors\ncd roiextractors\nconda create -n roiextractors_env python=3.9\nconda activate roiextractors_env\npip install -e .",
+        "git clone https://github.com/catalystneuro/roiextractors\ncd roiextractors\nconda env create -f environment.yml\nconda activate roiextractors_env\npip install -e .",
+        "git clone https://github.com/catalystneuro/roiextractors\ncd roiextractors\npython -m venv roiextractors_env\nsource roiextractors_env/bin/activate\npip install -e ."
+      ],
+      "golden_answer": "git clone https://github.com/catalystneuro/roiextractors\ncd roiextractors\nconda env create roiextractors_env\nconda activate roiextractors_env\npip install -e ."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_mdolab_openaerostruct_error_readme_merge_k3",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for editable installation, `pip install --e .`, is syntactically incorrect. The correct flag is `-e` or `--editable`.",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install --editable .",
+        "pip install .",
+        "pip install -e src/."
+      ],
+      "golden_answer": "pip install -e ."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The text states that 'Python 3.6 or newer is required,' which contradicts the dependency table that lists Python 3.8 as the oldest supported version.",
+      "correction_candidates": [
+        "Remove the sentence 'Python 3.6 or newer is required.'",
+        "Change the sentence to 'Python 3.8 or newer is required.'",
+        "Update the dependency table to list Python 3.6 as the oldest supported version.",
+        "Add a note that only Python 3.8+ is officially supported, though 3.6 may work."
+      ],
+      "golden_answer": "Remove the sentence 'Python 3.6 or newer is required.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the first example image is incorrect. It points to a non-existent `.../docs/img/` directory instead of `.../docs/figures/`, causing a broken image link.",
+      "correction_candidates": [
+        "Change `openaerostruct/docs/img/example.png` to `openaerostruct/docs/figures/example.png`.",
+        "Change the image path to `docs/figures/example.png`.",
+        "Change the directory name from `img` to `figures` in the repository.",
+        "Update the path to `openaerostruct/figures/example.png`."
+      ],
+      "golden_answer": "Change `openaerostruct/docs/img/example.png` to `openaerostruct/docs/figures/example.png`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an incorrect package name `open_aerostruct`. The correct name on PyPI is `openaerostruct`.",
+      "correction_candidates": [
+        "pip install openaerostruct",
+        "pip install OpenAeroStruct",
+        "pip install open-aero-struct",
+        "pip install openaerostruct-lib"
+      ],
+      "golden_answer": "pip install openaerostruct"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly list `Cython` as a required dependency. It is not listed in the dependency table and is not needed to install or run the package.",
+      "correction_candidates": [
+        "Remove the sentence stating that `Cython` is a required dependency.",
+        "Change 'required' to 'optional' in the sentence about Cython.",
+        "Add Cython to the dependency table as an optional dependency.",
+        "Add a note explaining that Cython is only needed for developers who want to compile C extensions."
+      ],
+      "golden_answer": "Remove the sentence stating that `Cython` is a required dependency."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The first BibTeX citation block for the Jasa 2018a article is malformed because it is missing a final closing brace `}`. This will cause parsing errors in citation management software.",
+      "correction_candidates": [
+        "Add a closing brace `}` at the end of the `@article{Jasa2018a, ...}` block.",
+        "Remove the entire malformed BibTeX block.",
+        "Replace the malformed block with a correctly formatted one.",
+        "Add a comment above the block warning that it is incomplete."
+      ],
+      "golden_answer": "Add a closing brace `}` at the end of the `@article{Jasa2018a, ...}` block."
+    }
+  ]
+}

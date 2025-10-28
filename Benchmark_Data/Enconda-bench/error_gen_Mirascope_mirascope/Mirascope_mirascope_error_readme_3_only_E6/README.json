@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_3_only_E6",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest creating and activating a virtual environment *after* installing the package, which is the wrong order. The package will be installed in the global environment instead of the virtual one.",
+      "correction_candidates": [
+        "Move the virtual environment creation instructions to be before the `pip install` command.",
+        "Remove the virtual environment creation instructions.",
+        "Change the instructions to `pip install mirascope --user` and then create the virtual environment.",
+        "Add `pip uninstall mirascope` before the virtual environment creation instructions to correct the installation."
+      ],
+      "golden_answer": "Move the virtual environment creation instructions to be before the `pip install` command."
+    }
+  ]
+}

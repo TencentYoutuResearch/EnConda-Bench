@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_calliope-project_calliope_error_readme_merge_k2",
+  "repo_name": "calliope-project_calliope",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests running examples before providing the installation instructions, which is an incorrect logical order.",
+      "correction_candidates": [
+        "Move the installation command `mamba create ...` to be before the mention of the example models.",
+        "Add a note saying 'You must install Calliope before running the examples'.",
+        "Combine the installation and running examples into a single code block.",
+        "Remove the sentence 'You can start by running these examples.'"
+      ],
+      "golden_answer": "Move the installation command `mamba create ...` to be before the mention of the example models."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the example models is broken, pointing to a non-existent path (`master/example_models`) instead of the correct one.",
+      "correction_candidates": [
+        "Correct the URL to `https://github.com/calliope-project/calliope/tree/main/src/calliope/example_models`.",
+        "Correct the URL to `https://github.com/calliope-project/calliope/tree/main/examples`.",
+        "Remove the link and just mention that examples are included.",
+        "Correct the URL to `https://github.com/calliope-project/calliope/blob/main/src/calliope/example_models`."
+      ],
+      "golden_answer": "Correct the URL to `https://github.com/calliope-project/calliope/tree/main/src/calliope/example_models`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "A confusing and incorrect statement was added, claiming that YAML files must be manually compiled, which is not true for Calliope.",
+      "correction_candidates": [
+        "Remove the sentence 'Note that all YAML files must be manually compiled into a single file before running a model.'",
+        "Change the sentence to 'Calliope automatically compiles all model files.'",
+        "Change the sentence to 'Model definitions can be split across multiple YAML files which are combined at runtime.'",
+        "Replace 'manually compiled' with 'validated using a linter'."
+      ],
+      "golden_answer": "Remove the sentence 'Note that all YAML files must be manually compiled into a single file before running a model.'"
+    }
+  ]
+}

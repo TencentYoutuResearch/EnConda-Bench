@@ -1,0 +1,18 @@
+{
+  "readme": "microsoftgraph_msgraph-sdk-python-core_error_readme_1_only_E7",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies Python 3.6+ as a prerequisite, but the library's async features require Python 3.8+, which may cause compatibility issues.",
+      "correction_candidates": [
+        "Change the prerequisite to `Python 3.7+`.",
+        "Change the prerequisite to `Python 3.8+`.",
+        "Add a note saying `asyncio` must be installed separately for Python 3.6.",
+        "Change the prerequisite to `Python 3.6+ or Python 2.7+`."
+      ],
+      "golden_answer": "Change the prerequisite to `Python 3.8+`."
+    }
+  ]
+}

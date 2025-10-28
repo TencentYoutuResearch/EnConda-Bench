@@ -1,0 +1,29 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_7",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using --requirements instead of -r",
+      "correction_candidates": [
+        "python -m pip install -r ./requirements.txt",
+        "python -m pip install --requirement ./requirements.txt",
+        "pip install -r ./requirements.txt",
+        "python -m pip install -f ./requirements.txt"
+      ],
+      "golden_answer": "python -m pip install -r ./requirements.txt"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependency tensorflow added to the installation list that is not mentioned in prerequisites",
+      "correction_candidates": [
+        "Remove pip3 install tensorflow from the conda installation commands",
+        "Add tensorflow to the prerequisites section before installing it",
+        "Replace tensorflow with another required package like numpy",
+        "Move tensorflow installation to the test harness section instead"
+      ],
+      "golden_answer": "Remove pip3 install tensorflow from the conda installation commands"
+    }
+  ]
+}

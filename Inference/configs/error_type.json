@@ -1,0 +1,56 @@
+{
+  "E1": {
+    "name": "Dependency Installation Error",
+    "description": "Errors related to system or Python dependency installation steps, including missing dependencies, unnecessary dependencies, or version errors.",
+    "examples": [
+      "Missing requirements.txt file",
+      "Dependency version conflicts",
+      "Installing unnecessary dependencies"
+    ]
+  },
+  "E2": {
+    "name": "Command Usage or Syntax Error",
+    "description": "Errors caused by incorrect commands, invalid parameters, or improper syntax causing execution failure.",
+    "examples": [
+      "Command syntax errors",
+      "Incorrect parameter usage",
+      "Non-existent commands"
+    ]
+  },
+  "E4": {
+    "name": "File Path or Missing File Error",
+    "description": "Errors where dependency file paths are incorrect or referenced files do not exist.",
+    "examples": [
+      "Incorrect file paths",
+      "Referencing non-existent files",
+      "Relative path issues"
+    ]
+  },
+  "E6": {
+    "name": "Logical Order Error",
+    "description": "Errors caused by incorrect execution order of installation steps, such as installing pip dependencies before creating a virtual environment.",
+    "examples": [
+      "Running programs before installing dependencies",
+      "Incorrect environment setup order",
+      "Missing necessary prerequisite steps"
+    ]
+  },
+  "E7": {
+    "name": "Version Compatibility Error",
+    "description": "Errors caused by unspecified Python or dependency versions, version conflicts, or incompatibilities.",
+    "examples": [
+      "Unspecified Python version",
+      "Version compatibility conflicts",
+      "Dependencies too old or too new"
+    ]
+  },
+  "E8": {
+   "name": "Other Miscellaneous Errors",
+    "description": "Other uncategorized errors, such as messy formatting, missing critical explanations, or unclear descriptions.",
+    "examples": [
+      "Messy document formatting",
+      "Unclear instructions",
+      "Missing critical information"
+    ]
+  }
+}

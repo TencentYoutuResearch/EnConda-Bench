@@ -1,0 +1,18 @@
+{
+  "readme": "meltano_sdk_error_readme_1_only_E2",
+  "repo_name": "meltano_sdk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `gh workflow run version_bump.yml --manual` is incorrect for triggering the version bump workflow. The command is simpler and does not require the filename or the `--manual` flag.",
+      "correction_candidates": [
+        "gh workflow run",
+        "gh workflow execute version_bump.yml",
+        "gh workflow run version_bump.yml",
+        "gh workflow trigger"
+      ],
+      "golden_answer": "gh workflow run"
+    }
+  ]
+}

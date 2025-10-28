@@ -1,0 +1,18 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_6_only_E2",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command syntax with invalid parameter '--debug-mode' instead of proper Flask debug options",
+      "correction_candidates": [
+        "Use `python server.py --port 8080 --debug` for debug mode",
+        "Use `flask run --port 8080 --debug` to start with debug enabled",
+        "Run with `python server.py --port 8080` and set FLASK_DEBUG=1 environment variable",
+        "Start the server using `python -m flask run --port 8080 --reload`"
+      ],
+      "golden_answer": "Use `python server.py --port 8080 --debug` for debug mode"
+    }
+  ]
+}

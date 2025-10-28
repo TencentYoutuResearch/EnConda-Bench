@@ -1,0 +1,18 @@
+{
+  "readme": "injectivelabs_sdk-python_error_readme_3_only_E2",
+  "repo_name": "injectivelabs_sdk-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command `poetry run examples/chain_client/1_MsgSend.py` is syntactically incorrect. It is missing the `python` interpreter, which is required for `poetry run` to execute the Python script.",
+      "correction_candidates": [
+        "poetry shell && python examples/chain_client/1_MsgSend.py",
+        "poetry run python examples/chain_client/1_MsgSend.py",
+        "./examples/chain_client/1_MsgSend.py",
+        "poetry python examples/chain_client/1_MsgSend.py"
+      ],
+      "golden_answer": "poetry run python examples/chain_client/1_MsgSend.py"
+    }
+  ]
+}

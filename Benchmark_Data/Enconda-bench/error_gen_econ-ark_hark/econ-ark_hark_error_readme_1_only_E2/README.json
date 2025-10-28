@@ -1,0 +1,18 @@
+{
+  "readme": "econ-ark_hark_error_readme_1_only_E2",
+  "repo_name": "econ-ark_hark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command `conda install econ-ark from conda-forge` uses incorrect syntax. The `from` keyword is not a valid part of the command for specifying a channel.",
+      "correction_candidates": [
+        "conda install econ-ark",
+        "conda install -c conda-forge econ-ark",
+        "conda install --channel conda-forge econ-ark",
+        "conda create -n hark -c conda-forge econ-ark"
+      ],
+      "golden_answer": "conda install -c conda-forge econ-ark"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_1",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install meerkat` is incorrect. The package on PyPI is named `meerkat-ml`, so this command will fail.",
+      "correction_candidates": [
+        "pip install meerkat-ml",
+        "pip install 'meerkat'",
+        "conda install meerkat",
+        "pip install meerkatml"
+      ],
+      "golden_answer": "pip install meerkat-ml"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The demo command `mk demo image-gallery-tutorial --copy` uses an incorrect demo name, which does not exist.",
+      "correction_candidates": [
+        "mk demo tutorial-image-gallery --copy",
+        "meerkat demo image-gallery-tutorial --copy",
+        "mk demo --list",
+        "mk demo tutorial-image-gallery"
+      ],
+      "golden_answer": "mk demo tutorial-image-gallery --copy"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "quantumjot_btrack_error_readme_4",
+  "repo_name": "quantumjot_btrack",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The note on C++ compatibility incorrectly states that `btrack<=0.5.0` used `C++=17` and `btrack==0.5.1` uses `C++=11`. This is the reverse of the correct information and could mislead developers trying to build the package from source.",
+      "correction_candidates": [
+        "The note should state that `btrack<=0.5.0` used `C++=11` and `btrack==0.5.1` onwards uses `C++=17`.",
+        "The note should be removed as the compiler handles this automatically.",
+        "The note should state that all versions now require `C++=17` for consistency.",
+        "The note should state that `btrack<=0.5.0` used `C++=14` and `btrack==0.5.1` uses `C++=11`."
+      ],
+      "golden_answer": "The note should state that `btrack<=0.5.0` used `C++=11` and `btrack==0.5.1` onwards uses `C++=17`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have a logical order error. They ask the user to test the installation with `btrack --help` *before* providing the command to actually install the package.",
+      "correction_candidates": [
+        "The testing step should be moved after the `pip install btrack` command block.",
+        "The testing step should be removed entirely.",
+        "The `btrack --help` command should be combined with the installation: `pip install btrack && btrack --help`.",
+        "The test command should be changed to `python -c 'import btrack'`."
+      ],
+      "golden_answer": "The testing step should be moved after the `pip install btrack` command block."
+    }
+  ]
+}

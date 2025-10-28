@@ -1,0 +1,18 @@
+{
+  "readme": "nschloe_meshio_error_readme_3_only_E4",
+  "repo_name": "nschloe_meshio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path provided for the ParaView plugin file, `/usr/lib/paraview-5.9/plugins/`, is incorrect for a user-level pip installation. The file is typically located in the user's home directory, not a system-level directory, leading to a 'file not found' error.",
+      "correction_candidates": [
+        "Find the file `paraview-meshio-plugin.py` in `/opt/paraview/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in `~/.config/ParaView/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in `~/.local/share/paraview-5.9/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in the meshio installation directory."
+      ],
+      "golden_answer": "Find the file `paraview-meshio-plugin.py` in `~/.local/share/paraview-5.9/plugins/`"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "m-o-a-t_moat-mqtt_error_readme_7",
+  "repo_name": "m-o-a-t_moat-mqtt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing unnecessary heavy dependencies (numpy, tensorflow, redis-py) that are not required for MoaT-MQTT",
+      "correction_candidates": [
+        "$ pip install moat-mqtt",
+        "$ pip install moat-mqtt[dev]",
+        "$ pip install moat-mqtt anyio",
+        "$ pip install moat-mqtt --no-deps"
+      ],
+      "golden_answer": "$ pip install moat-mqtt"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installing unnecessary system dependencies that are not required for basic MoaT-MQTT functionality",
+      "correction_candidates": [
+        "No additional system dependencies are required for basic installation",
+        "$ sudo apt install python3-pip",
+        "$ sudo apt install mosquitto mosquitto-clients",
+        "$ brew install openssl"
+      ],
+      "golden_answer": "No additional system dependencies are required for basic installation"
+    }
+  ]
+}

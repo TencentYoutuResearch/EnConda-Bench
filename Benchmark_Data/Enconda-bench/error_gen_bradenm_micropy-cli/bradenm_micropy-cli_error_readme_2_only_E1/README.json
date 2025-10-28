@@ -1,0 +1,18 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_2_only_E1",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies for stub creation is incorrect. It uses `[stubs]` as the extra, but the correct extra is `[create_stubs]`.",
+      "correction_candidates": [
+        "pip install micropy-cli --with-stubs",
+        "pip install micropy-cli-stubs",
+        "pip install micropy-cli[stubber]",
+        "pip install micropy-cli[create_stubs]"
+      ],
+      "golden_answer": "pip install micropy-cli[create_stubs]"
+    }
+  ]
+}

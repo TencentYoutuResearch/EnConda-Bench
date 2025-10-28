@@ -1,0 +1,18 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_1_only_E2",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command for the development version is incomplete and may not install the package correctly for import, as it is missing the '#egg=uncertainty_baselines' suffix.",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/google/uncertainty-baselines.git",
+        "pip install uncertainty_baselines @ git+https://github.com/google/uncertainty-baselines.git",
+        "pip install \"git+https://github.com/google/uncertainty-baselines.git#egg=uncertainty_baselines\"",
+        "git clone https://github.com/google/uncertainty-baselines.git && pip install -e uncertainty-baselines"
+      ],
+      "golden_answer": "pip install \"git+https://github.com/google/uncertainty-baselines.git#egg=uncertainty_baselines\""
+    }
+  ]
+}

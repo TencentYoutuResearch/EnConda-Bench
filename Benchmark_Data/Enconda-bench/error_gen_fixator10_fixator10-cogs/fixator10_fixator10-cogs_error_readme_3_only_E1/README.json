@@ -1,0 +1,18 @@
+{
+  "readme": "fixator10_fixator10-cogs_error_readme_3_only_E1",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An incorrect dependency installation step (`pip install red-cogs`) is included. Red cogs are not installed via pip.",
+      "correction_candidates": [
+        "Remove the line 'pip install red-cogs'.",
+        "Replace 'pip install red-cogs' with '[p]pip install red-cogs'.",
+        "Red cogs are installed via the downloader, not pip. This step should be removed.",
+        "The correct command is 'pip install red-discordbot'."
+      ],
+      "golden_answer": "Remove the line 'pip install red-cogs'."
+    }
+  ]
+}

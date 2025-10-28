@@ -1,0 +1,18 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_4_only_E2",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an underscore (`meerkat_ml`) instead of a hyphen (`meerkat-ml`), which will fail as the package name on PyPI is `meerkat-ml`.",
+      "correction_candidates": [
+        "pip install meerkat-ml",
+        "pip install 'meerkat-ml'",
+        "python -m pip install meerkat-ml",
+        "pip install --user meerkat-ml"
+      ],
+      "golden_answer": "pip install meerkat-ml"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_7_only_E2",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command is missing required --password parameter and uses incomplete token authentication syntax",
+      "correction_candidates": [
+        "twine upload --repository-url https://upload.pypi.org/legacy/ dist/* --username __token__ --password your_token_here",
+        "twine upload dist/* --username __token__ --password your_api_token",
+        "twine upload --repository pypi dist/* --username __token__ --password $PYPI_TOKEN",
+        "twine upload dist/* -u __token__ -p your_token_value"
+      ],
+      "golden_answer": "twine upload --repository-url https://upload.pypi.org/legacy/ dist/* --username __token__ --password your_token_here"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "robbievanleeuwen_section-properties_error_readme_4",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to install from the git repository is syntactically incorrect because it is missing the '.git' suffix on the URL.",
+      "correction_candidates": [
+        "Change the command to `pip install git+https://github.com/robbievanleeuwen/section-properties.git`.",
+        "Change the installation method to `pip install sectionproperties`.",
+        "Change the command to `git clone https://github.com/robbievanleeuwen/section-properties.git && cd section-properties && pip install .`.",
+        "Change the command to `pip install https://github.com/robbievanleeuwen/section-properties/archive/master.zip`."
+      ],
+      "golden_answer": "Change the command to `pip install git+https://github.com/robbievanleeuwen/section-properties.git`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link in the 'Features' section is broken, pointing to a non-existent 'features.html' page within the documentation.",
+      "correction_candidates": [
+        "Change the link to `https://sectionproperties.readthedocs.io/en/stable/user_guide.html`.",
+        "Change the link to point to the documentation homepage: `https://sectionproperties.readthedocs.io/`.",
+        "Remove the 'Features' section entirely as the information is in the docs.",
+        "Change the link to `https://github.com/robbievanleeuwen/section-properties#features`."
+      ],
+      "golden_answer": "Change the link to `https://sectionproperties.readthedocs.io/en/stable/user_guide.html`."
+    }
+  ]
+}

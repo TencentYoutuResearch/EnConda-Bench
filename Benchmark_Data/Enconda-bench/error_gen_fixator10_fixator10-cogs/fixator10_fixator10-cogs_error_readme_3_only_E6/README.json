@@ -1,0 +1,18 @@
+{
+  "readme": "fixator10_fixator10-cogs_error_readme_3_only_E6",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. The `[p]cog install` command is placed before the `[p]repo add` command, which will cause the installation to fail because the repo is not yet known to the bot.",
+      "correction_candidates": [
+        "Swap the order of the two installation commands.",
+        "First run '[p]repo add', then run '[p]cog install'.",
+        "The '[p]repo add' command must be executed before '[p]cog install'.",
+        "Combine the commands into one: '[p]cog install from https://github.com/fixator10/Fixator10-Cogs <cog_name>'"
+      ],
+      "golden_answer": "The '[p]repo add' command must be executed before '[p]cog install'."
+    }
+  ]
+}

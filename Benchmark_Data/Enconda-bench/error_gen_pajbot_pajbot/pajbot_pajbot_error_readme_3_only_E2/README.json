@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_3_only_E2",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the bot is `python main.py`, which may fail if the user is not in the correct virtual environment. The original command `./main.py` likely uses a shebang to ensure the correct interpreter is used.",
+      "correction_candidates": [
+        "The correct command to run the bot is ./main.py",
+        "The correct command is python3.9 ./main.py",
+        "The correct command is py main.py",
+        "The correct command is python -m main"
+      ],
+      "golden_answer": "The correct command to run the bot is ./main.py"
+    }
+  ]
+}

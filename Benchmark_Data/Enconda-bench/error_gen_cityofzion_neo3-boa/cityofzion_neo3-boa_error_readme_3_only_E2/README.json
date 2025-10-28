@@ -1,0 +1,18 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_3_only_E2",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install .` is used instead of `pip install -e .`. This performs a standard installation rather than an 'editable' one, which is typically intended for development setups from source.",
+      "correction_candidates": [
+        "Change `pip install .` to `python setup.py install`.",
+        "Change `pip install .` to `pip install --editable .`.",
+        "Change `pip install .` to `pip install -e .`.",
+        "Change `pip install .` to `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Change `pip install .` to `pip install -e .`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_8_only_E7",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Missing specific version requirements for Python and Django",
+      "correction_candidates": [
+        "Python 3.6+, Django 3.2+. Please refer to the requirements_ section of the documentation for a full list of dependencies.",
+        "Python 3.8+ and Django 4.0+ are required. Please refer to the requirements_ section of the documentation for a full list of dependencies.",
+        "Python 3.7+ with Django 3.1+ support. Please refer to the requirements_ section of the documentation for a full list of dependencies.",
+        "Requires Python 3.9+ and Django 3.2+. Please refer to the requirements_ section of the documentation for a full list of dependencies."
+      ],
+      "golden_answer": "Python 3.6+, Django 3.2+. Please refer to the requirements_ section of the documentation for a full list of dependencies."
+    }
+  ]
+}

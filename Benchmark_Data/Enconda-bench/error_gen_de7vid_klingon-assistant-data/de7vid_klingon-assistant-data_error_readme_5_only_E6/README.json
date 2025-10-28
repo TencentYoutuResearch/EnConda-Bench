@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_5_only_E6",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Dependency installation instruction is placed after mentioning the script usage instead of at the beginning of the setup process",
+      "correction_candidates": [
+        "Move the pip install command to appear before mentioning the script usage",
+        "Place the dependency installation at the very beginning of the README file",
+        "Put the installation command in a separate Prerequisites section",
+        "Add the pip install command to the end of the paragraph after script instructions"
+      ],
+      "golden_answer": "Move the pip install command to appear before mentioning the script usage"
+    }
+  ]
+}

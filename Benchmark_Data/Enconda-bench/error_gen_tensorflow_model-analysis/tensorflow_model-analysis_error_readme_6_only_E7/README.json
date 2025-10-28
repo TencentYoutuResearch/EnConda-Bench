@@ -1,0 +1,18 @@
+{
+  "readme": "tensorflow_model-analysis_error_readme_6_only_E7",
+  "repo_name": "tensorflow_model-analysis",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified a specific TensorFlow version requirement that conflicts with the compatibility table",
+      "correction_candidates": [
+        "TensorFlow is required.",
+        "TensorFlow 2.15 or higher is required.",
+        "TensorFlow 1.15 or 2.x is required.",
+        "Any version of TensorFlow is supported."
+      ],
+      "golden_answer": "TensorFlow is required."
+    }
+  ]
+}

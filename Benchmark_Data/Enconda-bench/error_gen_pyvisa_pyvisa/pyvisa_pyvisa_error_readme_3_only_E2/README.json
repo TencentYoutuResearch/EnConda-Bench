@@ -1,0 +1,18 @@
+{
+  "readme": "pyvisa_pyvisa_error_readme_3_only_E2",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `easy_install` command has incorrect syntax, using a non-existent '--install' flag.",
+      "correction_candidates": [
+        "$ easy_install pyvisa",
+        "$ easy_install PyVISA",
+        "Remove the `--install` flag from the `easy_install` command.",
+        "The `easy_install` command does not take flags for simple installation."
+      ],
+      "golden_answer": "$ easy_install pyvisa"
+    }
+  ]
+}

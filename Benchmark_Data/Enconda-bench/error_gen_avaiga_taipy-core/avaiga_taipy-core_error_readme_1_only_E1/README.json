@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_1_only_E1",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install dependencies from `requirements.txt` is missing the required `-r` flag, causing pip to attempt to install a package named 'requirements.txt'.",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install --requirements requirements.txt",
+        "cat requirements.txt | xargs pip install",
+        "pip read requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

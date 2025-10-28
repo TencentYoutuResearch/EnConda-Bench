@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_1_only_E4",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the `write_db.sh` script is in the `scripts/` directory of the current repository, but it is actually located in the separate Android app repository.",
+      "correction_candidates": [
+        "The `write_db.sh` script is located in the root of the Android repository.",
+        "The `write_db.sh` script must be downloaded from the Android repository's releases page.",
+        "The `write_db.sh` script is located in the separate `klingon-assistant-android` repository.",
+        "The `write_db.sh` script is part of the `klingon-assistant` main repo, not the data repo."
+      ],
+      "golden_answer": "The `write_db.sh` script is located in the separate `klingon-assistant-android` repository."
+    }
+  ]
+}

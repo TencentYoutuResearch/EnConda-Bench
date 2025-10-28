@@ -1,0 +1,29 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_6",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version changed from 3.8 to 3.12 which may cause compatibility issues with the package",
+      "correction_candidates": [
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python=3.9",
+        "conda create --name clarity python=3.10",
+        "conda create --name clarity python=3.11"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (tensorflow pytorch) that are not required for the basic pyclarity installation",
+      "correction_candidates": [
+        "pip install pyclarity",
+        "pip install pyclarity numpy scipy",
+        "pip install pyclarity --no-deps",
+        "pip install pyclarity[all]"
+      ],
+      "golden_answer": "pip install pyclarity"
+    }
+  ]
+}

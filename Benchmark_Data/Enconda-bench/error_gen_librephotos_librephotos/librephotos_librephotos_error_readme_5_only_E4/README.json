@@ -1,0 +1,18 @@
+{
+  "readme": "librephotos_librephotos_error_readme_5_only_E4",
+  "repo_name": "librephotos_librephotos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced a non-existent configuration file path for Mapbox configuration",
+      "correction_candidates": [
+        "You need to have an API key. First 50,000 geocode lookups are free every month. Configure the API key in your environment variables.",
+        "You need to have an API key. First 50,000 geocode lookups are free every month. The API key should be set in the application settings.",
+        "You need to have an API key. First 50,000 geocode lookups are free every month. Add the API key to your Docker environment file.",
+        "You need to have an API key. First 50,000 geocode lookups are free every month."
+      ],
+      "golden_answer": "You need to have an API key. First 50,000 geocode lookups are free every month."
+    }
+  ]
+}

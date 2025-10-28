@@ -1,0 +1,29 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_8",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Includes unnecessary Node.js dependencies for a Python project that processes translations",
+      "correction_candidates": [
+        "pip install pyyaml requests",
+        "pip install -r requirements.txt",
+        "pip install setuptools wheel pyyaml",
+        "python -m pip install --upgrade pip setuptools"
+      ],
+      "golden_answer": "pip install pyyaml requests"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installs unnecessary Python web framework dependencies (Flask, Django) for a translation processing tool",
+      "correction_candidates": [
+        "pip install pyyaml requests click",
+        "pip install translation-tools pyyaml",
+        "pip install babel pyyaml requests",
+        "pip install gettext pyyaml click"
+      ],
+      "golden_answer": "pip install pyyaml requests click"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "tmux-python_tmuxp_error_readme_2_only_E2",
+  "repo_name": "tmux-python_tmuxp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to load a local session file is given as `tmuxp load mysession`, which incorrectly implies loading from a config directory, not the current working directory as intended by the example's context.",
+      "correction_candidates": [
+        "$ tmuxp load -f ./mysession.yaml",
+        "$ tmuxp attach mysession.yaml",
+        "$ tmuxp load ./mysession.yaml",
+        "$ tmuxp import ./mysession.yaml"
+      ],
+      "golden_answer": "$ tmuxp load ./mysession.yaml"
+    }
+  ]
+}

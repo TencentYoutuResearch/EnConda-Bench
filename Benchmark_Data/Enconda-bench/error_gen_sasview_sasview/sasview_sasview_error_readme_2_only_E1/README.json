@@ -1,0 +1,18 @@
+{
+  "readme": "sasview_sasview_error_readme_2_only_E1",
+  "repo_name": "sasview_sasview",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip install command attempts to install a non-existent package named `sas-core`, which will cause the installation to fail.",
+      "correction_candidates": [
+        "The package `sas-core` should be removed from the command.",
+        "The package `sas-core` should be replaced with `sasview`.",
+        "The package `sas-core` should be installed from GitHub directly.",
+        "The command should be `pip install sasview`, which installs all other dependencies."
+      ],
+      "golden_answer": "The package `sas-core` should be replaced with `sasview`."
+    }
+  ]
+}

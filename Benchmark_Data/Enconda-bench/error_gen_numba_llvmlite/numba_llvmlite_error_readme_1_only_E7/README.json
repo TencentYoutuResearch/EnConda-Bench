@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_1_only_E7",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that llvmlite version 0.41.0 and later require LLVM 11.x.x, but the correct requirement is LLVM 14.x.x.",
+      "correction_candidates": [
+        "As of version 0.41.0, llvmlite requires LLVM 14.x.x on all architectures",
+        "As of version 0.41.0, llvmlite requires LLVM 11.x.x or 14.x.x on all architectures",
+        "As of version 0.41.0, llvmlite requires LLVM 10.0.x on all architectures",
+        "As of version 0.41.0, llvmlite has no specific LLVM version requirement"
+      ],
+      "golden_answer": "As of version 0.41.0, llvmlite requires LLVM 14.x.x on all architectures"
+    }
+  ]
+}

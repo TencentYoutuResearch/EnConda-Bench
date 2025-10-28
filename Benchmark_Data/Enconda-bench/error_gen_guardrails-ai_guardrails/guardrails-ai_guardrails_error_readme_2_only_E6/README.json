@@ -1,0 +1,18 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_2_only_E6",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The commands for initial setup are in the wrong order. The user is instructed to run `guardrails configure` before `pip install guardrails-ai`, which will fail because the package is not yet installed.",
+      "correction_candidates": [
+        "Run `guardrails configure` and then `pip install guardrails-ai`.",
+        "Run `pip install guardrails-ai && guardrails configure`.",
+        "The correct order is `pip install guardrails-ai` followed by `guardrails configure`.",
+        "The commands can be run in any order."
+      ],
+      "golden_answer": "The correct order is `pip install guardrails-ai` followed by `guardrails configure`."
+    }
+  ]
+}

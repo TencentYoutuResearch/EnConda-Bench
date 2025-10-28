@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_wagtailmenus_error_readme_3",
+  "repo_name": "jazzband_wagtailmenus",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README lists outdated and incompatible versions for Wagtail, Django, and Python, which will cause installation or runtime errors with the latest version of the package.",
+      "correction_candidates": [
+        "Update compatibility to: Wagtail >= 5.2, Django 3.2, 4.2, >= 5.0, and Python 3.8 to 3.12.",
+        "Update compatibility to: Wagtail >= 4.0, Django >= 3.2, and Python >= 3.8.",
+        "The compatibility should be listed as 'latest stable versions' of all dependencies.",
+        "Remove the compatibility section and direct users to the `pyproject.toml` file."
+      ],
+      "golden_answer": "Update compatibility to: Wagtail >= 5.2, Django 3.2, 4.2, >= 5.0, and Python 3.8 to 3.12."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The image URL for the demo screenshot is incorrect. It points to a `main` branch which does not exist in the repository, causing the image to be broken.",
+      "correction_candidates": [
+        "Change the branch name in the URL from `main` to `master`.",
+        "Update the URL to point to the `latest` tag instead of a branch.",
+        "Change the image path to a relative path: `docs/source/_static/images/repeating-item.png`.",
+        "The URL is missing the `/blob/` part: `.../blob/main/...`"
+      ],
+      "golden_answer": "Change the branch name in the URL from `main` to `master`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mne-tools_mne-lsl_error_readme_7_only_E7",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Contradictory Python version information stating Python 2.7 in acknowledgment section while header states ≥ 3.9",
+      "correction_candidates": [
+        "Remove the conflicting Python version note in the acknowledgment section",
+        "Change the note to specify Python 3.9+ for modern compatibility",
+        "Update to mention Python 3.8+ minimum requirement consistency",
+        "Clarify that Python 3.10+ is recommended for best performance"
+      ],
+      "golden_answer": "Remove the conflicting Python version note in the acknowledgment section"
+    }
+  ]
+}

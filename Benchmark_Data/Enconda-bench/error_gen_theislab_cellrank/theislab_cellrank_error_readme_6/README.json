@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_cellrank_error_readme_6",
+  "repo_name": "theislab_cellrank",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifying outdated Python 2.7 requirement and pinning very old incompatible versions of dependencies",
+      "correction_candidates": [
+        "CellRank requires Python 3.8 or higher. Install using pip: pip install cellrank",
+        "CellRank requires Python 3.7+ and current versions. Install with: pip install cellrank scanpy scvelo",
+        "CellRank needs Python 3.9+. Use: pip install cellrank>=2.0 scanpy>=1.9 scvelo>=0.2",
+        "Python 3.6+ required for CellRank. Install: conda install cellrank scanpy scvelo"
+      ],
+      "golden_answer": "CellRank requires Python 3.8 or higher. Install using pip: pip install cellrank"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referencing a non-existent configuration file path that users would not have",
+      "correction_candidates": [
+        "CellRank uses default settings automatically, no configuration file needed",
+        "Create your own cellrank_config.py file with custom settings if needed",
+        "Configuration can be set using cr.settings.* parameters in your Python script",
+        "Download the example configuration from the GitHub repository first"
+      ],
+      "golden_answer": "CellRank uses default settings automatically, no configuration file needed"
+    }
+  ]
+}

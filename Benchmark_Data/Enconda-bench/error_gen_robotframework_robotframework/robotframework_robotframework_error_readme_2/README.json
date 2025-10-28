@@ -1,0 +1,29 @@
+{
+  "readme": "robotframework_robotframework_error_readme_2",
+  "repo_name": "robotframework_robotframework",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example test case references a resource file using the path 'resources/login.resource', implying a directory structure that is not mentioned or set up, which will likely cause a file not found error.",
+      "correction_candidates": [
+        "Resource          login.resource",
+        "Resource          ./login.resource",
+        "Resource          ${CURDIR}/login.resource",
+        "Import Resource   resources/login.resource"
+      ],
+      "golden_answer": "Resource          login.resource"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The usage example for setting a command-line variable, 'robot --variable BROWSER=Firefox', incorrectly uses an equals sign '=' instead of the required colon ':' as a separator.",
+      "correction_candidates": [
+        "robot --variable BROWSER \"Firefox\" --outputdir results path/to/tests/",
+        "robot -v BROWSER=Firefox --outputdir results path/to/tests/",
+        "robot --set-variable BROWSER:Firefox --outputdir results path/to/tests/",
+        "robot --variable BROWSER:Firefox --outputdir results path/to/tests/"
+      ],
+      "golden_answer": "robot --variable BROWSER:Firefox --outputdir results path/to/tests/"
+    }
+  ]
+}

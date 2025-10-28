@@ -1,0 +1,29 @@
+{
+  "readme": "asdf-format_asdf-standard_error_readme_2",
+  "repo_name": "asdf-format_asdf-standard",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instruction to 'Install Python on your system' is too generic and does not specify a version. This project requires a specific version range (Python 3.8+) for compatibility.",
+      "correction_candidates": [
+        "Update the instruction to: 'Install Python 3.8 or newer.'",
+        "Update the instruction to: 'Install the latest version of Python 2.'",
+        "The project is compatible with any Python version, so no change is needed.",
+        "Update the instruction to: 'Install Anaconda Python.'"
+      ],
+      "golden_answer": "Update the instruction to: 'Install Python 3.8 or newer.'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The dependencies are installed globally using pip before the virtual environment is created and activated. The installation step should occur after activating the virtual environment.",
+      "correction_candidates": [
+        "Move step 3 (pip install) to be after step 4 (virtual environment activation).",
+        "Combine the commands into a single line: `python -m venv .venv && source .venv/bin/activate && pip install -r requirements-dev.txt`.",
+        "Remove the virtual environment steps entirely.",
+        "Use `conda env create -f environment.yml` instead of pip and venv."
+      ],
+      "golden_answer": "Move step 3 (pip install) to be after step 4 (virtual environment activation)."
+    }
+  ]
+}

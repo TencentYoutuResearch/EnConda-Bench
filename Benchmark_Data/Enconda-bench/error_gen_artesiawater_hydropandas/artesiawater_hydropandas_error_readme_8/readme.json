@@ -1,0 +1,29 @@
+{
+  "readme": "artesiawater_hydropandas_error_readme_8",
+  "repo_name": "artesiawater_hydropandas",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Unnecessary and potentially problematic flags in pip install command",
+      "correction_candidates": [
+        "`pip install hydropandas`",
+        "`pip install --upgrade hydropandas`",
+        "`pip install hydropandas --user`",
+        "`conda install -c conda-forge hydropandas`"
+      ],
+      "golden_answer": "`pip install hydropandas`"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order suggesting to install optional dependencies before cloning repository for development",
+      "correction_candidates": [
+        "For installing in development mode, clone the repository and install by typing `pip install -e .` from the module root directory.",
+        "For installing in development mode, first clone the repository, then install by typing `pip install -e .` from the module root directory.",
+        "For installing in development mode, clone the repository and run `pip install -e .[full]` from the module root directory.",
+        "For installing in development mode, clone the repository, navigate to the module root directory, and install by typing `pip install -e .`."
+      ],
+      "golden_answer": "For installing in development mode, clone the repository and install by typing `pip install -e .` from the module root directory."
+    }
+  ]
+}

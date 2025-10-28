@@ -1,0 +1,29 @@
+{
+  "readme": "cookiecutter_cookiecutter_error_readme_2",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The features section incorrectly states that Cookiecutter is only compatible with Python 3.8, while it supports a much wider range of versions.",
+      "correction_candidates": [
+        "Change 'Python 3.8 only' to 'Python 3.7 to 3.12'.",
+        "Change 'Python 3.8 only' to 'Python 3.6+'.",
+        "Change 'Python 3.8 only' to 'Python 3.x'.",
+        "Remove the entire line about Python version compatibility."
+      ],
+      "golden_answer": "Change 'Python 3.8 only' to 'Python 3.7 to 3.12'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The documentation for template creators incorrectly specifies `cookiecutter.yaml` as the configuration file, but the correct file is `cookiecutter.json`.",
+      "correction_candidates": [
+        "Change `cookiecutter.yaml` to `cookiecutter.json`.",
+        "Change `cookiecutter.yaml` to `config.json`.",
+        "Add a note that `cookiecutter.yaml` is an alternative to `cookiecutter.json`.",
+        "Change `cookiecutter.yaml` to `.cookiecutterrc`."
+      ],
+      "golden_answer": "Change `cookiecutter.yaml` to `cookiecutter.json`."
+    }
+  ]
+}

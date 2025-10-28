@@ -1,0 +1,29 @@
+{
+  "readme": "flairNLP_fundus_error_readme_1",
+  "repo_name": "flairNLP_fundus",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3+' which is too vague and might cause users to try running it with unsupported older versions of Python 3, leading to compatibility errors. The library requires a more specific minimum version.",
+      "correction_candidates": [
+        "Fundus requires Python 3.6+.",
+        "Fundus requires Python 3.8+.",
+        "Fundus requires Python 3.8 or newer.",
+        "Fundus is compatible with Python versions 3.8, 3.9, and 3.10."
+      ],
+      "golden_answer": "Fundus requires Python 3.8+."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In Example 2, the code `Crawler(PublisherCollection.TheNewYorker)` will raise an AttributeError because `PublisherCollection` does not have a `TheNewYorker` attribute directly. Publishers are grouped by country code.",
+      "correction_candidates": [
+        "crawler = Crawler(\"TheNewYorker\")",
+        "crawler = Crawler(PublisherCollection.us[\"TheNewYorker\"])",
+        "crawler = Crawler(PublisherCollection.us.TheNewYorker)",
+        "crawler = Crawler(PublisherCollection.get(\"TheNewYorker\"))"
+      ],
+      "golden_answer": "crawler = Crawler(PublisherCollection.us.TheNewYorker)"
+    }
+  ]
+}

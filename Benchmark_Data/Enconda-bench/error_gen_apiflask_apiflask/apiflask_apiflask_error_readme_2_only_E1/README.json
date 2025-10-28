@@ -1,0 +1,18 @@
+{
+  "readme": "apiflask_apiflask_error_readme_2_only_E1",
+  "repo_name": "apiflask_apiflask",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command unnecessarily includes the `flask` package. Since `apiflask` lists `flask` as a dependency, `pip` will install it automatically, and specifying it manually could lead to version conflicts.",
+      "correction_candidates": [
+        "Change the command to `$ pip3 install apiflask`.",
+        "Change the command to `$ pip3 install apiflask` and add a note to run `pip install flask` separately.",
+        "Change the command to `$ pip3 install flask && pip3 install apiflask`.",
+        "Change the command to `$ pip3 install apiflask[flask]`."
+      ],
+      "golden_answer": "Change the command to `$ pip3 install apiflask`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_1_only_E1",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install testing dependencies lists an incorrect package name, `py.test`, instead of the correct package `pytest`.",
+      "correction_candidates": [
+        "pip install pytest",
+        "pip install pytest --upgrade",
+        "python -m pip install py-test",
+        "pip install 'pytest-cov'"
+      ],
+      "golden_answer": "pip install pytest"
+    }
+  ]
+}

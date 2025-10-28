@@ -1,0 +1,18 @@
+{
+  "readme": "scitools_iris-grib_error_readme_3_only_E1",
+  "repo_name": "scitools_iris-grib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation guide incorrectly instructs users to install the `gribapi` library, which is deprecated and has been replaced by `eccodes`.",
+      "correction_candidates": [
+        "Replace the instruction to install `gribapi` with the instruction to install `eccodes`.",
+        "Install `iris-grib` using conda (`conda install -c conda-forge iris-grib`), which automatically installs the correct `eccodes` dependency.",
+        "Remove the instruction to install `gribapi` as `pip` will handle it automatically.",
+        "Install both `gribapi` and `eccodes` for backward compatibility."
+      ],
+      "golden_answer": "Replace the instruction to install `gribapi` with the instruction to install `eccodes`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "bitcart_bitcart_error_readme_7",
+  "repo_name": "bitcart_bitcart",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Wrong file extension for pip install - using config.yaml instead of requirements.txt",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install -r requirements.pip",
+        "pip install -r dependencies.txt",
+        "pip install -r setup.cfg"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Non-existent Python version 4.0 specified",
+      "correction_candidates": [
+        "Make sure to install Python 3.8 or higher for best compatibility.",
+        "Make sure to install Python 3.9+ for optimal performance.",
+        "Make sure to install the latest version of Python 3.10 for best compatibility.",
+        "Make sure to install Python 3.7 or later for full feature support."
+      ],
+      "golden_answer": "Make sure to install Python 3.8 or higher for best compatibility."
+    }
+  ]
+}

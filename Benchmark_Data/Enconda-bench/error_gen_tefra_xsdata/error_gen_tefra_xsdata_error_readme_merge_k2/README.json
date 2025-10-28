@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_tefra_xsdata_error_readme_merge_k2",
+  "repo_name": "tefra_xsdata",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands is incorrect. The `xsdata` command is shown before the `pip install` command, but `xsdata` must be installed before it can be executed.",
+      "correction_candidates": [
+        "The `xsdata` command should be run from a different directory.",
+        "The commands should be combined: `pip install xsdata[cli,lxml,soap] && xsdata ...`",
+        "Run the `pip install` command before the `xsdata` command.",
+        "You need to run `python setup.py install` first."
+      ],
+      "golden_answer": "Run the `pip install` command before the `xsdata` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate models uses an incorrect flag `--pkg`. The correct flag for specifying the output package is `--package`.",
+      "correction_candidates": [
+        "xsdata tests/fixtures/primer/order.xsd -p tests.fixtures.primer",
+        "xsdata tests/fixtures/primer/order.xsd --package=tests.fixtures.primer",
+        "xsdata --package tests.fixtures.primer tests/fixtures/primer/order.xsd",
+        "xsdata tests/fixtures/primer/order.xsd --package tests.fixtures.primer"
+      ],
+      "golden_answer": "xsdata tests/fixtures/primer/order.xsd --package tests.fixtures.primer"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command is missing the `lxml` extra, which is recommended for performance and is implicitly required by the 'Install all dependencies' comment.",
+      "correction_candidates": [
+        "pip install xsdata[all]",
+        "pip install xsdata[cli,lxml,soap]",
+        "pip install xsdata[cli,soap] && pip install lxml",
+        "pip install xsdata --with-lxml"
+      ],
+      "golden_answer": "pip install xsdata[cli,lxml,soap]"
+    }
+  ]
+}

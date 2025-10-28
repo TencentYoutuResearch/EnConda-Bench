@@ -1,0 +1,29 @@
+{
+  "readme": "robbievanleeuwen_section-properties_error_readme_1",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command uses the incorrect package name 'section-properties' instead of 'sectionproperties'.",
+      "correction_candidates": [
+        "Change `pip install section-properties` to `pip install sectionproperties`.",
+        "Change `pip install section-properties` to `pip install section.properties`.",
+        "Change `pip install section-properties` to `pip install section_properties`.",
+        "Change `pip install section-properties` to `pip install 'sectionproperties'`."
+      ],
+      "golden_answer": "Change `pip install section-properties` to `pip install sectionproperties`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the license file is incorrect, pointing to a non-existent 'LICENSE.md' file instead of 'LICENSE'.",
+      "correction_candidates": [
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/main/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/raw/master/LICENSE`."
+      ],
+      "golden_answer": "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`."
+    }
+  ]
+}

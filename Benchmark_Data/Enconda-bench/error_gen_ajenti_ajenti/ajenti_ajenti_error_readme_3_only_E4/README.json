@@ -1,0 +1,18 @@
+{
+  "readme": "ajenti_ajenti_error_readme_3_only_E4",
+  "repo_name": "ajenti_ajenti",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the login screenshot is incorrect (`docs/images/rd-login.png`), causing the image not to display. The correct directory is `img`.",
+      "correction_candidates": [
+        "Change the image path from `docs/images/rd-login.png` to `docs/img/rd-login.png`.",
+        "Change the image path from `docs/images/rd-login.png` to `../docs/img/rd-login.png`.",
+        "Change the image path from `docs/images/rd-login.png` to `/docs/img/rd-login.png`.",
+        "Move the image file to the `docs/images/` directory to match the path."
+      ],
+      "golden_answer": "Change the image path from `docs/images/rd-login.png` to `docs/img/rd-login.png`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_4_only_E1",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README omits the command or tool (`pytest`) required to run the unit tests, leaving the user without instructions on how to execute them.",
+      "correction_candidates": [
+        "To run the unit tests in mpmath/tests/, install pytest (`pip install pytest`) and then run `pytest`.",
+        "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation.",
+        "The unit tests in mpmath/tests/ can be run using the unittest module: `python -m unittest discover`.",
+        "The unit tests in mpmath/tests/ can be run with the command `python run_tests.py`."
+      ],
+      "golden_answer": "The unit tests in mpmath/tests/ can be run with `pytest <https://pytest.org/>`_, see the main documentation."
+    }
+  ]
+}

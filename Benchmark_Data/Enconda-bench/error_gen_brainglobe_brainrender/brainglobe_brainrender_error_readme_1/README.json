@@ -1,0 +1,29 @@
+{
+  "readme": "brainglobe_brainrender_error_readme_1",
+  "repo_name": "brainglobe_brainrender",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include `pip install vtkplotter`. `vtkplotter` is an outdated name for a dependency (`vedo`) that is already installed automatically with `brainrender`, so this command is unnecessary and may cause conflicts.",
+      "correction_candidates": [
+        "Replace `pip install vtkplotter` with `pip install vedo`.",
+        "Remove the line `pip install vtkplotter`.",
+        "Change the installation to `pip install brainrender[vtk]`.",
+        "Run `pip install brainrender --no-deps` followed by `pip install vtkplotter`."
+      ],
+      "golden_answer": "Remove the line `pip install vtkplotter`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the quickstart example, the final command `scene.render` is missing parentheses, which means the method is not called and the scene will not be displayed.",
+      "correction_candidates": [
+        "Change `scene.render` to `scene.render()`.",
+        "Change `scene.render` to `scene.show()`.",
+        "Change `scene.render` to `scene.render(interactive=True)`.",
+        "Change `scene.render` to `display(scene)`."
+      ],
+      "golden_answer": "Change `scene.render` to `scene.render()`."
+    }
+  ]
+}

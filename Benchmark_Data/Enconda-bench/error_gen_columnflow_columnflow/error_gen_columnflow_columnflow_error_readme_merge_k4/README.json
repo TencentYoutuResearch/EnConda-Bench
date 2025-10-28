@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_columnflow_columnflow_error_readme_merge_k4",
+  "repo_name": "columnflow_columnflow",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The curl command to download the analysis creation script points to a 'main' branch which does not exist, instead of the correct 'master' branch.",
+      "correction_candidates": [
+        "bash -c \"$(curl -Ls https://raw.githubusercontent.com/columnflow/columnflow/master/create_analysis.sh)\"",
+        "bash -c \"$(curl -Ls https://github.com/columnflow/columnflow/blob/master/create_analysis.sh)\"",
+        "git clone https://github.com/columnflow/columnflow.git && cd columnflow && ./create_analysis.sh",
+        "bash -c \"$(curl -Ls https://raw.githubusercontent.com/columnflow/columnflow/stable/create_analysis.sh)\""
+      ],
+      "golden_answer": "bash -c \"$(curl -Ls https://raw.githubusercontent.com/columnflow/columnflow/master/create_analysis.sh)\""
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the reduction task uses an incorrect parameter '--branches' instead of '--branch'.",
+      "correction_candidates": [
+        "law run cf.ReduceEvents --version dev1 --branch 0",
+        "law run cf.ReduceEvents --version dev1 --branch-number 0",
+        "law run cf.ReduceEvents --version dev1 --select-branch 0",
+        "law run cf.ReduceEvents --version dev1 0"
+      ],
+      "golden_answer": "law run cf.ReduceEvents --version dev1 --branch 0"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The quickstart guide incorrectly states that Python 2.7 is required, which is outdated and incompatible with the project's dependencies.",
+      "correction_candidates": [
+        "Remove the sentence \"Please note that this project requires Python 2.7 to run correctly.\"",
+        "Replace the incorrect sentence with: \"This project requires Python 3.8 or newer.\"",
+        "Replace the incorrect sentence with: \"This project is compatible with both Python 2.7 and Python 3.x.\"",
+        "Replace the incorrect sentence with: \"Ensure you are using the latest version of Python.\""
+      ],
+      "golden_answer": "Remove the sentence \"Please note that this project requires Python 2.7 to run correctly.\""
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'voms-proxy-init' command for creating a GRID proxy uses an invalid flag '-voms' instead of the correct '-rfc'.",
+      "correction_candidates": [
+        "voms-proxy-init -rfc -valid 196:00",
+        "voms-proxy-init --rfc --valid 196:00",
+        "voms-proxy-init -voms cms -rfc -valid 196:00",
+        "grid-proxy-init -valid 196:00"
+      ],
+      "golden_answer": "voms-proxy-init -rfc -valid 196:00"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added pip install requirements.txt before setting up the environment, which should happen after creating and activating the virtual environment",
+      "correction_candidates": [
+        "Remove the pip install step and keep only the source setup.sh command",
+        "Move pip install -r requirements.txt after source setup.sh command",
+        "Replace pip install with conda install requirements.txt",
+        "Change to python -m pip install -r requirements.txt before source setup.sh"
+      ],
+      "golden_answer": "Move pip install -r requirements.txt after source setup.sh command"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the columnflow project structure",
+      "correction_candidates": [
+        "Change requirements.txt to setup.py for package installation",
+        "Remove the pip install line entirely as dependencies are handled by setup.sh",
+        "Change to pip install -e . for editable installation",
+        "Replace with pip install columnflow from PyPI"
+      ],
+      "golden_answer": "Remove the pip install line entirely as dependencies are handled by setup.sh"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Listed generic dependencies that are not the actual columnflow dependencies and used pip instead of the proper setup method",
+      "correction_candidates": [
+        "Remove the pip install command and refer to the setup.sh script instead",
+        "Replace with pip install columnflow[all] for complete installation",
+        "Change to conda install columnflow from conda-forge",
+        "Use pip install -e . after cloning the repository"
+      ],
+      "golden_answer": "Remove the pip install command and refer to the setup.sh script instead"
+    }
+  ]
+}

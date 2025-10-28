@@ -1,0 +1,18 @@
+{
+  "readme": "nrbnlulu_strawberry-django-auth_error_readme_3_only_E4",
+  "repo_name": "nrbnlulu_strawberry-django-auth",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the `CONTRIBUTING.md` file points to an incorrect path within the repository, resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link to `CONTRIBUTING.md` to point to the root of the repository: `.../blob/main/CONTRIBUTING.md`",
+        "Change the link to `CONTRIBUTING.md` to be a relative path: `CONTRIBUTING.md`",
+        "Change the link to `CONTRIBUTING.md` to point to `.../blob/master/CONTRIBUTING.md`",
+        "Move the `CONTRIBUTING.md` file into the `/docs` directory."
+      ],
+      "golden_answer": "Change the link to `CONTRIBUTING.md` to point to the root of the repository: `.../blob/main/CONTRIBUTING.md`"
+    }
+  ]
+}

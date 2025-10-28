@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_8_only_E1",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing unnecessary dependencies like data science packages (numpy, matplotlib, seaborn, plotly) for a conference management system",
+      "correction_candidates": [
+        "pip install django celery redis psycopg2",
+        "pip install django celery redis psycopg2-binary python-dateutil",
+        "pip install django celery redis psycopg2 pillow reportlab",
+        "pip install django celery redis psycopg2 requests beautifulsoup4"
+      ],
+      "golden_answer": "pip install django celery redis psycopg2"
+    }
+  ]
+}

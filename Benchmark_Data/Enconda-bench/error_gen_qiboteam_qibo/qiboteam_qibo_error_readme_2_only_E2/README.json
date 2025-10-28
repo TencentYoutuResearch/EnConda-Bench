@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibo_error_readme_2_only_E2",
+  "repo_name": "qiboteam_qibo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install qibo --extras all` uses an invalid syntax for installing optional dependencies. The correct syntax uses brackets, like `qibo[all]`.",
+      "correction_candidates": [
+        "pip install \"qibo[all]\"",
+        "pip install qibo --install-option=\"--with-all-extras\"",
+        "python -m pip install qibo --all",
+        "pip install qibo && pip install qibo-tensorflow qibo-cupy"
+      ],
+      "golden_answer": "pip install \"qibo[all]\""
+    }
+  ]
+}

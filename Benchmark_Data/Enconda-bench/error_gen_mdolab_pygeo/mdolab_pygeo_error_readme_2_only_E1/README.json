@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_pygeo_error_readme_2_only_E1",
+  "repo_name": "mdolab_pygeo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions mandate installing a system-level package `python3-vtk7` using `apt-get`. This is an unnecessary dependency for the core library, specific to Debian-based systems, and may conflict with the version required by pip.",
+      "correction_candidates": [
+        "Remove the `sudo apt-get install python3-vtk7` command. Python dependencies, including `vtk`, are handled by `pip` when installing the package.",
+        "Replace the `apt-get` command with `pip install vtk`.",
+        "Replace the `apt-get` command with `conda install vtk`.",
+        "Update the package name to a more recent version, like `python3-vtk9`."
+      ],
+      "golden_answer": "Remove the `sudo apt-get install python3-vtk7` command. Python dependencies, including `vtk`, are handled by `pip` when installing the package."
+    }
+  ]
+}

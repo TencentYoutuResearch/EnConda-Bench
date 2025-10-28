@@ -1,0 +1,18 @@
+{
+  "readme": "camdavidsonpilon_lifelines_error_readme_1_only_E1",
+  "repo_name": "camdavidsonpilon_lifelines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions list `scipy-survival` as a required dependency, but this package is unnecessary and does not exist.",
+      "correction_candidates": [
+        "Replace `pip install scipy-survival` with `pip install scipy`.",
+        "Remove the line `pip install scipy-survival` as it is not a dependency.",
+        "The command should be `pip install scipy-survival --no-deps`.",
+        "First, install `numpy` and `pandas`, then `scipy-survival`."
+      ],
+      "golden_answer": "Remove the line `pip install scipy-survival` as it is not a dependency."
+    }
+  ]
+}

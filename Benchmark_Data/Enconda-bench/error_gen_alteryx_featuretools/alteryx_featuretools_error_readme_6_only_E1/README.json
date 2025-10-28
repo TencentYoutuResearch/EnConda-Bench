@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_6_only_E1",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Reference to development dependencies in setup.py using incorrect installation syntax",
+      "correction_candidates": [
+        "Change the command to python -m pip install -e .[dev] for proper editable installation",
+        "Use pip install -e . to install in development mode without extra dependencies",
+        "Replace with pip install -r dev-requirements.txt for development dependencies",
+        "Use python setup.py develop to install in development mode"
+      ],
+      "golden_answer": "Change the command to python -m pip install -e .[dev] for proper editable installation"
+    }
+  ]
+}

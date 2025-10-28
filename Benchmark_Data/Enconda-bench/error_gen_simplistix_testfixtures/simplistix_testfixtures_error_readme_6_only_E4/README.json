@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_6_only_E4",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The setup.py file path is not specified and may not exist in the current directory",
+      "correction_candidates": [
+        "Specify the full path: python /path/to/testfixtures/setup.py install",
+        "Change to the source directory first: cd testfixtures && python setup.py install",
+        "Download the source code first: wget https://pypi.org/project/testfixtures/source.tar.gz",
+        "Use the current directory setup.py: python ./setup.py install"
+      ],
+      "golden_answer": "Change to the source directory first: cd testfixtures && python setup.py install"
+    }
+  ]
+}

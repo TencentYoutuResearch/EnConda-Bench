@@ -1,0 +1,29 @@
+{
+  "readme": "r-anime_holo_error_readme_2",
+  "repo_name": "r-anime_holo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The dependency list incorrectly specifies `bs4` instead of `beautifulsoup4`. While `bs4` is the import name, the package to be installed via pip is `beautifulsoup4`.",
+      "correction_candidates": [
+        "Change 'bs4' to 'BeautifulSoup4' in the requirements list.",
+        "Change 'bs4' to 'beautifulsoup4' in the requirements list.",
+        "Add 'lxml' to the requirements list, as it is a required parser for bs4.",
+        "Remove 'bs4' as it is part of the Python standard library."
+      ],
+      "golden_answer": "Change 'bs4' to 'beautifulsoup4' in the requirements list."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The order of setup steps is incorrect. The script attempts to load a season configuration into the database before the database has been initialized.",
+      "correction_candidates": [
+        "The correct order is to first run 'python src/holo.py -m setup' to initialize the database, and then run 'python src/holo.py -m edit season_configs/[season]_[year].yaml' to load the season config.",
+        "The correct order is to first run 'python src/holo.py -m update', then 'python src/holo.py -m setup', and finally 'python src/holo.py -m edit ...'.",
+        "You should run 'python src/holo.py -m edit ...' and 'python src/holo.py -m setup' in any order.",
+        "You must run 'python src/holo.py -m setup' and 'python src/holo.py -m edit ...' at the same time using 'python src/holo.py -m setup -m edit ...'."
+      ],
+      "golden_answer": "The correct order is to first run 'python src/holo.py -m setup' to initialize the database, and then run 'python src/holo.py -m edit season_configs/[season]_[year].yaml' to load the season config."
+    }
+  ]
+}

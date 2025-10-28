@@ -1,0 +1,29 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_5",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The pip commands are in wrong order - aqtinstall is installed before updating pip",
+      "correction_candidates": [
+        "pip install -U pip\npip install aqtinstall",
+        "pip install --upgrade pip\npip install aqtinstall",
+        "python -m pip install --upgrade pip\npip install aqtinstall",
+        "pip3 install -U pip\npip3 install aqtinstall"
+      ],
+      "golden_answer": "pip install -U pip\npip install aqtinstall"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Python 2.7 is mentioned as compatible with Qt SDK 6.2.0, but the minimum required version is 3.8",
+      "correction_candidates": [
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1 with Python 3.8 or higher:",
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1:",
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1 (requires Python 3.8+):",
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1 using a supported Python version:"
+      ],
+      "golden_answer": "When you decide to install Qt SDK version 6.2.0 for mingw v8.1:"
+    }
+  ]
+}

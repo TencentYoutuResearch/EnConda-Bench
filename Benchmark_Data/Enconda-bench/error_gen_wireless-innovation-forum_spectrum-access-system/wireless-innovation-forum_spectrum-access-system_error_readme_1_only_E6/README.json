@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_1_only_E6",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the venv installation example, the command to install packages from requirements.txt is placed before the command to activate the virtual environment, which will cause packages to be installed globally instead of in the venv.",
+      "correction_candidates": [
+        "The `pip install` command should be run after activating the virtual environment with `source ./winnf3/bin/activate`.",
+        "The `requirements.txt` file should be installed using `conda install --file requirements.txt`.",
+        "The `source` command should be replaced with `conda activate winnf3`.",
+        "The `pip install` command should be run before creating the virtual environment with `python3.11 -m venv ./winnf3`."
+      ],
+      "golden_answer": "The `pip install` command should be run after activating the virtual environment with `source ./winnf3/bin/activate`."
+    }
+  ]
+}

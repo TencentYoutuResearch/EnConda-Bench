@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_commaai_comma10k_error_readme_merge_k3",
+  "repo_name": "commaai_comma10k",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the viewer script is incorrect. 'python view.py' will fail because the script is named 'viewer.py'.",
+      "correction_candidates": [
+        "Run <pre>./viewer.py</pre> to see them with the mask overlay.",
+        "Run <pre>python viewer.py</pre> to see them with the mask overlay.",
+        "Run <pre>view.py</pre> to see them with the mask overlay.",
+        "Run <pre>python view</pre> to see them with the mask overlay."
+      ],
+      "golden_answer": "Run <pre>./viewer.py</pre> to see them with the mask overlay."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The directory for the primary PNG image files is incorrectly named 'images/' instead of the correct 'imgs/'.",
+      "correction_candidates": [
+        "imgs/  -- The PNG image files",
+        "img/  -- The PNG image files",
+        "images/png/  -- The PNG image files",
+        "PNGs/  -- The PNG image files"
+      ],
+      "golden_answer": "imgs/  -- The PNG image files"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The animated GIF showing an example mask is referenced as 'sample_animation.gif', which does not exist in the repository. The correct filename is 'sample.gif'.",
+      "correction_candidates": [
+        "Change the image reference from 'sample_animation.gif' back to 'sample.gif'.",
+        "Change the image reference to 'assets/sample.gif'.",
+        "Remove the animated GIF section entirely.",
+        "Change the alt text to \"Animated GIF not found\" and leave the broken link."
+      ],
+      "golden_answer": "Change the image reference from 'sample_animation.gif' back to 'sample.gif'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies without specifying installation method or verifying if they are actually required for viewer.py",
+      "correction_candidates": [
+        "Remove the pip install command entirely and just run ./viewer.py directly",
+        "Install dependencies using conda install opencv-python numpy matplotlib instead",
+        "Check requirements.txt file first, then install only the dependencies listed there",
+        "Create a virtual environment first, then install the specific versions needed"
+      ],
+      "golden_answer": "Remove the pip install command entirely and just run ./viewer.py directly"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing dependencies globally before checking if a virtual environment should be created first",
+      "correction_candidates": [
+        "Create a virtual environment with python -m venv venv, activate it, then install dependencies",
+        "Use pipenv install to manage dependencies in an isolated environment",
+        "Install dependencies system-wide using sudo pip install for global access",
+        "Use docker to containerize the entire environment and dependencies"
+      ],
+      "golden_answer": "Create a virtual environment with python -m venv venv, activate it, then install dependencies"
+    }
+  ]
+}

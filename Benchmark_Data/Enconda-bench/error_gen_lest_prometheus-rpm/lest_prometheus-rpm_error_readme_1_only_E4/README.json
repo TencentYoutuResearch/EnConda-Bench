@@ -1,0 +1,18 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_1_only_E4",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Auto generation' section for adding a new exporter, step 2 incorrectly states that the environment variable file should be named `<exporter_name>.env` instead of the correct `<exporter_name>.default`.",
+      "correction_candidates": [
+        "Create a file named `<exporter_name>.default` which will contain the default environment variables.",
+        "Create a file named `exporter.default` which will contain the default environment variables.",
+        "Create a file named `<exporter_name>.conf` which will contain the default environment variables.",
+        "Create a file named `default.vars` which will contain the default environment variables."
+      ],
+      "golden_answer": "Create a file named `<exporter_name>.default` which will contain the default environment variables."
+    }
+  ]
+}

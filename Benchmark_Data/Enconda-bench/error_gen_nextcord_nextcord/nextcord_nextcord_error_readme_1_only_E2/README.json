@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_1_only_E2",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install with voice support, `python3 -m pip install -U nextcord voice`, is syntactically incorrect. It attempts to install a package named 'voice' instead of installing the 'voice' extra for nextcord.",
+      "correction_candidates": [
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord-voice`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U \"nextcord[voice]\"`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord --with-voice`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord && python3 -m pip install -U PyNaCl`."
+      ],
+      "golden_answer": "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U \"nextcord[voice]\"`."
+    }
+  ]
+}

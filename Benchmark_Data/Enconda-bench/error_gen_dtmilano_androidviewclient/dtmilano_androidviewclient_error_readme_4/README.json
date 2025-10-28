@@ -1,0 +1,29 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_4",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions mandate installing a specific, old version of numpy (`1.15.0`), which is not a direct dependency and may cause conflicts with other packages or not be required at all.",
+      "correction_candidates": [
+        "Remove the command `pip3 install numpy==1.15.0` and the text explaining it.",
+        "Change the command to `pip3 install 'numpy>=1.15.0'` to allow newer versions.",
+        "Let pip handle dependencies automatically by only running the main package installation.",
+        "Change the command to `pip3 install numpy` to get the latest compatible version."
+      ],
+      "golden_answer": "Remove the command `pip3 install numpy==1.15.0` and the text explaining it."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip3 install culebra --upgrade` uses the wrong package name. While the tool is known as Culebra, the package on PyPI is named `androidviewclient`.",
+      "correction_candidates": [
+        "Change the package name in the command from `culebra` to `androidviewclient`.",
+        "Change the command to `pip3 install androidviewclient-culebra --upgrade`.",
+        "Use the GitHub repository directly: `pip3 install git+https://github.com/dtmilano/AndroidViewClient.git`.",
+        "Change the command to `pip3 install culebratester --upgrade`."
+      ],
+      "golden_answer": "Change the package name in the command from `culebra` to `androidviewclient`."
+    }
+  ]
+}

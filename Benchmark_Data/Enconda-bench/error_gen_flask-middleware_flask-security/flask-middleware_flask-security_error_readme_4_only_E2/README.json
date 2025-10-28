@@ -1,0 +1,18 @@
+{
+  "readme": "flask-middleware_flask-security_error_readme_4_only_E2",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to verify the installation, `python -c \"import Flask_Security_Too\"`, will fail because the package is imported as `flask_security`, not `Flask_Security_Too`.",
+      "correction_candidates": [
+        "The correct import name is 'flask_security'. The command should be 'python -c \"import flask_security\"'.",
+        "The correct import name is 'FlaskSecurity'. The command should be 'python -c \"import FlaskSecurity\"'.",
+        "Use 'pip show Flask-Security-Too' to verify the installation instead.",
+        "Python imports are case-insensitive, so this command should work."
+      ],
+      "golden_answer": "The correct import name is 'flask_security'. The command should be 'python -c \"import flask_security\"'."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_stan-dev_cmdstanpy_error_readme_merge_k2",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `scipy` as a minimal dependency, which is not required for the core functionality of CmdStanPy.",
+      "correction_candidates": [
+        "Remove `scipy` from the dependency list. The correct list is: `numpy`, `pandas`.",
+        "Add `matplotlib` to the dependency list as it is also required for plotting.",
+        "Change the dependency list to only `numpy`, as `pandas` is optional.",
+        "Specify the version for scipy: `scipy>=1.5`."
+      ],
+      "golden_answer": "Remove `scipy` from the dependency list. The correct list is: `numpy`, `pandas`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for `stan_file` in the example code is incorrect, referencing a non-existent 'example' directory instead of 'examples'.",
+      "correction_candidates": [
+        "Change the path segment `'example'` to `'examples'`.",
+        "Change the path to an absolute path: `/path/to/cmdstan/examples/bernoulli/bernoulli.stan`.",
+        "Remove the `cmdstan_path()` call and just use a relative path: `'examples/bernoulli/bernoulli.stan'`.",
+        "The file is located in the `src` directory, change `'example'` to `'src'`."
+      ],
+      "golden_answer": "Change the path segment `'example'` to `'examples'`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect pip installation command, 'pip install stan', which installs a different package, instead of the correct 'pip install cmdstanpy'.",
+      "correction_candidates": [
+        "The correct command is 'pip install pystan', which is the official Python interface.",
+        "Specify the installation command as 'python -m pip install cmdstanpy'.",
+        "Remove the suggested command and just leave the link to PyPi for users to find the command.",
+        "Change the command from 'pip install stan' to 'pip install cmdstanpy'."
+      ],
+      "golden_answer": "Change the command from 'pip install stan' to 'pip install cmdstanpy'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The example code demonstrates calling `fit.summary()` before the `fit` object is created by `model.sample()`, which will cause a NameError.",
+      "correction_candidates": [
+        "Initialize `fit` before the summary call: `fit = None`.",
+        "The `summary` method should be called on the model, not the fit object: `model.summary()`.",
+        "Move the `fit = model.sample(...)` line before the `fit.summary()` line.",
+        "Combine the calls into one line: `model.sample(chains=4, data=data_file).summary()`."
+      ],
+      "golden_answer": "Move the `fit = model.sample(...)` line before the `fit.summary()` line."
+    }
+  ]
+}

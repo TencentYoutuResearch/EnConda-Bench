@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_3_only_E7",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README misleadingly states that the project is compatible with 'any version of Python 3'. This is too broad and likely incorrect, as older, unsupported Python 3 versions (e.g., 3.6) may not work. The original README correctly specified tested versions.",
+      "correction_candidates": [
+        "Change 'This project is compatible with any version of Python 3.' to 'Tested Python versions are 3.10, 3.11 and 3.12.'",
+        "Change 'This project is compatible with any version of Python 3.' to 'This project requires Python 3.10 or newer.'",
+        "Change 'This project is compatible with any version of Python 3.' to 'This project is compatible with Python 3.12 only.'",
+        "Remove the sentence 'This project is compatible with any version of Python 3.'"
+      ],
+      "golden_answer": "Change 'This project is compatible with any version of Python 3.' to 'Tested Python versions are 3.10, 3.11 and 3.12.'"
+    }
+  ]
+}

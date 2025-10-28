@@ -1,0 +1,29 @@
+{
+  "readme": "ansible_ansible-zuul-jobs_error_readme_6",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated and potentially incompatible versions of ansible and zuul",
+      "correction_candidates": [
+        "pip install ansible zuul",
+        "pip install ansible>=6.0.0 zuul>=8.0.0",
+        "pip install ansible==7.1.0 zuul==9.2.0",
+        "pip install 'ansible<8.0' 'zuul<10.0'"
+      ],
+      "golden_answer": "pip install ansible zuul"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent setup.yml and hosts.ini files without providing them or explaining how to create them",
+      "correction_candidates": [
+        "ansible-playbook playbook.yml --inventory=inventory.ini",
+        "ansible-playbook site.yml --inventory=localhost,",
+        "ansible-playbook main.yml --inventory=hosts",
+        "ansible-playbook deploy.yml --inventory=inventory"
+      ],
+      "golden_answer": "ansible-playbook site.yml --inventory=localhost,"
+    }
+  ]
+}

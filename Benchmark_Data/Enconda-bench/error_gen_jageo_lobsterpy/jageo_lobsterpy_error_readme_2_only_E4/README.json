@@ -1,0 +1,18 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_2_only_E4",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The description for `lobsterpy create-inputs` incorrectly states that it uses a non-existent `lobster.yaml` file for configuration.",
+      "correction_candidates": [
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `lobsterin` file.",
+        "``lobsterpy create-inputs`` will create standard inputs based on existing POSCAR, POTCAR, and INCAR files.",
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `POSCAR.lobster` file.",
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `vasprun.xml` file."
+      ],
+      "golden_answer": "``lobsterpy create-inputs`` will create standard inputs based on existing POSCAR, POTCAR, and INCAR files."
+    }
+  ]
+}

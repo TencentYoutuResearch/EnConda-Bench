@@ -1,0 +1,18 @@
+{
+  "readme": "diofant_diofant_error_readme_4_only_E4",
+  "repo_name": "diofant_diofant",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'New BSD License' points to a non-existent `LICENSE.md` file, while the actual file is `LICENSE.rst`.",
+      "correction_candidates": [
+        "Change the link to point to the correct file: `LICENSE.rst`.",
+        "Remove the link to the license file.",
+        "Change the link to an external URL for the New BSD License.",
+        "The file should be renamed from `LICENSE.rst` to `LICENSE.md` in the repository."
+      ],
+      "golden_answer": "Change the link to point to the correct file: `LICENSE.rst`."
+    }
+  ]
+}

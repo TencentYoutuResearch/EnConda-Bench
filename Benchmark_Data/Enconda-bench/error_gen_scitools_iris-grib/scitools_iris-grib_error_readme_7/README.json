@@ -1,0 +1,29 @@
+{
+  "readme": "scitools_iris-grib_error_readme_7",
+  "repo_name": "scitools_iris-grib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7 compatibility when the project likely requires Python 3.x",
+      "correction_candidates": [
+        "Change to 'Iris-grib requires Python 3.8 or later' to match modern requirements",
+        "Update to 'Iris-grib requires Python 3.6+ for compatibility with current dependencies'",
+        "Specify 'Iris-grib requires Python 3.9 or newer' for latest feature support",
+        "Change to 'Iris-grib supports Python 3.7 and above' following NEP 29 policy"
+      ],
+      "golden_answer": "Change to 'Iris-grib requires Python 3.8 or later' to match modern requirements"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pins to a specific old version 0.15.0 instead of allowing latest version installation",
+      "correction_candidates": [
+        "Remove version pin to use 'pip install iris-grib' for latest version",
+        "Use 'pip install iris-grib>=0.15.0' to allow newer versions",
+        "Change to 'pip install iris-grib~=0.15.0' for compatible patch versions",
+        "Update to 'pip install \"iris-grib>=0.15.0,<1.0.0\"' for safe version range"
+      ],
+      "golden_answer": "Remove version pin to use 'pip install iris-grib' for latest version"
+    }
+  ]
+}

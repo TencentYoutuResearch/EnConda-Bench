@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_distutils_error_readme_6_only_E6",
+  "repo_name": "pypa_distutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect logical order - suggests installing distutils before merging into setuptools repo",
+      "correction_candidates": [
+        "Remove the installation step since distutils is integrated into setuptools",
+        "Change to: Clone setuptools repo, then merge distutils changes",
+        "Change to: First merge changes, then test installation",
+        "Change to: Install setuptools first, then integrate distutils"
+      ],
+      "golden_answer": "Remove the installation step since distutils is integrated into setuptools"
+    }
+  ]
+}

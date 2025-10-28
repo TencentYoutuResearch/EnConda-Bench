@@ -1,0 +1,29 @@
+{
+  "readme": "scikit-rf_scikit-rf_error_readme_3",
+  "repo_name": "scikit-rf_scikit-rf",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The text recommends Python 2.7, which is outdated and incompatible with modern versions of scikit-rf and its dependencies.",
+      "correction_candidates": [
+        "Remove the text ` (version 2.7 is recommended)`.",
+        "Change `(version 2.7 is recommended)` to `(Python 3.8+ is required)`.",
+        "Change `(version 2.7 is recommended)` to `(any Python 3 version will work)`.",
+        "Remove the sentence `If you have installed Python...` entirely."
+      ],
+      "golden_answer": "Remove the text ` (version 2.7 is recommended)`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions attempt to run the GUI applications before installing their required dependencies, which will cause the commands to fail.",
+      "correction_candidates": [
+        "Move the installation command `python -m pip install scikit-rf[plot,visa]` before the commands to run the apps.",
+        "Combine the commands into a single line: `python -m pip install scikit-rf[plot,visa] && data-grabber`.",
+        "First, install dependencies with `pip install pyqt5 pyside2`, then run the apps.",
+        "Run `python -m scikit_rf.data_grabber` instead of `data-grabber`."
+      ],
+      "golden_answer": "Move the installation command `python -m pip install scikit-rf[plot,visa]` before the commands to run the apps."
+    }
+  ]
+}

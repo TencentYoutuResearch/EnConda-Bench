@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_3_only_E1",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary and incorrect dependency installation step `pip install -r requirements.txt` is added. The provision script handles all setup, and this command will fail because the file doesn't exist at the root and dependencies would be installed globally.",
+      "correction_candidates": [
+        "The `pip install -r requirements.txt` command should be run after activating the virtual environment.",
+        "The `requirements.txt` file is located in another directory, so the path should be updated.",
+        "Remove the `pip install -r requirements.txt` step. The `./tools/provision` script handles all dependency installation.",
+        "The dependencies should be installed with `pip install .` instead."
+      ],
+      "golden_answer": "Remove the `pip install -r requirements.txt` step. The `./tools/provision` script handles all dependency installation."
+    }
+  ]
+}

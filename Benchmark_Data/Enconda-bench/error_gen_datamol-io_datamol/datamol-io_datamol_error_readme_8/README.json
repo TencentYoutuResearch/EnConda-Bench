@@ -1,0 +1,29 @@
+{
+  "readme": "datamol-io_datamol_error_readme_8",
+  "repo_name": "datamol-io_datamol",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation command is missing the conda-forge channel and includes unnecessary packages",
+      "correction_candidates": [
+        "mamba install -c conda-forge datamol",
+        "conda install -c conda-forge datamol numpy scipy",
+        "mamba install -c bioconda datamol",
+        "pip install datamol numpy scipy"
+      ],
+      "golden_answer": "mamba install -c conda-forge datamol"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility table shows outdated and unsupported Python versions like 2.7 and very old RDKit versions",
+      "correction_candidates": [
+        "| `datamol` | `python`            | `rdkit`                       |\n| --------- | ------------------- | ----------------------------- |\n| `0.12.x`  | `[3.10, 3.11]`      | `[2023.03, 2023.09]`          |",
+        "| `datamol` | `python`        | `rdkit`           |\n| --------- | --------------- | ----------------- |\n| `0.12.x`  | `[3.8, 3.9]`    | `[2022.03, 2022.09]` |",
+        "| `datamol` | `python`     | `rdkit`        |\n| --------- | ------------ | -------------- |\n| `0.12.x`  | `[3.9, 3.10]` | `[2022.09, 2023.03]` |",
+        "| `datamol` | `python`          | `rdkit`             |\n| --------- | ----------------- | ------------------- |\n| `0.12.x`  | `[3.8, 3.9, 3.10]` | `[2021.09, 2022.03]` |"
+      ],
+      "golden_answer": "| `datamol` | `python`            | `rdkit`                       |\n| --------- | ------------------- | ----------------------------- |\n| `0.12.x`  | `[3.10, 3.11]`      | `[2023.03, 2023.09]`          |"
+    }
+  ]
+}

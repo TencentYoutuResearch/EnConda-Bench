@@ -1,0 +1,18 @@
+{
+  "readme": "yt-project_unyt_error_readme_1_only_E1",
+  "repo_name": "yt-project_unyt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command incorrectly includes `yt` as a dependency, which is unnecessary.",
+      "correction_candidates": [
+        "To install, run `pip install unyt`.",
+        "To install, run `conda install unyt yt`.",
+        "To install, run `pip install unyt --no-deps` and then `pip install yt`.",
+        "To install, run `pip install yt-project`."
+      ],
+      "golden_answer": "To install, run `pip install unyt`."
+    }
+  ]
+}

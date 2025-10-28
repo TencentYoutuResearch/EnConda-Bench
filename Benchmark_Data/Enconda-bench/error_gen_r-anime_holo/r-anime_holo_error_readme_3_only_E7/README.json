@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_3_only_E7",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified as 'Python 3+', which is too vague and may lead users to attempt running it on unsupported early Python 3 versions (e.g., 3.0-3.4).",
+      "correction_candidates": [
+        "Change the requirement to 'Python 3.5+'.",
+        "Change the requirement to 'Python 2.7 or Python 3.5+'.",
+        "Change the requirement to 'The latest version of Python 3'.",
+        "Change the requirement to 'Python 3.6+'."
+      ],
+      "golden_answer": "Change the requirement to 'Python 3.5+'."
+    }
+  ]
+}

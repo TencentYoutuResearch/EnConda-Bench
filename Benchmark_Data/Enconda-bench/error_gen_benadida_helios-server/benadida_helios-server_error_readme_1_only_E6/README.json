@@ -1,0 +1,18 @@
+{
+  "readme": "benadida_helios-server_error_readme_1_only_E6",
+  "repo_name": "benadida_helios-server",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The python dependencies are installed globally using pip before the virtual environment is created and activated, which is the wrong order.",
+      "correction_candidates": [
+        "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally.",
+        "You must run `pip install --user -r requirements.txt` to install packages for the current user.",
+        "The virtual environment should be created in the system's root directory, not the project directory.",
+        "You should install dependencies one by one instead of using `requirements.txt`."
+      ],
+      "golden_answer": "The `pip install` command should be run after creating and activating the virtual environment to ensure dependencies are installed locally."
+    }
+  ]
+}

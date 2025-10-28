@@ -1,0 +1,29 @@
+{
+  "readme": "python-poetry_poetry_error_readme_5",
+  "repo_name": "python-poetry_poetry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed minimum Python version from '>=3.8' to '>=2.7' which is incompatible with modern Poetry requirements",
+      "correction_candidates": [
+        "python = \">=3.8\"",
+        "python = \">=3.9\"",
+        "python = \">=3.7\"",
+        "python = \">=3.10\""
+      ],
+      "golden_answer": "python = \">=3.8\""
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added installation instructions that install dependencies before Poetry itself, which is incorrect order",
+      "correction_candidates": [
+        "Install Poetry first using the official installer, then run poetry install to install project dependencies",
+        "Run poetry install directly after installing Poetry through the official method",
+        "First create a virtual environment, then install Poetry, then run poetry install",
+        "Use pip install poetry first, then run poetry install for project dependencies"
+      ],
+      "golden_answer": "Install Poetry first using the official installer, then run poetry install to install project dependencies"
+    }
+  ]
+}

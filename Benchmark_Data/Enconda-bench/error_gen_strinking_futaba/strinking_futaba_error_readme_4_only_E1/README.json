@@ -1,0 +1,18 @@
+{
+  "readme": "strinking_futaba_error_readme_4_only_E1",
+  "repo_name": "strinking_futaba",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions unnecessarily install `black` and `pylint` globally using pip, while they should be managed as development dependencies by Poetry.",
+      "correction_candidates": [
+        "Remove the `pip3 install black` and `pip3 install pylint` commands.",
+        "Move the `pip3 install black` and `pip3 install pylint` commands to the 'Development' section.",
+        "Replace the `pip3` install commands with `poetry add black pylint --group dev`.",
+        "Change the commands to `poetry run pip install black pylint`."
+      ],
+      "golden_answer": "Remove the `pip3 install black` and `pip3 install pylint` commands."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_4",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The developer instructions are missing the `poetry install` command, which is necessary to install the project's dependencies for a development environment.",
+      "correction_candidates": [
+        "The `poetry install` command is missing. It should be run after `cd qibocal` and before `pre-commit install` to install project dependencies.",
+        "The command `pip install -r requirements.txt` should be run after cloning.",
+        "The command `poetry update` should be used instead of `poetry install`.",
+        "The pre-commit hooks install the dependencies automatically, so no other command is needed."
+      ],
+      "golden_answer": "The `poetry install` command is missing. It should be run after `cd qibocal` and before `pre-commit install` to install project dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `qq upload` command is shown with a `--folder` option, which is not a valid parameter. The command expects a positional argument for the folder path.",
+      "correction_candidates": [
+        "The command uses a positional argument, not a named one. The correct syntax is: `qq upload <output_folder>`",
+        "The correct parameter is `--path`, not `--folder`. The command should be: `qq upload --path <output_folder>`",
+        "The correct command is: `qq-upload <output_folder>`",
+        "The folder path must be absolute. The command should be: `qq upload --folder /path/to/<output_folder>`"
+      ],
+      "golden_answer": "The command uses a positional argument, not a named one. The correct syntax is: `qq upload <output_folder>`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_4_only_E2",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README instructs the user to run a non-existent Django management command, `initregistration`. The correct command to apply database migrations is `migrate`.",
+      "correction_candidates": [
+        "The correct command is `python manage.py createsupertables`.",
+        "The correct command is `python manage.py migrate registration`.",
+        "Remove this step. The standard `python manage.py migrate` command handles all database setup.",
+        "The command should be `python manage.py setup --app=registration`."
+      ],
+      "golden_answer": "Remove this step. The standard `python manage.py migrate` command handles all database setup."
+    }
+  ]
+}

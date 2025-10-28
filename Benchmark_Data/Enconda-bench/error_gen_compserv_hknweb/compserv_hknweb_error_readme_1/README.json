@@ -1,0 +1,29 @@
+{
+  "readme": "compserv_hknweb_error_readme_1",
+  "repo_name": "compserv_hknweb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of activating the virtual environment and installing dependencies is incorrect. `poetry install` must be run before `poetry shell` to set up the environment that the shell command activates.",
+      "correction_candidates": [
+        "Swap the order of steps 3 and 4. First run `poetry install`, then `poetry shell`.",
+        "Combine the steps into one: `poetry run install && poetry shell`.",
+        "Remove step 3 (`poetry shell`) as `poetry install` automatically activates the environment.",
+        "Run `poetry shell` first, then run `pip install -r requirements.txt` inside the shell."
+      ],
+      "golden_answer": "Swap the order of steps 3 and 4. First run `poetry install`, then `poetry shell`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a superuser is incorrect. The Django management command `newuser` does not exist.",
+      "correction_candidates": [
+        "Replace `python manage.py newuser` with `django-admin createsuperuser`.",
+        "Replace `python manage.py newuser` with `python manage.py new_superuser`.",
+        "Replace `python manage.py newuser` with `python manage.py createsuperuser`.",
+        "Replace `python manage.py newuser` with `poetry run createsuperuser`."
+      ],
+      "golden_answer": "Replace `python manage.py newuser` with `python manage.py createsuperuser`."
+    }
+  ]
+}

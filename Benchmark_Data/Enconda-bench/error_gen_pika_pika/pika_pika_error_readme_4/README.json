@@ -1,0 +1,29 @@
+{
+  "readme": "pika_pika_error_readme_4",
+  "repo_name": "pika_pika",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The blocking consumer example for `channel.consume` uses a parameter `auto_ack=False`, which is not a valid argument for this iterator-based consumption method and will raise an error.",
+      "correction_candidates": [
+        "Remove the `auto_ack=False` argument from the `channel.consume('test', auto_ack=False)` call.",
+        "Change `channel.consume` to `channel.basic_consume` and pass `on_message_callback`.",
+        "Change `auto_ack=False` to `no_ack=True`.",
+        "Change `channel.consume` to `channel.get` in a loop."
+      ],
+      "golden_answer": "Remove the `auto_ack=False` argument from the `channel.consume('test', auto_ack=False)` call."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The contributing guide mandates using a specific and potentially outdated version of Yapf (`0.28.0`), which can cause version conflicts or formatting inconsistencies.",
+      "correction_candidates": [
+        "Change `Yapf==0.28.0` back to `Yapf` to remove the strict version requirement.",
+        "Update the version to a more recent one, like `Yapf==0.32.0`.",
+        "Suggest using `black` instead of `yapf`.",
+        "Change the style from `google` to `pep8`."
+      ],
+      "golden_answer": "Change `Yapf==0.28.0` back to `Yapf` to remove the strict version requirement."
+    }
+  ]
+}

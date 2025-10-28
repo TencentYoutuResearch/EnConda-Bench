@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_libensemble_libensemble_error_readme_merge_k2",
+  "repo_name": "libensemble_libensemble",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest installing the package globally and only then mention creating a virtual environment, which is the wrong order and bad practice.",
+      "correction_candidates": [
+        "Move the recommendation to use a virtual environment to before the `pip install` command.",
+        "Replace the instructions with: `python -m venv venv && source venv/bin/activate && pip install libensemble`.",
+        "Change `pip install libensemble` to `pip install --user libensemble`.",
+        "Remove the sentence about creating a virtual environment."
+      ],
+      "golden_answer": "Move the recommendation to use a virtual environment to before the `pip install` command."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The README omits the command needed to run the basic usage script, leaving the user unsure how to execute the example code.",
+      "correction_candidates": [
+        "Change \"Run the following script:\" to \"Run the following via `python this_file.py --comms local --nworkers 4`:\".",
+        "Add the command `python your_script_name.py --comms local --nworkers 4` after the code block.",
+        "Add a comment inside the code block: `# To run: python this_file.py --comms local --nworkers 4`.",
+        "Change \"Run the following script:\" to \"Run the following via `python this_file.py`:`\"."
+      ],
+      "golden_answer": "Change \"Run the following script:\" to \"Run the following via `python this_file.py --comms local --nworkers 4`:\".\""
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly advise installing numpy separately, which is redundant as it is a core dependency of libEnsemble and will be installed automatically by pip.",
+      "correction_candidates": [
+        "Replace the two `pip install` commands with a single command: `pip install libensemble`.",
+        "Change the commands to `pip install \"numpy<2\" libensemble`.",
+        "Combine the commands into `pip install numpy libensemble`.",
+        "Remove the line `pip install numpy`."
+      ],
+      "golden_answer": "Replace the two `pip install` commands with a single command: `pip install libensemble`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command incorrectly suggests that `libensemble` is a command-line executable for running scripts, but the script should be run with the `python` interpreter.",
+      "correction_candidates": [
+        "Change `libensemble this_file.py` to `python this_file.py`.",
+        "Change the command to `python -m libensemble.cli.run --entry-point this_file.py --comms local --nworkers 4`.",
+        "Change the command to `python -m libensemble this_file.py --comms local --nworkers 4`.",
+        "Add `#!/usr/bin/env python` to the top of the script and run with `./this_file.py --comms local --nworkers 4`."
+      ],
+      "golden_answer": "Change `libensemble this_file.py` to `python this_file.py`."
+    }
+  ]
+}

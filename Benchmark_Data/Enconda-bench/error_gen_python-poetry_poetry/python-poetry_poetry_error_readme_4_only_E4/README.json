@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_4_only_E4",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Related Projects' section, the URL for `poetry-core` incorrectly points to a subpath of the main poetry repository (`.../poetry/core`) instead of its own repository (`.../poetry-core`).",
+      "correction_candidates": [
+        "Correct the URL to `https://github.com/python-poetry/poetry-core`.",
+        "Correct the URL to `https://github.com/python-poetry/poetry-core.git`.",
+        "Change the link text to `poetry/core` to match the incorrect URL.",
+        "Remove the `poetry-core` project from the list."
+      ],
+      "golden_answer": "Correct the URL to `https://github.com/python-poetry/poetry-core`."
+    }
+  ]
+}

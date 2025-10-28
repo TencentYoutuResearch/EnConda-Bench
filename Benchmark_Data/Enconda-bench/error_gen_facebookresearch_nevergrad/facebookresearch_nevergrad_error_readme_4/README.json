@@ -1,0 +1,29 @@
+{
+  "readme": "facebookresearch_nevergrad_error_readme_4",
+  "repo_name": "facebookresearch_nevergrad",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command suggests using `conda install nevergrad` without specifying the required channel (e.g., conda-forge), which will likely fail. The standard and recommended installation method is with `pip`.",
+      "correction_candidates": [
+        "pip install nevergrad",
+        "conda install -c conda-forge nevergrad",
+        "pip install git+https://github.com/FacebookResearch/Nevergrad.git",
+        "conda install nevergrad -c defaults"
+      ],
+      "golden_answer": "pip install nevergrad"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the second code example, the `NGOpt` optimizer is initialized with an incorrect keyword argument `instrumentation` instead of the correct `parametrization`.",
+      "correction_candidates": [
+        "optimizer = ng.optimizers.NGOpt(parametrization=parametrization, budget=100)",
+        "optimizer = ng.optimizers.NGOpt(parametrization, budget=100)",
+        "optimizer = ng.optimizers.NGOpt(params=parametrization, budget=100)",
+        "optimizer = ng.optimizers.NGOpt(ng.p.Instrumentation(parametrization), budget=100)"
+      ],
+      "golden_answer": "optimizer = ng.optimizers.NGOpt(parametrization=parametrization, budget=100)"
+    }
+  ]
+}

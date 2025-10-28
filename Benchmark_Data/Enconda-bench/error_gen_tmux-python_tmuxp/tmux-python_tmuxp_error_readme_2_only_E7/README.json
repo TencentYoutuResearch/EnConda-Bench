@@ -1,0 +1,18 @@
+{
+  "readme": "tmux-python_tmuxp_error_readme_2_only_E7",
+  "repo_name": "tmux-python_tmuxp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that the project supports Python 3.5 and greater, but it actually requires Python 3.8 or newer, which can lead to installation or runtime errors on older Python versions.",
+      "correction_candidates": [
+        "python support: >= 3.6",
+        "python support: >= 3.8, pypy, pypy3",
+        "python support: == 3.8",
+        "python support: >= 3.7"
+      ],
+      "golden_answer": "python support: >= 3.8, pypy, pypy3"
+    }
+  ]
+}

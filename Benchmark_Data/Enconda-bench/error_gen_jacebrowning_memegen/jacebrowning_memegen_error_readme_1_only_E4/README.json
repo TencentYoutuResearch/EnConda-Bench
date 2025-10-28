@@ -1,0 +1,18 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_1_only_E4",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The documentation provides an example using the 'arial' font, which is not listed as an available font and will not work.",
+      "correction_candidates": [
+        "Add 'Arial' to the list of available fonts in the table.",
+        "Remove the example sentence that suggests using the non-existent 'arial' font.",
+        "Change the example font from `font=arial` to `font=impact`, which is a valid font.",
+        "Add a note specifying that `font=arial` is an alias for `font=notosans`."
+      ],
+      "golden_answer": "Remove the example sentence that suggests using the non-existent 'arial' font."
+    }
+  ]
+}

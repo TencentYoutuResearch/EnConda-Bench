@@ -1,0 +1,29 @@
+{
+  "readme": "spotify_luigi_error_readme_2",
+  "repo_name": "spotify_luigi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests running the `luigid` daemon before the installation instructions, which is a logical order error as the command won't be available yet.",
+      "correction_candidates": [
+        "Move the `luigid --port 8082` command to be after the `pip install luigi` instruction.",
+        "Change the command to `python -m luigi.server --port 8082`.",
+        "Add a note saying 'After installation, you can verify your setup by running `luigid --port 8082`.'",
+        "Remove the instruction to run `luigid` from the 'Getting Started' section."
+      ],
+      "golden_answer": "Move the `luigid --port 8082` command to be after the `pip install luigi` instruction."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README instructs to install `python-toml` separately, which is an unnecessary dependency step. The TOML dependency is handled by the `luigi[toml]` extra.",
+      "correction_candidates": [
+        "First, ensure you have the `toml` library installed by running `pip install toml`.",
+        "Remove the instruction to install `python-toml` separately.",
+        "Change the instruction to `pip install luigi toml`.",
+        "The instruction to `pip install python-toml` should be removed, and the next line should be changed to `Run ``pip install luigi[toml]``...` to clarify that it handles the dependency."
+      ],
+      "golden_answer": "Remove the instruction to install `python-toml` separately."
+    }
+  ]
+}

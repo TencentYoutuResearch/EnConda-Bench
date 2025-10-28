@@ -1,0 +1,29 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_3",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The \"Quick Start\" section introduces a fictitious command-line interface (`quacc relax ...`) that does not exist. `quacc` is used as a Python library, not a standalone CLI tool in this manner.",
+      "correction_candidates": [
+        "Replace the command with a correct Python script example, like `from quacc.recipes.vasp.slabs import static_job; static_job(atoms)`",
+        "Change the command to `quacc run --recipe relax --atoms 'NaCl.cif' --preset 'express'`",
+        "Remove the entire 'Quick Start' section as it is misleading.",
+        "Correct the command syntax to `quacc-run relax -a NaCl.cif -p express`"
+      ],
+      "golden_answer": "Remove the entire 'Quick Start' section as it is misleading."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the license file is broken. It points to a file named `LICENSE` instead of the correct `LICENSE.md`, resulting in a \"File not found\" error.",
+      "correction_candidates": [
+        "Change the link to point to the project's `pyproject.toml` where the license is declared.",
+        "Change the link to `https://github.com/quantum-accelerators/quacc/blob/main/LICENSE.md`.",
+        "Change the link to a relative path: `LICENSE.md`.",
+        "Change the link to the BSD 3-Clause license text on the OSI website."
+      ],
+      "golden_answer": "Change the link to `https://github.com/quantum-accelerators/quacc/blob/main/LICENSE.md`."
+    }
+  ]
+}

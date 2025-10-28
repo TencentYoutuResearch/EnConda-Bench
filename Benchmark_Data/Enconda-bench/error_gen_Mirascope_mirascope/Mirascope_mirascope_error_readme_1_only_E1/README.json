@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_1_only_E1",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the optional `groq` dependency is incorrect. It suggests installing a separate package `mirascope-groq` instead of using the correct extra syntax.",
+      "correction_candidates": [
+        "pip install mirascope --with-groq",
+        "pip install mirascope[groq]",
+        "pip install mirascope groq",
+        "pip install mirascope --install-option=\"--with-groq\""
+      ],
+      "golden_answer": "pip install mirascope[groq]"
+    }
+  ]
+}

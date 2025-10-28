@@ -1,0 +1,29 @@
+{
+  "readme": "matchms_matchms_error_readme_3",
+  "repo_name": "matchms_matchms",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided in the example code, 'data/pesticides.mgf', is incorrect. The actual path to the test data file is 'tests/testdata/pesticides.mgf'.",
+      "correction_candidates": [
+        "pipeline.run(\"./tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"../tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"pesticides.mgf\")"
+      ],
+      "golden_answer": "pipeline.run(\"tests/testdata/pesticides.mgf\")"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the linter is 'prospector .', which is an incorrect usage. The correct command is simply 'prospector'.",
+      "correction_candidates": [
+        "run prospector",
+        "prospector",
+        "prospector --profile .prospector.yaml",
+        "lint prospector"
+      ],
+      "golden_answer": "prospector"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_6_only_E4",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a configuration file path that likely doesn't exist in the repository",
+      "correction_candidates": [
+        "Make sure to copy the example configuration file from `config/example.cfg` to `config/settings.cfg` and modify it according to your setup before running the application",
+        "Make sure to create a configuration file at `config/settings.cfg` based on the template provided in the repository before running the application",
+        "Make sure to download the configuration file from the releases page and place it in the `config/` directory as `settings.cfg` before running the application",
+        "Make sure to generate the configuration file by running `python generate_config.py` which will create `config/settings.cfg` before running the application"
+      ],
+      "golden_answer": "Make sure to copy the example configuration file from `config/example.cfg` to `config/settings.cfg` and modify it according to your setup before running the application"
+    }
+  ]
+}

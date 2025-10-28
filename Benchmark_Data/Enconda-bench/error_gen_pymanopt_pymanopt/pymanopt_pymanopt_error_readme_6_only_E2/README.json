@@ -1,0 +1,18 @@
+{
+  "readme": "pymanopt_pymanopt_error_readme_6_only_E2",
+  "repo_name": "pymanopt_pymanopt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using --requirements instead of -r",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install --requirement requirements.txt",
+        "pip install -f requirements.txt",
+        "pip install --file requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

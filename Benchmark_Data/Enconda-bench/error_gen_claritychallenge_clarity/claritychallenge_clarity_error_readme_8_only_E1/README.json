@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_8_only_E1",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name is incorrect - using 'pyclarity-tools' instead of the correct 'pyclarity'",
+      "correction_candidates": [
+        "pip install pyclarity",
+        "pip install clarity-tools",
+        "pip install py-clarity",
+        "pip install pyclarity-package"
+      ],
+      "golden_answer": "pip install pyclarity"
+    }
+  ]
+}

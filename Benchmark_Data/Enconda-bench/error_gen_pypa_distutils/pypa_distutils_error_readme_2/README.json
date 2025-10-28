@@ -1,0 +1,29 @@
+{
+  "readme": "pypa_distutils_error_readme_2",
+  "repo_name": "pypa_distutils",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package requires Python 2.7 and is incompatible with Python 3, which contradicts the PyPI versions badge showing support for Python 3.7+.",
+      "correction_candidates": [
+        "Remove the sentence stating the Python 2.7 requirement.",
+        "Change the requirement to 'Requires Python 3.7 or later' to match the badge.",
+        "Update the PyPI versions badge to only show Python 2.7.",
+        "Change the requirement to 'Requires Python >= 2.7' to include both versions."
+      ],
+      "golden_answer": "Remove the sentence stating the Python 2.7 requirement."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The usage command `python setup install` is syntactically incorrect. It should be `python setup.py install`.",
+      "correction_candidates": [
+        "Correct the command to `python setup.py install`.",
+        "Replace the command with the modern equivalent `pip install .`.",
+        "Correct the command to `python -m setup install`.",
+        "Correct the command to `python setup.py --install`."
+      ],
+      "golden_answer": "Correct the command to `python setup.py install`."
+    }
+  ]
+}

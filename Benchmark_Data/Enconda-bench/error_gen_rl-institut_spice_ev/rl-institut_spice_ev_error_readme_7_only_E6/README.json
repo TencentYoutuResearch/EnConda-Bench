@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_7_only_E6",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added instruction to install package dependencies first, but then only shows pip install command without specifying what dependencies to install first",
+      "correction_candidates": [
+        "To install `spice_ev` as a package run:",
+        "To install `spice_ev` as a package, simply run:",
+        "Install `spice_ev` as a package using:",
+        "To set up `spice_ev` as a package, execute:"
+      ],
+      "golden_answer": "To install `spice_ev` as a package run:"
+    }
+  ]
+}

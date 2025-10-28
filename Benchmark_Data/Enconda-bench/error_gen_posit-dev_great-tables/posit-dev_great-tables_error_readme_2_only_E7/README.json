@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_2_only_E7",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only compatible with Python 3.7, which is outdated information contradicted by the project's badges.",
+      "correction_candidates": [
+        "Remove the sentence stating that the package is only compatible with Python 3.7.",
+        "Update the sentence to say 'compatible with Python 3.7 and higher'.",
+        "Change the Python version to '3.12 or newer'.",
+        "Add a link to the CI configuration file to check for compatible versions."
+      ],
+      "golden_answer": "Remove the sentence stating that the package is only compatible with Python 3.7."
+    }
+  ]
+}

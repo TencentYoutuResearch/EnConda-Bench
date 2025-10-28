@@ -1,0 +1,18 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_3_only_E1",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup guide specifies an incorrect module path 'yourlabs.autocomplete_light' for INSTALLED_APPS. The correct path is 'dal'.",
+      "correction_candidates": [
+        "Add `'dal'` to your `INSTALLED_APPS`.",
+        "Add `'dal'` and `'dal_select2'` to your `INSTALLED_APPS`.",
+        "Add `'autocomplete_light'` to your `INSTALLED_APPS`.",
+        "Add `'django_autocomplete_light'` to your `INSTALLED_APPS`."
+      ],
+      "golden_answer": "Add `'dal'` and `'dal_select2'` to your `INSTALLED_APPS`."
+    }
+  ]
+}

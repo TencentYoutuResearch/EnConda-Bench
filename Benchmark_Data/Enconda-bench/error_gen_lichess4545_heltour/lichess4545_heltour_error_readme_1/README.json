@@ -1,0 +1,29 @@
+{
+  "readme": "lichess4545_heltour_error_readme_1",
+  "repo_name": "lichess4545_heltour",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command `source env/bin/activate` is executed before the virtual environment is created by `./start.sh`, which will cause a 'No such file or directory' error.",
+      "correction_candidates": [
+        "Move `source env/bin/activate` to be after the `./start.sh` command.",
+        "Replace `./start.sh` and `source env/bin/activate` with `poetry shell`.",
+        "Run `virtualenv env` before `source env/bin/activate`.",
+        "Change `source env/bin/activate` to `source bin/activate`."
+      ],
+      "golden_answer": "Move `source env/bin/activate` to be after the `./start.sh` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `fab create-db` is incorrect. The correct Fabric task name is `createdb`, and using a hyphen will result in an error.",
+      "correction_candidates": [
+        "Change `fab create-db` to `fab createdb`.",
+        "Replace `fab create-db` with `python manage.py createdb`.",
+        "Change `fab create-db` to `fab db create`.",
+        "Run `createdb heltour` directly in the shell instead of using fabric."
+      ],
+      "golden_answer": "Change `fab create-db` to `fab createdb`."
+    }
+  ]
+}

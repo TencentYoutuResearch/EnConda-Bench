@@ -1,0 +1,18 @@
+{
+  "readme": "columnflow_columnflow_error_readme_3_only_E2",
+  "repo_name": "columnflow_columnflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The 'voms-proxy-init' command for creating a GRID proxy uses an invalid flag '-voms' instead of the correct '-rfc'.",
+      "correction_candidates": [
+        "voms-proxy-init -rfc -valid 196:00",
+        "voms-proxy-init --rfc --valid 196:00",
+        "voms-proxy-init -voms cms -rfc -valid 196:00",
+        "grid-proxy-init -valid 196:00"
+      ],
+      "golden_answer": "voms-proxy-init -rfc -valid 196:00"
+    }
+  ]
+}

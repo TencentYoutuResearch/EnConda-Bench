@@ -1,0 +1,18 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_2_only_E2",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for uploading to TensorBoard.dev uses an incorrect flag `--log_dir` instead of the correct `--logdir`.",
+      "correction_candidates": [
+        "tensorboard dev upload --logdir MODEL_DIR",
+        "tensorboard upload --logdir MODEL_DIR",
+        "tensorboard dev --logdir MODEL_DIR",
+        "tensorboard dev upload --path MODEL_DIR"
+      ],
+      "golden_answer": "tensorboard dev upload --logdir MODEL_DIR"
+    }
+  ]
+}

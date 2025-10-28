@@ -1,0 +1,18 @@
+{
+  "readme": "langchain-ai_langgraph_error_readme_1_only_E2",
+  "repo_name": "langchain-ai_langgraph",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `set TAVILY_API_KEY=tvly-...` is for Windows Command Prompt and will not work in bash/zsh shells, which use the `export` command.",
+      "correction_candidates": [
+        "export TAVILY_API_KEY=\"tvly-...\"",
+        "TAVILY_API_KEY=tvly-...",
+        "export TAVILY_API_KEY=tvly-...",
+        "env TAVILY_API_KEY=tvly-..."
+      ],
+      "golden_answer": "export TAVILY_API_KEY=tvly-..."
+    }
+  ]
+}

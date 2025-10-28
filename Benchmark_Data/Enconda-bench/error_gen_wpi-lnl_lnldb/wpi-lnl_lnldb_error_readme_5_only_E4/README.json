@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_5_only_E4",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file extension for fixtures data loading command",
+      "correction_candidates": [
+        "Change 'fixtures/*.yaml' to 'fixtures/*.json'",
+        "Change 'fixtures/*.yaml' to 'fixtures/*.xml'",
+        "Change 'fixtures/*.yaml' to 'fixtures/initial_data.json'",
+        "Change 'fixtures/*.yaml' to 'fixtures/**.json'"
+      ],
+      "golden_answer": "Change 'fixtures/*.yaml' to 'fixtures/*.json'"
+    }
+  ]
+}

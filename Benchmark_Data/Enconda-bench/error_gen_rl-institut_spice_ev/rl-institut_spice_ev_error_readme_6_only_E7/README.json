@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_6_only_E7",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Missing Python version requirement specification in installation section",
+      "correction_candidates": [
+        "Clone this repository. SpiceEV just has an optional dependency on Matplotlib. Everything else uses the Python (>= 3.6) standard library.",
+        "Clone this repository. SpiceEV requires Python 3.6 or higher and has an optional dependency on Matplotlib.",
+        "Clone this repository. SpiceEV is compatible with Python versions 3.6+ with optional Matplotlib dependency.",
+        "Clone this repository. SpiceEV needs Python >= 3.6 and optionally Matplotlib for plotting functionality."
+      ],
+      "golden_answer": "Clone this repository. SpiceEV just has an optional dependency on Matplotlib. Everything else uses the Python (>= 3.6) standard library."
+    }
+  ]
+}

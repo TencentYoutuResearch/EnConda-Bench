@@ -1,0 +1,29 @@
+{
+  "readme": "error_gen_dagshub_client_error_readme_merge_k2",
+  "repo_name": "dagshub_client",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install dagshub-client` is incorrect. The correct package name on PyPI is `dagshub`.",
+      "correction_candidates": [
+        "pip install dagshub",
+        "pip install dagshub --client",
+        "python -m pip install dagshub",
+        "pip install dagshub.client"
+      ],
+      "golden_answer": "pip install dagshub"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the Quickstart for Data Streaming, the `install_hooks()` function is called before it is imported, which will cause a `NameError`.",
+      "correction_candidates": [
+        "```python\nfrom dagshub.streaming import install_hooks\ninstall_hooks()\n```",
+        "```python\nimport dagshub.streaming\ndagshub.streaming.install_hooks()\n```",
+        "```python\nfrom dagshub import streaming\nstreaming.install_hooks()\n```",
+        "```python\n# Make sure to import before calling\nfrom dagshub.streaming import install_hooks\ninstall_hooks()\n```"
+      ],
+      "golden_answer": "```python\nfrom dagshub.streaming import install_hooks\ninstall_hooks()\n```"
+    }
+  ]
+}

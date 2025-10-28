@@ -1,0 +1,29 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_1",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions include an unnecessary step to install the `numpy` package separately, which is either not required or already included in `requirements.txt`.",
+      "correction_candidates": [
+        "Change `pip install numpy` to `pip install --no-deps numpy`.",
+        "Remove the line `pip install numpy`.",
+        "Move the line `pip install numpy` to after `pip install -r requirements.txt`.",
+        "Change `pip install numpy` to `pip install pandas`."
+      ],
+      "golden_answer": "Remove the line `pip install numpy`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the development server is incorrect. `python manage.py startapp` is used for creating a new Django application, not for running the server.",
+      "correction_candidates": [
+        "Change `python manage.py startapp` to `python manage.py run`.",
+        "Change `python manage.py startapp` to `django-admin runserver`.",
+        "Change `python manage.py startapp` to `python manage.py runserver`.",
+        "Change `python manage.py startapp` to `python manage.py start`."
+      ],
+      "golden_answer": "Change `python manage.py startapp` to `python manage.py runserver`."
+    }
+  ]
+}

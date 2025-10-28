@@ -1,0 +1,29 @@
+{
+  "readme": "wind-python_windpowerlib_error_readme_1",
+  "repo_name": "wind-python_windpowerlib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Optional Packages' section, the pip command to install the matplotlib library is misspelled as 'matplot', which will cause the installation to fail.",
+      "correction_candidates": [
+        "pip install python-matplotlib",
+        "pip install matplotlib",
+        "conda install matplotlib",
+        "pip install mplot"
+      ],
+      "golden_answer": "pip install matplotlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Contributing' section, the command to install the package in editable mode uses the incorrect '--editable' flag instead of the correct '-e' shorthand, which will cause the command to fail.",
+      "correction_candidates": [
+        "pip install -e /path/to/the/repository",
+        "pip install --develop /path/to/the/repository",
+        "python setup.py develop",
+        "pip install --dev-mode /path/to/the/repository"
+      ],
+      "golden_answer": "pip install -e /path/to/the/repository"
+    }
+  ]
+}

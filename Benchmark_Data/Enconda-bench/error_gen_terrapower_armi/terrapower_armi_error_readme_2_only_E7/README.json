@@ -1,0 +1,18 @@
+{
+  "readme": "terrapower_armi_error_readme_2_only_E7",
+  "repo_name": "terrapower_armi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version (`3.9+`) is not specified, which can lead to installation or runtime errors if an incompatible version of Python is used.",
+      "correction_candidates": [
+        "Before starting, you need to have the latest version of Python.",
+        "Before starting, you need to have Python 3.",
+        "Before starting, you need to have `Python <https://www.python.org/downloads/>`_ 3.9+ on Windows or Linux.",
+        "Before starting, you need to have Python 3.9 or Python 3.10."
+      ],
+      "golden_answer": "Before starting, you need to have `Python <https://www.python.org/downloads/>`_ 3.9+ on Windows or Linux."
+    }
+  ]
+}

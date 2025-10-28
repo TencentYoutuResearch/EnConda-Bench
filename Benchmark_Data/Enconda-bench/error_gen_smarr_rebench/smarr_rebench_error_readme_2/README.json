@@ -1,0 +1,29 @@
+{
+  "readme": "smarr_rebench_error_readme_2",
+  "repo_name": "smarr_rebench",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command `pip install rebench==0.9` pins the installation to a specific, outdated version. This can lead to compatibility issues or missing features described in the documentation, which refers to version 1.0 and later.",
+      "correction_candidates": [
+        "`pip install rebench`",
+        "`pip install rebench --upgrade`",
+        "`pip install 'rebench>=1.0'`",
+        "`python3 -m pip install rebench`"
+      ],
+      "golden_answer": "`pip install rebench`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the example YAML configuration, the `default_data_file` is set to `'data/example.data'`, which implies that a `data/` directory must exist. However, there are no instructions to create this directory, which will cause a file path error when ReBench tries to write the data file.",
+      "correction_candidates": [
+        "`default_data_file: 'example.data'`",
+        "`default_data_file: './example.data'`",
+        "Add a step `mkdir data` before running `rebench`.",
+        "Remove the `default_data_file` line to use the default behavior."
+      ],
+      "golden_answer": "`default_data_file: 'example.data'`"
+    }
+  ]
+}

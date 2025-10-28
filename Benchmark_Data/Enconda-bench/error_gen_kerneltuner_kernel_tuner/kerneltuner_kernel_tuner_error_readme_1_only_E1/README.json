@@ -1,0 +1,18 @@
+{
+  "readme": "kerneltuner_kernel_tuner_error_readme_1_only_E1",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command is missing the necessary extras like `[cuda]` or `[opencl]`, which means backend-specific dependencies (e.g., PyCUDA) will not be installed, leading to runtime errors.",
+      "correction_candidates": [
+        "pip install kernel_tuner[cuda,opencl,hip]",
+        "pip install kernel_tuner --all-extras",
+        "pip install kernel_tuner; pip install pycuda pyopencl",
+        "conda install kernel_tuner -c conda-forge"
+      ],
+      "golden_answer": "pip install kernel_tuner[cuda,opencl,hip]"
+    }
+  ]
+}

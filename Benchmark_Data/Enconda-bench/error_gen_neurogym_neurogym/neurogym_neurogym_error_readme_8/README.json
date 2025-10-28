@@ -1,0 +1,29 @@
+{
+  "readme": "neurogym_neurogym_error_readme_8",
+  "repo_name": "neurogym_neurogym",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed from editable install (pip install -e .) to standard setup.py install, which is inconsistent with the full install instruction that still uses pip",
+      "correction_candidates": [
+        "pip install -e .",
+        "python setup.py develop",
+        "pip install .",
+        "python -m pip install -e ."
+      ],
+      "golden_answer": "pip install -e ."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The full install instruction references replacing 'last command' but now refers to setup.py install instead of pip install, creating command syntax mismatch",
+      "correction_candidates": [
+        "python setup.py install --extras",
+        "pip install -e '.[all]'",
+        "python setup.py develop --all",
+        "python setup.py install[all]"
+      ],
+      "golden_answer": "pip install -e '.[all]'"
+    }
+  ]
+}

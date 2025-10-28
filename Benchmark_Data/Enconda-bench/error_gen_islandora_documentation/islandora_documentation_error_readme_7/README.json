@@ -1,0 +1,29 @@
+{
+  "readme": "islandora_documentation_error_readme_7",
+  "repo_name": "islandora_documentation",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Suggests installing unnecessary dependencies (sphinx and jekyll) alongside mkdocs for a mkdocs-only project",
+      "correction_candidates": [
+        "To set up the development environment, install mkdocs and mkdocs-material for the documentation system.",
+        "To set up the development environment, install mkdocs-material only, as it includes all necessary mkdocs dependencies.",
+        "To set up the development environment, install mkdocs along with the required theme and plugins.",
+        "To set up the development environment, install the mkdocs package and any additional plugins specified in requirements.txt."
+      ],
+      "golden_answer": "To set up the development environment, install mkdocs and mkdocs-material for the documentation system."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect mkdocs command using 'server' instead of 'serve'",
+      "correction_candidates": [
+        "Use the command `mkdocs serve --dev-addr 0.0.0.0:8000` to start the local development server.",
+        "Use the command `mkdocs serve` to start the local development server.",
+        "Use the command `mkdocs serve --host 0.0.0.0` to start the local development server.",
+        "Use the command `mkdocs run --host 0.0.0.0` to start the local development server."
+      ],
+      "golden_answer": "Use the command `mkdocs serve --host 0.0.0.0` to start the local development server."
+    }
+  ]
+}

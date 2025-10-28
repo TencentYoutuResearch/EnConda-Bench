@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_8_only_E7",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Mixed dependency version specifications - some have specific versions while others don't, creating potential conflicts",
+      "correction_candidates": [
+        "Remove all version specifications and use latest versions for all dependencies",
+        "Add specific version numbers for all dependencies to ensure consistency",
+        "Use version ranges (e.g., >=2.25.0) instead of exact versions",
+        "Keep only critical dependencies with version specifications"
+      ],
+      "golden_answer": "Remove all version specifications and use latest versions for all dependencies"
+    }
+  ]
+}

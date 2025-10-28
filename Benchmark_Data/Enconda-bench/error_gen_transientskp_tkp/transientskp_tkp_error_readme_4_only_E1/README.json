@@ -1,0 +1,18 @@
+{
+  "readme": "transientskp_tkp_error_readme_4_only_E1",
+  "repo_name": "transientskp_tkp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `mongodb` package is listed as a system dependency, but it is not required by this project, which uses a SQL-based system. This leads to unnecessary installation of a large software package.",
+      "correction_candidates": [
+        "The correct package name is `mongodb-org`, not `mongodb`.",
+        "You should also install `redis-server` along with `mongodb` for caching.",
+        "The `mongodb` package is unnecessary and should be removed from the command.",
+        "The `mongodb` service must be started with `sudo systemctl start mongod` after installation."
+      ],
+      "golden_answer": "The `mongodb` package is unnecessary and should be removed from the command."
+    }
+  ]
+}

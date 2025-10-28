@@ -1,0 +1,29 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_4",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The conda installation guide incorrectly states that the Qt requirement is not automatically installed, leading to an unnecessary, separate `conda install pyqt5` command.",
+      "correction_candidates": [
+        "Restore the original text: \"**Note:** If the Qtconsole is installed using conda, it will **automatically** install the Qt requirement as well.\" and remove the `conda install pyqt5` command.",
+        "Change the command to `conda install qtconsole pyqt5`.",
+        "Change the text to: \"**Note:** Conda may install the Qt requirement, but it is best to install it explicitly.\"",
+        "Change the command to `conda install qtconsole -c conda-forge`."
+      ],
+      "golden_answer": "Restore the original text: \"**Note:** If the Qtconsole is installed using conda, it will **automatically** install the Qt requirement as well.\" and remove the `conda install pyqt5` command."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "A critical note explaining that `pip` does not automatically install the Qt dependency has been removed, making the instructions unclear and likely to fail for users.",
+      "correction_candidates": [
+        "Add the note back: \"**Note:** Make sure that Qt is installed. Unfortunately, Qt is not installed when using pip. The next section gives instructions on doing it.\"",
+        "Change the `pip install qtconsole` command to `pip install qtconsole[pyqt5]`.",
+        "Add a sentence: \"After this, you must install a Qt binding like PyQt5 separately.\"",
+        "Add a link to the \"Installing Qt\" section right after the command."
+      ],
+      "golden_answer": "Add the note back: \"**Note:** Make sure that Qt is installed. Unfortunately, Qt is not installed when using pip. The next section gives instructions on doing it.\""
+    }
+  ]
+}

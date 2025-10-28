@@ -1,0 +1,18 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_3_only_E4",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The image path for finding the API key is incorrect (`docs/img.png`), causing the image to not display. The correct path is `files/img.png`.",
+      "correction_candidates": [
+        "The image is deprecated; remove the entire line.",
+        "Change the image path from `.../docs/img.png` to `.../files/img.png`.",
+        "Change the image path from `.../docs/img.png` to `.../assets/img.png`.",
+        "The image link is an absolute URL and should be `https://raw.githubusercontent.com/AndreiDrang/python-rucaptcha/master/files/img.png`."
+      ],
+      "golden_answer": "Change the image path from `.../docs/img.png` to `.../files/img.png`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_1_only_E2",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to start the FTP server is incorrect. `pyftpdlib` does not register a direct command-line executable with `start` and `--port` arguments in this format.",
+      "correction_candidates": [
+        "pyftpdlib --port 2121 --write",
+        "python3 -m pyftpdlib --write",
+        "python3 pyftpdlib --port=2121 --write",
+        "ftpd --module pyftpdlib --write"
+      ],
+      "golden_answer": "python3 -m pyftpdlib --write"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+<a href="https://github.com/centre-for-humanities-computing/Dacy"><img src="https://github.com/centre-for-humanities-computing/DaCy/raw/main/docs/_static/icon_black_text.png" width="175" height="175" align="right" /></a>
+# DaCy: An efficient and unified framework for danish NLP
+
+[
+![PyPI](https://img.shields.io/pypi/v/dacy.svg)
+][pypi status]
+[
+![pip downloads](https://img.shields.io/pypi/dm/dacy.svg)
+](https://pypi.org/project/dacy/)
+[
+![Python Version](https://img.shields.io/pypi/pyversions/dacy)
+][pypi status]
+[
+![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
+]([ruff])
+[
+![documentation](https://github.com/centre-for-humanities-computing/dacy/actions/workflows/documentation.yml/badge.svg)
+][documentation]
+[
+![Tests](https://github.com/centre-for-humanities-computing/dacy/actions/workflows/tests.yml/badge.svg)
+][tests]
+
+
+[pypi status]: https://pypi.org/project/dacy/
+[documentation]: https://centre-for-humanities-computing.github.io/DaCy/
+[tests]: https://github.com/centre-for-humanities-computing/dacy/actions?workflow=Tests
+[ruff]: https://github.com/astral-sh/ruff
+
+
+<!-- start short-description -->
+DaCy is a Danish natural language preprocessing framework made with SpaCy. Its largest pipeline has achieved State-of-the-Art performance on Named entity recognition, part-of-speech tagging and dependency parsing for Danish. Feel free to try out the [demo](https://huggingface.co/chcaa/da_dacy_medium_trf?text=DaCy+er+en+pipeline+til+anvendelse+af+dansk+sprogteknologi+lavet+af+K.+Enevoldsen%2C+L.+Hansen+og+K.+Nielbo+fra+Center+for+Humanities+Computing.). This repository contains material for using DaCy, reproducing the results and guides on the usage of the package. Furthermore, it also contains behavioral tests for biases and robustness of Danish NLP pipelines.
+<!-- end short-description -->
+
+## 🔧 Installation
+
+You can install `dacy` via [pip] from [PyPI]:
+
+```bash
+conda install dacy
+
+
+```
+
+## 👩‍💻 Usage
+To use the model you first have to download either the small, medium, or large model. To see a list of all available models:
+
+```python
+
+for model in dacy.models():
+
+
+    print(model)
+import dacy
+
+
+# ...
+# da_dacy_small_trf-0.2.0
+# da_dacy_medium_trf-0.2.0
+# da_dacy_large_trf-0.2.0
+```
+
+To download and load a model simply execute:
+```python
+nlp = dacy.load("da_dacy_medium_trf-0.0.1")
+
+
+# or equivalently (always loads the latest version)
+nlp = dacy.download("medium")
+
+```
+
+To see more examples, see the [documentation].
+
+# 📖 Documentation
+
+| Documentation              |                                                                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------- |
+| 📚 **[Getting started]**    | Guides and instructions on how to use DaCy and its features.                                |
+| 🦾 **[Performance]**        | A detailed description of the performance of DaCy and comparison with similar Danish models |
+| 📰 **[News and changelog]** | New additions, changes and version history.                                                 |
+| 🎛 **[API References]**     | The detailed reference for DaCy's API. Including function documentation                     |
+| 🙋 **[FAQ]**                | Frequently asked questions                                                                  |
+
+
+[Installation]: https://centre-for-humanities-computing.github.io/DaCy/installation.html
+[Getting started]: https://centre-for-humanities-computing.github.io/DaCy/tutorials/basic.html
+[api references]: https://centre-for-humanities-computing.github.io/DaCy/
+[News and changelog]: https://centre-for-humanities-computing.github.io/DaCy/news.html
+[FAQ]: https://centre-for-humanities-computing.github.io/DaCy/faq.html
+[Performance]: https://centre-for-humanities-computing.github.io/DaCy/performance.html
+
+
+
+
+
+<br /> 
+
+<details>
+  <summary> Training and reproduction </summary>
+
+The folder `training` contains a range of folders with a SpaCy project for each model version. This allows for the reproduction of the results.
+
+Want to learn more about how DaCy initially came to be, check out this [blog post](https://www.centre-for-humanities-computing.com/post/new-fast-and-efficient-state-of-the-art-in-danish-nlp/).
+
+</details>
+
+<br /> 
+
+
+# 💬 Where to ask questions
+To report issues or request features, please use the [GitHub Issue Tracker](https://github.com/centre-for-humanities-computing/DaCy/issues).
+Questions related to SpaCy are kindly referred to the SpaCy GitHub or forum. Otherwise, please use the Discussion Forums.
+
+| Type                           |                        |
+| ------------------------------ | ---------------------- |
+| 📚 **FAQ**                      | [FAQ]                  |
+| 🚨 **Bug Reports**              | [GitHub Issue Tracker] |
+| 🎁 **Feature Requests & Ideas** | [GitHub Issue Tracker] |
+| 👩‍💻 **Usage Questions**          | [GitHub Discussions]   |
+| 🗯 **General Discussion**       | [GitHub Discussions]   |
+
+[Documentation]: https://centre-for-humanities-computing.github.io/DaCy/
+[Installation]: https://centre-for-humanities-computing.github.io/dacy/installation.html
+[Tutorials]: https://centre-for-humanities-computing.github.io/dacy/tutorials.html
+[API Reference]: https://centre-for-humanities-computing.github.io/dacy/references.html
+[FAQ]: https://centre-for-humanities-computing.github.io/dacy/faq.html
+[github issue tracker]: https://github.com/centre-for-humanities-computing/dacy/issues
+[github discussions]: https://github.com/centre-for-humanities-computing/dacy/discussions
+[pip]: https://pypi.org/project/pip/
+[PyPI]: https://pypi.org/project/dacy/

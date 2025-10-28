@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_1_only_E2",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the HTML report server is syntactically incorrect. It attempts to run a package as a script instead of as a module, which will likely fail.",
+      "correction_candidates": [
+        "python -m portingdb serve",
+        "./portingdb/serve.py",
+        "python portingdb --serve",
+        "portingdb start-server"
+      ],
+      "golden_answer": "python -m portingdb serve"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_numba_llvmlite_error_readme_merge_k6",
+  "repo_name": "numba_llvmlite",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the installation documentation contains an incorrect path segment ('install/installation.html' instead of 'install/index.html').",
+      "correction_candidates": [
+        "http://llvmlite.pydata.org/en/latest/install/index.html",
+        "http://llvmlite.readthedocs.io/en/latest/install/index.html",
+        "http://llvmlite.pydata.org/en/latest/install.html",
+        "http://llvmlite.pydata.org/en/latest/docs/install/index.html"
+      ],
+      "golden_answer": "http://llvmlite.pydata.org/en/latest/install/index.html"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used pip install with conda-specific --channel parameter which is invalid syntax",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ pip install llvmlite",
+        "$ conda install -c numba llvmlite",
+        "$ pip install --index-url https://anaconda.org/numba llvmlite"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary pip dependencies (cmake, numpy, setuptools) when using conda pre-built binaries",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ conda install --channel=numba llvmlite cmake numpy setuptools",
+        "$ conda install --channel=numba llvmlite\n   $ conda install cmake numpy setuptools",
+        "$ pip install llvmlite cmake numpy setuptools"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Added contradictory installation requirements mentioning LLVM 15.x.x and Python 2.7 which conflicts with earlier compatibility statements",
+      "correction_candidates": [
+        "Remove the entire 'Installation Requirements' section as it contradicts the compatibility information already provided",
+        "Before installing llvmlite, you must first install LLVM 14.x.x and ensure Python 3.9+ compatibility is maintained",
+        "Before installing llvmlite, ensure your system meets the Python 3.9 -- 3.12 and LLVM 14.x.x requirements mentioned above",
+        "Before installing llvmlite, you must first install the latest version of LLVM 16.x.x and ensure Python 3.12+ compatibility"
+      ],
+      "golden_answer": "Remove the entire 'Installation Requirements' section as it contradicts the compatibility information already provided"
+    }
+  ]
+}

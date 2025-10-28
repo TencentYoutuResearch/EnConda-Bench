@@ -1,0 +1,18 @@
+{
+  "readme": "menpo_menpo_error_readme_5_only_E1",
+  "repo_name": "menpo_menpo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies to pip install command that aren't required for basic Menpo installation",
+      "correction_candidates": [
+        "pip install menpo",
+        "pip install menpo numpy scipy",
+        "pip install menpo --no-deps",
+        "pip install menpo[complete]"
+      ],
+      "golden_answer": "pip install menpo"
+    }
+  ]
+}

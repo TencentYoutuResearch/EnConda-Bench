@@ -1,0 +1,18 @@
+{
+  "readme": "mirageoscience_geoapps_error_readme_4_only_E2",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The 'Quick Start' section provides an incorrect command `geoapps --run` to start the application, which is not a valid command or parameter.",
+      "correction_candidates": [
+        "Remove the 'Quick Start' section as it provides a wrong command.",
+        "Correct the command to a plausible entry point, e.g., `python -m geoapps.cli`.",
+        "Replace the command with instructions to see the documentation: 'Please see the documentation for usage instructions.'",
+        "Correct the command to `geoapps --help` to show available options."
+      ],
+      "golden_answer": "Remove the 'Quick Start' section as it provides a wrong command."
+    }
+  ]
+}

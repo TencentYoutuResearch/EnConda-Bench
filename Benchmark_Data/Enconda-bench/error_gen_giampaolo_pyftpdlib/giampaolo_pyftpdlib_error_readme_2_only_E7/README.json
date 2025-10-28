@@ -1,0 +1,18 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_2_only_E7",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command uses `python` instead of `python3` and incorrectly states that the library requires Python 2.7, which is outdated information. The library is compatible with modern Python 3 versions.",
+      "correction_candidates": [
+        "Change the command to `python3 -m pyftpdlib --write` and remove the note about Python 2.7.",
+        "The command is correct, but the library should be installed via `pip2 install pyftpdlib`.",
+        "The note is correct. You must use a Python 2.7 environment to run the server.",
+        "Change the command to `python3.6 -m pyftpdlib --write` as it only works with Python 3.6."
+      ],
+      "golden_answer": "Change the command to `python3 -m pyftpdlib --write` and remove the note about Python 2.7."
+    }
+  ]
+}

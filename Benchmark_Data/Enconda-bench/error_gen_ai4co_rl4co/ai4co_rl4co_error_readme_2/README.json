@@ -1,0 +1,29 @@
+{
+  "readme": "ai4co_rl4co_error_readme_2",
+  "repo_name": "ai4co_rl4co",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for local development incorrectly state to run `pip install -e .` before cloning the repository, which will fail because the necessary `setup.py` file is not present.",
+      "correction_candidates": [
+        "Combine the commands into a single line: `git clone https://github.com/ai4co/rl4co && cd rl4co && pip install -e .`",
+        "Replace the commands with `pip install --editable git+https://github.com/ai4co/rl4co#egg=rl4co`.",
+        "Swap the two lines. The `git clone` command must be executed before `pip install -e .`.",
+        "Add `python setup.py develop` after the `git clone` command and remove `pip install -e .`."
+      ],
+      "golden_answer": "Swap the two lines. The `git clone` command must be executed before `pip install -e .`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README provides an incorrect file path to the experiment configurations directory, referencing `config/experiments/` instead of the correct `configs/experiment/`.",
+      "correction_candidates": [
+        "Change the path `config/experiments/` to `experiments/`.",
+        "Change the path `config/experiments/` to `configs/`.",
+        "Correct the path from `config/experiments/` to `configs/experiment/`.",
+        "Change the path `config/experiments/` to `./configs/experiment/`."
+      ],
+      "golden_answer": "Correct the path from `config/experiments/` to `configs/experiment/`."
+    }
+  ]
+}

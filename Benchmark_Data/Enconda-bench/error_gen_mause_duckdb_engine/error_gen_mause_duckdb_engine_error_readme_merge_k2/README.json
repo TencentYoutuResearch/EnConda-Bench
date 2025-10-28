@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_mause_duckdb_engine_error_readme_merge_k2",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install duckdb_engine` is incorrect because it uses an underscore instead of a hyphen. The correct package name on PyPI is `duckdb-engine`.",
+      "correction_candidates": [
+        "pip install duckdb-engine",
+        "pip install duckdb engine",
+        "pip install duckdb --driver=engine",
+        "conda install duckdb-engine"
+      ],
+      "golden_answer": "pip install duckdb-engine"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The SQLAlchemy connection string `duckdb:/:memory:` is syntactically incorrect for creating an in-memory database. It is missing the required `//` after the `duckdb:` prefix.",
+      "correction_candidates": [
+        "create_engine(\"duckdb:///:memory:\")",
+        "create_engine(\"duckdb:memory:\")",
+        "create_engine(\"duckdb://memory\")",
+        "create_engine(\"duckdb://\")"
+      ],
+      "golden_answer": "create_engine(\"duckdb:///:memory:\")"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example connection string for a file-based database, `duckdb:///path/to/duck.db`, is incorrect for an absolute path. It should use four slashes (`////`) to denote an absolute path from the root directory.",
+      "correction_candidates": [
+        "engine = sqlalchemy.create_engine('duckdb:////path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:/path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:///./path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:path/to/duck.db')"
+      ],
+      "golden_answer": "engine = sqlalchemy.create_engine('duckdb:////path/to/duck.db')"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The note about pandas `read_sql()` chunksize incorrectly states that the issue occurs in duckdb versions `>=0.5.0`, which is the opposite of the truth. The issue was resolved in those versions.",
+      "correction_candidates": [
+        "The chunksize parameter is fully supported in all versions.",
+        "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb",
+        "NOTE: this is an issue in all versions of duckdb",
+        "NOTE: this is only an issue in versions <0.5.0 of duckdb"
+      ],
+      "golden_answer": "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb"
+    }
+  ]
+}

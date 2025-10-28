@@ -1,0 +1,18 @@
+{
+  "readme": "ciscotestautomation_genieparser_error_readme_1_only_E2",
+  "repo_name": "ciscotestautomation_genieparser",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The 'git clone' command is missing the repository's full URL, making it impossible to clone the project.",
+      "correction_candidates": [
+        "bash$ git clone https://github.com/CiscoTestAutomation/genieparser.git",
+        "bash$ git clone --repo https://github.com/CiscoTestAutomation/genieparser.git",
+        "bash$ git clone git@github.com:CiscoTestAutomation/genieparser.git",
+        "bash$ git pull https://github.com/CiscoTestAutomation/genieparser.git"
+      ],
+      "golden_answer": "bash$ git clone https://github.com/CiscoTestAutomation/genieparser.git"
+    }
+  ]
+}

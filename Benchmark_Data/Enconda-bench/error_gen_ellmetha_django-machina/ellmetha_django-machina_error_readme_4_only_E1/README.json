@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_4_only_E1",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The manual installation instructions are missing a critical required dependency, `django-mptt`, which will cause the application to fail.",
+      "correction_candidates": [
+        "The installation instructions should be simplified to `pip install django-machina`, which correctly installs all required dependencies automatically.",
+        "Add the missing command `pip install django-mptt` to the list.",
+        "The dependency `django-mptt` must be installed for the application to work.",
+        "Update the installation block to include `pip install django-mptt`."
+      ],
+      "golden_answer": "The installation instructions should be simplified to `pip install django-machina`, which correctly installs all required dependencies automatically."
+    }
+  ]
+}

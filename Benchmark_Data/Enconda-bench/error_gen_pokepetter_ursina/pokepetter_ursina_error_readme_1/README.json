@@ -1,0 +1,29 @@
+{
+  "readme": "pokepetter_ursina_error_readme_1",
+  "repo_name": "pokepetter_ursina",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is too vague ('Python 3 or newer'), which may lead users to attempt installation on unsupported versions like Python 3.5.",
+      "correction_candidates": [
+        "Change 'Python 3 or newer' to 'Python 3.6 or newer'.",
+        "Change 'Python 3 or newer' to 'Python >= 3.6'.",
+        "Change 'Python 3 or newer' to 'The latest version of Python 3'.",
+        "Change 'Python 3 or newer' to 'Python 3.6, 3.7, 3.8, 3.9, or 3.10'."
+      ],
+      "golden_answer": "Change 'Python 3 or newer' to 'Python 3.6 or newer'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command `pip install ursina-engine` is incorrect; the package name is `ursina`.",
+      "correction_candidates": [
+        "Change `pip install ursina-engine` to `pip install ursina`.",
+        "Change `pip install ursina-engine` to `pip install ursina --stable`.",
+        "Change `pip install ursina-engine` to `python -m pip install ursina`.",
+        "Change `pip install ursina-engine` to `pip get ursina`."
+      ],
+      "golden_answer": "Change `pip install ursina-engine` to `pip install ursina`."
+    }
+  ]
+}

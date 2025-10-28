@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_3_only_E4",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The documentation section incorrectly advises users to manually create a `briefcase.toml` file, which is not the standard workflow and the file would not exist yet.",
+      "correction_candidates": [
+        "Remove the sentence advising the manual creation of a `briefcase.toml` file.",
+        "Change `briefcase.toml` to `pyproject.toml`.",
+        "Change the instruction to 'Briefcase will automatically generate a `briefcase.toml` file when you create or update a project.'",
+        "Specify that `briefcase.toml` should be created in the user's home directory."
+      ],
+      "golden_answer": "Remove the sentence advising the manual creation of a `briefcase.toml` file."
+    }
+  ]
+}

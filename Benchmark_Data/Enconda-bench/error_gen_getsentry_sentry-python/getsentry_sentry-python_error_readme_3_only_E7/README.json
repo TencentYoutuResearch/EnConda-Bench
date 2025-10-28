@@ -1,0 +1,18 @@
+{
+  "readme": "getsentry_sentry-python_error_readme_3_only_E7",
+  "repo_name": "getsentry_sentry-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command pins `sentry-sdk` to an outdated version (`1.5.0`), which prevents users from getting the latest features, bug fixes, and security updates, and is incompatible with the 2.x migration guide mentioned.",
+      "correction_candidates": [
+        "Change the command to `pip install sentry-sdk>=1.5.0`.",
+        "Change the command to `pip install sentry-sdk`.",
+        "Change the command to `pip install --upgrade sentry-sdk`.",
+        "Change the command to `pip install sentry-sdk==2.0.0`."
+      ],
+      "golden_answer": "Change the command to `pip install --upgrade sentry-sdk`."
+    }
+  ]
+}

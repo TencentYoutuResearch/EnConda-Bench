@@ -1,0 +1,18 @@
+{
+  "readme": "reagento_adaptix_error_readme_7_only_E2",
+  "repo_name": "reagento_adaptix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed pip to pip3 with --user flag which may cause issues in some environments and is not the standard recommendation",
+      "correction_candidates": [
+        "pip install adaptix==3.0.0b7",
+        "python -m pip install adaptix==3.0.0b7",
+        "pip install --upgrade adaptix==3.0.0b7",
+        "python3 -m pip install adaptix==3.0.0b7"
+      ],
+      "golden_answer": "pip install adaptix==3.0.0b7"
+    }
+  ]
+}

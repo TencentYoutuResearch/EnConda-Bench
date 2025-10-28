@@ -1,0 +1,18 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_6_only_E2",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command 'aqt query-qt' is used instead of the correct 'aqt list-qt'",
+      "correction_candidates": [
+        "aqt list-qt windows desktop --arch 6.2.0",
+        "aqt show-qt windows desktop --arch 6.2.0",
+        "aqt get-qt windows desktop --arch 6.2.0",
+        "aqt find-qt windows desktop --arch 6.2.0"
+      ],
+      "golden_answer": "aqt list-qt windows desktop --arch 6.2.0"
+    }
+  ]
+}

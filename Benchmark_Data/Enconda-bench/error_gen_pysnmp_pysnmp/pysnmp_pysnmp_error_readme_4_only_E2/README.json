@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_4_only_E2",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command for `snmpget.py` uses an incorrect flag `--authKey` for the authentication key, which should be `-A`.",
+      "correction_candidates": [
+        "Change the flag `--authKey` to `-a`.",
+        "Change the flag `--authKey` to `-A`.",
+        "Change the flag `--authKey` to `--authkey`.",
+        "Change the flag `--authKey` to `-authKey`."
+      ],
+      "golden_answer": "Change the flag `--authKey` to `-A`."
+    }
+  ]
+}

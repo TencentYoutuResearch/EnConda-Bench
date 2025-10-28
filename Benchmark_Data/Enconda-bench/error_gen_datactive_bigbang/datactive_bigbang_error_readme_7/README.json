@@ -1,0 +1,29 @@
+{
+  "readme": "datactive_bigbang_error_readme_7",
+  "repo_name": "datactive_bigbang",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifying Python2 instead of Python3 for pip installation requirements",
+      "correction_candidates": [
+        "Change 'Pip (for Python2)' to 'Pip (for Python3)'",
+        "Update the Python version requirement to Python3",
+        "Specify Python3 instead of Python2 for pip dependency",
+        "Correct the Python version from Python2 to Python3"
+      ],
+      "golden_answer": "Change 'Pip (for Python2)' to 'Pip (for Python3)'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using incorrect command 'collect-mails' instead of 'collect-mail' in the bigbang usage example",
+      "correction_candidates": [
+        "Change 'bigbang collect-mails' to 'bigbang collect-mail'",
+        "Fix the command name from collect-mails to collect-mail",
+        "Use the correct singular form 'collect-mail' instead of plural",
+        "Replace 'collect-mails' with the proper 'collect-mail' command"
+      ],
+      "golden_answer": "Change 'bigbang collect-mails' to 'bigbang collect-mail'"
+    }
+  ]
+}

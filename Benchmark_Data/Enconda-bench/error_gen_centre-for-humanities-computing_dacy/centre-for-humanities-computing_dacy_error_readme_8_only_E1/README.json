@@ -1,0 +1,18 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_8_only_E1",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary specific dependency versions that may conflict with dacy's own requirements",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy[all]",
+        "pip install dacy --upgrade",
+        "pip install dacy spacy transformers torch"
+      ],
+      "golden_answer": "pip install dacy"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "hackerspace-ntnu_website_error_readme_2_only_E4",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to load test data references a non-existent file `fixture.json` instead of the correct `fixtures.json`.",
+      "correction_candidates": [
+        "Change the command to `python manage.py loaddata fixture.json --format=json`.",
+        "Rename the file `fixtures.json` to `fixture.json` in the project.",
+        "Change the command to `python manage.py loaddata fixtures.json`.",
+        "Change the command to `python manage.py loaddata fixtures`."
+      ],
+      "golden_answer": "Change the command to `python manage.py loaddata fixtures.json`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "matchms_matchms_error_readme_1_only_E2",
+  "repo_name": "matchms_matchms",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install developer dependencies is missing the '.' which specifies the current directory, causing the installation to fail.",
+      "correction_candidates": [
+        "pip install .[dev]",
+        "pip install --editable .[dev]",
+        "pip install -e . --with dev",
+        "poetry install --with dev"
+      ],
+      "golden_answer": "pip install --editable .[dev]"
+    }
+  ]
+}

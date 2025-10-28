@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_pip_error_readme_1_only_E2",
+  "repo_name": "pypa_pip",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install --upgrade` is incomplete and will fail. It needs to specify the `pip` package itself for the upgrade to work.",
+      "correction_candidates": [
+        "Then, upgrade to the latest pip with the following command: `python -m pip install --upgrade pip`",
+        "Then, upgrade to the latest pip with the following command: `pip install pip --upgrade`",
+        "Then, upgrade to the latest pip with the following command: `pip upgrade`",
+        "Then, upgrade to the latest pip with the following command: `pip install --upgrade`"
+      ],
+      "golden_answer": "Then, upgrade to the latest pip with the following command: `python -m pip install --upgrade pip`"
+    }
+  ]
+}

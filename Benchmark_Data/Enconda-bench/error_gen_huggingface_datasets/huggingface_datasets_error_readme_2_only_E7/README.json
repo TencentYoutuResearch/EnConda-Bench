@@ -1,0 +1,18 @@
+{
+  "readme": "huggingface_datasets_error_readme_2_only_E7",
+  "repo_name": "huggingface_datasets",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation suggests that PyTorch version 0.4+ is compatible, which is too old and will likely cause compatibility issues with modern features of the library.",
+      "correction_candidates": [
+        "If you plan to use 🤗 Datasets with PyTorch, TensorFlow or pandas...",
+        "If you plan to use 🤗 Datasets with PyTorch (1.0+), TensorFlow (2.2+) or pandas, you should also install PyTorch, TensorFlow or pandas.",
+        "If you plan to use 🤗 Datasets with PyTorch (latest), TensorFlow (2.2+) or pandas, you should also install PyTorch, TensorFlow or pandas.",
+        "If you plan to use 🤗 Datasets with PyTorch (1.0+), TensorFlow (2.0+) or pandas, you should also install PyTorch, TensorFlow or pandas."
+      ],
+      "golden_answer": "If you plan to use 🤗 Datasets with PyTorch (1.0+), TensorFlow (2.2+) or pandas, you should also install PyTorch, TensorFlow or pandas."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "marimo-team_marimo_error_readme_1_only_E4",
+  "repo_name": "marimo-team_marimo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Learn more' section, the text refers to an `examples/notebooks/` folder, but the project's examples are located in the `examples/` directory at the root.",
+      "correction_candidates": [
+        "Check out our [docs](https://docs.marimo.io), the `examples/` folder, and our [gallery](https://marimo.io/@public) to learn more.",
+        "Check out our [docs](https://docs.marimo.io), the `marimo/examples/` folder, and our [gallery](https://marimo.io/@public) to learn more.",
+        "Check out our [docs](https://docs.marimo.io), the `docs/examples/` folder, and our [gallery](https://marimo.io/@public) to learn more.",
+        "Check out our [docs](https://docs.marimo.io), the `tutorials/` folder, and our [gallery](https://marimo.io/@public) to learn more."
+      ],
+      "golden_answer": "Check out our [docs](https://docs.marimo.io), the `examples/` folder, and our [gallery](https://marimo.io/@public) to learn more."
+    }
+  ]
+}

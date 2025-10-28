@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_4_only_E2",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the Python code example, the `fmt_currency` method is called with an incorrect keyword argument `column` instead of `columns`.",
+      "correction_candidates": [
+        "Change the keyword argument from `column=` to `columns=` in the `.fmt_currency()` call.",
+        "Change `.fmt_currency(column=...` to `.fmt(gt.currency, columns=...`.",
+        "Split the `fmt_currency` call into four separate calls, one for each column.",
+        "Remove the `.fmt_currency()` line from the example."
+      ],
+      "golden_answer": "Change the keyword argument from `column=` to `columns=` in the `.fmt_currency()` call."
+    }
+  ]
+}

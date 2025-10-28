@@ -1,0 +1,18 @@
+{
+  "readme": "mercedes-benz_odxtools_error_readme_1_only_E1",
+  "repo_name": "mercedes-benz_odxtools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the package via pip uses an incorrect package name 'odx-tools' instead of the correct 'odxtools'.",
+      "correction_candidates": [
+        "python3 -m pip install odxtools",
+        "pip install odxtools",
+        "python3 -m pip install odx-tool",
+        "conda install odxtools"
+      ],
+      "golden_answer": "python3 -m pip install odxtools"
+    }
+  ]
+}

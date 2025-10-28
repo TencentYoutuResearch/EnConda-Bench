@@ -1,0 +1,18 @@
+{
+  "readme": "vacanza_python-holidays_error_readme_1_only_E2",
+  "repo_name": "vacanza_python-holidays",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the stable version uses an incorrect flag `-u`, which is not a valid flag for upgrading a package with pip. The correct flag is `--upgrade` or `-U`.",
+      "correction_candidates": [
+        "Replace '$ pip install -u holidays' with '$ pip install --update holidays'.",
+        "Replace '$ pip install -u holidays' with '$ pip install --upgrade holidays'.",
+        "Replace '$ pip install -u holidays' with '$ pip install holidays --latest'.",
+        "Replace '$ pip install -u holidays' with '$ pip get holidays --upgrade'."
+      ],
+      "golden_answer": "Replace '$ pip install -u holidays' with '$ pip install --upgrade holidays'."
+    }
+  ]
+}

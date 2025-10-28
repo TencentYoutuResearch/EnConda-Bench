@@ -1,0 +1,29 @@
+{
+  "readme": "automl_neps_error_readme_5",
+  "repo_name": "automl_neps",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (scikit-learn and tensorflow) to the pip install command that are not required for NePS",
+      "correction_candidates": [
+        "pip install neural-pipeline-search",
+        "pip install neural-pipeline-search numpy pandas",
+        "pip install neural-pipeline-search torch torchvision",
+        "pip install neural-pipeline-search --upgrade"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added pip install -r requirements.txt before poetry install, which is incorrect order since poetry should handle dependencies",
+      "correction_candidates": [
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install",
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install --dev",
+        "git clone git@github.com:automl/neps.git\ncd neps\npip install -e .",
+        "git clone git@github.com:automl/neps.git\ncd neps\nconda install poetry\npoetry install"
+      ],
+      "golden_answer": "git clone git@github.com:automl/neps.git\ncd neps\npoetry install"
+    }
+  ]
+}

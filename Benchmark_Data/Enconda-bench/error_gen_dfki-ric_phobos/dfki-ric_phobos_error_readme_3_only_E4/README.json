@@ -1,0 +1,18 @@
+{
+  "readme": "dfki-ric_phobos_error_readme_3_only_E4",
+  "repo_name": "dfki-ric_phobos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for the Blender dependency installation script is incorrect. It points to `scripts/install_requirements.py`, but the file is located in the `phobos` subdirectory.",
+      "correction_candidates": [
+        "${BLENDER_EXECUTABLE} -b --python ../install_requirements.py",
+        "${BLENDER_EXECUTABLE} -b --python phobos/install_requirements.py",
+        "${BLENDER_EXECUTABLE} -b --python install_requirements.py",
+        "${BLENDER_EXECUTABLE} -b --python requirements/install.py"
+      ],
+      "golden_answer": "${BLENDER_EXECUTABLE} -b --python install_requirements.py"
+    }
+  ]
+}

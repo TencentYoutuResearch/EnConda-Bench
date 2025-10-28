@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_openml_automlbenchmark_error_readme_merge_k5",
+  "repo_name": "openml_automlbenchmark",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a benchmark uses a single dash for the long option '-task', which is syntactically incorrect. Long options require two dashes.",
+      "correction_candidates": [
+        "python runbenchmark.py autokeras --task 3911",
+        "python runbenchmark.py autokeras task=3911",
+        "python runbenchmark.py autokeras -t 3911",
+        "python runbenchmark.py autokeras -task=3911"
+      ],
+      "golden_answer": "python runbenchmark.py autokeras --task 3911"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. It instructs to install dependencies from a file before cloning the repository that contains the file.",
+      "correction_candidates": [
+        "Reverse the order of the `git clone` and `pip install` commands.",
+        "Run `pip install` with the `--pre` flag.",
+        "Run `pip install automlbenchmark` first, then `git clone`.",
+        "Combine the commands into a single line using `&&`."
+      ],
+      "golden_answer": "Reverse the order of the `git clone` and `pip install` commands."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install -r requirements.txt` is incorrect for setting up a development environment. It may point to a non-existent or incomplete dependencies file, and it doesn't install the project in editable mode.",
+      "correction_candidates": [
+        "pip install -e .[dev]",
+        "pip install -r requirements/dev.txt",
+        "pip install .",
+        "python setup.py install"
+      ],
+      "golden_answer": "pip install -e .[dev]"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install automl-benchmark` is incorrect. It attempts to install a potentially non-existent or wrong package from PyPI instead of installing the project from the cloned source code.",
+      "correction_candidates": [
+        "Clone the repository and run `pip install -e .` from the root directory.",
+        "pip install openml-automlbenchmark",
+        "pip install git+https://github.com/openml/automlbenchmark.git",
+        "conda install automl-benchmark"
+      ],
+      "golden_answer": "Clone the repository and run `pip install -e .` from the root directory."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command `runbenchmark.py GAMA --task_id 146825` uses an invalid parameter `--task_id`. The correct parameter to specify a task is `--task` or `-t`.",
+      "correction_candidates": [
+        "runbenchmark.py GAMA --task 146825",
+        "runbenchmark.py GAMA --task=146825",
+        "runbenchmark.py GAMA -t 146825",
+        "runbenchmark.py GAMA 146825"
+      ],
+      "golden_answer": "runbenchmark.py GAMA --task 146825"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "To get started, first create your virtual environment with `python -m venv automl_env` and then install the required dependencies using `pip install -r requirements.txt`.",
+        "To get started, first setup conda environment with `conda create -n automl_env python=3.8` and then install dependencies using `pip install -r requirements.txt`.",
+        "To get started, first activate your system Python and then install dependencies using `pip install -r requirements.txt` followed by creating virtual environment.",
+        "To get started, first install Python 3.8+ and then create virtual environment using `python -m venv automl_env` before installing dependencies."
+      ],
+      "golden_answer": "To get started, first create your virtual environment with `python -m venv automl_env` and then install the required dependencies using `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file path for dependencies that likely doesn't exist",
+      "correction_candidates": [
+        "Before running experiments, make sure to install the dependencies from `requirements.txt` file.",
+        "Before running experiments, make sure to install the dependencies from `setup.py` file.",
+        "Before running experiments, make sure to install the dependencies from `pyproject.toml` file.",
+        "Before running experiments, make sure to install the dependencies from `environment.yml` file."
+      ],
+      "golden_answer": "Before running experiments, make sure to install the dependencies from `requirements.txt` file."
+    }
+  ]
+}

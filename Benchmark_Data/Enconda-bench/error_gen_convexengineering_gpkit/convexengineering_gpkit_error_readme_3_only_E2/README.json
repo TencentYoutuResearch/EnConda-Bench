@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_3_only_E2",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The solver 'cvxopt' is misspelled as 'cvx-opt' in the text, which could confuse users searching for the package.",
+      "correction_candidates": [
+        "Change '[cvx-opt](http://cvxopt.org/)' to '[cvxopt](http://cvxopt.org/)'",
+        "Change '[cvx-opt](http://cvxopt.org/)' to '[CVXOPT](http://cvxopt.org/)'",
+        "Remove the mention of specific solvers and direct users to the documentation.",
+        "Change the link to point to the correct PyPI page for cvxopt."
+      ],
+      "golden_answer": "Change '[cvx-opt](http://cvxopt.org/)' to '[cvxopt](http://cvxopt.org/)'"
+    }
+  ]
+}

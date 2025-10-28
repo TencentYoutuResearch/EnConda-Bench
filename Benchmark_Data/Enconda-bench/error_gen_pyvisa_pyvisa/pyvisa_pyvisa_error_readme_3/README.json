@@ -1,0 +1,29 @@
+{
+  "readme": "pyvisa_pyvisa_error_readme_3",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `easy_install` command has incorrect syntax, using a non-existent '--install' flag.",
+      "correction_candidates": [
+        "$ easy_install pyvisa",
+        "$ easy_install PyVISA",
+        "Remove the `--install` flag from the `easy_install` command.",
+        "The `easy_install` command does not take flags for simple installation."
+      ],
+      "golden_answer": "$ easy_install pyvisa"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command for installing from source references a non-existent 'install.py' file instead of the correct 'setup.py'.",
+      "correction_candidates": [
+        "$ python setup.py install",
+        "$ python3 setup.py install",
+        "The installation script is named `setup.py`, not `install.py`.",
+        "Change `install.py` to `setup.py`."
+      ],
+      "golden_answer": "$ python setup.py install"
+    }
+  ]
+}

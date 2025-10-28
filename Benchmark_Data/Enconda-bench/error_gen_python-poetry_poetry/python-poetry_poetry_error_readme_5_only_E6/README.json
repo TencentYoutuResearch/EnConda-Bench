@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_5_only_E6",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added installation instructions that install dependencies before Poetry itself, which is incorrect order",
+      "correction_candidates": [
+        "Install Poetry first using the official installer, then run poetry install to install project dependencies",
+        "Run poetry install directly after installing Poetry through the official method",
+        "First create a virtual environment, then install Poetry, then run poetry install",
+        "Use pip install poetry first, then run poetry install for project dependencies"
+      ],
+      "golden_answer": "Install Poetry first using the official installer, then run poetry install to install project dependencies"
+    }
+  ]
+}

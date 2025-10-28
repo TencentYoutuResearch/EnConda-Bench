@@ -1,0 +1,18 @@
+{
+  "readme": "tcprescott_sahasrahbot_error_readme_1_only_E2",
+  "repo_name": "tcprescott_sahasrahbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -u virtualenv` uses an incorrect flag. The `-u` flag is not a recognized alias for `--user` and will not install the package in the user's site-packages directory.",
+      "correction_candidates": [
+        "Change `pip install -u virtualenv` to `pip install --user virtualenv`.",
+        "Replace `pip install -u virtualenv` with `pip install virtualenv` to install it globally.",
+        "Use the command `python -m pip install -U virtualenv`.",
+        "Modify the command to `pip install virtualenv --user-site`."
+      ],
+      "golden_answer": "Change `pip install -u virtualenv` to `pip install --user virtualenv`."
+    }
+  ]
+}

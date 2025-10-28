@@ -1,0 +1,18 @@
+{
+  "readme": "fabric_fabric_error_readme_2_only_E1",
+  "repo_name": "fabric_fabric",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install `libssh-dev` is incorrect, as Fabric's SSH dependency (Paramiko) does not use the system's libssh library. This step is unnecessary.",
+      "correction_candidates": [
+        "Remove the `sudo apt-get install libssh-dev` command as it is not a dependency.",
+        "Replace `libssh-dev` with `build-essential python3-dev` which are common build dependencies.",
+        "Specify that this dependency is only for Debian/Ubuntu systems.",
+        "Add a note that this is an optional dependency for specific crypto backends."
+      ],
+      "golden_answer": "Remove the `sudo apt-get install libssh-dev` command as it is not a dependency."
+    }
+  ]
+}

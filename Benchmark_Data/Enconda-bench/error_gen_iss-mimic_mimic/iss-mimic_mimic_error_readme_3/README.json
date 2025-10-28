@@ -1,0 +1,29 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_3",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the ISS Mimic logo image is incorrect, pointing to a directory '.../Pi/img/main/...' when it should be '.../Pi/imgs/main/...', causing the image not to load.",
+      "correction_candidates": [
+        "Change the image URL path from `.../Pi/img/main/...` to `.../Pi/imgs/main/...`.",
+        "Change the image URL to use the `main` branch instead of `master`.",
+        "Replace the GitHub blob URL with a raw content URL from `raw.githubusercontent.com`.",
+        "Remove the image link entirely."
+      ],
+      "golden_answer": "Change the image URL path from `.../Pi/img/main/...` to `.../Pi/imgs/main/...`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is missing the full URL of the repository, providing only the user/repo path, which will cause the command to fail.",
+      "correction_candidates": [
+        "Use the full HTTPS URL: `git clone https://github.com/ISS-Mimic/Mimic.git`.",
+        "Use the GitHub CLI command: `gh repo clone ISS-Mimic/Mimic`.",
+        "Use the SSH URL: `git clone git@github.com:ISS-Mimic/Mimic.git`.",
+        "Prepend 'https://github.com/' to the existing path."
+      ],
+      "golden_answer": "Use the full HTTPS URL: `git clone https://github.com/ISS-Mimic/Mimic.git`."
+    }
+  ]
+}

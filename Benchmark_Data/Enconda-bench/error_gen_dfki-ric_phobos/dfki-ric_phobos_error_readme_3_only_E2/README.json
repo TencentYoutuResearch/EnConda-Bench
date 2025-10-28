@@ -1,0 +1,18 @@
+{
+  "readme": "dfki-ric_phobos_error_readme_3_only_E2",
+  "repo_name": "dfki-ric_phobos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for CLI installation, `pip install phobos.zip`, is incorrect. This command is for installing from a zip archive, not a local source directory. The correct command is `pip install .`.",
+      "correction_candidates": [
+        "pip install .",
+        "python setup.py install",
+        "pip install -e .",
+        "pip install phobos"
+      ],
+      "golden_answer": "pip install ."
+    }
+  ]
+}

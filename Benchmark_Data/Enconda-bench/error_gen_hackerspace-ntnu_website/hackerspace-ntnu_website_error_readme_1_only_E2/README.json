@@ -1,0 +1,18 @@
+{
+  "readme": "hackerspace-ntnu_website_error_readme_1_only_E2",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate translation files uses an incorrect flag syntax (`--locale nb --locale en`) for specifying multiple locales.",
+      "correction_candidates": [
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb,en`.",
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages --locale \"nb en\"`.",
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb -l en`.",
+        "Run the command separately for each language: `python manage.py makemessages -l nb` and then `python manage.py makemessages -l en`."
+      ],
+      "golden_answer": "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb -l en`."
+    }
+  ]
+}

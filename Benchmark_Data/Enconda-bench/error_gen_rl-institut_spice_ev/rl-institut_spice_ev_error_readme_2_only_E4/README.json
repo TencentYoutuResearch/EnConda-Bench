@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_2_only_E4",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example command for including a price timeseries uses an absolute path `/price/price.csv`, which is incorrect for the described project structure and will result in a 'file not found' error.",
+      "correction_candidates": [
+        "python generate.py --include-price-csv ./price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price-csv price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price-csv scenarios/price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json"
+      ],
+      "golden_answer": "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json"
+    }
+  ]
+}

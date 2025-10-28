@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_8_only_E1",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Lists manual dependency installation when these are automatically handled by pip install twine",
+      "correction_candidates": [
+        "Remove the Dependencies section as pip install twine handles all dependencies automatically",
+        "Replace with: Install twine and all dependencies with: pip install twine",
+        "Change to: Use pip install twine[all] to install with optional dependencies",
+        "Modify to: Install development dependencies with: pip install twine[dev]"
+      ],
+      "golden_answer": "Remove the Dependencies section as pip install twine handles all dependencies automatically"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_3_only_E6",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README presents a usage example at the very beginning, before any context or installation instructions, which is a logical order error.",
+      "correction_candidates": [
+        "Move the 'Usage Example' section to after the main description and the link to the installation documentation.",
+        "Delete the 'Usage Example' section and refer users to the official documentation for examples.",
+        "Add a note at the beginning of the 'Usage Example' section: 'Please install the package first by following the instructions below.'",
+        "Add the installation command `pip install photutils` directly inside the 'Usage Example' section."
+      ],
+      "golden_answer": "Delete the 'Usage Example' section and refer users to the official documentation for examples."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "valory-xyz_trader_error_readme_7",
+  "repo_name": "valory-xyz_trader",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed autonomy fetch command to autonomy get which is incorrect syntax",
+      "correction_candidates": [
+        "autonomy fetch --local --service valory/trader && cd trader",
+        "autonomy pull --local --service valory/trader && cd trader",
+        "autonomy download --local --service valory/trader && cd trader",
+        "autonomy clone --local --service valory/trader && cd trader"
+      ],
+      "golden_answer": "autonomy fetch --local --service valory/trader && cd trader"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Changed autonomy build-image command to autonomy create-image which is incorrect syntax",
+      "correction_candidates": [
+        "autonomy build-image",
+        "autonomy make-image",
+        "autonomy generate-image",
+        "autonomy setup-image"
+      ],
+      "golden_answer": "autonomy build-image"
+    }
+  ]
+}

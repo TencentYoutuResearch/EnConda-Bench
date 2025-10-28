@@ -1,0 +1,29 @@
+{
+  "readme": "starsimhub_starsim_error_readme_1",
+  "repo_name": "starsimhub_starsim",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3+' which is too vague and may lead to compatibility issues with older Python 3 versions.",
+      "correction_candidates": [
+        "Python 3.9 or newer.",
+        "Python 3.9-3.12.",
+        "Python > 3.8.",
+        "Python 3.10 is recommended."
+      ],
+      "golden_answer": "Python 3.9-3.12."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for local installation 'pip install -e' is incomplete and will cause a syntax error because it is missing the path specifier.",
+      "correction_candidates": [
+        "run `pip install --editable .`",
+        "run `pip install -e .` (don't forget the dot at the end!).",
+        "run `pip install .`",
+        "run `python setup.py install`"
+      ],
+      "golden_answer": "run `pip install -e .` (don't forget the dot at the end!)."
+    }
+  ]
+}

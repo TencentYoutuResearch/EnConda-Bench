@@ -1,0 +1,18 @@
+{
+  "readme": "automl_neps_error_readme_4_only_E1",
+  "repo_name": "automl_neps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install neps` is incorrect. The package name on PyPI is `neural-pipeline-search`, not `neps`, which is the import name.",
+      "correction_candidates": [
+        "pip install neps-hpo",
+        "pip install neural-pipeline-search",
+        "pip install neps",
+        "pip install neps-automl"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    }
+  ]
+}

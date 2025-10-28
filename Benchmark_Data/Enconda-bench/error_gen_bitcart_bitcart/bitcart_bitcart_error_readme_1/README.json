@@ -1,0 +1,29 @@
+{
+  "readme": "bitcart_bitcart_error_readme_1",
+  "repo_name": "bitcart_bitcart",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. Step 2 attempts to install dependencies into the global Python environment before the project's virtual environment is created and activated in step 3.",
+      "correction_candidates": [
+        "Move step 2 to be after step 3.",
+        "Combine all commands into a single line: 'git clone ... && python3 -m venv venv && pip install ...'",
+        "Run 'pip install --user -r requirements.txt' to avoid using the global environment.",
+        "Use 'pipenv install' instead of 'pip' and 'venv'."
+      ],
+      "golden_answer": "Move step 2 to be after step 3."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install requirements.txt' is syntactically incorrect for installing dependencies from a file. It is missing the '-r' flag.",
+      "correction_candidates": [
+        "Change the command in step 2 to 'pip install -r requirements.txt'.",
+        "Change the command in step 2 to 'pip install --requirements requirements.txt'.",
+        "Run 'cat requirements.txt | xargs pip install'.",
+        "The project should be installed using 'python setup.py install', not pip."
+      ],
+      "golden_answer": "Change the command in step 2 to 'pip install -r requirements.txt'."
+    }
+  ]
+}

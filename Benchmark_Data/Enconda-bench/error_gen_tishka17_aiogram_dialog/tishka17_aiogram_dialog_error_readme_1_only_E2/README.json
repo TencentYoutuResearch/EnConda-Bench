@@ -1,0 +1,18 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_1_only_E2",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the `user_start` function, the `start` method of `dialog_manager` is called with an incorrect keyword argument `start_mode`. The correct argument name is `mode`.",
+      "correction_candidates": [
+        "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.start(MySG.first, StartMode.RESET_STACK)",
+        "await dialog_manager.start(MySG.first, mode=\"RESET_STACK\")",
+        "await dialog_manager.reset_stack(MySG.first)"
+      ],
+      "golden_answer": "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_1_only_E4",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The manual installation guide specifies an incorrect destination folder, `<config directory>/components`. The correct folder for custom integrations is `<config directory>/custom_components`.",
+      "correction_candidates": [
+        "The destination folder should be `<config directory>/custom_components`.",
+        "The destination folder should be `<config directory>/integrations`.",
+        "The files should be placed directly in the `<config directory>`.",
+        "Create a new folder named `components` inside `<config directory>`."
+      ],
+      "golden_answer": "The destination folder should be `<config directory>/custom_components`."
+    }
+  ]
+}

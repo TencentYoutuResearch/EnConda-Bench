@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_pastas_pastas_error_readme_merge_k2",
+  "repo_name": "pastas_pastas",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The supported Python versions are incorrectly stated as 'Python 3.6 or higher', which is too broad and may lead to installation on unsupported older Python versions.",
+      "correction_candidates": [
+        "To install Pastas, a working version of Python 3.9, 3.10, 3.11, or 3.12 has to be installed on your computer.",
+        "To install Pastas, any version of Python 3 will work.",
+        "To install Pastas, you must use Python 3.11.",
+        "To install Pastas, a working version of Python 3.9 or newer has to be installed on your computer."
+      ],
+      "golden_answer": "To install Pastas, a working version of Python 3.9, 3.10, 3.11, or 3.12 has to be installed on your computer."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the development version from git is syntactically incorrect. `pip install --git` is not a valid pip command.",
+      "correction_candidates": [
+        "pip install git+https://github.com/pastas/pastas.git@dev",
+        "pip install git+https://github.com/pastas/pastas.git@dev#egg=pastas",
+        "pip install pastas --pre",
+        "git clone https://github.com/pastas/pastas.git && cd pastas && pip install -e ."
+      ],
+      "golden_answer": "pip install git+https://github.com/pastas/pastas.git@dev#egg=pastas"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install pastas[all]` is incorrect for installing optional dependencies. The correct extra identifier is `full`, not `all`.",
+      "correction_candidates": [
+        "pip install pastas --with-extras",
+        "pip install pastas[full]",
+        "pip install pastas lmfit latexify",
+        "pip install pastas --all-dependencies"
+      ],
+      "golden_answer": "pip install pastas[full]"
+    }
+  ]
+}

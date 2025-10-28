@@ -1,0 +1,29 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_7",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Contradictory version compatibility statement claiming the project requires Python 3.8+ but is also compatible with Python 2.7, which is impossible",
+      "correction_candidates": [
+        "Remove the Python 2.7 compatibility claim and keep only Python 3.8+ requirement",
+        "Change the requirement to Python 2.7+ and remove Python 3.8+ mention",
+        "Specify that Python 2.7 support was dropped and only Python 3.8+ is supported",
+        "Update to require Python 3.9+ for better compatibility"
+      ],
+      "golden_answer": "Remove the Python 2.7 compatibility claim and keep only Python 3.8+ requirement"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installing taipy package with version constraint when the repository is archived and users should refer to the main taipy repository instead",
+      "correction_candidates": [
+        "Remove the pip install command since the repository is archived",
+        "Change to pip install taipy-core for the specific archived component",
+        "Add instructions to clone the main taipy repository instead",
+        "Update the command to pip install taipy[all] for full installation"
+      ],
+      "golden_answer": "Remove the pip install command since the repository is archived"
+    }
+  ]
+}

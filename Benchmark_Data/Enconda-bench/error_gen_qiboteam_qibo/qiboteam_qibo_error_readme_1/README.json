@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibo_error_readme_1",
+  "repo_name": "qiboteam_qibo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install \"qibo[tensorflow-gpu]\"` is incorrect because 'tensorflow-gpu' is not a valid installation extra for Qibo. This will cause a dependency resolution error.",
+      "correction_candidates": [
+        "pip install \"qibo[tensorflow]\"",
+        "pip install \"qibo[cupy]\"",
+        "pip install \"qibo[all]\"",
+        "pip install qibo tensorflow"
+      ],
+      "golden_answer": "pip install \"qibo[all]\""
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The statement 'Qibo is only compatible with Python 3.8' is incorrect and overly restrictive. The PyPI badge indicates compatibility with a wider range of Python versions.",
+      "correction_candidates": [
+        "Qibo is compatible with Python versions 3.8 and newer.",
+        "Please refer to the `pyproject.toml` file for the exact list of supported Python versions.",
+        "The recommended Python version for Qibo is 3.10.",
+        "Remove the sentence specifying the Python version."
+      ],
+      "golden_answer": "Qibo is compatible with Python versions 3.8 and newer."
+    }
+  ]
+}

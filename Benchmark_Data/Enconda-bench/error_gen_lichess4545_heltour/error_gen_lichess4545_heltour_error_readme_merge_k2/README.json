@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_lichess4545_heltour_error_readme_merge_k2",
+  "repo_name": "lichess4545_heltour",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command `source env/bin/activate` is executed before the virtual environment is created by `./start.sh`, which will cause a 'No such file or directory' error.",
+      "correction_candidates": [
+        "Move `source env/bin/activate` to be after the `./start.sh` command.",
+        "Replace `./start.sh` and `source env/bin/activate` with `poetry shell`.",
+        "Run `virtualenv env` before `source env/bin/activate`.",
+        "Change `source env/bin/activate` to `source bin/activate`."
+      ],
+      "golden_answer": "Move `source env/bin/activate` to be after the `./start.sh` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `fab create-db` is incorrect. The correct Fabric task name is `createdb`, and using a hyphen will result in an error.",
+      "correction_candidates": [
+        "Change `fab create-db` to `fab createdb`.",
+        "Replace `fab create-db` with `python manage.py createdb`.",
+        "Change `fab create-db` to `fab db create`.",
+        "Run `createdb heltour` directly in the shell instead of using fabric."
+      ],
+      "golden_answer": "Change `fab create-db` to `fab createdb`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Postgres dependency `postgresql-server-dev-9.5` has its required version removed. Listing it as `postgresql-server-dev` can cause package managers to install a newer, incompatible version of Postgres.",
+      "correction_candidates": [
+        "Specify the version by changing `postgresql-server-dev` to `postgresql-server-dev-9.5`.",
+        "Add a note saying 'Postgres version 9.5 is required'.",
+        "Change the dependency to `postgresql-server-dev-all` to support multiple versions.",
+        "Remove the Postgres dependency and use Docker instead."
+      ],
+      "golden_answer": "Specify the version by changing `postgresql-server-dev` to `postgresql-server-dev-9.5`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `fab latestdb -R dev` has incorrect syntax. The role option `-R dev` must come before the task name `latestdb`.",
+      "correction_candidates": [
+        "Correct the command to `fab -R dev latestdb`.",
+        "Change the command to `fab --role dev latestdb`.",
+        "Remove the `-R dev` parameter and run `fab latestdb`.",
+        "Rewrite the command as `fab -R dev -- fab latestdb`."
+      ],
+      "golden_answer": "Correct the command to `fab -R dev latestdb`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pypa_distutils_error_readme_7",
+  "repo_name": "pypa_distutils",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect module name 'distutil' instead of 'distutils' in the command",
+      "correction_candidates": [
+        "Change to python -m distutils build --force",
+        "Change to python -m distutils.core build --force",
+        "Change to python setup.py build --force",
+        "Change to python -m pip install distutils"
+      ],
+      "golden_answer": "Change to python -m distutils build --force"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Provides usage instructions for a package that is explicitly stated as unsupported for standalone use",
+      "correction_candidates": [
+        "Remove the Usage section entirely since the package is unsupported",
+        "Change Usage to Integration Examples",
+        "Add warning that direct usage is not recommended",
+        "Replace with setuptools usage examples instead"
+      ],
+      "golden_answer": "Remove the Usage section entirely since the package is unsupported"
+    }
+  ]
+}

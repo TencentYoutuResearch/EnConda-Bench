@@ -1,0 +1,29 @@
+{
+  "readme": "alteryx_featuretools_error_readme_6",
+  "repo_name": "alteryx_featuretools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Reference to a non-existent requirements.txt file in the project root directory",
+      "correction_candidates": [
+        "Remove the instruction to install from requirements.txt as the file doesn't exist",
+        "Change the file path to point to an existing requirements file in the correct location",
+        "Create a note that requirements.txt should be created by the user first",
+        "Replace with instruction to install dependencies using setup.py instead"
+      ],
+      "golden_answer": "Remove the instruction to install from requirements.txt as the file doesn't exist"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Reference to development dependencies in setup.py using incorrect installation syntax",
+      "correction_candidates": [
+        "Change the command to python -m pip install -e .[dev] for proper editable installation",
+        "Use pip install -e . to install in development mode without extra dependencies",
+        "Replace with pip install -r dev-requirements.txt for development dependencies",
+        "Use python setup.py develop to install in development mode"
+      ],
+      "golden_answer": "Change the command to python -m pip install -e .[dev] for proper editable installation"
+    }
+  ]
+}

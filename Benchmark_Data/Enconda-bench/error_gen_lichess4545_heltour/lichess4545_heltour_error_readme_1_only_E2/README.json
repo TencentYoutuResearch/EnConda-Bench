@@ -1,0 +1,18 @@
+{
+  "readme": "lichess4545_heltour_error_readme_1_only_E2",
+  "repo_name": "lichess4545_heltour",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `fab create-db` is incorrect. The correct Fabric task name is `createdb`, and using a hyphen will result in an error.",
+      "correction_candidates": [
+        "Change `fab create-db` to `fab createdb`.",
+        "Replace `fab create-db` with `python manage.py createdb`.",
+        "Change `fab create-db` to `fab db create`.",
+        "Run `createdb heltour` directly in the shell instead of using fabric."
+      ],
+      "golden_answer": "Change `fab create-db` to `fab createdb`."
+    }
+  ]
+}

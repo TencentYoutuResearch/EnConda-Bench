@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_scvelo_error_readme_6",
+  "repo_name": "theislab_scvelo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent configuration file path /usr/local/scvelo/config.yaml that users need to install",
+      "correction_candidates": [
+        "Remove the note about the configuration file entirely as it's not needed",
+        "Change the path to ~/.scvelo/config.yaml for user home directory",
+        "Update to reference the correct path /opt/scvelo/config.yaml",
+        "Replace with instructions to download config from the GitHub repository"
+      ],
+      "golden_answer": "Remove the note about the configuration file entirely as it's not needed"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The save parameter in the plotting command uses incorrect syntax with .png extension instead of just the filename",
+      "correction_candidates": [
+        "Change save='velocity_stream.png' to save='velocity_stream'",
+        "Replace with save='velocity_stream.pdf' for PDF output",
+        "Update to save='figures/velocity_stream' to specify directory",
+        "Change to save_format='png', filename='velocity_stream'"
+      ],
+      "golden_answer": "Change save='velocity_stream.png' to save='velocity_stream'"
+    }
+  ]
+}

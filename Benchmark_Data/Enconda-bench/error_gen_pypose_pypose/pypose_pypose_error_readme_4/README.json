@@ -1,0 +1,29 @@
+{
+  "readme": "pypose_pypose_error_readme_4",
+  "repo_name": "pypose_pypose",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command `cd pypose` is executed after `python setup.py develop`. The `setup.py` script must be run from within the `pypose` directory, so the current working directory must be changed first.",
+      "correction_candidates": [
+        "Change `python setup.py develop && cd pypose` to `cd pypose && python setup.py develop`.",
+        "Change `python setup.py develop && cd pypose` to `python pypose/setup.py develop`.",
+        "Change `python setup.py develop && cd pypose` to `cd pypose; python setup.py develop`.",
+        "Remove `&& cd pypose` and run the `cd pypose` command on a separate line before `python setup.py develop`."
+      ],
+      "golden_answer": "Change `python setup.py develop && cd pypose` to `cd pypose && python setup.py develop`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the first code example, the line `import pypose as pp` is missing. This will cause a `NameError` because the alias `pp` is used without being defined.",
+      "correction_candidates": [
+        "Add `import pypose as pp` to the first line of the code block.",
+        "Add `from pypose import *` to the first line of the code block.",
+        "Replace all instances of `pp.` with `pypose.` and add `import pypose` to the first line.",
+        "Add `import torch, pypose as pp` to the first line of the code block."
+      ],
+      "golden_answer": "Add `import torch, pypose as pp` to the first line of the code block."
+    }
+  ]
+}

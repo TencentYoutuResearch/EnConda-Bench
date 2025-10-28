@@ -1,0 +1,18 @@
+{
+  "readme": "open-power_op-test_error_readme_2_only_E1",
+  "repo_name": "open-power_op-test",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install `fwts` prerequisites includes a non-existent package `software-properties-common-plus`, which will cause the `apt-get` command to fail.",
+      "correction_candidates": [
+        "`sudo apt-get install software-properties-common python-software-properties`",
+        "`sudo apt-get install software-properties-common`",
+        "`sudo apt-get install software-properties-common --no-install-recommends`",
+        "`sudo apt install common-software-properties`"
+      ],
+      "golden_answer": "`sudo apt-get install software-properties-common`"
+    }
+  ]
+}

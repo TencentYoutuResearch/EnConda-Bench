@@ -1,0 +1,29 @@
+{
+  "readme": "naomiproject_naomi_error_readme_5",
+  "repo_name": "naomiproject_naomi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong order - installing pip dependencies before creating virtual environment",
+      "correction_candidates": [
+        "First, create a virtual environment using `python -m venv naomi-env`, then activate it and install the required dependencies by running `pip install -r requirements.txt`.",
+        "First, set up your Python environment by running `python -m venv naomi-env && source naomi-env/bin/activate`, then install dependencies with `pip install -r requirements.txt`.",
+        "Create a virtual environment first with `python -m venv naomi-env`, activate it, then run `pip install -r requirements.txt` to install dependencies.",
+        "Install Python virtual environment using `python -m venv naomi-env`, activate the environment, then install requirements with `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "First, create a virtual environment using `python -m venv naomi-env`, then activate it and install the required dependencies by running `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file path specified for configuration - using a specific file path instead of extraction directory",
+      "correction_candidates": [
+        "Make sure to extract the files to a directory of your choice for proper configuration.",
+        "Make sure to extract the files to your home directory and configure settings as needed.",
+        "Make sure to extract the files to `/home/naomi/` directory for proper configuration.",
+        "Make sure to extract the files and place the configuration in `~/.naomi/config/` directory."
+      ],
+      "golden_answer": "Make sure to extract the files to a directory of your choice for proper configuration."
+    }
+  ]
+}

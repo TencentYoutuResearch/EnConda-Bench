@@ -1,0 +1,18 @@
+{
+  "readme": "sublimelinter_sublimelinter_error_readme_4_only_E2",
+  "repo_name": "sublimelinter_sublimelinter",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Key Bindings' section, the example JSON for a custom key binding is syntactically invalid due to a trailing comma after the final element in the object. This would cause an error in a `.sublime-keymap` file.",
+      "correction_candidates": [
+        "The JSON is invalid because it uses double quotes; it should use single quotes.",
+        "The JSON object should be enclosed in square brackets `[]` to be valid.",
+        "The `command` value is wrong; it should be `SublimeLinter: Quick Actions`.",
+        "The JSON is invalid due to a trailing comma after the `command` key-value pair. This comma should be removed."
+      ],
+      "golden_answer": "The JSON is invalid due to a trailing comma after the `command` key-value pair. This comma should be removed."
+    }
+  ]
+}

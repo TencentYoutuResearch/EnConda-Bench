@@ -1,0 +1,18 @@
+{
+  "readme": "tmux-python_tmuxp_error_readme_1_only_E1",
+  "repo_name": "tmux-python_tmuxp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for pip includes the `--no-deps` flag, which prevents the installation of necessary dependencies like `libtmux`, causing the application to fail at runtime.",
+      "correction_candidates": [
+        "$ pip install --user tmuxp",
+        "$ pip install tmuxp --no-cache-dir",
+        "$ pip install --user tmuxp --upgrade",
+        "$ pip install --user tmuxp --ignore-installed"
+      ],
+      "golden_answer": "$ pip install --user tmuxp"
+    }
+  ]
+}

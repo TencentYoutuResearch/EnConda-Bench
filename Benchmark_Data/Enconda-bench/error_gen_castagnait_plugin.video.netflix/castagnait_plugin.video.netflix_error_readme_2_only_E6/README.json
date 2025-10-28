@@ -1,0 +1,18 @@
+{
+  "readme": "castagnait_plugin.video.netflix_error_readme_2_only_E6",
+  "repo_name": "castagnait_plugin.video.netflix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The bug reporting instructions are in the wrong logical order, asking users to open an issue before enabling debug logs and reproducing the error, which prevents capturing necessary log data.",
+      "correction_candidates": [
+        "The first step should be to enable logging, and the last step should be to open the issue and attach the log.",
+        "The correct order is: 1. Enable add-on debug, 2. Enable Kodi debug, 3. Perform actions, 4. Open Issue, 5. Attach log.",
+        "Move step 1 'Open a new GitHub Issue' to be after step 4 'Perform the actions that cause the error'.",
+        "The correct order is: 1. Perform actions, 2. Enable add-on debug, 3. Enable Kodi debug, 4. Open Issue, 5. Attach log."
+      ],
+      "golden_answer": "The correct order is: 1. Enable add-on debug, 2. Enable Kodi debug, 3. Perform actions, 4. Open Issue, 5. Attach log."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_reproject_error_readme_3_only_E4",
+  "repo_name": "astropy_reproject",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example code references a data file at `data/input.fits` which is not present in the repository, causing a `FileNotFoundError`.",
+      "correction_candidates": [
+        "The example should use `astropy.utils.data.get_pkg_data_filename` to locate a test file within the installed package.",
+        "Replace `fits.open('data/input.fits')` with code that generates a sample FITS HDU in memory for demonstration purposes.",
+        "The example data file needs to be downloaded separately. Add a note: 'Download the sample data from [some_url] and place it in the `data/` directory.'",
+        "The file path is incorrect. It should be `'reproject/tests/data/input.fits'` and will only work if the repository is cloned."
+      ],
+      "golden_answer": "Replace `fits.open('data/input.fits')` with code that generates a sample FITS HDU in memory for demonstration purposes."
+    }
+  ]
+}

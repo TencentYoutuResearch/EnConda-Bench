@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_2_only_E6",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The bot is run before its dependencies are installed, which will cause it to fail.",
+      "correction_candidates": [
+        "The correct order is: 1. Copy config, 2. Install dependencies, 3. Run bot.",
+        "The correct order is: 1. Run bot, 2. Install dependencies, 3. Copy config.",
+        "The correct order is: 1. Install dependencies, 2. Run bot, 3. Copy config.",
+        "The correct order is: 1. Install dependencies, 2. Copy config, 3. Run bot."
+      ],
+      "golden_answer": "The correct order is: 1. Install dependencies, 2. Copy config, 3. Run bot."
+    }
+  ]
+}

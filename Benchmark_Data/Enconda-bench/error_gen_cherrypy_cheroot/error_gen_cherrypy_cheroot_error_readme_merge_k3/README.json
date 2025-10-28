@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_cherrypy_cheroot_error_readme_merge_k3",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install testing dependencies lists an incorrect package name, `py.test`, instead of the correct package `pytest`.",
+      "correction_candidates": [
+        "pip install pytest",
+        "pip install pytest --upgrade",
+        "python -m pip install py-test",
+        "pip install 'pytest-cov'"
+      ],
+      "golden_answer": "pip install pytest"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to execute the test suite, `pytest --run`, uses a non-existent flag `--run`, which causes the command to fail.",
+      "correction_candidates": [
+        "pytest",
+        "python -m pytest",
+        "py.test",
+        "pytest --execute"
+      ],
+      "golden_answer": "pytest"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly place the `pip install` command before the creation and activation of the virtual environment, which would install packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install` command to after the virtual environment is activated.",
+        "Run `pip install` with the `--user` flag to avoid installing packages globally.",
+        "Combine the commands into a single line: `python -m venv .venv && source .venv/bin/activate && pip install -e .[test]`",
+        "Remove the virtual environment steps as they are optional for development."
+      ],
+      "golden_answer": "Move the `pip install` command to after the virtual environment is activated."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions list `requests` as a required dependency for testing, but it is not actually used by the project, leading to unnecessary package installation.",
+      "correction_candidates": [
+        "Remove `requests` from the installation command as it is not a dependency.",
+        "Replace `requests` with `urllib3`, which is a dependency of `cheroot`.",
+        "Add a note explaining that `requests` is only for optional, user-written tests.",
+        "Change the command to `pip install -e .[test]` to install all correct dependencies."
+      ],
+      "golden_answer": "Remove `requests` from the installation command as it is not a dependency."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README advises installing the 'latest versions of all packages', which is risky and can lead to version conflicts or unexpected failures if a dependency releases a breaking change.",
+      "correction_candidates": [
+        "Remove the sentence 'Make sure you have the latest versions of all packages to avoid compatibility issues.'",
+        "Advise users to install dependencies using `pip install -e .[test]`, which uses versions specified in `setup.cfg`.",
+        "Provide a `requirements.txt` file with pinned versions for reproducible builds.",
+        "Change the advice to 'It is recommended to use the latest minor versions of packages, but avoid major version upgrades.'"
+      ],
+      "golden_answer": "Advise users to install dependencies using `pip install -e .[test]`, which uses versions specified in `setup.cfg`."
+    }
+  ]
+}

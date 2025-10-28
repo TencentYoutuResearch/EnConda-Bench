@@ -1,0 +1,18 @@
+{
+  "readme": "microsoftgraph_msgraph-sdk-python-core_error_readme_6_only_E6",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Code tries to use 'credential' variable before it is defined, causing a logical order error",
+      "correction_candidates": [
+        "credential=EnvironmentCredential()\nauth_provider = AzureIdentityAuthenticationProvider(credential)",
+        "auth_provider = AzureIdentityAuthenticationProvider(EnvironmentCredential())",
+        "credential = EnvironmentCredential()\nauth_provider = AzureIdentityAuthenticationProvider(credential)",
+        "Move credential definition above auth_provider initialization"
+      ],
+      "golden_answer": "credential=EnvironmentCredential()\nauth_provider = AzureIdentityAuthenticationProvider(credential)"
+    }
+  ]
+}

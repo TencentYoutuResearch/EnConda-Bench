@@ -1,0 +1,29 @@
+{
+  "readme": "learning-and-intelligent-systems_predicators_error_readme_1",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for running locally suggest running the main script before creating and activating a virtual environment, which is the wrong order and may pollute the global Python environment.",
+      "correction_candidates": [
+        "The two bullet points under 'Locally' should be swapped.",
+        "A new step `pip install -e .` should be added before running the script.",
+        "The instruction to create a virtual environment should be removed.",
+        "The command should be changed to `conda run python predicators/main.py --env cover --approach oracle --seed 0`."
+      ],
+      "golden_answer": "The two bullet points under 'Locally' should be swapped."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pytest command for running checks is missing the `--cov-fail-under=100` flag, which contradicts the documentation's claim that 100% code coverage is enforced.",
+      "correction_candidates": [
+        "Add the `--cov-fail-under=100` flag to the `pytest` command.",
+        "Change the description to say 'code is adequately covered' without mentioning '100'.",
+        "Replace the command with `pytest --cov=predicators`.",
+        "Add the `--strict-coverage` flag to the `pytest` command."
+      ],
+      "golden_answer": "Add the `--cov-fail-under=100` flag to the `pytest` command."
+    }
+  ]
+}

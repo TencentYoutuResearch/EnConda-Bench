@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_4_only_E4",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The filename for local settings is specified as 'lnldb/settings_local.py', but the application actually looks for 'lnldb/local_settings.py'.",
+      "correction_candidates": [
+        "The correct file path is 'settings/local.py'.",
+        "The correct file path is 'local_settings.py' in the project root.",
+        "The correct file path is 'lnldb/local_settings.py'.",
+        "The correct file path is 'config/local_settings.py'."
+      ],
+      "golden_answer": "The correct file path is 'lnldb/local_settings.py'."
+    }
+  ]
+}

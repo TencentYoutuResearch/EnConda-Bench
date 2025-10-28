@@ -1,0 +1,29 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_2",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the project requires Python 2.7, which is outdated and likely incompatible with the project's dependencies.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.6 or newer'.",
+        "Change 'Python 2.7' to 'the latest version of Python'.",
+        "Add a note that Python 2.7 can be used with a legacy version of pip.",
+        "Remove the note stating that Python 2.7 is required."
+      ],
+      "golden_answer": "Remove the note stating that Python 2.7 is required."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. It instructs to install packages with `pip` before creating and activating the virtual environment, which would install them globally.",
+      "correction_candidates": [
+        "Swap step 2 and step 3 to create the virtual environment before installing packages.",
+        "Combine step 2 and step 3 into a single step.",
+        "Add `sudo` to the `pip install` command to ensure global installation.",
+        "Remove the virtual environment creation step (step 3)."
+      ],
+      "golden_answer": "Swap step 2 and step 3 to create the virtual environment before installing packages."
+    }
+  ]
+}

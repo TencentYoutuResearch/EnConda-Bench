@@ -1,0 +1,18 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_3_only_E8",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The 'Supported features' section incorrectly states that the `Jinja2` template engine is 'built-in'. Jinja2 is an optional dependency and must be installed separately using `pip install aiogram-dialog[jinja]`, which can cause confusion and runtime errors if not installed.",
+      "correction_candidates": [
+        "Change 'the built-in `Jinja2` template engine' to '`Jinja2` template engine (requires optional installation)'.",
+        "Change 'the built-in `Jinja2` template engine' to '`Jinja2` template engine'.",
+        "Remove the mention of `Jinja2` entirely as it is not a core feature.",
+        "Add a note: To use Jinja2, you must first run `pip install jinja2`."
+      ],
+      "golden_answer": "Change 'the built-in `Jinja2` template engine' to '`Jinja2` template engine'."
+    }
+  ]
+}

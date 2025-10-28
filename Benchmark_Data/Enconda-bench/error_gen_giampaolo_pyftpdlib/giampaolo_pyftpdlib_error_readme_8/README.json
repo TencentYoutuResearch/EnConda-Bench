@@ -1,0 +1,29 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_8",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python version range (3.5-3.8) and pinned to old pyftpdlib version (1.5.0) which may not be compatible with modern systems",
+      "correction_candidates": [
+        "pyftpdlib requires Python 3.6 or later. Install using:\n\n$ pip install pyftpdlib",
+        "pyftpdlib supports Python 3.x. Install the latest version using:\n\n$ pip install pyftpdlib",
+        "pyftpdlib requires Python 3.7+ for optimal compatibility. Install using:\n\n$ pip install pyftpdlib",
+        "Install the latest pyftpdlib version using:\n\n$ pip install pyftpdlib"
+      ],
+      "golden_answer": "pyftpdlib requires Python 3.6 or later. Install using:\n\n$ pip install pyftpdlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used python2 command which is incompatible with pyftpdlib that requires Python 3",
+      "correction_candidates": [
+        "$ python3 -m pyftpdlib --write",
+        "$ python -m pyftpdlib --write",
+        "$ py -3 -m pyftpdlib --write",
+        "$ /usr/bin/python3 -m pyftpdlib --write"
+      ],
+      "golden_answer": "$ python3 -m pyftpdlib --write"
+    }
+  ]
+}

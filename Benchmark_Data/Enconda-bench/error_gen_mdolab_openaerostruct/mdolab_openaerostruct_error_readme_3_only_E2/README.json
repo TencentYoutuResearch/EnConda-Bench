@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_3_only_E2",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an incorrect package name `open_aerostruct`. The correct name on PyPI is `openaerostruct`.",
+      "correction_candidates": [
+        "pip install openaerostruct",
+        "pip install OpenAeroStruct",
+        "pip install open-aero-struct",
+        "pip install openaerostruct-lib"
+      ],
+      "golden_answer": "pip install openaerostruct"
+    }
+  ]
+}

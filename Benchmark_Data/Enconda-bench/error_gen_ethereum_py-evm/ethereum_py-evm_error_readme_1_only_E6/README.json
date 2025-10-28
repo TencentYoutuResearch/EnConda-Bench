@@ -1,0 +1,18 @@
+{
+  "readme": "ethereum_py-evm_error_readme_1_only_E6",
+  "repo_name": "ethereum_py-evm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development dependencies are installed before the virtual environment is created and activated, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The command '. venv/bin/activate' should be the first command after 'cd py-evm'.",
+        "The command 'python -m pip install -e \".[dev]\"' should be run after 'virtualenv -p python3 venv' and '. venv/bin/activate'.",
+        "Replace 'python -m pip install -e \".[dev]\"' with 'pip install -r requirements-dev.txt' after activating the virtual environment.",
+        "The command 'python -m pip install -e \".[dev]\"' should be moved to the very end of the script."
+      ],
+      "golden_answer": "The command 'python -m pip install -e \".[dev]\"' should be run after 'virtualenv -p python3 venv' and '. venv/bin/activate'."
+    }
+  ]
+}

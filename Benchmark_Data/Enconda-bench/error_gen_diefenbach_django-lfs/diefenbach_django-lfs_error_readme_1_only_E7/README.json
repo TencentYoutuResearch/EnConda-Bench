@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_1_only_E7",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python 3.9+ is required, but the changelog indicates support for Django 1.10, which is not compatible with Python versions higher than 3.5.",
+      "correction_candidates": [
+        "This project is compatible with Python 2.7, 3.4, and 3.5.",
+        "This project requires Python 3.6 or newer.",
+        "This project requires Python 3.5 to run.",
+        "This project is compatible with Python 2.7 only."
+      ],
+      "golden_answer": "This project is compatible with Python 2.7, 3.4, and 3.5."
+    }
+  ]
+}

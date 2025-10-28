@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_scvelo_error_readme_8",
+  "repo_name": "theislab_scvelo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses deprecated --install-option flag which is not supported in modern pip versions",
+      "correction_candidates": [
+        "Replace with pip install scvelo[gpu] to install with GPU extras",
+        "Change to pip install scvelo && pip install torch torchvision for GPU support",
+        "Update to use pip install --config-settings=\"--gpu-support\" scvelo",
+        "Replace with conda install -c conda-forge scvelo pytorch-gpu"
+      ],
+      "golden_answer": "Replace with pip install scvelo[gpu] to install with GPU extras"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "References non-existent scvelo.setup module and configure-cuda command that don't exist",
+      "correction_candidates": [
+        "Remove the CUDA configuration command entirely as it's not needed",
+        "Replace with python -c \"import torch; print(torch.cuda.is_available())\" to check GPU",
+        "Change to python -m pip install --upgrade scvelo[cuda]",
+        "Update to python setup.py install --gpu for GPU configuration"
+      ],
+      "golden_answer": "Remove the CUDA configuration command entirely as it's not needed"
+    }
+  ]
+}

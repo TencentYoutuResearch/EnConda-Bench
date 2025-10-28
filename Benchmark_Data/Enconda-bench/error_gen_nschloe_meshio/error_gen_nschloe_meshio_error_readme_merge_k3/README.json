@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_nschloe_meshio_error_readme_merge_k3",
+  "repo_name": "nschloe_meshio",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install meshio all` is syntactically incorrect for installing a package with optional dependencies (extras). It will be interpreted as trying to install two separate packages named 'meshio' and 'all', where 'all' does not exist, causing an error.",
+      "correction_candidates": [
+        "pip install meshio --all",
+        "pip install meshio[all]",
+        "pip install meshio --with-all",
+        "pip install meshio && pip install all"
+      ],
+      "golden_answer": "pip install meshio[all]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `meshio --convert input.msh output.vtk` is incorrect. `meshio` uses subcommands like `convert`, not flags like `--convert`, which will result in a command-line argument parsing error.",
+      "correction_candidates": [
+        "meshio -c input.msh output.vtk",
+        "meshio convert -i input.msh -o output.vtk",
+        "meshio convert input.msh output.vtk",
+        "meshio convert input.msh > output.vtk"
+      ],
+      "golden_answer": "meshio convert input.msh output.vtk"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for the ParaView plugin are in the wrong logical order. The user is asked to find and load the `paraview-meshio-plugin.py` file *before* being instructed to install `meshio`. The plugin file will not exist until `meshio` is installed, causing this procedure to fail.",
+      "correction_candidates": [
+        "Correct order: 1. Install meshio. 2. Open ParaView. 3. Find and load the plugin file. 4. Activate Auto Load.",
+        "Correct order: 1. Open ParaView. 2. Install meshio. 3. Find and load the plugin file. 4. Activate Auto Load.",
+        "Correct order: 1. Find and load the plugin file. 2. Install meshio. 3. Open ParaView. 4. Activate Auto Load.",
+        "Correct order: 1. Activate Auto Load. 2. Install meshio. 3. Open ParaView. 4. Find and load the plugin file."
+      ],
+      "golden_answer": "Correct order: 1. Install meshio. 2. Open ParaView. 3. Find and load the plugin file. 4. Activate Auto Load."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instruction 'Install meshio for the Python major version that ParaView uses' is missing the critical command to actually determine ParaView's Python version. Without this, the user is likely to install meshio for their system's default Python, which may be incompatible with ParaView's bundled Python interpreter.",
+      "correction_candidates": [
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check `python --version`).",
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check ParaView's 'About' dialog).",
+        "The first step should be: Install meshio for the Python major version that ParaView uses (check `pvpython --version`).",
+        "The first step should be: Install meshio for Python 3."
+      ],
+      "golden_answer": "The first step should be: Install meshio for the Python major version that ParaView uses (check `pvpython --version`)."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The arguments for `meshio.write_points_cells` are in the wrong order. The function signature is `(filename, points, cells, ...)`, but the example provides `(points, cells, filename)`, which will cause a TypeError.",
+      "correction_candidates": [
+        "meshio.write_points_cells(filename=\"foo.vtk\", points=points, cells=cells)",
+        "meshio.write_points_cells(\"foo.vtk\", points, cells)",
+        "meshio.write_points_cells(cells, points, \"foo.vtk\")",
+        "meshio.write_points_cells(points, \"foo.vtk\", cells)"
+      ],
+      "golden_answer": "meshio.write_points_cells(\"foo.vtk\", points, cells)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path provided for the ParaView plugin file, `/usr/lib/paraview-5.9/plugins/`, is incorrect for a user-level pip installation. The file is typically located in the user's home directory, not a system-level directory, leading to a 'file not found' error.",
+      "correction_candidates": [
+        "Find the file `paraview-meshio-plugin.py` in `/opt/paraview/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in `~/.config/ParaView/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in `~/.local/share/paraview-5.9/plugins/`",
+        "Find the file `paraview-meshio-plugin.py` in the meshio installation directory."
+      ],
+      "golden_answer": "Find the file `paraview-meshio-plugin.py` in `~/.local/share/paraview-5.9/plugins/`"
+    }
+  ]
+}

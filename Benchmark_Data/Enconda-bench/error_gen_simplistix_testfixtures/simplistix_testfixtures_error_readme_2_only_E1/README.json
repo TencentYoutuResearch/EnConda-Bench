@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_2_only_E1",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that Django is a required dependency, when it is an optional one for specific features.",
+      "correction_candidates": [
+        "Remove the phrase 'first ensure you have django installed, then'.",
+        "Change the sentence to 'To install, run pip. For Django support, also install django: `pip install django`'.",
+        "Change the sentence to 'To install with optional django support, run: `pip install testfixtures[django]`'.",
+        "Change the sentence to 'Django is an optional dependency.'"
+      ],
+      "golden_answer": "Remove the phrase 'first ensure you have django installed, then'."
+    }
+  ]
+}

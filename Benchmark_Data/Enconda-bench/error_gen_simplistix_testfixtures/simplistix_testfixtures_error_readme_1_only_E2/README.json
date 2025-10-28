@@ -1,0 +1,18 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_1_only_E2",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip install command uses an incorrect package name 'test-fixtures' instead of the correct 'testfixtures'.",
+      "correction_candidates": [
+        "pip install testfixtures",
+        "pip install \"testfixtures\"",
+        "python -m pip install testfixtures",
+        "pip install testfixtures --user"
+      ],
+      "golden_answer": "pip install testfixtures"
+    }
+  ]
+}

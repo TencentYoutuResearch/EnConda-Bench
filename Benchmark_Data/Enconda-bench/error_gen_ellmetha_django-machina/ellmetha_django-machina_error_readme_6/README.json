@@ -1,0 +1,29 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_6",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command with dangerous flags that could break the installation",
+      "correction_candidates": [
+        "pip install django-machina",
+        "pip install --user django-machina",
+        "pip install -e django-machina",
+        "python -m pip install django-machina"
+      ],
+      "golden_answer": "pip install django-machina"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Reference to a non-existent requirements file path",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install django-machina[all]",
+        "Install additional dependencies as needed for your specific use case",
+        "pip install -r dev-requirements.txt"
+      ],
+      "golden_answer": "Install additional dependencies as needed for your specific use case"
+    }
+  ]
+}

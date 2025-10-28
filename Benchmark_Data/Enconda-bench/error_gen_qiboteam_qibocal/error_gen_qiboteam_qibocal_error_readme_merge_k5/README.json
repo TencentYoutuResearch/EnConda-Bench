@@ -1,0 +1,117 @@
+{
+  "readme": "error_gen_qiboteam_qibocal_error_readme_merge_k5",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the developer instructions, `pre-commit install` is executed before `poetry install`. This may cause an error because the pre-commit hooks might depend on packages that have not yet been installed.",
+      "correction_candidates": [
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npre-commit install\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npoetry run pre-commit install\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npre-commit install\npoetry install --no-dev\n```",
+        "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry shell\npoetry install\npre-commit install\n```"
+      ],
+      "golden_answer": "The commands should be run in the following order:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npoetry install\npre-commit install\n```"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a protocol uses an invalid option `--o` for specifying the output folder, which should be `-o`.",
+      "correction_candidates": [
+        "The correct command is: `qq auto <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> --output <output_folder>`",
+        "The correct command is: `qq auto --runcard <runcard> -o <output_folder>`",
+        "The correct command is: `qq auto <runcard> -output <output_folder>`"
+      ],
+      "golden_answer": "The correct command is: `qq auto <runcard> -o <output_folder>`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The standard installation instructions are incomplete. The `pip install .` command is missing, so the user will clone the repository but not install the package.",
+      "correction_candidates": [
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install .\n```",
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install -e .\n```",
+        "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npython setup.py install\n```",
+        "The installation commands are:\n```sh\npip install git+https://github.com/qiboteam/qibocal.git\n```"
+      ],
+      "golden_answer": "The installation commands are:\n```sh\ngit clone https://github.com/qiboteam/qibocal.git\ncd qibocal\npip install .\n```"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command for uploading reports suggests a fixed, non-existent path `reports/latest` instead of the variable `<output_folder>` that the user should provide.",
+      "correction_candidates": [
+        "The command is `qq upload <output_folder>`, where `<output_folder>` is the path to the generated report directory.",
+        "The command is `qq upload`, which will prompt you for the folder path.",
+        "The command is `qq upload --path reports/latest`.",
+        "The command is `qq upload <output_folder>`. You must first navigate into the parent directory of `<output_folder>`."
+      ],
+      "golden_answer": "The command is `qq upload <output_folder>`, where `<output_folder>` is the path to the generated report directory."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The developer instructions incorrectly state that Poetry version 1.0.0 is required, which is an outdated version and may cause dependency resolution issues.",
+      "correction_candidates": [
+        "Remove the note about requiring Poetry version 1.0.0. The project is compatible with modern versions of Poetry.",
+        "Update the note to specify Poetry version >=1.2.0.",
+        "The project can be installed with `pip install poetry==1.0.0` before running `poetry install`.",
+        "Instead of Poetry, you can use pip to install dependencies from `poetry.lock`."
+      ],
+      "golden_answer": "Remove the note about requiring Poetry version 1.0.0. The project is compatible with modern versions of Poetry."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The YAML in the runcard example has incorrect indentation, making it invalid. The keys `operation` and `parameters` and their children are not correctly indented under the sequence item `- id`.",
+      "correction_candidates": [
+        "Correct the indentation for the `operation` and `parameters` keys in the YAML example. The corrected block is:\n```yml\n- id: resonator spectroscopy high power\n  operation: resonator_spectroscopy\n  parameters:\n    freq_width: 10_000_000\n    freq_step: 500_000\n    amplitude: 0.4\n    power_level: high\n    nshots: 1024\n    relaxation_time: 5_000\n```",
+        "The `targets` key should be part of the main dictionary, not a separate item.",
+        "The list item `- id:` should be indented under `targets`.",
+        "The entire block from `- id:` onwards should be enclosed in quotes to be treated as a single string."
+      ],
+      "golden_answer": "Correct the indentation for the `operation` and `parameters` keys in the YAML example. The corrected block is:\n```yml\n- id: resonator spectroscopy high power\n  operation: resonator_spectroscopy\n  parameters:\n    freq_width: 10_000_000\n    freq_step: 500_000\n    amplitude: 0.4\n    power_level: high\n    nshots: 1024\n    relaxation_time: 5_000\n```"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The developer instructions are missing the `poetry install` command, which is necessary to install the project's dependencies for a development environment.",
+      "correction_candidates": [
+        "The `poetry install` command is missing. It should be run after `cd qibocal` and before `pre-commit install` to install project dependencies.",
+        "The command `pip install -r requirements.txt` should be run after cloning.",
+        "The command `poetry update` should be used instead of `poetry install`.",
+        "The pre-commit hooks install the dependencies automatically, so no other command is needed."
+      ],
+      "golden_answer": "The `poetry install` command is missing. It should be run after `cd qibocal` and before `pre-commit install` to install project dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `qq upload` command is shown with a `--folder` option, which is not a valid parameter. The command expects a positional argument for the folder path.",
+      "correction_candidates": [
+        "The command uses a positional argument, not a named one. The correct syntax is: `qq upload <output_folder>`",
+        "The correct parameter is `--path`, not `--folder`. The command should be: `qq upload --path <output_folder>`",
+        "The correct command is: `qq-upload <output_folder>`",
+        "The folder path must be absolute. The command should be: `qq upload --folder /path/to/<output_folder>`"
+      ],
+      "golden_answer": "The command uses a positional argument, not a named one. The correct syntax is: `qq upload <output_folder>`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary 'pip install poetry' command in the basic installation section when poetry is not needed for regular installation",
+      "correction_candidates": [
+        "Remove the 'pip install poetry' line from the installation section",
+        "Replace 'pip install poetry' with 'pip install --upgrade pip'",
+        "Move 'pip install poetry' to the developer instructions section",
+        "Change 'pip install poetry' to 'pip install setuptools'"
+      ],
+      "golden_answer": "Remove the 'pip install poetry' line from the installation section"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In developer instructions, 'pip install .' is executed before 'poetry install', which is incorrect order",
+      "correction_candidates": [
+        "Move 'pip install .' after 'poetry install' and 'pre-commit install'",
+        "Replace 'pip install .' with 'poetry install --dev'",
+        "Remove 'pip install .' from developer instructions entirely",
+        "Change the order to run 'poetry install' before 'pip install .'"
+      ],
+      "golden_answer": "Change the order to run 'poetry install' before 'pip install .'"
+    }
+  ]
+}

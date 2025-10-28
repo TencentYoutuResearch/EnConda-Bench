@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_8_only_E2",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect installation command with conflicting flags and manual compilation instead of using pip",
+      "correction_candidates": [
+        "pip install django-machina",
+        "python -m pip install django-machina",
+        "conda install django-machina",
+        "easy_install django-machina"
+      ],
+      "golden_answer": "pip install django-machina"
+    }
+  ]
+}

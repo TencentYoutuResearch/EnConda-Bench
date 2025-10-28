@@ -1,0 +1,29 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_5",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Outdated Python version support specified (2.7 and 3.5) which are no longer supported or recommended",
+      "correction_candidates": [
+        "This package is supported in python 3.8 and 3.9",
+        "This package requires python 3.7 or higher",
+        "This package is compatible with python 3.6+",
+        "This package supports python 3.8, 3.9, and 3.10"
+      ],
+      "golden_answer": "This package is supported in python 3.8 and 3.9"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong order - pip install command before cd command",
+      "correction_candidates": [
+        "Clone the repository:\n`git clone https://github.com/spacetelescope/pysiaf`\nInstall pysiaf:\n`cd pysiaf`\n`pip install .`",
+        "First clone the repository:\n`git clone https://github.com/spacetelescope/pysiaf`\nThen navigate and install:\n`cd pysiaf && pip install .`",
+        "Download and install:\n`git clone https://github.com/spacetelescope/pysiaf`\n`cd pysiaf`\n`python setup.py install`",
+        "Get the code and install:\n`git clone https://github.com/spacetelescope/pysiaf`\n`cd pysiaf`\n`pip install -r requirements.txt && pip install .`"
+      ],
+      "golden_answer": "Clone the repository:\n`git clone https://github.com/spacetelescope/pysiaf`\nInstall pysiaf:\n`cd pysiaf`\n`pip install .`"
+    }
+  ]
+}

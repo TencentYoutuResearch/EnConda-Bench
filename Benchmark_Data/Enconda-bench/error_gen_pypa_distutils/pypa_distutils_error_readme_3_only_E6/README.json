@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_distutils_error_readme_3_only_E6",
+  "repo_name": "pypa_distutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The build steps are in the wrong logical order. The user is instructed to run the build command before installing its main dependency, `setuptools`.",
+      "correction_candidates": [
+        "Reverse the order of the steps: install `setuptools` first, then run the build.",
+        "Replace the steps with a single command that handles dependencies automatically: `pip install .`",
+        "Combine the steps into a single command line: `pip install setuptools && python setup.py build`.",
+        "Remove the build step entirely, as `pip install` is sufficient."
+      ],
+      "golden_answer": "Reverse the order of the steps: install `setuptools` first, then run the build."
+    }
+  ]
+}

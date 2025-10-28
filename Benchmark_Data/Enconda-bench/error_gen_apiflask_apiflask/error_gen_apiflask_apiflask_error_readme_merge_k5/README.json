@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_apiflask_apiflask_error_readme_merge_k5",
+  "repo_name": "apiflask_apiflask",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is stated as 'Python 3+', which is too broad and may cause users to try running it on unsupported older Python 3 versions like 3.6 or 3.7, leading to compatibility issues.",
+      "correction_candidates": [
+        "Change the requirement to `Python 3.8+`.",
+        "Change the requirement to `Python >= 3.8`.",
+        "Change the requirement to `Python 3.8 or newer`.",
+        "Change the requirement to `Python 3.6+`."
+      ],
+      "golden_answer": "Change the requirement to `Python 3.8+`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application with the reloader enabled is incorrect. The option `--reload` is placed before the `run` command, which is not the correct syntax for the `flask` CLI.",
+      "correction_candidates": [
+        "Change the command to `$ flask run --reload`.",
+        "Change the command to `$ flask run-reload`.",
+        "Change the command to `$ flask --app app run --reload`.",
+        "Change the command to `$ python app.py --reload`."
+      ],
+      "golden_answer": "Change the command to `$ flask run --reload`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command unnecessarily includes the `flask` package. Since `apiflask` lists `flask` as a dependency, `pip` will install it automatically, and specifying it manually could lead to version conflicts.",
+      "correction_candidates": [
+        "Change the command to `$ pip3 install apiflask`.",
+        "Change the command to `$ pip3 install apiflask` and add a note to run `pip install flask` separately.",
+        "Change the command to `$ pip3 install flask && pip3 install apiflask`.",
+        "Change the command to `$ pip3 install apiflask[flask]`."
+      ],
+      "golden_answer": "Change the command to `$ pip3 install apiflask`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions suggest saving the example code as `main.py`, but the subsequent `flask run` command will fail because it looks for `app.py` or `wsgi.py` by default.",
+      "correction_candidates": [
+        "Change the filename to `app.py`.",
+        "Keep the filename as `main.py` and change the run command to `$ flask --app main run`.",
+        "Change the filename to `wsgi.py`.",
+        "Add a line `export FLASK_APP=main.py` before the `flask run` command."
+      ],
+      "golden_answer": "Change the filename to `app.py`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install async support contains a typo in the extra's name (`a-sync` instead of `async`), which will cause the installation to fail.",
+      "correction_candidates": [
+        "Correct the command to `$ pip install -U \"apiflask[async]\"`.",
+        "Correct the command to `$ pip install apiflask[async] --upgrade`.",
+        "Correct the command to `$ pip3 install -U \"apiflask[async]\"`.",
+        "Change the command to install dependencies manually: `$ pip install uvicorn`."
+      ],
+      "golden_answer": "Correct the command to `$ pip install -U \"apiflask[async]\"`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application in debug mode is incorrect. `flask debug` is not a valid command; the `--debug` flag should be used with the `run` command.",
+      "correction_candidates": [
+        "Change the command to `$ flask run --debug`.",
+        "Change the command to `$ flask --debug run`.",
+        "Change the command to `$ flask run --mode=debug`.",
+        "Add `app.run(debug=True)` to the Python script and use `$ python app.py`."
+      ],
+      "golden_answer": "Change the command to `$ flask run --debug`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installation command uses wrong package name 'flask-apiflask' instead of 'apiflask'",
+      "correction_candidates": [
+        "pip3 install apiflask",
+        "pip3 install python-apiflask",
+        "pip3 install apiflask-framework",
+        "pip3 install flask-api"
+      ],
+      "golden_answer": "pip3 install apiflask"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Flask spec command changed from 'flask spec' to 'flask specification' which is invalid syntax",
+      "correction_candidates": [
+        "flask spec",
+        "flask openapi",
+        "flask schema",
+        "flask generate-spec"
+      ],
+      "golden_answer": "flask spec"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_1_only_E1",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the pip install command is misspelled as 'django-registrations' (with an 's') instead of the correct 'django-registration'.",
+      "correction_candidates": [
+        "pip install django-registration",
+        "pip install django_registration",
+        "pip install git+https://github.com/ubernostrum/django-registration.git",
+        "conda install django-registration"
+      ],
+      "golden_answer": "pip install django-registration"
+    }
+  ]
+}

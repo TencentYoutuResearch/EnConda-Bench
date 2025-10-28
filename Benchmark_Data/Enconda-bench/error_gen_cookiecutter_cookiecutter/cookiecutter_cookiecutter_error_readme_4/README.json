@@ -1,0 +1,29 @@
+{
+  "readme": "cookiecutter_cookiecutter_error_readme_4",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip` installation command is missing the `--user` flag, which can lead to permission errors if not installing in a virtual environment or as an administrator.",
+      "correction_candidates": [
+        "Add the `--user` flag to the command: `python -m pip install --user cookiecutter`.",
+        "Replace the command with `sudo python -m pip install cookiecutter`.",
+        "Add a note to first create a virtual environment with `python -m venv venv`.",
+        "Change the command to `pip install cookiecutter`, as `python -m` is redundant."
+      ],
+      "golden_answer": "Add the `--user` flag to the command: `python -m pip install --user cookiecutter`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Python API usage example incorrectly calls `cookiecutter.create()`, which is not a valid function. The correct function call is `cookiecutter()`.",
+      "correction_candidates": [
+        "Change `cookiecutter.create(...)` to `cookiecutter(...)`.",
+        "Change `cookiecutter.create(...)` to `cookiecutter.main.cookiecutter(...)`.",
+        "Change `from cookiecutter.main import cookiecutter` to `from cookiecutter import api` and use `api.cookiecutter(...)`.",
+        "Change `cookiecutter.create(...)` to `cookiecutter.generate(...)`."
+      ],
+      "golden_answer": "Change `cookiecutter.create(...)` to `cookiecutter(...)`."
+    }
+  ]
+}

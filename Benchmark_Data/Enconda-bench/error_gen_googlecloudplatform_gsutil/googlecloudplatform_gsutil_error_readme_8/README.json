@@ -1,0 +1,29 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_8",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Suggests using incorrect command 'python setup.py install --force' which may not work properly",
+      "correction_candidates": [
+        "To get started quickly, run `pip install gsutil` to install gsutil with all required dependencies.",
+        "To get started quickly, run `python -m pip install gsutil` to install gsutil with all required dependencies.",
+        "To get started quickly, follow the official installation guide at the link above for proper setup.",
+        "To get started quickly, run `pip install google-cloud-storage` to install gsutil with all required dependencies."
+      ],
+      "golden_answer": "To get started quickly, run `pip install gsutil` to install gsutil with all required dependencies."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Lists incorrect and non-existent Python versions (2.6, 3.4, 4.0) as supported",
+      "correction_candidates": [
+        "Note that gsutil is compatible with Python 3.7, Python 3.8, Python 3.9, and Python 3.10 environments. Make sure to use one of these supported versions for development work.",
+        "Note that gsutil requires Python 3.6 or later. Python 2.x is no longer supported. Make sure to use a supported version for development work.",
+        "Note that gsutil supports Python 3.7 through 3.11 environments. Make sure to use one of these supported versions for development work.",
+        "Note that gsutil is compatible with Python 3.8+ environments. Older Python versions are not supported. Make sure to use a supported version for development work."
+      ],
+      "golden_answer": "Note that gsutil is compatible with Python 3.7, Python 3.8, Python 3.9, and Python 3.10 environments. Make sure to use one of these supported versions for development work."
+    }
+  ]
+}

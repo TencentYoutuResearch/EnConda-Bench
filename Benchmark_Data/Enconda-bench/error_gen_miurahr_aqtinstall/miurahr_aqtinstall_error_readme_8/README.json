@@ -1,0 +1,29 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_8",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Minimum Python version is listed as 2.7 which is incompatible with the dependencies and modern Python requirements",
+      "correction_candidates": [
+        "- Minimum Python version:\n    3.8",
+        "- Minimum Python version:\n    3.6",
+        "- Minimum Python version:\n    3.7",
+        "- Minimum Python version:\n    3.9"
+      ],
+      "golden_answer": "- Minimum Python version:\n    3.8"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax '--modules all' is used instead of the correct '-m all' flag",
+      "correction_candidates": [
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --module all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -modules all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --install-modules all"
+      ],
+      "golden_answer": "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all"
+    }
+  ]
+}

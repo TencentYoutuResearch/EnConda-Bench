@@ -1,0 +1,106 @@
+{
+  "readme": "error_gen_islandora_documentation_error_readme_merge_k5",
+  "repo_name": "islandora_documentation",
+  "level": "level9",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install mkdocs` only installs the base `mkdocs` package, but not the specific theme or plugins listed in a `requirements.txt` file, which are necessary to build the site correctly.",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install mkdocs mkdocs-material mkdocs-redirects",
+        "conda install --file requirements.txt",
+        "pip install mkdocs && pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `mkdocs run` is not a valid `mkdocs` command for starting the development server.",
+      "correction_candidates": [
+        "mkdocs serve",
+        "mkdocs start",
+        "mkdocs --run",
+        "python -m mkdocs serve"
+      ],
+      "golden_answer": "mkdocs serve"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The documentation lists key dependencies but does not specify versions or refer to a `requirements.txt` file, which can lead to version compatibility issues when a developer tries to install them manually.",
+      "correction_candidates": [
+        "The README should instruct users to install dependencies from a version-pinned requirements.txt file, for example: 'pip install -r requirements.txt'.",
+        "The README should specify exact versions for each package, like 'mkdocs==1.2.3'.",
+        "The README should state the required Python version.",
+        "The listed dependencies are incorrect."
+      ],
+      "golden_answer": "The README should instruct users to install dependencies from a version-pinned requirements.txt file, for example: 'pip install -r requirements.txt'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions install dependencies globally before creating and activating the project's virtual environment, which defeats the purpose of using a virtual environment.",
+      "correction_candidates": [
+        "The 'pip install' command should be run after the 'source venv/bin/activate' command.",
+        "You should run 'pip install -r requirements.txt --user' instead.",
+        "The commands should be combined into 'python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt'.",
+        "Create the virtual environment first, then install dependencies."
+      ],
+      "golden_answer": "The 'pip install' command should be run after the 'source venv/bin/activate' command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install mkdocs-material` only installs the Material theme and its base dependencies, but it may omit other necessary plugins (like `pymdown-extensions`, `mkdocs-redirects`, etc.) that are specified in a project's `requirements.txt` file.",
+      "correction_candidates": [
+        "The command should be 'pip install -r requirements.txt' to install all required dependencies.",
+        "The command should be 'pip install mkdocs mkdocs-material'.",
+        "You must install mkdocs first: 'pip install mkdocs'.",
+        "The 'mkdocs-material' package is unnecessary."
+      ],
+      "golden_answer": "The command should be 'pip install -r requirements.txt' to install all required dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `mkdocs build --output public` uses an invalid parameter `--output`. The correct parameter to specify the output directory is `--site-dir` or `-d`.",
+      "correction_candidates": [
+        "The command should be 'mkdocs build --site-dir public'.",
+        "The command should be 'mkdocs build -o public'.",
+        "The command should be 'mkdocs build --out public'.",
+        "The command should be 'mkdocs build public'."
+      ],
+      "golden_answer": "The command should be 'mkdocs build --site-dir public'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Instructions suggest running mkdocs build before setting up the virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "To build the documentation locally, first create a virtual environment, then install mkdocs and run `mkdocs build`.",
+        "To build the documentation locally, first install mkdocs version 2.1.0 after setting up the virtual environment and then run `mkdocs build`.",
+        "To build the documentation locally, run `mkdocs build` after installing mkdocs version 2.1.0 in a virtual environment.",
+        "To build the documentation locally, install mkdocs version 2.1.0 and run `mkdocs build` in the correct environment setup."
+      ],
+      "golden_answer": "To build the documentation locally, first install mkdocs version 2.1.0 after setting up the virtual environment and then run `mkdocs build`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip install command syntax using requirements.txt",
+      "correction_candidates": [
+        "Before submitting changes, make sure to run `pip install -r requirements.txt` to install the necessary dependencies.",
+        "Before submitting changes, make sure to run `pip install --requirements requirements.txt` to install the necessary dependencies.",
+        "Before submitting changes, make sure to run `pip install -f requirements.txt` to install the necessary dependencies.",
+        "Before submitting changes, make sure to run `pip requirements.txt install` to install the necessary dependencies."
+      ],
+      "golden_answer": "Before submitting changes, make sure to run `pip install -r requirements.txt` to install the necessary dependencies."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file paths specified for mkdocs configuration and content folder",
+      "correction_candidates": [
+        "The navigation structure is specified in `mkdocs.yml` and the `/docs/` folder contains the content.",
+        "The navigation structure is specified in `mkdocs.yaml` and the `/content/` folder contains the content.",
+        "The navigation structure is specified in `config.yml` and the `/docs/` folder contains the content.",
+        "The navigation structure is specified in `mkdocs.config` and the `/docs/` folder contains the content."
+      ],
+      "golden_answer": "The navigation structure is specified in `mkdocs.yml` and the `/docs/` folder contains the content."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "readme": "error_gen_bitcart_bitcart_error_readme_merge_k7",
+  "repo_name": "bitcart_bitcart",
+  "level": "level9",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. Step 2 attempts to install dependencies into the global Python environment before the project's virtual environment is created and activated in step 3.",
+      "correction_candidates": [
+        "Move step 2 to be after step 3.",
+        "Combine all commands into a single line: 'git clone ... && python3 -m venv venv && pip install ...'",
+        "Run 'pip install --user -r requirements.txt' to avoid using the global environment.",
+        "Use 'pipenv install' instead of 'pip' and 'venv'."
+      ],
+      "golden_answer": "Move step 2 to be after step 3."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'pip install requirements.txt' is syntactically incorrect for installing dependencies from a file. It is missing the '-r' flag.",
+      "correction_candidates": [
+        "Change the command in step 2 to 'pip install -r requirements.txt'.",
+        "Change the command in step 2 to 'pip install --requirements requirements.txt'.",
+        "Run 'cat requirements.txt | xargs pip install'.",
+        "The project should be installed using 'python setup.py install', not pip."
+      ],
+      "golden_answer": "Change the command in step 2 to 'pip install -r requirements.txt'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Step 2 instructs the user to install Flask manually. This is an unnecessary dependency installation, as Flask is already listed in requirements.txt and will be installed in step 3, potentially causing version conflicts.",
+      "correction_candidates": [
+        "Remove step 2 ('pip install Flask') entirely.",
+        "Change step 2 to 'pip install --upgrade Flask'.",
+        "Add the '--no-deps' flag to the 'pip install -r requirements.txt' command in step 3.",
+        "Specify a version in step 2, such as 'pip install Flask==2.0.1'."
+      ],
+      "golden_answer": "Remove step 2 ('pip install Flask') entirely."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are missing a crucial prerequisite step to install system-level dependencies. Packages in requirements.txt may fail to build from source without packages like 'python3-dev' or 'build-essential' on Debian-based systems.",
+      "correction_candidates": [
+        "Add a prerequisite step before cloning, e.g., 'sudo apt-get install python3-dev build-essential'.",
+        "Run 'pip install' with the '--no-build-isolation' flag.",
+        "The dependencies should be installed with 'conda' instead of 'pip'.",
+        "Install the packages one by one instead of using a requirements file."
+      ],
+      "golden_answer": "Add a prerequisite step before cloning, e.g., 'sudo apt-get install python3-dev build-essential'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command in step 3 to activate the virtual environment, 'source venv/bin', is incorrect. It should be 'source venv/bin/activate'.",
+      "correction_candidates": [
+        "Change the command to 'source venv/bin/activate'.",
+        "On Windows, the command is 'venv\\Scripts\\activate'.",
+        "Change the command to '. venv/bin/activate'.",
+        "The command should be 'source activate venv'."
+      ],
+      "golden_answer": "Change the command to 'source venv/bin/activate'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - installing dependencies before creating virtual environment",
+      "correction_candidates": [
+        "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "pip install virtualenv\npython -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "python -m venv bitcart-env\nsource bitcart-env/bin/activate\npip install -r requirements.txt",
+        "conda create -n bitcart python=3.8\nconda activate bitcart\npip install -r requirements.txt"
+      ],
+      "golden_answer": "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid npm command that doesn't exist for this Python project",
+      "correction_candidates": [
+        "pip install bitcart",
+        "python setup.py install",
+        "git clone https://github.com/bitcart/bitcart && cd bitcart && pip install -e .",
+        "docker run -d bitcart/bitcart"
+      ],
+      "golden_answer": "pip install bitcart"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Wrong file extension for pip install - using config.yaml instead of requirements.txt",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install -r requirements.pip",
+        "pip install -r dependencies.txt",
+        "pip install -r setup.cfg"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Incorrect system package installation - trying to install Python package via apt-get",
+      "correction_candidates": [
+        "pip install bitcart",
+        "git clone https://github.com/bitcart/bitcart.git && cd bitcart && pip install -e .",
+        "python -m pip install bitcart[all]",
+        "docker run -d --name bitcart bitcart/bitcart"
+      ],
+      "golden_answer": "pip install bitcart"
+    }
+  ]
+}

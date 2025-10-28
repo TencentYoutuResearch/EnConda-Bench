@@ -1,0 +1,18 @@
+{
+  "readme": "dbiir_uer-py_error_readme_2_only_E1",
+  "repo_name": "dbiir_uer-py",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The dependency `six = 1.12.0` in the Requirements section uses invalid syntax for specifying a version. Pip expects `==` for exact versions or `>=` for minimum versions.",
+      "correction_candidates": [
+        "Change `six = 1.12.0` to `six >= 1.12.0`.",
+        "Change `six = 1.12.0` to `six == 1.12.0`.",
+        "Remove the version specification, changing it to just `six`.",
+        "Change `six = 1.12.0` to `six~=1.12`."
+      ],
+      "golden_answer": "Change `six = 1.12.0` to `six >= 1.12.0`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_3",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect pip installation command, 'pip install stan', which installs a different package, instead of the correct 'pip install cmdstanpy'.",
+      "correction_candidates": [
+        "The correct command is 'pip install pystan', which is the official Python interface.",
+        "Specify the installation command as 'python -m pip install cmdstanpy'.",
+        "Remove the suggested command and just leave the link to PyPi for users to find the command.",
+        "Change the command from 'pip install stan' to 'pip install cmdstanpy'."
+      ],
+      "golden_answer": "Change the command from 'pip install stan' to 'pip install cmdstanpy'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The example code demonstrates calling `fit.summary()` before the `fit` object is created by `model.sample()`, which will cause a NameError.",
+      "correction_candidates": [
+        "Initialize `fit` before the summary call: `fit = None`.",
+        "The `summary` method should be called on the model, not the fit object: `model.summary()`.",
+        "Move the `fit = model.sample(...)` line before the `fit.summary()` line.",
+        "Combine the calls into one line: `model.sample(chains=4, data=data_file).summary()`."
+      ],
+      "golden_answer": "Move the `fit = model.sample(...)` line before the `fit.summary()` line."
+    }
+  ]
+}

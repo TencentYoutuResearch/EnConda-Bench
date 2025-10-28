@@ -1,0 +1,18 @@
+{
+  "readme": "gymrek-lab_TRTools_error_readme_2_only_E1",
+  "repo_name": "gymrek-lab_TRTools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The optional conda installation command is missing the `bcftools` package, even though the accompanying text states it should be installed with `ART`.",
+      "correction_candidates": [
+        "Change the command to `conda install -c conda-forge -c bioconda bcftools`.",
+        "Add a new command `conda install -c bioconda bcftools` after the `art` installation command.",
+        "Change the command to `conda install -c bioconda bcftools art`.",
+        "Change the command to `conda install -c conda-forge -c bioconda bcftools art`."
+      ],
+      "golden_answer": "Change the command to `conda install -c conda-forge -c bioconda bcftools art`."
+    }
+  ]
+}

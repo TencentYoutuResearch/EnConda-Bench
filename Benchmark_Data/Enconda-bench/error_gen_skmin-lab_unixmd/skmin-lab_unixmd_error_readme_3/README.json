@@ -1,0 +1,29 @@
+{
+  "readme": "skmin-lab_unixmd_error_readme_3",
+  "repo_name": "skmin-lab_unixmd",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The build command for polariton dynamics incorrectly specifies the output directory as './src/build', which is the same as the standard build, potentially overwriting files or causing conflicts.",
+      "correction_candidates": [
+        "$ python3 setup.py build_qed_ext -b ./src/build_qed",
+        "$ python3 setup.py build_qed_ext --build-base ./src/build_qed",
+        "$ python3 setup.py build_qed_ext --inplace",
+        "$ python3 setup.py build_ext --with-qed -b ./src/build_qed"
+      ],
+      "golden_answer": "$ python3 setup.py build_qed_ext -b ./src/build_qed"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the test examples is incorrect, pointing to a non-existent 'test' directory instead of the correct 'examples' directory.",
+      "correction_candidates": [
+        "$PYUNIXMDHOME/examples/qm/Eh-Shin_Metiu",
+        "./examples/qm/Eh-Shin_Metiu",
+        "$PYUNIXMDHOME/Eh-Shin_Metiu",
+        "The examples are in the 'examples' directory."
+      ],
+      "golden_answer": "$PYUNIXMDHOME/examples/qm/Eh-Shin_Metiu"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_1_only_E2",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install pysiaf` is incorrect for installing from a local clone; it will install the version from PyPI instead of the local code. The correct command is `pip install .`.",
+      "correction_candidates": [
+        "pip install .",
+        "python setup.py install",
+        "pip install -r requirements.txt",
+        "pip install pysiaf --no-cache-dir"
+      ],
+      "golden_answer": "pip install ."
+    }
+  ]
+}

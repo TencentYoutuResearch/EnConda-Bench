@@ -1,0 +1,18 @@
+{
+  "readme": "ucoproject_uco_error_readme_1_only_E1",
+  "repo_name": "ucoproject_uco",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include `tensorflow`, which is a large and unnecessary dependency for a project focused on ontology definitions.",
+      "correction_candidates": [
+        "The installation command should be `conda install tensorflow rdflib`.",
+        "The installation command should be `pip install uco`.",
+        "The installation command should only include the necessary library: `pip install rdflib`.",
+        "The installation command should be `pip install rdflib owlready2`."
+      ],
+      "golden_answer": "The installation command should only include the necessary library: `pip install rdflib`."
+    }
+  ]
+}

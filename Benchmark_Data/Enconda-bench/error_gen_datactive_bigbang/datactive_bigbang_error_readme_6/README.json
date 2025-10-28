@@ -1,0 +1,29 @@
+{
+  "readme": "datactive_bigbang_error_readme_6",
+  "repo_name": "datactive_bigbang",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect directory path 'samples/' instead of 'examples/' for Jupyter notebooks",
+      "correction_candidates": [
+        "Change --notebook-dir=samples/ to --notebook-dir=examples/",
+        "Update the directory reference to match the correct examples folder",
+        "Fix the path to point to the existing examples directory",
+        "Correct samples/ to examples/ in the jupyter command"
+      ],
+      "golden_answer": "Change --notebook-dir=samples/ to --notebook-dir=examples/"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Adding invalid --output parameter to bigbang collect-mail command that doesn't exist",
+      "correction_candidates": [
+        "Remove the --output data/output.csv parameter from the command",
+        "Replace --output with the correct parameter name for specifying output location",
+        "Use bigbang collect-mail --url <url> without additional output parameters",
+        "Change --output to --destination or another valid parameter"
+      ],
+      "golden_answer": "Remove the --output data/output.csv parameter from the command"
+    }
+  ]
+}

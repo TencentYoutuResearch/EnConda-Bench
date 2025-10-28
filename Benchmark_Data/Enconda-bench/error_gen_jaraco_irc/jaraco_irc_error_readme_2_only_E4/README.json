@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_irc_error_readme_2_only_E4",
+  "repo_name": "jaraco_irc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The name of the example script `irccat` is misspelled as `irc_cat` in the documentation, which would cause a file not found error if a user tries to run it with that name.",
+      "correction_candidates": [
+        "The script is located in the `examples/` directory, not `scripts/`.",
+        "The script is named `irccat.py`, so it should be referenced as such.",
+        "The script name is `irccat`, not `irc_cat`.",
+        "The script `irc_cat` has been renamed to `irc-cat`."
+      ],
+      "golden_answer": "The script name is `irccat`, not `irc_cat`."
+    }
+  ]
+}

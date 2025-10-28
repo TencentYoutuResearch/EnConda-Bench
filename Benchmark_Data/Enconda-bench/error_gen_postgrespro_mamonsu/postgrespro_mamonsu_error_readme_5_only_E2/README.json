@@ -1,0 +1,18 @@
+{
+  "readme": "postgrespro_mamonsu_error_readme_5_only_E2",
+  "repo_name": "postgrespro_mamonsu",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax - missing 'zabbix' subcommand in template upload command",
+      "correction_candidates": [
+        "mamonsu zabbix template export template.xml",
+        "mamonsu template upload template.xml",
+        "mamonsu export zabbix template.xml",
+        "mamonsu zabbix upload template template.xml"
+      ],
+      "golden_answer": "mamonsu zabbix template export template.xml"
+    }
+  ]
+}

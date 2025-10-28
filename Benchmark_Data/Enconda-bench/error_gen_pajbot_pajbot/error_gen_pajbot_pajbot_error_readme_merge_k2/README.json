@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_pajbot_pajbot_error_readme_merge_k2",
+  "repo_name": "pajbot_pajbot",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the installation script is incorrect. It is missing the '.sh' extension and uses 'sh', which might not be the intended execution method.",
+      "correction_candidates": [
+        "Run the command: source ./scripts/venvinstall.sh",
+        "Run the command: ./scripts/venvinstall.sh",
+        "Run the command: bash venvinstall.sh",
+        "Run the command: ./venvinstall.sh"
+      ],
+      "golden_answer": "Run the command: ./scripts/venvinstall.sh"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the example configuration file is incorrect. The directory is 'configs', not 'config'.",
+      "correction_candidates": [
+        "Copy from ./configs/example.ini to ./config.ini",
+        "Copy from ./config.ini.example to ./config.ini",
+        "Rename ./configs/example.ini to config.ini",
+        "Copy from ./example.ini to ./config.ini"
+      ],
+      "golden_answer": "Copy from ./configs/example.ini to ./config.ini"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified ambiguously as '3.x', which does not inform the user of the specific minimal version needed for compatibility.",
+      "correction_candidates": [
+        "Specify the minimal supported Python version is 3.9.",
+        "Specify the minimal supported Python version is 3.6.",
+        "Specify the supported Python versions are 3.8, 3.9, and 3.10.",
+        "State that any Python 3 version is supported."
+      ],
+      "golden_answer": "Specify the minimal supported Python version is 3.9."
+    }
+  ]
+}

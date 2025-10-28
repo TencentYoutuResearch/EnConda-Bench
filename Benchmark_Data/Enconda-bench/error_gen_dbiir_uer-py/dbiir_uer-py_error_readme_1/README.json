@@ -1,0 +1,29 @@
+{
+  "readme": "dbiir_uer-py_error_readme_1",
+  "repo_name": "dbiir_uer-py",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `preprocess.py` command uses an incorrect parameter `--input_path` instead of `--corpus_path` to specify the input corpus file.",
+      "correction_candidates": [
+        "Change `--input_path` to `--corpus_path`.",
+        "Change `--input_path` to `--data_path`.",
+        "Remove the `--input_path` parameter and let the script use the default.",
+        "Change the command to `python3 preprocess.py --corpus corpora/book_review_bert.txt ...`"
+      ],
+      "golden_answer": "Change `--input_path` to `--corpus_path`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `pretrain.py` command provides an incorrect path `models/base_config.json` for the configuration file, which should be `models/bert/base_config.json`.",
+      "correction_candidates": [
+        "Change the path to `models/bert/base_config.json`.",
+        "Change the path to `config/bert/base_config.json`.",
+        "Move the `base_config.json` file from `models/bert/` to `models/`.",
+        "Change the path to `models/config/base_config.json`."
+      ],
+      "golden_answer": "Change the path to `models/bert/base_config.json`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_3",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package `libpq-dev-tools` listed in the system dependencies does not exist, causing the installation command to fail.",
+      "correction_candidates": [
+        "Remove `-tools` from the package name. The correct package is `libpq-dev`.",
+        "Replace `libpq-dev-tools` with `postgresql-client`.",
+        "Split the package into `libpq-dev` and `libpq-tools`.",
+        "Remove `libpq-dev-tools` from the list as it's optional."
+      ],
+      "golden_answer": "Remove `-tools` from the package name. The correct package is `libpq-dev`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to copy the local settings file references a non-existent template file `pgeu/settings/local.py.template`.",
+      "correction_candidates": [
+        "Change the source file path to `pgeu/settings/local.py.pgeusystem.template`.",
+        "Change the command to `mv pgeu/settings/local.py.template pgeu/settings/local.py`.",
+        "Create the file `pgeu/settings/local.py.template` before copying it.",
+        "Change the source file path to `settings/local.py.template`."
+      ],
+      "golden_answer": "Change the source file path to `pgeu/settings/local.py.pgeusystem.template`."
+    }
+  ]
+}

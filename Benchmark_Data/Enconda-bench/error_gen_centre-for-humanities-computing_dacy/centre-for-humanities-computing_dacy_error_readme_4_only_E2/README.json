@@ -1,0 +1,18 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_4_only_E2",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The usage example `for model in dacy.models:` is missing parentheses to call the `models` function. This will cause a TypeError because it attempts to iterate over a function object.",
+      "correction_candidates": [
+        "for model in dacy.models():",
+        "from dacy import models; for model in models():",
+        "for model in dacy.list_models():",
+        "for model in dacy.models.list():"
+      ],
+      "golden_answer": "for model in dacy.models():"
+    }
+  ]
+}

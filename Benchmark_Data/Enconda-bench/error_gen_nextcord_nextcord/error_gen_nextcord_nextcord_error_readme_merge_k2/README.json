@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_nextcord_nextcord_error_readme_merge_k2",
+  "repo_name": "nextcord_nextcord",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 3.6 or higher is required, but the library requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change \"Python 3.6 or higher is required\" to \"Python 3.7 or higher is required\".",
+        "Change \"Python 3.6 or higher is required\" to \"Any version of Python 3 is supported\".",
+        "Remove the Python version requirement sentence entirely.",
+        "Change \"Python 3.6 or higher is required\" to \"Python 3.8 or higher is required\"."
+      ],
+      "golden_answer": "Change \"Python 3.6 or higher is required\" to \"Python 3.8 or higher is required\"."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install with voice support, `python3 -m pip install -U nextcord voice`, is syntactically incorrect. It attempts to install a package named 'voice' instead of installing the 'voice' extra for nextcord.",
+      "correction_candidates": [
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord-voice`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U \"nextcord[voice]\"`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord --with-voice`.",
+        "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U nextcord && python3 -m pip install -U PyNaCl`."
+      ],
+      "golden_answer": "Change `python3 -m pip install -U nextcord voice` to `python3 -m pip install -U \"nextcord[voice]\"`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command provided to install voice support is incorrect. It installs the base `nextcord` library but omits the `[voice]` extra, which means voice-related dependencies will be missing.",
+      "correction_candidates": [
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U nextcord PyNaCl`.",
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U \"nextcord[voice]\"`.",
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U nextcord-voice`.",
+        "In the voice support section, add a new command `python3 -m pip install -U PyNaCl` after the existing one."
+      ],
+      "golden_answer": "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U \"nextcord[voice]\"`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands for installing the development version are in the wrong logical order. The `pip install` command is run before changing into the `nextcord` directory, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Swap the `$ cd nextcord` and `$ python3 -m pip install -U .[voice]` commands.",
+        "Remove the `$ cd nextcord` command and change `.` to `./nextcord` in the pip command.",
+        "Swap the `$ git clone` and `$ python3 -m pip install` commands.",
+        "Combine the last two commands into a single line: `$ cd nextcord && python3 -m pip install -U .[voice]`."
+      ],
+      "golden_answer": "Swap the `$ cd nextcord` and `$ python3 -m pip install -U .[voice]` commands."
+    }
+  ]
+}

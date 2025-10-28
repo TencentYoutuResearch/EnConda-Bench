@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_2_only_E4",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the dependency file is incorrect; it points to a non-existent `requirements.txt` file instead of the correct `setup.cfg`.",
+      "correction_candidates": [
+        "Dependencies and minimal versions are listed in the `setup <https://github.com/skrub-data/skrub/blob/main/setup.cfg#L27>`_ file.",
+        "Dependencies and minimal versions are listed in the `pyproject.toml <https://github.com/skrub-data/skrub/blob/main/pyproject.toml>`_ file.",
+        "Dependencies and minimal versions are listed in the `environment.yml <https://github.com/skrub-data/skrub/blob/main/environment.yml>`_ file.",
+        "Dependencies and minimal versions are listed in the `setup.py <https://github.com/skrub-data/skrub/blob/main/setup.py>`_ file."
+      ],
+      "golden_answer": "Dependencies and minimal versions are listed in the `setup <https://github.com/skrub-data/skrub/blob/main/setup.cfg#L27>`_ file."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "qiita-spots_qiita_error_readme_4",
+  "repo_name": "qiita-spots_qiita",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The setup instructions specify using Python 2.7, which is end-of-life and incompatible with modern scientific Python libraries and likely Qiita itself.",
+      "correction_candidates": [
+        "Change the Python version in the `conda create` command to a supported version, such as `python=3.9`.",
+        "Remove the Python version specification to let conda install a recent, compatible version by default.",
+        "Change the command to `conda create -n qiita-dev python=3` to use any Python 3 version.",
+        "Add a note that Python 3.6 or newer is required."
+      ],
+      "golden_answer": "Change the Python version in the `conda create` command to a supported version, such as `python=3.9`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `qiita start --port 8888` is not a standard or correct command for launching the Qiita web server. A command to run the server is not provided.",
+      "correction_candidates": [
+        "The correct command to start the server is `qiita-env start`.",
+        "The correct command is `python qiita_pet/webserver.py`.",
+        "The command is incorrect; the server should be started with `flask run --port 8888`.",
+        "The command is incorrect. The server is started by running `uwsgi --ini qiita.ini`."
+      ],
+      "golden_answer": "The command is incorrect. The server is started by running `uwsgi --ini qiita.ini`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_1",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the 'Requirements' section, the minimum Python version is vaguely specified as '3.x', which could lead users to attempt installation with an unsupported version like Python 3.7, causing compatibility errors.",
+      "correction_candidates": [
+        "Minimum Python version: 3.6+",
+        "Minimum Python version: 3.8",
+        "Minimum Python version: any version of Python 3",
+        "Minimum Python version: 3.9"
+      ],
+      "golden_answer": "Minimum Python version: 3.8"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Example' section, the command to install all modules uses an incorrect parameter `--modules all` instead of the correct short form `-m all`, which will cause the command to fail.",
+      "correction_candidates": [
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --all-modules",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --install-all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -a"
+      ],
+      "golden_answer": "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all"
+    }
+  ]
+}

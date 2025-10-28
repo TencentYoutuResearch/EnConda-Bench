@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_8_only_E6",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong order - installing package before creating virtual environment",
+      "correction_candidates": [
+        "First, set up your virtual environment:\n```bash\npython -m venv pylabrobot-env\nsource pylabrobot-env/bin/activate  # On Windows: pylabrobot-env\\Scripts\\activate\n```\n\nThen, install PyLabRobot:\n```bash\npip install pylabrobot\n```",
+        "Create and activate a virtual environment, then install:\n```bash\npython -m venv venv\nsource venv/bin/activate\npip install pylabrobot\n```",
+        "Install using conda environment:\n```bash\nconda create -n pylabrobot python=3.8\nconda activate pylabrobot\npip install pylabrobot\n```",
+        "Set up development environment:\n```bash\ngit clone https://github.com/pylabrobot/pylabrobot.git\ncd pylabrobot\npython -m venv venv\nsource venv/bin/activate\npip install -e .\n```"
+      ],
+      "golden_answer": "First, set up your virtual environment:\n```bash\npython -m venv pylabrobot-env\nsource pylabrobot-env/bin/activate  # On Windows: pylabrobot-env\\Scripts\\activate\n```\n\nThen, install PyLabRobot:\n```bash\npip install pylabrobot\n```"
+    }
+  ]
+}

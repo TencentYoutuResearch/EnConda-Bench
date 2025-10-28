@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_8_only_E2",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect make command 'make verify' instead of 'make check' for code format verification",
+      "correction_candidates": [
+        "make check",
+        "make lint",
+        "make test",
+        "make validate"
+      ],
+      "golden_answer": "make check"
+    }
+  ]
+}

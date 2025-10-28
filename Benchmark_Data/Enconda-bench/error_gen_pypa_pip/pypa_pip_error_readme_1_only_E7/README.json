@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_pip_error_readme_1_only_E7",
+  "repo_name": "pypa_pip",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The documentation incorrectly states that pip supports Python 2.7+. Modern versions of pip require Python 3.7 or newer.",
+      "correction_candidates": [
+        "To get started with pip, make sure you have Python 3.7+ installed.",
+        "To get started with pip, make sure you have the latest Python 3 installed.",
+        "To get started with pip, make sure you have Python 3.6+ installed.",
+        "To get started with pip, make sure you have Python 2.7 or Python 3.5+ installed."
+      ],
+      "golden_answer": "To get started with pip, make sure you have Python 3.7+ installed."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "spotify_luigi_error_readme_2_only_E6",
+  "repo_name": "spotify_luigi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests running the `luigid` daemon before the installation instructions, which is a logical order error as the command won't be available yet.",
+      "correction_candidates": [
+        "Move the `luigid --port 8082` command to be after the `pip install luigi` instruction.",
+        "Change the command to `python -m luigi.server --port 8082`.",
+        "Add a note saying 'After installation, you can verify your setup by running `luigid --port 8082`.'",
+        "Remove the instruction to run `luigid` from the 'Getting Started' section."
+      ],
+      "golden_answer": "Move the `luigid --port 8082` command to be after the `pip install luigi` instruction."
+    }
+  ]
+}

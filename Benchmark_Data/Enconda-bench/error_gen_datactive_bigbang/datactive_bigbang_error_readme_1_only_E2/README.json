@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_1_only_E2",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to start Jupyter Notebook is incorrect. It tries to open the `examples/` directory as a notebook file instead of setting it as the working directory.",
+      "correction_candidates": [
+        "Replace `jupyter notebook examples/` with `jupyter-notebook --notebook-dir=examples/`.",
+        "Replace `jupyter notebook examples/` with `jupyter notebook --notebook-dir=examples/`.",
+        "Run `cd examples/` first, and then run `jupyter notebook`.",
+        "Replace `jupyter notebook examples/` with `jupyter lab examples/` to use the Jupyter Lab interface."
+      ],
+      "golden_answer": "Replace `jupyter notebook examples/` with `jupyter notebook --notebook-dir=examples/`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "online-ml_river_error_readme_5_only_E1",
+  "repo_name": "online-ml_river",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependency installation - added specific numpy and scipy versions that are not required",
+      "correction_candidates": [
+        "pip install river",
+        "pip install river --upgrade",
+        "pip install river[dev]",
+        "pip install --user river"
+      ],
+      "golden_answer": "pip install river"
+    }
+  ]
+}

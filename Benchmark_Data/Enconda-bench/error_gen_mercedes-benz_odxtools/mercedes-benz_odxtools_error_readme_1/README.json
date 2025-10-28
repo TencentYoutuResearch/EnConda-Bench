@@ -1,0 +1,29 @@
+{
+  "readme": "mercedes-benz_odxtools_error_readme_1",
+  "repo_name": "mercedes-benz_odxtools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the package via pip uses an incorrect package name 'odx-tools' instead of the correct 'odxtools'.",
+      "correction_candidates": [
+        "python3 -m pip install odxtools",
+        "pip install odxtools",
+        "python3 -m pip install odx-tool",
+        "conda install odxtools"
+      ],
+      "golden_answer": "python3 -m pip install odxtools"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for the 'list' subcommand uses an invalid parameter '-variant' instead of the correct '--variants' or '-v'.",
+      "correction_candidates": [
+        "odxtools list $BASE_DIR/odxtools/examples/somersault.pdx -v somersault_lazy --services do_forward_flips --params",
+        "odxtools list $BASE_DIR/odxtools/examples/somersault.pdx --variants somersault_lazy --services do_forward_flips --params",
+        "odxtools list $BASE_DIR/odxtools/examples/somersault.pdx --variant somersault_lazy --services do_forward_flips --params",
+        "odxtools list $BASE_DIR/odxtools/examples/somersault.pdx -variants somersault_lazy --services do_forward_flips --params"
+      ],
+      "golden_answer": "odxtools list $BASE_DIR/odxtools/examples/somersault.pdx --variants somersault_lazy --services do_forward_flips --params"
+    }
+  ]
+}

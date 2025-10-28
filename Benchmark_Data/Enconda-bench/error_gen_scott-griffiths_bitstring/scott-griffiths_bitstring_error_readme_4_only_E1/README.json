@@ -1,0 +1,18 @@
+{
+  "readme": "scott-griffiths_bitstring_error_readme_4_only_E1",
+  "repo_name": "scott-griffiths_bitstring",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Prerequisites' section suggests installing `pip` using `easy_install`, which is a deprecated package manager and not the recommended way to install or manage `pip`.",
+      "correction_candidates": [
+        "Remove the 'Prerequisites' section, as `pip` is included by default with modern Python installations.",
+        "Replace the `easy_install` command with the recommended bootstrap method: `python -m ensurepip --upgrade`.",
+        "Change the command to use `get-pip.py` script from the official source.",
+        "Update the command to `sudo easy_install pip` to ensure it has the right permissions."
+      ],
+      "golden_answer": "Remove the 'Prerequisites' section, as `pip` is included by default with modern Python installations."
+    }
+  ]
+}

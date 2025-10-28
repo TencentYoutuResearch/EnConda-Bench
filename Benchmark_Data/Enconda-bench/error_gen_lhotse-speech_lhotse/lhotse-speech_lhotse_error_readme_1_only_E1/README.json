@@ -1,0 +1,18 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_1_only_E1",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The development installation command includes a non-existent extra dependency named 'full', which will cause an error because it is not defined in setup.py.",
+      "correction_candidates": [
+        "pip install -e '.[dev, full]'",
+        "pip install -e '.[dev]'",
+        "pip install -e .",
+        "pip install -e '.[developer]'"
+      ],
+      "golden_answer": "pip install -e '.[dev]'"
+    }
+  ]
+}

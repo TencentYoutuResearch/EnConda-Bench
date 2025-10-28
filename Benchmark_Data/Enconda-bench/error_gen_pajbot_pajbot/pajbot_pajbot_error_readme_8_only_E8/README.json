@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_8_only_E8",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Critical Python version information is missing from the README, making it unclear what version is required",
+      "correction_candidates": [
+        "Add 'Current minimal supported Python version is **3.9**.' after the maintenance mode note",
+        "Add Python version requirement in the Python versioning section",
+        "Add 'Requires Python 3.9+' at the beginning of the quick install section",
+        "Add Python version compatibility note in the detailed install reference"
+      ],
+      "golden_answer": "Add 'Current minimal supported Python version is **3.9**.' after the maintenance mode note"
+    }
+  ]
+}

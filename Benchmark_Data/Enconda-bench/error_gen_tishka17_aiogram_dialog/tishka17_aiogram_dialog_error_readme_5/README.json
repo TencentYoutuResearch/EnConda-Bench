@@ -1,0 +1,29 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_5",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Installation section specifies incompatible version constraint - installing aiogram-dialog v1.9.0 which only works with aiogram v2.x, but the README states v2.x supports aiogram v3.x",
+      "correction_candidates": [
+        "pip install aiogram-dialog",
+        "pip install aiogram-dialog>=2.0.0",
+        "pip install aiogram-dialog==2.1.0",
+        "pip install aiogram-dialog~=2.0"
+      ],
+      "golden_answer": "pip install aiogram-dialog>=2.0.0"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Installation section incorrectly states the package is only compatible with aiogram v2.x when the version status clearly indicates v2.x supports aiogram v3.x",
+      "correction_candidates": [
+        "Note that this package requires Python 3.8+ and is compatible with aiogram v3.x.",
+        "Note that this package requires Python 3.7+ and is compatible with aiogram v2.x and v3.x.",
+        "Note that this package requires Python 3.9+ and is only compatible with aiogram v3.x.",
+        "Note that this package requires Python 3.8+ and works with both aiogram v2.x and v3.x depending on the aiogram-dialog version."
+      ],
+      "golden_answer": "Note that this package requires Python 3.8+ and is compatible with aiogram v3.x."
+    }
+  ]
+}

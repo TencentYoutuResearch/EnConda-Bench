@@ -1,0 +1,18 @@
+{
+  "readme": "ecds_readux_error_readme_6_only_E7",
+  "repo_name": "ecds_readux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifying Python 2.7 as a requirement when the project uses Python 3 features",
+      "correction_candidates": [
+        "Change Python 2.7 to Python 3.8+",
+        "Change Python 2.7 to Python 3.6 or higher",
+        "Change Python 2.7 to Python 3",
+        "Change Python 2.7 to Python 3.9+"
+      ],
+      "golden_answer": "Change Python 2.7 to Python 3"
+    }
+  ]
+}

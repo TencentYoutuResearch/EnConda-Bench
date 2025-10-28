@@ -1,0 +1,18 @@
+{
+  "readme": "wind-python_windpowerlib_error_readme_4_only_E2",
+  "repo_name": "wind-python_windpowerlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Use internal data' subsection, the python code snippet to update local turbine data from the OEDB is missing the parentheses '()' to call the function 'store_turbine_data_from_oedb', which will result in the function not being executed.",
+      "correction_candidates": [
+        "store_turbine_data_from_oedb.run()",
+        "store_turbine_data_from_oedb()",
+        "execute(store_turbine_data_from_oedb)",
+        "call store_turbine_data_from_oedb"
+      ],
+      "golden_answer": "store_turbine_data_from_oedb()"
+    }
+  ]
+}

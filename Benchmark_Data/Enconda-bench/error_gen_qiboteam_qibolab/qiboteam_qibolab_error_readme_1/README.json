@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibolab_error_readme_1",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to create and activate a virtual environment is syntactically incorrect because the '--activate' flag is not a valid argument for 'venv'.",
+      "correction_candidates": [
+        "python3 -m venv venv && source venv/bin/activate",
+        "python3 -m venv venv; activate",
+        "virtualenv venv && source venv/bin/activate",
+        "python3 -m venv venv/activate"
+      ],
+      "golden_answer": "python3 -m venv venv && source venv/bin/activate"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are incomplete; they omit the 'qibo' library, which is a core dependency required to run the provided examples.",
+      "correction_candidates": [
+        "pip install qibolab qibo",
+        "pip install qibolab; pip install qibo",
+        "pip install qibolab[qibo]",
+        "pip install qibolab-base qibo"
+      ],
+      "golden_answer": "pip install qibolab qibo"
+    }
+  ]
+}

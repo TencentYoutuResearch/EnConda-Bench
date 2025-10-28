@@ -1,0 +1,18 @@
+{
+  "readme": "microsoft_torchgeo_error_readme_2_only_E6",
+  "repo_name": "microsoft_torchgeo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have the steps in the wrong logical order. It tells the user to install torchgeo first, and then upgrade pip. The correct order is to ensure build tools like pip are up-to-date before installing packages.",
+      "correction_candidates": [
+        "The commands should be run in the opposite order: first upgrade pip, then install torchgeo.",
+        "Remove the pip upgrade command as it's not always necessary.",
+        "Add `python -m venv .venv` before the installation commands.",
+        "Change `$ python -m pip install --upgrade pip` to `pip install --upgrade pip`."
+      ],
+      "golden_answer": "The commands should be run in the opposite order: first upgrade pip, then install torchgeo."
+    }
+  ]
+}

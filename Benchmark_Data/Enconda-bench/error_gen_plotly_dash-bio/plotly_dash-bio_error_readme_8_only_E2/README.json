@@ -1,0 +1,18 @@
+{
+  "readme": "plotly_dash-bio_error_readme_8_only_E2",
+  "repo_name": "plotly_dash-bio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Mixing conda and pip commands inconsistently - using conda install for some packages but pip install for others in the same environment setup.",
+      "correction_candidates": [
+        "Use pip install consistently for all package installations",
+        "Use conda install for all packages including jupyterlab and ipywidgets",
+        "Add a note explaining when to use conda vs pip in mixed environments",
+        "Separate the instructions into two different environment setup approaches"
+      ],
+      "golden_answer": "Use pip install consistently for all package installations"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_3",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command is missing the target directory '.', which is required to specify that the package in the current directory should be installed in editable mode.",
+      "correction_candidates": [
+        "pip install --editable .",
+        "pip install -e .",
+        "pip install --editable portingdb",
+        "python setup.py develop"
+      ],
+      "golden_answer": "pip install --editable ."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instructions for freezing the static website are missing the `export PYTHONPATH=.` command. This step is critical for the script to find its local modules, and its absence can cause `ModuleNotFoundError`.",
+      "correction_candidates": [
+        "Add `export PYTHONPATH=.` before running the `elsasite.py freeze` command.",
+        "Run `PYTHONPATH=. python elsasite.py freeze`.",
+        "The `elsasite.py` script should be run from the project root directory after setting the PYTHONPATH.",
+        "Modify `sys.path` within `elsasite.py` to include the project root."
+      ],
+      "golden_answer": "Add `export PYTHONPATH=.` before running the `elsasite.py freeze` command."
+    }
+  ]
+}

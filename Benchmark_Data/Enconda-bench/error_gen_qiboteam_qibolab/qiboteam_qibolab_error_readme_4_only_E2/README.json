@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibolab_error_readme_4_only_E2",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `platform.execute_pulse_sequence` function is called with an incorrect keyword argument `nshots=1000`. The function signature expects an `ExecutionParameters` object, not individual keyword arguments.",
+      "correction_candidates": [
+        "The function call should be `platform.execute_pulse_sequence(sequence, options)` where `options` is an `ExecutionParameters` object.",
+        "The function call should be `platform.execute_pulse_sequence(sequence, options={'nshots': 1000})`.",
+        "The function call should be `platform.run_pulse_sequence(sequence, nshots=1000)`.",
+        "The keyword argument should be `shots` instead of `nshots`."
+      ],
+      "golden_answer": "The function call should be `platform.execute_pulse_sequence(sequence, options)` where `options` is an `ExecutionParameters` object."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_5_only_E4",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Configuration filename mismatch between example and usage instruction",
+      "correction_candidates": [
+        "Saved as `test.conf`, this configuration could be executed with ReBench as follows:",
+        "Saved as `example.conf`, this configuration could be executed with ReBench as follows:",
+        "Saved as `config.yaml`, this configuration could be executed with ReBench as follows:",
+        "Saved as `rebench.conf`, this configuration could be executed with ReBench as follows:"
+      ],
+      "golden_answer": "Saved as `test.conf`, this configuration could be executed with ReBench as follows:"
+    }
+  ]
+}

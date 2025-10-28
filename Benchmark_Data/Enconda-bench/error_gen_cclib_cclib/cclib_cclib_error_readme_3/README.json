@@ -1,0 +1,29 @@
+{
+  "readme": "cclib_cclib_error_readme_3",
+  "repo_name": "cclib_cclib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command references a non-existent package `cclib-parser` instead of the correct package name `cclib`.",
+      "correction_candidates": [
+        "The package name is case-sensitive, use `pip install CCLIB`.",
+        "You need to specify the version: `pip install cclib-parser==1.8.1`.",
+        "First add a new pip index: `pip config set global.index-url https://cclib.github.io/pypi/` then install.",
+        "The correct package name is `cclib`, so use `pip install cclib`."
+      ],
+      "golden_answer": "The correct package name is `cclib`, so use `pip install cclib`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a `requirements.txt` file at the root of the repository, but this file does not exist, leading to a file not found error.",
+      "correction_candidates": [
+        "The dependencies are listed in `setup.py`; install the package directly with `pip install .` instead.",
+        "Create an empty `requirements.txt` file before running the command.",
+        "The file is located in a different directory: `pip install -r dev/requirements.txt`",
+        "Download the `requirements.txt` file from the project's website first."
+      ],
+      "golden_answer": "The dependencies are listed in `setup.py`; install the package directly with `pip install .` instead."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_5_only_E2",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect package manager specified - using conda instead of pip to install ReBench",
+      "correction_candidates": [
+        "pip install rebench",
+        "python -m pip install rebench",
+        "pip3 install rebench",
+        "easy_install rebench"
+      ],
+      "golden_answer": "pip install rebench"
+    }
+  ]
+}

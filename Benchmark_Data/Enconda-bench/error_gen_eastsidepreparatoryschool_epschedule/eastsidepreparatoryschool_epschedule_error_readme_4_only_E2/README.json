@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_4_only_E2",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install dependencies refers to a non-existent file named `deps.txt` instead of the correct `requirements.txt` file.",
+      "correction_candidates": [
+        "Rename the `requirements.txt` file to `deps.txt`.",
+        "Change the command to `pip install -f deps.txt`.",
+        "Create a new file `deps.txt` with the contents of `requirements.txt`.",
+        "Change the command to `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    }
+  ]
+}

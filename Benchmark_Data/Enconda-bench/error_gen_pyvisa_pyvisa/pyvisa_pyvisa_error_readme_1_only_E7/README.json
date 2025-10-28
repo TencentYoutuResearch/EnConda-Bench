@@ -1,0 +1,18 @@
+{
+  "readme": "pyvisa_pyvisa_error_readme_1_only_E7",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.7 is the tested version, while the package requires Python 3.6 or newer.",
+      "correction_candidates": [
+        "Python (tested with 3.6+)",
+        "Python (compatible with 3.x)",
+        "Python (requires >=3.6)",
+        "Python (latest version recommended)"
+      ],
+      "golden_answer": "Python (tested with 3.6+)"
+    }
+  ]
+}

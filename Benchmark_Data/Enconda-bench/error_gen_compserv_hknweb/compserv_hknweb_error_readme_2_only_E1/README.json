@@ -1,0 +1,18 @@
+{
+  "readme": "compserv_hknweb_error_readme_2_only_E1",
+  "repo_name": "compserv_hknweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install -r requirements.txt` is incorrect for a Poetry project, which does not use a `requirements.txt` file by default. Dependencies are managed by `pyproject.toml` and should be installed with `poetry install`.",
+      "correction_candidates": [
+        "Replace `pip install -r requirements.txt` with `poetry install`.",
+        "First, generate a `requirements.txt` file with `poetry export -f requirements.txt --output requirements.txt`, then run `pip install -r requirements.txt`.",
+        "Replace `pip install -r requirements.txt` with `pip install poetry`.",
+        "Replace `pip install -r requirements.txt` with `poetry update`."
+      ],
+      "golden_answer": "Replace `pip install -r requirements.txt` with `poetry install`."
+    }
+  ]
+}

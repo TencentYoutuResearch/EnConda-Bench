@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_6_only_E2",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect Django management command syntax with invalid settings parameter format",
+      "correction_candidates": [
+        "To get started with NetBox, clone the repository and run `python manage.py runserver` to start the development server.",
+        "To get started with NetBox, clone the repository and run `./manage.py runserver --settings netbox.settings.development` to start the development server.",
+        "To get started with NetBox, clone the repository and run `python manage.py runserver` with the appropriate settings configuration to start the development server.",
+        "To get started with NetBox, clone the repository and run `python netbox/manage.py runserver` to start the development server."
+      ],
+      "golden_answer": "To get started with NetBox, clone the repository and run `python manage.py runserver` to start the development server."
+    }
+  ]
+}

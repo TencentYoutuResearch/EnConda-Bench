@@ -1,0 +1,29 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_3",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The suggested fix for Jupyter notebook buffering issues uses a non-existent method `sys.stdout.reflush()`, which will cause an AttributeError.",
+      "correction_candidates": [
+        "import sys; sys.stdout.flush()",
+        "import progressbar; progressbar.streams.flush()",
+        "import sys; sys.stdout.sync()",
+        "import os; os.fsync(sys.stdout.fileno())"
+      ],
+      "golden_answer": "import sys; sys.stdout.flush()"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Context wrapper' code example, the `bar.update()` method is called without an argument, which will raise a TypeError because it expects the current progress value.",
+      "correction_candidates": [
+        "bar.update(i + 1)",
+        "bar.update(value=i)",
+        "bar.increment()",
+        "bar.update(i)"
+      ],
+      "golden_answer": "bar.update(i)"
+    }
+  ]
+}

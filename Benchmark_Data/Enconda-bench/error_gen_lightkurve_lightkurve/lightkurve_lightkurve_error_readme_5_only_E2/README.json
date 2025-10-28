@@ -1,0 +1,18 @@
+{
+  "readme": "lightkurve_lightkurve_error_readme_5_only_E2",
+  "repo_name": "lightkurve_lightkurve",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Wrong pip install command used instead of poetry install for editable install",
+      "correction_candidates": [
+        "poetry install",
+        "python -m pip install -e .",
+        "pip install -e .",
+        "python setup.py develop"
+      ],
+      "golden_answer": "poetry install"
+    }
+  ]
+}

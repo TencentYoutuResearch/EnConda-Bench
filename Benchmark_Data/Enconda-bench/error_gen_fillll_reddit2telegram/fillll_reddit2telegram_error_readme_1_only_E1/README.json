@@ -1,0 +1,18 @@
+{
+  "readme": "fillll_reddit2telegram_error_readme_1_only_E1",
+  "repo_name": "fillll_reddit2telegram",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install Python packages is incorrect. `pip install requirements.txt` attempts to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "pip install from requirements.txt",
+        "pip install -r requirements.txt",
+        "pip install --file requirements.txt",
+        "python -m pip install requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

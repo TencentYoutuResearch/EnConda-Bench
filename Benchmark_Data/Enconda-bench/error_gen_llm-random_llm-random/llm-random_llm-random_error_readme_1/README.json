@@ -1,0 +1,29 @@
+{
+  "readme": "llm-random_llm-random_error_readme_1",
+  "repo_name": "llm-random_llm-random",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests that `./start-dev.sh` installs requirements before creating the virtual environment, which is the wrong logical order.",
+      "correction_candidates": [
+        "This will set up git hooks, create a virtual environment, and then install requirements.",
+        "Run `pip install -r requirements.txt` first, then run `./start-dev.sh`.",
+        "This will install system-wide requirements and then create a local virtual environment.",
+        "This will create a virtual environment, install requirements and set up git hooks."
+      ],
+      "golden_answer": "This will create a virtual environment, install requirements and set up git hooks."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for running an experiment locally includes an incorrect flag `--config` which is not recognized by the script.",
+      "correction_candidates": [
+        "python lizrd.grid path/to/config",
+        "python -m lizrd.grid -c path/to/config",
+        "python -m lizrd.grid path/to/config",
+        "./lizrd.grid --config path/to/config"
+      ],
+      "golden_answer": "python -m lizrd.grid path/to/config"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "learning-and-intelligent-systems_predicators_error_readme_2_only_E2",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install .` is used instead of `pip install -e .`. This prevents local code changes from being reflected in the installed package, which is problematic for a development workflow.",
+      "correction_candidates": [
+        "Change the command to `pip install -e .`.",
+        "Change the command to `python setup.py install`.",
+        "Change the command to `pip install --no-deps .`.",
+        "Add a note saying 'After making code changes, you must reinstall the package.'"
+      ],
+      "golden_answer": "Change the command to `pip install -e .`."
+    }
+  ]
+}

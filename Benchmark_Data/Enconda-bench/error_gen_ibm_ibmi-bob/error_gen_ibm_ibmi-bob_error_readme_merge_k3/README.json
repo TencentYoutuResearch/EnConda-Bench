@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_ibm_ibmi-bob_error_readme_merge_k3",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `bob build` is incorrect for invoking the build process, as the project uses GNU Make.",
+      "correction_candidates": [
+        "Run `make` in the project root to start the build.",
+        "Run `gobob` to start the build.",
+        "Run `build.sh` to start the build.",
+        "Run `bob --build all` to start the build."
+      ],
+      "golden_answer": "Run `make` in the project root to start the build."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that build settings are configured in a `build.config.json` file, but the project uses standard makefiles for configuration.",
+      "correction_candidates": [
+        "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`.",
+        "Configure your build settings in `iproj.json`.",
+        "Configure your build settings in `bob.properties`.",
+        "Run the `configure` script to generate build files."
+      ],
+      "golden_answer": "Object dependencies are specified using standard makefile syntax in a file named `makefile` or `Makefile`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "References a non-existent pip package 'bob-dependencies' that doesn't exist",
+      "correction_candidates": [
+        "Remove the pip install command entirely as Bob doesn't require Python dependencies",
+        "Change to 'pip install ibmi-bob' to install the correct package",
+        "Replace with 'npm install bob-dependencies' for Node.js installation",
+        "Use 'conda install bob-dependencies' instead of pip"
+      ],
+      "golden_answer": "Remove the pip install command entirely as Bob doesn't require Python dependencies"
+    }
+  ]
+}

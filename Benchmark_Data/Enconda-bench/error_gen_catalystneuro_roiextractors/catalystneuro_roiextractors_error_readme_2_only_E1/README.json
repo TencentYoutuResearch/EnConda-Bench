@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_2_only_E1",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install numpy scipy` is unnecessary and potentially harmful, as these dependencies are already managed by the conda environment file, which could lead to version conflicts.",
+      "correction_candidates": [
+        "Remove the line `pip install numpy scipy`.",
+        "Change the line to `pip install --upgrade numpy scipy` to ensure the latest versions are used.",
+        "Comment out the line with a note: `# pip install numpy scipy if needed`.",
+        "Move the `pip install numpy scipy` command to before the `conda env create` command."
+      ],
+      "golden_answer": "Remove the line `pip install numpy scipy`."
+    }
+  ]
+}

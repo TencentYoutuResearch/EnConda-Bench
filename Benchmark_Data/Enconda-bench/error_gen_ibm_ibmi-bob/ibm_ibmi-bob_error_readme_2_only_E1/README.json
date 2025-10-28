@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_2_only_E1",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `sudo apt-get install make` is for Debian-based Linux systems and is not the correct way to ensure GNU Make is available on IBM i, which typically uses `yum` for package management.",
+      "correction_candidates": [
+        "On IBM i, install GNU Make by running `yum install gmake`.",
+        "On IBM i, install GNU Make by running `install-gmake`.",
+        "On IBM i, install GNU Make by running `apt-get install gmake`.",
+        "GNU Make is pre-installed on all IBM i systems."
+      ],
+      "golden_answer": "On IBM i, install GNU Make by running `yum install gmake`."
+    }
+  ]
+}

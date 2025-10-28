@@ -1,0 +1,18 @@
+{
+  "readme": "pydmd_pydmd_error_readme_2_only_E6",
+  "repo_name": "pydmd_pydmd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps for installing from source are in the wrong order. The user is instructed to run `pip install -e .` before cloning the repository, which will fail because the source code is not yet present.",
+      "correction_candidates": [
+        "First, clone the repository with `git clone https://github.com/PyDMD/PyDMD`, then install the package with `pip install -e .`.",
+        "First, install the package with `pip install pydmd`, then clone the repository with `git clone https://github.com/PyDMD/PyDMD`.",
+        "First, download the source as a ZIP file, then run `pip install PyDMD-master.zip`.",
+        "First, clone the repository with `git clone https://github.com/PyDMD/PyDMD` and then run `python setup.py install`."
+      ],
+      "golden_answer": "First, clone the repository with `git clone https://github.com/PyDMD/PyDMD`, then install the package with `pip install -e .`."
+    }
+  ]
+}

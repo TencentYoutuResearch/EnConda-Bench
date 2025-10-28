@@ -1,0 +1,29 @@
+{
+  "readme": "roshan-research_hazm_error_readme_2",
+  "repo_name": "roshan-research_hazm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `Installation` section incorrectly states that the library is only compatible with Python 2.7, which is outdated and contradicts the PyPI badge showing compatibility with modern Python versions (e.g., 3.8, 3.9, 3.10).",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Hazm is compatible with Python 2.7 only.'",
+        "Change the sentence to 'Note: Hazm requires Python 3.7 or newer.'",
+        "Change the sentence to 'Note: Hazm is not compatible with Python 2.'",
+        "Replace the sentence with a link to the PyPI page for version information."
+      ],
+      "golden_answer": "Remove the sentence 'Note: Hazm is compatible with Python 2.7 only.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The usage example for `POSTagger` specifies an incorrect model filename (`postagger.model` instead of `pos_tagger.model`), which will lead to a `FileNotFoundError` if the user follows the official model download links.",
+      "correction_candidates": [
+        "Change `model='postagger.model'` to `model='pos_tagger.model'`.",
+        "Change `model='postagger.model'` to `model_path='pos_tagger.model'`.",
+        "Change `model='postagger.model'` to point to the full path, e.g., `model='./models/pos_tagger.model'`.",
+        "Remove the `model` argument to use the default model: `tagger = POSTagger()`."
+      ],
+      "golden_answer": "Change `model='postagger.model'` to `model='pos_tagger.model'`."
+    }
+  ]
+}

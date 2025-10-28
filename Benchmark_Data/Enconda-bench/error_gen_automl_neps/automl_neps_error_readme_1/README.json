@@ -1,0 +1,29 @@
+{
+  "readme": "automl_neps_error_readme_1",
+  "repo_name": "automl_neps",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that 'NePS requires Python 3.6 or higher', while the library's dependencies and syntax require Python 3.8 or higher.",
+      "correction_candidates": [
+        "NePS requires Python 3.6 or higher.",
+        "NePS requires Python 3.7 or higher.",
+        "NePS requires Python 3.8 or higher.",
+        "NePS requires any version of Python 3."
+      ],
+      "golden_answer": "NePS requires Python 3.8 or higher."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `neps.run` function call, the parameter `max_evaluations=100` is used, but the correct parameter name is `max_evaluations_total`.",
+      "correction_candidates": [
+        "evaluations=100",
+        "max_evaluations_total=100",
+        "max_total_evaluations=100",
+        "num_evaluations=100"
+      ],
+      "golden_answer": "max_evaluations_total=100"
+    }
+  ]
+}

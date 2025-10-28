@@ -1,0 +1,29 @@
+{
+  "readme": "sphinx-contrib_spelling_error_readme_3",
+  "repo_name": "sphinx-contrib_spelling",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise installing the package with pip before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "You should activate the virtual environment before running `pip install`.",
+        "The correct order is: `python -m venv .venv`, then `source .venv/bin/activate`, then `pip install sphinxcontrib-spelling`.",
+        "The `pip install` command should be run after creating the virtual environment with `venv`.",
+        "The correct order is: 1. Create venv, 2. Activate venv, 3. Install package."
+      ],
+      "golden_answer": "The correct order is: `python -m venv .venv`, then `source .venv/bin/activate`, then `pip install sphinxcontrib-spelling`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions specify an incorrect package name 'py-enchant' for a dependency; the correct name is 'pyenchant'.",
+      "correction_candidates": [
+        "To install the dependency, run `pip install pyenchant`.",
+        "The package name is incorrect; it should be `pyenchant`, not `py-enchant`.",
+        "The dependency is automatically installed, but if manual installation is needed, the command is `pip install pyenchant`.",
+        "The correct dependency package name is `pyenchant`."
+      ],
+      "golden_answer": "To install the dependency, run `pip install pyenchant`."
+    }
+  ]
+}

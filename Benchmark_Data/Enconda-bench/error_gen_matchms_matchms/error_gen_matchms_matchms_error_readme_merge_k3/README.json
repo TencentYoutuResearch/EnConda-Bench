@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_matchms_matchms_error_readme_merge_k3",
+  "repo_name": "matchms_matchms",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The commands to create and activate the conda environment are in the wrong logical order. The environment must be created before it can be activated.",
+      "correction_candidates": [
+        "conda create --name matchms-dev python=3.8 && conda activate matchms-dev",
+        "conda create --name matchms-dev python=3.8, then on a new line `conda activate matchms-dev`",
+        "conda init && conda create --name matchms-dev python=3.8 && conda activate matchms-dev",
+        "conda create --name matchms-dev python=3.8 -y; conda activate matchms-dev"
+      ],
+      "golden_answer": "conda create --name matchms-dev python=3.8, then on a new line `conda activate matchms-dev`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The developer installation instructions omit the 'conda install rdkit' step, which is a critical dependency that should be installed via conda before other packages are installed with pip.",
+      "correction_candidates": [
+        "pip install --editable .[dev,rdkit]",
+        "pip install rdkit && pip install --editable .[dev]",
+        "Add the line `conda install -c conda-forge rdkit` before the `pip install` command.",
+        "Add the line `conda install rdkit` after creating the environment."
+      ],
+      "golden_answer": "Add the line `conda install -c conda-forge rdkit` before the `pip install` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided in the example code, 'data/pesticides.mgf', is incorrect. The actual path to the test data file is 'tests/testdata/pesticides.mgf'.",
+      "correction_candidates": [
+        "pipeline.run(\"./tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"../tests/testdata/pesticides.mgf\")",
+        "pipeline.run(\"pesticides.mgf\")"
+      ],
+      "golden_answer": "pipeline.run(\"tests/testdata/pesticides.mgf\")"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the linter is 'prospector .', which is an incorrect usage. The correct command is simply 'prospector'.",
+      "correction_candidates": [
+        "run prospector",
+        "prospector",
+        "prospector --profile .prospector.yaml",
+        "lint prospector"
+      ],
+      "golden_answer": "prospector"
+    }
+  ]
+}

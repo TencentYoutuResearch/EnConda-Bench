@@ -1,0 +1,18 @@
+{
+  "readme": "vertica_verticapy_error_readme_2_only_E1",
+  "repo_name": "vertica_verticapy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip3 install verticapy` is missing the `[all]` extra, which is necessary to install optional dependencies for features like plotting, which are highlighted in the README. This leads to an incomplete installation.",
+      "correction_candidates": [
+        "Change the command to `pip3 install verticapy[all]` to include all optional dependencies.",
+        "Add a note explaining that `pip3 install verticapy` provides a minimal installation and features like plotting require extra packages.",
+        "Change the command to `pip3 install verticapy --full`.",
+        "Change the command to `pip3 install verticapy-full`."
+      ],
+      "golden_answer": "Change the command to `pip3 install verticapy[all]` to include all optional dependencies."
+    }
+  ]
+}

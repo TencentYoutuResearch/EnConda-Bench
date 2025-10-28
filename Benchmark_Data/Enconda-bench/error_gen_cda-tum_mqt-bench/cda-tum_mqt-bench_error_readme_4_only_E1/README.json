@@ -1,0 +1,18 @@
+{
+  "readme": "cda-tum_mqt-bench_error_readme_4_only_E1",
+  "repo_name": "cda-tum_mqt-bench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily require the user to install `qiskit` before installing `mqt.bench`, adding a dependency that is not needed for the core functionality shown.",
+      "correction_candidates": [
+        "The two packages should be installed in a single command: `pip install qiskit mqt.bench`.",
+        "A specific version of `qiskit` should be installed: `pip install qiskit==0.45.0`.",
+        "`qiskit` is not a required dependency for the base package, so the instruction `(venv) $ pip install qiskit` and the preceding sentence should be removed.",
+        "The order is wrong; `mqt.bench` should be installed before `qiskit`."
+      ],
+      "golden_answer": "`qiskit` is not a required dependency for the base package, so the instruction `(venv) $ pip install qiskit` and the preceding sentence should be removed."
+    }
+  ]
+}

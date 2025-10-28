@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_zostera_django-bootstrap5_error_readme_merge_k4",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Requirements' section specifies outdated and unsupported versions of Django (2.2) and Python (3.6).",
+      "correction_candidates": [
+        "The requirements should be updated to Django 4.0 and Python 3.10.",
+        "The requirements should be removed as pip handles dependencies automatically.",
+        "The package is compatible with any version of Django above 2.0.",
+        "The requirements should state that the package requires a combination of Python and Django that is currently supported, as listed on the official Django project website."
+      ],
+      "golden_answer": "The requirements should state that the package requires a combination of Python and Django that is currently supported, as listed on the official Django project website."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include an unnecessary step to install the `bootstrap` package via pip, which is not required as `django-bootstrap5` manages Bootstrap assets itself.",
+      "correction_candidates": [
+        "Remove the `pip install bootstrap` command from the installation instructions.",
+        "The `bootstrap` package should be installed using `npm` not `pip`.",
+        "Change `pip install bootstrap` to `pip install bootstrap==5.1.3`.",
+        "Move the `pip install bootstrap` step to before `pip install django-bootstrap5`."
+      ],
+      "golden_answer": "Remove the `pip install bootstrap` command from the installation instructions."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to a non-existent directory `example_app` for the example application, when the correct directory is `example`.",
+      "correction_candidates": [
+        "The `example_app` folder must be created manually by the user.",
+        "Change the directory name from `example_app` to `example`.",
+        "Rename the `example` folder to `example_app` to match the documentation.",
+        "The example app is located in the `docs/source/example` folder."
+      ],
+      "golden_answer": "Change the directory name from `example_app` to `example`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the example app is incorrect. It suggests using `python example/manage.py runserver`, which may fail without the prerequisite setup steps handled by the correct `make example` command.",
+      "correction_candidates": [
+        "The command should be `cd example && python manage.py runserver`.",
+        "Before running `runserver`, you must first run `python example/manage.py migrate`.",
+        "The correct command to run the example is `make example`.",
+        "The command should be `django-admin runserver --settings=example.settings`."
+      ],
+      "golden_answer": "The correct command to run the example is `make example`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary bootstrap5-css dependency in pip install command",
+      "correction_candidates": [
+        "pip install django-bootstrap5",
+        "pip install django-bootstrap5 django",
+        "pip install django-bootstrap5 --upgrade",
+        "pip install django-bootstrap5 bootstrap"
+      ],
+      "golden_answer": "pip install django-bootstrap5"
+    }
+  ]
+}

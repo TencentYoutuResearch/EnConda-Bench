@@ -1,0 +1,18 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_8_only_E7",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned the main installation to a specific outdated version (0.4.0) which may cause compatibility issues",
+      "correction_candidates": [
+        "pip install guardrails-ai",
+        "pip install guardrails-ai --upgrade",
+        "pip install guardrails-ai>=1.0.0",
+        "pip install --pre guardrails-ai"
+      ],
+      "golden_answer": "pip install guardrails-ai"
+    }
+  ]
+}

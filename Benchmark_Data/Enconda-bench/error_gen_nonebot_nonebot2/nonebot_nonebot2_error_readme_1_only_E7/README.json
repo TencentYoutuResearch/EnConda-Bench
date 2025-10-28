@@ -1,0 +1,18 @@
+{
+  "readme": "nonebot_nonebot2_error_readme_1_only_E7",
+  "repo_name": "nonebot_nonebot2",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command `python3.8 -m pip install --user pipx` suggests using Python 3.8, but the project requires Python 3.9+ as indicated by the badge, which can lead to compatibility issues.",
+      "correction_candidates": [
+        "The project requires Python 3.9 or newer; use `python3.9 -m pip install --user pipx` or a later version.",
+        "The command should be `python -m pip install pipx` to install it globally.",
+        "The badge is incorrect; Python 3.8 is supported.",
+        "Use `pipx install pipx` instead."
+      ],
+      "golden_answer": "The project requires Python 3.9 or newer; use `python3.9 -m pip install --user pipx` or a later version."
+    }
+  ]
+}

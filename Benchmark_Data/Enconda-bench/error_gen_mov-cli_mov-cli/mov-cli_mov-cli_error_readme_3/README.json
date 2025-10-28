@@ -1,0 +1,29 @@
+{
+  "readme": "mov-cli_mov-cli_error_readme_3",
+  "repo_name": "mov-cli_mov-cli",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `mov-cli --query youtube blender studio` is incorrect. The flag for searching is `-s` or `--scraper`, not `--query`.",
+      "correction_candidates": [
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli -s youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli --search youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli -q youtube blender studio`.",
+        "Replace `mov-cli --query youtube blender studio` with `mov-cli search --scraper youtube blender studio`."
+      ],
+      "golden_answer": "Replace `mov-cli --query youtube blender studio` with `mov-cli -s youtube blender studio`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The markdown link reference for the license file points to `./LICENSE.md`, but the file in the repository is named `LICENSE`.",
+      "correction_candidates": [
+        "Change `[license-url]: ./LICENSE.md` to `[license-url]: ./LICENSE`.",
+        "Rename the `LICENSE` file in the repository to `LICENSE.md`.",
+        "Change `[license-url]: ./LICENSE.md` to point to the full GitHub URL of the license file.",
+        "Remove the `.md` extension from all file links in the README."
+      ],
+      "golden_answer": "Change `[license-url]: ./LICENSE.md` to `[license-url]: ./LICENSE`."
+    }
+  ]
+}

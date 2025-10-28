@@ -1,0 +1,29 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_8",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed datadir path to absolute path /home/user/data which may not exist for users",
+      "correction_candidates": [
+        "python -m portingdb --datadir data/ check-drops",
+        "python -m portingdb --datadir ./data check-drops",
+        "python -m portingdb --datadir ../data check-drops",
+        "python -m portingdb --datadir ~/portingdb/data check-drops"
+      ],
+      "golden_answer": "python -m portingdb --datadir data/ check-drops"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Changed elsasite.py to main.py which is incorrect filename",
+      "correction_candidates": [
+        "python elsasite.py freeze",
+        "python app.py freeze",
+        "python server.py freeze",
+        "python freeze.py"
+      ],
+      "golden_answer": "python elsasite.py freeze"
+    }
+  ]
+}

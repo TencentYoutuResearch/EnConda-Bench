@@ -1,0 +1,29 @@
+{
+  "readme": "gazzolalab_miv-os_error_readme_2",
+  "repo_name": "gazzolalab_miv-os",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily ask the user to manually install `numpy`. `numpy` is a dependency of MiV-OS and will be installed automatically by pip.",
+      "correction_candidates": [
+        "Remove the line `$ pip install numpy`.",
+        "Add `scipy` to the manual installation: `$ pip install numpy scipy`.",
+        "Move the `$ pip install numpy` command after `$ pip install MiV-OS`.",
+        "Specify a version for numpy: `$ pip install numpy==1.21.0`."
+      ],
+      "golden_answer": "Remove the line `$ pip install numpy`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contribution guideline points to `docs/CONTRIBUTING.md`, but the file is located in the root directory of the repository.",
+      "correction_candidates": [
+        "Change the link path to `CONTRIBUTING.md`.",
+        "Change the link path to `../CONTRIBUTING.md`.",
+        "Change the link path to `/.github/CONTRIBUTING.md`.",
+        "Change the link path to the full GitHub URL for the file."
+      ],
+      "golden_answer": "Change the link path to `CONTRIBUTING.md`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cltk_cltk_error_readme_5_only_E1",
+  "repo_name": "cltk_cltk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation command specifies unnecessary and potentially conflicting dependency versions that are not required for CLTK",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip install cltk --upgrade",
+        "$ pip install cltk[all]",
+        "$ conda install -c conda-forge cltk"
+      ],
+      "golden_answer": "$ pip install cltk"
+    }
+  ]
+}

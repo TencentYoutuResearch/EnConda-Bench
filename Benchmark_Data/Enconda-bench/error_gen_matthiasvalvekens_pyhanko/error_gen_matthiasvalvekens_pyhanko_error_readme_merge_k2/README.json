@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_matthiasvalvekens_pyhanko_error_readme_merge_k2",
+  "repo_name": "matthiasvalvekens_pyhanko",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to get help is `pyhanko help`, which is incorrect for a `click`-based CLI. The correct command is `pyhanko --help`.",
+      "correction_candidates": [
+        "Built-in help: run `pyhanko -h` to get started",
+        "Built-in help: run `pyhanko help` to get started",
+        "Built-in help: run `pyhanko --usage` to get started",
+        "Built-in help: run `pyhanko --help` to get started"
+      ],
+      "golden_answer": "Built-in help: run `pyhanko --help` to get started"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command is missing the `pkcs11` extra dependency. Although the command that follows it mentions PKCS#11 support, users who copy the command will not install the necessary packages for that feature.",
+      "correction_candidates": [
+        "pip install 'pyHanko[full]'",
+        "pip install 'pyHanko[pkcs11,image-support,opentype,xmp]'",
+        "pip install pyHanko --install-option=\"--with-pkcs11\"",
+        "pip install 'pyHanko' && pip install pyhanko-pkcs11"
+      ],
+      "golden_answer": "pip install 'pyHanko[pkcs11,image-support,opentype,xmp]'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contribution guidelines points to a non-existent file 'docs/CONTRIBUTING.md' instead of the correct 'CONTRIBUTING.md' in the root directory, resulting in a broken link.",
+      "correction_candidates": [
+        "please make sure to review the [contribution guidelines](CONTRIBUTING.md) before making your contribution.",
+        "please make sure to review the [contribution guidelines](.github/CONTRIBUTING.md) before making your contribution.",
+        "please make sure to review the [contribution guidelines](docs/contributing.md) before making your contribution.",
+        "please make sure to review the [contribution guidelines](CONTRIBUTING) before making your contribution."
+      ],
+      "golden_answer": "please make sure to review the [contribution guidelines](CONTRIBUTING.md) before making your contribution."
+    }
+  ]
+}

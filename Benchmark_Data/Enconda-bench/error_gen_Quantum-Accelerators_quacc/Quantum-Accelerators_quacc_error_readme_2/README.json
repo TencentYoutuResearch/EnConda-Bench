@@ -1,0 +1,29 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_2",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that `quacc` is only compatible with Python 3.7, which contradicts the PyPI badge indicating support for newer Python versions and may mislead users into using an outdated environment.",
+      "correction_candidates": [
+        "Remove the note. The Python version badge correctly indicates compatibility.",
+        "Change the note to: `quacc` requires Python 3.8 or newer.",
+        "Update the Python version badge to only show 3.7.",
+        "Change the note to: `quacc` is tested on Python 3.7, 3.8, 3.9, 3.10, and 3.11."
+      ],
+      "golden_answer": "Remove the note. The Python version badge correctly indicates compatibility."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect package name for installation. It suggests `pip install quacc-core`, but the correct package on PyPI is `quacc`.",
+      "correction_candidates": [
+        "The correct command is `pip install quacc`.",
+        "The correct command is `conda install -c conda-forge quacc`.",
+        "The package should be installed from source: `git clone https://github.com/Quantum-Accelerators/quacc.git; cd quacc; pip install .`",
+        "The correct command is `pip install quantum-accelerator`."
+      ],
+      "golden_answer": "The correct command is `pip install quacc`."
+    }
+  ]
+}

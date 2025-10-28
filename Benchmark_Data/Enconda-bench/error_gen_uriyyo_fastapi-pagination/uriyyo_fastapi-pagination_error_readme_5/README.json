@@ -1,0 +1,29 @@
+{
+  "readme": "uriyyo_fastapi-pagination_error_readme_5",
+  "repo_name": "uriyyo_fastapi-pagination",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Added specific version constraints that may cause compatibility issues",
+      "correction_candidates": [
+        "pip install fastapi-pagination",
+        "pip install fastapi-pagination>=2.0.0",
+        "pip install fastapi-pagination sqlalchemy",
+        "pip install fastapi-pagination~=2.1.0"
+      ],
+      "golden_answer": "pip install fastapi-pagination"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Moved add_pagination call before endpoint definition, breaking logical order",
+      "correction_candidates": [
+        "Move add_pagination(app) to the end of the code block after all endpoints are defined",
+        "Place add_pagination(app) at the beginning before importing modules",
+        "Call add_pagination(app) inside the get_users function",
+        "Remove add_pagination(app) entirely as it's not needed"
+      ],
+      "golden_answer": "Move add_pagination(app) to the end of the code block after all endpoints are defined"
+    }
+  ]
+}

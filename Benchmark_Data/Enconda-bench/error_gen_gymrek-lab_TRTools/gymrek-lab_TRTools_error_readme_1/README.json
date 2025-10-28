@@ -1,0 +1,29 @@
+{
+  "readme": "gymrek-lab_TRTools_error_readme_1",
+  "repo_name": "gymrek-lab_TRTools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to upgrade pip, `pip --upgrade install pip`, is syntactically incorrect.",
+      "correction_candidates": [
+        "pip upgrade pip",
+        "pip install pip --upgrade",
+        "pip install --upgrade pip",
+        "pip install upgrade pip"
+      ],
+      "golden_answer": "pip install --upgrade pip"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the 'From source' installation instructions, the command to install dependencies with poetry is placed before the command to create the conda environment, which is the wrong order.",
+      "correction_candidates": [
+        "Run `conda install poetry` and then `poetry install` inside the base environment.",
+        "Run `conda env create -n trtools -f dev-env.yml` and then `conda run -n trtools poetry install`.",
+        "Run `poetry install` and then `conda env create -n trtools -f dev-env.yml`.",
+        "Run `conda env create -n trtools -f dev-env.yml` and then `poetry shell` followed by `pip install -e .`."
+      ],
+      "golden_answer": "Run `conda env create -n trtools -f dev-env.yml` and then `conda run -n trtools poetry install`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_4_only_E4",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `protoc` command references a non-existent file `thing1.prato` due to a typo, which will cause the command to fail.",
+      "correction_candidates": [
+        "Correct the filename from `thing1.prato` to `thing1.proto`.",
+        "The file should be renamed on the filesystem to `thing1.prato`.",
+        "Add a wildcard to the command: `*.proto`.",
+        "Create a symbolic link: `ln -s thing1.proto thing1.prato`."
+      ],
+      "golden_answer": "Correct the filename from `thing1.prato` to `thing1.proto`."
+    }
+  ]
+}

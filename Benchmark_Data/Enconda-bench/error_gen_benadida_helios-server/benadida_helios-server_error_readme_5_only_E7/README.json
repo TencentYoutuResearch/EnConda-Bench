@@ -1,0 +1,18 @@
+{
+  "readme": "benadida_helios-server_error_readme_5_only_E7",
+  "repo_name": "benadida_helios-server",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Recommending outdated Python 2.7 which is no longer supported",
+      "correction_candidates": [
+        "Then run the application with Python 3.8 or higher for optimal compatibility.",
+        "Then run the application with Python 3.6+ for optimal compatibility.",
+        "Then run the application with the latest Python version for optimal compatibility.",
+        "Then run the application with Python 3.9 for optimal compatibility."
+      ],
+      "golden_answer": "Then run the application with Python 3.8 or higher for optimal compatibility."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_3",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to example recipes in FAQ #1 is broken because the URL incorrectly points to a non-existent 'recipe_examples' directory instead of 'recipes'.",
+      "correction_candidates": [
+        "Change the link to `https://github.com/conda-forge/staged-recipes/tree/main/recipes`",
+        "Change the link to `https://github.com/conda-forge/staged-recipes/tree/master/recipes`",
+        "Change the link to point to the `example` directory: `.../tree/main/example`",
+        "Remove the link and instruct the user to browse the repository's `recipes` directory manually."
+      ],
+      "golden_answer": "Change the link to `https://github.com/conda-forge/staged-recipes/tree/main/recipes`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "FAQ #7 incorrectly suggests using the outdated `python setup.py install` command for older Python versions, which is a discouraged practice in conda environments and can lead to compatibility issues.",
+      "correction_candidates": [
+        "Remove the sentence suggesting `python setup.py install` as it is a discouraged practice.",
+        "Change the suggestion to `{{ PYTHON }} setup.py install`, which is the correct way to invoke it within conda-build.",
+        "Clarify that `python setup.py install` should only be used if `pip install` fails.",
+        "Replace `python setup.py install` with `conda build .` as the alternative."
+      ],
+      "golden_answer": "Remove the sentence suggesting `python setup.py install` as it is a discouraged practice."
+    }
+  ]
+}

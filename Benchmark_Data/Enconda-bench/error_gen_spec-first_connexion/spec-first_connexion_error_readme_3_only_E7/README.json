@@ -1,0 +1,18 @@
+{
+  "readme": "spec-first_connexion_error_readme_3_only_E7",
+  "repo_name": "spec-first_connexion",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Contributing' section incorrectly states that 'Older versions of Python like 3.6 are supported.' Connexion 3 requires Python 3.8 or higher, which can cause compatibility issues for developers.",
+      "correction_candidates": [
+        "Remove the sentence: 'Older versions of Python like 3.6 are supported.'",
+        "Change 'Older versions of Python like 3.6 are supported.' to 'Connexion requires Python 3.8 or newer.'",
+        "Change the poetry command to `poetry env use python3.8` before installing.",
+        "Add a check for the Python version to the pre-commit hooks."
+      ],
+      "golden_answer": "Change 'Older versions of Python like 3.6 are supported.' to 'Connexion requires Python 3.8 or newer.'"
+    }
+  ]
+}

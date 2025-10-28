@@ -1,0 +1,29 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_6",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Suggests installing only numpy and pandas dependencies instead of the actual bw2io package",
+      "correction_candidates": [
+        "pip install bw2io",
+        "conda install -c conda-forge bw2io",
+        "pip install bw2io brightway2",
+        "pip install --upgrade bw2io"
+      ],
+      "golden_answer": "pip install bw2io"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect syntax 'importer.add_cpc_classification_from_single_reference_product' without parentheses, making it a method reference instead of a method call",
+      "correction_candidates": [
+        "Applying strategy: add_cpc_classification_from_single_reference_product",
+        "importer.add_cpc_classification_from_single_reference_product()",
+        "strategy: add_cpc_classification_from_single_reference_product",
+        "add_cpc_classification_from_single_reference_product applied"
+      ],
+      "golden_answer": "Applying strategy: add_cpc_classification_from_single_reference_product"
+    }
+  ]
+}

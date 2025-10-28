@@ -1,0 +1,29 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_6",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependencies numpy and tensorflow are listed that are not required for aqtinstall",
+      "correction_candidates": [
+        "Remove numpy and tensorflow from the dependencies list",
+        "Replace numpy and tensorflow with lxml and packaging",
+        "Move numpy and tensorflow to optional dependencies section",
+        "Keep only the original dependencies without numpy and tensorflow"
+      ],
+      "golden_answer": "Keep only the original dependencies without numpy and tensorflow"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command 'aqt query-qt' is used instead of the correct 'aqt list-qt'",
+      "correction_candidates": [
+        "aqt list-qt windows desktop --arch 6.2.0",
+        "aqt show-qt windows desktop --arch 6.2.0",
+        "aqt get-qt windows desktop --arch 6.2.0",
+        "aqt find-qt windows desktop --arch 6.2.0"
+      ],
+      "golden_answer": "aqt list-qt windows desktop --arch 6.2.0"
+    }
+  ]
+}

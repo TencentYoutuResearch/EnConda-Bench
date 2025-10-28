@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_7_only_E2",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used 'python simulate.py' instead of 'python generate.py' for the command that includes price and fixed load timeseries",
+      "correction_candidates": [
+        "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --price-csv ../price/price.csv --fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price ../price/price.csv --include-fixed-load fixed_load.csv --output scenario.json",
+        "python generate.py --csv-price ../price/price.csv --csv-fixed-load fixed_load.csv --output scenario.json"
+      ],
+      "golden_answer": "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json"
+    }
+  ]
+}

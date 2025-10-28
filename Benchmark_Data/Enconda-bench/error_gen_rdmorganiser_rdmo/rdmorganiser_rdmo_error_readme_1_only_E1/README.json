@@ -1,0 +1,18 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_1_only_E1",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions include an unnecessary step to install the `numpy` package separately, which is either not required or already included in `requirements.txt`.",
+      "correction_candidates": [
+        "Change `pip install numpy` to `pip install --no-deps numpy`.",
+        "Remove the line `pip install numpy`.",
+        "Move the line `pip install numpy` to after `pip install -r requirements.txt`.",
+        "Change `pip install numpy` to `pip install pandas`."
+      ],
+      "golden_answer": "Remove the line `pip install numpy`."
+    }
+  ]
+}

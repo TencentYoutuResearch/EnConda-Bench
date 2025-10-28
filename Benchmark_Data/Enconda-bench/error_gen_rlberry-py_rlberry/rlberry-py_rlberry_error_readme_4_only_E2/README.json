@@ -1,0 +1,18 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_4_only_E2",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to install from GitHub, `pip install git://github.com/rlberry-py/rlberry.git`, uses an incorrect protocol `git://`. The correct format for pip is `git+https://`.",
+      "correction_candidates": [
+        "git clone https://github.com/rlberry-py/rlberry.git && cd rlberry && pip install .",
+        "pip install https://github.com/rlberry-py/rlberry/archive/main.zip",
+        "pip install git+https://github.com/rlberry-py/rlberry.git",
+        "pip install from-git https://github.com/rlberry-py/rlberry.git"
+      ],
+      "golden_answer": "pip install git+https://github.com/rlberry-py/rlberry.git"
+    }
+  ]
+}

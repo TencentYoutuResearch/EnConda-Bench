@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_pureqml_qmlcore_error_readme_merge_k3",
+  "repo_name": "pureqml_qmlcore",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to initialize a boilerplate project is incorrect. The '--init' flag does not exist for the build script.",
+      "correction_candidates": [
+        "In the 'Simple how-to' section, replace `./qmlcore/build --init` with `./qmlcore/build --boilerplate`.",
+        "In the 'Simple how-to' section, replace `./qmlcore/build --init` with `python ./qmlcore/build --new`.",
+        "The correct command is `./qmlcore/build --create`.",
+        "The command should be run from the qmlcore directory: `cd qmlcore && ./build --init`."
+      ],
+      "golden_answer": "In the 'Simple how-to' section, replace `./qmlcore/build --init` with `./qmlcore/build --boilerplate`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The git URL provided for cloning the controls library is incorrect, pointing to a non-existent repository 'qml-controls'.",
+      "correction_candidates": [
+        "In the 'Controls library' section, change the repository URL to `git@github.com:pureqml/controls.git`.",
+        "In the 'Controls library' section, change the repository URL to `https://github.com/pureqml/qmlcore-controls.git`.",
+        "The command should be `git clone git@github.com:pureqml/controls.git controls`.",
+        "Use `git submodule add git@github.com:pureqml/qml-controls.git` instead."
+      ],
+      "golden_answer": "In the 'Controls library' section, change the repository URL to `git@github.com:pureqml/controls.git`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install Python dependencies is incorrect. It is missing the '-r' flag required by pip to read from a requirements file.",
+      "correction_candidates": [
+        "In the 'Prerequisites' section, change `pip install requirements.txt` to `pip install -r requirements.txt`.",
+        "The command should be `pip install --file requirements.txt`.",
+        "You must run `python -m pip install requirements.txt`.",
+        "In the 'Prerequisites' section, change `pip install requirements.txt` to `pip requirements install`."
+      ],
+      "golden_answer": "In the 'Prerequisites' section, change `pip install requirements.txt` to `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Simple how-to' section has an incorrect order of operations. It instructs the user to clone the repository before creating and changing into the project directory, which results in the repository being cloned outside the intended project folder.",
+      "correction_candidates": [
+        "The `git clone` command should be run after creating and entering the project directory.",
+        "The `git clone` command should target the new directory: `git clone git@github.com:pureqml/qmlcore.git <project-dir>`.",
+        "The user should move the cloned `qmlcore` directory into `<project-dir>` after step 2.",
+        "Reverse the first two steps in the 'Simple how-to' list."
+      ],
+      "golden_answer": "Reverse the first two steps in the 'Simple how-to' list."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement in the 'Prerequisites' section is too vague ('A recent version of Python'). This can lead to compatibility issues as the toolchain supports both Python 2 and 3, and the user might install an incompatible version.",
+      "correction_candidates": [
+        "Specify that Python 3.6+ is required.",
+        "Change 'A recent version of Python is required' to 'Any modern Python (2 or 3) will go well'.",
+        "Specify that Python 2.7 is required.",
+        "The documentation should state that the `python-future` library is used for compatibility."
+      ],
+      "golden_answer": "Change 'A recent version of Python is required' to 'Any modern Python (2 or 3) will go well'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command line option for minification is incorrect. The long form is documented as '--minimize' but the actual implementation is '--minify'.",
+      "correction_candidates": [
+        "In 'build tool command line options', replace '--minimize' with '--minify'.",
+        "The correct option is `-minify`.",
+        "The option is `-M`.",
+        "The option should be `--min`."
+      ],
+      "golden_answer": "In 'build tool command line options', replace '--minimize' with '--minify'."
+    }
+  ]
+}

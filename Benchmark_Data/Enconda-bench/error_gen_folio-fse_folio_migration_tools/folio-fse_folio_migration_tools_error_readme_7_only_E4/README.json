@@ -1,0 +1,18 @@
+{
+  "readme": "folio-fse_folio_migration_tools_error_readme_7_only_E4",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Missing reference to required configuration files or directories",
+      "correction_candidates": [
+        "Make sure you have the required configuration files in your project directory as described in the template repository.",
+        "Ensure all migration data files are placed in the ./data directory before running.",
+        "Create a config.json file with your FOLIO tenant settings before installation.",
+        "Download the example files from the migration template repository first."
+      ],
+      "golden_answer": "Make sure you have the required configuration files in your project directory as described in the template repository."
+    }
+  ]
+}

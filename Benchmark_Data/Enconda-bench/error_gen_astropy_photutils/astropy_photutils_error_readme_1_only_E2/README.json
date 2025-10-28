@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_1_only_E2",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides an incorrect PyPI package name `photoutils` for installation, which will fail due to a typo.",
+      "correction_candidates": [
+        "Install using the correct package name: `pip install photutils`.",
+        "The package should be installed from source: `git clone https://github.com/astropy/photutils.git && python setup.py install`.",
+        "Use conda to install the package: `conda install -c conda-forge photutils`.",
+        "The package name is `astro-photutils`, so run `pip install astro-photutils`."
+      ],
+      "golden_answer": "Install using the correct package name: `pip install photutils`."
+    }
+  ]
+}

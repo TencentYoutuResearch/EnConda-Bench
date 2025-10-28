@@ -1,0 +1,29 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_4",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest that `pip install fontbakery` is sufficient for most use cases, which is misleading. It fails to mention that optional dependencies are required for certain check profiles, such as `ufo`, which can be installed with `pip install fontbakery[ufo]`.",
+      "correction_candidates": [
+        "Advise users to run `pip install fontbakery --all` to get all features.",
+        "Change the instruction to `pip install fontbakery[all]` to ensure all optional dependencies are installed.",
+        "Advise users to consult the detailed installation guides linked above for specifics on optional dependencies.",
+        "Advise users to install dependencies like `ufo-sources` manually if needed."
+      ],
+      "golden_answer": "Change the instruction to `pip install fontbakery[all]` to ensure all optional dependencies are installed."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `fontbakery run google-profile myfont.ttf` is incorrect. The tool does not have a `run` subcommand, and profiles are invoked as subcommands directly (e.g., `check-googlefonts`).",
+      "correction_candidates": [
+        "The correct command is `fontbakery check-googlefonts myfont.ttf`.",
+        "The correct command is `fontbakery --run-profile google-profile --file myfont.ttf`.",
+        "The correct command is `fontbakery google-profile myfont.ttf`.",
+        "The correct command is `fontbakery check --profile googlefonts myfont.ttf`."
+      ],
+      "golden_answer": "The correct command is `fontbakery check-googlefonts myfont.ttf`."
+    }
+  ]
+}

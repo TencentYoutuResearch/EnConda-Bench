@@ -1,0 +1,18 @@
+{
+  "readme": "librephotos_librephotos_error_readme_1_only_E1",
+  "repo_name": "librephotos_librephotos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an installation command for a pip package `librephotos-cli` that does not exist.",
+      "correction_candidates": [
+        "The command should be `pip3 install librephotos-cli`.",
+        "Remove the line `pip install librephotos-cli` as this package does not exist.",
+        "The correct package name is `librephotos` not `librephotos-cli`.",
+        "You must first run `apt-get install python3-librephotos` before the pip command."
+      ],
+      "golden_answer": "Remove the line `pip install librephotos-cli` as this package does not exist."
+    }
+  ]
+}

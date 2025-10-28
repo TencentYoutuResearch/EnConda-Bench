@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_3_only_E7",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv env` may use a legacy version of Python (Python 2) on systems where `python` is not aliased to `python3`, potentially causing compatibility issues.",
+      "correction_candidates": [
+        "Replace `python -m venv env` with `virtualenv env`.",
+        "The command is correct, but you must first run `alias python=python3`.",
+        "Replace `python -m venv env` with `python3 -m venv env` to ensure Python 3 is used.",
+        "Install the project using Conda instead of venv to avoid Python version conflicts."
+      ],
+      "golden_answer": "Replace `python -m venv env` with `python3 -m venv env` to ensure Python 3 is used."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "nixtla_neuralforecast_error_readme_5_only_E1",
+  "repo_name": "nixtla_neuralforecast",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Referenced a non-existent conda package name 'neuralforecast-dev' instead of the correct package name",
+      "correction_candidates": [
+        "conda install -c conda-forge neuralforecast",
+        "conda install -c nixtla neuralforecast",
+        "conda install neuralforecast",
+        "conda install -c conda-forge python-neuralforecast"
+      ],
+      "golden_answer": "conda install -c conda-forge neuralforecast"
+    }
+  ]
+}

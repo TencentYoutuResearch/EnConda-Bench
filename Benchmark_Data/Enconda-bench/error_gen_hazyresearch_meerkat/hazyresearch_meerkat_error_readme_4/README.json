@@ -1,0 +1,29 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_4",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an underscore (`meerkat_ml`) instead of a hyphen (`meerkat-ml`), which will fail as the package name on PyPI is `meerkat-ml`.",
+      "correction_candidates": [
+        "pip install meerkat-ml",
+        "pip install 'meerkat-ml'",
+        "python -m pip install meerkat-ml",
+        "pip install --user meerkat-ml"
+      ],
+      "golden_answer": "pip install meerkat-ml"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `torchaudio` and the non-existent `torchvideo` are mandatory dependencies for basic use, when they are optional dependencies for specific data types.",
+      "correction_candidates": [
+        "Correct the text to: '> **_Optional Dependencies_**: some parts of Meerkat rely on optional dependencies e.g. audio processing may rely on utilities from `torchaudio`.'",
+        "Revert the section to its original commented-out state using <!-- ... -->.",
+        "Remove the dependency note entirely.",
+        "Correct the packages to `torchaudio` and `torchvision` and clarify they are optional extras."
+      ],
+      "golden_answer": "Correct the text to: '> **_Optional Dependencies_**: some parts of Meerkat rely on optional dependencies e.g. audio processing may rely on utilities from `torchaudio`.'"
+    }
+  ]
+}

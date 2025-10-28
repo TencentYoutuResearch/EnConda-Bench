@@ -1,0 +1,29 @@
+{
+  "readme": "uploadcare_pyuploadcare_error_readme_6",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Requirements section lists Python 2.7 and 3.6-3.7 as supported, conflicting with the compatibility information provided below",
+      "correction_candidates": [
+        "Python 3.8, 3.9, 3.10, 3.11, 3.12",
+        "Python 3.7, 3.8, 3.9, 3.10, 3.11, 3.12",
+        "Python 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12",
+        "Python 2.7, 3.8, 3.9, 3.10, 3.11, 3.12"
+      ],
+      "golden_answer": "Python 3.8, 3.9, 3.10, 3.11, 3.12"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "File path in the basic usage example references a non-existent config directory",
+      "correction_candidates": [
+        "sample-file.jpeg",
+        "assets/sample-file.jpeg",
+        "images/sample-file.jpeg",
+        "data/sample-file.jpeg"
+      ],
+      "golden_answer": "sample-file.jpeg"
+    }
+  ]
+}

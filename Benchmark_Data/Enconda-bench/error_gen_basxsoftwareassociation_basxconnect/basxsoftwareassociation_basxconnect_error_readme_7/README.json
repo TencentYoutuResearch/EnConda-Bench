@@ -1,0 +1,29 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_7",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Lists unnecessary and potentially conflicting dependencies that may not be required for basxconnect",
+      "correction_candidates": [
+        "Install only essential dependencies: `sudo apt-get install python3-dev libpq-dev` and `pip install django psycopg2-binary`",
+        "Use `pip install -r requirements.txt` to install only the dependencies specified in the project requirements",
+        "Install minimal system packages: `sudo apt-get install build-essential python3-pip` then install Python packages via pip",
+        "Run `sudo apt-get install git python3-venv` and create virtual environment before installing any Python packages"
+      ],
+      "golden_answer": "Install only essential dependencies: `sudo apt-get install python3-dev libpq-dev` and `pip install django psycopg2-binary`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses invalid migrate command flags --run-syncdb and --fake-initial together which can cause database issues",
+      "correction_candidates": [
+        "Run `python manage.py migrate` without additional flags for normal migration",
+        "Use `python manage.py migrate --fake-initial` only for existing databases, or `python manage.py migrate --run-syncdb` for fresh setup",
+        "Execute `python manage.py makemigrations` first, then `python manage.py migrate` to apply changes",
+        "Run `python manage.py migrate --check` to verify migrations before applying them"
+      ],
+      "golden_answer": "Run `python manage.py migrate` without additional flags for normal migration"
+    }
+  ]
+}

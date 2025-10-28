@@ -1,0 +1,18 @@
+{
+  "readme": "apiflask_apiflask_error_readme_1_only_E2",
+  "repo_name": "apiflask_apiflask",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application with the reloader enabled is incorrect. The option `--reload` is placed before the `run` command, which is not the correct syntax for the `flask` CLI.",
+      "correction_candidates": [
+        "Change the command to `$ flask run --reload`.",
+        "Change the command to `$ flask run-reload`.",
+        "Change the command to `$ flask --app app run --reload`.",
+        "Change the command to `$ python app.py --reload`."
+      ],
+      "golden_answer": "Change the command to `$ flask run --reload`."
+    }
+  ]
+}

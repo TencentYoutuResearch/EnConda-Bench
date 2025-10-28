@@ -1,0 +1,18 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_5_only_E7",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python 2.7 is mentioned as compatible with Qt SDK 6.2.0, but the minimum required version is 3.8",
+      "correction_candidates": [
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1 with Python 3.8 or higher:",
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1:",
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1 (requires Python 3.8+):",
+        "When you decide to install Qt SDK version 6.2.0 for mingw v8.1 using a supported Python version:"
+      ],
+      "golden_answer": "When you decide to install Qt SDK version 6.2.0 for mingw v8.1:"
+    }
+  ]
+}

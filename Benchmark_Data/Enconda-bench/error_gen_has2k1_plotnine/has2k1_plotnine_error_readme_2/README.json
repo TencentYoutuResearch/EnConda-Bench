@@ -1,0 +1,29 @@
+{
+  "readme": "has2k1_plotnine_error_readme_2",
+  "repo_name": "has2k1_plotnine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the first example image is incorrect (`./docs/images/...` instead of `./doc/images/...`), which will result in a broken image link.",
+      "correction_candidates": [
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"https://raw.githubusercontent.com/has2k1/plotnine/main/doc/images/readme-image-1.png\".",
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\".",
+        "Create a symbolic link from 'docs' to 'doc' in the repository root.",
+        "Remove the \"./\" from the beginning of the path."
+      ],
+      "golden_answer": "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\"."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly suggest installing matplotlib from source as a corrective step after tests fail, rather than as a necessary prerequisite to ensure consistent test outcomes. The setup should be done before running tests.",
+      "correction_candidates": [
+        "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time.",
+        "Add a command \"pip uninstall matplotlib\" before the reinstall command.",
+        "Move the entire \"Testing\" section to be before the \"Installation\" section.",
+        "Replace the text with \"If tests fail, run 'pip install matplotlib --force-reinstall' and try again\"."
+      ],
+      "golden_answer": "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time."
+    }
+  ]
+}

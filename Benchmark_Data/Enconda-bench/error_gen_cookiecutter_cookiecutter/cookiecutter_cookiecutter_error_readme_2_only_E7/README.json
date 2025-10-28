@@ -1,0 +1,18 @@
+{
+  "readme": "cookiecutter_cookiecutter_error_readme_2_only_E7",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The features section incorrectly states that Cookiecutter is only compatible with Python 3.8, while it supports a much wider range of versions.",
+      "correction_candidates": [
+        "Change 'Python 3.8 only' to 'Python 3.7 to 3.12'.",
+        "Change 'Python 3.8 only' to 'Python 3.6+'.",
+        "Change 'Python 3.8 only' to 'Python 3.x'.",
+        "Remove the entire line about Python version compatibility."
+      ],
+      "golden_answer": "Change 'Python 3.8 only' to 'Python 3.7 to 3.12'."
+    }
+  ]
+}

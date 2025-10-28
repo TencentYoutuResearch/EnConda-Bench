@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_ucoproject_uco_error_readme_merge_k5",
+  "repo_name": "ucoproject_uco",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include `tensorflow`, which is a large and unnecessary dependency for a project focused on ontology definitions.",
+      "correction_candidates": [
+        "The installation command should be `conda install tensorflow rdflib`.",
+        "The installation command should be `pip install uco`.",
+        "The installation command should only include the necessary library: `pip install rdflib`.",
+        "The installation command should be `pip install rdflib owlready2`."
+      ],
+      "golden_answer": "The installation command should only include the necessary library: `pip install rdflib`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions install Python packages from requirements.txt before creating and activating the virtual environment, which is the wrong logical order and pollutes the global Python environment.",
+      "correction_candidates": [
+        "The `pip install` command should be run with the `--user` flag to avoid permission errors.",
+        "The correct order is to first create the virtual environment, then activate it, and finally install the packages inside it.",
+        "The `pip install` command should be run after creating the virtual environment but before activating it.",
+        "The setup should use `conda` instead of `pip` and `venv`."
+      ],
+      "golden_answer": "The correct order is to first create the virtual environment, then activate it, and finally install the packages inside it."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions attempt to install `graphviz` using pip. Graphviz is a system-level dependency and must be installed using a system package manager (e.g., apt, brew, yum), not pip.",
+      "correction_candidates": [
+        "The command should be `pip install python-graphviz` which is the correct Python wrapper.",
+        "The `graphviz` package should be removed from the pip command and installed separately with a system package manager like `sudo apt-get install graphviz`.",
+        "The command should be `pip install --no-deps graphviz` to avoid dependency conflicts.",
+        "The command should be run with sudo: `sudo pip install rdflib graphviz`."
+      ],
+      "golden_answer": "The `graphviz` package should be removed from the pip command and installed separately with a system package manager like `sudo apt-get install graphviz`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax using non-existent --config parameter for setup.py install",
+      "correction_candidates": [
+        "Use pip install . to install the package from the current directory",
+        "Use python setup.py install without any parameters",
+        "Use python setup.py build followed by python setup.py install",
+        "Use pip install -e . for development installation"
+      ],
+      "golden_answer": "Use python setup.py install without any parameters"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Specifies outdated dependency versions that may have security vulnerabilities or compatibility issues",
+      "correction_candidates": [
+        "Remove version pinning and use pip install rdflib sparqlwrapper owlrl for latest versions",
+        "Update to more recent versions like rdflib>=6.0.0 sparqlwrapper>=2.0.0 owlrl>=6.0.0",
+        "Use pip install -r requirements.txt and maintain versions in a separate file",
+        "Specify minimum versions with >= instead of exact versions with =="
+      ],
+      "golden_answer": "Remove version pinning and use pip install rdflib sparqlwrapper owlrl for latest versions"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "open-power_op-test_error_readme_3_only_E4",
+  "repo_name": "open-power_op-test",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The documentation specifies an incorrect default configuration file name `~/.op-test.conf`, which the application will not read automatically.",
+      "correction_candidates": [
+        "The `~/.config/op-test.conf` file is always read, and you can specify another with `--config-file`.",
+        "The `/etc/op-test.conf` file is always read, and you can specify another with `--config-file`.",
+        "The `~/.op-test-framework.conf` file is always read, and you can specify another with `--config-file`.",
+        "The `op-test.conf` file in the current directory is always read, and you can specify another with `--config-file`."
+      ],
+      "golden_answer": "The `~/.op-test-framework.conf` file is always read, and you can specify another with `--config-file`."
+    }
+  ]
+}

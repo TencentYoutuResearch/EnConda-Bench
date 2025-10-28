@@ -1,0 +1,18 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_8_only_E8",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Mixes Python import code with shell pip command in the same code block, creating confusion",
+      "correction_candidates": [
+        "Separate into two blocks: installation commands first, then Python usage examples",
+        "Remove pip command from Python code block and show only import examples",
+        "Move pip install to a separate Installation section above the Quick Start",
+        "Replace with proper code block structure using different language tags"
+      ],
+      "golden_answer": "Separate into two blocks: installation commands first, then Python usage examples"
+    }
+  ]
+}

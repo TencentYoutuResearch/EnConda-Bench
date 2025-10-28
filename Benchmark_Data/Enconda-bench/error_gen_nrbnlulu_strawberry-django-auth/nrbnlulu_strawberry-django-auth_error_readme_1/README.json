@@ -1,0 +1,29 @@
+{
+  "readme": "nrbnlulu_strawberry-django-auth_error_readme_1",
+  "repo_name": "nrbnlulu_strawberry-django-auth",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes a non-existent extra `[jwt]`, which will cause pip to fail. The JWT dependencies are included by default.",
+      "correction_candidates": [
+        "pip install strawberry-django-auth",
+        "pip install strawberry-django-auth[pyjwt]",
+        "pip install strawberry-django-auth` and `pip install pyjwt",
+        "pip install strawberry-django-auth jwt"
+      ],
+      "golden_answer": "pip install strawberry-django-auth"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library is only compatible with Python 3.8, which contradicts the PyPI badge and the library's actual compatibility.",
+      "correction_candidates": [
+        "Note: This library is compatible with Python 3.8 and above.",
+        "Note: This library is compatible with the Python versions listed in the badge above.",
+        "Remove the note about Python version compatibility entirely.",
+        "Note: This library requires Python >= 3.8."
+      ],
+      "golden_answer": "Remove the note about Python version compatibility entirely."
+    }
+  ]
+}

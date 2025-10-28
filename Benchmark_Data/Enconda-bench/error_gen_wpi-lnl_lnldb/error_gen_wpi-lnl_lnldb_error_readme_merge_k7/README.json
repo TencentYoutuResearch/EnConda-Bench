@@ -1,0 +1,161 @@
+{
+  "readme": "error_gen_wpi-lnl_lnldb_error_readme_merge_k7",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to install Python packages is executed before the virtual environment is created and activated, which will cause packages to be installed globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "virtualenv env && source env/bin/activate && pip install -r requirements_debug.txt",
+        "python -m venv env; source env/bin/activate; pip install -r requirements_debug.txt",
+        "pip install -r requirements_debug.txt --user",
+        "First, run 'virtualenv env' and 'source env/bin/activate', then run 'pip install -r requirements_debug.txt'."
+      ],
+      "golden_answer": "First, run 'virtualenv env' and 'source env/bin/activate', then run 'pip install -r requirements_debug.txt'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'python manage.py new_superuser' is incorrect. 'new_superuser' is not a valid Django management command.",
+      "correction_candidates": [
+        "The command should be 'python manage.py createsuperuser'.",
+        "The command should be 'python manage.py create_superuser'.",
+        "The command should be 'python manage.py dbshell' followed by a SQL INSERT statement.",
+        "The command should be 'python manage.py createsuperuser --username admin --email admin@example.com'."
+      ],
+      "golden_answer": "The command should be 'python manage.py createsuperuser'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The Linux system package installation command is missing 'libmysqlclient-dev', which is required to compile the mysqlclient Python package.",
+      "correction_candidates": [
+        "Add 'libmysqlclient-dev' to the apt-get install command.",
+        "Add 'mysql-server' to the apt-get install command.",
+        "Run 'pip install libmysqlclient-dev' separately.",
+        "Add 'python3-mysqldb' to the apt-get install command."
+      ],
+      "golden_answer": "Add 'libmysqlclient-dev' to the apt-get install command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the data fixtures is incorrect. The command references 'fixture/*.json' but the directory is named 'fixtures'.",
+      "correction_candidates": [
+        "The path in the command should be 'fixtures/*.json'.",
+        "The path in the command should be 'db/fixtures/*.json'.",
+        "The path in the command should be 'fixtures.json'.",
+        "The path in the command should be 'data/fixtures/*.json'."
+      ],
+      "golden_answer": "The path in the command should be 'fixtures/*.json'."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The introduction omits the specific Django version required, stating it runs on 'Django' which is too vague and can lead to installing an incompatible version.",
+      "correction_candidates": [
+        "The text should be changed to 'Django 2.2 or later'.",
+        "The text should be changed to 'Django 3.x'.",
+        "The text should be changed to 'the latest version of Django'.",
+        "The text should specify the version in requirements_debug.txt."
+      ],
+      "golden_answer": "The text should be changed to 'Django 2.2 or later'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the development server is incorrect. 'startserver' is not a valid Django command.",
+      "correction_candidates": [
+        "The correct command is 'python manage.py runserver'.",
+        "The correct command is 'python manage.py server'.",
+        "The correct command is 'django-admin runserver'.",
+        "The correct command is 'gunicorn lnldb.wsgi'."
+      ],
+      "golden_answer": "The correct command is 'python manage.py runserver'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands to get the source code are in the wrong order. 'cd lnldb' is executed before 'git clone', so the directory will not exist and the command will fail.",
+      "correction_candidates": [
+        "The 'git clone' command must be run before the 'cd lnldb' command.",
+        "The commands should be combined into 'git clone https://github.com/WPI-LNL/lnldb.git && cd lnldb'.",
+        "The first command should be 'mkdir lnldb' to create the directory first.",
+        "The second command should be 'git init' inside the 'lnldb' directory."
+      ],
+      "golden_answer": "The 'git clone' command must be run before the 'cd lnldb' command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The filename for local settings is specified as 'lnldb/settings_local.py', but the application actually looks for 'lnldb/local_settings.py'.",
+      "correction_candidates": [
+        "The correct file path is 'settings/local.py'.",
+        "The correct file path is 'local_settings.py' in the project root.",
+        "The correct file path is 'lnldb/local_settings.py'.",
+        "The correct file path is 'config/local_settings.py'."
+      ],
+      "golden_answer": "The correct file path is 'lnldb/local_settings.py'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating and activating the virtual environment",
+      "correction_candidates": [
+        "Move 'pip install -r requirements_debug.txt' after 'source env/bin/activate'",
+        "Replace the entire block with 'python -m venv env && source env/bin/activate && pip install -r requirements_debug.txt'",
+        "Add 'python -m pip install --upgrade pip' before 'pip install -r requirements_debug.txt'",
+        "Change 'pip install -r requirements_debug.txt' to 'pip3 install -r requirements_debug.txt'"
+      ],
+      "golden_answer": "Move 'pip install -r requirements_debug.txt' after 'source env/bin/activate'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file extension for fixtures data loading command",
+      "correction_candidates": [
+        "Change 'fixtures/*.yaml' to 'fixtures/*.json'",
+        "Change 'fixtures/*.yaml' to 'fixtures/*.xml'",
+        "Change 'fixtures/*.yaml' to 'fixtures/initial_data.json'",
+        "Change 'fixtures/*.yaml' to 'fixtures/**.json'"
+      ],
+      "golden_answer": "Change 'fixtures/*.yaml' to 'fixtures/*.json'"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Version incompatibility between Python2.7 and Django 2.2 or later",
+      "correction_candidates": [
+        "Change 'Python2.7' to 'Python3.x'",
+        "Change 'Django 2.2 or later' to 'Django 1.11 or earlier'",
+        "Change 'Python2.7' to 'Python3.6+'",
+        "Change the entire sentence to 'LNLDB now runs under Python3.8 and Django 3.2 or later'"
+      ],
+      "golden_answer": "Change 'Python2.7' to 'Python3.x'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependencies nodejs, npm, webpack added to Linux installation command",
+      "correction_candidates": [
+        "Remove 'nodejs npm webpack' from the apt-get install command",
+        "Move 'nodejs npm webpack' to a separate installation step",
+        "Replace 'nodejs npm webpack' with 'build-essential'",
+        "Change 'nodejs npm webpack' to 'python3-setuptools python3-wheel'"
+      ],
+      "golden_answer": "Remove 'nodejs npm webpack' from the apt-get install command"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect requirements file name used for pip installation",
+      "correction_candidates": [
+        "Change 'requirements.txt' to 'requirements_debug.txt'",
+        "Change 'requirements.txt' to 'requirements/development.txt'",
+        "Change 'requirements.txt' to 'requirements_dev.txt'",
+        "Change 'requirements.txt' to 'requirements-debug.txt'"
+      ],
+      "golden_answer": "Change 'requirements.txt' to 'requirements_debug.txt'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using 'makemigrations' instead of 'migrate' for database initialization",
+      "correction_candidates": [
+        "Change 'python manage.py makemigrations' to 'python manage.py migrate'",
+        "Add 'python manage.py migrate' after 'python manage.py makemigrations'",
+        "Replace 'python manage.py makemigrations' with 'python manage.py syncdb'",
+        "Change 'python manage.py makemigrations' to 'python manage.py migrate --run-syncdb'"
+      ],
+      "golden_answer": "Change 'python manage.py makemigrations' to 'python manage.py migrate'"
+    }
+  ]
+}

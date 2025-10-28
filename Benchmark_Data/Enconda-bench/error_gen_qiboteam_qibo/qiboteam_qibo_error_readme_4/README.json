@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibo_error_readme_4",
+  "repo_name": "qiboteam_qibo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "In the first code example, the line `final_state = circuit(initial_state)` will raise a `NameError` because the `initial_state` variable is not defined anywhere in the example.",
+      "correction_candidates": [
+        "Change `final_state = circuit(initial_state)` to `final_state = circuit()` to use the default initial state.",
+        "Define the initial state before using it, for example: `import numpy as np; initial_state = np.zeros(2**15); initial_state[0] = 1`.",
+        "The `circuit` object is called directly. The line should be `final_state = circuit()`.",
+        "Replace `circuit(initial_state)` with `circuit.execute()`."
+      ],
+      "golden_answer": "Change `final_state = circuit(initial_state)` to `final_state = circuit()` to use the default initial state."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the second example, `c.execute(100)` is incorrect. The number of shots must be passed as a keyword argument, `nshots`, not as a positional argument.",
+      "correction_candidates": [
+        "The `execute` method requires the `nshots` keyword argument. The line should be `result = c.execute(nshots=100)`.",
+        "Change `result = c.execute(100)` to `result = c(nshots=100)` to use the circuit's `__call__` method.",
+        "The correct syntax is `result = c(shots=100)`.",
+        "The number of shots should be passed as a dictionary: `result = c.execute(options={'nshots': 100})`."
+      ],
+      "golden_answer": "Change `result = c.execute(100)` to `result = c(nshots=100)` to use the circuit's `__call__` method."
+    }
+  ]
+}

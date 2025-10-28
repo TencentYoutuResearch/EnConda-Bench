@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_1_only_E1",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `scikit-learn-extra` is a required prerequisite for installation, which is an unnecessary dependency.",
+      "correction_candidates": [
+        "Remove the sentence stating that `scikit-learn-extra` is a prerequisite.",
+        "Change the prerequisite to `pip install scikit-learn`.",
+        "Add `scikit-learn-extra` to the `conda` install command as well.",
+        "Clarify that `scikit-learn-extra` is an optional dependency for advanced features."
+      ],
+      "golden_answer": "Remove the sentence stating that `scikit-learn-extra` is a prerequisite."
+    }
+  ]
+}

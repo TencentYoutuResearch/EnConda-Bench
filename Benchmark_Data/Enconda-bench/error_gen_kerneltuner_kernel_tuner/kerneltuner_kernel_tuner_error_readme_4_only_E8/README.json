@@ -1,0 +1,18 @@
+{
+  "readme": "kerneltuner_kernel_tuner_error_readme_4_only_E8",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README includes a misleading statement that Kernel Tuner 'Automatically rewrites your Python code into optimized CUDA C++,' which is not a feature of the tool and will confuse users about its core functionality.",
+      "correction_candidates": [
+        "Remove the bullet point: '- Automatically rewrites your Python code into optimized CUDA C++'",
+        "Clarify that this feature is experimental and must be enabled with a special flag.",
+        "Change the statement to 'Works with tools like Numba or CuPy to transpile Python'.",
+        "This feature is only available in the enterprise version of Kernel Tuner."
+      ],
+      "golden_answer": "Remove the bullet point: '- Automatically rewrites your Python code into optimized CUDA C++'"
+    }
+  ]
+}

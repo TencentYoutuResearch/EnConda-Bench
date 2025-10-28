@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_tishka17_aiogram_dialog_error_readme_merge_k2",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command installs version 2 of `aiogram`, which is incompatible with version 2 of `aiogram-dialog`. The README correctly states that `aiogram-dialog` v2.x requires `aiogram` v3.x.",
+      "correction_candidates": [
+        "pip install aiogram-dialog aiogram>=3.0.0",
+        "pip install aiogram-dialog",
+        "pip install aiogram-dialog aiogram==3.*",
+        "pip install aiogram-dialog aiogram"
+      ],
+      "golden_answer": "pip install aiogram-dialog aiogram>=3.0.0"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `user_start` function, the `start` method of `dialog_manager` is called with an incorrect keyword argument `start_mode`. The correct argument name is `mode`.",
+      "correction_candidates": [
+        "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.start(MySG.first, StartMode.RESET_STACK)",
+        "await dialog_manager.start(MySG.first, mode=\"RESET_STACK\")",
+        "await dialog_manager.reset_stack(MySG.first)"
+      ],
+      "golden_answer": "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The code for setting up the dispatcher calls `setup_dialogs(dp)` before `dp.include_router(dialog)`. `setup_dialogs` must be called after all dialog routers have been included, otherwise the dialogs will not be registered correctly.",
+      "correction_candidates": [
+        "dp.include_router(dialog)\nsetup_dialogs(dp)",
+        "from aiogram_dialog.utils import register_dialogs\nregister_dialogs(dp, dialog)",
+        "dp.include_router(dialog)\ndialog.setup(dp)",
+        "setup_dialogs(dp, routers=[dialog])"
+      ],
+      "golden_answer": "dp.include_router(dialog)\nsetup_dialogs(dp)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README does not provide an installation command. A user trying to install the package might guess the name, but `aiogram-dialog` is required, not `aiogram_dialog`.",
+      "correction_candidates": [
+        "Add a section: ### Installation\n```bash\npip install aiogram-dialog\n```",
+        "Add a section: ### Installation\n```bash\npip install aiogram_dialog\n```",
+        "Add a section: ### Installation\n```bash\npip install aiogram.dialog\n```",
+        "Add a section: ### Installation\n```bash\npip install python-aiogram-dialog\n```"
+      ],
+      "golden_answer": "Add a section: ### Installation\n```bash\npip install aiogram-dialog\n```"
+    }
+  ]
+}

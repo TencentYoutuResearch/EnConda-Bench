@@ -1,0 +1,18 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_1_only_E4",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The demo command `mk demo image-gallery-tutorial --copy` uses an incorrect demo name, which does not exist.",
+      "correction_candidates": [
+        "mk demo tutorial-image-gallery --copy",
+        "meerkat demo image-gallery-tutorial --copy",
+        "mk demo --list",
+        "mk demo tutorial-image-gallery"
+      ],
+      "golden_answer": "mk demo tutorial-image-gallery --copy"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_3_only_E2",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the PyPI installation section, the package is installed with `pip install py-clarity`. The correct package name on PyPI is `pyclarity`, without a hyphen.",
+      "correction_candidates": [
+        "pip install pyclarity",
+        "pip install py_clarity",
+        "pip install clarity",
+        "pip install 'py-clarity'"
+      ],
+      "golden_answer": "pip install pyclarity"
+    }
+  ]
+}

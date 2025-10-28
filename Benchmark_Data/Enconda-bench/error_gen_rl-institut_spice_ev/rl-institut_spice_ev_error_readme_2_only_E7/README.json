@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_2_only_E7",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a strict Python version requirement of `== 3.6`, which is overly restrictive and may cause installation or runtime issues for users with newer, compatible Python versions.",
+      "correction_candidates": [
+        "Everything else uses the Python (>= 3.6, < 3.10) standard library.",
+        "Everything else uses the Python (>= 3.6) standard library.",
+        "Everything else uses the Python 3 standard library.",
+        "Everything else uses the Python standard library."
+      ],
+      "golden_answer": "Everything else uses the Python (>= 3.6) standard library."
+    }
+  ]
+}

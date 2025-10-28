@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_2_only_E4",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README specifies an incorrect directory name (`documentation` instead of `docs`) for finding the local documentation files.",
+      "correction_candidates": [
+        "Change `documentation directory` to `docs directory`.",
+        "Change `documentation directory` to `doc/source directory`.",
+        "Change `documentation directory` to `mpmath/docs directory`.",
+        "Change `documentation directory` to `the project's root directory`."
+      ],
+      "golden_answer": "Change `documentation directory` to `docs directory`."
+    }
+  ]
+}

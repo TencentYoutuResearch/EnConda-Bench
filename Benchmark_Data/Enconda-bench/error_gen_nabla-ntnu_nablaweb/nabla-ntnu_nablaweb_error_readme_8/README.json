@@ -1,0 +1,29 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_8",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version not specified, which can lead to compatibility issues with Django and dependencies",
+      "correction_candidates": [
+        "python 3.9",
+        "python 3.8+",
+        "python >= 3.7",
+        "python 3.x"
+      ],
+      "golden_answer": "python 3.9"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect make command 'make verify' instead of 'make check' for code format verification",
+      "correction_candidates": [
+        "make check",
+        "make lint",
+        "make test",
+        "make validate"
+      ],
+      "golden_answer": "make check"
+    }
+  ]
+}

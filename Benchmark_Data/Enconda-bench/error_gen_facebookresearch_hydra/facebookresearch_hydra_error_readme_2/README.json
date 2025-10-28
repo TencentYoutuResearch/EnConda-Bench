@@ -1,0 +1,29 @@
+{
+  "readme": "facebookresearch_hydra_error_readme_2",
+  "repo_name": "facebookresearch_hydra",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Hydra 1.1 is the stable version, while the correct stable version is 1.3.",
+      "correction_candidates": [
+        "Correct the version number from 1.1 to 1.3.",
+        "Change the text to 'The latest stable version is available on PyPI'.",
+        "Update the version number to 1.2, as it is also a valid past version.",
+        "Remove the specific version number from the sentence."
+      ],
+      "golden_answer": "Correct the version number from 1.1 to 1.3."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install hydra-core --update` uses an invalid flag `--update`. The correct flag for upgrading a package is `--upgrade`.",
+      "correction_candidates": [
+        "Replace the `--update` flag with `--upgrade`.",
+        "Replace the `--update` flag with its shorthand `-U`.",
+        "Remove the `--update` flag entirely, resulting in `pip install hydra-core`.",
+        "Use the command `python -m pip install --upgrade hydra-core`."
+      ],
+      "golden_answer": "Replace the `--update` flag with `--upgrade`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "tefra_xsdata_error_readme_3_only_E1",
+  "repo_name": "tefra_xsdata",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command is missing the `lxml` extra, which is recommended for performance and is implicitly required by the 'Install all dependencies' comment.",
+      "correction_candidates": [
+        "pip install xsdata[all]",
+        "pip install xsdata[cli,lxml,soap]",
+        "pip install xsdata[cli,soap] && pip install lxml",
+        "pip install xsdata --with-lxml"
+      ],
+      "golden_answer": "pip install xsdata[cli,lxml,soap]"
+    }
+  ]
+}

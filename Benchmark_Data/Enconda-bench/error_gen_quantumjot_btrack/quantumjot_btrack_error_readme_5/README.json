@@ -1,0 +1,29 @@
+{
+  "readme": "quantumjot_btrack_error_readme_5",
+  "repo_name": "quantumjot_btrack",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (opencv-python and numpy with specific versions) to the installation command that are not required by btrack",
+      "correction_candidates": [
+        "pip install btrack",
+        "pip install btrack scipy matplotlib",
+        "conda install btrack",
+        "pip install --upgrade btrack"
+      ],
+      "golden_answer": "pip install btrack"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated and potentially incompatible versions for opencv-python (4.5.2) and numpy (1.19.0) which may conflict with current btrack requirements",
+      "correction_candidates": [
+        "Remove version specifications and let btrack handle its own dependencies",
+        "Update to opencv-python>=4.8.0 numpy>=1.21.0",
+        "Use pip install btrack[all] to get all optional dependencies",
+        "Install with conda-forge channel for better version management"
+      ],
+      "golden_answer": "Remove version specifications and let btrack handle its own dependencies"
+    }
+  ]
+}

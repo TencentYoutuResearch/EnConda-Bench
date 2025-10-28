@@ -1,0 +1,29 @@
+{
+  "readme": "qiboteam_qibo_error_readme_7",
+  "repo_name": "qiboteam_qibo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Installation command contains excessive and potentially problematic pip flags that could cause installation issues",
+      "correction_candidates": [
+        "Use simple 'pip install qibo' command without additional flags",
+        "Remove --user flag and keep other optimization flags",
+        "Use 'pip install qibo --upgrade' with only the upgrade flag",
+        "Replace with 'conda install -c conda-forge qibo' for better dependency management"
+      ],
+      "golden_answer": "Use simple 'pip install qibo' command without additional flags"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Code example uses incorrect method 'circuit.execute()' instead of the correct callable syntax",
+      "correction_candidates": [
+        "Change 'circuit.execute()' to 'circuit()' for proper execution",
+        "Use 'circuit.run()' method for circuit execution",
+        "Replace with 'final_state = circuit.simulate()' method call",
+        "Use 'circuit.measure()' to get the final state"
+      ],
+      "golden_answer": "Change 'circuit.execute()' to 'circuit()' for proper execution"
+    }
+  ]
+}

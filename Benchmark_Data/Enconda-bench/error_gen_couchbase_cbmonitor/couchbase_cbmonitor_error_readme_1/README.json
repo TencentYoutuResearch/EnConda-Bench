@@ -1,0 +1,29 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_1",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python' under prerequisites without a specific version, while the project requires Python 2.7, leading to potential version incompatibility.",
+      "correction_candidates": [
+        "* Python 2.7",
+        "* Python >2.6",
+        "* Python 3",
+        "* Python (2.7 recommended)"
+      ],
+      "golden_answer": "* Python 2.7"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The initial setup command is incorrectly listed as 'make install', which is not a valid target. The correct command is 'make'.",
+      "correction_candidates": [
+        "$ make setup",
+        "$ make",
+        "$ ./install.sh",
+        "$ pip install ."
+      ],
+      "golden_answer": "$ make"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_2",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instructions use the generic `python` command and claim compatibility with any version, which is unlikely and can cause issues. A specific minimum version should be stated.",
+      "correction_candidates": [
+        "Specify that Python 3.8 or higher is required and recommend using the `python3` command.",
+        "The project should be updated to be compatible with Python 2.7.",
+        "Use `py -3 -m venv venv` to ensure a Python 3 interpreter is used on Windows.",
+        "Install the `python-is-python3` package on Debian-based systems to ensure `python` maps to `python3`."
+      ],
+      "golden_answer": "Specify that Python 3.8 or higher is required and recommend using the `python3` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the dependency file `requirements/core.txt` is incorrect. The file is actually named `requirements.txt` and is located in the project root.",
+      "correction_candidates": [
+        "Change the command to `pip install -r requirements.txt`.",
+        "Move the `requirements.txt` file to a new directory `requirements/` and rename it to `core.txt`.",
+        "Create a symbolic link using `ln -s requirements.txt requirements/core.txt`.",
+        "The path is correct, but you must first run `mkdir requirements`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    }
+  ]
+}

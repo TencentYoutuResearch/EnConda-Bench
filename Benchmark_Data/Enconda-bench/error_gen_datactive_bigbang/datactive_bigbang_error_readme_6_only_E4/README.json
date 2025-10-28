@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_6_only_E4",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect directory path 'samples/' instead of 'examples/' for Jupyter notebooks",
+      "correction_candidates": [
+        "Change --notebook-dir=samples/ to --notebook-dir=examples/",
+        "Update the directory reference to match the correct examples folder",
+        "Fix the path to point to the existing examples directory",
+        "Correct samples/ to examples/ in the jupyter command"
+      ],
+      "golden_answer": "Change --notebook-dir=samples/ to --notebook-dir=examples/"
+    }
+  ]
+}

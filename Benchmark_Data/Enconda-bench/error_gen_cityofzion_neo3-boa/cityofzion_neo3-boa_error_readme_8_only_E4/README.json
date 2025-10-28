@@ -1,0 +1,18 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_8_only_E4",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file path with '_wrong' suffix that doesn't exist in the repository",
+      "correction_candidates": [
+        "- [Smart contract examples](/boa3_test/examples)",
+        "- [Smart contract examples](/boa3_test/example)",
+        "- [Smart contract examples](/boa3/examples)",
+        "- [Smart contract examples](/examples)"
+      ],
+      "golden_answer": "- [Smart contract examples](/boa3_test/examples)"
+    }
+  ]
+}

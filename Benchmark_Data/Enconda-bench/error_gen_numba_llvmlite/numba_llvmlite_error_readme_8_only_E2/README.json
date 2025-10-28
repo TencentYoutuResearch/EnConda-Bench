@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_8_only_E2",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect conda parameter --channels instead of --channel (missing 's' makes it invalid)",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ conda install -c numba llvmlite",
+        "$ conda install --channel numba llvmlite",
+        "$ conda install --from-channel=numba llvmlite"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    }
+  ]
+}

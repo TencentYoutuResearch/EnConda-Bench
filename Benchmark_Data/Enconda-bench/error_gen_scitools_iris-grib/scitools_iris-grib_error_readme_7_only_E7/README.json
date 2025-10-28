@@ -1,0 +1,18 @@
+{
+  "readme": "scitools_iris-grib_error_readme_7_only_E7",
+  "repo_name": "scitools_iris-grib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pins to a specific old version 0.15.0 instead of allowing latest version installation",
+      "correction_candidates": [
+        "Remove version pin to use 'pip install iris-grib' for latest version",
+        "Use 'pip install iris-grib>=0.15.0' to allow newer versions",
+        "Change to 'pip install iris-grib~=0.15.0' for compatible patch versions",
+        "Update to 'pip install \"iris-grib>=0.15.0,<1.0.0\"' for safe version range"
+      ],
+      "golden_answer": "Remove version pin to use 'pip install iris-grib' for latest version"
+    }
+  ]
+}

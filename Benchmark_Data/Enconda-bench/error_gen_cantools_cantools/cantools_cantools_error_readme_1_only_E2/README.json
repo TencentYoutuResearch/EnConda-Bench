@@ -1,0 +1,18 @@
+{
+  "readme": "cantools_cantools_error_readme_1_only_E2",
+  "repo_name": "cantools_cantools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for decoding `candump` output uses incorrect shell redirection ('<'), which will not pipe the output of `candump` to the `cantools` script correctly.",
+      "correction_candidates": [
+        "candump vcan0 | python3 -m cantools decode tests/files/dbc/motohawk.dbc",
+        "candump vcan0 > dump.log && python3 -m cantools decode tests/files/dbc/motohawk.dbc < dump.log",
+        "python3 -m cantools decode tests/files/dbc/motohawk.dbc --infile <(candump vcan0)",
+        "python3 -m cantools decode tests/files/dbc/motohawk.dbc $(candump vcan0)"
+      ],
+      "golden_answer": "candump vcan0 | python3 -m cantools decode tests/files/dbc/motohawk.dbc"
+    }
+  ]
+}

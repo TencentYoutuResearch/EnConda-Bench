@@ -1,0 +1,18 @@
+{
+  "readme": "flav-io_flavio_error_readme_5_only_E2",
+  "repo_name": "flav-io_flavio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses deprecated python setup.py install command instead of modern pip installation",
+      "correction_candidates": [
+        "Replace with pip install . to install from source directory",
+        "Use python -m pip install --editable . for development installation",
+        "Change to pip install flavio to install from PyPI",
+        "Use conda install flavio from conda-forge channel"
+      ],
+      "golden_answer": "Replace with pip install . to install from source directory"
+    }
+  ]
+}

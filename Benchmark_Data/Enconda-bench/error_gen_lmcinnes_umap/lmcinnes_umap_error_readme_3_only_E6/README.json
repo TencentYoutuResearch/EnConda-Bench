@@ -1,0 +1,18 @@
+{
+  "readme": "lmcinnes_umap_error_readme_3_only_E6",
+  "repo_name": "lmcinnes_umap",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The suggested order for manual dependency installation is incorrect. It advises running `pip install umap-learn` before using `conda` to install its dependencies, which can lead to installation failures.",
+      "correction_candidates": [
+        "Move the `pip install umap-learn` command to be the last step, after all `conda install` commands.",
+        "Combine all `conda install` commands into one and place it before the `pip install` command.",
+        "Remove the `pip install` command and add `umap-learn` to the conda install command: `conda install ... umap-learn`.",
+        "Use `conda install` for all dependencies first, then use `pip install --no-deps umap-learn`."
+      ],
+      "golden_answer": "Move the `pip install umap-learn` command to be the last step, after all `conda install` commands."
+    }
+  ]
+}

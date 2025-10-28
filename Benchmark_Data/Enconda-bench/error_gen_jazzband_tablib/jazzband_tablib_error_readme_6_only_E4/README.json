@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_tablib_error_readme_6_only_E4",
+  "repo_name": "jazzband_tablib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements.txt file that doesn't exist in the tablib repository",
+      "correction_candidates": [
+        "Remove the reference to requirements.txt and use pip install tablib instead",
+        "Change requirements.txt to setup.py for installation",
+        "Replace with reference to pyproject.toml file",
+        "Use pip install -e . for development installation"
+      ],
+      "golden_answer": "Remove the reference to requirements.txt and use pip install tablib instead"
+    }
+  ]
+}

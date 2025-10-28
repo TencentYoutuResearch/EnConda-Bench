@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_7_only_E4",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent configuration file path 'config/bob-settings.ini'",
+      "correction_candidates": [
+        "Remove the configuration file reference as it's not needed for documentation",
+        "Change to 'Rules.mk' which is the actual Bob configuration file",
+        "Replace with '.bob/config.json' for the correct config location",
+        "Update to 'src/makefile' which contains build configuration"
+      ],
+      "golden_answer": "Change to 'Rules.mk' which is the actual Bob configuration file"
+    }
+  ]
+}

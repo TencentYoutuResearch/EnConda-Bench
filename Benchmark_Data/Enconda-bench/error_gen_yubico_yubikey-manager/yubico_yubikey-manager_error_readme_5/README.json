@@ -1,0 +1,29 @@
+{
+  "readme": "yubico_yubikey-manager_error_readme_5",
+  "repo_name": "yubico_yubikey-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.7 to 2.7, which is incompatible with modern dependencies",
+      "correction_candidates": [
+        "Python 3.7 (or later) library and command line tool for configuring a YubiKey.",
+        "Python 3.6 (or later) library and command line tool for configuring a YubiKey.",
+        "Python 3.8+ library and command line tool for configuring a YubiKey.",
+        "Python 3.x library and command line tool for configuring a YubiKey."
+      ],
+      "golden_answer": "Python 3.7 (or later) library and command line tool for configuring a YubiKey."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (swig pcsc-lite) to the pip install command that should be installed separately via system package manager",
+      "correction_candidates": [
+        "pip install --user yubikey-manager",
+        "pip install yubikey-manager",
+        "pip3 install --user yubikey-manager",
+        "python -m pip install --user yubikey-manager"
+      ],
+      "golden_answer": "pip install --user yubikey-manager"
+    }
+  ]
+}

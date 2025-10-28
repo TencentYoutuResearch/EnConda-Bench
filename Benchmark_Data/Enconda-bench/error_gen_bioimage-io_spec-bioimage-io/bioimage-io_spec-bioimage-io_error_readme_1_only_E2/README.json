@@ -1,0 +1,18 @@
+{
+  "readme": "bioimage-io_spec-bioimage-io_error_readme_1_only_E2",
+  "repo_name": "bioimage-io_spec-bioimage-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The recommended pip package name `bioimageio-core` is incorrect; it should use a dot instead of a hyphen.",
+      "correction_candidates": [
+        "pip install -U bioimageio.core",
+        "pip install -U bioimageio_core",
+        "pip install -U bioimageio[core]",
+        "pip install -U bioimageio"
+      ],
+      "golden_answer": "pip install -U bioimageio.core"
+    }
+  ]
+}

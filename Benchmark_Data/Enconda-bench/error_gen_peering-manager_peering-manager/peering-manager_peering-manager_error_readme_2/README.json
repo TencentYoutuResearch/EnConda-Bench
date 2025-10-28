@@ -1,0 +1,29 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_2",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README specifies an incorrect path `config/requirements.txt` for the requirements file. The file is located in the root directory.",
+      "correction_candidates": [
+        "Change the path from `config/requirements.txt` to `requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `./requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `project/requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `docs/requirements.txt`."
+      ],
+      "golden_answer": "Change the path from `config/requirements.txt` to `requirements.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly advise installing Python packages globally before creating a virtual environment. The correct order is to create the virtual environment first, then install packages inside it.",
+      "correction_candidates": [
+        "Reverse the order of operations: first, instruct the user to create a virtual environment, and then install the requirements inside it.",
+        "Remove the `sudo` from the `pip install` command.",
+        "Advise installing packages into the user's home directory with `pip install --user` before creating a virtual environment.",
+        "Combine the steps into a single instruction: `virtualenv venv && source venv/bin/activate && pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Reverse the order of operations: first, instruct the user to create a virtual environment, and then install the requirements inside it."
+    }
+  ]
+}

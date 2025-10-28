@@ -1,0 +1,18 @@
+{
+  "readme": "bitcart_bitcart_error_readme_4_only_E2",
+  "repo_name": "bitcart_bitcart",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command in step 3 to activate the virtual environment, 'source venv/bin', is incorrect. It should be 'source venv/bin/activate'.",
+      "correction_candidates": [
+        "Change the command to 'source venv/bin/activate'.",
+        "On Windows, the command is 'venv\\Scripts\\activate'.",
+        "Change the command to '. venv/bin/activate'.",
+        "The command should be 'source activate venv'."
+      ],
+      "golden_answer": "Change the command to 'source venv/bin/activate'."
+    }
+  ]
+}

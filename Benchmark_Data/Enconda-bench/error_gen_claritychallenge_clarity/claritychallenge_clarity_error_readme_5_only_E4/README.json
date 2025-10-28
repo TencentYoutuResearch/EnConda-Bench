@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_5_only_E4",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The pip install command references a non-existent requirements.txt file path instead of the current directory",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -r requirements.txt",
+        "pip install -e ./setup.py",
+        "pip install --editable ."
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_8_only_E7",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Home Assistant version (2021.12) that may not reflect actual compatibility requirements",
+      "correction_candidates": [
+        "Update to Home Assistant 2023.1 or newer for current compatibility standards",
+        "Remove specific Home Assistant version requirement and let HACS handle compatibility",
+        "Change to Home Assistant 2022.6+ to match typical custom component requirements",
+        "Specify Home Assistant 2024.1+ for latest feature compatibility"
+      ],
+      "golden_answer": "Remove specific Home Assistant version requirement and let HACS handle compatibility"
+    }
+  ]
+}

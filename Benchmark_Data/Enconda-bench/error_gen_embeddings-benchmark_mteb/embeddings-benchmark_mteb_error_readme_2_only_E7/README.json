@@ -1,0 +1,18 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_2_only_E7",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that 'Python <= 3.6 is required'. This is an outdated and incorrect version constraint that will mislead users into setting up an incompatible environment.",
+      "correction_candidates": [
+        "Change the note to specify 'Python >= 3.8 is required'.",
+        "Change the note to specify 'Python 3.7 is required'.",
+        "Remove the note about the Python version requirement.",
+        "Add a note that Python 2 is not supported."
+      ],
+      "golden_answer": "Remove the note about the Python version requirement."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_3_only_E1",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install all optional dependencies is syntactically incorrect. `pip` does not have an `--all` flag for this purpose.",
+      "correction_candidates": [
+        "pip install mirascope[anthropic,groq,logfire]",
+        "pip install mirascope --with-all",
+        "pip install mirascope[all]",
+        "pip install mirascope --all-extras"
+      ],
+      "golden_answer": "pip install mirascope[all]"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "nrbnlulu_strawberry-django-auth_error_readme_1_only_E1",
+  "repo_name": "nrbnlulu_strawberry-django-auth",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes a non-existent extra `[jwt]`, which will cause pip to fail. The JWT dependencies are included by default.",
+      "correction_candidates": [
+        "pip install strawberry-django-auth",
+        "pip install strawberry-django-auth[pyjwt]",
+        "pip install strawberry-django-auth` and `pip install pyjwt",
+        "pip install strawberry-django-auth jwt"
+      ],
+      "golden_answer": "pip install strawberry-django-auth"
+    }
+  ]
+}

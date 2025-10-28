@@ -1,0 +1,29 @@
+{
+  "readme": "librephotos_librephotos_error_readme_5",
+  "repo_name": "librephotos_librephotos",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 2.7 as minimum version requirement, which is outdated and incompatible with modern dependencies",
+      "correction_candidates": [
+        "Before installing, make sure you have Python 3.8 or later installed on your system.",
+        "Before installing, make sure you have Python 3.6 or later installed on your system.",
+        "Before installing, make sure you have Python 3.7 or later installed on your system.",
+        "Before installing, make sure you have Python 3.9 or later installed on your system."
+      ],
+      "golden_answer": "Before installing, make sure you have Python 3.8 or later installed on your system."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced a non-existent configuration file path for Mapbox configuration",
+      "correction_candidates": [
+        "You need to have an API key. First 50,000 geocode lookups are free every month. Configure the API key in your environment variables.",
+        "You need to have an API key. First 50,000 geocode lookups are free every month. The API key should be set in the application settings.",
+        "You need to have an API key. First 50,000 geocode lookups are free every month. Add the API key to your Docker environment file.",
+        "You need to have an API key. First 50,000 geocode lookups are free every month."
+      ],
+      "golden_answer": "You need to have an API key. First 50,000 geocode lookups are free every month."
+    }
+  ]
+}

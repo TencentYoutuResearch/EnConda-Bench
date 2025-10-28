@@ -1,0 +1,18 @@
+{
+  "readme": "python-markdown_markdown_error_readme_5_only_E7",
+  "repo_name": "python-markdown_markdown",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrectly states the package requires Python 2.7 compatibility when Python 2.7 is no longer supported",
+      "correction_candidates": [
+        "This package requires Python 3.6 or higher.",
+        "This package supports Python 3.x versions only.",
+        "This package requires Python 3.8+ for optimal performance.",
+        "This package is compatible with Python 3.7 and above."
+      ],
+      "golden_answer": "This package requires Python 3.6 or higher."
+    }
+  ]
+}

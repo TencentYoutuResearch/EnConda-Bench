@@ -1,0 +1,29 @@
+{
+  "readme": "ansible_molecule_error_readme_4",
+  "repo_name": "ansible_molecule",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command `molecule --run ...` is invalid. `--run` is not a valid top-level option for the molecule command.",
+      "correction_candidates": [
+        "molecule ...",
+        "molecule test -- ...",
+        "molecule --help",
+        "molecule subcommand --run ..."
+      ],
+      "golden_answer": "molecule ..."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup commands are in the wrong order. The `cd molecule` command is executed before `git clone`, which will fail because the 'molecule' directory does not exist yet.",
+      "correction_candidates": [
+        "The `cd molecule` command should be executed after the `git clone` command, for example: `git clone ... && cd molecule`.",
+        "The `git clone` command should be run from inside the `molecule` directory.",
+        "The `cd molecule` command should be removed.",
+        "A `mkdir molecule` command should be added before `cd molecule`."
+      ],
+      "golden_answer": "The `cd molecule` command should be executed after the `git clone` command, for example: `git clone ... && cd molecule`."
+    }
+  ]
+}

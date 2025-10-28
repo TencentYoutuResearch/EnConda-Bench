@@ -1,0 +1,18 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_1_only_E2",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to enforce analysis of all bonds, `lobsterpy automatic-plot --analyse-all-bonds`, uses a non-existent flag.",
+      "correction_candidates": [
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --all-bonds``.",
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --bonds all``.",
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot -a``.",
+        "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --allbonds``."
+      ],
+      "golden_answer": "You can enforce an analysis of all bonds by using ``lobsterpy automatic-plot --allbonds``."
+    }
+  ]
+}

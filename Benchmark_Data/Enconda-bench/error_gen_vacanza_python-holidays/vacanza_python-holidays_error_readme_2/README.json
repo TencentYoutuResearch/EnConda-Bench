@@ -1,0 +1,29 @@
+{
+  "readme": "vacanza_python-holidays_error_readme_2",
+  "repo_name": "vacanza_python-holidays",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions show the `pip install` command before the virtual environment is created and activated. This will install the package in the global Python environment, not the isolated one.",
+      "correction_candidates": [
+        "Move the '$ pip install --upgrade holidays' command to be the last line in the sequence.",
+        "Combine the commands into a single line: '$ python3 -m venv venv && source venv/bin/activate && pip install --upgrade holidays'.",
+        "Replace '$ source venv/bin/activate' with '$ . venv/bin/activate'.",
+        "Remove the virtual environment commands, as they are optional."
+      ],
+      "golden_answer": "Move the '$ pip install --upgrade holidays' command to be the last line in the sequence."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library only supports Python 3.7. The PyPI badge shows support for a wider range of Python versions (3.8, 3.9, 3.10, 3.11, 3.12).",
+      "correction_candidates": [
+        "Change the sentence to 'Note: This library currently only supports Python 3.7 and above.'",
+        "Remove the sentence 'Note: This library currently only supports Python 3.7.'",
+        "Change the sentence to 'Note: This library supports Python 2.7 and 3.7.'",
+        "Update the Python versions badge to only show support for Python 3.7."
+      ],
+      "golden_answer": "Remove the sentence 'Note: This library currently only supports Python 3.7.'"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_7",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary Django and psycopg2-binary dependencies added to PostgreSQL installation command",
+      "correction_candidates": [
+        "pip install 'piccolo[postgres]'",
+        "pip install 'piccolo[postgres]' psycopg2-binary",
+        "pip install piccolo django psycopg2-binary",
+        "pip install --upgrade 'piccolo[postgres]' django"
+      ],
+      "golden_answer": "pip install 'piccolo[postgres]'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'piccolo-admin asgi new' instead of 'piccolo asgi new'",
+      "correction_candidates": [
+        "piccolo asgi new",
+        "piccolo-cli asgi new",
+        "piccolo admin asgi new",
+        "piccolo scaffold asgi new"
+      ],
+      "golden_answer": "piccolo asgi new"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pytest-dev_pytest-xdist_error_readme_1",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command uses an incorrect package name `pytest_xdist` instead of the correct `pytest-xdist`.",
+      "correction_candidates": [
+        "Change `pip install pytest_xdist` to `pip install pytest-xdist`.",
+        "Change `pip install pytest_xdist` to `pip install xdist`.",
+        "Change `pip install pytest_xdist` to `python -m pip install pytest-xdist`.",
+        "The package should be installed via conda: `conda install pytest-xdist`."
+      ],
+      "golden_answer": "Change `pip install pytest_xdist` to `pip install pytest-xdist`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pytest --n auto` is incorrect; it should use a single dash `-n` for the short option.",
+      "correction_candidates": [
+        "Change `pytest --n auto` to `pytest -n auto`.",
+        "Change `pytest --n auto` to `pytest --dist=auto`.",
+        "Change `pytest --n auto` to `pytest -n=auto`.",
+        "Change `pytest --n auto` to `pytest --numprocesses=auto`."
+      ],
+      "golden_answer": "Change `pytest --n auto` to `pytest -n auto`."
+    }
+  ]
+}

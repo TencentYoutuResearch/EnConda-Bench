@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_2_only_E1",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that `fonttools` must be installed manually before `fontbakery`. This is an unnecessary step that can cause dependency conflicts, as `fonttools` is installed automatically as a dependency.",
+      "correction_candidates": [
+        "Run `pip install fonttools fontbakery` to install both at once.",
+        "Remove the instruction to install `fonttools` manually. The `fontbakery` package will automatically install the correct version of `fonttools`.",
+        "Run `pip install fonttools --no-deps` before installing `fontbakery`.",
+        "Ensure `fonttools` is version 4.0 or higher before installing `fontbakery`."
+      ],
+      "golden_answer": "Remove the instruction to install `fonttools` manually. The `fontbakery` package will automatically install the correct version of `fonttools`."
+    }
+  ]
+}

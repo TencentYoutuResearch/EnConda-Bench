@@ -1,0 +1,18 @@
+{
+  "readme": "tortoise_tortoise-orm_error_readme_3_only_E7",
+  "repo_name": "tortoise_tortoise-orm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that the supported Python version is `>= 3.6`, but the correct minimum version is `3.8`. Using an older version like 3.6 or 3.7 will lead to compatibility issues.",
+      "correction_candidates": [
+        "Tortoise ORM is supported on CPython >= 3.8",
+        "Tortoise ORM is supported on Python >= 3.7",
+        "Tortoise ORM is supported on CPython >= 3.7 for SQLite, and CPython >= 3.8 for other databases.",
+        "Tortoise ORM is supported on any Python version with asyncio support."
+      ],
+      "golden_answer": "Tortoise ORM is supported on CPython >= 3.8"
+    }
+  ]
+}

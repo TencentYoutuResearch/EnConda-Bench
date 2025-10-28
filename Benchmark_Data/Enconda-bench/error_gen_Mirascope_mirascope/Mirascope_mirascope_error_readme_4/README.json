@@ -1,0 +1,29 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_4",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The Python code block in the 'Chaining' section is missing its closing backticks, causing it to render incorrectly and merge with the following text.",
+      "correction_candidates": [
+        "Add `python` after the opening triple backticks.",
+        "Add a blank line before the closing triple backticks.",
+        "Add closing triple backticks (```) at the end of the code block, before the 'Of course...' paragraph.",
+        "Indent the entire code block by four spaces."
+      ],
+      "golden_answer": "Add closing triple backticks (```) at the end of the code block, before the 'Of course...' paragraph."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The method to extract structured data is incorrect. The example uses `.call()` which returns a `OpenAICallResponse` object, not the extracted `TaskDetails` model. This will cause the `isinstance` assertion to fail.",
+      "correction_candidates": [
+        "task_details = TaskExtractor(task=task).extract().model_dump()",
+        "task_details = TaskExtractor(task=task).extract()",
+        "task_details = TaskExtractor(task=task).call().tool",
+        "task_details = TaskExtractor.extract(task=task)"
+      ],
+      "golden_answer": "task_details = TaskExtractor(task=task).extract()"
+    }
+  ]
+}

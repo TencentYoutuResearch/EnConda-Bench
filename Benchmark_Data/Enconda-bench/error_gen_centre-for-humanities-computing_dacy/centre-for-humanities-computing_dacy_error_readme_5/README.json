@@ -1,0 +1,29 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_5",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned specific version 2.5.0 in pip install command which may not exist or be compatible",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy>=2.0.0",
+        "pip install dacy~=2.0",
+        "pip install dacy[all]"
+      ],
+      "golden_answer": "pip install dacy"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect method 'download' instead of 'load' for loading a model",
+      "correction_candidates": [
+        "nlp = dacy.load(\"medium\")",
+        "nlp = dacy.get_model(\"medium\")",
+        "nlp = dacy.install(\"medium\")",
+        "nlp = dacy.fetch(\"medium\")"
+      ],
+      "golden_answer": "nlp = dacy.load(\"medium\")"
+    }
+  ]
+}

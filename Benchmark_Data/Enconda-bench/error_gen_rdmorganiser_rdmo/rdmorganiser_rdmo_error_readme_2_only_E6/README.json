@@ -1,0 +1,18 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_2_only_E6",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. It instructs to install packages with `pip` before creating and activating the virtual environment, which would install them globally.",
+      "correction_candidates": [
+        "Swap step 2 and step 3 to create the virtual environment before installing packages.",
+        "Combine step 2 and step 3 into a single step.",
+        "Add `sudo` to the `pip install` command to ensure global installation.",
+        "Remove the virtual environment creation step (step 3)."
+      ],
+      "golden_answer": "Swap step 2 and step 3 to create the virtual environment before installing packages."
+    }
+  ]
+}

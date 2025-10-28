@@ -1,0 +1,18 @@
+{
+  "readme": "hhursev_recipe-scrapers_error_readme_1_only_E2",
+  "repo_name": "hhursev_recipe-scrapers",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unittests, `python unittest`, is syntactically incorrect. It should use the `-m` flag to execute the `unittest` module.",
+      "correction_candidates": [
+        "Replace `python unittest` with `python -m unittest discover`.",
+        "Replace `python unittest` with `python test.py`.",
+        "Replace `python unittest` with `python -m unittest`.",
+        "Replace `python unittest` with `pytest`."
+      ],
+      "golden_answer": "Replace `python unittest` with `python -m unittest`."
+    }
+  ]
+}

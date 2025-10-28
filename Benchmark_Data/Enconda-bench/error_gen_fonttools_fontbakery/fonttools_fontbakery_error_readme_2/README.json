@@ -1,0 +1,29 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_2",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that `fonttools` must be installed manually before `fontbakery`. This is an unnecessary step that can cause dependency conflicts, as `fonttools` is installed automatically as a dependency.",
+      "correction_candidates": [
+        "Run `pip install fonttools fontbakery` to install both at once.",
+        "Remove the instruction to install `fonttools` manually. The `fontbakery` package will automatically install the correct version of `fonttools`.",
+        "Run `pip install fonttools --no-deps` before installing `fontbakery`.",
+        "Ensure `fonttools` is version 4.0 or higher before installing `fontbakery`."
+      ],
+      "golden_answer": "Remove the instruction to install `fonttools` manually. The `fontbakery` package will automatically install the correct version of `fonttools`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the tool supports `metadata.json` files for project metadata, but it actually supports Protocol Buffer files named `METADATA.pb`.",
+      "correction_candidates": [
+        "Change `metadata.json` to `METADATA.proto`.",
+        "Change `metadata.json` to `METADATA.pb`.",
+        "Change `metadata.json` to `font-metadata.json`.",
+        "Change `metadata.json` to `METADATA.xml`."
+      ],
+      "golden_answer": "Change `metadata.json` to `METADATA.pb`."
+    }
+  ]
+}

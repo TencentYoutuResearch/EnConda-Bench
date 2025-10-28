@@ -1,0 +1,18 @@
+{
+  "readme": "eylles_pywal16_error_readme_4_only_E2",
+  "repo_name": "eylles_pywal16",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for applying a theme uses an incorrect flag '--apply-theme'.",
+      "correction_candidates": [
+        "To apply one of the built-in themes, run:\n`wal -t \"solarized-dark\"`",
+        "To apply one of the built-in themes, run:\n`wal --theme \"solarized-dark\"`",
+        "To apply one of the built-in themes, run:\n`wal theme \"solarized-dark\"`",
+        "To apply one of the built-in themes, run:\n`wal apply \"solarized-dark\"`"
+      ],
+      "golden_answer": "To apply one of the built-in themes, run:\n`wal -t \"solarized-dark\"`"
+    }
+  ]
+}

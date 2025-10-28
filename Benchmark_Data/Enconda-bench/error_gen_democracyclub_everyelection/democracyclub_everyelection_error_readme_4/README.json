@@ -1,0 +1,29 @@
+{
+  "readme": "democracyclub_everyelection_error_readme_4",
+  "repo_name": "democracyclub_everyelection",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The installation instructions are presented as a single block of commands and a crucial `cd EveryElection` step is missing after `git clone`, causing subsequent commands to fail because they are run in the wrong directory.",
+      "correction_candidates": [
+        "Add `cd EveryElection` after the `git clone` command.",
+        "The commands should be run from the parent directory of `EveryElection`.",
+        "The commands should be separated into numbered steps for clarity.",
+        "A `cd EveryElection` command needs to be added after the `git clone` command, and the instructions should be broken into numbered steps for clarity."
+      ],
+      "golden_answer": "A `cd EveryElection` command needs to be added after the `git clone` command, and the instructions should be broken into numbered steps for clarity."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction `pip install django` is redundant and unnecessary because Django is already listed as a dependency in `requirements.txt`.",
+      "correction_candidates": [
+        "The `pip install django` command should be removed.",
+        "You should specify a version, e.g., `pip install django==3.2`.",
+        "The `pip install django` command should be moved after `pip install -r requirements.txt`.",
+        "`requirements.txt` should be edited to remove the `django` line."
+      ],
+      "golden_answer": "The `pip install django` command should be removed."
+    }
+  ]
+}

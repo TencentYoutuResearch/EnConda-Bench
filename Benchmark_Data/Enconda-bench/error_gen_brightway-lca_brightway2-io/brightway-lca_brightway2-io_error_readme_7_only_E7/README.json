@@ -1,0 +1,18 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_7_only_E7",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "States the package requires Python 2.7 which is outdated and incorrect for modern brightway2-io",
+      "correction_candidates": [
+        "The package requires Python 3.8 or later for optimal performance",
+        "The package requires Python 3.7+ for optimal performance",
+        "The package requires Python 3.6 or later for optimal performance",
+        "The package requires Python 3.9 or later for optimal performance"
+      ],
+      "golden_answer": "The package requires Python 3.8 or later for optimal performance"
+    }
+  ]
+}

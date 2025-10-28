@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_compserv_hknweb_error_readme_merge_k2",
+  "repo_name": "compserv_hknweb",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of activating the virtual environment and installing dependencies is incorrect. `poetry install` must be run before `poetry shell` to set up the environment that the shell command activates.",
+      "correction_candidates": [
+        "Swap the order of steps 3 and 4. First run `poetry install`, then `poetry shell`.",
+        "Combine the steps into one: `poetry run install && poetry shell`.",
+        "Remove step 3 (`poetry shell`) as `poetry install` automatically activates the environment.",
+        "Run `poetry shell` first, then run `pip install -r requirements.txt` inside the shell."
+      ],
+      "golden_answer": "Swap the order of steps 3 and 4. First run `poetry install`, then `poetry shell`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a superuser is incorrect. The Django management command `newuser` does not exist.",
+      "correction_candidates": [
+        "Replace `python manage.py newuser` with `django-admin createsuperuser`.",
+        "Replace `python manage.py newuser` with `python manage.py new_superuser`.",
+        "Replace `python manage.py newuser` with `python manage.py createsuperuser`.",
+        "Replace `python manage.py newuser` with `poetry run createsuperuser`."
+      ],
+      "golden_answer": "Replace `python manage.py newuser` with `python manage.py createsuperuser`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is not specified precisely, stating only 'Python 3'. This can lead to compatibility issues as the project depends on Python 3.9.",
+      "correction_candidates": [
+        "Specify a compatible range: 'Ensure you have Python 3.8 or higher installed on your system.'",
+        "Specify the required version: 'Ensure you have Python 3.9 installed on your system.'",
+        "Add a note to check the `pyproject.toml` file for the exact Python version.",
+        "Recommend using the latest version: 'Ensure you have the latest version of Python 3 installed.'"
+      ],
+      "golden_answer": "Specify the required version: 'Ensure you have Python 3.9 installed on your system.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install -r requirements.txt` is incorrect for a Poetry project, which does not use a `requirements.txt` file by default. Dependencies are managed by `pyproject.toml` and should be installed with `poetry install`.",
+      "correction_candidates": [
+        "Replace `pip install -r requirements.txt` with `poetry install`.",
+        "First, generate a `requirements.txt` file with `poetry export -f requirements.txt --output requirements.txt`, then run `pip install -r requirements.txt`.",
+        "Replace `pip install -r requirements.txt` with `pip install poetry`.",
+        "Replace `pip install -r requirements.txt` with `poetry update`."
+      ],
+      "golden_answer": "Replace `pip install -r requirements.txt` with `poetry install`."
+    }
+  ]
+}

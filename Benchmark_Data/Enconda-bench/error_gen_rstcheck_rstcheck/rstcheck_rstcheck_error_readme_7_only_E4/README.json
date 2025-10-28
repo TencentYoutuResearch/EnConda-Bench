@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_7_only_E4",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Usage example references non-existent file wrong_cpp.rst instead of the actual file bad_cpp.rst shown in the code block",
+      "correction_candidates": [
+        "$ rstcheck bad_cpp.rst",
+        "$ rstcheck test_cpp.rst",
+        "$ rstcheck example_cpp.rst",
+        "$ rstcheck sample_cpp.rst"
+      ],
+      "golden_answer": "$ rstcheck bad_cpp.rst"
+    }
+  ]
+}

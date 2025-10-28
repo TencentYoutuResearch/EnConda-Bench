@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_convexengineering_gpkit_error_readme_merge_k4",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.7 is required, which is an outdated and overly restrictive version requirement.",
+      "correction_candidates": [
+        "Change the sentence to 'It requires Python 3.6 or newer to run.'",
+        "Remove the sentence 'It requires Python 2.7 to run.'",
+        "Change the sentence to 'It is compatible with both Python 2 and Python 3.'",
+        "Change the sentence to 'It requires Python 3.7 to run.'"
+      ],
+      "golden_answer": "Remove the sentence 'It requires Python 2.7 to run.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install gp-kit` is incorrect; the package name on PyPI is `gpkit`.",
+      "correction_candidates": [
+        "`pip install gpkit`",
+        "`pip install --upgrade gpkit`",
+        "`python -m pip install gpkit`",
+        "`conda install -c conda-forge gpkit`"
+      ],
+      "golden_answer": "`pip install gpkit`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The solver 'cvxopt' is misspelled as 'cvx-opt' in the text, which could confuse users searching for the package.",
+      "correction_candidates": [
+        "Change '[cvx-opt](http://cvxopt.org/)' to '[cvxopt](http://cvxopt.org/)'",
+        "Change '[cvx-opt](http://cvxopt.org/)' to '[CVXOPT](http://cvxopt.org/)'",
+        "Remove the mention of specific solvers and direct users to the documentation.",
+        "Change the link to point to the correct PyPI page for cvxopt."
+      ],
+      "golden_answer": "Change '[cvx-opt](http://cvxopt.org/)' to '[cvxopt](http://cvxopt.org/)'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The Quick Install guide incorrectly instructs users to install GPkit before installing a required solver, which should be done first.",
+      "correction_candidates": [
+        "Combine the two steps into one: `pip install mosek gpkit`",
+        "Swap the order of the two installation steps.",
+        "Remove the quick install guide and link to the official installation documentation.",
+        "Add a step to create a virtual environment before installation."
+      ],
+      "golden_answer": "Swap the order of the two installation steps."
+    }
+  ]
+}

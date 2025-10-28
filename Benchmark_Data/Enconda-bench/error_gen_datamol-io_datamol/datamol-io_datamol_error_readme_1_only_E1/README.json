@@ -1,0 +1,18 @@
+{
+  "readme": "datamol-io_datamol_error_readme_1_only_E1",
+  "repo_name": "datamol-io_datamol",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest using `pip install datamol` but fail to specify how to install the mandatory RDKit dependency, which cannot be installed straightforwardly from PyPI.",
+      "correction_candidates": [
+        "pip install datamol rdkit",
+        "conda install -c conda-forge rdkit && pip install datamol",
+        "mamba install -c conda-forge datamol",
+        "pip install datamol; pip install rdkit-pypi"
+      ],
+      "golden_answer": "mamba install -c conda-forge datamol"
+    }
+  ]
+}

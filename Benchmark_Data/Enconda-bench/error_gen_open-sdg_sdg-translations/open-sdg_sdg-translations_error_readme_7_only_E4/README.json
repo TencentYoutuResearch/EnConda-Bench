@@ -1,0 +1,18 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_7_only_E4",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References translate.py script file that doesn't exist in the project structure",
+      "correction_candidates": [
+        "python scripts/build.py --input data/ --output translations/",
+        "python -m sdg_translations --input data/ --output translations/",
+        "python setup.py build --input data/ --output translations/",
+        "python main.py --input data/ --output translations/"
+      ],
+      "golden_answer": "python -m sdg_translations --input data/ --output translations/"
+    }
+  ]
+}

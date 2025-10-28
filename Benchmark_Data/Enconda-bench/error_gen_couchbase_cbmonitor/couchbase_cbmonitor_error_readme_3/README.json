@@ -1,0 +1,29 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_3",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Running webapp' section is placed before the 'Initial setup' section, which is a logical error as the application must be set up before it can be run.",
+      "correction_candidates": [
+        "Swap the \"Initial setup\" and \"Running webapp\" sections.",
+        "Combine the \"Initial setup\" and \"Running webapp\" sections into one \"Usage\" section.",
+        "Add a note at the top specifying to follow setup instructions first.",
+        "Rename \"Initial setup\" to \"Installation\" and move it to the top."
+      ],
+      "golden_answer": "Swap the \"Initial setup\" and \"Running webapp\" sections."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The setup command 'make -f build.mk' incorrectly references a non-existent 'build.mk' file instead of using the default Makefile.",
+      "correction_candidates": [
+        "Change the command to '$ make'.",
+        "Create a 'build.mk' file that includes the 'Makefile'.",
+        "Change the command to '$ make -f Makefile'.",
+        "Rename the project's 'Makefile' to 'build.mk'."
+      ],
+      "golden_answer": "Change the command to '$ make'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_6_only_E4",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced a non-existent config file path ./config/photutils.ini",
+      "correction_candidates": [
+        "Remove the config file reference as Photutils doesn't use external config files",
+        "Change to ~/.photutils/config.ini for user configuration directory",
+        "Use /etc/photutils.conf for system-wide configuration",
+        "Reference the correct path as ~/.config/photutils/settings.ini"
+      ],
+      "golden_answer": "Remove the config file reference as Photutils doesn't use external config files"
+    }
+  ]
+}

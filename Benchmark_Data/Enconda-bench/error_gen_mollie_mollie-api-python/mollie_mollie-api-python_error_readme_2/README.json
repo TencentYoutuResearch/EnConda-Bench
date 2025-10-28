@@ -1,0 +1,29 @@
+{
+  "readme": "mollie_mollie-api-python_error_readme_2",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Requirements' section specifies 'Python >= 3.6', but the library's v3 client actually requires Python 3.8 or newer. Using an older Python version like 3.6 or 3.7 will lead to installation or runtime errors.",
+      "correction_candidates": [
+        "Change the requirement to 'Python >= 3.8'.",
+        "Change the requirement to 'Python 3.8+'.",
+        "Change the requirement to 'Python >= 3.7'.",
+        "Add a note saying 'Python 3.6 and 3.7 are supported with older versions of this client'."
+      ],
+      "golden_answer": "Change the requirement to 'Python >= 3.8'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Installation' section for running examples from a git checkout, the command to install the `mollie-api-python` package itself from the local source code is missing. Without it, `import mollie` will fail.",
+      "correction_candidates": [
+        "Add `$ pip install -e .` after `$ pip install flask`.",
+        "Add `$ pip install .` after `$ pip install flask`.",
+        "Add `$ python setup.py install` after `$ pip install flask`.",
+        "Change `$ pip install flask` to `$ pip install flask mollie-api-python`."
+      ],
+      "golden_answer": "Add `$ pip install -e .` after `$ pip install flask`."
+    }
+  ]
+}

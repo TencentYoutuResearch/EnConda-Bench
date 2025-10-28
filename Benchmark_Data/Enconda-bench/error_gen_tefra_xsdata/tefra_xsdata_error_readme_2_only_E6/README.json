@@ -1,0 +1,18 @@
+{
+  "readme": "tefra_xsdata_error_readme_2_only_E6",
+  "repo_name": "tefra_xsdata",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands is incorrect. The `xsdata` command is shown before the `pip install` command, but `xsdata` must be installed before it can be executed.",
+      "correction_candidates": [
+        "The `xsdata` command should be run from a different directory.",
+        "The commands should be combined: `pip install xsdata[cli,lxml,soap] && xsdata ...`",
+        "Run the `pip install` command before the `xsdata` command.",
+        "You need to run `python setup.py install` first."
+      ],
+      "golden_answer": "Run the `pip install` command before the `xsdata` command."
+    }
+  ]
+}

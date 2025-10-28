@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_distutils_error_readme_6_only_E4",
+  "repo_name": "pypa_distutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a config file path ./config/settings.ini that likely doesn't exist",
+      "correction_candidates": [
+        "Remove the --config=./config/settings.ini parameter entirely",
+        "Change to --config=setup.cfg",
+        "Change to --config=pyproject.toml",
+        "Use python setup.py install --user instead"
+      ],
+      "golden_answer": "Remove the --config=./config/settings.ini parameter entirely"
+    }
+  ]
+}

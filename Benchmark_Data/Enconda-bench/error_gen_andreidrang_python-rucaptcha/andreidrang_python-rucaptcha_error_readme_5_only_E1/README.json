@@ -1,0 +1,18 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_5_only_E1",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation command includes deprecated pydantic version that conflicts with v6.0 changelog stating library stopped using pydantic",
+      "correction_candidates": [
+        "pip install python-rucaptcha",
+        "pip install python-rucaptcha msgspec",
+        "pip install python-rucaptcha pydantic",
+        "pip install python-rucaptcha --upgrade"
+      ],
+      "golden_answer": "pip install python-rucaptcha"
+    }
+  ]
+}

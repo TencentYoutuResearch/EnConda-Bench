@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_scvelo_error_readme_8_only_E2",
+  "repo_name": "theislab_scvelo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "References non-existent scvelo.setup module and configure-cuda command that don't exist",
+      "correction_candidates": [
+        "Remove the CUDA configuration command entirely as it's not needed",
+        "Replace with python -c \"import torch; print(torch.cuda.is_available())\" to check GPU",
+        "Change to python -m pip install --upgrade scvelo[cuda]",
+        "Update to python setup.py install --gpu for GPU configuration"
+      ],
+      "golden_answer": "Remove the CUDA configuration command entirely as it's not needed"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "strinking_futaba_error_readme_4_only_E8",
+  "repo_name": "strinking_futaba",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "A critical instruction for configuring the database URL in `config.toml` is missing, leaving the user to guess the correct value.",
+      "correction_candidates": [
+        "Add a comment `# set database.url to \"postgresql://postgres:password@localhost\"` after the `cp` command.",
+        "Add a note saying 'You must edit config.toml to set the correct database connection string.'",
+        "Modify the `cp` command to `sed 's/database.url = .*/database.url = \"postgresql:\\/\\/postgres:password@localhost\"/' misc/config.toml > config.toml`.",
+        "Add a comment `# configure the database URL in config.toml`."
+      ],
+      "golden_answer": "Add a comment `# set database.url to \"postgresql://postgres:password@localhost\"` after the `cp` command."
+    }
+  ]
+}

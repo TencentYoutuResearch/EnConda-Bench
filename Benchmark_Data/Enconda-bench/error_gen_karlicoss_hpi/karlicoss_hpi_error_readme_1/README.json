@@ -1,0 +1,29 @@
+{
+  "readme": "karlicoss_hpi_error_readme_1",
+  "repo_name": "karlicoss_hpi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `jq` command in the git commit example is missing quotes around the JSON key, causing a syntax error.",
+      "correction_candidates": [
+        "... | jq --raw '.committed_dt' | ...",
+        "... | jq '.committed_dt' -r | ...",
+        "... | jq -r .committed_dt | ...",
+        "... | jq -r committed_dt | ..."
+      ],
+      "golden_answer": "... | jq '.committed_dt' -r | ..."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that all data must be placed in a central `/data/hpi` directory, which is not a default and will cause modules to fail to find the data.",
+      "correction_candidates": [
+        "Remove the sentence 'By default, all modules expect your data to be located in the `/data/hpi` directory, so make sure to place it there.' Data paths are configured per-module.",
+        "Change the directory from `/data/hpi` to `~/hpi_data` as that is the correct default.",
+        "Add instructions to create the `/data/hpi` directory with `sudo mkdir -p /data/hpi && sudo chown $USER /data/hpi`.",
+        "The data path should be set using an environment variable: `export HPI_DATA_PATH=/data/hpi`."
+      ],
+      "golden_answer": "Remove the sentence 'By default, all modules expect your data to be located in the `/data/hpi` directory, so make sure to place it there.' Data paths are configured per-module."
+    }
+  ]
+}

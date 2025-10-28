@@ -1,0 +1,18 @@
+{
+  "readme": "xknx_xknx_error_readme_1_only_E7",
+  "repo_name": "xknx_xknx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3' which is too vague and may lead to using an unsupported older version, as the project requires Python 3.10 or newer.",
+      "correction_candidates": [
+        "You will need the latest version of Python 3 in order to use XKNX.",
+        "You will need at least Python 3.10 in order to use XKNX.",
+        "You will need Python 3.9 or newer in order to use XKNX.",
+        "You will need Python 3.10 in order to use XKNX."
+      ],
+      "golden_answer": "You will need at least Python 3.10 in order to use XKNX."
+    }
+  ]
+}

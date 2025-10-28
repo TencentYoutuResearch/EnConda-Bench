@@ -1,0 +1,29 @@
+{
+  "readme": "pytest-dev_pytest-xdist_error_readme_4",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes `pytest-n`, which is an unnecessary and non-existent package.",
+      "correction_candidates": [
+        "Change `pip install pytest-xdist pytest-n` to `pip install pytest-xdist`.",
+        "Change `pip install pytest-xdist pytest-n` to `pip install pytest pytest-xdist`.",
+        "Change `pip install pytest-xdist pytest-n` to `pip install 'pytest-xdist[n]'`.",
+        "Run the commands separately: `pip install pytest-xdist` and then `pip install pytest-n`."
+      ],
+      "golden_answer": "Change `pip install pytest-xdist pytest-n` to `pip install pytest-xdist`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to a non-existent configuration file `xdist.ini`. Pytest-xdist is configured within pytest's standard configuration files like `pytest.ini` or `pyproject.toml`.",
+      "correction_candidates": [
+        "Remove the sentence 'For advanced configuration, create and modify the `xdist.ini` file in your project root.'",
+        "Change `xdist.ini` to `pytest.ini`.",
+        "Change `xdist.ini` to `tox.ini`.",
+        "Change the sentence to 'Configuration is handled automatically and cannot be changed.'"
+      ],
+      "golden_answer": "Remove the sentence 'For advanced configuration, create and modify the `xdist.ini` file in your project root.'"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "error_gen_googlefonts_gftools_error_readme_merge_k2",
+  "repo_name": "googlefonts_gftools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install `gftools` with the 'qa' extras is incorrect. It attempts to install a non-existent package `gftools-qa` instead of using the correct pip syntax for extras.",
+      "correction_candidates": [
+        "pip install gftools --with-qa",
+        "pip install gftools && pip install gftools-qa",
+        "pip install 'gftools[qa]'",
+        "pip install gftools --install-option=\"--with-qa\""
+      ],
+      "golden_answer": "pip install 'gftools[qa]'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path specified for the Google Fonts API key file, `/etc/gftools/api.key`, is incorrect and will not be found by the tools. This path also typically requires root permissions to write to.",
+      "correction_candidates": [
+        "You will then need to create a new text file located on your system at ~/.gftools/api_key",
+        "You will then need to create a new text file located on your system at `~/.gf-api-key` (where ~ is your home directory)",
+        "You will then need to create a new text file located on your system at /var/lib/gftools/api.key",
+        "You will then need to export an environment variable GF_API_KEY with your key."
+      ],
+      "golden_answer": "You will then need to create a new text file located on your system at `~/.gf-api-key` (where ~ is your home directory)"
+    }
+  ]
+}

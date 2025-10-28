@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_pokepetter_ursina_error_readme_merge_k2",
+  "repo_name": "pokepetter_ursina",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is too vague ('Python 3 or newer'), which may lead users to attempt installation on unsupported versions like Python 3.5.",
+      "correction_candidates": [
+        "Change 'Python 3 or newer' to 'Python 3.6 or newer'.",
+        "Change 'Python 3 or newer' to 'Python >= 3.6'.",
+        "Change 'Python 3 or newer' to 'The latest version of Python 3'.",
+        "Change 'Python 3 or newer' to 'Python 3.6, 3.7, 3.8, 3.9, or 3.10'."
+      ],
+      "golden_answer": "Change 'Python 3 or newer' to 'Python 3.6 or newer'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command `pip install ursina-engine` is incorrect; the package name is `ursina`.",
+      "correction_candidates": [
+        "Change `pip install ursina-engine` to `pip install ursina`.",
+        "Change `pip install ursina-engine` to `pip install ursina --stable`.",
+        "Change `pip install ursina-engine` to `python -m pip install ursina`.",
+        "Change `pip install ursina-engine` to `pip get ursina`."
+      ],
+      "golden_answer": "Change `pip install ursina-engine` to `pip install ursina`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies, `pip install ursina --extras`, is syntactically incorrect. The correct syntax uses brackets.",
+      "correction_candidates": [
+        "Change `pip install ursina --extras` to `pip install ursina[extras]`.",
+        "Change `pip install ursina --extras` to `pip install ursina --with-extras`.",
+        "Change `pip install ursina --extras` to `pip install ursina --all`.",
+        "Change `pip install ursina --extras` to `pip install panda3d pillow psd-tools pyperclip`."
+      ],
+      "golden_answer": "Change `pip install ursina --extras` to `pip install ursina[extras]`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to run the example script, `python games/ursina_game.py`, incorrectly assumes the file is in a `games` subdirectory that was never mentioned or created.",
+      "correction_candidates": [
+        "Change `python games/ursina_game.py` to `python ursina_game.py`.",
+        "Change `python games/ursina_game.py` to `python -m ursina_game`.",
+        "Add a step: 'Create a folder named `games` and place your file inside it.'",
+        "Change `python games/ursina_game.py` to `py ursina_game.py`."
+      ],
+      "golden_answer": "Change `python games/ursina_game.py` to `python ursina_game.py`."
+    }
+  ]
+}

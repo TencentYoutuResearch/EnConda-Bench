@@ -1,0 +1,18 @@
+{
+  "readme": "google-deepmind_acme_error_readme_3_only_E2",
+  "repo_name": "google-deepmind_acme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment is incorrect (`source acme/activate`). The correct path to the activation script is `acme/bin/activate`.",
+      "correction_candidates": [
+        ". acme/bin/activate",
+        "source acme/bin/activate",
+        "acme\\Scripts\\activate.bat",
+        "cd acme && source bin/activate"
+      ],
+      "golden_answer": "source acme/bin/activate"
+    }
+  ]
+}

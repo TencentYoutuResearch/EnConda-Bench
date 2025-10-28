@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_6_only_E6",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - installing pip package before system dependencies",
+      "correction_candidates": [
+        "First, create a virtual environment:\n```bash\npython -m venv venv\nsource venv/bin/activate\npip install pylabrobot\n```",
+        "First, install the required system dependencies:\n```bash\nsudo apt-get install python3-dev libusb-1.0-0-dev\n```\nThen install PyLabRobot:\n```bash\npip install pylabrobot\n```",
+        "Install PyLabRobot using conda:\n```bash\nconda install -c conda-forge pylabrobot\n```",
+        "First, update your system:\n```bash\nsudo apt-get update\nsudo apt-get install python3-dev libusb-1.0-0-dev\npip install pylabrobot\n```"
+      ],
+      "golden_answer": "First, install the required system dependencies:\n```bash\nsudo apt-get install python3-dev libusb-1.0-0-dev\n```\nThen install PyLabRobot:\n```bash\npip install pylabrobot\n```"
+    }
+  ]
+}

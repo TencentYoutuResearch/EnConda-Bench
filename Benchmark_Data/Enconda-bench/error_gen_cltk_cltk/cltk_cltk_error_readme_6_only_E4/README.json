@@ -1,0 +1,18 @@
+{
+  "readme": "cltk_cltk_error_readme_6_only_E4",
+  "repo_name": "cltk_cltk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a config file path that likely doesn't exist and isn't needed for CLTK installation",
+      "correction_candidates": [
+        "Remove the config file reference entirely",
+        "Use a requirements.txt file instead",
+        "Create the config file first with mkdir -p ~/cltk",
+        "Use environment variables for configuration"
+      ],
+      "golden_answer": "Remove the config file reference entirely"
+    }
+  ]
+}

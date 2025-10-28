@@ -1,0 +1,18 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_6_only_E6",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing from requirements.txt before installing dacy creates incorrect dependency order",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy && pip install -r requirements.txt",
+        "pip install dacy[all]",
+        "pip install --upgrade dacy"
+      ],
+      "golden_answer": "pip install dacy"
+    }
+  ]
+}

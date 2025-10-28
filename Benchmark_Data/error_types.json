@@ -1,0 +1,26 @@
+{
+  "E1": {
+    "name": "Dependency Installation Error",
+    "description": "Errors related to system or Python dependency installation steps, including missing dependencies, unnecessary dependencies, or version errors."
+  },
+  "E2": {
+    "name": "Command Usage or Syntax Error",
+    "description": "Errors caused by incorrect commands, invalid parameters, or improper syntax causing execution failure."
+  },
+  "E4": {
+    "name": "File Path or Missing File Error",
+    "description": "Errors where dependency file paths are incorrect or referenced files do not exist."
+  },
+  "E6": {
+    "name": "Logical Order Error",
+    "description": "Errors caused by incorrect execution order of installation steps, such as installing pip dependencies before creating a virtual environment."
+  },
+  "E7": {
+    "name": "Version Compatibility Error",
+    "description": "Errors caused by unspecified Python or dependency versions, version conflicts, or incompatibilities."
+  },
+  "E8": {
+    "name": "Other Miscellaneous Errors",
+    "description": "Other uncategorized errors, such as messy formatting, missing critical explanations, or unclear descriptions."
+  }
+}

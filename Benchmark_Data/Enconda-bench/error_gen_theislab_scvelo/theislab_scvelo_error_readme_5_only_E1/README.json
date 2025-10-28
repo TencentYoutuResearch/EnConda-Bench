@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_scvelo_error_readme_5_only_E1",
+  "repo_name": "theislab_scvelo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added installation section with unnecessary dependency scanpy with specific version that may cause conflicts",
+      "correction_candidates": [
+        "Remove the scanpy installation command entirely and keep only pip install scvelo",
+        "Change to conda install -c conda-forge scvelo to use conda instead",
+        "Replace with pip install scvelo[all] to install with all optional dependencies",
+        "Update to conda install scanpy scvelo to install both packages together"
+      ],
+      "golden_answer": "Remove the scanpy installation command entirely and keep only pip install scvelo"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_5_only_E1",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing individual packages instead of using the project's setup configuration",
+      "correction_candidates": [
+        "Use 'pip install \".[dev]\"' instead of individual package names",
+        "Install from requirements.txt file instead of listing packages",
+        "Use 'pip install -e .' for development installation",
+        "Replace with 'pip install bigbang[dev]' command"
+      ],
+      "golden_answer": "Use 'pip install \".[dev]\"' instead of individual package names"
+    }
+  ]
+}

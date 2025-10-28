@@ -1,0 +1,18 @@
+{
+  "readme": "python-openapi_openapi-core_error_readme_3_only_E6",
+  "repo_name": "python-openapi_openapi-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest installing the package globally with pip first, and only then creating and activating a virtual environment. Dependencies should be installed after the virtual environment is activated to avoid polluting the global Python installation.",
+      "correction_candidates": [
+        "The virtual environment should be created and activated *before* running `pip install openapi-core`.",
+        "Move the virtual environment creation steps from 'Recommended Setup' to be before the `pip install` command in the 'Installation' section.",
+        "First, run `python3 -m venv venv` and `source venv/bin/activate`, then run `pip install openapi-core`.",
+        "The correct order is to set up the virtual environment, activate it, and then install the package inside it."
+      ],
+      "golden_answer": "The virtual environment should be created and activated *before* running `pip install openapi-core`."
+    }
+  ]
+}

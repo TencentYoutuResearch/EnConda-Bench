@@ -1,0 +1,29 @@
+{
+  "readme": "librephotos_librephotos_error_readme_1",
+  "repo_name": "librephotos_librephotos",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an installation command for a pip package `librephotos-cli` that does not exist.",
+      "correction_candidates": [
+        "The command should be `pip3 install librephotos-cli`.",
+        "Remove the line `pip install librephotos-cli` as this package does not exist.",
+        "The correct package name is `librephotos` not `librephotos-cli`.",
+        "You must first run `apt-get install python3-librephotos` before the pip command."
+      ],
+      "golden_answer": "Remove the line `pip install librephotos-cli` as this package does not exist."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The README provides a command `librephotos --start --scan-photos` which is syntactically incorrect and not the proper way to run the application.",
+      "correction_candidates": [
+        "The correct command is `librephotos start --scan /path/to/your/photos`.",
+        "The command should be removed. The project is run using `docker-compose up -d` as described in the official documentation.",
+        "The flags are wrong; the command should be `librephotos --run --path /path/to/your/photos`.",
+        "The command is missing `sudo` at the beginning."
+      ],
+      "golden_answer": "The command should be removed. The project is run using `docker-compose up -d` as described in the official documentation."
+    }
+  ]
+}

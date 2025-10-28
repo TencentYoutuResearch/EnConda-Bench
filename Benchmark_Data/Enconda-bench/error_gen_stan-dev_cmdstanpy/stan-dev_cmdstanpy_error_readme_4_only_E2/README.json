@@ -1,0 +1,18 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_4_only_E2",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `CmdStanModel` constructor is called with an incorrect keyword argument `file` instead of the correct `stan_file`.",
+      "correction_candidates": [
+        "Change the keyword argument from `file` to `stan_file`.",
+        "Pass the argument positionally: `model = CmdStanModel(stan_file)`.",
+        "The argument should be named `model_file`: `model = CmdStanModel(model_file=stan_file)`.",
+        "The model should be instantiated with both the Stan file and the C++ file: `CmdStanModel(stan_file=stan_file, cpp_file='bernoulli.hpp')`."
+      ],
+      "golden_answer": "Change the keyword argument from `file` to `stan_file`."
+    }
+  ]
+}

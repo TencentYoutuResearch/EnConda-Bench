@@ -1,0 +1,106 @@
+{
+  "readme": "error_gen_iss-mimic_mimic_error_readme_merge_k5",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level9",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The python dependencies are installed using `pip` before the virtual environment is created, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source venv/activate` command.",
+        "Add the `--user` flag to the pip command: `pip install --user -r requirements.txt`.",
+        "Remove the virtual environment creation steps and install dependencies globally.",
+        "Run `python3 -m pip install -r requirements.txt` instead of `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source venv/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment `source venv/activate` is incorrect for a standard venv layout; it should be `source venv/bin/activate`.",
+      "correction_candidates": [
+        "Change the activation command to `source venv/bin/activate`.",
+        "Change the activation command to `source ./venv/scripts/activate`.",
+        "Change the activation command to `workon venv`.",
+        "Change the activation command to `. venv/activate`."
+      ],
+      "golden_answer": "Change the activation command to `source venv/bin/activate`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The manual installation command `pip install lightstreamer-client pandas` is missing other critical dependencies like `numpy` and `pyqt5` which are required for the project to run.",
+      "correction_candidates": [
+        "Advise the user to install all dependencies from the requirements file using `pip install -r requirements.txt`.",
+        "Add the missing packages to the command: `pip install lightstreamer-client pandas numpy pyqt5`.",
+        "Instruct the user to install Anaconda and create an environment from a provided file.",
+        "Add `numpy` to the command but still omit `pyqt5`."
+      ],
+      "golden_answer": "Advise the user to install all dependencies from the requirements file using `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the ISS Mimic logo image is incorrect, pointing to a directory '.../Pi/img/main/...' when it should be '.../Pi/imgs/main/...', causing the image not to load.",
+      "correction_candidates": [
+        "Change the image URL path from `.../Pi/img/main/...` to `.../Pi/imgs/main/...`.",
+        "Change the image URL to use the `main` branch instead of `master`.",
+        "Replace the GitHub blob URL with a raw content URL from `raw.githubusercontent.com`.",
+        "Remove the image link entirely."
+      ],
+      "golden_answer": "Change the image URL path from `.../Pi/img/main/...` to `.../Pi/imgs/main/...`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is missing the full URL of the repository, providing only the user/repo path, which will cause the command to fail.",
+      "correction_candidates": [
+        "Use the full HTTPS URL: `git clone https://github.com/ISS-Mimic/Mimic.git`.",
+        "Use the GitHub CLI command: `gh repo clone ISS-Mimic/Mimic`.",
+        "Use the SSH URL: `git clone git@github.com:ISS-Mimic/Mimic.git`.",
+        "Prepend 'https://github.com/' to the existing path."
+      ],
+      "golden_answer": "Use the full HTTPS URL: `git clone https://github.com/ISS-Mimic/Mimic.git`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Incomplete dependency installation instructions missing virtual environment setup and version specifications",
+      "correction_candidates": [
+        "Before installation, create a virtual environment with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`",
+        "Before installation, make sure to install Python 3.8+ and create a conda environment with `conda create -n iss-mimic python=3.8` then `conda activate iss-mimic`",
+        "Before installation, ensure you have pip installed, then run `pip install --user requests numpy flask` to install dependencies locally",
+        "Before installation, update pip with `pip install --upgrade pip` then install dependencies with `pip install requests==2.28.0 numpy==1.21.0 flask==2.0.0`"
+      ],
+      "golden_answer": "Before installation, create a virtual environment with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax using setup.py install instead of proper installation method",
+      "correction_candidates": [
+        "To run the telemetry display program, first execute `pip install -e .` then run `python -m mimic --config config.json`",
+        "To run the telemetry display program, first execute `python -m pip install .` then run `python main.py --config=config.json`",
+        "To run the telemetry display program, first execute `pip install .` then run `python main.py --config config.json`",
+        "To run the telemetry display program, first execute `python setup.py develop` then run `python src/main.py --config config.json`"
+      ],
+      "golden_answer": "To run the telemetry display program, first execute `pip install .` then run `python main.py --config config.json`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a configuration file path that likely doesn't exist in the repository",
+      "correction_candidates": [
+        "Make sure to copy the example configuration file from `config/example.cfg` to `config/settings.cfg` and modify it according to your setup before running the application",
+        "Make sure to create a configuration file at `config/settings.cfg` based on the template provided in the repository before running the application",
+        "Make sure to download the configuration file from the releases page and place it in the `config/` directory as `settings.cfg` before running the application",
+        "Make sure to generate the configuration file by running `python generate_config.py` which will create `config/settings.cfg` before running the application"
+      ],
+      "golden_answer": "Make sure to copy the example configuration file from `config/example.cfg` to `config/settings.cfg` and modify it according to your setup before running the application"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Recommends Python 2.7 which is deprecated and likely incompatible with modern dependencies",
+      "correction_candidates": [
+        "For Python 3.7+ users, the asyncio library is included by default, so no additional installation is required",
+        "For Python 3.6+ users, make sure to install the updated version of the asyncio library using `pip install asyncio>=3.4.0` before proceeding",
+        "For Python 3.8+ users, ensure you have the latest asyncio features by running `pip install --upgrade asyncio` before installation",
+        "For users with Python versions below 3.7, please upgrade to Python 3.8 or later as this project requires modern asyncio functionality"
+      ],
+      "golden_answer": "For Python 3.7+ users, the asyncio library is included by default, so no additional installation is required"
+    }
+  ]
+}

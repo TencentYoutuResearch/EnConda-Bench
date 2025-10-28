@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_5_only_E4",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "Remove the pip install -r requirements.txt line entirely",
+        "Change requirements.txt to setup.py dependencies",
+        "Create a requirements.txt file with necessary dependencies",
+        "Replace with pip install civet command"
+      ],
+      "golden_answer": "Remove the pip install -r requirements.txt line entirely"
+    }
+  ]
+}

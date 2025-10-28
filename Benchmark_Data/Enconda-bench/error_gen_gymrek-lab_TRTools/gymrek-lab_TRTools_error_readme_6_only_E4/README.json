@@ -1,0 +1,18 @@
+{
+  "readme": "gymrek-lab_TRTools_error_readme_6_only_E4",
+  "repo_name": "gymrek-lab_TRTools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect filename reference 'development-env.yml' instead of the correct 'dev-env.yml' file",
+      "correction_candidates": [
+        "conda env create -n trtools -f dev-env.yml",
+        "conda env create -n trtools -f env-dev.yml",
+        "conda env create -n trtools -f dev-environment.yml",
+        "conda env create -n trtools -f develop.yml"
+      ],
+      "golden_answer": "conda env create -n trtools -f dev-env.yml"
+    }
+  ]
+}

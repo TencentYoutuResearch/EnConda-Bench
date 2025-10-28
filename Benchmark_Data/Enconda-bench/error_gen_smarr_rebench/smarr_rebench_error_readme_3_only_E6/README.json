@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_3_only_E6",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly state to run `rebench-denoise` before installing `rebench`. This is a logical order error, as the `rebench-denoise` command is part of the `rebench` package and will not be available until after the package is installed.",
+      "correction_candidates": [
+        "Remove the sentence: \"First, configure the system for low noise by running `rebench-denoise`.\"",
+        "Change the installation steps to: `pip install rebench`, then optionally run `sudo rebench-denoise` to configure the system.",
+        "The `rebench-denoise` command should be run after `pip install rebench`.",
+        "The installation is simply `pip install rebench`. `rebench-denoise` is an optional, post-installation utility."
+      ],
+      "golden_answer": "Remove the sentence: \"First, configure the system for low noise by running `rebench-denoise`.\""
+    }
+  ]
+}

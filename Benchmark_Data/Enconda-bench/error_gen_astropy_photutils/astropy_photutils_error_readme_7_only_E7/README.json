@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_7_only_E7",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated versions (Photutils 1.2.0 and NumPy 1.15.0) that may have compatibility issues",
+      "correction_candidates": [
+        "Use the latest versions of Photutils and NumPy for best compatibility",
+        "Specify Photutils >=1.8.0 and NumPy >=1.20.0 for modern features",
+        "Use Photutils 1.5+ with NumPy 1.18+ for stable performance",
+        "Install specific versions: Photutils==1.9.0 and NumPy==1.21.0"
+      ],
+      "golden_answer": "Use the latest versions of Photutils and NumPy for best compatibility"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_4",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example code refers to a Stan program file named 'bernoulli_model.stan', but the actual file in the CmdStan examples directory is named 'bernoulli.stan'.",
+      "correction_candidates": [
+        "Create a copy of `bernoulli.stan` and name it `bernoulli_model.stan` in the same directory.",
+        "Rename the file in the code from `bernoulli_model.stan` to `bernoulli.stan`.",
+        "The file extension is wrong. It should be `.stanc`, not `.stan`.",
+        "The model name should be passed without the extension: `'bernoulli'`."
+      ],
+      "golden_answer": "Rename the file in the code from `bernoulli_model.stan` to `bernoulli.stan`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `CmdStanModel` constructor is called with an incorrect keyword argument `file` instead of the correct `stan_file`.",
+      "correction_candidates": [
+        "Change the keyword argument from `file` to `stan_file`.",
+        "Pass the argument positionally: `model = CmdStanModel(stan_file)`.",
+        "The argument should be named `model_file`: `model = CmdStanModel(model_file=stan_file)`.",
+        "The model should be instantiated with both the Stan file and the C++ file: `CmdStanModel(stan_file=stan_file, cpp_file='bernoulli.hpp')`."
+      ],
+      "golden_answer": "Change the keyword argument from `file` to `stan_file`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_6_only_E2",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed the command parameter from '--simbev' to '--simbev-path' which is an incorrect parameter name",
+      "correction_candidates": [
+        "python generate.py simbev --simbev /path/to/simbev/output/ --output scenario.json",
+        "python generate.py simbev --input /path/to/simbev/output/ --output scenario.json",
+        "python generate.py simbev --directory /path/to/simbev/output/ --output scenario.json",
+        "python generate.py simbev --source /path/to/simbev/output/ --output scenario.json"
+      ],
+      "golden_answer": "python generate.py simbev --simbev /path/to/simbev/output/ --output scenario.json"
+    }
+  ]
+}

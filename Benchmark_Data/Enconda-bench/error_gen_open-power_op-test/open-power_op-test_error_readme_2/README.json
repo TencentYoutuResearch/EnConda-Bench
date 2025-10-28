@@ -1,0 +1,29 @@
+{
+  "readme": "open-power_op-test_error_readme_2",
+  "repo_name": "open-power_op-test",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install `fwts` prerequisites includes a non-existent package `software-properties-common-plus`, which will cause the `apt-get` command to fail.",
+      "correction_candidates": [
+        "`sudo apt-get install software-properties-common python-software-properties`",
+        "`sudo apt-get install software-properties-common`",
+        "`sudo apt-get install software-properties-common --no-install-recommends`",
+        "`sudo apt install common-software-properties`"
+      ],
+      "golden_answer": "`sudo apt-get install software-properties-common`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions to build skiboot utilities point to an incorrect directory `skiboot/xscom-utils` instead of the correct path `skiboot/external/xscom-utils`.",
+      "correction_candidates": [
+        "`cd skiboot/external/xscom-utils`",
+        "`cd skiboot/external/utils/xscom`",
+        "`cd skiboot/src/xscom-utils`",
+        "`cd skiboot; make xscom-utils`"
+      ],
+      "golden_answer": "`cd skiboot/external/xscom-utils`"
+    }
+  ]
+}

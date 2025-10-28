@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_theislab_cellrank_error_readme_merge_k6",
+  "repo_name": "theislab_cellrank",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command incorrectly specifies the package name as `cellrank-2` instead of `cellrank`.",
+      "correction_candidates": [
+        "Correct the command to `pip install cellrank`.",
+        "Change the command to `pip install cellrank==2.0.0`.",
+        "Correct the command to `pip install --upgrade cellrank`.",
+        "Use conda to install: `conda install -c conda-forge cellrank`."
+      ],
+      "golden_answer": "Correct the command to `pip install cellrank`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions suggest installing an optional dependency group named `plot` (`cellrank[plot]`), which does not exist.",
+      "correction_candidates": [
+        "Remove the section about installing the `plot` extra, as it does not exist.",
+        "Change `cellrank[plot]` to `cellrank[docs]` as the `docs` extra includes plotting libraries like `sphinx`.",
+        "Change the command to `pip install cellrank matplotlib seaborn`.",
+        "Correct the extra to `cellrank[plotting]`, assuming 'plotting' is the correct name."
+      ],
+      "golden_answer": "Remove the section about installing the `plot` extra, as it does not exist."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Python code in the Quick Start example has a syntax error: a missing comma in the `g.compute_schur` function call.",
+      "correction_candidates": [
+        "Add a comma after `n_components=4` in the `g.compute_schur` function call.",
+        "Move `n_components=4` to a new line and indent it.",
+        "Combine the two lines into one: `g.compute_schur(n_components=4, cluster_key=\"clusters\")`.",
+        "Remove the line `g.compute_schur(n_components=4`."
+      ],
+      "golden_answer": "Add a comma after `n_components=4` in the `g.compute_schur` function call."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing CellRank before creating and activating the virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "python -m venv cellrank_env && source cellrank_env/bin/activate && pip install cellrank",
+        "conda create -n cellrank_env python=3.9 && conda activate cellrank_env && pip install cellrank",
+        "python -m venv cellrank_env\nsource cellrank_env/bin/activate\npip install cellrank",
+        "virtualenv cellrank_env && source cellrank_env/bin/activate && pip install cellrank"
+      ],
+      "golden_answer": "python -m venv cellrank_env\nsource cellrank_env/bin/activate\npip install cellrank"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specifying outdated Python 2.7 requirement and pinning very old incompatible versions of dependencies",
+      "correction_candidates": [
+        "CellRank requires Python 3.8 or higher. Install using pip: pip install cellrank",
+        "CellRank requires Python 3.7+ and current versions. Install with: pip install cellrank scanpy scvelo",
+        "CellRank needs Python 3.9+. Use: pip install cellrank>=2.0 scanpy>=1.9 scvelo>=0.2",
+        "Python 3.6+ required for CellRank. Install: conda install cellrank scanpy scvelo"
+      ],
+      "golden_answer": "CellRank requires Python 3.8 or higher. Install using pip: pip install cellrank"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referencing a non-existent setup_cellrank.py script that users would not have",
+      "correction_candidates": [
+        "pip install cellrank to get started",
+        "python -c \"import cellrank; print('CellRank installed successfully')\"",
+        "Download the setup script from the official repository first",
+        "conda install cellrank to validate installation"
+      ],
+      "golden_answer": "pip install cellrank to get started"
+    }
+  ]
+}

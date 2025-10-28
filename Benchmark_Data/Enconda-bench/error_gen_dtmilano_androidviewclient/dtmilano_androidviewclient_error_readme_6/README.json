@@ -1,0 +1,29 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_6",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary system dependency installation - android-sdk is not required and would cause installation issues",
+      "correction_candidates": [
+        "sudo apt-get install adb python3-dev",
+        "sudo apt-get install python3-pip python3-dev",
+        "sudo apt-get install build-essential python3-dev",
+        "sudo apt-get install python3-setuptools python3-dev"
+      ],
+      "golden_answer": "sudo apt-get install adb python3-dev"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Logical order error - pip installation should come after system dependency installation in the same code block",
+      "correction_candidates": [
+        "First, make sure to install the required system dependencies:\n```\nsudo apt-get install adb python3-dev\n```\nThen install the Python package:\n```\npip3 install androidviewclient --upgrade\n```",
+        "Install system dependencies and then the Python package:\n```\nsudo apt-get install adb python3-dev\npip3 install androidviewclient --upgrade\n```",
+        "Run the following commands in order:\n```\nsudo apt-get install adb python3-dev\n```\n```\npip3 install androidviewclient --upgrade\n```",
+        "Installation steps:\n1. Install system dependencies: `sudo apt-get install adb python3-dev`\n2. Install Python package: `pip3 install androidviewclient --upgrade`"
+      ],
+      "golden_answer": "Install system dependencies and then the Python package:\n```\nsudo apt-get install adb python3-dev\npip3 install androidviewclient --upgrade\n```"
+    }
+  ]
+}

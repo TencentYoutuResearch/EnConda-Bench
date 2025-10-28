@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_reproject_error_readme_2_only_E7",
+  "repo_name": "astropy_reproject",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only compatible with Python 2.7, while it is a modern package compatible with Python 3.",
+      "correction_candidates": [
+        "The `reproject` package is compatible with Python 3.8 and later.",
+        "This package requires Python >= 3.8.",
+        "Remove the compatibility section entirely, as Python 2.7 is end-of-life and the package is actively maintained for modern Python versions.",
+        "The `reproject` package is compatible with modern Python versions (3.8+). The note about Python 2.7 is incorrect."
+      ],
+      "golden_answer": "The `reproject` package is compatible with modern Python versions (3.8+). The note about Python 2.7 is incorrect."
+    }
+  ]
+}

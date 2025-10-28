@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_6_only_E4",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the twine project",
+      "correction_candidates": [
+        "Install twine directly: pip install twine",
+        "Use setup.py for development: pip install -e .",
+        "Install from pyproject.toml: pip install .",
+        "Clone and install: git clone repo && pip install -r dev-requirements.txt"
+      ],
+      "golden_answer": "Install twine directly: pip install twine"
+    }
+  ]
+}

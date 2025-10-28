@@ -1,0 +1,18 @@
+{
+  "readme": "bitcart_bitcart_error_readme_8_only_E4",
+  "repo_name": "bitcart_bitcart",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Reference to non-existent configuration file path",
+      "correction_candidates": [
+        "Edit the main configuration file located at `config.env` in the project root to customize your installation.",
+        "Edit the main configuration file located at `.env` in the project directory to customize your installation.",
+        "Edit the configuration file located at `bitcart/settings.py` to customize your installation.",
+        "Create and edit a configuration file named `config.yaml` in your project directory to customize your installation."
+      ],
+      "golden_answer": "Edit the main configuration file located at `.env` in the project directory to customize your installation."
+    }
+  ]
+}

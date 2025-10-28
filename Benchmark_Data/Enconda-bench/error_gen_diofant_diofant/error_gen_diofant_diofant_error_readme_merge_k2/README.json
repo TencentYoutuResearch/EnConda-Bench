@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_diofant_diofant_error_readme_merge_k2",
+  "repo_name": "diofant_diofant",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes 'requests', an unnecessary dependency not required for the library to function.",
+      "correction_candidates": [
+        "Change the command to `pip install diofant sympy`.",
+        "Change the command to `pip install diofant --no-deps`.",
+        "Change the command to `pip install diofant`.",
+        "Change the command to `conda install diofant`."
+      ],
+      "golden_answer": "Change the command to `pip install diofant`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command `pip install --diofant` uses incorrect syntax and will fail.",
+      "correction_candidates": [
+        "Correct the command to `pip install -e diofant` for an editable install.",
+        "Correct the command to `python -m pip install diofant`.",
+        "Correct the command to `pip install diofant`.",
+        "Correct the command to `pip install diofant --user`."
+      ],
+      "golden_answer": "Correct the command to `pip install diofant`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs the user to edit a configuration file `config/settings.ini` which does not exist in the repository.",
+      "correction_candidates": [
+        "Remove the instruction to edit `config/settings.ini`.",
+        "Explain that the correct file to edit is `diofant/core/settings.py`.",
+        "Instruct the user to first create the `config/settings.ini` file.",
+        "Provide a command like `python setup.py --configure` to generate the file."
+      ],
+      "golden_answer": "Remove the instruction to edit `config/settings.ini`."
+    }
+  ]
+}

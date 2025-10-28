@@ -1,0 +1,18 @@
+{
+  "readme": "cvxgrp_cvxportfolio_error_readme_3_only_E6",
+  "repo_name": "cvxgrp_cvxportfolio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest setting up a `pre-commit` git hook that runs `make lint` before creating the development environment with `make env`. This will fail because the linter is installed by `make env`.",
+      "correction_candidates": [
+        "Move the git hooks setup instructions to be after the `make env` and `make test` commands.",
+        "Change `make lint` in the hook to `env/bin/pylint cvxportfolio` to use the environment's linter directly.",
+        "Add a step `pip install pylint` before setting up the git hooks.",
+        "Combine the commands: `make env && make lint` in the pre-commit hook."
+      ],
+      "golden_answer": "Move the git hooks setup instructions to be after the `make env` and `make test` commands."
+    }
+  ]
+}

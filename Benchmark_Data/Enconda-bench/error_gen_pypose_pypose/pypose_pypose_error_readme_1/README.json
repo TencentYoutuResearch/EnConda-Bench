@@ -1,0 +1,29 @@
+{
+  "readme": "pypose_pypose_error_readme_1",
+  "repo_name": "pypose_pypose",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Requirement' installation step is listed before the 'Install locally' step, which contains the `git clone` command. This will fail because the `requirements/runtime.txt` file does not exist until after the repository is cloned.",
+      "correction_candidates": [
+        "The 'Requirement' and 'Install locally' steps should be combined into a single step.",
+        "The `git clone` command should be moved to be the first command in the 'Requirement' step.",
+        "The 'Install locally' section should be moved before the 'Requirement' section.",
+        "The `pip install -r requirements/runtime.txt` command should be run after cloning the repository and changing into the `pypose` directory."
+      ],
+      "golden_answer": "The `pip install -r requirements/runtime.txt` command should be run after cloning the repository and changing into the `pypose` directory."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python setup.py development` is incorrect. The correct argument for installing a package in editable mode is `develop`.",
+      "correction_candidates": [
+        "Change `python setup.py development` to `python setup.py develop`.",
+        "Change `python setup.py development` to `python setup.py install`.",
+        "Change `python setup.py development` to `pip install -e .`.",
+        "Change `python setup.py development` to `python setup.py build`."
+      ],
+      "golden_answer": "Change `python setup.py development` to `python setup.py develop`."
+    }
+  ]
+}

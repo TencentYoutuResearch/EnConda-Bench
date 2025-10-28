@@ -1,0 +1,29 @@
+{
+  "readme": "scitools_iris-grib_error_readme_3",
+  "repo_name": "scitools_iris-grib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation guide incorrectly instructs users to install the `gribapi` library, which is deprecated and has been replaced by `eccodes`.",
+      "correction_candidates": [
+        "Replace the instruction to install `gribapi` with the instruction to install `eccodes`.",
+        "Install `iris-grib` using conda (`conda install -c conda-forge iris-grib`), which automatically installs the correct `eccodes` dependency.",
+        "Remove the instruction to install `gribapi` as `pip` will handle it automatically.",
+        "Install both `gribapi` and `eccodes` for backward compatibility."
+      ],
+      "golden_answer": "Replace the instruction to install `gribapi` with the instruction to install `eccodes`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The usage example references a sample data file at `data/example.grib2`, but this file does not exist in the project repository.",
+      "correction_candidates": [
+        "Replace the path `data/example.grib2` with a valid path to a user-provided GRIB file, e.g., `'<path-to-your-grib-file>'`.",
+        "Add a step to download a sample GRIB file from a public source before running the example code.",
+        "Use the `iris.sample_data` module to load a sample dataset instead of a local file.",
+        "Create a dummy file at `data/example.grib2` before running the script."
+      ],
+      "golden_answer": "Replace the path `data/example.grib2` with a valid path to a user-provided GRIB file, e.g., `'<path-to-your-grib-file>'`."
+    }
+  ]
+}

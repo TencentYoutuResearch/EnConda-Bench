@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_4_only_E4",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the data updating guide points to a non-existent directory `documentation/` instead of the correct `docs/` directory.",
+      "correction_candidates": [
+        "A guide for updating the data is [in `docs/`](./docs/update_portingdb.rst).",
+        "A guide for updating the data is in the file `docs/update_portingdb.rst`.",
+        "A guide for updating the data is [in `docs/`](./docs/).",
+        "A guide for updating the data is available in the repository's `docs` folder."
+      ],
+      "golden_answer": "A guide for updating the data is [in `docs/`](./docs/update_portingdb.rst)."
+    }
+  ]
+}

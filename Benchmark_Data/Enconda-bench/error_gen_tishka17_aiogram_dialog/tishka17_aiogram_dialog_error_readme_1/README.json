@@ -1,0 +1,29 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_1",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command installs version 2 of `aiogram`, which is incompatible with version 2 of `aiogram-dialog`. The README correctly states that `aiogram-dialog` v2.x requires `aiogram` v3.x.",
+      "correction_candidates": [
+        "pip install aiogram-dialog aiogram>=3.0.0",
+        "pip install aiogram-dialog",
+        "pip install aiogram-dialog aiogram==3.*",
+        "pip install aiogram-dialog aiogram"
+      ],
+      "golden_answer": "pip install aiogram-dialog aiogram>=3.0.0"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `user_start` function, the `start` method of `dialog_manager` is called with an incorrect keyword argument `start_mode`. The correct argument name is `mode`.",
+      "correction_candidates": [
+        "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.start(MySG.first, StartMode.RESET_STACK)",
+        "await dialog_manager.start(MySG.first, mode=\"RESET_STACK\")",
+        "await dialog_manager.reset_stack(MySG.first)"
+      ],
+      "golden_answer": "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)"
+    }
+  ]
+}

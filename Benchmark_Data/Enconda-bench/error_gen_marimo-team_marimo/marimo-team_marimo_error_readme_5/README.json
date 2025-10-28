@@ -1,0 +1,29 @@
+{
+  "readme": "marimo-team_marimo_error_readme_5",
+  "repo_name": "marimo-team_marimo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Fixed version specified in installation command that may be outdated or incompatible",
+      "correction_candidates": [
+        "pip install marimo && marimo tutorial intro",
+        "pip install marimo>=0.2.5 && marimo tutorial intro",
+        "pip install --upgrade marimo && marimo tutorial intro",
+        "pip install marimo==latest && marimo tutorial intro"
+      ],
+      "golden_answer": "pip install marimo && marimo tutorial intro"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'marimo create' instead of 'marimo edit' for creating/editing notebooks",
+      "correction_candidates": [
+        "marimo edit",
+        "marimo new",
+        "marimo start",
+        "marimo init"
+      ],
+      "golden_answer": "marimo edit"
+    }
+  ]
+}

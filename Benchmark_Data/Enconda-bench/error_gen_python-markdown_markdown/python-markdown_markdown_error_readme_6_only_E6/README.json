@@ -1,0 +1,18 @@
+{
+  "readme": "python-markdown_markdown_error_readme_6_only_E6",
+  "repo_name": "python-markdown_markdown",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Shows running 'python setup.py install' after 'pip install markdown' which is incorrect order and redundant",
+      "correction_candidates": [
+        "Remove the 'python setup.py install' line entirely",
+        "Replace both commands with 'pip install markdown' only",
+        "Move 'python setup.py install' before 'pip install markdown'",
+        "Change to 'pip install -e .' for development installation"
+      ],
+      "golden_answer": "Remove the 'python setup.py install' line entirely"
+    }
+  ]
+}

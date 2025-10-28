@@ -1,0 +1,29 @@
+{
+  "readme": "cantools_cantools_error_readme_1",
+  "repo_name": "cantools_cantools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the installation command is incorrect ('py-cantools' instead of 'cantools'), which will cause pip to fail to find and install the package.",
+      "correction_candidates": [
+        "python3 -m pip install cantools",
+        "pip install cantools",
+        "conda install cantools",
+        "python3 -m pip install python-cantools"
+      ],
+      "golden_answer": "python3 -m pip install cantools"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for decoding `candump` output uses incorrect shell redirection ('<'), which will not pipe the output of `candump` to the `cantools` script correctly.",
+      "correction_candidates": [
+        "candump vcan0 | python3 -m cantools decode tests/files/dbc/motohawk.dbc",
+        "candump vcan0 > dump.log && python3 -m cantools decode tests/files/dbc/motohawk.dbc < dump.log",
+        "python3 -m cantools decode tests/files/dbc/motohawk.dbc --infile <(candump vcan0)",
+        "python3 -m cantools decode tests/files/dbc/motohawk.dbc $(candump vcan0)"
+      ],
+      "golden_answer": "candump vcan0 | python3 -m cantools decode tests/files/dbc/motohawk.dbc"
+    }
+  ]
+}

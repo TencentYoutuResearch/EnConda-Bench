@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_astropy_extension-helpers_error_readme_merge_k2",
+  "repo_name": "astropy_extension-helpers",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly instructs to install the deprecated `astropy-helpers` package as a prerequisite, which is not a dependency for this package.",
+      "correction_candidates": [
+        "Remove the sentence 'First, make sure you have the `astropy-helpers` package installed.'",
+        "Replace `astropy-helpers` with `astropy`.",
+        "Replace `astropy-helpers` with `setuptools`.",
+        "Add a command `pip install astropy-helpers` to make the instruction explicit."
+      ],
+      "golden_answer": "Remove the sentence 'First, make sure you have the `astropy-helpers` package installed.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The provided pip command `pip install: extension-helpers` contains a syntax error, using a colon instead of a space.",
+      "correction_candidates": [
+        "Replace `pip install: extension-helpers` with `pip install .`.",
+        "Replace `pip install: extension-helpers` with `python -m pip install extension-helpers`.",
+        "Replace `pip install: extension-helpers` with `pip install extension-helpers`.",
+        "Replace `pip install: extension-helpers` with `pip install --upgrade extension-helpers`."
+      ],
+      "golden_answer": "Replace `pip install: extension-helpers` with `pip install extension-helpers`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README misleadingly states the package is tested for Python 2.7, which is an end-of-life version and not the target for modern packages.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.7+.'",
+        "Remove the sentence 'This package is tested for use with Python 2.7.'",
+        "Add a note stating that 'Python 3 is not supported'.",
+        "Change 'Python 2.7' to 'the latest version of Python'."
+      ],
+      "golden_answer": "Remove the sentence 'This package is tested for use with Python 2.7.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs users to create a configuration file at `/etc/extension-helpers.cfg`, which is not a standard practice for this library, and the file is not used.",
+      "correction_candidates": [
+        "Replace `/etc/extension-helpers.cfg` with `~/.config/extension-helpers/config.cfg`.",
+        "Remove the entire 'Usage' section as configuration is handled via `setup.cfg` or `pyproject.toml`.",
+        "Replace `/etc/extension-helpers.cfg` with `pyproject.toml`.",
+        "State that the configuration file is optional."
+      ],
+      "golden_answer": "Remove the entire 'Usage' section as configuration is handled via `setup.cfg` or `pyproject.toml`."
+    }
+  ]
+}

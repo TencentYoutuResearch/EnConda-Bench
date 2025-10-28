@@ -1,0 +1,18 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_1_only_E7",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the application requires Python 2.7, which is an outdated and unsupported version for modern Django projects.",
+      "correction_candidates": [
+        "This application requires Python 3.6 or later.",
+        "This application supports Python 3.8+.",
+        "Remove the sentence specifying a Python 2.7 requirement, as the linked documentation contains the correct version information.",
+        "This application is compatible with any version of Python 3."
+      ],
+      "golden_answer": "Remove the sentence specifying a Python 2.7 requirement, as the linked documentation contains the correct version information."
+    }
+  ]
+}

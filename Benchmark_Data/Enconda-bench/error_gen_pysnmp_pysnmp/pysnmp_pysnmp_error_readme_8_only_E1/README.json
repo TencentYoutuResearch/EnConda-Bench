@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_8_only_E1",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Adding unnecessary dependencies (cryptography and setuptools) to the basic installation command",
+      "correction_candidates": [
+        "Remove cryptography and setuptools from the installation command",
+        "Install cryptography and setuptools separately after pysnmplib",
+        "Use pip install pysnmplib[crypto] for optional cryptographic dependencies",
+        "Replace cryptography with pycryptodome in the installation command"
+      ],
+      "golden_answer": "Remove cryptography and setuptools from the installation command"
+    }
+  ]
+}

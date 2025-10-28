@@ -1,0 +1,29 @@
+{
+  "readme": "apiflask_apiflask_error_readme_7",
+  "repo_name": "apiflask_apiflask",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command to run Flask app changed from 'flask run --reload' to 'python app.py' which won't work for APIFlask applications",
+      "correction_candidates": [
+        "flask run --reload",
+        "python -m flask run --reload",
+        "flask --app app run --reload",
+        "gunicorn app:app --reload"
+      ],
+      "golden_answer": "flask run --reload"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Flask spec command changed from 'flask spec' to 'flask specification' which is invalid syntax",
+      "correction_candidates": [
+        "flask spec",
+        "flask openapi",
+        "flask schema",
+        "flask generate-spec"
+      ],
+      "golden_answer": "flask spec"
+    }
+  ]
+}

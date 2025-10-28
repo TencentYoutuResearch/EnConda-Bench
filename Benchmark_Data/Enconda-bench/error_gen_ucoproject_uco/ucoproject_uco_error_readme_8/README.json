@@ -1,0 +1,29 @@
+{
+  "readme": "ucoproject_uco_error_readme_8",
+  "repo_name": "ucoproject_uco",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Lists system dependencies that are not actually needed for an ontology project",
+      "correction_candidates": [
+        "Remove the system dependencies entirely as ontology projects typically don't need build tools",
+        "Replace with git and curl as more relevant dependencies for cloning repositories",
+        "Change to python3-pip python3-venv as the only necessary system packages",
+        "Update to include only libxml2-utils and remove build-essential and python3-dev"
+      ],
+      "golden_answer": "Remove the system dependencies entirely as ontology projects typically don't need build tools"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "Replace with specific package installation commands like pip install rdflib owlrl",
+        "Change to pip install . to install from the current directory setup",
+        "Use pip install --upgrade pip setuptools wheel instead",
+        "Replace with pip install -e . for editable development installation"
+      ],
+      "golden_answer": "Replace with specific package installation commands like pip install rdflib owlrl"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_7",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent system path /etc/monty/config.ini for configuration file",
+      "correction_candidates": [
+        "Install directly with pip: pip install monty",
+        "Clone from GitHub: git clone https://github.com/materialsvirtuallab/monty.git && cd monty && pip install .",
+        "Download from PyPI: pip install monty --no-deps && pip install -r requirements.txt",
+        "Use conda-forge: conda install -c conda-forge monty"
+      ],
+      "golden_answer": "Install directly with pip: pip install monty"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent requirements file path /etc/monty/requirements.txt",
+      "correction_candidates": [
+        "Use the project's requirements.txt: pip install -r requirements.txt (after cloning the repository)",
+        "Install without requirements file: pip install monty (includes all dependencies)",
+        "Download requirements from GitHub: wget https://raw.githubusercontent.com/materialsvirtuallab/monty/main/requirements.txt",
+        "Create local requirements file: echo 'monty' > requirements.txt && pip install -r requirements.txt"
+      ],
+      "golden_answer": "Install without requirements file: pip install monty (includes all dependencies)"
+    }
+  ]
+}

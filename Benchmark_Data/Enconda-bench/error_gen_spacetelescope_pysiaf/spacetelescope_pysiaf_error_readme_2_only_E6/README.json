@@ -1,0 +1,18 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_2_only_E6",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands for cloning the repository and changing into the new directory is incorrect. The user must clone the repository before they can `cd` into it.",
+      "correction_candidates": [
+        "Correct order: `git clone https://github.com/spacetelescope/pysiaf` followed by `cd pysiaf`",
+        "Combined command: `git clone https://github.com/spacetelescope/pysiaf && cd pysiaf`",
+        "Change `cd pysiaf` to `mkdir pysiaf && cd pysiaf` before cloning.",
+        "Remove the `cd pysiaf` command entirely."
+      ],
+      "golden_answer": "Correct order: `git clone https://github.com/spacetelescope/pysiaf` followed by `cd pysiaf`"
+    }
+  ]
+}

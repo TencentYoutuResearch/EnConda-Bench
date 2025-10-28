@@ -1,0 +1,29 @@
+{
+  "readme": "pymanopt_pymanopt_error_readme_7",
+  "repo_name": "pymanopt_pymanopt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies Python 2.7 which is outdated and no longer supported",
+      "correction_candidates": [
+        "Pymanopt requires Python 3.6 or higher",
+        "Pymanopt requires Python 3.8 or higher",
+        "Pymanopt requires Python 3.7 or higher",
+        "Pymanopt requires Python 3.9 or higher"
+      ],
+      "golden_answer": "Pymanopt requires Python 3.6 or higher"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Very old version requirements for numpy and scipy that may cause compatibility issues",
+      "correction_candidates": [
+        "numpy>=1.18.0\nscipy>=1.4.0",
+        "numpy>=1.21.0\nscipy>=1.7.0",
+        "numpy>=1.19.0\nscipy>=1.5.0",
+        "numpy>=1.20.0\nscipy>=1.6.0"
+      ],
+      "golden_answer": "numpy>=1.18.0\nscipy>=1.4.0"
+    }
+  ]
+}

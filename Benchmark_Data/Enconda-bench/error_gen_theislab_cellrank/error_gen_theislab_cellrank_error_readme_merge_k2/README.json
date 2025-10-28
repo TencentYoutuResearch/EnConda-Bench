@@ -1,0 +1,18 @@
+{
+  "readme": "error_gen_theislab_cellrank_error_readme_merge_k2",
+  "repo_name": "theislab_cellrank",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command incorrectly specifies the package name as `cellrank-2` instead of `cellrank`.",
+      "correction_candidates": [
+        "Correct the command to `pip install cellrank`.",
+        "Change the command to `pip install cellrank==2.0.0`.",
+        "Correct the command to `pip install --upgrade cellrank`.",
+        "Use conda to install: `conda install -c conda-forge cellrank`."
+      ],
+      "golden_answer": "Correct the command to `pip install cellrank`."
+    }
+  ]
+}

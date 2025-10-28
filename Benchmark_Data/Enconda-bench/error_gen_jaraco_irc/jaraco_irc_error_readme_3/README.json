@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_irc_error_readme_3",
+  "repo_name": "jaraco_irc",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README incorrectly claims that DCC is fully supported in the asyncio version, which is misleading. The documentation correctly states elsewhere that DCC is a limitation of the asyncio implementation.",
+      "correction_candidates": [
+        "To enable DCC in the asyncio version, you must install `irc[dcc-aio]`.",
+        "The statement is incorrect and should be reverted to 'DCC is not currently implemented in the asyncio-based version'.",
+        "The DCC examples `dccsend` and `dccreceive` must be ported to asyncio first.",
+        "DCC support in asyncio is experimental and must be enabled with a feature flag."
+      ],
+      "golden_answer": "The statement is incorrect and should be reverted to 'DCC is not currently implemented in the asyncio-based version'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The code example for overriding the buffer class on a per-instance basis shows the `connect()` method being called before `buffer_class` is assigned. The buffer class must be set before the connection is established for the setting to take effect.",
+      "correction_candidates": [
+        "The `buffer_class` attribute should be passed as an argument to the `server()` method: `server = irc.client.Reactor().server(buffer_class=buffer.LenientDecodingLineBuffer)`.",
+        "The `buffer_class` must be assigned before the `connect()` method is called.",
+        "The `connect()` method should be called on the `Reactor` object, not the `server` object.",
+        "The `buffer_class` should be set after `connect()` but before the main loop starts."
+      ],
+      "golden_answer": "The `buffer_class` must be assigned before the `connect()` method is called."
+    }
+  ]
+}

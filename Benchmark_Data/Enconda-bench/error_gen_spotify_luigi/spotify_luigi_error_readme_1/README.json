@@ -1,0 +1,29 @@
+{
+  "readme": "spotify_luigi_error_readme_1",
+  "repo_name": "spotify_luigi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Luigi is only compatible with Python 2.7, while it actually supports Python 3.6 and newer.",
+      "correction_candidates": [
+        "Luigi is a Python (3.6+ tested) package that helps you build complex pipelines of batch jobs.",
+        "Luigi is a Python (3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12 tested) package that helps you build complex pipelines of batch jobs.",
+        "Luigi is a Python (requires >=3.6) package that helps you build complex pipelines of batch jobs.",
+        "Luigi is a Python (2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12 tested) package that helps you build complex pipelines of batch jobs."
+      ],
+      "golden_answer": "Luigi is a Python (3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12 tested) package that helps you build complex pipelines of batch jobs."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install Luigi with TOML support is incorrect. `luigi-toml` is not the correct package name or syntax.",
+      "correction_candidates": [
+        "Run ``pip install luigi[toml]`` to install Luigi with `TOML-based configs` support.",
+        "Run ``pip install luigi --extra toml`` to install Luigi with `TOML-based configs` support.",
+        "Run ``pip install luigi; pip install toml`` to install Luigi with `TOML-based configs` support.",
+        "Run ``pip install 'luigi[toml]'`` to install Luigi with `TOML-based configs` support."
+      ],
+      "golden_answer": "Run ``pip install luigi[toml]`` to install Luigi with `TOML-based configs` support."
+    }
+  ]
+}

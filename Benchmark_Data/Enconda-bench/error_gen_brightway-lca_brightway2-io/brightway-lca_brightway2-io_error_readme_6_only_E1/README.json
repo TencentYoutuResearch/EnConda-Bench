@@ -1,0 +1,18 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_6_only_E1",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Suggests installing only numpy and pandas dependencies instead of the actual bw2io package",
+      "correction_candidates": [
+        "pip install bw2io",
+        "conda install -c conda-forge bw2io",
+        "pip install bw2io brightway2",
+        "pip install --upgrade bw2io"
+      ],
+      "golden_answer": "pip install bw2io"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "open-power_op-test_error_readme_3_only_E7",
+  "repo_name": "open-power_op-test",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is ambiguously stated as 'python', which could lead users to attempt setup with an incompatible version like Python 2.",
+      "correction_candidates": [
+        "You need python 3 or greater as well as pip:",
+        "You need python 3.6 or greater as well as pip:",
+        "You need the latest version of python as well as pip:",
+        "You need python version 3.6, 3.7, or 3.8 as well as pip:"
+      ],
+      "golden_answer": "You need python 3.6 or greater as well as pip:"
+    }
+  ]
+}

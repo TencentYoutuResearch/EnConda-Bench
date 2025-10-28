@@ -1,0 +1,18 @@
+{
+  "readme": "elifesciences_elife-bot_error_readme_3_only_E6",
+  "repo_name": "elifesciences_elife-bot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for running tests have the commands in the wrong logical order; one must change into the project directory *before* running the test command from a relative path.",
+      "correction_candidates": [
+        "cd to elife-bot and execute:\npython -m pytest --junitxml=build/junit.xml tests/",
+        "From the parent directory, execute: python -m pytest --junitxml=elife-bot/build/junit.xml elife-bot/tests/",
+        "First cd to the tests/ directory, then run: python -m pytest --junitxml=../build/junit.xml",
+        "Run the test command from within the elife-bot directory."
+      ],
+      "golden_answer": "cd to elife-bot and execute:\npython -m pytest --junitxml=build/junit.xml tests/"
+    }
+  ]
+}

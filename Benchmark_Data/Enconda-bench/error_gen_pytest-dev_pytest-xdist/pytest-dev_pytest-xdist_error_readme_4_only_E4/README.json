@@ -1,0 +1,18 @@
+{
+  "readme": "pytest-dev_pytest-xdist_error_readme_4_only_E4",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to a non-existent configuration file `xdist.ini`. Pytest-xdist is configured within pytest's standard configuration files like `pytest.ini` or `pyproject.toml`.",
+      "correction_candidates": [
+        "Remove the sentence 'For advanced configuration, create and modify the `xdist.ini` file in your project root.'",
+        "Change `xdist.ini` to `pytest.ini`.",
+        "Change `xdist.ini` to `tox.ini`.",
+        "Change the sentence to 'Configuration is handled automatically and cannot be changed.'"
+      ],
+      "golden_answer": "Remove the sentence 'For advanced configuration, create and modify the `xdist.ini` file in your project root.'"
+    }
+  ]
+}

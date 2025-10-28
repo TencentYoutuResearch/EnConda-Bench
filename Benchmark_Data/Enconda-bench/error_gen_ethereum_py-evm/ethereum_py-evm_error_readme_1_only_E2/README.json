@@ -1,0 +1,18 @@
+{
+  "readme": "ethereum_py-evm_error_readme_1_only_E2",
+  "repo_name": "ethereum_py-evm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The 'make release' command uses an incorrect double-dash parameter '--bump' which is not the correct syntax for passing variables to a Makefile.",
+      "correction_candidates": [
+        "Change the command to 'make release --bump $$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'release --bump $$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'make release BUMP=$$VERSION_PART_TO_BUMP$$'.",
+        "Change the command to 'make release bump=$$VERSION_PART_TO_BUMP$$'."
+      ],
+      "golden_answer": "Change the command to 'make release bump=$$VERSION_PART_TO_BUMP$$'."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "ansible_ansible-zuul-jobs_error_readme_5",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating and activating the virtual environment, which is the incorrect order",
+      "correction_candidates": [
+        "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "virtualenv venv\n. venv/bin/activate\npip install -r requirements.txt",
+        "python3 -m venv venv\nvenv/bin/activate\npip install -r requirements.txt",
+        "conda create -n myenv python=3.8\nconda activate myenv\npip install -r requirements.txt"
+      ],
+      "golden_answer": "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent dependencies.yaml file instead of a standard requirements file",
+      "correction_candidates": [
+        "Make sure to install the required system packages from `requirements.txt` before running any jobs.",
+        "Make sure to install the required system packages from `setup.py` before running any jobs.",
+        "Make sure to install the required system packages from `pyproject.toml` before running any jobs.",
+        "Make sure to install the required system packages from `Pipfile` before running any jobs."
+      ],
+      "golden_answer": "Make sure to install the required system packages from `requirements.txt` before running any jobs."
+    }
+  ]
+}

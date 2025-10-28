@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_2_only_E4",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the provision script is incorrect. It is located in `tools/`, not `scripts/`.",
+      "correction_candidates": [
+        "The command should be `python3 ./tools/provision`.",
+        "The script is in the wrong directory; it should be moved to `scripts/`.",
+        "The path is incorrect. It should be `python3 provision`.",
+        "Change directory to `tools` and run `python3 provision`."
+      ],
+      "golden_answer": "The command should be `python3 ./tools/provision`."
+    }
+  ]
+}

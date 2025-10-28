@@ -1,0 +1,29 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_7",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command parameter --verbose for the provision script which may not support this flag",
+      "correction_candidates": [
+        "python3 ./tools/provision",
+        "python3 ./tools/provision -v",
+        "python3 ./tools/provision --help",
+        "python3 ./tools/provision --debug"
+      ],
+      "golden_answer": "python3 ./tools/provision"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent test command usage - mixing py.test with pytest and using invalid --coverage flag",
+      "correction_candidates": [
+        "pytest",
+        "pytest --cov",
+        "python -m pytest --coverage",
+        "py.test"
+      ],
+      "golden_answer": "pytest"
+    }
+  ]
+}

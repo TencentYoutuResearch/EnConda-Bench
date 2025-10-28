@@ -1,0 +1,29 @@
+{
+  "readme": "sasview_sasview_error_readme_2",
+  "repo_name": "sasview_sasview",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies Python 2.7 as a prerequisite, which is end-of-life and incompatible with modern versions of SasView and its dependencies.",
+      "correction_candidates": [
+        "The required version should be Python 3.7 or higher.",
+        "The project should be updated to be compatible with Python 2.7.",
+        "The prerequisite should be listed as `Python >= 3.7`.",
+        "The prerequisite should be changed to Anaconda Python, which handles compatibility."
+      ],
+      "golden_answer": "The required version should be Python 3.7 or higher."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The pip install command attempts to install a non-existent package named `sas-core`, which will cause the installation to fail.",
+      "correction_candidates": [
+        "The package `sas-core` should be removed from the command.",
+        "The package `sas-core` should be replaced with `sasview`.",
+        "The package `sas-core` should be installed from GitHub directly.",
+        "The command should be `pip install sasview`, which installs all other dependencies."
+      ],
+      "golden_answer": "The package `sas-core` should be replaced with `sasview`."
+    }
+  ]
+}

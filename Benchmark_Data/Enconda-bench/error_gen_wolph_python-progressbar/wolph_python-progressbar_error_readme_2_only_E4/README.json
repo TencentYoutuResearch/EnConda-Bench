@@ -1,0 +1,18 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_2_only_E4",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The GPG verification command incorrectly references a local file `mykey.asc` instead of the signature file `progressbar2-<version>.tar.gz.asc` that accompanies the release download.",
+      "correction_candidates": [
+        "gpg --import mykey.asc && gpg --verify progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz.asc progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz",
+        "gpg --verify progressbar2-<version>.tar.gz.asc"
+      ],
+      "golden_answer": "gpg --verify progressbar2-<version>.tar.gz.asc progressbar2-<version>.tar.gz"
+    }
+  ]
+}

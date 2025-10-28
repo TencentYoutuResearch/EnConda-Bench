@@ -1,0 +1,29 @@
+{
+  "readme": "plasmapy_plasmapy_error_readme_3",
+  "repo_name": "plasmapy_plasmapy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The reference link for '[3-clause BSD license]' points to './LICENSE', but the actual file is named 'LICENSE.md'. This will result in a broken link.",
+      "correction_candidates": [
+        "[3-clause BSD license]: ./LICENSE.md",
+        "[3-clause BSD license]: ./LICENSE.txt",
+        "[3-clause BSD license]: ./license.md",
+        "[3-clause BSD license]: ./meta/LICENSE"
+      ],
+      "golden_answer": "[3-clause BSD license]: ./LICENSE.md"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command `conda install plasmapy -c conda-forge` has the channel specified after the package name. While this might work in some conda versions, the standard and most reliable syntax is to specify the channel before the package.",
+      "correction_candidates": [
+        "conda install -c conda-forge plasmapy",
+        "conda install plasmapy --channel conda-forge",
+        "conda -c conda-forge install plasmapy",
+        "conda install conda-forge/plasmapy"
+      ],
+      "golden_answer": "conda install -c conda-forge plasmapy"
+    }
+  ]
+}

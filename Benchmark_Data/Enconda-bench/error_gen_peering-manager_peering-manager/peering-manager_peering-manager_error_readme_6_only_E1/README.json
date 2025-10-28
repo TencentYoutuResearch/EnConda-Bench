@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_6_only_E1",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Missing essential dependency information - Redis not properly mentioned as a requirement",
+      "correction_candidates": [
+        "Peering Manager is written with the [Django](https://www.djangoproject.com/) with a [PostgreSQL](https://www.postgresql.org) database, [Redis](https://redis.io/) for caching/task processing and requires Python 3 with some dependencies to run.",
+        "Peering Manager is written with the [Django](https://www.djangoproject.com/) framework, requires a [PostgreSQL](https://www.postgresql.org) database, [Redis](https://redis.io/) server, and Python 3 with additional dependencies.",
+        "Peering Manager requires [Django](https://www.djangoproject.com/), [PostgreSQL](https://www.postgresql.org), [Redis](https://redis.io/), and Python 3 to run properly.",
+        "Peering Manager dependencies include [Django](https://www.djangoproject.com/) web framework, [PostgreSQL](https://www.postgresql.org) database server, and Python 3 runtime."
+      ],
+      "golden_answer": "Peering Manager is written with the [Django](https://www.djangoproject.com/) with a [PostgreSQL](https://www.postgresql.org) database, [Redis](https://redis.io/) for caching/task processing and requires Python 3 with some dependencies to run."
+    }
+  ]
+}

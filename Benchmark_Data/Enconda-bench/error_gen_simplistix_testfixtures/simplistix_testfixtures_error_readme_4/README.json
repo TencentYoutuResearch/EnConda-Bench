@@ -1,0 +1,29 @@
+{
+  "readme": "simplistix_testfixtures_error_readme_4",
+  "repo_name": "simplistix_testfixtures",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions for running tests incorrectly specify `nose` as a dependency, but the project uses `pytest`.",
+      "correction_candidates": [
+        "Replace '`nose`' with '`pytest`'.",
+        "Replace the sentence with 'Install the development dependencies: `pip install -e .[test]`'.",
+        "Replace '`nose`' with '`pytest` and `pytest-cov`'.",
+        "Remove the phrase 'first install `nose`, then'."
+      ],
+      "golden_answer": "Replace the sentence with 'Install the development dependencies: `pip install -e .[test]`'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python setup.py test` is a deprecated method for running tests and will not work in modern environments.",
+      "correction_candidates": [
+        "Replace `python setup.py test` with `pytest`.",
+        "Replace `python setup.py test` with `tox`.",
+        "Replace `python setup.py test` with `python -m pytest`.",
+        "Remove the 'Running Tests' section entirely as it's for contributors, not users."
+      ],
+      "golden_answer": "Replace `python setup.py test` with `pytest`."
+    }
+  ]
+}

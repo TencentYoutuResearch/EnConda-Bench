@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_tablib_error_readme_8",
+  "repo_name": "jazzband_tablib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Typo in pip command - 'isntall' instead of 'install'",
+      "correction_candidates": [
+        "Fix the typo to pip install tablib",
+        "Change to pip3 install tablib",
+        "Use python -m pip install tablib",
+        "Replace with pip install --user tablib"
+      ],
+      "golden_answer": "Fix the typo to pip install tablib"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References test/ directory that doesn't exist in the actual tablib repository structure",
+      "correction_candidates": [
+        "Change to python -m pytest tests/ (correct directory name)",
+        "Use python -m pytest src/tests/ for the actual test location",
+        "Replace with python setup.py test command",
+        "Change to python -m pytest tablib/tests/ directory"
+      ],
+      "golden_answer": "Change to python -m pytest tests/ (correct directory name)"
+    }
+  ]
+}

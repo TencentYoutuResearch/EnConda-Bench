@@ -1,0 +1,18 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_2_only_E2",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The YAML snippet provided for `configuration.yaml` contains a syntax error. It uses a semicolon (`;`) instead of a colon (`:`), which is invalid YAML.",
+      "correction_candidates": [
+        "The configuration snippet should be `battery_notes:`.",
+        "The configuration snippet should be `battery_notes =`.",
+        "The configuration snippet should be enclosed in quotes: `'battery_notes;'`.",
+        "The configuration snippet should be `battery_notes: {}`."
+      ],
+      "golden_answer": "The configuration snippet should be `battery_notes:`."
+    }
+  ]
+}

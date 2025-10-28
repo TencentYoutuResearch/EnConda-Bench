@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_transientskp_tkp_error_readme_merge_k3",
+  "repo_name": "transientskp_tkp",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally using pip before the virtual environment is created and activated. This can lead to version conflicts with other projects.",
+      "correction_candidates": [
+        "The `pip install` command should be run with `sudo` to ensure system-wide installation.",
+        "System dependencies should be installed before Python dependencies.",
+        "The virtual environment should be created and activated before installing Python dependencies.",
+        "The `requirements.txt` file should be checked for correctness before installation."
+      ],
+      "golden_answer": "The virtual environment should be created and activated before installing Python dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is `pytest`, but the project may be configured to use a different test runner, such as `setup.py test`, or pytest may not be installed.",
+      "correction_candidates": [
+        "The test command should be `python setup.py test`.",
+        "The test command should be `make test`.",
+        "You must first install pytest using `pip install pytest`.",
+        "The test command should be `python -m unittest discover`."
+      ],
+      "golden_answer": "The test command should be `python setup.py test`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Using `python` instead of `python3` to create the virtual environment can cause version incompatibility issues on systems where `python` defaults to Python 2.",
+      "correction_candidates": [
+        "The command should explicitly use `python3`: `python3 -m venv venv`.",
+        "You should use `virtualenv` instead of `venv`: `virtualenv venv`.",
+        "You should run `sudo update-alternatives --config python` to set the default Python version.",
+        "The project is compatible with both Python 2 and Python 3."
+      ],
+      "golden_answer": "The command should explicitly use `python3`: `python3 -m venv venv`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The system dependency `libpq-dev` is missing from the `apt-get install` command. This package is required to build the `psycopg2` Python dependency for PostgreSQL support.",
+      "correction_candidates": [
+        "The `psycopg2-binary` package should be used instead of `psycopg2` in `requirements.txt` to avoid needing build tools.",
+        "The command should be `sudo apt-get install -y python3-dev build-essential`.",
+        "The `apt-get update` command should be run after the `install` command.",
+        "The command should be `sudo apt-get install -y python3-dev libpq-dev`."
+      ],
+      "golden_answer": "The command should be `sudo apt-get install -y python3-dev libpq-dev`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `apt-get install` command is missing the `-y` flag, which will cause the installation process to hang while waiting for user confirmation, breaking any automated setup scripts.",
+      "correction_candidates": [
+        "The command should be run without `sudo`.",
+        "The `apt-get update` command is unnecessary and should be removed.",
+        "The `-y` flag should be added to automatically confirm the installation: `sudo apt-get install -y python3-dev libpq-dev`.",
+        "The command should use `aptitude` instead: `sudo aptitude install python3-dev libpq-dev`."
+      ],
+      "golden_answer": "The `-y` flag should be added to automatically confirm the installation: `sudo apt-get install -y python3-dev libpq-dev`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to install Python dependencies points to a non-existent file `requirements/dev.txt`. The correct file is likely `requirements.txt` in the project root.",
+      "correction_candidates": [
+        "The command should be `pip install -e .` to install in editable mode from `setup.py`.",
+        "The correct file path is `requirements.txt`, so the command should be `pip install -r requirements.txt`.",
+        "You need to create the `requirements/dev.txt` file first by copying it from an example file.",
+        "The correct command is `pip install -r requirements/requirements.txt`."
+      ],
+      "golden_answer": "The correct file path is `requirements.txt`, so the command should be `pip install -r requirements.txt`."
+    }
+  ]
+}

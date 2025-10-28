@@ -1,0 +1,29 @@
+{
+  "readme": "theislab_cellrank_error_readme_5",
+  "repo_name": "theislab_cellrank",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing CellRank before creating and activating the virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "python -m venv cellrank_env && source cellrank_env/bin/activate && pip install cellrank",
+        "conda create -n cellrank_env python=3.9 && conda activate cellrank_env && pip install cellrank",
+        "python -m venv cellrank_env\nsource cellrank_env/bin/activate\npip install cellrank",
+        "virtualenv cellrank_env && source cellrank_env/bin/activate && pip install cellrank"
+      ],
+      "golden_answer": "python -m venv cellrank_env\nsource cellrank_env/bin/activate\npip install cellrank"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using invalid command syntax with non-existent cellrank CLI command and invalid parameters",
+      "correction_candidates": [
+        "python -c \"import cellrank as cr; cr.tl.velocity_graph(adata); cr.tl.terminal_states(adata)\"",
+        "cellrank-cli --input data.h5ad --output results/ --method velocity",
+        "python analyze_cellrank.py --input data.h5ad --output results/ --method velocity",
+        "import cellrank as cr; adata = cr.datasets.pancreas(); cr.tl.velocity_graph(adata)"
+      ],
+      "golden_answer": "python -c \"import cellrank as cr; cr.tl.velocity_graph(adata); cr.tl.terminal_states(adata)\""
+    }
+  ]
+}

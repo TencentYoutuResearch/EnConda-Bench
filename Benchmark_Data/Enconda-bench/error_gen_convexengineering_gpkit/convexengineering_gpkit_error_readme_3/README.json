@@ -1,0 +1,29 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_3",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The solver 'cvxopt' is misspelled as 'cvx-opt' in the text, which could confuse users searching for the package.",
+      "correction_candidates": [
+        "Change '[cvx-opt](http://cvxopt.org/)' to '[cvxopt](http://cvxopt.org/)'",
+        "Change '[cvx-opt](http://cvxopt.org/)' to '[CVXOPT](http://cvxopt.org/)'",
+        "Remove the mention of specific solvers and direct users to the documentation.",
+        "Change the link to point to the correct PyPI page for cvxopt."
+      ],
+      "golden_answer": "Change '[cvx-opt](http://cvxopt.org/)' to '[cvxopt](http://cvxopt.org/)'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The Quick Install guide incorrectly instructs users to install GPkit before installing a required solver, which should be done first.",
+      "correction_candidates": [
+        "Combine the two steps into one: `pip install mosek gpkit`",
+        "Swap the order of the two installation steps.",
+        "Remove the quick install guide and link to the official installation documentation.",
+        "Add a step to create a virtual environment before installation."
+      ],
+      "golden_answer": "Swap the order of the two installation steps."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_8_only_E4",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect file path 'config/urls.txt' instead of the correct 'examples/urls.txt'",
+      "correction_candidates": [
+        "Change config/urls.txt to examples/urls.txt",
+        "Update the file path to point to the examples directory",
+        "Fix the path from config/ to examples/ directory",
+        "Correct the directory reference to match the existing examples folder"
+      ],
+      "golden_answer": "Change config/urls.txt to examples/urls.txt"
+    }
+  ]
+}

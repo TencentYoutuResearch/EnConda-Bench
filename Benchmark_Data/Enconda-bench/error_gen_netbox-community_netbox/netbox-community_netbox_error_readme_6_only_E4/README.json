@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_6_only_E4",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent setup guide file path that doesn't exist in NetBox repository",
+      "correction_candidates": [
+        "For installation instructions, please refer to the official documentation at https://docs.netbox.dev/en/stable/installation/.",
+        "For installation instructions, please refer to the setup guide located at `docs/installation/` in the project directory.",
+        "For installation instructions, please refer to the INSTALL.md file in the project root directory.",
+        "For installation instructions, please refer to the setup guide located at `netbox/docs/installation.md` in the project directory."
+      ],
+      "golden_answer": "For installation instructions, please refer to the official documentation at https://docs.netbox.dev/en/stable/installation/."
+    }
+  ]
+}

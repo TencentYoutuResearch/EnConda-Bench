@@ -1,0 +1,18 @@
+{
+  "readme": "pydmd_pydmd_error_readme_1_only_E1",
+  "repo_name": "pydmd_pydmd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes an unnecessary dependency, `tensorflow`, which is not required by PyDMD and increases installation size.",
+      "correction_candidates": [
+        "pip install pydmd",
+        "pip install pydmd --no-deps",
+        "pip install pydmd numpy scipy",
+        "pip install pydmd -r requirements.txt"
+      ],
+      "golden_answer": "pip install pydmd"
+    }
+  ]
+}

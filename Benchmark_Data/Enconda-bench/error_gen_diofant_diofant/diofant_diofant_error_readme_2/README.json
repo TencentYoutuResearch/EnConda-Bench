@@ -1,0 +1,29 @@
+{
+  "readme": "diofant_diofant_error_readme_2",
+  "repo_name": "diofant_diofant",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command `pip install --diofant` uses incorrect syntax and will fail.",
+      "correction_candidates": [
+        "Correct the command to `pip install -e diofant` for an editable install.",
+        "Correct the command to `python -m pip install diofant`.",
+        "Correct the command to `pip install diofant`.",
+        "Correct the command to `pip install diofant --user`."
+      ],
+      "golden_answer": "Correct the command to `pip install diofant`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs the user to edit a configuration file `config/settings.ini` which does not exist in the repository.",
+      "correction_candidates": [
+        "Remove the instruction to edit `config/settings.ini`.",
+        "Explain that the correct file to edit is `diofant/core/settings.py`.",
+        "Instruct the user to first create the `config/settings.ini` file.",
+        "Provide a command like `python setup.py --configure` to generate the file."
+      ],
+      "golden_answer": "Remove the instruction to edit `config/settings.ini`."
+    }
+  ]
+}

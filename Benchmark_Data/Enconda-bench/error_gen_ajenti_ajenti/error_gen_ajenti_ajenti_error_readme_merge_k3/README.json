@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_ajenti_ajenti_error_readme_merge_k3",
+  "repo_name": "ajenti_ajenti",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install dependencies `pip install -r requirements.txt --update-all` is incorrect because `--update-all` is not a valid pip flag.",
+      "correction_candidates": [
+        "Run `pip install -r requirements.txt --upgrade` to install and update the required packages.",
+        "Run `pip install --update-all -r requirements.txt` to install the required packages.",
+        "Run `pip install -r requirements.txt` to install the required packages.",
+        "Run `pip update --all -r requirements.txt` to install the required packages."
+      ],
+      "golden_answer": "Run `pip install -r requirements.txt` to install the required packages."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions list installing pip dependencies before creating and activating the virtual environment, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The order of steps is incorrect. Step 2 (Create virtual environment) should be performed before Step 1 (Install dependencies).",
+        "The steps should be combined. Run `python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt django`.",
+        "The virtual environment is optional. You can skip Step 2.",
+        "The order is correct, but you must use `sudo pip` in Step 1 to install dependencies globally."
+      ],
+      "golden_answer": "The order of steps is incorrect. Step 2 (Create virtual environment) should be performed before Step 1 (Install dependencies)."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The dependency installation command includes `django`, which is an unnecessary package not required by Ajenti.",
+      "correction_candidates": [
+        "The command should be `pip install -r requirements.txt`.",
+        "The command should be `pip install -r requirements.txt` and `pip install django` in a separate step.",
+        "The command should be `pip install -r requirements.txt` and also install `flask` instead of `django`.",
+        "The command should be `pip install -r requirements.txt django==3.2` to ensure version compatibility."
+      ],
+      "golden_answer": "The command should be `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the login screenshot is incorrect (`docs/images/rd-login.png`), causing the image not to display. The correct directory is `img`.",
+      "correction_candidates": [
+        "Change the image path from `docs/images/rd-login.png` to `docs/img/rd-login.png`.",
+        "Change the image path from `docs/images/rd-login.png` to `../docs/img/rd-login.png`.",
+        "Change the image path from `docs/images/rd-login.png` to `/docs/img/rd-login.png`.",
+        "Move the image file to the `docs/images/` directory to match the path."
+      ],
+      "golden_answer": "Change the image path from `docs/images/rd-login.png` to `docs/img/rd-login.png`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The 'Development Setup' section is too vague and lacks specific commands or steps for setting up the environment, installing dependencies, or running the application.",
+      "correction_candidates": [
+        "Add a link to the specific development setup page in the documentation.",
+        "Replace the vague text with a complete, step-by-step guide, including commands for creating a virtual environment, installing dependencies from `requirements.txt`, and running the development server.",
+        "Add a note specifying that Python 3 and pip are required.",
+        "Add a command to clone the repository: `git clone https://github.com/ajenti/ajenti.git`."
+      ],
+      "golden_answer": "Replace the vague text with a complete, step-by-step guide, including commands for creating a virtual environment, installing dependencies from `requirements.txt`, and running the development server."
+    }
+  ]
+}

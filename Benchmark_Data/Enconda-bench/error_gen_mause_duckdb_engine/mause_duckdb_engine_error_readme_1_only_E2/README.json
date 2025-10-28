@@ -1,0 +1,18 @@
+{
+  "readme": "mause_duckdb_engine_error_readme_1_only_E2",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The SQLAlchemy connection string `duckdb:/:memory:` is syntactically incorrect for creating an in-memory database. It is missing the required `//` after the `duckdb:` prefix.",
+      "correction_candidates": [
+        "create_engine(\"duckdb:///:memory:\")",
+        "create_engine(\"duckdb:memory:\")",
+        "create_engine(\"duckdb://memory\")",
+        "create_engine(\"duckdb://\")"
+      ],
+      "golden_answer": "create_engine(\"duckdb:///:memory:\")"
+    }
+  ]
+}

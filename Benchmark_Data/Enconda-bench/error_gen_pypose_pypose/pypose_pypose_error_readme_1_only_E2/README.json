@@ -1,0 +1,18 @@
+{
+  "readme": "pypose_pypose_error_readme_1_only_E2",
+  "repo_name": "pypose_pypose",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python setup.py development` is incorrect. The correct argument for installing a package in editable mode is `develop`.",
+      "correction_candidates": [
+        "Change `python setup.py development` to `python setup.py develop`.",
+        "Change `python setup.py development` to `python setup.py install`.",
+        "Change `python setup.py development` to `pip install -e .`.",
+        "Change `python setup.py development` to `python setup.py build`."
+      ],
+      "golden_answer": "Change `python setup.py development` to `python setup.py develop`."
+    }
+  ]
+}

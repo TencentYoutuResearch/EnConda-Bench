@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_2_only_E2",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a virtual environment, `python3 -m venv --new .venv`, uses an invalid argument `--new`. The correct command does not use this flag.",
+      "correction_candidates": [
+        "Replace `python3 -m venv --new .venv` with `python3 -m venv .venv`.",
+        "Replace the command with `virtualenv .venv`.",
+        "Change the command to `python3 -m venv --create .venv`.",
+        "The command should be `python3 --venv .venv`."
+      ],
+      "golden_answer": "Replace `python3 -m venv --new .venv` with `python3 -m venv .venv`."
+    }
+  ]
+}

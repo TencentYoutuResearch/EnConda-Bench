@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_microsoft_torchgeo_error_readme_merge_k2",
+  "repo_name": "microsoft_torchgeo",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have the steps in the wrong logical order. It tells the user to install torchgeo first, and then upgrade pip. The correct order is to ensure build tools like pip are up-to-date before installing packages.",
+      "correction_candidates": [
+        "The commands should be run in the opposite order: first upgrade pip, then install torchgeo.",
+        "Remove the pip upgrade command as it's not always necessary.",
+        "Add `python -m venv .venv` before the installation commands.",
+        "Change `$ python -m pip install --upgrade pip` to `pip install --upgrade pip`."
+      ],
+      "golden_answer": "The commands should be run in the opposite order: first upgrade pip, then install torchgeo."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example code for Landsat datasets hardcodes a specific, non-standard file path `/data/torchgeo/landsat7` and `/data/torchgeo/landsat8` and implies the user must have data in this exact location without instructions to create it. This will cause a FileNotFoundError for most users. The original placeholder `...` was better.",
+      "correction_candidates": [
+        "Change `root` from a hardcoded path back to the placeholder `root=\"...\"` to indicate the user should provide their own path.",
+        "Add a note: `Make sure to create the /data/torchgeo directory and place your data there.`",
+        "Change the root path to a relative path like `root=\"./data\"`.",
+        "Change the dataset to one that can be automatically downloaded, like `CDL(root=\"data\", download=True)`."
+      ],
+      "golden_answer": "Change `root` from a hardcoded path back to the placeholder `root=\"...\"` to indicate the user should provide their own path."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The installation command `pip install torchgeo==0.2.0` pins the version to an old release. This can cause version conflicts with other libraries or mean that newer features and bug fixes described in the README and documentation are not available, leading to compatibility errors or unexpected behavior.",
+      "correction_candidates": [
+        "Change the command to `pip install torchgeo` to install the latest stable version.",
+        "Change the command to `pip install torchgeo>=0.5.0` to ensure a recent version is used.",
+        "Change the command to `pip install torchgeo --upgrade`.",
+        "Add a note explaining that version 0.2.0 is required for reproducibility."
+      ],
+      "golden_answer": "Change the command to `pip install torchgeo` to install the latest stable version."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The YAML configuration file for the LightningCLI example has incorrect indentation. The `init_args` and `dict_kwargs` keys are at the same level as `data`, but they should be nested underneath it. This will cause a parsing error when LightningCLI tries to read the file.",
+      "correction_candidates": [
+        "Correct the indentation so that `init_args` and `dict_kwargs` are nested under the `data` key.",
+        "Convert the config file format from YAML to JSON.",
+        "Remove the `data` key and move its children to the top level.",
+        "Wrap the entire YAML block in quotes to treat it as a string."
+      ],
+      "golden_answer": "Correct the indentation so that `init_args` and `dict_kwargs` are nested under the `data` key."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "kevinmusgrave_pytorch-metric-learning_error_readme_1",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary dependency, `pandas`, is listed in the 'Other dependencies' section.",
+      "correction_candidates": [
+        "Remove `pandas` from the list of dependencies.",
+        "Change `pandas` to `scipy` in the list of dependencies.",
+        "Specify the version for pandas: `pandas>=1.0`.",
+        "Move `pandas` to the `[with-hooks]` installation extra."
+      ],
+      "golden_answer": "Remove `pandas` from the list of dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the development version uses the incorrect flag `--dev` instead of `--pre`.",
+      "correction_candidates": [
+        "pip install pytorch-metric-learning --pre",
+        "pip install pytorch-metric-learning --dev-version",
+        "pip install pytorch-metric-learning-dev",
+        "pip install pytorch-metric-learning==dev"
+      ],
+      "golden_answer": "pip install pytorch-metric-learning --pre"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_5_only_E6",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing requirements.txt after starting web2py server instead of before, which violates logical order",
+      "correction_candidates": [
+        "Move the pip install -r requirements.txt command to step 1 after installing system dependencies",
+        "Remove the pip install -r requirements.txt command from step 10 entirely",
+        "Replace pip install -r requirements.txt with python -m pip install --upgrade pip",
+        "Change the command to pip install -r stopstalk/requirements.txt"
+      ],
+      "golden_answer": "Move the pip install -r requirements.txt command to step 1 after installing system dependencies"
+    }
+  ]
+}

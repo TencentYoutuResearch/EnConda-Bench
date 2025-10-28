@@ -1,0 +1,18 @@
+{
+  "readme": "ibm_ibmi-bob_error_readme_8_only_E1",
+  "repo_name": "ibm_ibmi-bob",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Incorrectly states Bob requires Node.js and npm installation when it doesn't use JavaScript technologies",
+      "correction_candidates": [
+        "Remove Node.js requirement as Bob is a native IBM i build system",
+        "Change to Python and pip installation instructions instead",
+        "Replace with Java JDK installation requirements",
+        "Update to require Docker and container runtime installation"
+      ],
+      "golden_answer": "Remove Node.js requirement as Bob is a native IBM i build system"
+    }
+  ]
+}

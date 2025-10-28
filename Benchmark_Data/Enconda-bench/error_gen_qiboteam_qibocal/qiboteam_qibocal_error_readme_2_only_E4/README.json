@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_2_only_E4",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command for uploading reports suggests a fixed, non-existent path `reports/latest` instead of the variable `<output_folder>` that the user should provide.",
+      "correction_candidates": [
+        "The command is `qq upload <output_folder>`, where `<output_folder>` is the path to the generated report directory.",
+        "The command is `qq upload`, which will prompt you for the folder path.",
+        "The command is `qq upload --path reports/latest`.",
+        "The command is `qq upload <output_folder>`. You must first navigate into the parent directory of `<output_folder>`."
+      ],
+      "golden_answer": "The command is `qq upload <output_folder>`, where `<output_folder>` is the path to the generated report directory."
+    }
+  ]
+}

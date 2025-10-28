@@ -1,0 +1,18 @@
+{
+  "readme": "juju_python-libjuju_error_readme_1_only_E2",
+  "repo_name": "juju_python-libjuju",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The REPL example is missing the 'await' keyword for the 'model.connect_current()' coroutine, which will cause a 'coroutine was never awaited' runtime warning and prevent the connection from being established.",
+      "correction_candidates": [
+        "Replace `model.connect_current()` with `jasyncio.run(model.connect_current())`.",
+        "Replace `model.connect_current()` with `await model.connect()`.",
+        "Replace `model.connect_current()` with `await model.connect_current()`.",
+        "Add `import jasyncio` and run `jasyncio.run(model.connect_current())`."
+      ],
+      "golden_answer": "Replace `model.connect_current()` with `await model.connect_current()`."
+    }
+  ]
+}

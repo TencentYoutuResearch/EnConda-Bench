@@ -1,0 +1,18 @@
+{
+  "readme": "mne-tools_mne-lsl_error_readme_4_only_E7",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a strict Python version requirement (`python 3.9`), which is overly restrictive and incorrectly implies that later versions like 3.10 or 3.11 are not supported.",
+      "correction_candidates": [
+        "MNE-LSL supports `python >= 3.9`",
+        "MNE-LSL supports `python 3.9, 3.10, 3.11`",
+        "MNE-LSL supports `python ≥ 3.9`",
+        "MNE-LSL supports `python > 3.8`"
+      ],
+      "golden_answer": "MNE-LSL supports `python ≥ 3.9`"
+    }
+  ]
+}

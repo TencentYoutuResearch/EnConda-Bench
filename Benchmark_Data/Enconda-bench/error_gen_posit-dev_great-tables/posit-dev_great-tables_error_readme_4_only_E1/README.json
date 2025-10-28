@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_4_only_E1",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `libgdal-dev` as a required system dependency, which is not needed by the package.",
+      "correction_candidates": [
+        "Remove the prerequisite instruction to install `libgdal-dev`.",
+        "Replace `libgdal-dev` with `python3-dev`.",
+        "Clarify that `libgdal-dev` is an optional dependency for specific mapping features.",
+        "Provide installation commands for `libgdal-dev` on different operating systems."
+      ],
+      "golden_answer": "Remove the prerequisite instruction to install `libgdal-dev`."
+    }
+  ]
+}

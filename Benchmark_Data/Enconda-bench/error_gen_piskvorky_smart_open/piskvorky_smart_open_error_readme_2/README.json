@@ -1,0 +1,29 @@
+{
+  "readme": "piskvorky_smart_open_error_readme_2",
+  "repo_name": "piskvorky_smart_open",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that version 2.0.0 was the last to support Python 2.7. The correct version is 1.10.1.",
+      "correction_candidates": [
+        "Change `smart_open 2.0.0` to `smart_open 1.10.0`",
+        "Change `smart_open 2.0.0` to `the latest 1.x release`",
+        "Change `smart_open 2.0.0` to `smart_open 1.10.1`",
+        "Change `smart_open 2.0.0` to `smart_open 2.0.0-py2`"
+      ],
+      "golden_answer": "Change `smart_open 2.0.0` to `smart_open 1.10.1`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the migration guide is broken because the filename is incorrect. It should be `MIGRATING_FROM_OLDER_VERSIONS.rst`.",
+      "correction_candidates": [
+        "Change `MIGRATION_GUIDE.rst` to `MIGRATING_FROM_OLDER_VERSIONS.rst`",
+        "Change `MIGRATION_GUIDE.rst` to `docs/MIGRATION_GUIDE.rst`",
+        "Change `MIGRATION_GUIDE.rst` to `MIGRATING_FROM_OLDER_VERSIONS.md`",
+        "Change `MIGRATION_GUIDE.rst` to `MIGRATION.rst`"
+      ],
+      "golden_answer": "Change `MIGRATION_GUIDE.rst` to `MIGRATING_FROM_OLDER_VERSIONS.rst`"
+    }
+  ]
+}

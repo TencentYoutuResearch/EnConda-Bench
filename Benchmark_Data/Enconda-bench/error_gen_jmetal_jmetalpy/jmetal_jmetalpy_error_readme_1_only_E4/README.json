@@ -1,0 +1,18 @@
+{
+  "readme": "jmetal_jmetalpy_error_readme_1_only_E4",
+  "repo_name": "jmetal_jmetalpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example code attempts to save results to a 'results/' directory which may not exist, and the comment incorrectly states it is created automatically, which can cause a FileNotFoundError.",
+      "correction_candidates": [
+        "print_function_values_to_file(front, './FUN.NSGAII.ZDT1')",
+        "print_function_values_to_file(front, 'FUN.NSGAII.ZDT1')",
+        "import os; os.makedirs('results', exist_ok=True); print_function_values_to_file(front, 'results/FUN.NSGAII.ZDT1')",
+        "print_function_values_to_file(front, 'FUN.NSGAII.ZDT1.txt')"
+      ],
+      "golden_answer": "print_function_values_to_file(front, 'FUN.NSGAII.ZDT1')"
+    }
+  ]
+}

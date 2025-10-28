@@ -1,0 +1,18 @@
+{
+  "readme": "lark-parser_lark_error_readme_3_only_E8",
+  "repo_name": "lark-parser_lark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The string input in the 'Hello World' example code is 'Hello World!', which is missing the comma required by the grammar `start: WORD \",\" WORD \"!\"`. This will cause the parse to fail and also makes the example output incorrect.",
+      "correction_candidates": [
+        "Change the input string in the code to `l.parse(\"Hello, World!\")`.",
+        "Change the grammar in the code to `start: WORD WORD \"!\"`.",
+        "Change the grammar in the code to `start: WORD \",\"? WORD \"!\"` to make the comma optional.",
+        "Change the input string in the code to `l.parse('Hello, World!')`."
+      ],
+      "golden_answer": "Change the input string in the code to `l.parse(\"Hello, World!\")`."
+    }
+  ]
+}

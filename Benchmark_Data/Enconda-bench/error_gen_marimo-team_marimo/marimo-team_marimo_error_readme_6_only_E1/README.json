@@ -1,0 +1,18 @@
+{
+  "readme": "marimo-team_marimo_error_readme_6_only_E1",
+  "repo_name": "marimo-team_marimo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependencies (numpy, matplotlib, pandas) listed before marimo installation",
+      "correction_candidates": [
+        "pip install marimo  # or conda install -c conda-forge marimo",
+        "pip install marimo numpy matplotlib pandas",
+        "pip install marimo[extras]",
+        "pip install marimo && pip install numpy matplotlib pandas"
+      ],
+      "golden_answer": "pip install marimo  # or conda install -c conda-forge marimo"
+    }
+  ]
+}

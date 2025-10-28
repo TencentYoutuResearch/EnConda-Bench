@@ -1,0 +1,29 @@
+{
+  "readme": "automl_neps_error_readme_6",
+  "repo_name": "automl_neps",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.8 to 3.6, which is incompatible with modern dependencies",
+      "correction_candidates": [
+        "NePS requires Python 3.8 or higher",
+        "NePS requires Python 3.9 or higher",
+        "NePS requires Python 3.10 or higher",
+        "NePS requires Python 3.7 or higher"
+      ],
+      "golden_answer": "NePS requires Python 3.8 or higher"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid --config parameter to poetry install command which is not a valid poetry option",
+      "correction_candidates": [
+        "poetry install",
+        "poetry install --dev",
+        "poetry install --extras all",
+        "poetry install --no-dev"
+      ],
+      "golden_answer": "poetry install"
+    }
+  ]
+}

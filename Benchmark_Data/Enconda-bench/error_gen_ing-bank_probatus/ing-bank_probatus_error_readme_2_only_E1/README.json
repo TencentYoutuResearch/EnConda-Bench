@@ -1,0 +1,18 @@
+{
+  "readme": "ing-bank_probatus_error_readme_2_only_E1",
+  "repo_name": "ing-bank_probatus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions unnecessarily require the user to manually install the `shap` dependency, which is already handled by the `probatus` package installation.",
+      "correction_candidates": [
+        "Remove the `pip install shap` command and the accompanying text.",
+        "Add a note that `shap` is a core dependency that will be installed automatically.",
+        "Combine the installations into `pip install shap probatus`.",
+        "Move `pip install shap` after `pip install probatus` to verify the installation."
+      ],
+      "golden_answer": "Remove the `pip install shap` command and the accompanying text."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_3_only_E4",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the ISS Mimic logo image is incorrect, pointing to a directory '.../Pi/img/main/...' when it should be '.../Pi/imgs/main/...', causing the image not to load.",
+      "correction_candidates": [
+        "Change the image URL path from `.../Pi/img/main/...` to `.../Pi/imgs/main/...`.",
+        "Change the image URL to use the `main` branch instead of `master`.",
+        "Replace the GitHub blob URL with a raw content URL from `raw.githubusercontent.com`.",
+        "Remove the image link entirely."
+      ],
+      "golden_answer": "Change the image URL path from `.../Pi/img/main/...` to `.../Pi/imgs/main/...`."
+    }
+  ]
+}

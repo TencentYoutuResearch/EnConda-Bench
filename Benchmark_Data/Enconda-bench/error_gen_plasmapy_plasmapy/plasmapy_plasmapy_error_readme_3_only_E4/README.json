@@ -1,0 +1,18 @@
+{
+  "readme": "plasmapy_plasmapy_error_readme_3_only_E4",
+  "repo_name": "plasmapy_plasmapy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The reference link for '[3-clause BSD license]' points to './LICENSE', but the actual file is named 'LICENSE.md'. This will result in a broken link.",
+      "correction_candidates": [
+        "[3-clause BSD license]: ./LICENSE.md",
+        "[3-clause BSD license]: ./LICENSE.txt",
+        "[3-clause BSD license]: ./license.md",
+        "[3-clause BSD license]: ./meta/LICENSE"
+      ],
+      "golden_answer": "[3-clause BSD license]: ./LICENSE.md"
+    }
+  ]
+}

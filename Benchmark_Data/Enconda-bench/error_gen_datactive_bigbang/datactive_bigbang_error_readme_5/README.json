@@ -1,0 +1,29 @@
+{
+  "readme": "datactive_bigbang_error_readme_5",
+  "repo_name": "datactive_bigbang",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing BigBang with pip before creating and activating the virtual environment",
+      "correction_candidates": [
+        "Move 'pip install \".[dev]\"' to after virtual environment activation",
+        "Create virtual environment first, then activate it, then install dependencies",
+        "Remove the pip install command from before venv creation entirely",
+        "Change the order to: clone, create venv, activate venv, then install"
+      ],
+      "golden_answer": "Move 'pip install \".[dev]\"' to after virtual environment activation"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installing individual packages instead of using the project's setup configuration",
+      "correction_candidates": [
+        "Use 'pip install \".[dev]\"' instead of individual package names",
+        "Install from requirements.txt file instead of listing packages",
+        "Use 'pip install -e .' for development installation",
+        "Replace with 'pip install bigbang[dev]' command"
+      ],
+      "golden_answer": "Use 'pip install \".[dev]\"' instead of individual package names"
+    }
+  ]
+}

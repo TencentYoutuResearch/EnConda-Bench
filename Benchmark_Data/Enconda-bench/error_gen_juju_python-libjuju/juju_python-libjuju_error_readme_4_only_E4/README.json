@@ -1,0 +1,18 @@
+{
+  "readme": "juju_python-libjuju_error_readme_4_only_E4",
+  "repo_name": "juju_python-libjuju",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path in the tox example, 'example/connect_current_model.py', is incorrect due to a typo. The directory is named 'examples' (plural).",
+      "correction_candidates": [
+        "Change the path to `examples/connect_current_model.py`.",
+        "Change the path to `./examples/connect_current_model.py`.",
+        "Change the path to `connect_current_model.py` and add a note to run tox from the `examples` directory.",
+        "Change the path to `examples/connect_model.py`."
+      ],
+      "golden_answer": "Change the path to `examples/connect_current_model.py`."
+    }
+  ]
+}

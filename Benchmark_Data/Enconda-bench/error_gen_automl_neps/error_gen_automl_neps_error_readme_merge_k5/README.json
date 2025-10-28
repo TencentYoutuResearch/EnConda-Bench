@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_automl_neps_error_readme_merge_k5",
+  "repo_name": "automl_neps",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that 'NePS requires Python 3.6 or higher', while the library's dependencies and syntax require Python 3.8 or higher.",
+      "correction_candidates": [
+        "NePS requires Python 3.6 or higher.",
+        "NePS requires Python 3.7 or higher.",
+        "NePS requires Python 3.8 or higher.",
+        "NePS requires any version of Python 3."
+      ],
+      "golden_answer": "NePS requires Python 3.8 or higher."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `neps.run` function call, the parameter `max_evaluations=100` is used, but the correct parameter name is `max_evaluations_total`.",
+      "correction_candidates": [
+        "evaluations=100",
+        "max_evaluations_total=100",
+        "max_total_evaluations=100",
+        "num_evaluations=100"
+      ],
+      "golden_answer": "max_evaluations_total=100"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install neps` is incorrect. The package name on PyPI is `neural-pipeline-search`, not `neps`, which is the import name.",
+      "correction_candidates": [
+        "pip install neps-hpo",
+        "pip install neural-pipeline-search",
+        "pip install neps",
+        "pip install neps-automl"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `pipeline_space` definition, the argument `fidelity=True` is used for `neps.IntegerParameter`. The correct argument to specify a fidelity parameter is `is_fidelity=True`.",
+      "correction_candidates": [
+        "is_fidelity=True",
+        "fidelity_param=True",
+        "use_fidelity=True",
+        "fidelity=True"
+      ],
+      "golden_answer": "is_fidelity=True"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (scikit-learn and tensorflow) to the pip install command that are not required for NePS",
+      "correction_candidates": [
+        "pip install neural-pipeline-search",
+        "pip install neural-pipeline-search numpy pandas",
+        "pip install neural-pipeline-search torch torchvision",
+        "pip install neural-pipeline-search --upgrade"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added pip install -r requirements.txt before poetry install, which is incorrect order since poetry should handle dependencies",
+      "correction_candidates": [
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install",
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install --dev",
+        "git clone git@github.com:automl/neps.git\ncd neps\npip install -e .",
+        "git clone git@github.com:automl/neps.git\ncd neps\nconda install poetry\npoetry install"
+      ],
+      "golden_answer": "git clone git@github.com:automl/neps.git\ncd neps\npoetry install"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specified a fixed version (1.2.3) for neural-pipeline-search that likely doesn't exist, creating version compatibility issues",
+      "correction_candidates": [
+        "pip install neural-pipeline-search",
+        "pip install neural-pipeline-search>=0.1.0",
+        "pip install neural-pipeline-search --pre",
+        "pip install neural-pipeline-search~=0.9.0"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Placed 'cd neps' after 'poetry install' instead of before it, which is incorrect execution order",
+      "correction_candidates": [
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install",
+        "git clone git@github.com:automl/neps.git\ncd neps\npip install -e .",
+        "git clone git@github.com:automl/neps.git\ncd neps\npython setup.py install",
+        "git clone git@github.com:automl/neps.git\ncd neps\nconda env create -f environment.yml"
+      ],
+      "golden_answer": "git clone git@github.com:automl/neps.git\ncd neps\npoetry install"
+    }
+  ]
+}

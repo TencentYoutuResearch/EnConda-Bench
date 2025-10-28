@@ -1,0 +1,18 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_2_only_E1",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly omit the need to manually install the main `tensorflow` package, implying it is either not needed or installed automatically.",
+      "correction_candidates": [
+        "For TensorFlow, you will need to install TensorFlow (`tensorflow` or `tf-nightly`), TensorFlow Addons (`tensorflow-addons` or `tfa-nightly`), and TensorBoard (`tensorboard` or `tb-nightly`).",
+        "The package will automatically install a compatible version of `tensorflow`.",
+        "The only required dependency is `tensorflow-addons`, which will pull in `tensorflow`.",
+        "Install all dependencies from the `requirements.txt` file using `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "For TensorFlow, you will need to install TensorFlow (`tensorflow` or `tf-nightly`), TensorFlow Addons (`tensorflow-addons` or `tfa-nightly`), and TensorBoard (`tensorboard` or `tb-nightly`)."
+    }
+  ]
+}

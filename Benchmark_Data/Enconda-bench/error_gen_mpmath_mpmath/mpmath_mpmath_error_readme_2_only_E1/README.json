@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_2_only_E1",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `numpy` as a required prerequisite for `mpmath` that must be installed separately, which is unnecessary.",
+      "correction_candidates": [
+        "Remove the sentence `First, ensure you have numpy installed by running ``pip install numpy``.`",
+        "Change `pip install numpy` to `pip install gmpy2`.",
+        "Change `pip install numpy` to `pip install sympy`.",
+        "Move the numpy installation instruction to after the mpmath installation instruction."
+      ],
+      "golden_answer": "Remove the sentence `First, ensure you have numpy installed by running ``pip install numpy``.`"
+    }
+  ]
+}

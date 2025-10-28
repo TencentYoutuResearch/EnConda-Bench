@@ -1,0 +1,29 @@
+{
+  "readme": "pypa_pip_error_readme_4",
+  "repo_name": "pypa_pip",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing a specific package version uses a single equals sign (`=`) instead of the correct double equals sign (`==`), which will cause the command to fail.",
+      "correction_candidates": [
+        "To install a specific version of a package, use: `pip install numpy==1.21.0`",
+        "To install a specific version of a package, use: `pip install 'numpy=1.21.0'`",
+        "To install a specific version of a package, use: `pip install numpy~=1.21.0`",
+        "To install a specific version of a package, use: `pip install numpy --version 1.21.0`"
+      ],
+      "golden_answer": "To install a specific version of a package, use: `pip install numpy==1.21.0`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Installation from Source' instructions are incomplete. They omit the necessary first step of downloading the source code and suggest using a deprecated command (`python setup.py install`).",
+      "correction_candidates": [
+        "First, clone the repository (`git clone https://github.com/pypa/pip.git`), `cd` into the directory, then run `pip install .`",
+        "First, download the source zip file from GitHub, unzip it, then run `python get-pip.py`.",
+        "To install from source, run `pip install git+https://github.com/pypa/pip.git`.",
+        "First, clone the repository, then run `python setup.py develop`."
+      ],
+      "golden_answer": "First, clone the repository (`git clone https://github.com/pypa/pip.git`), `cd` into the directory, then run `pip install .`"
+    }
+  ]
+}

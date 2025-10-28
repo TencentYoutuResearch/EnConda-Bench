@@ -1,0 +1,18 @@
+{
+  "readme": "iree-org_iree-llvm-sandbox_error_readme_2_only_E4",
+  "repo_name": "iree-org_iree-llvm-sandbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to 'requirements.txt' incorrectly points to the build directory instead of the source directory, causing a 'file not found' error.",
+      "correction_candidates": [
+        "The command should be 'python -m pip install -r ${IREE_LLVM_SANDBOX_SOURCE_DIR}/requirements.txt'.",
+        "The command should be 'python -m pip install -r requirements.txt' after cd'ing into the source directory.",
+        "You should copy 'requirements.txt' from the source directory to the build directory before running the command.",
+        "The command should be 'python -m pip install -r ../requirements.txt'."
+      ],
+      "golden_answer": "The command should be 'python -m pip install -r ${IREE_LLVM_SANDBOX_SOURCE_DIR}/requirements.txt'."
+    }
+  ]
+}

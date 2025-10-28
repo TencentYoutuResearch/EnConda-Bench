@@ -1,0 +1,18 @@
+{
+  "readme": "lmcinnes_umap_error_readme_1_only_E1",
+  "repo_name": "lmcinnes_umap",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'numba' dependency is omitted from the 'Requirements' list, even though it is a critical dependency for the package to function.",
+      "correction_candidates": [
+        "In the Requirements list, add `numba`.",
+        "In the Requirements list, add `numba >= 0.50`.",
+        "In the Requirements list, add `python-numba`.",
+        "In the Requirements list, add `numba` and `llvmlite`."
+      ],
+      "golden_answer": "In the Requirements list, add `numba`."
+    }
+  ]
+}

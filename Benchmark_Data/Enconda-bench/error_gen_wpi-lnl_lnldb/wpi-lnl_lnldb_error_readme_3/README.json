@@ -1,0 +1,29 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_3",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The introduction omits the specific Django version required, stating it runs on 'Django' which is too vague and can lead to installing an incompatible version.",
+      "correction_candidates": [
+        "The text should be changed to 'Django 2.2 or later'.",
+        "The text should be changed to 'Django 3.x'.",
+        "The text should be changed to 'the latest version of Django'.",
+        "The text should specify the version in requirements_debug.txt."
+      ],
+      "golden_answer": "The text should be changed to 'Django 2.2 or later'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the development server is incorrect. 'startserver' is not a valid Django command.",
+      "correction_candidates": [
+        "The correct command is 'python manage.py runserver'.",
+        "The correct command is 'python manage.py server'.",
+        "The correct command is 'django-admin runserver'.",
+        "The correct command is 'gunicorn lnldb.wsgi'."
+      ],
+      "golden_answer": "The correct command is 'python manage.py runserver'."
+    }
+  ]
+}

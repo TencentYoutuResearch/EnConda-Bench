@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_googlecloudplatform_gsutil_error_readme_merge_k6",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.6 is required, which is an unsupported, end-of-life version. `gsutil` requires a modern version of Python.",
+      "correction_candidates": [
+        "Change 'Python 2.6' to 'Python 3.6 or newer'.",
+        "Change 'Python 2.6' to 'the latest version of Python 2'.",
+        "Add a note that Python 3 can be used but Python 2.6 is recommended for stability.",
+        "Remove the sentence specifying that Python 2.6 is required."
+      ],
+      "golden_answer": "Remove the sentence specifying that Python 2.6 is required."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The development setup instructions advise installing dependencies globally before creating a virtual environment, which is the wrong order and defeats the purpose of an isolated environment.",
+      "correction_candidates": [
+        "Replace the instructions with `python setup.py develop`.",
+        "Correct the order to first create and activate the virtual environment, then run `pip install -r requirements.txt`.",
+        "Suggest using `conda` instead of `pip` and a virtual environment.",
+        "Add the `--user` flag to the `pip install` command to avoid global installation."
+      ],
+      "golden_answer": "Correct the order to first create and activate the virtual environment, then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "An incorrect example command `gsutil create bucket <bucket_name>` is provided for creating a bucket. The correct command is `gsutil mb gs://<bucket_name>`.",
+      "correction_candidates": [
+        "Change the command to `gsutil mb gs://<bucket_name>`.",
+        "Change the command to `gsutil mkbucket gs://<bucket_name>`.",
+        "Change the command to `gcloud storage buckets create gs://<bucket_name>`.",
+        "Remove the incorrect example command entirely."
+      ],
+      "golden_answer": "Change the command to `gsutil mb gs://<bucket_name>`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `boto3` as a required dependency. `gsutil` is built on the `boto` library, not `boto3`, and dependencies are handled by the SDK installer.",
+      "correction_candidates": [
+        "Change the dependency from `boto3` to `boto`.",
+        "Specify that both `boto` and `boto3` are required.",
+        "Change the instruction to `pip install boto3`.",
+        "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+      ],
+      "golden_answer": "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "First create a virtual environment with `python -m venv gsutil-env`, then activate it and install the dependencies with `pip install -r requirements.txt`.",
+        "Create the virtual environment using `python -m venv gsutil-env`, activate it with `source gsutil-env/bin/activate`, then run `pip install -r requirements.txt`.",
+        "Set up a virtual environment first with `python -m venv gsutil-env`, then install dependencies inside it using `pip install -r requirements.txt`.",
+        "Initialize the virtual environment with `python -m venv gsutil-env` before installing any pip packages from requirements.txt."
+      ],
+      "golden_answer": "First create a virtual environment with `python -m venv gsutil-env`, then activate it and install the dependencies with `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent dependencies.txt file instead of requirements.txt",
+      "correction_candidates": [
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r requirements.txt`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r setup.cfg`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r pyproject.toml`.",
+        "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -e .`."
+      ],
+      "golden_answer": "You will also need to install the required system dependencies by running `sudo apt-get install libxml2-dev libxslt1-dev python3-dev` and then `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command syntax 'gsutil --help' instead of 'gsutil help'",
+      "correction_candidates": [
+        "Run the \"gsutil help\" command for a list of the built-in gsutil help topics.",
+        "Run the \"gsutil -h\" command for a list of the built-in gsutil help topics.",
+        "Run the \"gsutil help topics\" command for a list of the built-in gsutil help topics.",
+        "Run the \"gsutil help commands\" command for a list of the built-in gsutil help topics."
+      ],
+      "golden_answer": "Run the \"gsutil help\" command for a list of the built-in gsutil help topics."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Lists unnecessary machine learning dependencies that are not required for gsutil",
+      "correction_candidates": [
+        "Before installing gsutil, make sure you have the following dependencies: `pip install requests urllib3 six`. These core libraries are essential for gsutil's cloud storage operations.",
+        "Before installing gsutil, make sure you have the following dependencies: `pip install google-auth google-cloud-storage`. These Google Cloud libraries are essential for gsutil's operations.",
+        "Before installing gsutil, make sure you have Python 3.7+ installed. No additional dependencies need to be manually installed as they will be handled automatically.",
+        "Before installing gsutil, ensure you have `pip install boto3 cryptography pyopenssl`. These libraries are essential for gsutil's cloud storage operations."
+      ],
+      "golden_answer": "Before installing gsutil, make sure you have Python 3.7+ installed. No additional dependencies need to be manually installed as they will be handled automatically."
+    }
+  ]
+}

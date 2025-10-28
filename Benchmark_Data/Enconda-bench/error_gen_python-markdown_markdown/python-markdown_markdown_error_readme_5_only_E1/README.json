@@ -1,0 +1,18 @@
+{
+  "readme": "python-markdown_markdown_error_readme_5_only_E1",
+  "repo_name": "python-markdown_markdown",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies 'setuptools wheel' to the pip install command",
+      "correction_candidates": [
+        "pip install markdown",
+        "pip install markdown --upgrade",
+        "pip install markdown[extras]",
+        "pip install --user markdown"
+      ],
+      "golden_answer": "pip install markdown"
+    }
+  ]
+}

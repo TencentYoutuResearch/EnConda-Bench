@@ -1,0 +1,29 @@
+{
+  "readme": "skrub-data_skrub_error_readme_2",
+  "repo_name": "skrub-data_skrub",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that skrub is only compatible with Python 3.7 and earlier, which contradicts the package's actual compatibility shown in the PyPI version badge.",
+      "correction_candidates": [
+        "Remove the sentence about Python 3.7 compatibility.",
+        "Update the sentence to 'skrub is compatible with Python 3.8 and later.'",
+        "Change the Python version badge to reflect compatibility with 3.7 only.",
+        "Add a note that older versions of skrub supported Python 3.7."
+      ],
+      "golden_answer": "Remove the sentence about Python 3.7 compatibility."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the dependency file is incorrect; it points to a non-existent `requirements.txt` file instead of the correct `setup.cfg`.",
+      "correction_candidates": [
+        "Dependencies and minimal versions are listed in the `setup <https://github.com/skrub-data/skrub/blob/main/setup.cfg#L27>`_ file.",
+        "Dependencies and minimal versions are listed in the `pyproject.toml <https://github.com/skrub-data/skrub/blob/main/pyproject.toml>`_ file.",
+        "Dependencies and minimal versions are listed in the `environment.yml <https://github.com/skrub-data/skrub/blob/main/environment.yml>`_ file.",
+        "Dependencies and minimal versions are listed in the `setup.py <https://github.com/skrub-data/skrub/blob/main/setup.py>`_ file."
+      ],
+      "golden_answer": "Dependencies and minimal versions are listed in the `setup <https://github.com/skrub-data/skrub/blob/main/setup.cfg#L27>`_ file."
+    }
+  ]
+}

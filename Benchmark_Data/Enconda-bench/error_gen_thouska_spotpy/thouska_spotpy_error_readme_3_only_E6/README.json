@@ -1,0 +1,18 @@
+{
+  "readme": "thouska_spotpy_error_readme_3_only_E6",
+  "repo_name": "thouska_spotpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `conda` installation commands are in the wrong order. `conda install spotpy` is executed before adding the `conda-forge` channel, which will cause the installation to fail as the package may not be in the default channels.",
+      "correction_candidates": [
+        "Move `conda install spotpy` to be the last command in the sequence.",
+        "Combine the commands into one: `conda install -c conda-forge spotpy --channel-priority strict`",
+        "Remove the `conda config` commands and use `conda install -c conda-forge spotpy`.",
+        "The order is correct, but the channel should be `defaults`."
+      ],
+      "golden_answer": "Move `conda install spotpy` to be the last command in the sequence."
+    }
+  ]
+}

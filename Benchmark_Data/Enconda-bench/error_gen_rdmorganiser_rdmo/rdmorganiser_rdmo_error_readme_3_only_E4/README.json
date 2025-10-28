@@ -1,0 +1,18 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_3_only_E4",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a configuration file at a non-existent path (`config/settings/local.py.example`), causing confusion and failure to configure the application.",
+      "correction_candidates": [
+        "Change the path to `rdmo/settings/local.py.example`.",
+        "Change the instruction to 'Create a new file named `config/settings/local.py`'.",
+        "Remove step 4, as there is no `config/settings/local.py.example` file in the repository.",
+        "Change the path to `settings/local.py.example`."
+      ],
+      "golden_answer": "Remove step 4, as there is no `config/settings/local.py.example` file in the repository."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "librephotos_librephotos_error_readme_6_only_E1",
+  "repo_name": "librephotos_librephotos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Referenced non-existent pip package 'librephotos' that doesn't exist in PyPI",
+      "correction_candidates": [
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)",
+        "To get started quickly, clone the repository and follow the Docker installation guide in our documentation.",
+        "To get started quickly, download the latest release and follow the setup instructions in our documentation.",
+        "To get started quickly, use our Docker Compose setup as described in the installation documentation."
+      ],
+      "golden_answer": "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)"
+    }
+  ]
+}

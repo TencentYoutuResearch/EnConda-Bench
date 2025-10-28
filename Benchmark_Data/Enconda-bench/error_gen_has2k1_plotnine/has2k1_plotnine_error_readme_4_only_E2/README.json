@@ -1,0 +1,18 @@
+{
+  "readme": "has2k1_plotnine_error_readme_4_only_E2",
+  "repo_name": "has2k1_plotnine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing with conda is incorrect. It incorrectly uses `conda-forge` as the command instead of specifying it as the channel for the `conda install` command.",
+      "correction_candidates": [
+        "Change the command to \"$ conda install plotnine --from conda-forge\".",
+        "Change the command to \"$ conda install -c conda-forge plotnine\".",
+        "Change the command to \"$ pip install plotnine -f https://conda.anaconda.org/conda-forge/\".",
+        "Change the command to \"$ conda install anaconda/plotnine\"."
+      ],
+      "golden_answer": "Change the command to \"$ conda install -c conda-forge plotnine\"."
+    }
+  ]
+}

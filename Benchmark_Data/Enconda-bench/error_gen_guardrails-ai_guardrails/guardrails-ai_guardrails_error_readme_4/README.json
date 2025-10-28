@@ -1,0 +1,29 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_4",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Installation' section is missing the primary command `pip install guardrails-ai`, which is required to install the package.",
+      "correction_candidates": [
+        "The package is installed automatically when `guardrails configure` is run.",
+        "Add `pip install guardrails-ai` to the 'Installation' section.",
+        "Add `conda install guardrails-ai` to the 'Installation' section.",
+        "Add instructions to clone the repository and run `python setup.py install`."
+      ],
+      "golden_answer": "Add `pip install guardrails-ai` to the 'Installation' section."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Installation' section incorrectly states that Guardrails only works with Python 3.7, which contradicts the PyPI version badge and is overly restrictive.",
+      "correction_candidates": [
+        "Note: Guardrails only works with Python 3.7.",
+        "Note: Guardrails works with Python 2.7 and 3.7.",
+        "Remove the note about the Python version.",
+        "Note: Guardrails requires Python 3.6 or newer."
+      ],
+      "golden_answer": "Remove the note about the Python version."
+    }
+  ]
+}

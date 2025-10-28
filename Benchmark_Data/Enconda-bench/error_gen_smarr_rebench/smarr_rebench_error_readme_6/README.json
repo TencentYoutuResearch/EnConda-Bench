@@ -1,0 +1,29 @@
+{
+  "readme": "smarr_rebench_error_readme_6",
+  "repo_name": "smarr_rebench",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Outdated Python version requirement - specifying Python 2.7 only which is deprecated",
+      "correction_candidates": [
+        "ReBench is implemented in Python and can be installed via pip:",
+        "ReBench is implemented in Python 3.7+ and can be installed via pip:",
+        "ReBench is implemented in Python and requires Python 3.6 or higher. Install via pip:",
+        "ReBench is implemented in Python 2.7/3.x and can be installed via pip:"
+      ],
+      "golden_answer": "ReBench is implemented in Python and can be installed via pip:"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax using non-existent --config flag",
+      "correction_candidates": [
+        "rebench test.conf",
+        "rebench -c test.conf",
+        "rebench --file test.conf",
+        "python -m rebench test.conf"
+      ],
+      "golden_answer": "rebench test.conf"
+    }
+  ]
+}

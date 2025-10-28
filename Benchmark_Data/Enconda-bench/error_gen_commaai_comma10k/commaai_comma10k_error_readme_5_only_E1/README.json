@@ -1,0 +1,18 @@
+{
+  "readme": "commaai_comma10k_error_readme_5_only_E1",
+  "repo_name": "commaai_comma10k",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies without specifying installation method or verifying if they are actually required for viewer.py",
+      "correction_candidates": [
+        "Remove the pip install command entirely and just run ./viewer.py directly",
+        "Install dependencies using conda install opencv-python numpy matplotlib instead",
+        "Check requirements.txt file first, then install only the dependencies listed there",
+        "Create a virtual environment first, then install the specific versions needed"
+      ],
+      "golden_answer": "Remove the pip install command entirely and just run ./viewer.py directly"
+    }
+  ]
+}

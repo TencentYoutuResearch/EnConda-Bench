@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_7_only_E4",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced non-existent file paths for requirements.txt and settings template that don't exist in the project structure",
+      "correction_candidates": [
+        "Remove file path references and use standard pip installation commands",
+        "Create the missing files in the repository before referencing them",
+        "Use relative paths like `requirements/base.txt` that match the actual project structure",
+        "Reference the actual documentation for installation instead of non-existent files"
+      ],
+      "golden_answer": "Remove file path references and use standard pip installation commands"
+    }
+  ]
+}

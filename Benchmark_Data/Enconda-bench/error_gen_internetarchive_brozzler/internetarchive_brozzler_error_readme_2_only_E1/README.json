@@ -1,0 +1,18 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_2_only_E1",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Getting Started' section, the installation command is `pip install brozzler`. This is incorrect for running `brozzler-easy`, which requires extra dependencies (`pywb`, `warcprox`) that are only installed by using `pip install brozzler[easy]`.",
+      "correction_candidates": [
+        "Change `pip install brozzler` to `pip install brozzler-easy`.",
+        "Add `pip install pywb warcprox` after `pip install brozzler`.",
+        "Change `pip install brozzler` to `pip install brozzler --all-extras`.",
+        "Change `pip install brozzler` to `pip install brozzler[easy]`."
+      ],
+      "golden_answer": "Change `pip install brozzler` to `pip install brozzler[easy]`."
+    }
+  ]
+}

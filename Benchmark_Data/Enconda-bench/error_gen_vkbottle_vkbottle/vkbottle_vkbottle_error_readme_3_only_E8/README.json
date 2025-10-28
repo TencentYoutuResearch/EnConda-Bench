@@ -1,0 +1,18 @@
+{
+  "readme": "vkbottle_vkbottle_error_readme_3_only_E8",
+  "repo_name": "vkbottle_vkbottle",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The 'Hello World' example code is logically incorrect. The handler function uses a string literal on its own line instead of a 'return' statement, so the bot will not send any message.",
+      "correction_candidates": [
+        "async def handler(_): print(\"Hello world!\")",
+        "async def handler(_) -> str: return \"Hello world!\"",
+        "async def handler(message): await message.answer(\"Hello world!\")",
+        "def handler(_) -> str: return \"Hello world!\""
+      ],
+      "golden_answer": "async def handler(_) -> str: return \"Hello world!\""
+    }
+  ]
+}

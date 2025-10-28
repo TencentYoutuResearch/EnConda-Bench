@@ -1,0 +1,29 @@
+{
+  "readme": "valory-xyz_trader_error_readme_3",
+  "repo_name": "valory-xyz_trader",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `--update-packages` flag is missing from the `autonomy packages sync` command. This can lead to using stale or incorrect locally cached package versions, causing dependency issues.",
+      "correction_candidates": [
+        "autonomy packages sync --update-packages",
+        "autonomy packages lock --update",
+        "autonomy packages sync --dev",
+        "autonomy packages pull"
+      ],
+      "golden_answer": "autonomy packages sync --update-packages"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The `PROMPT_TEMPLATE` environment variable is defined across multiple lines in the bash script without the proper syntax for a multi-line string, which will cause a shell error during export.",
+      "correction_candidates": [
+        "export PROMPT_TEMPLATE=\"With the given question \\\"@{question}\\\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?\"",
+        "export PROMPT_TEMPLATE='With the given question \"@{question}\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?'",
+        "export PROMPT_TEMPLATE='With the given question \"@{question}\" \\ and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, \\ what are the respective probabilities of `p_yes` and `p_no` occurring?'",
+        "export PROMPT_TEMPLATE=$(echo 'With the given question \"@{question}\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?')"
+      ],
+      "golden_answer": "export PROMPT_TEMPLATE='With the given question \"@{question}\" and the `yes` option represented by `@{yes}` and the `no` option represented by `@{no}`, what are the respective probabilities of `p_yes` and `p_no` occurring?'"
+    }
+  ]
+}

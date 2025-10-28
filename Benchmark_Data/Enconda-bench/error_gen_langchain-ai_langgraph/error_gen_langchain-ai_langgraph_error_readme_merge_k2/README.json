@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_langchain-ai_langgraph_error_readme_merge_k2",
+  "repo_name": "langchain-ai_langgraph",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install langgraph-core` is incorrect. It installs a core component but not the main `langgraph` package required to run the examples.",
+      "correction_candidates": [
+        "pip install langgraph",
+        "pip install -U langgraph",
+        "pip install --upgrade langgraph",
+        "pip install langgraph[all]"
+      ],
+      "golden_answer": "pip install -U langgraph"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `set TAVILY_API_KEY=tvly-...` is for Windows Command Prompt and will not work in bash/zsh shells, which use the `export` command.",
+      "correction_candidates": [
+        "export TAVILY_API_KEY=\"tvly-...\"",
+        "TAVILY_API_KEY=tvly-...",
+        "export TAVILY_API_KEY=tvly-...",
+        "env TAVILY_API_KEY=tvly-..."
+      ],
+      "golden_answer": "export TAVILY_API_KEY=tvly-..."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `pip install langchain_openai==0.0.1 langchain_community==0.0.1` installs extremely old and likely incompatible versions of the libraries, which will cause errors when running the example code.",
+      "correction_candidates": [
+        "pip install langchain_openai langchain_community",
+        "pip install --upgrade langchain_openai langchain_community",
+        "pip install langchain_openai>=0.1.0 langchain_community>=0.0.30",
+        "pip install langchain-openai langchain-community"
+      ],
+      "golden_answer": "pip install langchain_openai langchain_community"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The environment variable `export` commands are placed after the Python code block. The script will fail because the API keys are not set when the Python code runs.",
+      "correction_candidates": [
+        "Move the `export` commands to the top of the script file.",
+        "Place the `export` commands in a separate `.env` file and use a library like `python-dotenv` to load them.",
+        "Move the `export` commands to before the Python code block that requires them.",
+        "Set the environment variables directly within the Python script using `os.environ`."
+      ],
+      "golden_answer": "Move the `export` commands to before the Python code block that requires them."
+    }
+  ]
+}

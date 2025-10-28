@@ -1,0 +1,18 @@
+{
+  "readme": "rollbar_pyrollbar_error_readme_3_only_E2",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is specified as `pytest`, but the project is configured to run tests via `python setup.py test`. Using `pytest` directly may fail if not properly configured.",
+      "correction_candidates": [
+        "To run the tests: `python setup.py test`",
+        "To run the tests: `python -m unittest discover`",
+        "To run the tests: `tox`",
+        "To run the tests: `py.test rollbar/test`"
+      ],
+      "golden_answer": "To run the tests: `python setup.py test`"
+    }
+  ]
+}

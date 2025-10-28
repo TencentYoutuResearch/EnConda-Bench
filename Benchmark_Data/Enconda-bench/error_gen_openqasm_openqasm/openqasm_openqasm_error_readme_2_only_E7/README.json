@@ -1,0 +1,18 @@
+{
+  "readme": "openqasm_openqasm_error_readme_2_only_E7",
+  "repo_name": "openqasm_openqasm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The statement 'This project is compatible with Python' is too vague and does not specify the required version, which can lead to compatibility issues if the user has an unsupported version installed.",
+      "correction_candidates": [
+        "This project requires Python 3.8 or newer.",
+        "This project is compatible with Python 2.7.",
+        "This project is compatible with the latest stable version of Python 3.",
+        "The required Python version is specified in the `setup.py` file."
+      ],
+      "golden_answer": "This project requires Python 3.8 or newer."
+    }
+  ]
+}

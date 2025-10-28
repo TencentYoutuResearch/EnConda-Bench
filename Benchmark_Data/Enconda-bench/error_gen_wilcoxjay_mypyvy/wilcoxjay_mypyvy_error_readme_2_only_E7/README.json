@@ -1,0 +1,18 @@
+{
+  "readme": "wilcoxjay_mypyvy_error_readme_2_only_E7",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The specified minimum Python version is 3.6, but the correct required version is 3.8.",
+      "correction_candidates": [
+        "You need python version 3.8 or higher.",
+        "You need python version 3.7 or higher.",
+        "You need the latest version of python3.",
+        "You need python version 3.9 or higher."
+      ],
+      "golden_answer": "You need python version 3.8 or higher."
+    }
+  ]
+}

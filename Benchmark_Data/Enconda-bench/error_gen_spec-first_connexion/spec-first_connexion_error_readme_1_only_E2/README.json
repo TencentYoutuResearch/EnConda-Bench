@@ -1,0 +1,18 @@
+{
+  "readme": "spec-first_connexion_error_readme_1_only_E2",
+  "repo_name": "spec-first_connexion",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation' section, the command to install multiple extras uses a space instead of a comma as a separator inside the brackets, which is incorrect syntax.",
+      "correction_candidates": [
+        "$ pip install connexion[swagger-ui] connexion[uvicorn]",
+        "$ pip install \"connexion[swagger-ui,uvicorn]\"",
+        "$ pip install connexion --extras swagger-ui,uvicorn",
+        "$ pip install connexion[swagger-ui,uvicorn]"
+      ],
+      "golden_answer": "$ pip install connexion[swagger-ui,uvicorn]"
+    }
+  ]
+}

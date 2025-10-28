@@ -1,0 +1,29 @@
+{
+  "readme": "skmin-lab_unixmd_error_readme_1",
+  "repo_name": "skmin-lab_unixmd",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is too vague, specifying only 'Python 3', which might lead users with versions older than 3.6 to encounter compatibility issues.",
+      "correction_candidates": [
+        "Python 3.6 or later",
+        "Python >= 3.6",
+        "Python 3.6+",
+        "Python version 3.6 is required"
+      ],
+      "golden_answer": "Python 3.6 or later"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The build command uses the incorrect flag '--build-lib' instead of '-b' to specify the build directory, which can lead to build failure or incorrect output location.",
+      "correction_candidates": [
+        "$ python3 setup.py build_ext -b ./src/build",
+        "$ python3 setup.py build --build-base=./src/build",
+        "$ python3 setup.py build_ext --inplace",
+        "$ python3 setup.py install --prefix=./src/build"
+      ],
+      "golden_answer": "$ python3 setup.py build_ext -b ./src/build"
+    }
+  ]
+}

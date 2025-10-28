@@ -1,0 +1,18 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_1_only_E4",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the `micropy.json` file is located inside the `.micropy/` folder. It should be in the project root, alongside the `.micropy/` folder.",
+      "correction_candidates": [
+        "Restore the original text stating that two items are added: a `.micropy/` folder and a `micropy.json` file.",
+        "Change the text to state that the `micropy.json` file is created in the user's home directory.",
+        "Change the text to state that the `.micropy/` folder is created inside a `src/` directory.",
+        "Change the text to state that a `micropy.ini` file is created instead of `micropy.json`."
+      ],
+      "golden_answer": "Restore the original text stating that two items are added: a `.micropy/` folder and a `micropy.json` file."
+    }
+  ]
+}

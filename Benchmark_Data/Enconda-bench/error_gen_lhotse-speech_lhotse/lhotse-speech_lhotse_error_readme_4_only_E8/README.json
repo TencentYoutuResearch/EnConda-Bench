@@ -1,0 +1,18 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_4_only_E8",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "In the example code snippet, the `SimpleCutSampler` is initialized with an incorrect parameter `max_len=300` instead of the correct parameter `max_duration=300`.",
+      "correction_candidates": [
+        "sampler = SimpleCutSampler(cuts, max_len=300)",
+        "sampler = SimpleCutSampler(cuts, duration=300)",
+        "sampler = SimpleCutSampler(cuts, max_duration=300)",
+        "sampler = SimpleCutSampler(cuts, max_cuts=300)"
+      ],
+      "golden_answer": "sampler = SimpleCutSampler(cuts, max_duration=300)"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_1",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instruction to 'Get Python 3' is too generic. The project requires at least version 3.6, and a user might have an older, incompatible version like Python 3.5 installed.",
+      "correction_candidates": [
+        "Get Python 3.6",
+        "Get the latest version of Python 3",
+        "Get Python 3.6 or higher",
+        "Get Python >= 3.6"
+      ],
+      "golden_answer": "Get Python 3.6 or higher"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command 'make check' is incorrect for verifying the installation. The correct command to run the regression tests is 'make test'.",
+      "correction_candidates": [
+        "make test-all",
+        "make verify",
+        "make regression",
+        "make test"
+      ],
+      "golden_answer": "make test"
+    }
+  ]
+}

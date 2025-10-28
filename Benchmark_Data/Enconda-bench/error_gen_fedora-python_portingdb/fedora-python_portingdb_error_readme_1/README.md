@@ -1,0 +1,74 @@
+A database of packages that still need Python 2 in Fedora, and tools to manage it.
+
+This software is a mess. It was created for one purpose and was expected to not be needed soon.
+Meanwhile, hacks are piling on.
+
+# Deployed report
+
+A HTML report is located at:
+
+    https://fedora.portingdb.xyz/
+
+Unless you want to refresh data there, or run additional reports, you can just look at that.
+
+# Installation
+
+This software is not released.
+To install it, first set up a
+[Python virtual environment](https://developer.fedoraproject.org/tech/languages/python/python-installation.html)
+with Python 3.7+.
+Then run directly from Git working directory:
+
+    (venv) $ pip install --editable .  # Mind the dot at the end!
+
+
+# Usage
+
+To start a HTML report server, start:
+
+    (venv) $ export PYTHONPATH=.
+    (venv) $ python portingdb serve
+
+# Check drops
+
+There is a script that checks what python2 packages can be dropped from Fedora
+during the [Mass Python 2 Package Removal](https://fedoraproject.org/wiki/Changes/Mass_Python_2_Package_Removal).
+
+Change your Python virtual environment to include system side packages:
+
+    (venv) $ cat venv/pyvenv.cfg
+    ...
+    include-system-site-packages = true
+    ...
+
+Reactivate if needed:
+
+    (venv) $ deactivate
+    $ . venv/bin/activate
+
+And run it with:
+
+    (venv) $ python -m portingdb --datadir database/ check-drops
+
+See the docstring of [portingdb/check_drops.py](./portingdb/check_drops.py)
+for more info.
+
+# Freezing
+
+   A static website with the HTML repot can be build by:
+
+    (venv) $ export PYTHONPATH=.
+    (venv) $ python elsasite.py freeze
+
+   You can add `--serve` for he `freeze` command to immediately inspect the result.
+
+# Contribute
+
+- A guide for updating the data is [in `docs/`](./docs/update_portingdb.rst).
+- Issue Tracker: https://github.com/fedora-python/portingdb/issues
+- Source Code: https://github.com/fedora-python/portingdb
+
+
+# License
+
+This code is under the MIT license. May it serve you well.

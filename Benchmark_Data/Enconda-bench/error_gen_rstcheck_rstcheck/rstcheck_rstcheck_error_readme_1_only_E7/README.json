@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_1_only_E7",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions incorrectly state that the tool is for Python 2.7, which contradicts the PyPI badge showing support for modern Python 3 versions, causing version compatibility confusion.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7.",
+        "Change the note to: 'This tool requires Python 3.7 or newer.'",
+        "Update the PyPI badge to reflect Python 2.7 support only.",
+        "Add a note: 'For Python 3 support, install a different version of the package.'"
+      ],
+      "golden_answer": "Remove the note about Python 2.7."
+    }
+  ]
+}

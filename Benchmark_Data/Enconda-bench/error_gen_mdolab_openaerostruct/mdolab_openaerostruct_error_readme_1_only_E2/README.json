@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_1_only_E2",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for editable installation, `pip install --e .`, is syntactically incorrect. The correct flag is `-e` or `--editable`.",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install --editable .",
+        "pip install .",
+        "pip install -e src/."
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

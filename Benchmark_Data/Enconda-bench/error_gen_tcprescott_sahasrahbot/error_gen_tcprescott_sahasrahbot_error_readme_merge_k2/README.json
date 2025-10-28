@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_tcprescott_sahasrahbot_error_readme_merge_k2",
+  "repo_name": "tcprescott_sahasrahbot",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -u virtualenv` uses an incorrect flag. The `-u` flag is not a recognized alias for `--user` and will not install the package in the user's site-packages directory.",
+      "correction_candidates": [
+        "Change `pip install -u virtualenv` to `pip install --user virtualenv`.",
+        "Replace `pip install -u virtualenv` with `pip install virtualenv` to install it globally.",
+        "Use the command `python -m pip install -U virtualenv`.",
+        "Modify the command to `pip install virtualenv --user-site`."
+      ],
+      "golden_answer": "Change `pip install -u virtualenv` to `pip install --user virtualenv`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The command `poetry install` is executed before the virtual environment is created with `virtualenv .venv`. This will cause Poetry to install dependencies globally or in another environment, not the intended project-specific one.",
+      "correction_candidates": [
+        "Move the `virtualenv .venv` command to be step 3, before `poetry install`.",
+        "Run `poetry config virtualenvs.in-project true` before `poetry install`.",
+        "Combine the steps into `virtualenv .venv && poetry install`.",
+        "Delete the `virtualenv .venv` step and let Poetry manage the environment creation automatically."
+      ],
+      "golden_answer": "Move the `virtualenv .venv` command to be step 3, before `poetry install`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install Poetry (`pip install poetry`) is missing from the setup steps. The subsequent command `poetry install` will fail with a 'command not found' error.",
+      "correction_candidates": [
+        "Add `pip install poetry` as a new step before `virtualenv .venv`.",
+        "Replace `poetry install` with `pip install -r requirements.txt` after exporting dependencies.",
+        "Add `pip install poetry` as a new step after `virtualenv .venv`.",
+        "Install poetry using the official installer script: `curl -sSL https://install.python-poetry.org | python3 -`"
+      ],
+      "golden_answer": "Add `pip install poetry` as a new step before `virtualenv .venv`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_regions_error_readme_2",
+  "repo_name": "astropy_regions",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only compatible with Python 3.6, which is an outdated and likely false version constraint.",
+      "correction_candidates": [
+        "Regions requires Python 3.8 or later.",
+        "This package is compatible with all modern versions of Python.",
+        "Remove the sentence specifying Python 3.6 compatibility.",
+        "Please see the online documentation for Python version requirements."
+      ],
+      "golden_answer": "Remove the sentence specifying Python 3.6 compatibility."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The README suggests a non-existent command `regions --citation` to generate the citation text, which will fail.",
+      "correction_candidates": [
+        "please include the following acknowledgment::\n\n    This research made use of Regions, an Astropy package for region\n    handling (Bradley et al. 202X).",
+        "please include the citation (Bradley et al. 202X).",
+        "please cite the Zenodo record for the version used.",
+        "please see the CITATION file for an example BibTeX entry."
+      ],
+      "golden_answer": "please include the following acknowledgment::\n\n    This research made use of Regions, an Astropy package for region\n    handling (Bradley et al. 202X)."
+    }
+  ]
+}

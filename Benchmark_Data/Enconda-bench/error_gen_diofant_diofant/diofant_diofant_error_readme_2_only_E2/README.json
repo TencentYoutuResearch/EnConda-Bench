@@ -1,0 +1,18 @@
+{
+  "readme": "diofant_diofant_error_readme_2_only_E2",
+  "repo_name": "diofant_diofant",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command `pip install --diofant` uses incorrect syntax and will fail.",
+      "correction_candidates": [
+        "Correct the command to `pip install -e diofant` for an editable install.",
+        "Correct the command to `python -m pip install diofant`.",
+        "Correct the command to `pip install diofant`.",
+        "Correct the command to `pip install diofant --user`."
+      ],
+      "golden_answer": "Correct the command to `pip install diofant`."
+    }
+  ]
+}

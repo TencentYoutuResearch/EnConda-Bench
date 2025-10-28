@@ -1,0 +1,29 @@
+{
+  "readme": "strinking_futaba_error_readme_1",
+  "repo_name": "strinking_futaba",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the sample configuration file is incorrect, leading to a 'file not found' error when trying to copy it.",
+      "correction_candidates": [
+        "cp misc/config.toml config.toml",
+        "mv misc/config.toml config.toml",
+        "cp futaba/config.toml config.toml",
+        "cp config.toml.sample config.toml"
+      ],
+      "golden_answer": "cp misc/config.toml config.toml"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the bot passes the config file as an argument instead of redirecting it to stdin, which will cause the application to fail.",
+      "correction_candidates": [
+        "python3 -m futaba --config config.toml",
+        "python3 futaba.py <config.toml>",
+        "python3 -m futaba < config.toml",
+        "futaba --config config.toml"
+      ],
+      "golden_answer": "python3 -m futaba < config.toml"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "gamesdonequick_donation-tracker_error_readme_2",
+  "repo_name": "gamesdonequick_donation-tracker",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The commands to install and clone the repository are in the wrong order. 'pip install -e donation-tracker' attempts to install from a local directory that has not been created yet by 'git clone'.",
+      "correction_candidates": [
+        "First run `git clone git@github.com:GamesDoneQuick/donation-tracker`, then `pip install -e donation-tracker`.",
+        "Run `pip install git+https://github.com/GamesDoneQuick/donation-tracker.git@master` instead of cloning and installing locally.",
+        "Run `git clone git@github.com:GamesDoneQuick/donation-tracker` and then `python setup.py install` inside the new directory.",
+        "Run `pip install -e ./donation-tracker` after cloning the repository."
+      ],
+      "golden_answer": "First run `git clone git@github.com:GamesDoneQuick/donation-tracker`, then `pip install -e donation-tracker`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command 'pip install django' does not specify a version, which can lead to installing a future version of Django that is incompatible with the project.",
+      "correction_candidates": [
+        "pip install \"django<6.0\"",
+        "pip install django==5.0.*",
+        "pip install django~=5.0",
+        "pip install -r requirements.txt"
+      ],
+      "golden_answer": "pip install django~=5.0"
+    }
+  ]
+}

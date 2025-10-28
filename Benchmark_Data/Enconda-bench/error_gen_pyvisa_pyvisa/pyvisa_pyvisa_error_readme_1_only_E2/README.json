@@ -1,0 +1,18 @@
+{
+  "readme": "pyvisa_pyvisa_error_readme_1_only_E2",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command is incorrect, using 'py-visa' which is not the correct package name on PyPI.",
+      "correction_candidates": [
+        "$ pip install pyvisa",
+        "$ pip install pyvisa --upgrade",
+        "$ python -m pip install pyvisa",
+        "$ pip install PyVISA"
+      ],
+      "golden_answer": "$ pip install pyvisa"
+    }
+  ]
+}

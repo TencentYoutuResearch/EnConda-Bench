@@ -1,0 +1,18 @@
+{
+  "readme": "sassoftware_python-sasctl_error_readme_2_only_E4",
+  "repo_name": "sassoftware_python-sasctl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example for authentication using `authinfo` incorrectly specifies a literal string `'authinfo.json'` and implies a file with this exact name is required, which may not exist or be correctly configured. The original `<authinfo file>` placeholder was more appropriate.",
+      "correction_candidates": [
+        "The `authinfo` parameter should point to a valid `.authinfo` file, not a string literal.",
+        "The `authinfo.json` file must be in the current working directory.",
+        "The `authinfo` parameter should be a dictionary containing authentication details.",
+        "The `authinfo` parameter should be replaced with `username` and `password` parameters."
+      ],
+      "golden_answer": "The `authinfo` parameter should point to a valid `.authinfo` file, not a string literal."
+    }
+  ]
+}

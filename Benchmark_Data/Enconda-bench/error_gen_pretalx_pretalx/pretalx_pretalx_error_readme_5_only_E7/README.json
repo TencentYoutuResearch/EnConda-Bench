@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_5_only_E7",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7 version for development installation",
+      "correction_candidates": [
+        "To install pretalx for development, first install Python 3.8+ and then run `pip install -r requirements.txt`.",
+        "To install pretalx for development, first install Python 3.6 or higher and then run `pip install -r requirements.txt`.",
+        "To install pretalx for development, first install Python 3.9+ and then run `pip install -r requirements.txt`.",
+        "To install pretalx for development, first install the latest Python version and then run `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "To install pretalx for development, first install Python 3.8+ and then run `pip install -r requirements.txt`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "datactive_bigbang_error_readme_3",
+  "repo_name": "datactive_bigbang",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv env` may use a legacy version of Python (Python 2) on systems where `python` is not aliased to `python3`, potentially causing compatibility issues.",
+      "correction_candidates": [
+        "Replace `python -m venv env` with `virtualenv env`.",
+        "The command is correct, but you must first run `alias python=python3`.",
+        "Replace `python -m venv env` with `python3 -m venv env` to ensure Python 3 is used.",
+        "Install the project using Conda instead of venv to avoid Python version conflicts."
+      ],
+      "golden_answer": "Replace `python -m venv env` with `python3 -m venv env` to ensure Python 3 is used."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests contains a typo in the directory path (`test/unit` instead of `tests/unit`), which will cause pytest to fail to find the tests.",
+      "correction_candidates": [
+        "The correct command is `python -m pytest test/unit`.",
+        "The correct command is `pytest tests/unit`.",
+        "Run `cd tests/unit` first, then run `pytest`.",
+        "The correct command is `pytest --all` to run all tests in the repository."
+      ],
+      "golden_answer": "The correct command is `pytest tests/unit`."
+    }
+  ]
+}

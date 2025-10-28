@@ -1,0 +1,18 @@
+{
+  "readme": "injectivelabs_sdk-python_error_readme_1_only_E2",
+  "repo_name": "injectivelabs_sdk-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing a local build, `pip install injective-py --find-links ...`, is missing the `--no-index` flag. This can cause pip to ignore the local package and download it from PyPI instead, defeating the purpose of installing from a local build.",
+      "correction_candidates": [
+        "pip install ./dist/injective-py*.whl",
+        "pip install injective-py --no-index --find-links /path/to/injective/sdk-python/dist",
+        "pip install injective-py --no-deps --find-links /path/to/injective/sdk-python/dist",
+        "pip install --upgrade injective-py --find-links /path/to/injective/sdk-python/dist"
+      ],
+      "golden_answer": "pip install injective-py --no-index --find-links /path/to/injective/sdk-python/dist"
+    }
+  ]
+}

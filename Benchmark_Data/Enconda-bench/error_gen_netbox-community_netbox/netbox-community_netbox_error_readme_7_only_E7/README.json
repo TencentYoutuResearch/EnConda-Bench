@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_7_only_E7",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Django 2.2 version requirement when NetBox requires Django 4.2+",
+      "correction_candidates": [
+        "NetBox requires Django version 4.2 or later to function properly with all its features.",
+        "NetBox requires Django version 3.2 or later to function properly with all its features.",
+        "NetBox requires Django version 4.0 or later to function properly with all its features.",
+        "NetBox requires Django version 4.1 or later to function properly with all its features."
+      ],
+      "golden_answer": "NetBox requires Django version 4.2 or later to function properly with all its features."
+    }
+  ]
+}

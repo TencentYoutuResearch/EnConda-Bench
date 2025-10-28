@@ -1,0 +1,18 @@
+{
+  "readme": "cookiecutter_cookiecutter_error_readme_1_only_E2",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a GitHub template uses an incorrect flag `--template` which is not a valid argument for `cookiecutter`.",
+      "correction_candidates": [
+        "Replace `--template gh:audreyfeldroy/cookiecutter-pypackage` with `gh:audreyfeldroy/cookiecutter-pypackage`.",
+        "Change the command to `pipx run --spec cookiecutter gh:audreyfeldroy/cookiecutter-pypackage`.",
+        "Replace `--template` with the correct shorthand `-t`.",
+        "Change the command to `cookiecutter --from-template gh:audreyfeldroy/cookiecutter-pypackage`."
+      ],
+      "golden_answer": "Replace `--template gh:audreyfeldroy/cookiecutter-pypackage` with `gh:audreyfeldroy/cookiecutter-pypackage`."
+    }
+  ]
+}

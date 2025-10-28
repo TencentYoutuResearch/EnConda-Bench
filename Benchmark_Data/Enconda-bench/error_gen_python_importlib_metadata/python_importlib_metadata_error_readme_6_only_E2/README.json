@@ -1,0 +1,18 @@
+{
+  "readme": "python_importlib_metadata_error_readme_6_only_E2",
+  "repo_name": "python_importlib_metadata",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using --no-deps flag inappropriately",
+      "correction_candidates": [
+        "pip install importlib_metadata",
+        "pip install --user importlib_metadata",
+        "pip install --upgrade importlib_metadata",
+        "python -m pip install importlib_metadata"
+      ],
+      "golden_answer": "pip install importlib_metadata"
+    }
+  ]
+}

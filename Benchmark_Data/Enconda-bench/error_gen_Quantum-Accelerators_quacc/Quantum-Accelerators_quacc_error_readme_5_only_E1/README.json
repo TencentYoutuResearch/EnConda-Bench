@@ -1,0 +1,18 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_5_only_E1",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary system dependencies (VASP, LAMMPS, Quantum ESPRESSO) and pinned old versions of numpy and scipy that may not be required or compatible",
+      "correction_candidates": [
+        "Remove the system dependencies and version pinning, use: pip install quacc",
+        "Install only the core package: pip install quacc --no-deps",
+        "Use conda instead: conda install -c conda-forge quacc",
+        "Install with optional dependencies: pip install quacc[all]"
+      ],
+      "golden_answer": "Remove the system dependencies and version pinning, use: pip install quacc"
+    }
+  ]
+}

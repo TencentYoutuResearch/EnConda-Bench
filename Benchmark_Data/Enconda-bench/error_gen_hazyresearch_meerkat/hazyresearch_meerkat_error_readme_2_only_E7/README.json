@@ -1,0 +1,18 @@
+{
+  "readme": "hazyresearch_meerkat_error_readme_2_only_E7",
+  "repo_name": "hazyresearch_meerkat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly specifies a strict and outdated Python version requirement (Python 3.7), which is inaccurate and may deter users with modern Python installations.",
+      "correction_candidates": [
+        "Update the note to specify a minimum compatible Python version, e.g., 'Python 3.8+ is required'.",
+        "Remove the Python version note entirely.",
+        "Replace the note with a link to the `pyproject.toml` for exact version requirements.",
+        "Change the note to 'Meerkat is compatible with Python 3.7 and higher.'"
+      ],
+      "golden_answer": "Remove the Python version note entirely."
+    }
+  ]
+}

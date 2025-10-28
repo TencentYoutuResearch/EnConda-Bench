@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_2_only_E4",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the data fixtures is incorrect. The command references 'fixture/*.json' but the directory is named 'fixtures'.",
+      "correction_candidates": [
+        "The path in the command should be 'fixtures/*.json'.",
+        "The path in the command should be 'db/fixtures/*.json'.",
+        "The path in the command should be 'fixtures.json'.",
+        "The path in the command should be 'data/fixtures/*.json'."
+      ],
+      "golden_answer": "The path in the command should be 'fixtures/*.json'."
+    }
+  ]
+}

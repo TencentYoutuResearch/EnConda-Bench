@@ -1,0 +1,18 @@
+{
+  "readme": "automl_neps_error_readme_5_only_E1",
+  "repo_name": "automl_neps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (scikit-learn and tensorflow) to the pip install command that are not required for NePS",
+      "correction_candidates": [
+        "pip install neural-pipeline-search",
+        "pip install neural-pipeline-search numpy pandas",
+        "pip install neural-pipeline-search torch torchvision",
+        "pip install neural-pipeline-search --upgrade"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    }
+  ]
+}

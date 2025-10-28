@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_5_only_E4",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced requirements file path is incorrect - should be requirements.txt not requirements_dev.txt",
+      "correction_candidates": [
+        "python -m pip install -r ./requirements.txt",
+        "pip install -r requirements.txt",
+        "python -m pip install -r requirements.txt",
+        "pip3 install -r ./requirements.txt"
+      ],
+      "golden_answer": "python -m pip install -r ./requirements.txt"
+    }
+  ]
+}

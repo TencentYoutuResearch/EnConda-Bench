@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_5_only_E1",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing taipy-core package which is unnecessary since the repository is archived and the code has been moved to the main taipy repository",
+      "correction_candidates": [
+        "Remove the taipy-core installation since this repository is archived",
+        "Install the main taipy package instead of taipy-core",
+        "Add more dependencies like numpy and matplotlib",
+        "Use pip install --upgrade to ensure latest versions"
+      ],
+      "golden_answer": "Remove the taipy-core installation since this repository is archived"
+    }
+  ]
+}

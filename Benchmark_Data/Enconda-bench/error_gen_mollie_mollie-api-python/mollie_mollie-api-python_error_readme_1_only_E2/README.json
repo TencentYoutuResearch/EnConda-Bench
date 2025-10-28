@@ -1,0 +1,18 @@
+{
+  "readme": "mollie_mollie-api-python_error_readme_1_only_E2",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation' section, the command `SET MOLLIE_API_KEY=test_YourApiKey` is used to set an environment variable. This is Windows-specific syntax, while the preceding command `source .venv/bin/activate` is for Unix-like systems (Linux, macOS), where `export` should be used.",
+      "correction_candidates": [
+        "Replace `SET MOLLIE_API_KEY=test_YourApiKey` with `export MOLLIE_API_KEY=test_YourApiKey`.",
+        "Change the command to `MOLLIE_API_KEY=test_YourApiKey python examples/app.py` and remove the next line.",
+        "Add a note: 'On Windows, use SET. On Linux/macOS, use export.'",
+        "Replace `SET` with `ENV`."
+      ],
+      "golden_answer": "Replace `SET MOLLIE_API_KEY=test_YourApiKey` with `export MOLLIE_API_KEY=test_YourApiKey`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap3_error_readme_3_only_E2",
+  "repo_name": "zostera_django-bootstrap3",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the example app is given as `python example/manage.py runserver`, but the correct command is `make example`, which likely performs necessary setup steps before running the server.",
+      "correction_candidates": [
+        "The command to run the example app should be `make example`.",
+        "The command should be `cd example && python manage.py runserver`.",
+        "The command should be `django-admin runserver --settings=example.settings`.",
+        "The command should be preceded by `pip install -r example/requirements.txt`."
+      ],
+      "golden_answer": "The command to run the example app should be `make example`."
+    }
+  ]
+}

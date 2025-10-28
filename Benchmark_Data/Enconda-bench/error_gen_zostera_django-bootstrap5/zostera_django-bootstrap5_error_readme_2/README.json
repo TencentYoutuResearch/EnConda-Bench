@@ -1,0 +1,29 @@
+{
+  "readme": "zostera_django-bootstrap5_error_readme_2",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Requirements' section specifies outdated and unsupported versions of Django (2.2) and Python (3.6).",
+      "correction_candidates": [
+        "The requirements should be updated to Django 4.0 and Python 3.10.",
+        "The requirements should be removed as pip handles dependencies automatically.",
+        "The package is compatible with any version of Django above 2.0.",
+        "The requirements should state that the package requires a combination of Python and Django that is currently supported, as listed on the official Django project website."
+      ],
+      "golden_answer": "The requirements should state that the package requires a combination of Python and Django that is currently supported, as listed on the official Django project website."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include an unnecessary step to install the `bootstrap` package via pip, which is not required as `django-bootstrap5` manages Bootstrap assets itself.",
+      "correction_candidates": [
+        "Remove the `pip install bootstrap` command from the installation instructions.",
+        "The `bootstrap` package should be installed using `npm` not `pip`.",
+        "Change `pip install bootstrap` to `pip install bootstrap==5.1.3`.",
+        "Move the `pip install bootstrap` step to before `pip install django-bootstrap5`."
+      ],
+      "golden_answer": "Remove the `pip install bootstrap` command from the installation instructions."
+    }
+  ]
+}

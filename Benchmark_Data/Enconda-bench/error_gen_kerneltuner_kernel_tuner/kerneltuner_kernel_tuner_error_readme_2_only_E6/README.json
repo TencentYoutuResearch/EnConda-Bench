@@ -1,0 +1,18 @@
+{
+  "readme": "kerneltuner_kernel_tuner_error_readme_2_only_E6",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The `pip install` command is listed before the instruction to install the prerequisite CUDA/OpenCL/HIP compilers, which could cause the installation to fail or the package to not find the necessary backend.",
+      "correction_candidates": [
+        "Swap the first two bullet points in the 'Installation' section so that compiler installation comes before the `pip install` command.",
+        "The `pip install` command will automatically install the required compilers.",
+        "The order does not matter as the package will prompt for compiler location on first run.",
+        "Combine the two steps into one command: `install-compilers && pip install kernel_tuner[...]`"
+      ],
+      "golden_answer": "Swap the first two bullet points in the 'Installation' section so that compiler installation comes before the `pip install` command."
+    }
+  ]
+}

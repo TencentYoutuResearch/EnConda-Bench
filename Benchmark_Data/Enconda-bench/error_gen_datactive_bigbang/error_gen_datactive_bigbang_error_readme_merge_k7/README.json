@@ -1,0 +1,128 @@
+{
+  "readme": "error_gen_datactive_bigbang_error_readme_merge_k7",
+  "repo_name": "datactive_bigbang",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `pip install` command is executed before activating the virtual environment, which will install packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The `pip install` command should be run before creating the virtual environment with `venv`.",
+        "The virtual environment must be activated using `. env/bin/activate` before running `pip install \"[dev]\"`.",
+        "Replace `pip install \"[dev]\"` with `pip install --user \"[dev]\"` to ensure packages are installed for the current user.",
+        "The `pip install` command should be run from the parent directory, not from within the `bigbang` directory."
+      ],
+      "golden_answer": "The virtual environment must be activated using `. env/bin/activate` before running `pip install \"[dev]\"`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start Jupyter Notebook is incorrect. It tries to open the `examples/` directory as a notebook file instead of setting it as the working directory.",
+      "correction_candidates": [
+        "Replace `jupyter notebook examples/` with `jupyter-notebook --notebook-dir=examples/`.",
+        "Replace `jupyter notebook examples/` with `jupyter notebook --notebook-dir=examples/`.",
+        "Run `cd examples/` first, and then run `jupyter notebook`.",
+        "Replace `jupyter notebook examples/` with `jupyter lab examples/` to use the Jupyter Lab interface."
+      ],
+      "golden_answer": "Replace `jupyter notebook examples/` with `jupyter notebook --notebook-dir=examples/`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install .` does not install the development dependencies (like `pytest` or `jupyter`), which are required for running examples and tests.",
+      "correction_candidates": [
+        "Replace `pip install .` with `pip install bigbang`.",
+        "Replace `pip install .` with `pip install -r requirements.txt`.",
+        "Replace `pip install .` with `pip install \".[dev]\"`.",
+        "Run `pip install pytest jupyter` separately after `pip install .`."
+      ],
+      "golden_answer": "Replace `pip install .` with `pip install \".[dev]\"`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided to the `--file` argument is incorrect, pointing to a non-existent directory and file (`example/url.txt` instead of `examples/urls.txt`).",
+      "correction_candidates": [
+        "Replace `--file example/url.txt` with `--file examples/urls.txt`.",
+        "The file is located in the root directory, so use `--file urls.txt`.",
+        "Create a new directory named `example` and a file `url.txt` inside it.",
+        "The correct flag is `--urls-file`, not `--file`."
+      ],
+      "golden_answer": "Replace `--file example/url.txt` with `--file examples/urls.txt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv env` may use a legacy version of Python (Python 2) on systems where `python` is not aliased to `python3`, potentially causing compatibility issues.",
+      "correction_candidates": [
+        "Replace `python -m venv env` with `virtualenv env`.",
+        "The command is correct, but you must first run `alias python=python3`.",
+        "Replace `python -m venv env` with `python3 -m venv env` to ensure Python 3 is used.",
+        "Install the project using Conda instead of venv to avoid Python version conflicts."
+      ],
+      "golden_answer": "Replace `python -m venv env` with `python3 -m venv env` to ensure Python 3 is used."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests contains a typo in the directory path (`test/unit` instead of `tests/unit`), which will cause pytest to fail to find the tests.",
+      "correction_candidates": [
+        "The correct command is `python -m pytest test/unit`.",
+        "The correct command is `pytest tests/unit`.",
+        "Run `cd tests/unit` first, then run `pytest`.",
+        "The correct command is `pytest --all` to run all tests in the repository."
+      ],
+      "golden_answer": "The correct command is `pytest tests/unit`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing BigBang with pip before creating and activating the virtual environment",
+      "correction_candidates": [
+        "Move 'pip install \".[dev]\"' to after virtual environment activation",
+        "Create virtual environment first, then activate it, then install dependencies",
+        "Remove the pip install command from before venv creation entirely",
+        "Change the order to: clone, create venv, activate venv, then install"
+      ],
+      "golden_answer": "Move 'pip install \".[dev]\"' to after virtual environment activation"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installing individual packages instead of using the project's setup configuration",
+      "correction_candidates": [
+        "Use 'pip install \".[dev]\"' instead of individual package names",
+        "Install from requirements.txt file instead of listing packages",
+        "Use 'pip install -e .' for development installation",
+        "Replace with 'pip install bigbang[dev]' command"
+      ],
+      "golden_answer": "Use 'pip install \".[dev]\"' instead of individual package names"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referencing incorrect directory path 'samples/' instead of 'examples/' for Jupyter notebooks",
+      "correction_candidates": [
+        "Change --notebook-dir=samples/ to --notebook-dir=examples/",
+        "Update the directory reference to match the correct examples folder",
+        "Fix the path to point to the existing examples directory",
+        "Correct samples/ to examples/ in the jupyter command"
+      ],
+      "golden_answer": "Change --notebook-dir=samples/ to --notebook-dir=examples/"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specifying Python2 instead of Python3 for pip installation requirements",
+      "correction_candidates": [
+        "Change 'Pip (for Python2)' to 'Pip (for Python3)'",
+        "Update the Python version requirement to Python3",
+        "Specify Python3 instead of Python2 for pip dependency",
+        "Correct the Python version from Python2 to Python3"
+      ],
+      "golden_answer": "Change 'Pip (for Python2)' to 'Pip (for Python3)'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using incorrect command 'collect-mails' instead of 'collect-mail' in the bigbang usage example",
+      "correction_candidates": [
+        "Change 'bigbang collect-mails' to 'bigbang collect-mail'",
+        "Fix the command name from collect-mails to collect-mail",
+        "Use the correct singular form 'collect-mail' instead of plural",
+        "Replace 'collect-mails' with the proper 'collect-mail' command"
+      ],
+      "golden_answer": "Change 'bigbang collect-mails' to 'bigbang collect-mail'"
+    }
+  ]
+}

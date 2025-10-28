@@ -1,0 +1,18 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_4_only_E1",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Brozzler Dashboard' section, the installation command is `pip install brozzler-dashboard`. This is incorrect because the dashboard is not a separate package but an optional component of the `brozzler` package, installed using extras syntax.",
+      "correction_candidates": [
+        "Change `pip install brozzler-dashboard` to `pip install brozzler --with-dashboard`.",
+        "Change `pip install brozzler-dashboard` to `pip install brozzler` and then `pip install flask`.",
+        "Change `pip install brozzler-dashboard` to `pip install brozzler[dashboard]`.",
+        "Add a note that `brozzler-dashboard` must be installed from a separate repository."
+      ],
+      "golden_answer": "Change `pip install brozzler-dashboard` to `pip install brozzler[dashboard]`."
+    }
+  ]
+}

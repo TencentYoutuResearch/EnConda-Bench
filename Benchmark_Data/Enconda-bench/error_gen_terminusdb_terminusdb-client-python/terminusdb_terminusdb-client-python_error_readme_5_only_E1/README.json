@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_5_only_E1",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (numpy pandas) to the basic installation command",
+      "correction_candidates": [
+        "python -m pip install terminusdb-client",
+        "python -m pip install terminusdb-client[dataframe]",
+        "python -m pip install terminusdb-client --upgrade",
+        "python -m pip install terminusdb-client scipy matplotlib"
+      ],
+      "golden_answer": "python -m pip install terminusdb-client"
+    }
+  ]
+}

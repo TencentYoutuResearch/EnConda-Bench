@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_tortoise_tortoise-orm_error_readme_merge_k3",
+  "repo_name": "tortoise_tortoise-orm",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for the PostgreSQL driver suggests `psycopg2-binary`, which is a synchronous driver and incompatible with the asyncio-based Tortoise ORM.",
+      "correction_candidates": [
+        "pip install tortoise-orm[psycopg2]",
+        "pip install tortoise-orm[asyncpg]",
+        "pip install tortoise-orm[pg8000]",
+        "pip install tortoise-orm asyncpg"
+      ],
+      "golden_answer": "pip install tortoise-orm[asyncpg]"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the `init` function, `Tortoise.generate_schemas()` is called before `Tortoise.init()`. The schema generation depends on the model and database initialization, so it must be called after.",
+      "correction_candidates": [
+        "Move `await Tortoise.generate_schemas()` to after the `await Tortoise.init(...)` call.",
+        "Replace `await Tortoise.generate_schemas()` with `await Tortoise.init_models(...)`.",
+        "Combine the calls into `await Tortoise.init_and_generate(...)`.",
+        "Call `generate_schemas` inside the `init` method: `await Tortoise.init(..., generate_schemas=True)`."
+      ],
+      "golden_answer": "Move `await Tortoise.generate_schemas()` to after the `await Tortoise.init(...)` call."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README states that the supported Python version is `>= 3.6`, but the correct minimum version is `3.8`. Using an older version like 3.6 or 3.7 will lead to compatibility issues.",
+      "correction_candidates": [
+        "Tortoise ORM is supported on CPython >= 3.8",
+        "Tortoise ORM is supported on Python >= 3.7",
+        "Tortoise ORM is supported on CPython >= 3.7 for SQLite, and CPython >= 3.8 for other databases.",
+        "Tortoise ORM is supported on any Python version with asyncio support."
+      ],
+      "golden_answer": "Tortoise ORM is supported on CPython >= 3.8"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example code for saving a model instance is `tournament.save()`, which is a synchronous call. Since Tortoise ORM is an async library, this will raise an error. The call must be awaited.",
+      "correction_candidates": [
+        "run(tournament.save())",
+        "tournament.save_nowait()",
+        "await tournament.save()",
+        "asyncio.create_task(tournament.save())"
+      ],
+      "golden_answer": "await tournament.save()"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pinned specific version (1.0.0) in all installation commands which may cause version conflicts or prevent users from getting newer versions",
+      "correction_candidates": [
+        "pip install tortoise-orm",
+        "pip install tortoise-orm>=1.0.0",
+        "pip install tortoise-orm~=1.0",
+        "pip install 'tortoise-orm>=1.0.0,<2.0.0'"
+      ],
+      "golden_answer": "pip install tortoise-orm"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced file path 'docs/CONTRIBUTING.rst' may not exist in the actual project structure",
+      "correction_candidates": [
+        "CONTRIBUTING.rst",
+        "CONTRIBUTING.md",
+        "docs/contributing.md",
+        ".github/CONTRIBUTING.md"
+      ],
+      "golden_answer": "CONTRIBUTING.rst"
+    }
+  ]
+}

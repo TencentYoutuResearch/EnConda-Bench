@@ -1,0 +1,18 @@
+{
+  "readme": "pureqml_qmlcore_error_readme_1_only_E4",
+  "repo_name": "pureqml_qmlcore",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The git URL provided for cloning the controls library is incorrect, pointing to a non-existent repository 'qml-controls'.",
+      "correction_candidates": [
+        "In the 'Controls library' section, change the repository URL to `git@github.com:pureqml/controls.git`.",
+        "In the 'Controls library' section, change the repository URL to `https://github.com/pureqml/qmlcore-controls.git`.",
+        "The command should be `git clone git@github.com:pureqml/controls.git controls`.",
+        "Use `git submodule add git@github.com:pureqml/qml-controls.git` instead."
+      ],
+      "golden_answer": "In the 'Controls library' section, change the repository URL to `git@github.com:pureqml/controls.git`."
+    }
+  ]
+}

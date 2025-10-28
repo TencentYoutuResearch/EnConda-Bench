@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_googlefonts_gftools_error_readme_merge_k3",
+  "repo_name": "googlefonts_gftools",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install `gftools` with the 'qa' extras is incorrect. It attempts to install a non-existent package `gftools-qa` instead of using the correct pip syntax for extras.",
+      "correction_candidates": [
+        "pip install gftools --with-qa",
+        "pip install gftools && pip install gftools-qa",
+        "pip install 'gftools[qa]'",
+        "pip install gftools --install-option=\"--with-qa\""
+      ],
+      "golden_answer": "pip install 'gftools[qa]'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path specified for the Google Fonts API key file, `/etc/gftools/api.key`, is incorrect and will not be found by the tools. This path also typically requires root permissions to write to.",
+      "correction_candidates": [
+        "You will then need to create a new text file located on your system at ~/.gftools/api_key",
+        "You will then need to create a new text file located on your system at `~/.gf-api-key` (where ~ is your home directory)",
+        "You will then need to create a new text file located on your system at /var/lib/gftools/api.key",
+        "You will then need to export an environment variable GF_API_KEY with your key."
+      ],
+      "golden_answer": "You will then need to create a new text file located on your system at `~/.gf-api-key` (where ~ is your home directory)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions advise installing `gftools` globally with pip before creating and activating a virtual environment. This is the wrong order and defeats the purpose of using a virtual environment.",
+      "correction_candidates": [
+        "Use pipx to install gftools in an isolated environment:\npipx install gftools",
+        "Install the package and then create a venv with access to system packages:\npip install gftools\npython3 -m venv gftools-venv --system-site-packages",
+        "First, create and activate a virtual environment, then install the package:\npython3 -m venv gftools-venv\nsource gftools-venv/bin/activate\npip install gftools",
+        "Install the package directly with sudo:\nsudo pip install gftools"
+      ],
+      "golden_answer": "First, create and activate a virtual environment, then install the package:\npython3 -m venv gftools-venv\nsource gftools-venv/bin/activate\npip install gftools"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for `gftools qa` uses a plausible but incorrect flag `--google-fonts` to compare a local font family against the version on Google Fonts.",
+      "correction_candidates": [
+        "gftools qa [fonts.ttf] -gfb -a -o qa",
+        "gftools qa [fonts.ttf] --gfonts -a -o qa",
+        "gftools qa [fonts.ttf] -g -a -o qa",
+        "gftools qa [fonts.ttf] --against-gfonts -a -o qa"
+      ],
+      "golden_answer": "gftools qa [fonts.ttf] -gfb -a -o qa"
+    }
+  ]
+}

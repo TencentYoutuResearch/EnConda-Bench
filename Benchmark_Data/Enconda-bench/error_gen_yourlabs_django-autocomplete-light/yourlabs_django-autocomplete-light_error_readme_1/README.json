@@ -1,0 +1,29 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_1",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command installs version 3.9.0, which is incompatible with the advertised Django 4.2 support (which requires version 3.10+).",
+      "correction_candidates": [
+        "pip install django-autocomplete-light",
+        "pip install django-autocomplete-light>=3.10",
+        "pip install 'django-autocomplete-light<4.0,>=3.10'",
+        "pip install django-autocomplete-light==3.10.0"
+      ],
+      "golden_answer": "pip install django-autocomplete-light>=3.10"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example for configuring INSTALLED_APPS is missing a comma between 'dal' and 'dal_select2', which will cause a Python syntax error.",
+      "correction_candidates": [
+        "INSTALLED_APPS = (\n    # ...\n    'dal',\n    'dal_select2',\n    # ...\n)",
+        "INSTALLED_APPS = list(INSTALLED_APPS) + ['dal', 'dal_select2']",
+        "INSTALLED_APPS += ('dal', 'dal_select2',)",
+        "INSTALLED_APPS.extend(['dal', 'dal_select2'])"
+      ],
+      "golden_answer": "INSTALLED_APPS = (\n    # ...\n    'dal',\n    'dal_select2',\n    # ...\n)"
+    }
+  ]
+}

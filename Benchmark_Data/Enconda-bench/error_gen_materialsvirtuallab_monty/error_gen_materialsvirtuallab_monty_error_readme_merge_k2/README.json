@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_materialsvirtuallab_monty_error_readme_merge_k2",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README presents the usage example before the installation instructions, which is a logical error as the package must be installed first.",
+      "correction_candidates": [
+        "Move the 'Installation' section to be before the 'Getting Started' section.",
+        "Combine the 'Installation' and 'Getting Started' sections into a single 'Setup' section.",
+        "Add a note in 'Getting Started' to install the package first.",
+        "Remove the 'Getting Started' section and place the example in the 'Installation' section."
+      ],
+      "golden_answer": "Move the 'Installation' section to be before the 'Getting Started' section."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install monty.py` is incorrect. The package name on PyPI is `monty`, not `monty.py`.",
+      "correction_candidates": [
+        "Change the command to `pip install monty`.",
+        "Change the command to `python -m pip install monty`.",
+        "Change the command to `pip install monty-python`.",
+        "Change the command to `pip install from monty`."
+      ],
+      "golden_answer": "Change the command to `pip install monty`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip packages before installing system dependencies, which could cause compilation issues",
+      "correction_candidates": [
+        "Install system dependencies first: sudo apt-get install python3-dev libffi-dev, then pip install monty numpy scipy",
+        "Use conda instead: conda install monty numpy scipy python3-dev libffi-dev",
+        "Install in a virtual environment: python -m venv env && source env/bin/activate && pip install monty numpy scipy",
+        "Install using package manager: sudo apt-get install python3-monty python3-numpy python3-scipy"
+      ],
+      "golden_answer": "Install system dependencies first: sudo apt-get install python3-dev libffi-dev, then pip install monty numpy scipy"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary heavy dependencies (numpy and scipy) that are not actually required by Monty",
+      "correction_candidates": [
+        "Remove the numpy>=2.0.0 and scipy>=1.8.0 dependencies as they are not required by Monty",
+        "Replace with lighter dependencies: requires only setuptools and wheel",
+        "Change to optional dependencies: numpy and scipy are optional for advanced features",
+        "Update to correct dependencies: requires python>=3.8 and no additional packages"
+      ],
+      "golden_answer": "Remove the numpy>=2.0.0 and scipy>=1.8.0 dependencies as they are not required by Monty"
+    }
+  ]
+}

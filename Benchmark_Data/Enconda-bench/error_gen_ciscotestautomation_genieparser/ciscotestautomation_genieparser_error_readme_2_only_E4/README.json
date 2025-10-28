@@ -1,0 +1,18 @@
+{
+  "readme": "ciscotestautomation_genieparser_error_readme_2_only_E4",
+  "repo_name": "ciscotestautomation_genieparser",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for the changelog template in the text is incorrect ('changelog/templates/template.rst'), while the hyperlink points to the correct location. This can cause confusion for users trying to find the file locally.",
+      "correction_candidates": [
+        "[changelogs/undistributed/template.rst](...)",
+        "[changelog/undistributed/template.rst](...)",
+        "[changelog/template.rst](...)",
+        "[undistributed/template.rst](...)"
+      ],
+      "golden_answer": "[changelog/undistributed/template.rst](...)"
+    }
+  ]
+}

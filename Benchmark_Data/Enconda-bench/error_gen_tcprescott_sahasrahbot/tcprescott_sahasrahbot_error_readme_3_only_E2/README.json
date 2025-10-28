@@ -1,0 +1,18 @@
+{
+  "readme": "tcprescott_sahasrahbot_error_readme_3_only_E2",
+  "repo_name": "tcprescott_sahasrahbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `virtualenv /venv` attempts to create a virtual environment in the root directory (`/`), which will fail due to permission errors on most systems and is not a recommended practice.",
+      "correction_candidates": [
+        "Use a relative path like `venv` or `.venv` instead of an absolute path like `/venv`.",
+        "Change the command to `virtualenv .venv` to create the environment in the project's root directory.",
+        "Run the command with `sudo`: `sudo virtualenv /venv`.",
+        "Change the command to `python -m venv .venv`."
+      ],
+      "golden_answer": "Change the command to `virtualenv .venv` to create the environment in the project's root directory."
+    }
+  ]
+}

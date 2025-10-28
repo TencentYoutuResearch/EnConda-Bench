@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_1_only_E2",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install --source .` is invalid for installing a package from a local source directory.",
+      "correction_candidates": [
+        "pip install .",
+        "python setup.py install .",
+        "pip install -e .",
+        "pip install from-source ."
+      ],
+      "golden_answer": "pip install ."
+    }
+  ]
+}

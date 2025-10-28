@@ -1,0 +1,18 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_2_only_E6",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development installation instructions list the installation and directory change commands before the `git clone` command, which is logically incorrect as the repository must be cloned first before changing into its directory and installing dependencies.",
+      "correction_candidates": [
+        "First `cd lhotse` and `pip install -e '.[dev]'`, then `git clone https://github.com/lhotse-speech/lhotse`.",
+        "First, clone the repository with `git clone https://github.com/lhotse-speech/lhotse`, then `cd lhotse` and run `pip install -e '.[dev]'`.",
+        "First `pip install -e '.[dev]'`, then `git clone https://github.com/lhotse-speech/lhotse` and `cd lhotse`.",
+        "First `git clone https://github.com/lhotse-speech/lhotse`, then `pip install -e '.[dev]'` and `cd lhotse`."
+      ],
+      "golden_answer": "First, clone the repository with `git clone https://github.com/lhotse-speech/lhotse`, then `cd lhotse` and run `pip install -e '.[dev]'`."
+    }
+  ]
+}

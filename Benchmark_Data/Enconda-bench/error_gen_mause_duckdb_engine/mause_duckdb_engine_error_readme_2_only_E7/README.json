@@ -1,0 +1,18 @@
+{
+  "readme": "mause_duckdb_engine_error_readme_2_only_E7",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The note about pandas `read_sql()` chunksize incorrectly states that the issue occurs in duckdb versions `>=0.5.0`, which is the opposite of the truth. The issue was resolved in those versions.",
+      "correction_candidates": [
+        "The chunksize parameter is fully supported in all versions.",
+        "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb",
+        "NOTE: this is an issue in all versions of duckdb",
+        "NOTE: this is only an issue in versions <0.5.0 of duckdb"
+      ],
+      "golden_answer": "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_3_only_E2",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run unit tests is incorrect. The project uses the pytest framework, which is invoked with the `pytest` command, not by executing a file.",
+      "correction_candidates": [
+        "Change `python tests.py` to `pytest`.",
+        "Change `python tests.py` to `pytest tests/`.",
+        "Change `python tests.py` to `python -m unittest discover`.",
+        "Change `python tests.py` to `./run_tests.sh`."
+      ],
+      "golden_answer": "Change `python tests.py` to `pytest`."
+    }
+  ]
+}

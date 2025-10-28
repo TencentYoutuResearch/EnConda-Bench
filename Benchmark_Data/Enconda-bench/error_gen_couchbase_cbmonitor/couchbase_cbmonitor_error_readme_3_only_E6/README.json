@@ -1,0 +1,18 @@
+{
+  "readme": "couchbase_cbmonitor_error_readme_3_only_E6",
+  "repo_name": "couchbase_cbmonitor",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Running webapp' section is placed before the 'Initial setup' section, which is a logical error as the application must be set up before it can be run.",
+      "correction_candidates": [
+        "Swap the \"Initial setup\" and \"Running webapp\" sections.",
+        "Combine the \"Initial setup\" and \"Running webapp\" sections into one \"Usage\" section.",
+        "Add a note at the top specifying to follow setup instructions first.",
+        "Rename \"Initial setup\" to \"Installation\" and move it to the top."
+      ],
+      "golden_answer": "Swap the \"Initial setup\" and \"Running webapp\" sections."
+    }
+  ]
+}

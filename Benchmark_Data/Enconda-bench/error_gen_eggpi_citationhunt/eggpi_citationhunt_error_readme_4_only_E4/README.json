@@ -1,0 +1,18 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_4_only_E4",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `kubectl create` command specifies an incorrect path for the configuration file. The file `compute_fixed_snippets.yaml` is located in the `k8s` directory, not the `scripts` directory.",
+      "correction_candidates": [
+        "Change the directory in the path from `scripts/` to `k8s/`.",
+        "Copy the `compute_fixed_snippets.yaml` file from `k8s` to `scripts` before running the command.",
+        "Run the command from within the `citationhunt` directory: `(cd citationhunt; kubectl create --validate=true -f k8s/compute_fixed_snippets.yaml)`.",
+        "The path is correct, but the file is missing from the repository and should be created manually."
+      ],
+      "golden_answer": "Change the directory in the path from `scripts/` to `k8s/`."
+    }
+  ]
+}

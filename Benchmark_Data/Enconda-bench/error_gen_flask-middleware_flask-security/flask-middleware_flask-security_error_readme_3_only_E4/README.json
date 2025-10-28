@@ -1,0 +1,18 @@
+{
+  "readme": "flask-middleware_flask-security_error_readme_3_only_E4",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for 'Code' in the Resources section points to a non-existent '/src' directory in the GitHub repository.",
+      "correction_candidates": [
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security/>.",
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security/tree/master>.",
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security.git>.",
+        "Create a 'src' directory in the repository to match the link."
+      ],
+      "golden_answer": "Change the Code link to <https://github.com/Flask-Middleware/flask-security/>."
+    }
+  ]
+}

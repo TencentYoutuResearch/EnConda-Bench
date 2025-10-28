@@ -1,0 +1,29 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_4",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README incorrectly advises committing the `.micropy/` folder to version control. This folder contains locally generated files and symlinks specific to a user's environment and should be ignored.",
+      "correction_candidates": [
+        "The `.micropy/` folder should not be committed; it should be added to `.gitignore`.",
+        "Only the `stubs` subdirectory within `.micropy/` should be committed.",
+        "The `.micropy/` folder should be renamed to `.micropy-cache` before committing.",
+        "The `.micropy/` folder should be committed, but the `micropy.json` file should be ignored."
+      ],
+      "golden_answer": "The `.micropy/` folder should not be committed; it should be added to `.gitignore`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command line flag for installing development-only packages is incorrect. The documentation specifies `--development`, but the correct flag is `--dev`.",
+      "correction_candidates": [
+        "The correct flag is `-D`.",
+        "The correct flag is `--dev-only`.",
+        "The correct flag is `--is-dev`.",
+        "The correct flag is `--dev`."
+      ],
+      "golden_answer": "The correct flag is `--dev`."
+    }
+  ]
+}

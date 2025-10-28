@@ -1,0 +1,29 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_2",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for cloning an environment have a logical order error. `micropy-cli` must be installed before the `micropy` command can be executed, but the instructions list installation as the last step.",
+      "correction_candidates": [
+        "The correct order is: Execute `micropy`, install `micropy-cli`, then navigate to the project directory.",
+        "The correct order is: Navigate to the project directory, execute `pip install micropy-cli`, then run `micropy init`.",
+        "The correct order is: Install `micropy-cli`, navigate to the project directory, then execute `micropy`.",
+        "The correct order is: Install `micropy-cli`, then execute `micropy install` in the project directory."
+      ],
+      "golden_answer": "The correct order is: Install `micropy-cli`, navigate to the project directory, then execute `micropy`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies for stub creation is incorrect. It uses `[stubs]` as the extra, but the correct extra is `[create_stubs]`.",
+      "correction_candidates": [
+        "pip install micropy-cli --with-stubs",
+        "pip install micropy-cli-stubs",
+        "pip install micropy-cli[stubber]",
+        "pip install micropy-cli[create_stubs]"
+      ],
+      "golden_answer": "pip install micropy-cli[create_stubs]"
+    }
+  ]
+}

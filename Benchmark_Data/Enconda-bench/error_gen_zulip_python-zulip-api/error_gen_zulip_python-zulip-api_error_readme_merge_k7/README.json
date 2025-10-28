@@ -1,0 +1,128 @@
+{
+  "readme": "error_gen_zulip_python-zulip-api_error_readme_merge_k7",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions say to activate the virtual environment before running the provision script that creates it, which is logically impossible.",
+      "correction_candidates": [
+        "You must create the virtual environment manually with `python3 -m venv` before activating it.",
+        "The `provision` script should be run before activating the virtual environment.",
+        "The correct command is `source /.../python-zulip-api/.../activate` and it should be run after `./tools/provision` prints the path.",
+        "First run `python3 ./tools/provision`, then run the `source` command that the script prints."
+      ],
+      "golden_answer": "First run `python3 ./tools/provision`, then run the `source` command that the script prints."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the linter is given as `lint`, but the script is not in the user's PATH, so this will fail. The correct command requires a path.",
+      "correction_candidates": [
+        "The command should be `python3 ./tools/lint`.",
+        "The command should be `./tools/lint`.",
+        "You must add the `tools` directory to your system's PATH variable first.",
+        "The linter is run with `pytest --lint`."
+      ],
+      "golden_answer": "The command should be `./tools/lint`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README removes the mention that the project requires Python 3 and changes the setup command from `python3` to `python`. This can cause errors on systems where `python` defaults to Python 2.",
+      "correction_candidates": [
+        "The setup command should be `py ./tools/provision` to use the Python launcher for Windows.",
+        "The project requires Python 3, so the command should be `python3 ./tools/provision` and the text should specify the Python 3 requirement.",
+        "The text should be updated to say 'The source code is written in Python 3 or newer'.",
+        "The command should be `python -m tools.provision`."
+      ],
+      "golden_answer": "The project requires Python 3, so the command should be `python3 ./tools/provision` and the text should specify the Python 3 requirement."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the provision script is incorrect. It is located in `tools/`, not `scripts/`.",
+      "correction_candidates": [
+        "The command should be `python3 ./tools/provision`.",
+        "The script is in the wrong directory; it should be moved to `scripts/`.",
+        "The path is incorrect. It should be `python3 provision`.",
+        "Change directory to `tools` and run `python3 provision`."
+      ],
+      "golden_answer": "The command should be `python3 ./tools/provision`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary and incorrect dependency installation step `pip install -r requirements.txt` is added. The provision script handles all setup, and this command will fail because the file doesn't exist at the root and dependencies would be installed globally.",
+      "correction_candidates": [
+        "The `pip install -r requirements.txt` command should be run after activating the virtual environment.",
+        "The `requirements.txt` file is located in another directory, so the path should be updated.",
+        "Remove the `pip install -r requirements.txt` step. The `./tools/provision` script handles all dependency installation.",
+        "The dependencies should be installed with `pip install .` instead."
+      ],
+      "golden_answer": "Remove the `pip install -r requirements.txt` step. The `./tools/provision` script handles all dependency installation."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The command for activating the virtual environment is hardcoded as `source zulip-api-py3-venv/bin/activate`. This is unclear and potentially incorrect, as the actual venv name depends on the user's Python version. The original instructions correctly state that the `provision` script prints the exact command to use.",
+      "correction_candidates": [
+        "The command should be `. zulip-api-py3-venv/bin/activate`.",
+        "The `provision` script prints the correct command to activate the virtual environment, which should be used instead.",
+        "The virtual environment name should be `venv`, so the command is `source venv/bin/activate`.",
+        "The instructions should tell the user to find the activate script in the `zulip-api-py<version>-venv/bin` directory."
+      ],
+      "golden_answer": "The `provision` script prints the correct command to activate the virtual environment, which should be used instead."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly place the `cd python-zulip-api` command before the `git clone` command, which will fail because the directory does not yet exist.",
+      "correction_candidates": [
+        "You must create the directory with `mkdir python-zulip-api` before changing into it.",
+        "The `git clone` command should be run before the `cd` command.",
+        "First run `git clone https://github.com/<your_username>/python-zulip-api.git`, then `cd python-zulip-api`.",
+        "The `git clone` command creates the directory, so the `cd` command is not needed."
+      ],
+      "golden_answer": "First run `git clone https://github.com/<your_username>/python-zulip-api.git`, then `cd python-zulip-api`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is given as `python tests`, which is incorrect. `tests` is a directory, not an executable script.",
+      "correction_candidates": [
+        "The command should be `python -m pytest`.",
+        "The correct command is `pytest`.",
+        "The command should be `./tools/run-tests`.",
+        "You should run `python setup.py test`."
+      ],
+      "golden_answer": "The correct command is `pytest`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Inconsistent Python version usage - using python2 in step 3 while the project is written in Python 3",
+      "correction_candidates": [
+        "python3 ./tools/provision",
+        "python ./tools/provision",
+        "python3.8 ./tools/provision",
+        "python3 ./tools/setup"
+      ],
+      "golden_answer": "python3 ./tools/provision"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installing dependencies globally before setting up virtual environment, which can cause conflicts",
+      "correction_candidates": [
+        "Remove the pip install command from step 2 and install dependencies after activating the virtual environment",
+        "Use pip3 instead of pip for the dependency installation command",
+        "Add --user flag to the pip install command to install dependencies locally",
+        "Install dependencies using conda instead of pip"
+      ],
+      "golden_answer": "Remove the pip install command from step 2 and install dependencies after activating the virtual environment"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command parameter --verbose for the provision script which may not support this flag",
+      "correction_candidates": [
+        "python3 ./tools/provision",
+        "python3 ./tools/provision -v",
+        "python3 ./tools/provision --help",
+        "python3 ./tools/provision --debug"
+      ],
+      "golden_answer": "python3 ./tools/provision"
+    }
+  ]
+}

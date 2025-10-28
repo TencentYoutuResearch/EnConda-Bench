@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_5_only_E6",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating and activating a virtual environment, which can lead to system-wide installations instead of isolated environment installations",
+      "correction_candidates": [
+        "Create the virtual environment first, then activate it before installing dependencies",
+        "Use conda instead of pip for dependency management",
+        "Install dependencies globally without using virtual environments",
+        "Use poetry to manage both virtual environment and dependencies together"
+      ],
+      "golden_answer": "Create the virtual environment first, then activate it before installing dependencies"
+    }
+  ]
+}

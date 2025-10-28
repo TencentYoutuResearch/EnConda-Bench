@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_4_only_E4",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The description of where to find season configuration files is incorrect. It states they are in `config/seasons` when they are actually in `season_configs`.",
+      "correction_candidates": [
+        "Change the path from 'config/seasons' to 'src/configs'.",
+        "Change the path from 'config/seasons' to 'season_configs'.",
+        "Change the path from 'config/seasons' to 'data/season_configs'.",
+        "Change the path from 'config/seasons' to 'configs'."
+      ],
+      "golden_answer": "Change the path from 'config/seasons' to 'season_configs'."
+    }
+  ]
+}

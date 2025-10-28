@@ -1,0 +1,18 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_4_only_E1",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command line flag for installing development-only packages is incorrect. The documentation specifies `--development`, but the correct flag is `--dev`.",
+      "correction_candidates": [
+        "The correct flag is `-D`.",
+        "The correct flag is `--dev-only`.",
+        "The correct flag is `--is-dev`.",
+        "The correct flag is `--dev`."
+      ],
+      "golden_answer": "The correct flag is `--dev`."
+    }
+  ]
+}

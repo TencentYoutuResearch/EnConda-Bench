@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_1_only_E2",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command to run a benchmark configuration is `rebench run test.conf`, which is incorrect. `rebench` expects the configuration file path directly as an argument without a `run` subcommand.",
+      "correction_candidates": [
+        "`rebench test.conf`",
+        "`rebench --execute test.conf`",
+        "`rebench --config test.conf`",
+        "`python -m rebench test.conf`"
+      ],
+      "golden_answer": "`rebench test.conf`"
+    }
+  ]
+}

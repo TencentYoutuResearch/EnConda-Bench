@@ -1,0 +1,18 @@
+{
+  "readme": "islandora_documentation_error_readme_7_only_E1",
+  "repo_name": "islandora_documentation",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Suggests installing unnecessary dependencies (sphinx and jekyll) alongside mkdocs for a mkdocs-only project",
+      "correction_candidates": [
+        "To set up the development environment, install mkdocs and mkdocs-material for the documentation system.",
+        "To set up the development environment, install mkdocs-material only, as it includes all necessary mkdocs dependencies.",
+        "To set up the development environment, install mkdocs along with the required theme and plugins.",
+        "To set up the development environment, install the mkdocs package and any additional plugins specified in requirements.txt."
+      ],
+      "golden_answer": "To set up the development environment, install mkdocs and mkdocs-material for the documentation system."
+    }
+  ]
+}

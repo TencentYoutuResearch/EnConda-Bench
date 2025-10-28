@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_1_only_E2",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `piccolo asgi new --orm piccolo` is incorrect. The `--orm` flag is not a valid parameter for this command.",
+      "correction_candidates": [
+        "Run `piccolo new asgi`.",
+        "Run `piccolo asgi new`.",
+        "Run `piccolo asgi new --with-orm=piccolo`.",
+        "Run `piccolo asgi create`."
+      ],
+      "golden_answer": "Run `piccolo asgi new`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_1_only_E2",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `fontbakery check-googlefonts --font myfont.ttf` is syntactically incorrect. The tool expects font files as positional arguments, not with a `--font` flag.",
+      "correction_candidates": [
+        "Change the example to: `fontbakery check --profile googlefonts myfont.ttf`",
+        "Change the example to: `fontbakery check-googlefonts -f myfont.ttf`",
+        "Change the example to: `fontbakery check-googlefonts myfont.ttf`",
+        "Change the example to: `fontbakery --check googlefonts myfont.ttf`"
+      ],
+      "golden_answer": "Change the example to: `fontbakery check-googlefonts myfont.ttf`"
+    }
+  ]
+}

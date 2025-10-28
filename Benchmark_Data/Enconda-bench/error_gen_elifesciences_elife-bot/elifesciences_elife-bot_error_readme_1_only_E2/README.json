@@ -1,0 +1,18 @@
+{
+  "readme": "elifesciences_elife-bot_error_readme_1_only_E2",
+  "repo_name": "elifesciences_elife-bot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests incorrectly uses `unittest` as the module, but the description and common practice for this setup suggest `pytest` should be used.",
+      "correction_candidates": [
+        "python -m pytest --junitxml=build/junit.xml tests/",
+        "pytest tests/",
+        "python tests/run_tests.py",
+        "python -m unittest discover tests/"
+      ],
+      "golden_answer": "python -m pytest --junitxml=build/junit.xml tests/"
+    }
+  ]
+}

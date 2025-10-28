@@ -1,0 +1,18 @@
+{
+  "readme": "lark-parser_lark_error_readme_3_only_E6",
+  "repo_name": "lark-parser_lark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest running the 'Hello World' example code *before* installing the Lark library, which is the wrong order and will fail.",
+      "correction_candidates": [
+        "Remove the sentence: 'First, run the following Python code to test your setup. After it runs successfully, you can install Lark using the instructions above.'",
+        "Move the 'Install Lark' section to be before the 'Hello World' section.",
+        "Change the sentence to: 'After installing Lark, run the following Python code to test your setup.'",
+        "Add a note saying 'This code requires Lark to be installed first.'"
+      ],
+      "golden_answer": "Remove the sentence: 'First, run the following Python code to test your setup. After it runs successfully, you can install Lark using the instructions above.'"
+    }
+  ]
+}

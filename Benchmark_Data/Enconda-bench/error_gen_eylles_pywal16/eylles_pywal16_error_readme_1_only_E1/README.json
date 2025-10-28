@@ -1,0 +1,18 @@
+{
+  "readme": "eylles_pywal16_error_readme_1_only_E1",
+  "repo_name": "eylles_pywal16",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists 'nodejs' as a required dependency for installation.",
+      "correction_candidates": [
+        "Pywal16 requires Python 3.6+, `pip`, and `imagemagick`.",
+        "Pywal16 requires Python 3.6+ and `pip`. Install it by running:\n`pip install pywal16`",
+        "Pywal16 requires Python 3.6+, `pip`, and `go`.",
+        "Pywal16 requires Python 3.6+ and `pip`. Install it by running:\n`sudo apt-get install pywal16`"
+      ],
+      "golden_answer": "Pywal16 requires Python 3.6+ and `pip`. Install it by running:\n`pip install pywal16`"
+    }
+  ]
+}

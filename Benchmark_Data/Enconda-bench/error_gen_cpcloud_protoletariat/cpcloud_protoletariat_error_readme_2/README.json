@@ -1,0 +1,29 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_2",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The example usage incorrectly runs `protol` before `protoc`. `protol` is a post-processing tool and must run after `protoc` has generated the Python files.",
+      "correction_candidates": [
+        "Swap the execution order of the `protoc` and `protol` commands in the example.",
+        "Combine the commands: `protoc ... && protol ...`.",
+        "The `protol` command should be run first to set up the environment for `protoc`.",
+        "Remove the `protoc` command, as `protol` can generate the files itself."
+      ],
+      "golden_answer": "Swap the execution order of the `protoc` and `protol` commands in the example."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `protoc` command outputs files to an `output` directory, but the `protol` command incorrectly tries to read them from an `out` directory.",
+      "correction_candidates": [
+        "In the `protoc` command, change `--python_out=output` to `--python_out=out`.",
+        "In the `protol` command, change `--python-out out` to `--python-out output`.",
+        "Add a step `mv output out` between the `protoc` and `protol` commands.",
+        "Use a variable: `DIR=output; protoc --python_out=$DIR ...; protol --python-out $DIR ...`."
+      ],
+      "golden_answer": "In the `protoc` command, change `--python_out=output` to `--python_out=out`."
+    }
+  ]
+}

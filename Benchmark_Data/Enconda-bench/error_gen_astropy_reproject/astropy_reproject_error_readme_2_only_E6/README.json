@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_reproject_error_readme_2_only_E6",
+  "repo_name": "astropy_reproject",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly advise installing the package globally with pip *before* creating and activating the virtual environment.",
+      "correction_candidates": [
+        "First, create a virtual environment with `python -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package inside it with `pip install reproject`.",
+        "Install the package and create a virtual environment simultaneously using `pipenv install reproject`.",
+        "Run `pip install reproject --user` to avoid global installation issues.",
+        "Use conda to manage environments and installation: `conda create -n reproject_env -c conda-forge reproject python=3.9`."
+      ],
+      "golden_answer": "First, create a virtual environment with `python -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package inside it with `pip install reproject`."
+    }
+  ]
+}

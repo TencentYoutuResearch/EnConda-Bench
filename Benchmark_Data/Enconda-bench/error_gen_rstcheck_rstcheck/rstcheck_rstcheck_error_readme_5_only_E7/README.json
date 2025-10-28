@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_5_only_E7",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Sphinx support installation specifies an incompatible specific version of sphinx-rtd-theme that may conflict with other dependencies",
+      "correction_candidates": [
+        "$ pip install rstcheck[sphinx]",
+        "$ pip install rstcheck[sphinx] sphinx-rtd-theme>=1.0.0",
+        "$ pip install rstcheck[sphinx] sphinx>=4.0.0",
+        "$ pip install rstcheck[sphinx] sphinx-rtd-theme"
+      ],
+      "golden_answer": "$ pip install rstcheck[sphinx]"
+    }
+  ]
+}

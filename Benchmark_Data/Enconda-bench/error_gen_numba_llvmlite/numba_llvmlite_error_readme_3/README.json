@@ -1,0 +1,29 @@
+{
+  "readme": "numba_llvmlite_error_readme_3",
+  "repo_name": "numba_llvmlite",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that llvmlite is only compatible with Python 3.9, when it actually supports versions 3.9 through 3.12.",
+      "correction_candidates": [
+        "llvmlite has been tested with Python 3.9 -- 3.12 and is likely to work with greater versions.",
+        "llvmlite has been tested with Python 3.7 -- 3.12 and is likely to work with greater versions.",
+        "llvmlite has been tested with Python 3.9 and higher.",
+        "llvmlite is compatible with any Python 3.x version."
+      ],
+      "golden_answer": "llvmlite has been tested with Python 3.9 -- 3.12 and is likely to work with greater versions."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the installation documentation contains an incorrect path segment ('install/installation.html' instead of 'install/index.html').",
+      "correction_candidates": [
+        "http://llvmlite.pydata.org/en/latest/install/index.html",
+        "http://llvmlite.readthedocs.io/en/latest/install/index.html",
+        "http://llvmlite.pydata.org/en/latest/install.html",
+        "http://llvmlite.pydata.org/en/latest/docs/install/index.html"
+      ],
+      "golden_answer": "http://llvmlite.pydata.org/en/latest/install/index.html"
+    }
+  ]
+}

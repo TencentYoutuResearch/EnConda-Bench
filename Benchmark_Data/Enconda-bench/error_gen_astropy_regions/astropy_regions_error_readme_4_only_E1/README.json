@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_regions_error_readme_4_only_E1",
+  "repo_name": "astropy_regions",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that a system package `libregions-dev` is required for installation, which is a non-existent dependency.",
+      "correction_candidates": [
+        "Please see the online documentation for installation instructions and dependencies.",
+        "The only dependencies are standard Python packages like Astropy and NumPy, which are installed automatically.",
+        "The package has no system-level dependencies.",
+        "Remove the sentence requiring the `libregions-dev` system package."
+      ],
+      "golden_answer": "Remove the sentence requiring the `libregions-dev` system package."
+    }
+  ]
+}

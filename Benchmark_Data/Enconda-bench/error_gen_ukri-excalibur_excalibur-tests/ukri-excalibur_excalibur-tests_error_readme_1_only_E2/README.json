@@ -1,0 +1,18 @@
+{
+  "readme": "ukri-excalibur_excalibur-tests_error_readme_1_only_E2",
+  "repo_name": "ukri-excalibur_excalibur-tests",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided in the 'Quick Start' section to run the benchmarks is incorrect.",
+      "correction_candidates": [
+        "To run the default benchmark suite, execute `reframe -c . -r`",
+        "To run the default benchmark suite, execute `make test`",
+        "To run the default benchmark suite, execute `python run.py --all`",
+        "To run the default benchmark suite, execute `./run-tests.sh`"
+      ],
+      "golden_answer": "To run the default benchmark suite, execute `reframe -c . -r`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_8_only_E7",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility error - claims to be Python2 library but changelog mentions dropping Python 3.8 support, indicating it's actually for Python 3.9+",
+      "correction_candidates": [
+        "Python3 library for RuCaptcha and 2Captcha service API",
+        "Python 3.9+ library for RuCaptcha and 2Captcha service API",
+        "Python library (3.9+) for RuCaptcha and 2Captcha service API",
+        "Modern Python library for RuCaptcha and 2Captcha service API"
+      ],
+      "golden_answer": "Python3 library for RuCaptcha and 2Captcha service API"
+    }
+  ]
+}

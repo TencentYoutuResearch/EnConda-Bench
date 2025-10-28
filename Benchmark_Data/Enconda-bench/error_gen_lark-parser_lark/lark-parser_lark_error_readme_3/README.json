@@ -1,0 +1,29 @@
+{
+  "readme": "lark-parser_lark_error_readme_3",
+  "repo_name": "lark-parser_lark",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest running the 'Hello World' example code *before* installing the Lark library, which is the wrong order and will fail.",
+      "correction_candidates": [
+        "Remove the sentence: 'First, run the following Python code to test your setup. After it runs successfully, you can install Lark using the instructions above.'",
+        "Move the 'Install Lark' section to be before the 'Hello World' section.",
+        "Change the sentence to: 'After installing Lark, run the following Python code to test your setup.'",
+        "Add a note saying 'This code requires Lark to be installed first.'"
+      ],
+      "golden_answer": "Remove the sentence: 'First, run the following Python code to test your setup. After it runs successfully, you can install Lark using the instructions above.'"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The string input in the 'Hello World' example code is 'Hello World!', which is missing the comma required by the grammar `start: WORD \",\" WORD \"!\"`. This will cause the parse to fail and also makes the example output incorrect.",
+      "correction_candidates": [
+        "Change the input string in the code to `l.parse(\"Hello, World!\")`.",
+        "Change the grammar in the code to `start: WORD WORD \"!\"`.",
+        "Change the grammar in the code to `start: WORD \",\"? WORD \"!\"` to make the comma optional.",
+        "Change the input string in the code to `l.parse('Hello, World!')`."
+      ],
+      "golden_answer": "Change the input string in the code to `l.parse(\"Hello, World!\")`."
+    }
+  ]
+}

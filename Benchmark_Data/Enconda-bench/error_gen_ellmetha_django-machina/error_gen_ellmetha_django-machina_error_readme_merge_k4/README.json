@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_ellmetha_django-machina_error_readme_merge_k4",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order; `pip install` is executed before the virtual environment is created and activated, which would install the package in the global Python environment.",
+      "correction_candidates": [
+        "Reorder the commands to create and activate the virtual environment before running pip install.",
+        "The `pip instal django-machina` command should be run after `source venv/bin/activate`.",
+        "The correct order is: 1. `python -m venv venv`, 2. `source venv/bin/activate`, 3. `pip instal django-machina`.",
+        "You must set up the virtual environment first, then install packages into it."
+      ],
+      "golden_answer": "Reorder the commands to create and activate the virtual environment before running pip install."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip instal django-machina` contains a syntax error ('instal' instead of 'install').",
+      "correction_candidates": [
+        "Correct the typo in the command: `pip instal` should be `pip install`.",
+        "Fix the command to be `pip install django-machina`.",
+        "The `pip` subcommand is misspelled.",
+        "Change `instal` to `install`."
+      ],
+      "golden_answer": "Fix the command to be `pip install django-machina`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The manual installation instructions are missing a critical required dependency, `django-mptt`, which will cause the application to fail.",
+      "correction_candidates": [
+        "The installation instructions should be simplified to `pip install django-machina`, which correctly installs all required dependencies automatically.",
+        "Add the missing command `pip install django-mptt` to the list.",
+        "The dependency `django-mptt` must be installed for the application to work.",
+        "Update the installation block to include `pip install django-mptt`."
+      ],
+      "golden_answer": "The installation instructions should be simplified to `pip install django-machina`, which correctly installs all required dependencies automatically."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py migrate machina_forum` uses an incorrect app label. Migrations should be run without a specific label or with a correct one.",
+      "correction_candidates": [
+        "The correct command is `python manage.py migrate` to run all pending migrations for installed apps.",
+        "Remove the `machina_forum` argument, as it is not a valid migration label for the `migrate` command.",
+        "The migrate command should not have an argument in this case. It should be `python manage.py migrate`.",
+        "To fix this, use `python manage.py migrate`."
+      ],
+      "golden_answer": "The correct command is `python manage.py migrate` to run all pending migrations for installed apps."
+    }
+  ]
+}

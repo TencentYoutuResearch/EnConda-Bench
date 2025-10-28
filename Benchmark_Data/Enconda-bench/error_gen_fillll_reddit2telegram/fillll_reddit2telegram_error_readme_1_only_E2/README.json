@@ -1,0 +1,18 @@
+{
+  "readme": "fillll_reddit2telegram_error_readme_1_only_E2",
+  "repo_name": "fillll_reddit2telegram",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The first cron schedule `46 * * *` is invalid. A cron schedule requires five time fields (minute, hour, day of month, month, day of week).",
+      "correction_candidates": [
+        "46 * * * * ~/reddit2telegram/auto_update.sh",
+        "*/46 * * * * ~/reddit2telegram/auto_update.sh",
+        "46 * * * * * ~/reddit2telegram/auto_update.sh",
+        "46h *m *d *M *Y ~/reddit2telegram/auto_update.sh"
+      ],
+      "golden_answer": "46 * * * * ~/reddit2telegram/auto_update.sh"
+    }
+  ]
+}

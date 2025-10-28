@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_7_only_E8",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Missing clear installation instructions in a prominent location",
+      "correction_candidates": [
+        "## Installation\n\nInstall PyLabRobot using pip:\n\n```bash\npip install pylabrobot\n```",
+        "## Quick Start\n\nFirst install PyLabRobot:\n\n```bash\npip install pylabrobot\n```",
+        "## Setup\n\nTo get started, install PyLabRobot:\n\n```bash\npip install pylabrobot\n```",
+        "## Getting Started\n\nInstall PyLabRobot with:\n\n```bash\npip install pylabrobot\n```"
+      ],
+      "golden_answer": "## Installation\n\nInstall PyLabRobot using pip:\n\n```bash\npip install pylabrobot\n```"
+    }
+  ]
+}

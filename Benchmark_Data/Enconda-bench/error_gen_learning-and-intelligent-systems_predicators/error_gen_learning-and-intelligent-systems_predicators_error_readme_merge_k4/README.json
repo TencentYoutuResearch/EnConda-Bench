@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_learning-and-intelligent-systems_predicators_error_readme_merge_k4",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for running locally suggest running the main script before creating and activating a virtual environment, which is the wrong order and may pollute the global Python environment.",
+      "correction_candidates": [
+        "The two bullet points under 'Locally' should be swapped.",
+        "A new step `pip install -e .` should be added before running the script.",
+        "The instruction to create a virtual environment should be removed.",
+        "The command should be changed to `conda run python predicators/main.py --env cover --approach oracle --seed 0`."
+      ],
+      "golden_answer": "The two bullet points under 'Locally' should be swapped."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pytest command for running checks is missing the `--cov-fail-under=100` flag, which contradicts the documentation's claim that 100% code coverage is enforced.",
+      "correction_candidates": [
+        "Add the `--cov-fail-under=100` flag to the `pytest` command.",
+        "Change the description to say 'code is adequately covered' without mentioning '100'.",
+        "Replace the command with `pytest --cov=predicators`.",
+        "Add the `--strict-coverage` flag to the `pytest` command."
+      ],
+      "golden_answer": "Add the `--cov-fail-under=100` flag to the `pytest` command."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python 3.9 is used, but the correct required versions are 3.10-3.11, leading to a version compatibility error.",
+      "correction_candidates": [
+        "Change the Python version requirement to '3.10-3.11'.",
+        "Change the Python version requirement to '3.8+'.",
+        "Remove the Python version specification entirely.",
+        "Add a note that `pyenv` should be used to install Python 3.9."
+      ],
+      "golden_answer": "Change the Python version requirement to '3.10-3.11'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install .` is used instead of `pip install -e .`. This prevents local code changes from being reflected in the installed package, which is problematic for a development workflow.",
+      "correction_candidates": [
+        "Change the command to `pip install -e .`.",
+        "Change the command to `python setup.py install`.",
+        "Change the command to `pip install --no-deps .`.",
+        "Add a note saying 'After making code changes, you must reinstall the package.'"
+      ],
+      "golden_answer": "Change the command to `pip install -e .`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for running the system uses `--key=value` syntax for arguments, which is not the standard syntax for argparse and may cause the command to fail.",
+      "correction_candidates": [
+        "Change the argument syntax from `--key=value` to `--key value`.",
+        "Install the `fire` library to handle `--key=value` arguments.",
+        "Wrap the arguments in quotes, e.g., `\"--env=cover\"`.",
+        "Remove the example command entirely."
+      ],
+      "golden_answer": "Change the argument syntax from `--key=value` to `--key value`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The alternative mypy command suggests `--config-file mypy.ini` but is meant to be run from the parent directory, where `mypy.ini` does not exist. The path is incorrect.",
+      "correction_candidates": [
+        "Change the config file path in the alternative command to `predicators/mypy.ini`.",
+        "Change the alternative command to `cd predicators && mypy . --config-file mypy.ini`.",
+        "Remove the alternative `mypy` command suggestion.",
+        "Move the `mypy.ini` file to the parent directory."
+      ],
+      "golden_answer": "Change the config file path in the alternative command to `predicators/mypy.ini`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The section on `PYTHONHASHSEED` is missing the explanation for why it is necessary, making the instruction unclear and seem optional.",
+      "correction_candidates": [
+        "Add the sentence: 'Our code assumes that python hashing is deterministic between processes, which is not true by default.'",
+        "Add a link to the Python documentation on hash randomization.",
+        "Change the instruction to `export PYTHONHASHSEED=0 # for deterministic hashing`.",
+        "Remove the `PYTHONHASHSEED` section entirely as it is not critical."
+      ],
+      "golden_answer": "Add the sentence: 'Our code assumes that python hashing is deterministic between processes, which is not true by default.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development dependencies, `pip install -e .[develop,testing]`, includes a non-existent extra dependency group `testing`, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Change the command to `pip install -e .[develop]`.",
+        "Change the command to `pip install -e '.[develop]'`.",
+        "Add a `testing` section to the `extras_require` in `setup.py`.",
+        "Change the command to `pip install -e .[dev]`."
+      ],
+      "golden_answer": "Change the command to `pip install -e .[develop]`."
+    }
+  ]
+}

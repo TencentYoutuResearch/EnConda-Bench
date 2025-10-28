@@ -1,0 +1,29 @@
+{
+  "readme": "valory-xyz_trader_error_readme_6",
+  "repo_name": "valory-xyz_trader",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary Node.js dependency that is not required for this Python-based service",
+      "correction_candidates": [
+        "Remove the Node.js requirement entirely",
+        "Change Node.js version to >= 18.0.0",
+        "Replace Node.js with npm requirement",
+        "Add yarn as an alternative to Node.js"
+      ],
+      "golden_answer": "Remove the Node.js requirement entirely"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Changed keys.json filename to config.json which does not exist and breaks the file reference",
+      "correction_candidates": [
+        "Change config.json back to keys.json",
+        "Update the file creation command to generate config.json instead",
+        "Use credentials.json as the filename",
+        "Reference both keys.json and config.json files"
+      ],
+      "golden_answer": "Change config.json back to keys.json"
+    }
+  ]
+}

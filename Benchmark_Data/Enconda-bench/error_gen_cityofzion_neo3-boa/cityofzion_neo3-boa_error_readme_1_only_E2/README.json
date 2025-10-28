@@ -1,0 +1,18 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_1_only_E2",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package via pip is incorrect. It uses 'neo-boa' instead of the correct package name 'neo3-boa'.",
+      "correction_candidates": [
+        "$ pip install neo-boa3",
+        "$ pip install coz-neo3-boa",
+        "$ pip install neo3-boa",
+        "$ pip install neo3boa"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    }
+  ]
+}

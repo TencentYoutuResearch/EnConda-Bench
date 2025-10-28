@@ -1,0 +1,18 @@
+{
+  "readme": "ucoproject_uco_error_readme_8_only_E1",
+  "repo_name": "ucoproject_uco",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Lists system dependencies that are not actually needed for an ontology project",
+      "correction_candidates": [
+        "Remove the system dependencies entirely as ontology projects typically don't need build tools",
+        "Replace with git and curl as more relevant dependencies for cloning repositories",
+        "Change to python3-pip python3-venv as the only necessary system packages",
+        "Update to include only libxml2-utils and remove build-essential and python3-dev"
+      ],
+      "golden_answer": "Remove the system dependencies entirely as ontology projects typically don't need build tools"
+    }
+  ]
+}

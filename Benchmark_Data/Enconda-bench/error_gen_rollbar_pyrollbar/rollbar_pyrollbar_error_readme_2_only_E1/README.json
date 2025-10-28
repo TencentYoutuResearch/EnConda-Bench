@@ -1,0 +1,18 @@
+{
+  "readme": "rollbar_pyrollbar_error_readme_2_only_E1",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions unnecessarily direct the user to manually install the `requests` library, which is already a dependency of `pyrollbar` and would be installed automatically.",
+      "correction_candidates": [
+        "Follow the [Quick Start](https://docs.rollbar.com/docs/python#section-quick-start) instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python) to install pyrollbar and configure it for your platform.",
+        "Ensure you have `pip` installed, then follow the [Quick Start](https://docs.rollbar.com/docs/python#section-quick-start) instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python) to install pyrollbar and configure it for your platform.",
+        "First, install `pyrollbar` by running `pip install rollbar`, then follow the instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python).",
+        "Remove the unnecessary `pip install requests` step from the setup instructions."
+      ],
+      "golden_answer": "Follow the [Quick Start](https://docs.rollbar.com/docs/python#section-quick-start) instructions in our [Python SDK docs](https://docs.rollbar.com/docs/python) to install pyrollbar and configure it for your platform."
+    }
+  ]
+}

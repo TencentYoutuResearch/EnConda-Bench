@@ -1,0 +1,29 @@
+{
+  "readme": "nschloe_meshio_error_readme_1",
+  "repo_name": "nschloe_meshio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install meshio all` is syntactically incorrect for installing a package with optional dependencies (extras). It will be interpreted as trying to install two separate packages named 'meshio' and 'all', where 'all' does not exist, causing an error.",
+      "correction_candidates": [
+        "pip install meshio --all",
+        "pip install meshio[all]",
+        "pip install meshio --with-all",
+        "pip install meshio && pip install all"
+      ],
+      "golden_answer": "pip install meshio[all]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `meshio --convert input.msh output.vtk` is incorrect. `meshio` uses subcommands like `convert`, not flags like `--convert`, which will result in a command-line argument parsing error.",
+      "correction_candidates": [
+        "meshio -c input.msh output.vtk",
+        "meshio convert -i input.msh -o output.vtk",
+        "meshio convert input.msh output.vtk",
+        "meshio convert input.msh > output.vtk"
+      ],
+      "golden_answer": "meshio convert input.msh output.vtk"
+    }
+  ]
+}

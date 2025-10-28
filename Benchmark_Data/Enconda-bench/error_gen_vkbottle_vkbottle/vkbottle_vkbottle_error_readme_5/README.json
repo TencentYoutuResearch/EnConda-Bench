@@ -1,0 +1,29 @@
+{
+  "readme": "vkbottle_vkbottle_error_readme_5",
+  "repo_name": "vkbottle_vkbottle",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary specific aiohttp version dependency that may cause conflicts",
+      "correction_candidates": [
+        "pip install vkbottle",
+        "pip install vkbottle aiohttp>=3.8.0",
+        "pip install vkbottle --upgrade",
+        "pip install vkbottle[dev]"
+      ],
+      "golden_answer": "pip install vkbottle"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order of development setup steps - installing dependencies before creating virtual environment",
+      "correction_candidates": [
+        "Сначала создайте виртуальную среду, затем установите зависимости разработки из requirements.txt",
+        "Сначала установите Python 3.8+, затем создайте виртуальную среду",
+        "Сначала клонируйте репозиторий, затем установите зависимости разработки",
+        "Сначала установите git, затем клонируйте репозиторий и создайте виртуальную среду"
+      ],
+      "golden_answer": "Сначала создайте виртуальную среду, затем установите зависимости разработки из requirements.txt"
+    }
+  ]
+}

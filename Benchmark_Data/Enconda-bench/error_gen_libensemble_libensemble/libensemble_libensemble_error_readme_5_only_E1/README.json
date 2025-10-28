@@ -1,0 +1,18 @@
+{
+  "readme": "libensemble_libensemble_error_readme_5_only_E1",
+  "repo_name": "libensemble_libensemble",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies numpy and scipy with specific versions in the pip install command",
+      "correction_candidates": [
+        "pip install libensemble",
+        "pip install libensemble --upgrade",
+        "pip install libensemble[all]",
+        "pip install libensemble --user"
+      ],
+      "golden_answer": "pip install libensemble"
+    }
+  ]
+}

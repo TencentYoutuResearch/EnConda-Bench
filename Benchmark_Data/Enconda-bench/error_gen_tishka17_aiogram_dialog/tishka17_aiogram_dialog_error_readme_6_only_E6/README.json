@@ -1,0 +1,18 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_6_only_E6",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup_dialogs function is called before registering the dialog router, which is incorrect execution order",
+      "correction_candidates": [
+        "dp.include_router(dialog)\nsetup_dialogs(dp)",
+        "setup_dialogs(dp)\ndp.include_router(dialog)",
+        "dp.register_router(dialog)\nsetup_dialogs(dp)",
+        "setup_dialogs(dp, dialog)\ndp.include_router(dialog)"
+      ],
+      "golden_answer": "dp.include_router(dialog)\nsetup_dialogs(dp)"
+    }
+  ]
+}

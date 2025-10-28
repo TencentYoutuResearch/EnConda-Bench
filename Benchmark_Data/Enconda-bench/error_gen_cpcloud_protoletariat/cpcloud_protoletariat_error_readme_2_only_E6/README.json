@@ -1,0 +1,18 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_2_only_E6",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The example usage incorrectly runs `protol` before `protoc`. `protol` is a post-processing tool and must run after `protoc` has generated the Python files.",
+      "correction_candidates": [
+        "Swap the execution order of the `protoc` and `protol` commands in the example.",
+        "Combine the commands: `protoc ... && protol ...`.",
+        "The `protol` command should be run first to set up the environment for `protoc`.",
+        "Remove the `protoc` command, as `protol` can generate the files itself."
+      ],
+      "golden_answer": "Swap the execution order of the `protoc` and `protol` commands in the example."
+    }
+  ]
+}

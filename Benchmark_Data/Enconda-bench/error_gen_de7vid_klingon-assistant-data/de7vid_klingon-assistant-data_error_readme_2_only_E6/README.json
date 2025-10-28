@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_2_only_E6",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly states that `check_audio_files.pl` must be run before `write_db.sh`, implying a false dependency and incorrect workflow order.",
+      "correction_candidates": [
+        "Running `check_audio_files.pl` is an optional step to check for missing audio and is not required before running `write_db.sh`.",
+        "The `write_db.sh` script should be run first, and its output is used by `check_audio_files.pl`.",
+        "The two scripts, `write_db.sh` and `check_audio_files.pl`, are independent and can be run in any order.",
+        "You must run `write_db.sh` to update the `EXTRA` file, and then run `check_audio_files.pl`."
+      ],
+      "golden_answer": "Running `check_audio_files.pl` is an optional step to check for missing audio and is not required before running `write_db.sh`."
+    }
+  ]
+}

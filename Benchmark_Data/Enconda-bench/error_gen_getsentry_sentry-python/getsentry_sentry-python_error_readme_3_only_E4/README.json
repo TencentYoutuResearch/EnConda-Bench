@@ -1,0 +1,18 @@
+{
+  "readme": "getsentry_sentry-python_error_readme_3_only_E4",
+  "repo_name": "getsentry_sentry-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contributing guidelines points to `docs/CONTRIBUTING.md`, but the file is located in the root directory of the repository as `CONTRIBUTING.md`.",
+      "correction_candidates": [
+        "Change the link to point to `CONTRIBUTING.md`.",
+        "Change the link to point to `/.github/CONTRIBUTING.md`.",
+        "Change the link to the full GitHub URL for the file.",
+        "Change the link to point to `CONTRIBUTING`."
+      ],
+      "golden_answer": "Change the link to point to `CONTRIBUTING.md`."
+    }
+  ]
+}

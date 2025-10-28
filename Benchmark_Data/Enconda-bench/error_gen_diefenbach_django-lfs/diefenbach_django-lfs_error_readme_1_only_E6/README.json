@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_1_only_E6",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions install pip dependencies from requirements.txt before the virtual environment has been created, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "1. Create virtual environment: `python -m venv venv`\n2. Activate it: `source venv/bin/activate`\n3. Install dependencies: `pip install -r requirements.txt`",
+        "1. Create virtual environment: `python -m venv venv`\n2. Install dependencies: `pip install -r requirements.txt`\n3. Activate it: `source venv/bin/activate`",
+        "1. Install dependencies using pipx: `pipx install -r requirements.txt`\n2. Create virtual environment: `python -m venv venv`",
+        "1. Activate venv: `source venv/bin/activate`\n2. Install dependencies: `pip install -r requirements.txt`\n3. Create environment: `python -m venv venv`"
+      ],
+      "golden_answer": "1. Create virtual environment: `python -m venv venv`\n2. Activate it: `source venv/bin/activate`\n3. Install dependencies: `pip install -r requirements.txt`"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_nabla-ntnu_nablaweb_error_readme_merge_k2",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version is specified as 'python 3', which is ambiguous and can lead to compatibility issues as it doesn't specify the required minor version.",
+      "correction_candidates": [
+        "Change 'python 3' to 'python > 3.6'.",
+        "Change 'python 3' to 'python 3.9'.",
+        "Change 'python 3' to 'python'.",
+        "Change 'python 3' to 'python 3.9+'."
+      ],
+      "golden_answer": "Change 'python 3' to 'python 3.9'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install pre-commit hooks is 'pipenv pre-commit install', which is incorrect. Commands executed within the pipenv environment should be prefixed with 'run'.",
+      "correction_candidates": [
+        "Change 'pipenv pre-commit install' to 'pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv shell && pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv install pre-commit'."
+      ],
+      "golden_answer": "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. It instructs to install pre-commit hooks before installing the project dependencies with 'pipenv install', which will fail because the pre-commit package is not yet installed.",
+      "correction_candidates": [
+        "Reverse the order of the two commands in the 'Installasjon' section.",
+        "Combine the two commands into 'pipenv install && pipenv run pre-commit install'.",
+        "Remove the 'pipenv run pre-commit install' step from the 'Installasjon' section.",
+        "Add 'pipenv shell' before the two commands."
+      ],
+      "golden_answer": "Reverse the order of the two commands in the 'Installasjon' section."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'pipenv' dependency is missing from the system dependencies list, but it is required to manage Python packages and run commands.",
+      "correction_candidates": [
+        "Add 'pip' to the system dependencies list.",
+        "Add 'pipenv' to the system dependencies list.",
+        "Add 'virtualenv' to the system dependencies list.",
+        "Remove the mention of 'pipenv' from the pre-commit command in the Kodestil section."
+      ],
+      "golden_answer": "Add 'pipenv' to the system dependencies list."
+    }
+  ]
+}

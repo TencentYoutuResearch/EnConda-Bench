@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_6_only_E4",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References nonexistent script file path or location that may not exist in the repository structure",
+      "correction_candidates": [
+        "Optionally, one may also run the `check_audio_files.pl` script (in the `tools` directory of the [main](https://github.com/De7vID/klingon-assistant) repo)",
+        "Optionally, one may also run the `check_audio_files.pl` script (in the root directory of the [main](https://github.com/De7vID/klingon-assistant) repo)",
+        "Optionally, one may also run the `check_audio_files.pl` script (in the `bin` directory of the [main](https://github.com/De7vID/klingon-assistant) repo)",
+        "Optionally, one may also run the `check_audio_files.pl` script (in the `scripts` directory of the [main](https://github.com/De7vID/klingon-assistant) repo)"
+      ],
+      "golden_answer": "Optionally, one may also run the `check_audio_files.pl` script (in the `scripts` directory of the [main](https://github.com/De7vID/klingon-assistant) repo)"
+    }
+  ]
+}

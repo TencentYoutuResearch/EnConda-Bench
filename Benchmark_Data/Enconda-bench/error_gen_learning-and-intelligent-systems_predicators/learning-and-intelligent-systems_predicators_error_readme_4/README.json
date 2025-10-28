@@ -1,0 +1,29 @@
+{
+  "readme": "learning-and-intelligent-systems_predicators_error_readme_4",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The section on `PYTHONHASHSEED` is missing the explanation for why it is necessary, making the instruction unclear and seem optional.",
+      "correction_candidates": [
+        "Add the sentence: 'Our code assumes that python hashing is deterministic between processes, which is not true by default.'",
+        "Add a link to the Python documentation on hash randomization.",
+        "Change the instruction to `export PYTHONHASHSEED=0 # for deterministic hashing`.",
+        "Remove the `PYTHONHASHSEED` section entirely as it is not critical."
+      ],
+      "golden_answer": "Add the sentence: 'Our code assumes that python hashing is deterministic between processes, which is not true by default.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development dependencies, `pip install -e .[develop,testing]`, includes a non-existent extra dependency group `testing`, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Change the command to `pip install -e .[develop]`.",
+        "Change the command to `pip install -e '.[develop]'`.",
+        "Add a `testing` section to the `extras_require` in `setup.py`.",
+        "Change the command to `pip install -e .[dev]`."
+      ],
+      "golden_answer": "Change the command to `pip install -e .[develop]`."
+    }
+  ]
+}

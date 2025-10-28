@@ -1,0 +1,18 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_3_only_E4",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path mentioned for the `sph2pipe` installation is incorrect. The tool is installed in `~/.lhotse/tools`, but the README states it is installed in `~/.lhotse/bin`.",
+      "correction_candidates": [
+        "It will download it to `~/.lhotse/bin`, compile it, and auto-register in `PATH`.",
+        "It will download it to `~/.lhotse/tools`, compile it, and auto-register in `PATH`.",
+        "It will download it to `/usr/local/bin`, compile it, and you must add it to `PATH`.",
+        "It will download it to `~/.lhotse/sph2pipe`, compile it, and auto-register in `PATH`."
+      ],
+      "golden_answer": "It will download it to `~/.lhotse/tools`, compile it, and auto-register in `PATH`."
+    }
+  ]
+}

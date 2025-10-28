@@ -1,0 +1,18 @@
+{
+  "readme": "automl_neps_error_readme_4_only_E2",
+  "repo_name": "automl_neps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the `pipeline_space` definition, the argument `fidelity=True` is used for `neps.IntegerParameter`. The correct argument to specify a fidelity parameter is `is_fidelity=True`.",
+      "correction_candidates": [
+        "is_fidelity=True",
+        "fidelity_param=True",
+        "use_fidelity=True",
+        "fidelity=True"
+      ],
+      "golden_answer": "is_fidelity=True"
+    }
+  ]
+}

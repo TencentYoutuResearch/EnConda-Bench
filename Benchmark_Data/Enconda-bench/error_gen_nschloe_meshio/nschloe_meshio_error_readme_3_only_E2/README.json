@@ -1,0 +1,18 @@
+{
+  "readme": "nschloe_meshio_error_readme_3_only_E2",
+  "repo_name": "nschloe_meshio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The arguments for `meshio.write_points_cells` are in the wrong order. The function signature is `(filename, points, cells, ...)`, but the example provides `(points, cells, filename)`, which will cause a TypeError.",
+      "correction_candidates": [
+        "meshio.write_points_cells(filename=\"foo.vtk\", points=points, cells=cells)",
+        "meshio.write_points_cells(\"foo.vtk\", points, cells)",
+        "meshio.write_points_cells(cells, points, \"foo.vtk\")",
+        "meshio.write_points_cells(points, \"foo.vtk\", cells)"
+      ],
+      "golden_answer": "meshio.write_points_cells(\"foo.vtk\", points, cells)"
+    }
+  ]
+}

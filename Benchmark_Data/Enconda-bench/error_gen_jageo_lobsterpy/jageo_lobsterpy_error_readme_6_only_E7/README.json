@@ -1,0 +1,18 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_6_only_E7",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement specifying Python 2.7 which is outdated and incompatible",
+      "correction_candidates": [
+        "Before the installation, please make sure that you are using one of the supported Python versions (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml)).",
+        "Before the installation, please make sure that you are using Python 3.8 or later (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml)).",
+        "Before the installation, please make sure that you are using Python 3.6+ (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml)).",
+        "Before the installation, please make sure that you are using the latest Python version (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml))."
+      ],
+      "golden_answer": "Before the installation, please make sure that you are using one of the supported Python versions (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml))."
+    }
+  ]
+}

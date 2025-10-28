@@ -1,0 +1,18 @@
+{
+  "readme": "lichess4545_heltour_error_readme_3_only_E7",
+  "repo_name": "lichess4545_heltour",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Postgres dependency `postgresql-server-dev-9.5` has its required version removed. Listing it as `postgresql-server-dev` can cause package managers to install a newer, incompatible version of Postgres.",
+      "correction_candidates": [
+        "Specify the version by changing `postgresql-server-dev` to `postgresql-server-dev-9.5`.",
+        "Add a note saying 'Postgres version 9.5 is required'.",
+        "Change the dependency to `postgresql-server-dev-all` to support multiple versions.",
+        "Remove the Postgres dependency and use Docker instead."
+      ],
+      "golden_answer": "Specify the version by changing `postgresql-server-dev` to `postgresql-server-dev-9.5`."
+    }
+  ]
+}

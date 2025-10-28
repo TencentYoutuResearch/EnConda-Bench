@@ -1,0 +1,18 @@
+{
+  "readme": "robbievanleeuwen_section-properties_error_readme_1_only_E4",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the license file is incorrect, pointing to a non-existent 'LICENSE.md' file instead of 'LICENSE'.",
+      "correction_candidates": [
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/main/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/raw/master/LICENSE`."
+      ],
+      "golden_answer": "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`."
+    }
+  ]
+}

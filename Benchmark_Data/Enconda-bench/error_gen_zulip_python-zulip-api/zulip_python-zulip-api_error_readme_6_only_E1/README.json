@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_6_only_E1",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installing dependencies globally before setting up virtual environment, which can cause conflicts",
+      "correction_candidates": [
+        "Remove the pip install command from step 2 and install dependencies after activating the virtual environment",
+        "Use pip3 instead of pip for the dependency installation command",
+        "Add --user flag to the pip install command to install dependencies locally",
+        "Install dependencies using conda instead of pip"
+      ],
+      "golden_answer": "Remove the pip install command from step 2 and install dependencies after activating the virtual environment"
+    }
+  ]
+}

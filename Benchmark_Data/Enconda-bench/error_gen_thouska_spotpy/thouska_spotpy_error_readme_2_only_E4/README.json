@@ -1,0 +1,18 @@
+{
+  "readme": "thouska_spotpy_error_readme_2_only_E4",
+  "repo_name": "thouska_spotpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the examples in the 'Getting started' section is incorrect. It points to `.../tree/master/examples` but the correct path is `.../tree/master/spotpy/examples`.",
+      "correction_candidates": [
+        "Change the link to https://github.com/thouska/spotpy/tree/master/spotpy/examples",
+        "Change the link to https://github.com/thouska/spotpy/tree/master/docs/examples",
+        "Change the link to https://github.com/thouska/spotpy/examples",
+        "Change the link to the main repository page: https://github.com/thouska/spotpy/"
+      ],
+      "golden_answer": "Change the link to https://github.com/thouska/spotpy/tree/master/spotpy/examples"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "emdgroup_baybe_error_readme_2_only_E7",
+  "repo_name": "emdgroup_baybe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The command to install from GitHub does not specify a branch or commit reference. This will install from the default branch, which might be an unstable or unintended version of the code.",
+      "correction_candidates": [
+        "pip install git+https://github.com/emdgroup/baybe.git --branch main",
+        "pip install git+https://github.com/emdgroup/baybe.git@main",
+        "pip install --git https://github.com/emdgroup/baybe.git@main",
+        "pip install from-git https://github.com/emdgroup/baybe.git@main"
+      ],
+      "golden_answer": "pip install git+https://github.com/emdgroup/baybe.git@main"
+    }
+  ]
+}

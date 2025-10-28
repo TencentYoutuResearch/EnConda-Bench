@@ -1,0 +1,18 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_1_only_E2",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command 'make check' is incorrect for verifying the installation. The correct command to run the regression tests is 'make test'.",
+      "correction_candidates": [
+        "make test-all",
+        "make verify",
+        "make regression",
+        "make test"
+      ],
+      "golden_answer": "make test"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_diefenbach_django-lfs_error_readme_merge_k2",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions install pip dependencies from requirements.txt before the virtual environment has been created, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "1. Create virtual environment: `python -m venv venv`\n2. Activate it: `source venv/bin/activate`\n3. Install dependencies: `pip install -r requirements.txt`",
+        "1. Create virtual environment: `python -m venv venv`\n2. Install dependencies: `pip install -r requirements.txt`\n3. Activate it: `source venv/bin/activate`",
+        "1. Install dependencies using pipx: `pipx install -r requirements.txt`\n2. Create virtual environment: `python -m venv venv`",
+        "1. Activate venv: `source venv/bin/activate`\n2. Install dependencies: `pip install -r requirements.txt`\n3. Create environment: `python -m venv venv`"
+      ],
+      "golden_answer": "1. Create virtual environment: `python -m venv venv`\n2. Activate it: `source venv/bin/activate`\n3. Install dependencies: `pip install -r requirements.txt`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `virtualenv --create .venv` is incorrect. `virtualenv` does not have a `--create` flag.",
+      "correction_candidates": [
+        "Create a virtual environment: `virtualenv .venv`",
+        "Create a virtual environment: `python -m virtualenv create .venv`",
+        "Create a virtual environment: `venv create .venv`",
+        "Create a virtual environment: `virtualenv --new .venv`"
+      ],
+      "golden_answer": "Create a virtual environment: `virtualenv .venv`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the development environment is incorrect, pointing to 'lfs-development-buildout' instead of the correct 'lfs-buildout-development'.",
+      "correction_candidates": [
+        "https://github.com/diefenbach/lfs-buildout",
+        "https://github.com/diefenbach/lfs-buildout-development",
+        "https://github.com/diefenbach/lfs/tree/development",
+        "https://github.com/diefenbach/lfs-development"
+      ],
+      "golden_answer": "https://github.com/diefenbach/lfs-buildout-development"
+    }
+  ]
+}

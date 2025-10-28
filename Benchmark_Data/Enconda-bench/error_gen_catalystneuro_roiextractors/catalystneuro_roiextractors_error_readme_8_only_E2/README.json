@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_8_only_E2",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Referenced non-existent branch 'develop' instead of the correct 'main' branch",
+      "correction_candidates": [
+        "pip install git+https://github.com/catalystneuro/roiextractors.git@main",
+        "pip install git+https://github.com/catalystneuro/roiextractors.git@master",
+        "pip install git+https://github.com/catalystneuro/roiextractors.git",
+        "pip install git+https://github.com/catalystneuro/roiextractors.git@latest"
+      ],
+      "golden_answer": "pip install git+https://github.com/catalystneuro/roiextractors.git@main"
+    }
+  ]
+}

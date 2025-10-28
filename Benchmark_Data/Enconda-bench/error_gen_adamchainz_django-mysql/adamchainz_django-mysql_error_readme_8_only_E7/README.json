@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_8_only_E7",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python 2.7+ and Django 1.8+ version requirements that are no longer supported or realistic for current development",
+      "correction_candidates": [
+        "Update to current supported versions like Python 3.8+ and Django 3.2+",
+        "Remove specific version requirements and refer to the official compatibility documentation",
+        "Specify Python 3.9+ and Django 4.0+ as minimum requirements",
+        "Use version ranges like Python 3.7-3.11 and Django 2.2-4.2"
+      ],
+      "golden_answer": "Remove specific version requirements and refer to the official compatibility documentation"
+    }
+  ]
+}

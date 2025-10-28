@@ -1,0 +1,18 @@
+{
+  "readme": "roshan-research_hazm_error_readme_2_only_E4",
+  "repo_name": "roshan-research_hazm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The usage example for `POSTagger` specifies an incorrect model filename (`postagger.model` instead of `pos_tagger.model`), which will lead to a `FileNotFoundError` if the user follows the official model download links.",
+      "correction_candidates": [
+        "Change `model='postagger.model'` to `model='pos_tagger.model'`.",
+        "Change `model='postagger.model'` to `model_path='pos_tagger.model'`.",
+        "Change `model='postagger.model'` to point to the full path, e.g., `model='./models/pos_tagger.model'`.",
+        "Remove the `model` argument to use the default model: `tagger = POSTagger()`."
+      ],
+      "golden_answer": "Change `model='postagger.model'` to `model='pos_tagger.model'`."
+    }
+  ]
+}

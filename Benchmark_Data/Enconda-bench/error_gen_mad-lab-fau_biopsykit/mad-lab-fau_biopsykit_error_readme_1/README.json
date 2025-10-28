@@ -1,0 +1,29 @@
+{
+  "readme": "mad-lab-fau_biopsykit_error_readme_1",
+  "repo_name": "mad-lab-fau_biopsykit",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands for developer installation is incorrect. `poetry install` is called before changing into the project directory, which will cause it to fail.",
+      "correction_candidates": [
+        "Run `poetry install` in the parent directory, then `cd BioPsyKit`.",
+        "First run `cd BioPsyKit`, then run `poetry install`.",
+        "Run `git clone` and `poetry install` in the same line.",
+        "Run `poetry install BioPsyKit` from the parent directory."
+      ],
+      "golden_answer": "First run `cd BioPsyKit`, then run `poetry install`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing optional dependencies with poetry uses the incorrect `--extras` flag, which is not a valid poetry command flag.",
+      "correction_candidates": [
+        "Use `poetry install --with mne,jupyter`.",
+        "Use `poetry install -E mne -E jupyter`.",
+        "Use `poetry install --extras mne,jupyter`.",
+        "Use `poetry install [mne, jupyter]`."
+      ],
+      "golden_answer": "Use `poetry install -E mne -E jupyter`."
+    }
+  ]
+}

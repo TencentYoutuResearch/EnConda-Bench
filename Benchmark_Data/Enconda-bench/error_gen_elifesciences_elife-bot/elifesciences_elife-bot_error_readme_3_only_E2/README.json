@@ -1,0 +1,18 @@
+{
+  "readme": "elifesciences_elife-bot_error_readme_3_only_E2",
+  "repo_name": "elifesciences_elife-bot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a starter uses incorrect syntax (`--pythonpath .`) for setting the PYTHONPATH environment variable.",
+      "correction_candidates": [
+        "PYTHONPATH=. python starter/starter_Ping.py -e dev",
+        "export PYTHONPATH=. && python starter/starter_Ping.py -e dev",
+        "python -m starter.starter_Ping -e dev",
+        "env PYTHONPATH=. python starter/starter_Ping.py -e dev"
+      ],
+      "golden_answer": "PYTHONPATH=. python starter/starter_Ping.py -e dev"
+    }
+  ]
+}

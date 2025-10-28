@@ -1,0 +1,29 @@
+{
+  "readme": "intake_intake_error_readme_6",
+  "repo_name": "intake_intake",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed file path from 'scripts/ci/environment-py311.yml' to 'scripts/requirements/environment-py311.yml' which is an incorrect path",
+      "correction_candidates": [
+        "scripts/ci/environment-py311.yml",
+        "requirements/environment-py311.yml",
+        "ci/environment-py311.yml",
+        "scripts/environment-py311.yml"
+      ],
+      "golden_answer": "scripts/ci/environment-py311.yml"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Changed pytest command from 'pytest' to 'pytest tests/' which may fail if tests directory doesn't exist or has different structure",
+      "correction_candidates": [
+        "pytest",
+        "python -m pytest",
+        "pytest .",
+        "pytest --verbose"
+      ],
+      "golden_answer": "pytest"
+    }
+  ]
+}

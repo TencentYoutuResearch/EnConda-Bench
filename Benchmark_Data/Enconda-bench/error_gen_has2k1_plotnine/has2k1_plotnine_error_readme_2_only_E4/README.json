@@ -1,0 +1,18 @@
+{
+  "readme": "has2k1_plotnine_error_readme_2_only_E4",
+  "repo_name": "has2k1_plotnine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the first example image is incorrect (`./docs/images/...` instead of `./doc/images/...`), which will result in a broken image link.",
+      "correction_candidates": [
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"https://raw.githubusercontent.com/has2k1/plotnine/main/doc/images/readme-image-1.png\".",
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\".",
+        "Create a symbolic link from 'docs' to 'doc' in the repository root.",
+        "Remove the \"./\" from the beginning of the path."
+      ],
+      "golden_answer": "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\"."
+    }
+  ]
+}

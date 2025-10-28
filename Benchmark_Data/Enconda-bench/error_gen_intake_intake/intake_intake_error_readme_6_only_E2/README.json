@@ -1,0 +1,18 @@
+{
+  "readme": "intake_intake_error_readme_6_only_E2",
+  "repo_name": "intake_intake",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed pytest command from 'pytest' to 'pytest tests/' which may fail if tests directory doesn't exist or has different structure",
+      "correction_candidates": [
+        "pytest",
+        "python -m pytest",
+        "pytest .",
+        "pytest --verbose"
+      ],
+      "golden_answer": "pytest"
+    }
+  ]
+}

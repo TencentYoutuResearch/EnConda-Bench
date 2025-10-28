@@ -1,0 +1,18 @@
+{
+  "readme": "pypose_pypose_error_readme_3_only_E2",
+  "repo_name": "pypose_pypose",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements/runtime.txt` is missing the `-r` flag. Without it, pip will try to install a package named 'requirements/runtime.txt' from PyPI, which does not exist, instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change `pip install requirements/runtime.txt` to `pip install --requirements requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `pip install -r requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `pip install -f requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `xargs pip install < requirements/runtime.txt`."
+      ],
+      "golden_answer": "Change `pip install requirements/runtime.txt` to `pip install -r requirements/runtime.txt`."
+    }
+  ]
+}

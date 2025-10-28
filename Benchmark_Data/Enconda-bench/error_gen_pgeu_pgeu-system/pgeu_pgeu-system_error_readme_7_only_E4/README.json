@@ -1,0 +1,18 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_7_only_E4",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements file at incorrect path 'dependencies/requirements.txt'",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install -r requirements/base.txt",
+        "pip install -r conf/requirements.txt",
+        "pip install -r setup/requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

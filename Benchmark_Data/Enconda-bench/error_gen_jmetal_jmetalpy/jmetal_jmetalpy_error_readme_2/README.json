@@ -1,0 +1,29 @@
+{
+  "readme": "jmetal_jmetalpy_error_readme_2",
+  "repo_name": "jmetal_jmetalpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README falsely claims that the library is only compatible with Python 3.6 and not newer versions, which contradicts the PyPI badge and actual package compatibility.",
+      "correction_candidates": [
+        "Remove the sentence 'Note: jMetalPy requires Python 3.6 and is not compatible with newer versions.'",
+        "Change the sentence to 'jMetalPy requires Python >= 3.8'.",
+        "Change the sentence to 'jMetalPy is compatible with Python 3.6 and higher.'",
+        "The PyPI badge indicates compatibility, so the text should be updated to match the badge."
+      ],
+      "golden_answer": "Remove the sentence 'Note: jMetalPy requires Python 3.6 and is not compatible with newer versions.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies for parallel computing is incorrect; 'parallel' is not a valid package extra. The correct extra is 'distributed'.",
+      "correction_candidates": [
+        "pip install \"jmetalpy[dask,spark]\"",
+        "pip install \"jmetalpy[all]\"",
+        "pip install \"jmetalpy[distributed]\"",
+        "pip install jmetalpy pyspark dask"
+      ],
+      "golden_answer": "pip install \"jmetalpy[distributed]\""
+    }
+  ]
+}

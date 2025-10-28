@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_7_only_E4",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Reference to check_drops.py file path may be incorrect or file may not exist",
+      "correction_candidates": [
+        "portingdb/check_drops.py",
+        "src/portingdb/check_drops.py",
+        "portingdb/scripts/check_drops.py",
+        "lib/portingdb/check_drops.py"
+      ],
+      "golden_answer": "portingdb/check_drops.py"
+    }
+  ]
+}

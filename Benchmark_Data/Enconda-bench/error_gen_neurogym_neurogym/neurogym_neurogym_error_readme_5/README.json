@@ -1,0 +1,29 @@
+{
+  "readme": "neurogym_neurogym_error_readme_5",
+  "repo_name": "neurogym_neurogym",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in incorrect order - pip install is executed before cloning the repository and changing to the directory",
+      "correction_candidates": [
+        "git clone https://github.com/neurogym/neurogym.git\n    cd neurogym\n    pip install -e .",
+        "pip install -e .\n    git clone https://github.com/neurogym/neurogym.git\n    cd neurogym",
+        "cd neurogym\n    git clone https://github.com/neurogym/neurogym.git\n    pip install -e .",
+        "git clone https://github.com/neurogym/neurogym.git\n    pip install -e .\n    cd neurogym"
+      ],
+      "golden_answer": "git clone https://github.com/neurogym/neurogym.git\n    cd neurogym\n    pip install -e ."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The full install command references 'last command' but the previous commands are now in wrong order",
+      "correction_candidates": [
+        "pip install -e '.[all]'",
+        "pip install -e . --all",
+        "pip install neurogym[all]",
+        "pip install -e '[all]'"
+      ],
+      "golden_answer": "pip install -e '.[all]'"
+    }
+  ]
+}

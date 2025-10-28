@@ -1,0 +1,18 @@
+{
+  "readme": "robotframework_robotframework_error_readme_1_only_E7",
+  "repo_name": "robotframework_robotframework",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README vaguely states 'Robot Framework runs on Python 3' but omits the specific minimum required version (Python 3.8), which can cause installation failure on older Python 3 versions.",
+      "correction_candidates": [
+        "Robot Framework requires Python 3.6 or newer.",
+        "Robot Framework requires the latest version of Python 3.",
+        "Robot Framework requires Python 3.8 or newer and runs also on `PyPy <http://pypy.org>`_.",
+        "Robot Framework is compatible with all Python 3.x versions."
+      ],
+      "golden_answer": "Robot Framework requires Python 3.8 or newer and runs also on `PyPy <http://pypy.org>`_."
+    }
+  ]
+}

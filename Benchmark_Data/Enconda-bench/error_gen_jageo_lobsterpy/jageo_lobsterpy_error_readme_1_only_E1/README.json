@@ -1,0 +1,18 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_1_only_E1",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install LobsterPy with the optional featurizer dependency is misspelled as 'featurizers' (plural).",
+      "correction_candidates": [
+        "Install using ``pip install lobsterpy --with-featurizer``",
+        "Install using ``pip install lobsterpy-featurizer``",
+        "Install using ``pip install lobsterpy[featurizer]``",
+        "Install using ``pip install lobsterpy featurizer``"
+      ],
+      "golden_answer": "Install using ``pip install lobsterpy[featurizer]``"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "thouska_spotpy_error_readme_3_only_E2",
+  "repo_name": "thouska_spotpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Purpose' section, the example code `sampler.sample --iterations 10000` is not valid Python syntax for calling a method with an argument. It should use parentheses.",
+      "correction_candidates": [
+        "sampler.sample(10000)",
+        "sampler.sample(iterations=10000)",
+        "sampler.sample(n=10000)",
+        "sampler.sample_runs(10000)"
+      ],
+      "golden_answer": "sampler.sample(10000)"
+    }
+  ]
+}

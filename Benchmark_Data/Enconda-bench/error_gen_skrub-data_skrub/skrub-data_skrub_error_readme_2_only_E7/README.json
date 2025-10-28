@@ -1,0 +1,18 @@
+{
+  "readme": "skrub-data_skrub_error_readme_2_only_E7",
+  "repo_name": "skrub-data_skrub",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that skrub is only compatible with Python 3.7 and earlier, which contradicts the package's actual compatibility shown in the PyPI version badge.",
+      "correction_candidates": [
+        "Remove the sentence about Python 3.7 compatibility.",
+        "Update the sentence to 'skrub is compatible with Python 3.8 and later.'",
+        "Change the Python version badge to reflect compatibility with 3.7 only.",
+        "Add a note that older versions of skrub supported Python 3.7."
+      ],
+      "golden_answer": "Remove the sentence about Python 3.7 compatibility."
+    }
+  ]
+}

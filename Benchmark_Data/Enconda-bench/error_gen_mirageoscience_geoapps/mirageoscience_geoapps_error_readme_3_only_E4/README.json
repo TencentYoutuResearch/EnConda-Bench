@@ -1,0 +1,18 @@
+{
+  "readme": "mirageoscience_geoapps_error_readme_3_only_E4",
+  "repo_name": "mirageoscience_geoapps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the third-party software notices points to a non-existent file `THIRD_PARTY.rst`. The correct filename is `THIRD_PARTY_SOFTWARE.rst`.",
+      "correction_candidates": [
+        "Correct the link target and definition to point to `THIRD_PARTY_SOFTWARE.rst`.",
+        "Change the link to an absolute URL pointing to the file on GitHub.",
+        "Remove the 'Third Party Software' section.",
+        "Correct the link target and definition to point to `LICENSE.rst`."
+      ],
+      "golden_answer": "Correct the link target and definition to point to `THIRD_PARTY_SOFTWARE.rst`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "oarriaga_paz_error_readme_7",
+  "repo_name": "oarriaga_paz",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pypaz with --user flag inside an activated virtual environment, which contradicts the purpose of virtual environments",
+      "correction_candidates": [
+        "Remove the --user flag when installing inside virtual environment",
+        "Install pypaz globally first, then create virtual environment",
+        "Use pip install pypaz without --user in virtual environment",
+        "Deactivate virtual environment before using --user flag"
+      ],
+      "golden_answer": "Remove the --user flag when installing inside virtual environment"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Used absolute file path '/home/user/my_image.png' in example which likely doesn't exist on user systems",
+      "correction_candidates": [
+        "Use relative path like 'my_image.png' instead",
+        "Use a generic path like './images/my_image.png'",
+        "Use os.path.join() for cross-platform compatibility",
+        "Provide instructions to create the directory first"
+      ],
+      "golden_answer": "Use relative path like 'my_image.png' instead"
+    }
+  ]
+}

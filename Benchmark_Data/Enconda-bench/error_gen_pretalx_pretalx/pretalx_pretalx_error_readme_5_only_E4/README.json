@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_5_only_E4",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file path 'dependencies.txt' instead of 'DEPENDENCIES.rst'",
+      "correction_candidates": [
+        "The licenses of all dependencies are documented in the `DEPENDENCIES.rst`_ file.",
+        "The licenses of all dependencies are documented in the `requirements.txt`_ file.",
+        "The licenses of all dependencies are documented in the `deps.md`_ file.",
+        "The licenses of all dependencies are documented in the `LICENSE-DEPS`_ file."
+      ],
+      "golden_answer": "The licenses of all dependencies are documented in the `DEPENDENCIES.rst`_ file."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "project-improv_improv_error_readme_4_only_E1",
+  "repo_name": "project-improv_improv",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The Quick Start guide mandates installing the `caiman` package. This is a heavy, specialized dependency that is not required for the core functionality of `improv` and whose installation is more complex than a simple pip command.",
+      "correction_candidates": [
+        "The `caiman` dependency should be installed as an extra, using `pip install improv[caiman]`.",
+        "The instruction to install `caiman` should be moved to the documentation for specific examples that require it.",
+        "Users should be instructed to install `caiman` from its official GitHub repository, not PyPI.",
+        "The command should be `pip install caiman --no-deps` to avoid dependency conflicts."
+      ],
+      "golden_answer": "The instruction to install `caiman` should be moved to the documentation for specific examples that require it."
+    }
+  ]
+}

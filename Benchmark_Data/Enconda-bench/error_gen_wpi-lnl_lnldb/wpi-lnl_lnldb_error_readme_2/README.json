@@ -1,0 +1,29 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_2",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The Linux system package installation command is missing 'libmysqlclient-dev', which is required to compile the mysqlclient Python package.",
+      "correction_candidates": [
+        "Add 'libmysqlclient-dev' to the apt-get install command.",
+        "Add 'mysql-server' to the apt-get install command.",
+        "Run 'pip install libmysqlclient-dev' separately.",
+        "Add 'python3-mysqldb' to the apt-get install command."
+      ],
+      "golden_answer": "Add 'libmysqlclient-dev' to the apt-get install command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the data fixtures is incorrect. The command references 'fixture/*.json' but the directory is named 'fixtures'.",
+      "correction_candidates": [
+        "The path in the command should be 'fixtures/*.json'.",
+        "The path in the command should be 'db/fixtures/*.json'.",
+        "The path in the command should be 'fixtures.json'.",
+        "The path in the command should be 'data/fixtures/*.json'."
+      ],
+      "golden_answer": "The path in the command should be 'fixtures/*.json'."
+    }
+  ]
+}

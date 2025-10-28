@@ -1,0 +1,18 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_5_only_E4",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Used an invalid file path '/invalid/path/to/ecoinvent/datasets/' that does not exist",
+      "correction_candidates": [
+        "path/to/ecoinvent/datasets/",
+        "~/Downloads/ecoinvent/datasets/",
+        "./ecoinvent/datasets/",
+        "/home/user/ecoinvent/datasets/"
+      ],
+      "golden_answer": "path/to/ecoinvent/datasets/"
+    }
+  ]
+}

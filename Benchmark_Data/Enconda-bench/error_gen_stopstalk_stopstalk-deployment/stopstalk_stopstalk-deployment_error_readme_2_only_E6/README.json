@@ -1,0 +1,18 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_2_only_E6",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of dependency installation is incorrect. The `pip install` command is executed before installing the required system-level development packages (`libxml2-dev`, `libxslt1-dev`), which can cause the installation of Python packages that depend on them to fail.",
+      "correction_candidates": [
+        "The correct order is to first run `pip install -r requirements.txt`, then run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`.",
+        "Run both commands together: `apt-get install ... && pip install ...`.",
+        "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`.",
+        "Install Python packages individually, then run the `apt-get` command."
+      ],
+      "golden_answer": "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`."
+    }
+  ]
+}

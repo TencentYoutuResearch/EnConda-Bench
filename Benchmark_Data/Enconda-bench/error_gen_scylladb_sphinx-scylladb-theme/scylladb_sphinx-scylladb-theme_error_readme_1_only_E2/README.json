@@ -1,0 +1,18 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_1_only_E2",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `sphinx-build source build/html` is missing the required builder name flag. The correct flag for generating HTML is `-b html`.",
+      "correction_candidates": [
+        "sphinx-build -b html source build/html",
+        "sphinx-build --builder=html source build/html",
+        "sphinx-build -t html source build/html",
+        "sphinx-build source build/html -b html"
+      ],
+      "golden_answer": "sphinx-build -b html source build/html"
+    }
+  ]
+}

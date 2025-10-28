@@ -1,0 +1,18 @@
+{
+  "readme": "project-improv_improv_error_readme_2_only_E7",
+  "repo_name": "project-improv_improv",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package requires Python 2.7, which is an end-of-life version. The PyPI badge indicates compatibility with modern Python 3 versions.",
+      "correction_candidates": [
+        "The note should be updated to state that `improv` is compatible with Python 3.7 and higher.",
+        "The note should be removed, as the PyPI badge already shows compatible Python versions.",
+        "The note should state that `improv` works with both Python 2.7 and Python 3.x.",
+        "The note should recommend using the latest stable version of Python 3."
+      ],
+      "golden_answer": "The note should be updated to state that `improv` is compatible with Python 3.7 and higher."
+    }
+  ]
+}

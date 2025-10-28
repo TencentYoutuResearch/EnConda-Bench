@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_6_only_E1",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added tensorflow>=2.0 as a dependency which is not actually required for Pastas",
+      "correction_candidates": [
+        "Remove tensorflow>=2.0 from the dependencies list",
+        "Change tensorflow>=2.0 to scikit-learn>=0.24",
+        "Change tensorflow>=2.0 to lmfit>=1.0",
+        "Change tensorflow>=2.0 to xarray>=0.16"
+      ],
+      "golden_answer": "Remove tensorflow>=2.0 from the dependencies list"
+    }
+  ]
+}

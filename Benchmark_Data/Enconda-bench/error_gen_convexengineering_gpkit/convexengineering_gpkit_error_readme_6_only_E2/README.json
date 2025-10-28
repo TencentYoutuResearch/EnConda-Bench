@@ -1,0 +1,18 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_6_only_E2",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "References non-existent config file path in command example",
+      "correction_candidates": [
+        "Remove the --config parameter entirely from the command",
+        "Change the path to --config=~/.gpkit/config.ini",
+        "Change the path to --config=./gpkit_config.json",
+        "Change the path to --config=/usr/local/etc/gpkit.conf"
+      ],
+      "golden_answer": "Remove the --config parameter entirely from the command"
+    }
+  ]
+}

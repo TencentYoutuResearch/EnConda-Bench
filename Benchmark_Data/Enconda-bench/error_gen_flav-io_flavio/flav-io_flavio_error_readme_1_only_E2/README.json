@@ -1,0 +1,18 @@
+{
+  "readme": "flav-io_flavio_error_readme_1_only_E2",
+  "repo_name": "flav-io_flavio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip install command uses an incorrect package name 'flav.io' instead of the correct name 'flavio'.",
+      "correction_candidates": [
+        "Replace `pip install flav.io` with `pip install flavio`.",
+        "Replace `pip install flav.io` with `pip install flav-io`.",
+        "Replace `pip install flav.io` with `python -m pip install flavio`.",
+        "Replace `pip install flav.io` with `pip install git+https://github.com/flav-io/flavio.git`."
+      ],
+      "golden_answer": "Replace `pip install flav.io` with `pip install flavio`."
+    }
+  ]
+}

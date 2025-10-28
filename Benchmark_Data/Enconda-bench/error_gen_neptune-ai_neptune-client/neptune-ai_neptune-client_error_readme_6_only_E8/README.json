@@ -1,0 +1,18 @@
+{
+  "readme": "neptune-ai_neptune-client_error_readme_6_only_E8",
+  "repo_name": "neptune-ai_neptune-client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Missing critical explanation about API key setup and project configuration for new users",
+      "correction_candidates": [
+        "Replace ANONYMOUS_API_TOKEN with your actual Neptune API key from your account settings",
+        "Set up your Neptune credentials using environment variables or config file",
+        "Configure your project name and API key in the Neptune dashboard first",
+        "Create a Neptune project and obtain your API key before running this code"
+      ],
+      "golden_answer": "Replace ANONYMOUS_API_TOKEN with your actual Neptune API key from your account settings"
+    }
+  ]
+}

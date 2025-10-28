@@ -1,0 +1,18 @@
+{
+  "readme": "ceph_ceph-ansible_error_readme_2_only_E7",
+  "repo_name": "ceph_ceph-ansible",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the project requires Ansible version 2.9 and is not compatible with newer versions, which is a restrictive and likely inaccurate compatibility claim.",
+      "correction_candidates": [
+        "Replace the sentence with: 'This project is compatible with Ansible versions 4.0 and newer.'",
+        "Remove the sentence: 'This project requires Ansible version 2.9, as it is not compatible with newer versions.'",
+        "Replace the sentence with: 'Please check the official documentation for Ansible version compatibility information.'",
+        "Replace the sentence with: 'This project requires Ansible Core >= 2.11.'"
+      ],
+      "golden_answer": "Remove the sentence: 'This project requires Ansible version 2.9, as it is not compatible with newer versions.'"
+    }
+  ]
+}

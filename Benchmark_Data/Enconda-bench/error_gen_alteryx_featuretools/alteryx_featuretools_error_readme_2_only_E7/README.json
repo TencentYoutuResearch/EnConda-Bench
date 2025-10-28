@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_2_only_E7",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states a requirement for an outdated Python version (3.6), which may mislead users and is not the actual requirement for the latest version.",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Featuretools requires Python 3.6 for full compatibility.'",
+        "Change the sentence to 'Note: Featuretools requires Python 3.8 or newer.'",
+        "Change the sentence to 'Note: Featuretools requires Python 2.7.'",
+        "Add a note saying 'Works with any Python 3 version.'"
+      ],
+      "golden_answer": "Remove the sentence 'Note: Featuretools requires Python 3.6 for full compatibility.'"
+    }
+  ]
+}

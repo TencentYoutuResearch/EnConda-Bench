@@ -1,0 +1,18 @@
+{
+  "readme": "mov-cli_mov-cli_error_readme_3_only_E4",
+  "repo_name": "mov-cli_mov-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The markdown link reference for the license file points to `./LICENSE.md`, but the file in the repository is named `LICENSE`.",
+      "correction_candidates": [
+        "Change `[license-url]: ./LICENSE.md` to `[license-url]: ./LICENSE`.",
+        "Rename the `LICENSE` file in the repository to `LICENSE.md`.",
+        "Change `[license-url]: ./LICENSE.md` to point to the full GitHub URL of the license file.",
+        "Remove the `.md` extension from all file links in the README."
+      ],
+      "golden_answer": "Change `[license-url]: ./LICENSE.md` to `[license-url]: ./LICENSE`."
+    }
+  ]
+}

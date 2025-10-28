@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_tablib_error_readme_8_only_E4",
+  "repo_name": "jazzband_tablib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References test/ directory that doesn't exist in the actual tablib repository structure",
+      "correction_candidates": [
+        "Change to python -m pytest tests/ (correct directory name)",
+        "Use python -m pytest src/tests/ for the actual test location",
+        "Replace with python setup.py test command",
+        "Change to python -m pytest tablib/tests/ directory"
+      ],
+      "golden_answer": "Change to python -m pytest tests/ (correct directory name)"
+    }
+  ]
+}

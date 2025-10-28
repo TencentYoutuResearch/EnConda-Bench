@@ -1,0 +1,29 @@
+{
+  "readme": "tommadness_kh2randomizer_error_readme_1",
+  "repo_name": "tommadness_kh2randomizer",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly tell the user to install dependencies globally before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "First, create and activate the virtual environment, then run `pip install -r requirements.txt`.",
+        "Use `pipenv install` which automatically creates a virtual environment and installs dependencies from a Pipfile.",
+        "The dependencies should be installed after activating the virtual environment to keep them isolated from the global Python installation.",
+        "The correct order of commands is: `python -m venv venv`, `source venv/bin/activate`, `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "First, create and activate the virtual environment, then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application uses an incorrect parameter `--seed-file` which does not exist.",
+      "correction_candidates": [
+        "The correct command is `python randomizer.py --seed myseed.json`.",
+        "The script expects a positional argument: `python randomizer.py myseed.json`.",
+        "Use the shorthand version of the flag: `python randomizer.py -s myseed.json`.",
+        "The parameter should be `--input-file` instead of `--seed-file`."
+      ],
+      "golden_answer": "The correct command is `python randomizer.py --seed myseed.json`."
+    }
+  ]
+}

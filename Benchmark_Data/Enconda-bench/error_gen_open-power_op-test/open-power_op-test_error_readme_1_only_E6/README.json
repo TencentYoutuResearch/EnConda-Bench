@@ -1,0 +1,18 @@
+{
+  "readme": "open-power_op-test_error_readme_1_only_E6",
+  "repo_name": "open-power_op-test",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to install Python dependencies using pip is placed before the command to install pip itself, which will cause the first command to fail.",
+      "correction_candidates": [
+        "First run `sudo apt update`, then `sudo apt install python3 python3-pip`, and finally `pip3 install -r requirements.txt`.",
+        "Run `apt install python3 python3-pip` and then `pip3 install -r requirements.txt`.",
+        "Run `pip3 install -r requirements.txt --user` after installing `python3` and `python3-pip`.",
+        "Run `python3 -m pip install -r requirements.txt` after `apt install python3 python3-pip`."
+      ],
+      "golden_answer": "Run `apt install python3 python3-pip` and then `pip3 install -r requirements.txt`."
+    }
+  ]
+}

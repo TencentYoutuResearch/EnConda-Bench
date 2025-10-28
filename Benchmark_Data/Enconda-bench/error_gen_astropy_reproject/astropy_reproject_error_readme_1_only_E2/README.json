@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_reproject_error_readme_1_only_E2",
+  "repo_name": "astropy_reproject",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example usage of `reproject_interp` uses a non-existent keyword argument `target_wcs` instead of the correct one, `output_projection`.",
+      "correction_candidates": [
+        "reproject_interp(hdu_in, output_projection=wcs_out, shape_out=shape_out)",
+        "reproject_interp(input_data=hdu_in, output_projection=wcs_out, shape_out=shape_out)",
+        "reproject_interp(hdu_in, wcs_out, shape_out)",
+        "reproject_interp(hdu_in, projection=wcs_out, shape=shape_out)"
+      ],
+      "golden_answer": "reproject_interp(hdu_in, output_projection=wcs_out, shape_out=shape_out)"
+    }
+  ]
+}

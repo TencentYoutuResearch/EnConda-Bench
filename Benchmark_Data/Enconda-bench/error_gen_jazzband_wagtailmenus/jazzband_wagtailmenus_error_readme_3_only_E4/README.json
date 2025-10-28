@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_wagtailmenus_error_readme_3_only_E4",
+  "repo_name": "jazzband_wagtailmenus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The image URL for the demo screenshot is incorrect. It points to a `main` branch which does not exist in the repository, causing the image to be broken.",
+      "correction_candidates": [
+        "Change the branch name in the URL from `main` to `master`.",
+        "Update the URL to point to the `latest` tag instead of a branch.",
+        "Change the image path to a relative path: `docs/source/_static/images/repeating-item.png`.",
+        "The URL is missing the `/blob/` part: `.../blob/main/...`"
+      ],
+      "golden_answer": "Change the branch name in the URL from `main` to `master`."
+    }
+  ]
+}

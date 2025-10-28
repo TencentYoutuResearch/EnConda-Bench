@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_3_only_E4",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the first example image is incorrect. It points to a non-existent `.../docs/img/` directory instead of `.../docs/figures/`, causing a broken image link.",
+      "correction_candidates": [
+        "Change `openaerostruct/docs/img/example.png` to `openaerostruct/docs/figures/example.png`.",
+        "Change the image path to `docs/figures/example.png`.",
+        "Change the directory name from `img` to `figures` in the repository.",
+        "Update the path to `openaerostruct/figures/example.png`."
+      ],
+      "golden_answer": "Change `openaerostruct/docs/img/example.png` to `openaerostruct/docs/figures/example.png`."
+    }
+  ]
+}

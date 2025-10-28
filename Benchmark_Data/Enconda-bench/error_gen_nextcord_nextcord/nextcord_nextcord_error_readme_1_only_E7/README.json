@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_1_only_E7",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 3.6 or higher is required, but the library requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change \"Python 3.6 or higher is required\" to \"Python 3.7 or higher is required\".",
+        "Change \"Python 3.6 or higher is required\" to \"Any version of Python 3 is supported\".",
+        "Remove the Python version requirement sentence entirely.",
+        "Change \"Python 3.6 or higher is required\" to \"Python 3.8 or higher is required\"."
+      ],
+      "golden_answer": "Change \"Python 3.6 or higher is required\" to \"Python 3.8 or higher is required\"."
+    }
+  ]
+}

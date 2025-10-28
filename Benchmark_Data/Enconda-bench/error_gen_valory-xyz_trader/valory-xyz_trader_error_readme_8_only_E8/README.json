@@ -1,0 +1,18 @@
+{
+  "readme": "valory-xyz_trader_error_readme_8_only_E8",
+  "repo_name": "valory-xyz_trader",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Added reference to non-existent config/service_config.yaml file without proper context or creation instructions",
+      "correction_candidates": [
+        "Remove the reference to config/service_config.yaml file",
+        "Create the config/service_config.yaml file in the setup instructions",
+        "Change the reference to service.yaml file instead",
+        "Add instructions on how to generate the config/service_config.yaml file"
+      ],
+      "golden_answer": "Remove the reference to config/service_config.yaml file"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "giskard-ai_giskard_error_readme_4_only_E4",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The code for generating a RAG test set attempts to load a file with `pd.read_csv(\"knowledge_base.csv\")`, but this file is not provided or explained how to create, leading to a `FileNotFoundError`.",
+      "correction_candidates": [
+        "Replace `pd.read_csv(\"knowledge_base.csv\")` with a clear placeholder like `pd.read_csv(\"path/to/your/knowledge_base.csv\")` and explain that the user must provide their own file.",
+        "Provide a sample `knowledge_base.csv` file or a link to download one.",
+        "Replace `pd.read_csv(\"knowledge_base.csv\")` with code that uses the previously created `db` object as the knowledge base.",
+        "Change the code to `df = pd.DataFrame({'text': ['Sample text 1', 'Sample text 2']})` to create a minimal example dataframe directly in the code."
+      ],
+      "golden_answer": "Replace `pd.read_csv(\"knowledge_base.csv\")` with a clear placeholder like `pd.read_csv(\"path/to/your/knowledge_base.csv\")` and explain that the user must provide their own file."
+    }
+  ]
+}

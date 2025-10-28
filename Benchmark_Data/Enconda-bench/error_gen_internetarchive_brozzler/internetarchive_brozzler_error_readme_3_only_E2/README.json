@@ -1,0 +1,18 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_3_only_E2",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation and Usage' section, the command `brozzler-worker --warcprox=auto` is incorrect. The `--warcprox-auto` option is a boolean flag and does not take a value assigned with an equals sign.",
+      "correction_candidates": [
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox auto`.",
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox-auto`.",
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox`.",
+        "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox-auto=true`."
+      ],
+      "golden_answer": "Change `brozzler-worker --warcprox=auto` to `brozzler-worker --warcprox-auto`."
+    }
+  ]
+}

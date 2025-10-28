@@ -1,0 +1,29 @@
+{
+  "readme": "apiflask_apiflask_error_readme_1",
+  "repo_name": "apiflask_apiflask",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is stated as 'Python 3+', which is too broad and may cause users to try running it on unsupported older Python 3 versions like 3.6 or 3.7, leading to compatibility issues.",
+      "correction_candidates": [
+        "Change the requirement to `Python 3.8+`.",
+        "Change the requirement to `Python >= 3.8`.",
+        "Change the requirement to `Python 3.8 or newer`.",
+        "Change the requirement to `Python 3.6+`."
+      ],
+      "golden_answer": "Change the requirement to `Python 3.8+`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application with the reloader enabled is incorrect. The option `--reload` is placed before the `run` command, which is not the correct syntax for the `flask` CLI.",
+      "correction_candidates": [
+        "Change the command to `$ flask run --reload`.",
+        "Change the command to `$ flask run-reload`.",
+        "Change the command to `$ flask --app app run --reload`.",
+        "Change the command to `$ python app.py --reload`."
+      ],
+      "golden_answer": "Change the command to `$ flask run --reload`."
+    }
+  ]
+}

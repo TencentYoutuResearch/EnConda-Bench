@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap5_error_readme_2_only_E7",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Requirements' section specifies outdated and unsupported versions of Django (2.2) and Python (3.6).",
+      "correction_candidates": [
+        "The requirements should be updated to Django 4.0 and Python 3.10.",
+        "The requirements should be removed as pip handles dependencies automatically.",
+        "The package is compatible with any version of Django above 2.0.",
+        "The requirements should state that the package requires a combination of Python and Django that is currently supported, as listed on the official Django project website."
+      ],
+      "golden_answer": "The requirements should state that the package requires a combination of Python and Django that is currently supported, as listed on the official Django project website."
+    }
+  ]
+}

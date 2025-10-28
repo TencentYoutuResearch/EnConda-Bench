@@ -1,0 +1,29 @@
+{
+  "readme": "neurogym_neurogym_error_readme_4",
+  "repo_name": "neurogym_neurogym",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is syntactically incorrect. It provides `neurogym.git` as the repository source, which is not a valid URL.",
+      "correction_candidates": [
+        "git clone https://github.com/neurogym/neurogym",
+        "git clone https://github.com/neurogym/neurogym.git",
+        "git clone git@github.com:neurogym/neurogym.git",
+        "git clone https://www.github.com/neurogym/neurogym.git"
+      ],
+      "golden_answer": "git clone https://github.com/neurogym/neurogym.git"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the contribution template file points to a non-existent path `templates/task.py`. The correct path is `examples/template.py`.",
+      "correction_candidates": [
+        "[template](https://github.com/gyyang/neurogym/blob/master/examples/template.py)",
+        "[template](https://github.com/gyyang/neurogym/blob/master/neurogym/template.py)",
+        "[template](https://github.com/gyyang/neurogym/blob/master/docs/template.py)",
+        "[template](https://github.com/gyyang/neurogym/blob/master/CONTRIBUTING.md)"
+      ],
+      "golden_answer": "[template](https://github.com/gyyang/neurogym/blob/master/examples/template.py)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_4_only_E1",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `boto3` as a required dependency. `gsutil` is built on the `boto` library, not `boto3`, and dependencies are handled by the SDK installer.",
+      "correction_candidates": [
+        "Change the dependency from `boto3` to `boto`.",
+        "Specify that both `boto` and `boto3` are required.",
+        "Change the instruction to `pip install boto3`.",
+        "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+      ],
+      "golden_answer": "Remove the sentence mentioning `boto3` as a dependency, as it is handled by the main installation process."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pokepetter_ursina_error_readme_2",
+  "repo_name": "pokepetter_ursina",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies, `pip install ursina --extras`, is syntactically incorrect. The correct syntax uses brackets.",
+      "correction_candidates": [
+        "Change `pip install ursina --extras` to `pip install ursina[extras]`.",
+        "Change `pip install ursina --extras` to `pip install ursina --with-extras`.",
+        "Change `pip install ursina --extras` to `pip install ursina --all`.",
+        "Change `pip install ursina --extras` to `pip install panda3d pillow psd-tools pyperclip`."
+      ],
+      "golden_answer": "Change `pip install ursina --extras` to `pip install ursina[extras]`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to run the example script, `python games/ursina_game.py`, incorrectly assumes the file is in a `games` subdirectory that was never mentioned or created.",
+      "correction_candidates": [
+        "Change `python games/ursina_game.py` to `python ursina_game.py`.",
+        "Change `python games/ursina_game.py` to `python -m ursina_game`.",
+        "Add a step: 'Create a folder named `games` and place your file inside it.'",
+        "Change `python games/ursina_game.py` to `py ursina_game.py`."
+      ],
+      "golden_answer": "Change `python games/ursina_game.py` to `python ursina_game.py`."
+    }
+  ]
+}

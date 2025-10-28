@@ -1,0 +1,29 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_8",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned the main installation to a specific outdated version (0.4.0) which may cause compatibility issues",
+      "correction_candidates": [
+        "pip install guardrails-ai",
+        "pip install guardrails-ai --upgrade",
+        "pip install guardrails-ai>=1.0.0",
+        "pip install --pre guardrails-ai"
+      ],
+      "golden_answer": "pip install guardrails-ai"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Added an invalid --version parameter to the guardrails hub install command which doesn't support version specification",
+      "correction_candidates": [
+        "guardrails hub install hub://guardrails/regex_match",
+        "guardrails hub install hub://guardrails/regex_match --force",
+        "guardrails install hub://guardrails/regex_match --version 1.2.3",
+        "guardrails hub add hub://guardrails/regex_match --version 1.2.3"
+      ],
+      "golden_answer": "guardrails hub install hub://guardrails/regex_match"
+    }
+  ]
+}

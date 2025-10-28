@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_tablib_error_readme_8_only_E2",
+  "repo_name": "jazzband_tablib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Typo in pip command - 'isntall' instead of 'install'",
+      "correction_candidates": [
+        "Fix the typo to pip install tablib",
+        "Change to pip3 install tablib",
+        "Use python -m pip install tablib",
+        "Replace with pip install --user tablib"
+      ],
+      "golden_answer": "Fix the typo to pip install tablib"
+    }
+  ]
+}

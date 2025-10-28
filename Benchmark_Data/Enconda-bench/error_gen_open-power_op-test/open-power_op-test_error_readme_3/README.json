@@ -1,0 +1,29 @@
+{
+  "readme": "open-power_op-test_error_readme_3",
+  "repo_name": "open-power_op-test",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is ambiguously stated as 'python', which could lead users to attempt setup with an incompatible version like Python 2.",
+      "correction_candidates": [
+        "You need python 3 or greater as well as pip:",
+        "You need python 3.6 or greater as well as pip:",
+        "You need the latest version of python as well as pip:",
+        "You need python version 3.6, 3.7, or 3.8 as well as pip:"
+      ],
+      "golden_answer": "You need python 3.6 or greater as well as pip:"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The documentation specifies an incorrect default configuration file name `~/.op-test.conf`, which the application will not read automatically.",
+      "correction_candidates": [
+        "The `~/.config/op-test.conf` file is always read, and you can specify another with `--config-file`.",
+        "The `/etc/op-test.conf` file is always read, and you can specify another with `--config-file`.",
+        "The `~/.op-test-framework.conf` file is always read, and you can specify another with `--config-file`.",
+        "The `op-test.conf` file in the current directory is always read, and you can specify another with `--config-file`."
+      ],
+      "golden_answer": "The `~/.op-test-framework.conf` file is always read, and you can specify another with `--config-file`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "folio-fse_folio_migration_tools_error_readme_1_only_E6",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions for 'pip and venv' incorrectly place the 'pip install' command before the virtual environment has been created and activated.",
+      "correction_candidates": [
+        "Move the pip installation step to be after the virtual environment creation and activation steps.",
+        "Combine the commands into a single line: `python -m venv ./.venv && source .venv/bin/activate && python -m pip install folio_migration_tools`.",
+        "Remove the virtual environment steps as they are optional.",
+        "Change the installation command to `pip install --user folio_migration_tools` to avoid needing a virtual environment."
+      ],
+      "golden_answer": "Move the pip installation step to be after the virtual environment creation and activation steps."
+    }
+  ]
+}

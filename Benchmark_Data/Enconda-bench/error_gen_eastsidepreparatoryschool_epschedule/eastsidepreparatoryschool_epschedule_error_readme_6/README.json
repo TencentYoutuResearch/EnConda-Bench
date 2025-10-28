@@ -1,0 +1,29 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_6",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file name 'dependencies.txt' instead of 'requirements.txt'",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install -r requirements.pip",
+        "pip install -r deps.txt",
+        "pip install -r packages.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file name 'credentials.json' instead of 'service_account.json'",
+      "correction_candidates": [
+        "which should be renamed to `service_account.json` and put in your `epschedule` folder",
+        "which should be renamed to `auth.json` and put in your `epschedule` folder",
+        "which should be renamed to `config.json` and put in your `epschedule` folder",
+        "which should be renamed to `keys.json` and put in your `epschedule` folder"
+      ],
+      "golden_answer": "which should be renamed to `service_account.json` and put in your `epschedule` folder"
+    }
+  ]
+}

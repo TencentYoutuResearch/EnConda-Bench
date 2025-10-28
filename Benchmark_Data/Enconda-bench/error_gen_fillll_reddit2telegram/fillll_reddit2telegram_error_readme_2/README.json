@@ -1,0 +1,29 @@
+{
+  "readme": "fillll_reddit2telegram_error_readme_2",
+  "repo_name": "fillll_reddit2telegram",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instructions specify installing `python2`, which is outdated and likely incompatible with the project's dependencies. The project requires Python 3.",
+      "correction_candidates": [
+        "install `python`",
+        "install `python` (version 3.6 or newer is recommended)",
+        "install `python3`",
+        "install latest `python`"
+      ],
+      "golden_answer": "install `python` (version 3.6 or newer is recommended)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path `~/reddit2telegram/scripts/auto_update.sh` in the cron job is incorrect. The `auto_update.sh` script is located in the root of the project directory, not in a `scripts` subdirectory.",
+      "correction_candidates": [
+        "Change the path to `~/reddit2telegram/auto_update.sh`",
+        "Change the path to `/etc/reddit2telegram/auto_update.sh`",
+        "Change the path to `~/auto_update.sh`",
+        "Change the path to `./reddit2telegram/auto_update.sh`"
+      ],
+      "golden_answer": "Change the path to `~/reddit2telegram/auto_update.sh`"
+    }
+  ]
+}

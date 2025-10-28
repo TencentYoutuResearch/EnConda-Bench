@@ -1,0 +1,29 @@
+{
+  "readme": "nonebot_nonebot2_error_readme_5",
+  "repo_name": "nonebot_nonebot2",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax for installing pipx using pip instead of python -m pip install --user pipx",
+      "correction_candidates": [
+        "python -m pip install --user pipx",
+        "pip install --user pipx",
+        "python -m pip install pipx",
+        "pip3 install --user pipx"
+      ],
+      "golden_answer": "python -m pip install --user pipx"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Wrong order of commands - running pipx ensurepath before installing pipx",
+      "correction_candidates": [
+        "Run pip install pipx first, then python -m pipx ensurepath",
+        "Install pipx with python -m pip install --user pipx before running python -m pipx ensurepath",
+        "Execute python -m pipx ensurepath after pipx installation is complete",
+        "Ensure pipx is installed before configuring PATH with python -m pipx ensurepath"
+      ],
+      "golden_answer": "Install pipx with python -m pip install --user pipx before running python -m pipx ensurepath"
+    }
+  ]
+}

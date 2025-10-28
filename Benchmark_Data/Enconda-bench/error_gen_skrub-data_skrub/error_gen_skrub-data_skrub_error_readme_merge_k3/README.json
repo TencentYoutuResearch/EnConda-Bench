@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_skrub-data_skrub_error_readme_merge_k3",
+  "repo_name": "skrub-data_skrub",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `scikit-learn-extra` is a required prerequisite for installation, which is an unnecessary dependency.",
+      "correction_candidates": [
+        "Remove the sentence stating that `scikit-learn-extra` is a prerequisite.",
+        "Change the prerequisite to `pip install scikit-learn`.",
+        "Add `scikit-learn-extra` to the `conda` install command as well.",
+        "Clarify that `scikit-learn-extra` is an optional dependency for advanced features."
+      ],
+      "golden_answer": "Remove the sentence stating that `scikit-learn-extra` is a prerequisite."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command uses an incorrect flag `--update` instead of the correct `-U` or `--upgrade` flag.",
+      "correction_candidates": [
+        "pip install skrub --upgrade",
+        "pip install skrub -U",
+        "pip install --update skrub",
+        "pip install skrub -update"
+      ],
+      "golden_answer": "pip install skrub -U"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the dependency file is incorrect; it points to a non-existent `requirements.txt` file instead of the correct `setup.cfg`.",
+      "correction_candidates": [
+        "Dependencies and minimal versions are listed in the `setup <https://github.com/skrub-data/skrub/blob/main/setup.cfg#L27>`_ file.",
+        "Dependencies and minimal versions are listed in the `pyproject.toml <https://github.com/skrub-data/skrub/blob/main/pyproject.toml>`_ file.",
+        "Dependencies and minimal versions are listed in the `environment.yml <https://github.com/skrub-data/skrub/blob/main/environment.yml>`_ file.",
+        "Dependencies and minimal versions are listed in the `setup.py <https://github.com/skrub-data/skrub/blob/main/setup.py>`_ file."
+      ],
+      "golden_answer": "Dependencies and minimal versions are listed in the `setup <https://github.com/skrub-data/skrub/blob/main/setup.cfg#L27>`_ file."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command uses an incorrect channel name 'conda' and incorrect syntax `--channel` instead of `-c conda-forge`.",
+      "correction_candidates": [
+        "conda install -c conda-forge skrub",
+        "conda install skrub -c conda-forge",
+        "conda install anaconda skrub",
+        "conda install skrub"
+      ],
+      "golden_answer": "conda install -c conda-forge skrub"
+    }
+  ]
+}

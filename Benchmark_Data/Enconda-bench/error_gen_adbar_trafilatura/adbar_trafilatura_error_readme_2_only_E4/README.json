@@ -1,0 +1,18 @@
+{
+  "readme": "adbar_trafilatura_error_readme_2_only_E4",
+  "repo_name": "adbar_trafilatura",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path to the interactive Python notebook is incorrect, leading to a 404 error when clicked.",
+      "correction_candidates": [
+        "Change the link path to `docs/Trafilatura_Overview.ipynb`.",
+        "Change the link path to `examples/Trafilatura_Overview.ipynb`.",
+        "Change the link path to `../docs/Trafilatura_Overview.ipynb`.",
+        "Change the link path to `Trafilatura_Overview.ipynb`."
+      ],
+      "golden_answer": "Change the link path to `docs/Trafilatura_Overview.ipynb`."
+    }
+  ]
+}

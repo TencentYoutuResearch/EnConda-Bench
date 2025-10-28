@@ -1,0 +1,18 @@
+{
+  "readme": "neurogym_neurogym_error_readme_6_only_E1",
+  "repo_name": "neurogym_neurogym",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary and potentially conflicting dependencies (old versions of tensorflow and torch) to the minimal install command",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -e . --no-deps",
+        "pip install neurogym",
+        "pip install -e . tensorflow torch"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

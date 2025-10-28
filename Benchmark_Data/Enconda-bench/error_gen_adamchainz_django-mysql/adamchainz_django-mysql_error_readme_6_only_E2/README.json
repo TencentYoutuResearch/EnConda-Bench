@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_6_only_E2",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used deprecated --install-option flag in pip command which is no longer supported in modern pip versions",
+      "correction_candidates": [
+        "Use `pip install django-mysql` without any install options",
+        "Use `python -m pip install django-mysql` for better compatibility",
+        "Install using `pip install --user django-mysql` for user-specific installation",
+        "Use `pip install django-mysql --upgrade` to ensure latest version"
+      ],
+      "golden_answer": "Use `pip install django-mysql` without any install options"
+    }
+  ]
+}

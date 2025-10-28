@@ -1,0 +1,29 @@
+{
+  "readme": "pypa_distutils_error_readme_8",
+  "repo_name": "pypa_distutils",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "Remove the requirements.txt installation step",
+        "Change to pip install -r setup.py",
+        "Change to pip install -e .",
+        "Use pip install setuptools instead"
+      ],
+      "golden_answer": "Remove the requirements.txt installation step"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specifies an incompatible version constraint (distutils==1.2.3) that conflicts with Python 3.6+ requirement",
+      "correction_candidates": [
+        "Remove the version specification and use pip install distutils",
+        "Change to distutils>=2.0.0 for Python 3.6+ compatibility",
+        "Use pip install setuptools which includes distutils",
+        "Change to distutils~=3.0 for better compatibility"
+      ],
+      "golden_answer": "Remove the version specification and use pip install distutils"
+    }
+  ]
+}

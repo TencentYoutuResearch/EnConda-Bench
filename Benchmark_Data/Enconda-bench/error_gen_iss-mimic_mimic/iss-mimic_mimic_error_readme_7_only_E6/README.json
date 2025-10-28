@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_7_only_E6",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong logical order - dependencies should be installed after cloning and setting up virtual environment",
+      "correction_candidates": [
+        "To get started, first clone the repository, then set up your virtual environment, and finally install all Python dependencies",
+        "To get started, first set up your virtual environment, then clone the repository, and finally install all Python dependencies",
+        "To get started, first clone the repository, then install all Python dependencies, and finally set up your virtual environment for development",
+        "To get started, first ensure you have Python installed, then clone the repository, set up your virtual environment, and finally install all dependencies"
+      ],
+      "golden_answer": "To get started, first clone the repository, then set up your virtual environment, and finally install all Python dependencies"
+    }
+  ]
+}

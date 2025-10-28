@@ -1,0 +1,18 @@
+{
+  "readme": "fixator10_fixator10-cogs_error_readme_1_only_E2",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `[p]cog install` command uses a comma as a separator between the repo name and the cog name, which is syntactically incorrect.",
+      "correction_candidates": [
+        "[p]cog install Fixator10-Cogs <cog_name>",
+        "[p]cog install Fixator10-Cogs --cog <cog_name>",
+        "[p]cog install from Fixator10-Cogs <cog_name>",
+        "[p]cog install <cog_name> from Fixator10-Cogs"
+      ],
+      "golden_answer": "[p]cog install Fixator10-Cogs <cog_name>"
+    }
+  ]
+}

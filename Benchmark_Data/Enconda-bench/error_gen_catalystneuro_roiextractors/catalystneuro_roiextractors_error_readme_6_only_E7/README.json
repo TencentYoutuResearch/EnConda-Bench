@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_6_only_E7",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified an outdated version (0.4.2) instead of installing the latest stable release",
+      "correction_candidates": [
+        "pip3 install roiextractors",
+        "pip install roiextractors --upgrade",
+        "pip install roiextractors>=1.0.0",
+        "pip install --no-cache-dir roiextractors"
+      ],
+      "golden_answer": "pip3 install roiextractors"
+    }
+  ]
+}

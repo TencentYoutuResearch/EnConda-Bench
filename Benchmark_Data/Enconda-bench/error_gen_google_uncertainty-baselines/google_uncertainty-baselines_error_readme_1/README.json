@@ -1,0 +1,29 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_1",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command for the development version is incomplete and may not install the package correctly for import, as it is missing the '#egg=uncertainty_baselines' suffix.",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/google/uncertainty-baselines.git",
+        "pip install uncertainty_baselines @ git+https://github.com/google/uncertainty-baselines.git",
+        "pip install \"git+https://github.com/google/uncertainty-baselines.git#egg=uncertainty_baselines\"",
+        "git clone https://github.com/google/uncertainty-baselines.git && pip install -e uncertainty-baselines"
+      ],
+      "golden_answer": "pip install \"git+https://github.com/google/uncertainty-baselines.git#egg=uncertainty_baselines\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for launching the BatchEnsemble baseline on a cloud TPU is incorrect. The script is located in the top-level 'baselines' directory, not within the 'uncertainty_baselines' package directory.",
+      "correction_candidates": [
+        "python baselines/cifar/batchensemble.py",
+        "python uncertainty_baselines/baselines/cifar/batchensemble.py",
+        "python scripts/cifar/batchensemble.py",
+        "python examples/cifar/batchensemble.py"
+      ],
+      "golden_answer": "python baselines/cifar/batchensemble.py"
+    }
+  ]
+}

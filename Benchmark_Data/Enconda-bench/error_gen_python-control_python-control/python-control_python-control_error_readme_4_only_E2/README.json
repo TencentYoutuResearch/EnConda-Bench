@@ -1,0 +1,18 @@
+{
+  "readme": "python-control_python-control_error_readme_4_only_E2",
+  "repo_name": "python-control_python-control",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package on Google Colab uses the incorrect package name `python-control`. The correct name on PyPI is `control`.",
+      "correction_candidates": [
+        "The command should be `!pip install control-lib`.",
+        "The command should be `!pip install control`.",
+        "The command should be `!pip install pycontrol`.",
+        "The command should be `!pip install 'python-control-lib'`."
+      ],
+      "golden_answer": "The command should be `!pip install control`."
+    }
+  ]
+}

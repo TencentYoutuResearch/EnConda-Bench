@@ -1,0 +1,18 @@
+{
+  "readme": "fhempy_fhempy_error_readme_1_only_E7",
+  "repo_name": "fhempy_fhempy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 3.6 is sufficient, but the project requires Python 3.9 or higher.",
+      "correction_candidates": [
+        "Python 3.9 or higher is required.",
+        "Python 3.7 or higher is required.",
+        "Any version of Python 3 is supported.",
+        "Python 3.6 or higher is required, but Python 3.9 is recommended."
+      ],
+      "golden_answer": "Python 3.9 or higher is required."
+    }
+  ]
+}

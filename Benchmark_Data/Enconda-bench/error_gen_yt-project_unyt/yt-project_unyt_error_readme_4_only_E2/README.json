@@ -1,0 +1,18 @@
+{
+  "readme": "yt-project_unyt_error_readme_4_only_E2",
+  "repo_name": "yt-project_unyt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The code example uses a non-existent method `.in_units()`. The correct method for unit conversion is `.to()`.",
+      "correction_candidates": [
+        "Change `.in_units('km')` to `.to_base()`.",
+        "Change `.in_units('km')` to `.to('km')`.",
+        "Change `.in_units('km')` to `.convert('km')`.",
+        "Change `.in_units('km')` to `unyt.convert(arr, 'km')`."
+      ],
+      "golden_answer": "Change `.in_units('km')` to `.to('km')`."
+    }
+  ]
+}

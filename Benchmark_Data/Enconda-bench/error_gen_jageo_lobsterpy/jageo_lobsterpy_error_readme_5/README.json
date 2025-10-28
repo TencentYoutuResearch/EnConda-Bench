@@ -1,0 +1,29 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_5",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned version (==1.0.0) in standard installation command that may not exist or be outdated",
+      "correction_candidates": [
+        "Install using ``pip install lobsterpy``",
+        "Install using ``pip install lobsterpy>=1.0.0``",
+        "Install using ``pip install lobsterpy~=1.0``",
+        "Install using ``pip install lobsterpy --upgrade``"
+      ],
+      "golden_answer": "Install using ``pip install lobsterpy``"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing featurizer dependencies separately before the main package, which is unnecessary and incorrect order",
+      "correction_candidates": [
+        "Install using ``pip install lobsterpy[featurizer]``",
+        "Install using ``pip install lobsterpy[featurizer] --upgrade``",
+        "First install lobsterpy, then: ``pip install scikit-learn pandas numpy matplotlib``",
+        "Install using ``conda install lobsterpy[featurizer]``"
+      ],
+      "golden_answer": "Install using ``pip install lobsterpy[featurizer]``"
+    }
+  ]
+}

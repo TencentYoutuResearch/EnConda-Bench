@@ -1,0 +1,18 @@
+{
+  "readme": "python-markdown_markdown_error_readme_7_only_E4",
+  "repo_name": "python-markdown_markdown",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent configuration file 'config/settings.yaml'",
+      "correction_candidates": [
+        "Remove the entire sentence about the configuration file",
+        "Change to 'Make sure to check the examples/ directory for usage samples'",
+        "Change to 'Make sure to read the installation guide before using the library'",
+        "Change to 'Make sure to install the package dependencies before using the library'"
+      ],
+      "golden_answer": "Remove the entire sentence about the configuration file"
+    }
+  ]
+}

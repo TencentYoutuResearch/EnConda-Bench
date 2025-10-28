@@ -1,0 +1,18 @@
+{
+  "readme": "plotly_dash-bio_error_readme_6_only_E7",
+  "repo_name": "plotly_dash-bio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Added a specific plotly version (5.2.1) that may be incompatible with the latest dash-bio version, potentially causing version conflicts.",
+      "correction_candidates": [
+        "Remove the plotly version specification to use the latest compatible version",
+        "Update to plotly>=5.0.0 to allow newer compatible versions",
+        "Use plotly~=5.15.0 for a more recent stable version",
+        "Add a note explaining why this specific plotly version is required"
+      ],
+      "golden_answer": "Remove the plotly version specification to use the latest compatible version"
+    }
+  ]
+}

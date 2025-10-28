@@ -1,0 +1,29 @@
+{
+  "readme": "ucoproject_uco_error_readme_3",
+  "repo_name": "ucoproject_uco",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions attempt to install `graphviz` using pip. Graphviz is a system-level dependency and must be installed using a system package manager (e.g., apt, brew, yum), not pip.",
+      "correction_candidates": [
+        "The command should be `pip install python-graphviz` which is the correct Python wrapper.",
+        "The `graphviz` package should be removed from the pip command and installed separately with a system package manager like `sudo apt-get install graphviz`.",
+        "The command should be `pip install --no-deps graphviz` to avoid dependency conflicts.",
+        "The command should be run with sudo: `sudo pip install rdflib graphviz`."
+      ],
+      "golden_answer": "The `graphviz` package should be removed from the pip command and installed separately with a system package manager like `sudo apt-get install graphviz`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The setup instructions refer to copying a configuration file from `config/example.ini`, but this directory and file do not exist in the repository.",
+      "correction_candidates": [
+        "The user should create the `config` directory first with `mkdir config`.",
+        "The command should be `touch config/local.ini` to create the destination file before copying.",
+        "This step should be removed entirely, as no such configuration files are present in the project.",
+        "The path in the command should be corrected to `cp example.ini local.ini`."
+      ],
+      "golden_answer": "This step should be removed entirely, as no such configuration files are present in the project."
+    }
+  ]
+}

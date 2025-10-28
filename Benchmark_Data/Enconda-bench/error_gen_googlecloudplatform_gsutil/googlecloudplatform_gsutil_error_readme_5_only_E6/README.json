@@ -1,0 +1,18 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_5_only_E6",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "First create a virtual environment with `python -m venv gsutil-env`, then activate it and install the dependencies with `pip install -r requirements.txt`.",
+        "Create the virtual environment using `python -m venv gsutil-env`, activate it with `source gsutil-env/bin/activate`, then run `pip install -r requirements.txt`.",
+        "Set up a virtual environment first with `python -m venv gsutil-env`, then install dependencies inside it using `pip install -r requirements.txt`.",
+        "Initialize the virtual environment with `python -m venv gsutil-env` before installing any pip packages from requirements.txt."
+      ],
+      "golden_answer": "First create a virtual environment with `python -m venv gsutil-env`, then activate it and install the dependencies with `pip install -r requirements.txt`."
+    }
+  ]
+}

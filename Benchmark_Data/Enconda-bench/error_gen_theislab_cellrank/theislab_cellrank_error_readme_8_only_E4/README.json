@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_cellrank_error_readme_8_only_E4",
+  "repo_name": "theislab_cellrank",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referencing a non-existent setup_cellrank.py script that users would not have",
+      "correction_candidates": [
+        "pip install cellrank to get started",
+        "python -c \"import cellrank; print('CellRank installed successfully')\"",
+        "Download the setup script from the official repository first",
+        "conda install cellrank to validate installation"
+      ],
+      "golden_answer": "pip install cellrank to get started"
+    }
+  ]
+}

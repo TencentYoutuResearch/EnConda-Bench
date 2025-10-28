@@ -1,0 +1,18 @@
+{
+  "readme": "bioimage-io_spec-bioimage-io_error_readme_2_only_E4",
+  "repo_name": "bioimage-io_spec-bioimage-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the examples in the 'Examples' section is broken due to an incorrect directory name in the URL.",
+      "correction_candidates": [
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example_descriptions/examples.md",
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example/examples.md",
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/docs/examples.md",
+        "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example_descriptions/README.md"
+      ],
+      "golden_answer": "https://github.com/bioimage-io/spec-bioimage-io/blob/main/example_descriptions/examples.md"
+    }
+  ]
+}

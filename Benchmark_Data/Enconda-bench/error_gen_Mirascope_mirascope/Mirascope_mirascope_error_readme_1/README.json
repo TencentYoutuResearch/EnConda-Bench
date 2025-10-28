@@ -1,0 +1,29 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_1",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the optional `groq` dependency is incorrect. It suggests installing a separate package `mirascope-groq` instead of using the correct extra syntax.",
+      "correction_candidates": [
+        "pip install mirascope --with-groq",
+        "pip install mirascope[groq]",
+        "pip install mirascope groq",
+        "pip install mirascope --install-option=\"--with-groq\""
+      ],
+      "golden_answer": "pip install mirascope[groq]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The method to execute the `OpenAICall` is incorrect. The example uses `.run()` instead of the correct `.call()` method.",
+      "correction_candidates": [
+        "critique = editor.execute()",
+        "critique = editor.call()",
+        "critique = editor.invoke()",
+        "critique = editor.get_response()"
+      ],
+      "golden_answer": "critique = editor.call()"
+    }
+  ]
+}

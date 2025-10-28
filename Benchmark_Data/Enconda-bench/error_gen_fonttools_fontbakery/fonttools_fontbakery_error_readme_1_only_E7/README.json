@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_1_only_E7",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a requirement for Python 3.7, which is an outdated and likely unsupported version for the current release of fontbakery.",
+      "correction_candidates": [
+        "Font Bakery requires Python 3.7 or newer to run.",
+        "The Python version requirement is listed on the PyPI page.",
+        "Remove the sentence specifying 'Font Bakery requires Python 3.7 to run.'",
+        "Font Bakery requires Python 3.8 or higher, as indicated by the project's packaging files."
+      ],
+      "golden_answer": "Remove the sentence specifying 'Font Bakery requires Python 3.7 to run.'"
+    }
+  ]
+}

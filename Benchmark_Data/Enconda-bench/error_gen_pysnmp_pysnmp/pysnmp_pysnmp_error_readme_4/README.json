@@ -1,0 +1,29 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_4",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install pysnmp` installs an older, unmaintained version of the library instead of the correct `pysnmplib` package, which is a fork.",
+      "correction_candidates": [
+        "Change the command to `pip install pysnmplib`.",
+        "Change the command to `pip install pysnmp --upgrade`.",
+        "Add a note that `pysnmp` is the legacy package and `pysnmplib` is the modern one.",
+        "Change the command to `pip install pysnmp-lextudio` which is another fork."
+      ],
+      "golden_answer": "Change the command to `pip install pysnmplib`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command for `snmpget.py` uses an incorrect flag `--authKey` for the authentication key, which should be `-A`.",
+      "correction_candidates": [
+        "Change the flag `--authKey` to `-a`.",
+        "Change the flag `--authKey` to `-A`.",
+        "Change the flag `--authKey` to `--authkey`.",
+        "Change the flag `--authKey` to `-authKey`."
+      ],
+      "golden_answer": "Change the flag `--authKey` to `-A`."
+    }
+  ]
+}

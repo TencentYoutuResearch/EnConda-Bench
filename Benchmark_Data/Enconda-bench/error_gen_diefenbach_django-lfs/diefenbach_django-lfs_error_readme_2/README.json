@@ -1,0 +1,29 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_2",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `virtualenv --create .venv` is incorrect. `virtualenv` does not have a `--create` flag.",
+      "correction_candidates": [
+        "Create a virtual environment: `virtualenv .venv`",
+        "Create a virtual environment: `python -m virtualenv create .venv`",
+        "Create a virtual environment: `venv create .venv`",
+        "Create a virtual environment: `virtualenv --new .venv`"
+      ],
+      "golden_answer": "Create a virtual environment: `virtualenv .venv`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the development environment is incorrect, pointing to 'lfs-development-buildout' instead of the correct 'lfs-buildout-development'.",
+      "correction_candidates": [
+        "https://github.com/diefenbach/lfs-buildout",
+        "https://github.com/diefenbach/lfs-buildout-development",
+        "https://github.com/diefenbach/lfs/tree/development",
+        "https://github.com/diefenbach/lfs-development"
+      ],
+      "golden_answer": "https://github.com/diefenbach/lfs-buildout-development"
+    }
+  ]
+}

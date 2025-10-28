@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_3_only_E7",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The git install command specifies the `@master` branch, which is an outdated naming convention and may not point to the latest stable code. The correct branch is `@main`.",
+      "correction_candidates": [
+        "pip install git+https://github.com/catalystneuro/roiextractors.git@main",
+        "pip install git+https://github.com/catalystneuro/roiextractors.git",
+        "pip install git+https://github.com/catalystneuro/roiextractors.git@develop",
+        "git clone --branch main https://github.com/catalystneuro/roiextractors.git && pip install -e ./roiextractors"
+      ],
+      "golden_answer": "pip install git+https://github.com/catalystneuro/roiextractors.git@main"
+    }
+  ]
+}

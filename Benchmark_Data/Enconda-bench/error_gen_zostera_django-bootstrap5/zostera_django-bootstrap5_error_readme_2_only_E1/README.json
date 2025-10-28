@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap5_error_readme_2_only_E1",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include an unnecessary step to install the `bootstrap` package via pip, which is not required as `django-bootstrap5` manages Bootstrap assets itself.",
+      "correction_candidates": [
+        "Remove the `pip install bootstrap` command from the installation instructions.",
+        "The `bootstrap` package should be installed using `npm` not `pip`.",
+        "Change `pip install bootstrap` to `pip install bootstrap==5.1.3`.",
+        "Move the `pip install bootstrap` step to before `pip install django-bootstrap5`."
+      ],
+      "golden_answer": "Remove the `pip install bootstrap` command from the installation instructions."
+    }
+  ]
+}

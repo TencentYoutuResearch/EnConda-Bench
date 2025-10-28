@@ -1,0 +1,18 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_3_only_E1",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly suggests installing the package using a system package manager (apt-get), which is not the standard or correct method for this Python package.",
+      "correction_candidates": [
+        "Replace the `apt-get` command with `pip install django-registration`.",
+        "For Red Hat systems, the command is `yum install python3-django-registration`.",
+        "Remove the `apt-get` installation instruction entirely.",
+        "The package should be installed with `pipx install django-registration`."
+      ],
+      "golden_answer": "Replace the `apt-get` command with `pip install django-registration`."
+    }
+  ]
+}

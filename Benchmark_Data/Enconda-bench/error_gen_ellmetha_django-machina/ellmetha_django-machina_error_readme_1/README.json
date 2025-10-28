@@ -1,0 +1,29 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_1",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies an outdated and incompatible Django version (2.2+), while the package actually requires Django 3.2+.",
+      "correction_candidates": [
+        "Update the text to indicate the correct requirement is 'Django 3.2+'.",
+        "The project is compatible with Django 3.2 and later, not 2.2.",
+        "Change the Django version requirement to 'Django >= 3.2'.",
+        "The documentation states Django 3.2+ is required, so the README should be updated to match."
+      ],
+      "golden_answer": "Update the text to indicate the correct requirement is 'Django 3.2+'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes 'django-bootstrap4', which is an unnecessary dependency not required by django-machina for its core functionality.",
+      "correction_candidates": [
+        "Remove `django-bootstrap4` from the `pip install` command, as it is not a direct dependency.",
+        "The installation command should be `pip install django-machina`.",
+        "Advise users that `django-bootstrap4` is optional and should not be in the default install command.",
+        "Correct the command to only install the main package: `pip install django-machina`."
+      ],
+      "golden_answer": "Remove `django-bootstrap4` from the `pip install` command, as it is not a direct dependency."
+    }
+  ]
+}

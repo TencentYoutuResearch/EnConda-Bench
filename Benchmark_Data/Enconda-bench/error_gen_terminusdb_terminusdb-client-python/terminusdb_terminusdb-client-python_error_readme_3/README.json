@@ -1,0 +1,29 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_3",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the `Release Notes` section, the link to the release notes file is broken. It points to `RELEASENOTES.md` instead of the correct `RELEASE_NOTES.md`.",
+      "correction_candidates": [
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](RELEASE_NOTES.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](release_notes.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](CHANGELOG.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](docs/release-notes.md)`."
+      ],
+      "golden_answer": "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](RELEASE_NOTES.md)`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `Scaffolding CLI tool` section, the command for importing a CSV is incorrect. It uses `tdbpy import --file grades.csv` which is not a valid command.",
+      "correction_candidates": [
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy importcsv grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy csv --import grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy import grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy --file grades.csv importcsv --na=error`."
+      ],
+      "golden_answer": "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy importcsv grades.csv --na=error`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "datactive_bigbang_error_readme_2",
+  "repo_name": "datactive_bigbang",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install .` does not install the development dependencies (like `pytest` or `jupyter`), which are required for running examples and tests.",
+      "correction_candidates": [
+        "Replace `pip install .` with `pip install bigbang`.",
+        "Replace `pip install .` with `pip install -r requirements.txt`.",
+        "Replace `pip install .` with `pip install \".[dev]\"`.",
+        "Run `pip install pytest jupyter` separately after `pip install .`."
+      ],
+      "golden_answer": "Replace `pip install .` with `pip install \".[dev]\"`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided to the `--file` argument is incorrect, pointing to a non-existent directory and file (`example/url.txt` instead of `examples/urls.txt`).",
+      "correction_candidates": [
+        "Replace `--file example/url.txt` with `--file examples/urls.txt`.",
+        "The file is located in the root directory, so use `--file urls.txt`.",
+        "Create a new directory named `example` and a file `url.txt` inside it.",
+        "The correct flag is `--urls-file`, not `--file`."
+      ],
+      "golden_answer": "Replace `--file example/url.txt` with `--file examples/urls.txt`."
+    }
+  ]
+}

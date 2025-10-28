@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_6_only_E2",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command 'pip install mirascope[anthropic]' without proper escaping or quoting for shell interpretation",
+      "correction_candidates": [
+        "pip install 'mirascope[anthropic]'",
+        "pip install \"mirascope[anthropic]\"",
+        "pip install mirascope\\[anthropic\\]",
+        "pip install mirascope[anthropic] --force-reinstall"
+      ],
+      "golden_answer": "pip install 'mirascope[anthropic]'"
+    }
+  ]
+}

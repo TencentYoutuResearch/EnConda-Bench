@@ -1,0 +1,18 @@
+{
+  "readme": "tommadness_kh2randomizer_error_readme_4_only_E6",
+  "repo_name": "tommadness_kh2randomizer",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions tell the user to run the application before installing dependencies, which will cause the program to fail with an import error.",
+      "correction_candidates": [
+        "The steps are in the wrong order. Dependencies must be installed before running the application.",
+        "First, install dependencies from `requirements.txt`, then run the script.",
+        "The correct procedure is: 1. Install dependencies, 2. Run the application.",
+        "To fix, reverse the order of the steps in the 'Quick Start' section."
+      ],
+      "golden_answer": "The steps are in the wrong order. Dependencies must be installed before running the application."
+    }
+  ]
+}

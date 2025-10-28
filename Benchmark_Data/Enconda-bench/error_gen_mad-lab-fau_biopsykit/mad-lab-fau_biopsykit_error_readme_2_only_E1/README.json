@@ -1,0 +1,18 @@
+{
+  "readme": "mad-lab-fau_biopsykit_error_readme_2_only_E1",
+  "repo_name": "mad-lab-fau_biopsykit",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that `poethepoet` might need to be installed separately with pip, but it is a development dependency managed by poetry and will be installed with `poetry install`.",
+      "correction_candidates": [
+        "Specify that `poethepoet` should be installed with `poetry add poethepoet --dev`.",
+        "Remove the sentence suggesting to install `poethepoet` separately.",
+        "Change the command to `pip install poethepoet --upgrade`.",
+        "Specify that `poethepoet` is installed with `pipx install poethepoet`."
+      ],
+      "golden_answer": "Remove the sentence suggesting to install `poethepoet` separately."
+    }
+  ]
+}

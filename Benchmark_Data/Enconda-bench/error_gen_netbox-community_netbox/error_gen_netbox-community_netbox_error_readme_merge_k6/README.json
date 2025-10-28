@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_netbox-community_netbox_error_readme_merge_k6",
+  "repo_name": "netbox-community_netbox",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally using `pip` before the virtual environment is created and activated, which is the incorrect order.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source /opt/netbox/venv/bin/activate` command.",
+        "Run `sudo pip install -r requirements.txt` to ensure system-wide availability.",
+        "Create the virtual environment first, then run `pip install -r requirements.txt --system`.",
+        "Remove the virtual environment steps as they are optional for local installation."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source /opt/netbox/venv/bin/activate` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The list of system packages to install is incomplete; it is missing the PostgreSQL database server, which is a required dependency for NetBox.",
+      "correction_candidates": [
+        "Add `postgresql` to the `apt-get install` command.",
+        "Replace `redis-server` with `postgresql` in the `apt-get install` command.",
+        "Install PostgreSQL using pip: `pip install postgresql`.",
+        "Add `python3-postgresql` to the `apt-get install` command."
+      ],
+      "golden_answer": "Add `postgresql` to the `apt-get install` command."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a minimum Python version of 3.6+, but recent versions of NetBox require Python 3.8 or newer, leading to potential installation failures on older systems.",
+      "correction_candidates": [
+        "Update the requirement to 'Python 3.8+'.",
+        "Update the requirement to 'Python 3+'.",
+        "Specify the exact compatible version, 'Python 3.6.9'.",
+        "Remove the Python version requirement, as `pip` will handle it."
+      ],
+      "golden_answer": "Update the requirement to 'Python 3.8+'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the development server uses an invalid parameter `--port 8000`. The correct syntax does not use the `--port` flag.",
+      "correction_candidates": [
+        "Change the command to `python3 manage.py runserver 8000`.",
+        "Change the command to `python3 manage.py runserver -p 8000`.",
+        "Change the command to `python3 manage.py runserver --port=8000`.",
+        "Change the command to `python3 manage.py startserver --port 8000`."
+      ],
+      "golden_answer": "Change the command to `python3 manage.py runserver 8000`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions attempt to install system services (PostgreSQL and Redis) using `pip`, which is incorrect. `pip` is for Python packages, and these services must be installed using a system package manager like `apt` or `yum`.",
+      "correction_candidates": [
+        "Replace `pip install postgresql redis` with `sudo apt-get install postgresql redis-server`.",
+        "Change the command to `sudo pip install postgresql-server redis-server`.",
+        "Run `pip install psycopg2-binary redis` instead, which are the correct Python clients.",
+        "Remove the step, as these are optional dependencies."
+      ],
+      "golden_answer": "Replace `pip install postgresql redis` with `sudo apt-get install postgresql redis-server`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. It instructs to run database migrations (`manage.py migrate`) before configuring the database connection in `configuration.py` and before installing the necessary Python dependencies (like Django) via `pip`.",
+      "correction_candidates": [
+        "Move the 'Apply Database Migrations' step to be the last step, after configuration and dependency installation.",
+        "Reorder the steps to be: 1. System Dependencies, 2. Python Dependencies, 3. Configure NetBox, 4. Apply Migrations.",
+        "Combine all commands into a single script to ensure correct order.",
+        "Run `python3 manage.py migrate --no-deps` to skip dependency checks."
+      ],
+      "golden_answer": "Reorder the steps to be: 1. System Dependencies, 2. Python Dependencies, 3. Configure NetBox, 4. Apply Migrations."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Incorrect dependency installation command referencing non-existent netbox-docker-compose package",
+      "correction_candidates": [
+        "First, install the required dependencies by running `pip install -r requirements.txt` followed by `docker-compose up -d` to set up the environment.",
+        "First, install the required dependencies by running `pip install -r requirements.txt` followed by `pip install netbox` to set up the environment.",
+        "First, install the required dependencies by running `pip install -r requirements.txt` to set up the environment.",
+        "First, install the required dependencies by running `pip install -r requirements.txt` followed by `pip install django` to set up the environment."
+      ],
+      "golden_answer": "First, install the required dependencies by running `pip install -r requirements.txt` to set up the environment."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect installation order - installing pip dependencies before creating and activating virtual environment",
+      "correction_candidates": [
+        "To set up NetBox, first create a virtual environment with `python -m venv netbox_env`, then activate it using `source netbox_env/bin/activate`, and finally install pip dependencies using `pip install -r requirements.txt`.",
+        "To set up NetBox, first create a virtual environment with `python -m venv netbox_env`, activate it using `source netbox_env/bin/activate`, then install pip dependencies using `pip install -r requirements.txt`.",
+        "To set up NetBox, create a virtual environment with `python -m venv netbox_env`, then activate it using `source netbox_env/bin/activate`, and install pip dependencies using `pip install -r requirements.txt`.",
+        "To set up NetBox, first install Python, then create a virtual environment with `python -m venv netbox_env`, activate it using `source netbox_env/bin/activate`, and install pip dependencies using `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "To set up NetBox, first create a virtual environment with `python -m venv netbox_env`, then activate it using `source netbox_env/bin/activate`, and finally install pip dependencies using `pip install -r requirements.txt`."
+    }
+  ]
+}

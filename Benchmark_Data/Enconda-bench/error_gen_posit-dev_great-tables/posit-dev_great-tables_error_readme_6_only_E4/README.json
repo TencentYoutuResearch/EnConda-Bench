@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_6_only_E4",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent configuration file path that doesn't exist in the great_tables package",
+      "correction_candidates": [
+        "Remove the configuration file instruction entirely",
+        "Change to install from requirements.txt file",
+        "Reference the correct documentation website instead",
+        "Point to the package's built-in configuration options"
+      ],
+      "golden_answer": "Remove the configuration file instruction entirely"
+    }
+  ]
+}

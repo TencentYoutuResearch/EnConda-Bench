@@ -1,0 +1,29 @@
+{
+  "readme": "flav-io_flavio_error_readme_2",
+  "repo_name": "flav-io_flavio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest installing packages with pip before creating and activating a virtual environment, which is the wrong logical order.",
+      "correction_candidates": [
+        "Move the recommendation to create and activate a virtual environment to be the first step, before any `pip install` commands.",
+        "Install the package with `pip install --user flavio` to avoid needing a virtual environment.",
+        "The commands are correct, but should be run with `sudo` for system-wide installation.",
+        "Combine the installation into one command: `python -m venv venv && source venv/bin/activate && pip install flavio`."
+      ],
+      "golden_answer": "Move the recommendation to create and activate a virtual environment to be the first step, before any `pip install` commands."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions direct the user to install 'numpy-flavor', which is a non-existent and unnecessary Python package.",
+      "correction_candidates": [
+        "Replace `pip install numpy-flavor` with `pip install numpy`.",
+        "The package `numpy-flavor` is misspelled; it should be `numpy_flavour`.",
+        "Remove the line `pip install numpy-flavor` as it is not a required dependency.",
+        "Replace `pip install numpy-flavor` with `pip install matplotlib` for plotting."
+      ],
+      "golden_answer": "Remove the line `pip install numpy-flavor` as it is not a required dependency."
+    }
+  ]
+}

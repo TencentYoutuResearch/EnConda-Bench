@@ -1,0 +1,29 @@
+{
+  "readme": "pretalx_pretalx_error_readme_4",
+  "repo_name": "pretalx_pretalx",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions attempt to run database migrations with `python manage.py migrate` before installing the project dependencies, which will fail because Django and other packages are not yet installed.",
+      "correction_candidates": [
+        "The `python manage.py migrate` command should be replaced with `python manage.py makemigrations`.",
+        "The `pip install` command should be moved to before the `venv` creation.",
+        "The `python manage.py migrate` command is not necessary for local development.",
+        "The `python manage.py migrate` command should be run after the `pip install` command."
+      ],
+      "golden_answer": "The `python manage.py migrate` command should be run after the `pip install` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions only install production dependencies (`requirements/production.txt`), which is insufficient for a development environment. The development dependencies (e.g., testing tools, debug server) are missing.",
+      "correction_candidates": [
+        "The command `pip install -r requirements/development.txt` should be added after installing production dependencies.",
+        "The command should be changed to `pip install -r requirements.txt` to install all dependencies from a single file.",
+        "The command should be `pip install -e .` to install the project in editable mode.",
+        "The `production.txt` file should be edited to include development dependencies."
+      ],
+      "golden_answer": "The command `pip install -r requirements/development.txt` should be added after installing production dependencies."
+    }
+  ]
+}

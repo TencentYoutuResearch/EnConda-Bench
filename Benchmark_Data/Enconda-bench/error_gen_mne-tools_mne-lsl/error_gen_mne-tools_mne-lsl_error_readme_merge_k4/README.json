@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_mne-tools_mne-lsl_error_readme_merge_k4",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a strict Python version requirement (`python 3.9`), which is overly restrictive and incorrectly implies that later versions like 3.10 or 3.11 are not supported.",
+      "correction_candidates": [
+        "MNE-LSL supports `python >= 3.9`",
+        "MNE-LSL supports `python 3.9, 3.10, 3.11`",
+        "MNE-LSL supports `python ≥ 3.9`",
+        "MNE-LSL supports `python > 3.8`"
+      ],
+      "golden_answer": "MNE-LSL supports `python ≥ 3.9`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README adds an unnecessary and incorrect installation step, instructing users to install `liblsl` from a third-party conda channel, when it is already included as a dependency in the `mne-lsl` conda-forge package.",
+      "correction_candidates": [
+        "The `liblsl` dependency is automatically installed when using `conda install -c conda-forge mne-lsl`, so the extra step is not needed.",
+        "Remove the instruction to install `liblsl` from the `tstenner` channel.",
+        "The correct command is `conda install -c conda-forge liblsl`.",
+        "You should install `liblsl` from the official LSL website before using conda."
+      ],
+      "golden_answer": "The `liblsl` dependency is automatically installed when using `conda install -c conda-forge mne-lsl`, so the extra step is not needed."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added installation instructions that install pip dependencies before system dependencies, creating logical order error",
+      "correction_candidates": [
+        "First install system dependencies with `sudo apt-get install liblsl-dev`, then install Python packages with `pip install mne-lsl numpy scipy matplotlib`",
+        "Install using conda: `conda install -c conda-forge mne-lsl`",
+        "Use the package manager: `pip install mne-lsl` followed by system setup",
+        "Follow the documentation website installation guide without additional commands"
+      ],
+      "golden_answer": "First install system dependencies with `sudo apt-get install liblsl-dev`, then install Python packages with `pip install mne-lsl numpy scipy matplotlib`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced a non-existent requirements file path 'requirements/missing_file.txt'",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install mne-lsl",
+        "pip install -r pyproject.toml",
+        "pip install -r requirements/dev.txt"
+      ],
+      "golden_answer": "pip install mne-lsl"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added installation of an obsolete/non-existent package 'obsolete-package==1.0.0'",
+      "correction_candidates": [
+        "Remove the obsolete-package installation instruction entirely",
+        "Replace with `pip install mne>=1.0.0` for MNE compatibility",
+        "Install `numpy>=1.20.0` for numerical computation support",
+        "Add `scipy>=1.7.0` for scientific computing dependencies"
+      ],
+      "golden_answer": "Remove the obsolete-package installation instruction entirely"
+    }
+  ]
+}

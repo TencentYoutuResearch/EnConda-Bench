@@ -1,0 +1,29 @@
+{
+  "readme": "google_trax_error_readme_2",
+  "repo_name": "google_trax",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the 'General Setup' code block, `import trax.fastmath` is called before `!pip install -q -U trax`, which will cause an `ImportError` because the module is used before it is installed.",
+      "correction_candidates": [
+        "Move `import trax.fastmath` to after the `!pip install` command.",
+        "Remove the line `import trax.fastmath`.",
+        "Change `import trax.fastmath` to `import trax`.",
+        "Replace the entire setup block with a single line: `!pip install -q -U trax && import trax`"
+      ],
+      "golden_answer": "Remove the line `import trax.fastmath`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The shell command to remove the output directory, `!rm --r -f {output_dir}`, uses an incorrect flag `--r`. The correct flag for recursive deletion is `-r` or `-R`.",
+      "correction_candidates": [
+        "!rm -r -f {output_dir}",
+        "!rm -rf {output_dir}",
+        "!rm -R -f {output_dir}",
+        "!rmdir -p {output_dir}"
+      ],
+      "golden_answer": "!rm -rf {output_dir}"
+    }
+  ]
+}

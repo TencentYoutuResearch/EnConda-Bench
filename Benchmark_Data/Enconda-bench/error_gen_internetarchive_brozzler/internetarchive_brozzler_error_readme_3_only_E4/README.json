@@ -1,0 +1,18 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_3_only_E4",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Brozzler Wayback' section, the `pywb.yml` configuration example sets `archive_paths: warcs`. This is an incorrect file path because it is missing the trailing slash, which is explicitly noted as a requirement in the comment.",
+      "correction_candidates": [
+        "Change `archive_paths: warcs` to `archive_paths: './warcs/'`.",
+        "Remove the line `archive_paths: warcs` as it is not needed.",
+        "Change `archive_paths: warcs` to `archive_paths: 'warcs/'`.",
+        "Change `archive_paths: warcs` to `archive_paths: warcs/`."
+      ],
+      "golden_answer": "Change `archive_paths: warcs` to `archive_paths: warcs/`."
+    }
+  ]
+}

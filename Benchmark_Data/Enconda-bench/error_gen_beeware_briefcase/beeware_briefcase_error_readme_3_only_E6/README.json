@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_3_only_E6",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Getting started' section incorrectly instructs the user to run `briefcase new` before showing the command to install Briefcase.",
+      "correction_candidates": [
+        "The installation command (`python -m pip install briefcase`) should be presented before the usage command (`briefcase new`).",
+        "Combine the commands into a single block: `$ python -m pip install briefcase && briefcase new`.",
+        "Add a note saying 'If briefcase is not found, install it first.'",
+        "Change `$ briefcase new` to `$ python -m briefcase new`."
+      ],
+      "golden_answer": "The installation command (`python -m pip install briefcase`) should be presented before the usage command (`briefcase new`)."
+    }
+  ]
+}

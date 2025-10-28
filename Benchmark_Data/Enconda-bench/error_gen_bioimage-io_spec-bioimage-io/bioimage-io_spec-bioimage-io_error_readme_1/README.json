@@ -1,0 +1,29 @@
+{
+  "readme": "bioimage-io_spec-bioimage-io_error_readme_1",
+  "repo_name": "bioimage-io_spec-bioimage-io",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The CLI command for validation is incorrect. It uses `spec validate` instead of the correct subcommand.",
+      "correction_candidates": [
+        "bioimageio validate path/to/your/rdf.yaml",
+        "bioimageio-core validate path/to/your/rdf.yaml",
+        "bioimageio-spec validate path/to/your/rdf.yaml",
+        "bioimageio validate --rdf path/to/your/rdf.yaml"
+      ],
+      "golden_answer": "bioimageio validate path/to/your/rdf.yaml"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The recommended pip package name `bioimageio-core` is incorrect; it should use a dot instead of a hyphen.",
+      "correction_candidates": [
+        "pip install -U bioimageio.core",
+        "pip install -U bioimageio_core",
+        "pip install -U bioimageio[core]",
+        "pip install -U bioimageio"
+      ],
+      "golden_answer": "pip install -U bioimageio.core"
+    }
+  ]
+}

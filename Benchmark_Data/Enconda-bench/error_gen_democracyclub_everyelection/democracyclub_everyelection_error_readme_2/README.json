@@ -1,0 +1,29 @@
+{
+  "readme": "democracyclub_everyelection_error_readme_2",
+  "repo_name": "democracyclub_everyelection",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Prerequisites' section only lists 'Python' without specifying a version, which can lead to compatibility issues if the project relies on features from a specific version like Python 3.8+.",
+      "correction_candidates": [
+        "The Python version should be specified, for example, 'Python 3.8+'.",
+        "The prerequisite should be 'Python 2.7'.",
+        "The prerequisite should be 'Python 3'.",
+        "The prerequisite section is fine, Python version doesn't matter."
+      ],
+      "golden_answer": "The Python version should be specified, for example, 'Python 3.8+'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install requirements.txt` attempts to install a package named 'requirements.txt' from PyPI instead of installing the packages listed within the file, because the '-r' flag is missing.",
+      "correction_candidates": [
+        "The command should be `pip install -r requirements.txt`.",
+        "The command should be `pip install --requirements requirements.txt`.",
+        "The file should be renamed to `install.txt` and the command should be `pip install -r install.txt`.",
+        "Run `cat requirements.txt | xargs pip install`."
+      ],
+      "golden_answer": "The command should be `pip install -r requirements.txt`."
+    }
+  ]
+}

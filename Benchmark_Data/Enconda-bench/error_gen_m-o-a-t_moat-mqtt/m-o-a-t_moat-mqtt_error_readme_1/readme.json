@@ -1,0 +1,29 @@
+{
+  "readme": "m-o-a-t_moat-mqtt_error_readme_1",
+  "repo_name": "m-o-a-t_moat-mqtt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an underscore (`moat_mqtt`) instead of a hyphen (`moat-mqtt`), which is incorrect for the PyPI package name and will cause the installation to fail.",
+      "correction_candidates": [
+        "$ pip install moat-mqtt",
+        "$ pip install \"moat-mqtt\"",
+        "$ pip install MoaT-MQTT",
+        "$ python -m pip install moat-mqtt"
+      ],
+      "golden_answer": "$ pip install moat-mqtt"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The link to the documentation on 'Read the Docs' points to an incorrect domain (`.com` instead of `.org`), leading to a '404 Not Found' error.",
+      "correction_candidates": [
+        ".. _Read the Docs: http://moat-mqtt.readthedocs.io/",
+        ".. _Read the Docs: https://moat-mqtt.readthedocs.org/",
+        ".. _Read the Docs: http://moat-mqtt.readthedocs.org/",
+        ".. _Read the Docs: https://readthedocs.org/projects/moat-mqtt/"
+      ],
+      "golden_answer": ".. _Read the Docs: http://moat-mqtt.readthedocs.org/"
+    }
+  ]
+}

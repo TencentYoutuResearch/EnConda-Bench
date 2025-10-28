@@ -1,0 +1,29 @@
+{
+  "readme": "flask-middleware_flask-security_error_readme_3",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have the wrong logical order. The package is installed globally before the virtual environment is created and activated, defeating the purpose of the virtual environment.",
+      "correction_candidates": [
+        "The correct order is to first create the venv, then activate it, then install the package.",
+        "The package should be installed using 'pipx' to ensure isolation.",
+        "The venv should be created with the --system-site-packages flag.",
+        "Run 'pip install -U Flask-Security-Too --user' instead of using a venv."
+      ],
+      "golden_answer": "The correct order is to first create the venv, then activate it, then install the package."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for 'Code' in the Resources section points to a non-existent '/src' directory in the GitHub repository.",
+      "correction_candidates": [
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security/>.",
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security/tree/master>.",
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security.git>.",
+        "Create a 'src' directory in the repository to match the link."
+      ],
+      "golden_answer": "Change the Code link to <https://github.com/Flask-Middleware/flask-security/>."
+    }
+  ]
+}

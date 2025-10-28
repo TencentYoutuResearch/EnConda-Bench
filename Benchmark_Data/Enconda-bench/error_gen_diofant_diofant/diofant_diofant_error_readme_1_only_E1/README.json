@@ -1,0 +1,18 @@
+{
+  "readme": "diofant_diofant_error_readme_1_only_E1",
+  "repo_name": "diofant_diofant",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes 'requests', an unnecessary dependency not required for the library to function.",
+      "correction_candidates": [
+        "Change the command to `pip install diofant sympy`.",
+        "Change the command to `pip install diofant --no-deps`.",
+        "Change the command to `pip install diofant`.",
+        "Change the command to `conda install diofant`."
+      ],
+      "golden_answer": "Change the command to `pip install diofant`."
+    }
+  ]
+}

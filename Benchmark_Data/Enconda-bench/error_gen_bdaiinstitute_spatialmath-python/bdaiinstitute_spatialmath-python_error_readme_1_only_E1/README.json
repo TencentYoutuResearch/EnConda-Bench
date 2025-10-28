@@ -1,0 +1,18 @@
+{
+  "readme": "bdaiinstitute_spatialmath-python_error_readme_1_only_E1",
+  "repo_name": "bdaiinstitute_spatialmath-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The dependency list includes `tensorflow`, which is not a dependency of this package.",
+      "correction_candidates": [
+        "Remove `tensorflow` from the dependency list.",
+        "Change `tensorflow` to `pytorch`.",
+        "The list is correct as is.",
+        "Replace `tensorflow` with `scikit-learn`."
+      ],
+      "golden_answer": "Remove `tensorflow` from the dependency list."
+    }
+  ]
+}

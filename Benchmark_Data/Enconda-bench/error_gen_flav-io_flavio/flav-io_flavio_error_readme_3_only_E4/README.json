@@ -1,0 +1,18 @@
+{
+  "readme": "flav-io_flavio_error_readme_3_only_E4",
+  "repo_name": "flav-io_flavio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The installation command `pip install -c config.ini` incorrectly references a non-existent or wrongly purposed configuration file. The `-c` flag is for constraints files, not general installation.",
+      "correction_candidates": [
+        "Replace the installation block with instructions to install from PyPI: `pip install flavio`.",
+        "The command is incorrect. To install from source, clone the repository and run `pip install .`.",
+        "The configuration file is `setup.cfg`, so the command should be `pip install -e .` which uses that file.",
+        "Create a `config.ini` file with `flavio` and then run the command."
+      ],
+      "golden_answer": "Replace the installation block with instructions to install from PyPI: `pip install flavio`."
+    }
+  ]
+}

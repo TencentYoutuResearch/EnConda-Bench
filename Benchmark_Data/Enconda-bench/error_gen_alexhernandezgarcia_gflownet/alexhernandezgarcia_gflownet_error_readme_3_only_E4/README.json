@@ -1,0 +1,18 @@
+{
+  "readme": "alexhernandezgarcia_gflownet_error_readme_3_only_E4",
+  "repo_name": "alexhernandezgarcia_gflownet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the user configuration file is incorrect. It is listed as `config/users/<username>.yaml` instead of the correct `config/user/<username>.yaml`.",
+      "correction_candidates": [
+        "The correct directory name is `user`, not `users`.",
+        "Change the path `config/users/<username>.yaml` to `config/user/<username>.yaml`.",
+        "Remove the 's' from 'users' in the file path.",
+        "The path should be `config/user/<username>.yaml`."
+      ],
+      "golden_answer": "Change the path `config/users/<username>.yaml` to `config/user/<username>.yaml`."
+    }
+  ]
+}

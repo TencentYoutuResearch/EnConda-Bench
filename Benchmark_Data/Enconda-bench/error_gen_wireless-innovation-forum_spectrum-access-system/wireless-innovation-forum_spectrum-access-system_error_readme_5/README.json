@@ -1,0 +1,29 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_5",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced requirements file path is incorrect - should be requirements.txt not requirements_dev.txt",
+      "correction_candidates": [
+        "python -m pip install -r ./requirements.txt",
+        "pip install -r requirements.txt",
+        "python -m pip install -r requirements.txt",
+        "pip3 install -r ./requirements.txt"
+      ],
+      "golden_answer": "python -m pip install -r ./requirements.txt"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing requirements.txt after creating conda environment but before activating it, which is incorrect order",
+      "correction_candidates": [
+        "conda env create -f conda-environment.yml\nconda activate winnf3",
+        "conda activate winnf3\npython -m pip install -r ./requirements.txt",
+        "conda env create -f conda-environment.yml\npython -m pip install -r ./requirements.txt\nconda activate winnf3",
+        "conda create --name winnf3\nconda activate winnf3\npython -m pip install -r ./requirements.txt"
+      ],
+      "golden_answer": "conda env create -f conda-environment.yml\nconda activate winnf3"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pasqal-io_pulser_error_readme_2_only_E1",
+  "repo_name": "pasqal-io_pulser",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development requirements is syntactically incorrect; it is missing the '-r' flag.",
+      "correction_candidates": [
+        "pip install -r dev_requirements.txt",
+        "pip install --requirements dev_requirements.txt",
+        "pip install -f dev_requirements.txt",
+        "cat dev_requirements.txt | xargs pip install"
+      ],
+      "golden_answer": "pip install -r dev_requirements.txt"
+    }
+  ]
+}

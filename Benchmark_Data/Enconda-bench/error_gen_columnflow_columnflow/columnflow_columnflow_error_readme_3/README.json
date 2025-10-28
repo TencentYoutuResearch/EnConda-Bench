@@ -1,0 +1,29 @@
+{
+  "readme": "columnflow_columnflow_error_readme_3",
+  "repo_name": "columnflow_columnflow",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The quickstart guide incorrectly states that Python 2.7 is required, which is outdated and incompatible with the project's dependencies.",
+      "correction_candidates": [
+        "Remove the sentence \"Please note that this project requires Python 2.7 to run correctly.\"",
+        "Replace the incorrect sentence with: \"This project requires Python 3.8 or newer.\"",
+        "Replace the incorrect sentence with: \"This project is compatible with both Python 2.7 and Python 3.x.\"",
+        "Replace the incorrect sentence with: \"Ensure you are using the latest version of Python.\""
+      ],
+      "golden_answer": "Remove the sentence \"Please note that this project requires Python 2.7 to run correctly.\""
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'voms-proxy-init' command for creating a GRID proxy uses an invalid flag '-voms' instead of the correct '-rfc'.",
+      "correction_candidates": [
+        "voms-proxy-init -rfc -valid 196:00",
+        "voms-proxy-init --rfc --valid 196:00",
+        "voms-proxy-init -voms cms -rfc -valid 196:00",
+        "grid-proxy-init -valid 196:00"
+      ],
+      "golden_answer": "voms-proxy-init -rfc -valid 196:00"
+    }
+  ]
+}

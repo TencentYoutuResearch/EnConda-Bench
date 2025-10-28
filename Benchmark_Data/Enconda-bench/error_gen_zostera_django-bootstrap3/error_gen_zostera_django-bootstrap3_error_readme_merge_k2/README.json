@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_zostera_django-bootstrap3_error_readme_merge_k2",
+  "repo_name": "zostera_django-bootstrap3",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README instructs to add 'bootstrap3' to `INSTALLED_APPS` before installing the package with pip, which will cause a `ModuleNotFoundError` when Django starts.",
+      "correction_candidates": [
+        "The `pip install` command should be run before modifying `settings.py`.",
+        "The `settings.py` file should be modified after running the Django server for the first time.",
+        "The `pip install` command and the `settings.py` modification should be done in a single script.",
+        "You should run `pip freeze` before and after modifying `settings.py`."
+      ],
+      "golden_answer": "The `pip install` command should be run before modifying `settings.py`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip command `pip install bootstrap3` is incorrect; the correct package name is `django-bootstrap3`.",
+      "correction_candidates": [
+        "The correct command is `pip install django-bootstrap3`.",
+        "The correct command is `pip install django-bootstrap-3`.",
+        "The correct command is `pip install python-bootstrap3`.",
+        "The correct command is `pip install django bootstrap3`."
+      ],
+      "golden_answer": "The correct command is `pip install django-bootstrap3`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Requirements' section incorrectly states that the package requires Python 2.7 and Django 1.8, which are outdated and unsupported versions. The package supports modern Django and Python versions.",
+      "correction_candidates": [
+        "The requirement should be changed to 'a combination of Python and Django that is currently supported'.",
+        "The requirement should be changed to 'Django 3.2 or higher'.",
+        "The requirement should be changed to 'Python 3.6+ and Django 2.2+.",
+        "The requirement should be removed, as `pip` will handle it."
+      ],
+      "golden_answer": "The requirement should be changed to 'a combination of Python and Django that is currently supported'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the example app is given as `python example/manage.py runserver`, but the correct command is `make example`, which likely performs necessary setup steps before running the server.",
+      "correction_candidates": [
+        "The command to run the example app should be `make example`.",
+        "The command should be `cd example && python manage.py runserver`.",
+        "The command should be `django-admin runserver --settings=example.settings`.",
+        "The command should be preceded by `pip install -r example/requirements.txt`."
+      ],
+      "golden_answer": "The command to run the example app should be `make example`."
+    }
+  ]
+}

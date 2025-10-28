@@ -1,0 +1,18 @@
+{
+  "readme": "facebookresearch_hydra_error_readme_2_only_E2",
+  "repo_name": "facebookresearch_hydra",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install hydra-core --update` uses an invalid flag `--update`. The correct flag for upgrading a package is `--upgrade`.",
+      "correction_candidates": [
+        "Replace the `--update` flag with `--upgrade`.",
+        "Replace the `--update` flag with its shorthand `-U`.",
+        "Remove the `--update` flag entirely, resulting in `pip install hydra-core`.",
+        "Use the command `python -m pip install --upgrade hydra-core`."
+      ],
+      "golden_answer": "Replace the `--update` flag with `--upgrade`."
+    }
+  ]
+}

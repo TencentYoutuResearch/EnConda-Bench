@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_5_only_E7",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version specified as 2.7 which is incompatible with Django and modern dependencies",
+      "correction_candidates": [
+        "python 3.9",
+        "python 3.8+",
+        "python >= 3.7",
+        "python 3.x"
+      ],
+      "golden_answer": "python 3.9"
+    }
+  ]
+}

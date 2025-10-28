@@ -1,0 +1,18 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_5_only_E7",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility issue where installation suggests pydantic 1.8.2 but changelog states library moved away from pydantic in v6.0",
+      "correction_candidates": [
+        "Remove pydantic dependency as library no longer uses it in v6.0",
+        "Update pydantic to latest version 2.x",
+        "Keep pydantic 1.8.2 for backward compatibility",
+        "Install both pydantic and msgspec dependencies"
+      ],
+      "golden_answer": "Remove pydantic dependency as library no longer uses it in v6.0"
+    }
+  ]
+}

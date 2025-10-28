@@ -1,0 +1,29 @@
+{
+  "readme": "giskard-ai_giskard_error_readme_4",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The function call `giskard.scan(giskard_model, \"deep\")` is incorrect. The `scan` function does not accept a string like 'deep' as a second positional argument, causing a syntax error.",
+      "correction_candidates": [
+        "scan_results = giskard.scan(model=giskard_model)",
+        "scan_results = giskard.scan(giskard_model)",
+        "scan_results = giskard.scan(giskard_model, params={\"level\": \"deep\"})",
+        "scan_results = giskard.deep_scan(giskard_model)"
+      ],
+      "golden_answer": "scan_results = giskard.scan(giskard_model)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The code for generating a RAG test set attempts to load a file with `pd.read_csv(\"knowledge_base.csv\")`, but this file is not provided or explained how to create, leading to a `FileNotFoundError`.",
+      "correction_candidates": [
+        "Replace `pd.read_csv(\"knowledge_base.csv\")` with a clear placeholder like `pd.read_csv(\"path/to/your/knowledge_base.csv\")` and explain that the user must provide their own file.",
+        "Provide a sample `knowledge_base.csv` file or a link to download one.",
+        "Replace `pd.read_csv(\"knowledge_base.csv\")` with code that uses the previously created `db` object as the knowledge base.",
+        "Change the code to `df = pd.DataFrame({'text': ['Sample text 1', 'Sample text 2']})` to create a minimal example dataframe directly in the code."
+      ],
+      "golden_answer": "Replace `pd.read_csv(\"knowledge_base.csv\")` with a clear placeholder like `pd.read_csv(\"path/to/your/knowledge_base.csv\")` and explain that the user must provide their own file."
+    }
+  ]
+}

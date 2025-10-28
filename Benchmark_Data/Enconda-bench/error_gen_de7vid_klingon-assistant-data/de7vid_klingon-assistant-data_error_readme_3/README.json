@@ -1,0 +1,29 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_3",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README gives a confusing and incorrect instruction to avoid using `blank.xml`, contradicting the template's purpose and suggesting a cumbersome alternative.",
+      "correction_candidates": [
+        "The `blank.xml` file is a template and should be used for creating new entries.",
+        "To create a new entry, run the `create_entry.py` script which uses `blank.xml` automatically.",
+        "The `blank.xml` file should be copied to a new file name, then edited.",
+        "The instruction is incorrect; `blank.xml` is the designated template for new entries."
+      ],
+      "golden_answer": "The `blank.xml` file is a template and should be used for creating new entries."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that `call_google_translate.py` requires Python 2.7, which is an outdated and likely incompatible version.",
+      "correction_candidates": [
+        "The script is compatible with Python 3 and does not require a specific version.",
+        "The script requires Python 3.6 or newer.",
+        "The script is written in Perl, not Python.",
+        "The Python 2.7 requirement should be removed as the script has been updated for Python 3."
+      ],
+      "golden_answer": "The Python 2.7 requirement should be removed as the script has been updated for Python 3."
+    }
+  ]
+}

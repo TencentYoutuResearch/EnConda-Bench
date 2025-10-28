@@ -1,0 +1,18 @@
+{
+  "readme": "strinking_futaba_error_readme_2_only_E6",
+  "repo_name": "strinking_futaba",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The dependency installation step (`poetry install`) is listed after the database setup and configuration steps. The application dependencies should be installed before attempting to configure or run the application.",
+      "correction_candidates": [
+        "Move the `poetry install` command to be the first step in the 'Setup' section.",
+        "Move the `poetry install` command to be the second step, after `pip3 install poetry`.",
+        "Move the `poetry install` command to the 'To run' section, just before `python3 -m futaba`.",
+        "Combine the first two steps into `pip3 install poetry && poetry install`."
+      ],
+      "golden_answer": "Move the `poetry install` command to be the second step, after `pip3 install poetry`."
+    }
+  ]
+}

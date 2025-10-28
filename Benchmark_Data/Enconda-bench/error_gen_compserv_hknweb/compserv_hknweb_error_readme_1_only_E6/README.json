@@ -1,0 +1,18 @@
+{
+  "readme": "compserv_hknweb_error_readme_1_only_E6",
+  "repo_name": "compserv_hknweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of activating the virtual environment and installing dependencies is incorrect. `poetry install` must be run before `poetry shell` to set up the environment that the shell command activates.",
+      "correction_candidates": [
+        "Swap the order of steps 3 and 4. First run `poetry install`, then `poetry shell`.",
+        "Combine the steps into one: `poetry run install && poetry shell`.",
+        "Remove step 3 (`poetry shell`) as `poetry install` automatically activates the environment.",
+        "Run `poetry shell` first, then run `pip install -r requirements.txt` inside the shell."
+      ],
+      "golden_answer": "Swap the order of steps 3 and 4. First run `poetry install`, then `poetry shell`."
+    }
+  ]
+}

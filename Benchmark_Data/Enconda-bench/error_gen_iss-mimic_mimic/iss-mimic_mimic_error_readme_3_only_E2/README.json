@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_3_only_E2",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is missing the full URL of the repository, providing only the user/repo path, which will cause the command to fail.",
+      "correction_candidates": [
+        "Use the full HTTPS URL: `git clone https://github.com/ISS-Mimic/Mimic.git`.",
+        "Use the GitHub CLI command: `gh repo clone ISS-Mimic/Mimic`.",
+        "Use the SSH URL: `git clone git@github.com:ISS-Mimic/Mimic.git`.",
+        "Prepend 'https://github.com/' to the existing path."
+      ],
+      "golden_answer": "Use the full HTTPS URL: `git clone https://github.com/ISS-Mimic/Mimic.git`."
+    }
+  ]
+}

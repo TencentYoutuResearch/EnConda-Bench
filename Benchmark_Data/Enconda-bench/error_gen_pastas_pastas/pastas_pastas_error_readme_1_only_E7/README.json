@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_1_only_E7",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The supported Python versions are incorrectly stated as 'Python 3.6 or higher', which is too broad and may lead to installation on unsupported older Python versions.",
+      "correction_candidates": [
+        "To install Pastas, a working version of Python 3.9, 3.10, 3.11, or 3.12 has to be installed on your computer.",
+        "To install Pastas, any version of Python 3 will work.",
+        "To install Pastas, you must use Python 3.11.",
+        "To install Pastas, a working version of Python 3.9 or newer has to be installed on your computer."
+      ],
+      "golden_answer": "To install Pastas, a working version of Python 3.9, 3.10, 3.11, or 3.12 has to be installed on your computer."
+    }
+  ]
+}

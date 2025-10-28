@@ -1,0 +1,18 @@
+{
+  "readme": "transientskp_tkp_error_readme_3_only_E2",
+  "repo_name": "transientskp_tkp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `apt-get install` command is missing the `-y` flag, which will cause the installation process to hang while waiting for user confirmation, breaking any automated setup scripts.",
+      "correction_candidates": [
+        "The command should be run without `sudo`.",
+        "The `apt-get update` command is unnecessary and should be removed.",
+        "The `-y` flag should be added to automatically confirm the installation: `sudo apt-get install -y python3-dev libpq-dev`.",
+        "The command should use `aptitude` instead: `sudo aptitude install python3-dev libpq-dev`."
+      ],
+      "golden_answer": "The `-y` flag should be added to automatically confirm the installation: `sudo apt-get install -y python3-dev libpq-dev`."
+    }
+  ]
+}

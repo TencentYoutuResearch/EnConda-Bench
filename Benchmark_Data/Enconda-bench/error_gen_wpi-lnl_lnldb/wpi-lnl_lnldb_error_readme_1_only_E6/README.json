@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_1_only_E6",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to install Python packages is executed before the virtual environment is created and activated, which will cause packages to be installed globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "virtualenv env && source env/bin/activate && pip install -r requirements_debug.txt",
+        "python -m venv env; source env/bin/activate; pip install -r requirements_debug.txt",
+        "pip install -r requirements_debug.txt --user",
+        "First, run 'virtualenv env' and 'source env/bin/activate', then run 'pip install -r requirements_debug.txt'."
+      ],
+      "golden_answer": "First, run 'virtualenv env' and 'source env/bin/activate', then run 'pip install -r requirements_debug.txt'."
+    }
+  ]
+}

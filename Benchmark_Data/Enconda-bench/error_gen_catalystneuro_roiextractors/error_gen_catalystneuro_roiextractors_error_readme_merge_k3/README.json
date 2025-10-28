@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_catalystneuro_roiextractors_error_readme_merge_k3",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to create the conda environment (`conda env create`) is placed after the commands to activate it and install packages into it, which will fail.",
+      "correction_candidates": [
+        "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`.",
+        "Combine the environment creation and package installation into a single script.",
+        "Use `mamba env create` instead of `conda env create` for faster resolution.",
+        "Remove the `conda env create` step and install directly into the base environment."
+      ],
+      "golden_answer": "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install .` is used, but the documentation incorrectly claims this installs the package in editable mode. The correct flag `-e` is missing.",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install --editable .",
+        "python setup.py develop",
+        "pip install -e roiextractors"
+      ],
+      "golden_answer": "pip install -e ."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command `conda env create -f roiextractors_env.yml` refers to a file `roiextractors_env.yml` that does not exist in the repository. The correct file is `environment.yml`.",
+      "correction_candidates": [
+        "Change `conda env create -f roiextractors_env.yml` to `conda env create -f environment.yml`.",
+        "Change `conda env create -f roiextractors_env.yml` to `conda env create roiextractors_env`.",
+        "Download the correct environment file from a different URL before running the create command.",
+        "Replace the `conda env create` command with a series of `conda install` commands for each dependency."
+      ],
+      "golden_answer": "Change `conda env create -f roiextractors_env.yml` to `conda env create -f environment.yml`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install numpy scipy` is unnecessary and potentially harmful, as these dependencies are already managed by the conda environment file, which could lead to version conflicts.",
+      "correction_candidates": [
+        "Remove the line `pip install numpy scipy`.",
+        "Change the line to `pip install --upgrade numpy scipy` to ensure the latest versions are used.",
+        "Comment out the line with a note: `# pip install numpy scipy if needed`.",
+        "Move the `pip install numpy scipy` command to before the `conda env create` command."
+      ],
+      "golden_answer": "Remove the line `pip install numpy scipy`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `source activate roiextractors_env` uses a deprecated syntax for activating conda environments. The modern and recommended command is `conda activate`.",
+      "correction_candidates": [
+        "conda activate roiextractors_env",
+        ". activate roiextractors_env",
+        "conda shell.posix activate roiextractors_env",
+        "source /path/to/conda/bin/activate roiextractors_env"
+      ],
+      "golden_answer": "conda activate roiextractors_env"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The git install command specifies the `@master` branch, which is an outdated naming convention and may not point to the latest stable code. The correct branch is `@main`.",
+      "correction_candidates": [
+        "pip install git+https://github.com/catalystneuro/roiextractors.git@main",
+        "pip install git+https://github.com/catalystneuro/roiextractors.git",
+        "pip install git+https://github.com/catalystneuro/roiextractors.git@develop",
+        "git clone --branch main https://github.com/catalystneuro/roiextractors.git && pip install -e ./roiextractors"
+      ],
+      "golden_answer": "pip install git+https://github.com/catalystneuro/roiextractors.git@main"
+    }
+  ]
+}

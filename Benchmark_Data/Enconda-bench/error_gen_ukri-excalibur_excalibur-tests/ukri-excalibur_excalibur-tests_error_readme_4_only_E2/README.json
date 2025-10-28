@@ -1,0 +1,18 @@
+{
+  "readme": "ukri-excalibur_excalibur-tests_error_readme_4_only_E2",
+  "repo_name": "ukri-excalibur_excalibur-tests",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command for running a benchmark uses an incorrect flag `-s` to specify the system. The correct flag for the ReFrame framework is typically `--system`.",
+      "correction_candidates": [
+        "Replace `-s archer2` with `--system archer2:login`",
+        "Replace `-s archer2` with `-p archer2`",
+        "Replace `-s archer2` with `--partition=archer2`",
+        "Replace `-s archer2` with `--env-name=archer2`"
+      ],
+      "golden_answer": "Replace `-s archer2` with `--system archer2:login`"
+    }
+  ]
+}

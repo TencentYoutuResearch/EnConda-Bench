@@ -1,0 +1,18 @@
+{
+  "readme": "flask-middleware_flask-security_error_readme_4_only_E1",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install -U Flask-Security` installs the original, unmaintained package, not the intended 'Flask-Security-Too' fork.",
+      "correction_candidates": [
+        "Change 'pip install -U Flask-Security' to 'pip install -U Flask-Security-Too'.",
+        "Add the repository URL: 'pip install -U git+https://github.com/Flask-Middleware/flask-security.git'.",
+        "The package name is case-sensitive; it should be 'flask-security'.",
+        "Change the command to 'pip install Flask-Security-Fork'."
+      ],
+      "golden_answer": "Change 'pip install -U Flask-Security' to 'pip install -U Flask-Security-Too'."
+    }
+  ]
+}

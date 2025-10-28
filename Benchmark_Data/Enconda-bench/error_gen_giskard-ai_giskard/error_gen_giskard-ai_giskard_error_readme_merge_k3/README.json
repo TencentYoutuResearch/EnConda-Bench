@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_giskard-ai_giskard_error_readme_merge_k3",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install giskard -U` is missing the `[llm]` extra, which is required to install dependencies for LLM-related features used in the quickstart.",
+      "correction_candidates": [
+        "pip install \"giskard[llm,rag]\" -U",
+        "pip install giskard-llm -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard --all-extras -U"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install langchain tiktoken \"pypdf<=3.17.0\" --no-deps` incorrectly uses the `--no-deps` flag, which prevents pip from installing the necessary dependencies for these packages, leading to runtime errors.",
+      "correction_candidates": [
+        "pip install langchain tiktoken \"pypdf<=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --force-reinstall",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --ignore-installed",
+        "pip install langchain tiktoken pypdf"
+      ],
+      "golden_answer": "pip install langchain tiktoken \"pypdf<=3.17.0\""
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `pip install langchain tiktoken \"pypdf==4.0.0\"` installs a version of `pypdf` that has breaking changes and is likely incompatible with the `PyPDFLoader` used in the code, causing potential errors.",
+      "correction_candidates": [
+        "pip install langchain tiktoken \"pypdf\"",
+        "pip install langchain tiktoken \"pypdf>=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf~=3.17\""
+      ],
+      "golden_answer": "pip install langchain tiktoken \"pypdf<=3.17.0\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL provided to `PyPDFLoader` for the IPCC report is incorrect, leading to a file not found error when the loader tries to fetch the document.",
+      "correction_candidates": [
+        "loader = PyPDFLoader(\"IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://raw.githubusercontent.com/giskard-ai/giskard/main/IPCC_AR6_SYR_LongerReport.pdf\")"
+      ],
+      "golden_answer": "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf\")"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install giskard-client -U` installs an incorrect and outdated package. The correct package is `giskard`.",
+      "correction_candidates": [
+        "pip install giskard -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard-ai -U",
+        "pip install giskard --upgrade"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The code imports libraries like `langchain` and `tiktoken` before the `pip install` command that installs them. The installation step must come before the import statements.",
+      "correction_candidates": [
+        "Place the `pip install` command at the very top of the 'Build a LLM agent' section, before any Python code.",
+        "Combine the `pip install` command with the main giskard installation at the top of the README.",
+        "Create a `requirements.txt` file with the dependencies and instruct the user to install it first.",
+        "Move the import statements to be inside the `model_predict` function."
+      ],
+      "golden_answer": "Place the `pip install` command at the very top of the 'Build a LLM agent' section, before any Python code."
+    }
+  ]
+}

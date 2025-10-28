@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_8_only_E7",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement claiming Python 2.7 compatibility for Dask",
+      "correction_candidates": [
+        "Remove the Python 2.7 requirement note as it's outdated and incorrect",
+        "Change the requirement to Python 3.8+ for modern Dask compatibility",
+        "Update to specify Python 3.7+ as the minimum requirement for Dask support",
+        "Replace with a note about requiring Python 3.6+ for all featuretools functionality"
+      ],
+      "golden_answer": "Remove the Python 2.7 requirement note as it's outdated and incorrect"
+    }
+  ]
+}

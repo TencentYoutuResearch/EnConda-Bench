@@ -1,0 +1,29 @@
+{
+  "readme": "lhotse-speech_lhotse_error_readme_3",
+  "repo_name": "lhotse-speech_lhotse",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The optional dependency for WebDataset integration is specified with an incorrect name 'web-dataset' instead of the correct 'webdataset'.",
+      "correction_candidates": [
+        "pip install lhotse[web-dataset]",
+        "pip install lhotse-webdataset",
+        "pip install lhotse webdataset",
+        "pip install lhotse[webdataset]"
+      ],
+      "golden_answer": "pip install lhotse[webdataset]"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path mentioned for the `sph2pipe` installation is incorrect. The tool is installed in `~/.lhotse/tools`, but the README states it is installed in `~/.lhotse/bin`.",
+      "correction_candidates": [
+        "It will download it to `~/.lhotse/bin`, compile it, and auto-register in `PATH`.",
+        "It will download it to `~/.lhotse/tools`, compile it, and auto-register in `PATH`.",
+        "It will download it to `/usr/local/bin`, compile it, and you must add it to `PATH`.",
+        "It will download it to `~/.lhotse/sph2pipe`, compile it, and auto-register in `PATH`."
+      ],
+      "golden_answer": "It will download it to `~/.lhotse/tools`, compile it, and auto-register in `PATH`."
+    }
+  ]
+}

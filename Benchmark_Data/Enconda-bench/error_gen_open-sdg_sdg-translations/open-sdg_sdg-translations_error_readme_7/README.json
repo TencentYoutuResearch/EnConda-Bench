@@ -1,0 +1,29 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_7",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command uses incorrect parameter syntax with single dashes instead of double dashes",
+      "correction_candidates": [
+        "python translate.py --input data/ --output translations/",
+        "python translate.py -i data/ -o translations/",
+        "python translate.py --input=data/ --output=translations/",
+        "python scripts/translate.py --input data/ --output translations/"
+      ],
+      "golden_answer": "python translate.py --input data/ --output translations/"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References translate.py script file that doesn't exist in the project structure",
+      "correction_candidates": [
+        "python scripts/build.py --input data/ --output translations/",
+        "python -m sdg_translations --input data/ --output translations/",
+        "python setup.py build --input data/ --output translations/",
+        "python main.py --input data/ --output translations/"
+      ],
+      "golden_answer": "python -m sdg_translations --input data/ --output translations/"
+    }
+  ]
+}

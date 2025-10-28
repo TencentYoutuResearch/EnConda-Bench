@@ -1,0 +1,29 @@
+{
+  "readme": "libensemble_libensemble_error_readme_5",
+  "repo_name": "libensemble_libensemble",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies numpy and scipy with specific versions in the pip install command",
+      "correction_candidates": [
+        "pip install libensemble",
+        "pip install libensemble --upgrade",
+        "pip install libensemble[all]",
+        "pip install libensemble --user"
+      ],
+      "golden_answer": "pip install libensemble"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Modified save_output to use an incorrect relative path '../output/' that may not exist",
+      "correction_candidates": [
+        "sampling.save_output(__file__)",
+        "sampling.save_output('./output/' + __file__)",
+        "sampling.save_output(os.path.join('output', __file__))",
+        "sampling.save_output('output_' + __file__)"
+      ],
+      "golden_answer": "sampling.save_output(__file__)"
+    }
+  ]
+}

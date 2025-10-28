@@ -1,0 +1,29 @@
+{
+  "readme": "folio-fse_folio_migration_tools_error_readme_6",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement - specifies Python 2.7 instead of 3.9",
+      "correction_candidates": [
+        "Make sure you are running Python 3.9 or above.",
+        "Make sure you are running Python 3.8 or above.",
+        "Make sure you are running Python 3.7 or above.",
+        "Make sure you are running Python 3.6 or above."
+      ],
+      "golden_answer": "Make sure you are running Python 3.9 or above."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order of installation steps - installing package before creating virtual environment",
+      "correction_candidates": [
+        "python -m venv ./.venv     # Creates a virtual env in the current folder\nsource .venv/bin/activate  # Activates the venv",
+        "python3 -m venv ./.venv\nsource .venv/bin/activate\npython -m pip install folio_migration_tools",
+        "virtualenv .venv\nsource .venv/bin/activate",
+        "conda create -n folio_env python=3.9\nconda activate folio_env"
+      ],
+      "golden_answer": "python -m venv ./.venv     # Creates a virtual env in the current folder\nsource .venv/bin/activate  # Activates the venv"
+    }
+  ]
+}

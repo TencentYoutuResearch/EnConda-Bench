@@ -1,0 +1,18 @@
+{
+  "readme": "rollbar_pyrollbar_error_readme_3_only_E6",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The contribution workflow incorrectly lists pushing to a branch before committing changes. A commit must be made locally before it can be pushed to a remote repository.",
+      "correction_candidates": [
+        "3. Commit your changes (```git commit -am 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)",
+        "3. Stage your changes (```git add .```) and commit them (```git commit -m 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)",
+        "3. Commit your changes to a new branch (```git commit -am 'Added some feature'```)\n4. Push the new branch to origin (```git push origin my-new-feature```)",
+        "3. Commit your changes using `git commit -am 'Added some feature'`\n4. Push to the branch using `git push origin my-new-feature`"
+      ],
+      "golden_answer": "3. Commit your changes (```git commit -am 'Added some feature'```)\n4. Push to the branch (```git push origin my-new-feature```)"
+    }
+  ]
+}

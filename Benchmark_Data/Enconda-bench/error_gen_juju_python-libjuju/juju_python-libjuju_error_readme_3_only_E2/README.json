@@ -1,0 +1,18 @@
+{
+  "readme": "juju_python-libjuju_error_readme_3_only_E2",
+  "repo_name": "juju_python-libjuju",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The tox command is missing the '--' separator, which is necessary to correctly pass arguments to the command run by the tox environment. Without it, the script path may not be passed correctly.",
+      "correction_candidates": [
+        "Change the command to `tox -e example --file examples/connect_current_model.py`.",
+        "Change the command to `tox -e example -- examples/connect_current_model.py`.",
+        "Change the command to `tox -e example -c examples/connect_current_model.py`.",
+        "Change the command to `tox run -e example -- examples/connect_current_model.py`."
+      ],
+      "golden_answer": "Change the command to `tox -e example -- examples/connect_current_model.py`."
+    }
+  ]
+}

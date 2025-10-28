@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_4_only_E2",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests is given as `python tests`, which is incorrect. `tests` is a directory, not an executable script.",
+      "correction_candidates": [
+        "The command should be `python -m pytest`.",
+        "The correct command is `pytest`.",
+        "The command should be `./tools/run-tests`.",
+        "You should run `python setup.py test`."
+      ],
+      "golden_answer": "The correct command is `pytest`."
+    }
+  ]
+}

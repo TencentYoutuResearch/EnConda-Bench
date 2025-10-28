@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_6_only_E2",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid Python syntax 'setup p' instead of 'await p.setup()'",
+      "correction_candidates": [
+        "await p.setup()",
+        "p.setup()",
+        "await p.initialize()",
+        "p.start()"
+      ],
+      "golden_answer": "await p.setup()"
+    }
+  ]
+}

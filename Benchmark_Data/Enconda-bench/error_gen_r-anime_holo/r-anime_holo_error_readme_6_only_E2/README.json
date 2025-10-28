@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_6_only_E2",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax '--setup' instead of '-m setup' for database setup",
+      "correction_candidates": [
+        "Change '--setup' to '-m setup'",
+        "Use 'python src/holo.py setup' without flags",
+        "Replace with 'python src/holo.py --mode setup'",
+        "Change to 'python src/holo.py -s setup'"
+      ],
+      "golden_answer": "Change '--setup' to '-m setup'"
+    }
+  ]
+}

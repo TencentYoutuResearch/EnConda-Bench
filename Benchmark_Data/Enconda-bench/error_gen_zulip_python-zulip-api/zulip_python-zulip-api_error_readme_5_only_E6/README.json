@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_5_only_E6",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Logical order error - running provision command after entering virtualenv instead of before",
+      "correction_candidates": [
+        "Remove the provision command from step 5 since it was already run in step 3",
+        "Move the provision command to step 2 before creating the virtual environment",
+        "Replace the provision command with an activation command in step 5",
+        "Run the provision command twice - once before and once after entering the virtualenv"
+      ],
+      "golden_answer": "Remove the provision command from step 5 since it was already run in step 3"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_tablib_error_readme_3_only_E4",
+  "repo_name": "jazzband_tablib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to a `project_docs/` directory for finding local documentation, but the correct directory name is `docs`.",
+      "correction_candidates": [
+        "Change the directory path from `project_docs/` to `docs/`.",
+        "Remove the sentence about local documentation entirely.",
+        "Change `project_docs/` to `docs/build/html/` to point to the built documentation.",
+        "Add a note that the user must first run a command like `make docs` to create the `project_docs/` directory."
+      ],
+      "golden_answer": "Change the directory path from `project_docs/` to `docs/`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "cltk_cltk_error_readme_5",
+  "repo_name": "cltk_cltk",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation command specifies unnecessary and potentially conflicting dependency versions that are not required for CLTK",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip install cltk --upgrade",
+        "$ pip install cltk[all]",
+        "$ conda install -c conda-forge cltk"
+      ],
+      "golden_answer": "$ pip install cltk"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Hardcoded old dependency versions that may cause compatibility issues with modern Python environments",
+      "correction_candidates": [
+        "Remove specific version constraints and use latest compatible versions",
+        "Update to tensorflow>=2.0.0 and numpy>=1.19.0",
+        "Specify Python 3.8+ requirement and remove tensorflow dependency",
+        "Use requirements.txt file instead of inline version specifications"
+      ],
+      "golden_answer": "Remove specific version constraints and use latest compatible versions"
+    }
+  ]
+}

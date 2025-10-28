@@ -1,0 +1,18 @@
+{
+  "readme": "transientskp_tkp_error_readme_2_only_E1",
+  "repo_name": "transientskp_tkp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The system dependency `libpq-dev` is missing from the `apt-get install` command. This package is required to build the `psycopg2` Python dependency for PostgreSQL support.",
+      "correction_candidates": [
+        "The `psycopg2-binary` package should be used instead of `psycopg2` in `requirements.txt` to avoid needing build tools.",
+        "The command should be `sudo apt-get install -y python3-dev build-essential`.",
+        "The `apt-get update` command should be run after the `install` command.",
+        "The command should be `sudo apt-get install -y python3-dev libpq-dev`."
+      ],
+      "golden_answer": "The command should be `sudo apt-get install -y python3-dev libpq-dev`."
+    }
+  ]
+}

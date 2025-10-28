@@ -1,0 +1,18 @@
+{
+  "readme": "cantools_cantools_error_readme_1_only_E1",
+  "repo_name": "cantools_cantools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the installation command is incorrect ('py-cantools' instead of 'cantools'), which will cause pip to fail to find and install the package.",
+      "correction_candidates": [
+        "python3 -m pip install cantools",
+        "pip install cantools",
+        "conda install cantools",
+        "python3 -m pip install python-cantools"
+      ],
+      "golden_answer": "python3 -m pip install cantools"
+    }
+  ]
+}

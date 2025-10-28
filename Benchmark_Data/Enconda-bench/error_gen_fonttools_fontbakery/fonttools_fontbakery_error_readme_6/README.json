@@ -1,0 +1,29 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_6",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing dependencies with pip before creating and activating a virtual environment",
+      "correction_candidates": [
+        "First create a virtual environment and activate it, then install the required dependencies: `pip install fontbakery`",
+        "Create a virtual environment using `python -m venv env`, activate it, then install Font Bakery with `pip install fontbakery`",
+        "Set up a virtual environment first: `python -m venv fontbakery-env && source fontbakery-env/bin/activate`, then install dependencies",
+        "Install Font Bakery in a virtual environment: `python -m venv venv && source venv/bin/activate && pip install fontbakery`"
+      ],
+      "golden_answer": "First create a virtual environment and activate it, then install the required dependencies: `pip install fontbakery`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Listed unnecessary manual dependencies that are automatically handled by pip",
+      "correction_candidates": [
+        "Install Font Bakery directly: `pip install fontbakery`",
+        "Simply run: `pip install fontbakery` to get all required dependencies",
+        "Use the standard installation command: `pip install fontbakery`",
+        "Install with: `pip install fontbakery[all]` for complete installation"
+      ],
+      "golden_answer": "Install Font Bakery directly: `pip install fontbakery`"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_centre-for-humanities-computing_dacy_error_readme_merge_k4",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The code example attempts to call `dacy.models()` before the `import dacy` statement, which will cause a NameError.",
+      "correction_candidates": [
+        "Place `import dacy` before the `for` loop.",
+        "from dacy import models; for model in models(): print(model)",
+        "Change the loop to `import dacy; for model in dacy.models(): print(model)`",
+        "Place `import dacy` at the very top of the script."
+      ],
+      "golden_answer": "Place `import dacy` before the `for` loop."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The example code attempts to load a model version `0.0.1` which is not listed as available. The available models shown in the example are all version `0.2.0`.",
+      "correction_candidates": [
+        "nlp = dacy.load('da_dacy_medium_trf-0.2.0')",
+        "nlp = dacy.load('medium')",
+        "dacy.download('da_dacy_medium_trf-0.2.0'); nlp = dacy.load('da_dacy_medium_trf-0.2.0')",
+        "nlp = dacy.load('da_dacy_medium_trf')"
+      ],
+      "golden_answer": "nlp = dacy.load('da_dacy_medium_trf-0.2.0')"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command suggests using `conda install dacy`, but the package is distributed on PyPI and should be installed with `pip`. The conda command is likely to fail without specifying a channel like conda-forge, which isn't mentioned.",
+      "correction_candidates": [
+        "pip install dacy",
+        "conda install -c conda-forge dacy",
+        "python -m pip install dacy",
+        "pip install dacy -f https://pypi.org/simple"
+      ],
+      "golden_answer": "pip install dacy"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The usage example `for model in dacy.models:` is missing parentheses to call the `models` function. This will cause a TypeError because it attempts to iterate over a function object.",
+      "correction_candidates": [
+        "for model in dacy.models():",
+        "from dacy import models; for model in models():",
+        "for model in dacy.list_models():",
+        "for model in dacy.models.list():"
+      ],
+      "golden_answer": "for model in dacy.models():"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pinned specific version 2.5.0 in pip install command which may not exist or be compatible",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy>=2.0.0",
+        "pip install dacy~=2.0",
+        "pip install dacy[all]"
+      ],
+      "golden_answer": "pip install dacy"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect method 'download' instead of 'load' for loading a model",
+      "correction_candidates": [
+        "nlp = dacy.load(\"medium\")",
+        "nlp = dacy.get_model(\"medium\")",
+        "nlp = dacy.install(\"medium\")",
+        "nlp = dacy.fetch(\"medium\")"
+      ],
+      "golden_answer": "nlp = dacy.load(\"medium\")"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install spacy torch transformers",
+        "pip install -e .",
+        "pip install dacy[all]"
+      ],
+      "golden_answer": "pip install dacy"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing from requirements.txt before installing dacy creates incorrect dependency order",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy && pip install -r requirements.txt",
+        "pip install dacy[all]",
+        "pip install --upgrade dacy"
+      ],
+      "golden_answer": "pip install dacy"
+    }
+  ]
+}

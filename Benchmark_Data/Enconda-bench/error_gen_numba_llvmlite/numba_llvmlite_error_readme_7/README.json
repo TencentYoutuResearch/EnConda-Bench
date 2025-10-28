@@ -1,0 +1,29 @@
+{
+  "readme": "numba_llvmlite_error_readme_7",
+  "repo_name": "numba_llvmlite",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary pip dependencies (cmake, numpy, setuptools) when using conda pre-built binaries",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ conda install --channel=numba llvmlite cmake numpy setuptools",
+        "$ conda install --channel=numba llvmlite\n   $ conda install cmake numpy setuptools",
+        "$ pip install llvmlite cmake numpy setuptools"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Documentation link points to nonexistent path /nonexistent.html instead of /index.html",
+      "correction_candidates": [
+        "http://llvmlite.pydata.org/en/latest/install/index.html",
+        "http://llvmlite.pydata.org/en/latest/install/build.html",
+        "http://llvmlite.pydata.org/en/latest/install/setup.html",
+        "http://llvmlite.pydata.org/en/latest/install/manual.html"
+      ],
+      "golden_answer": "http://llvmlite.pydata.org/en/latest/install/index.html"
+    }
+  ]
+}

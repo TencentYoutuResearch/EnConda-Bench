@@ -1,0 +1,29 @@
+{
+  "readme": "openqasm_openqasm_error_readme_1",
+  "repo_name": "openqasm_openqasm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -r. requirements.txt` has a syntax error due to an extra dot between `-r` and the filename.",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install requirements.txt",
+        "pip install -e .",
+        "python setup.py install"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The text states that the main dependency is `qiskit-terra`, which is incorrect. The parser's primary dependency is the ANTLR runtime, not Qiskit.",
+      "correction_candidates": [
+        "The project's dependencies are listed in the `setup.py` file.",
+        "Remove the sentence 'The main dependency is `qiskit-terra`, which is listed in the requirements file.'",
+        "The project depends on the full `qiskit` metapackage.",
+        "The main dependency is `antlr4-python3-runtime`."
+      ],
+      "golden_answer": "Remove the sentence 'The main dependency is `qiskit-terra`, which is listed in the requirements file.'"
+    }
+  ]
+}

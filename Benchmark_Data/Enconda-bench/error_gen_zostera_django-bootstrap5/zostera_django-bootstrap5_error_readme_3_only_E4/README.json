@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap5_error_readme_3_only_E4",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README refers to a non-existent directory `example_app` for the example application, when the correct directory is `example`.",
+      "correction_candidates": [
+        "The `example_app` folder must be created manually by the user.",
+        "Change the directory name from `example_app` to `example`.",
+        "Rename the `example` folder to `example_app` to match the documentation.",
+        "The example app is located in the `docs/source/example` folder."
+      ],
+      "golden_answer": "Change the directory name from `example_app` to `example`."
+    }
+  ]
+}

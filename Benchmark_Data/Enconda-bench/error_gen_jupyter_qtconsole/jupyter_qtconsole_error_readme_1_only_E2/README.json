@@ -1,0 +1,18 @@
+{
+  "readme": "jupyter_qtconsole_error_readme_1_only_E2",
+  "repo_name": "jupyter_qtconsole",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command `conda install jupyter-qtconsole` is incorrect; the package name is `qtconsole`.",
+      "correction_candidates": [
+        "conda install -c conda-forge qtconsole",
+        "conda install qtconsole",
+        "conda install jupyter_qtconsole",
+        "pip install jupyter-qtconsole"
+      ],
+      "golden_answer": "conda install qtconsole"
+    }
+  ]
+}

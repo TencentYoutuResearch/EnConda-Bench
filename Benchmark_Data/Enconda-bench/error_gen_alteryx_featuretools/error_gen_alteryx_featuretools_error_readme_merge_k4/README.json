@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_alteryx_featuretools_error_readme_merge_k4",
+  "repo_name": "alteryx_featuretools",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The primary pip installation command contains a syntax error (`--featuretools` instead of `featuretools`), which will cause the installation to fail.",
+      "correction_candidates": [
+        "python -m pip install featuretools",
+        "pip install \"featuretools\"",
+        "python pip install featuretools",
+        "pip install -p featuretools"
+      ],
+      "golden_answer": "python -m pip install featuretools"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for Dask support uses an incorrect extra identifier (`[dask-support]` instead of `[dask]`), which will fail.",
+      "correction_candidates": [
+        "python -m pip install \"featuretools[dask]\"",
+        "python -m pip install featuretools dask",
+        "python -m pip install \"featuretools[dask-complete]\"",
+        "pip install featuretools-dask"
+      ],
+      "golden_answer": "python -m pip install \"featuretools[dask]\""
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states a requirement for an outdated Python version (3.6), which may mislead users and is not the actual requirement for the latest version.",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Featuretools requires Python 3.6 for full compatibility.'",
+        "Change the sentence to 'Note: Featuretools requires Python 3.8 or newer.'",
+        "Change the sentence to 'Note: Featuretools requires Python 2.7.'",
+        "Add a note saying 'Works with any Python 3 version.'"
+      ],
+      "golden_answer": "Remove the sentence 'Note: Featuretools requires Python 3.6 for full compatibility.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The image URL for the entity set diagram points to a non-existent `master` branch instead of the correct `main` branch, resulting in a broken image link.",
+      "correction_candidates": [
+        "https://github.com/alteryx/featuretools/blob/main/docs/source/_static/images/entity_set.png?raw=true",
+        "https://raw.githubusercontent.com/alteryx/featuretools/main/docs/source/_static/images/entity_set.png",
+        "docs/source/_static/images/entity_set.png",
+        "https://github.com/alteryx/featuretools/raw/main/docs/source/_static/images/entity_set.png"
+      ],
+      "golden_answer": "https://github.com/alteryx/featuretools/blob/main/docs/source/_static/images/entity_set.png?raw=true"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Reference to development dependencies in setup.py using incorrect installation syntax",
+      "correction_candidates": [
+        "Change the command to python -m pip install -e .[dev] for proper editable installation",
+        "Use pip install -e . to install in development mode without extra dependencies",
+        "Replace with pip install -r dev-requirements.txt for development dependencies",
+        "Use python setup.py develop to install in development mode"
+      ],
+      "golden_answer": "Change the command to python -m pip install -e .[dev] for proper editable installation"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using unnecessary and potentially harmful flags",
+      "correction_candidates": [
+        "Use the standard python -m pip install featuretools command without additional flags",
+        "Replace with pip install --upgrade featuretools for safer upgrade functionality",
+        "Use conda install command instead of pip for better dependency management",
+        "Add --user flag instead of --force for user-level installation"
+      ],
+      "golden_answer": "Use the standard python -m pip install featuretools command without additional flags"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "meltano_sdk_error_readme_3",
+  "repo_name": "meltano_sdk",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install meltano-sdk` is incorrect. The correct package name on PyPI is `singer-sdk`.",
+      "correction_candidates": [
+        "pip install singer-sdk",
+        "pip install meltano[sdk]",
+        "pip install singer-sdk-py",
+        "pip install git+https://github.com/meltano/sdk.git"
+      ],
+      "golden_answer": "pip install singer-sdk"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The steps for making a new release are in the wrong order. Publishing a release should happen after the version bump is triggered and the corresponding PR is merged, not before.",
+      "correction_candidates": [
+        "The step to publish a release should be the last step, after the version bump is complete.",
+        "The steps are in the wrong order. First trigger the version bump, then follow the PR checklist, and finally publish the new release.",
+        "The order should be: Trigger version bump, Follow PR checklist, Publish new release.",
+        "The release process is incorrect. The version bump must be done before publishing."
+      ],
+      "golden_answer": "The steps are in the wrong order. First trigger the version bump, then follow the PR checklist, and finally publish the new release."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_2_only_E4",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the requirements file, `requirements/core.txt`, is incorrect. The file is typically named `requirements.txt` and located in the project's root directory.",
+      "correction_candidates": [
+        "Change the path to `requirements.txt`.",
+        "Change the command to `pip install taipy-core`.",
+        "Change the path to `setup.py` and run `pip install .`.",
+        "Create a new file at `requirements/core.txt` with the project dependencies."
+      ],
+      "golden_answer": "Change the path to `requirements.txt`."
+    }
+  ]
+}

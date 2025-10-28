@@ -1,0 +1,18 @@
+{
+  "readme": "ucoproject_uco_error_readme_6_only_E4",
+  "repo_name": "ucoproject_uco",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a config file path that likely doesn't exist in the repository",
+      "correction_candidates": [
+        "Remove the --config parameter entirely as it's not a valid setup.py option",
+        "Change the path to ./uco.cfg which is more likely to exist",
+        "Use --global-option instead of --config for configuration",
+        "Reference the config file as requirements.txt instead"
+      ],
+      "golden_answer": "Remove the --config parameter entirely as it's not a valid setup.py option"
+    }
+  ]
+}

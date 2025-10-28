@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_guardrails-ai_guardrails_error_readme_merge_k4",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The main package installation command in the 'Installation' section is incorrect; it uses the wrong package name 'guardrails' instead of 'guardrails-ai'.",
+      "correction_candidates": [
+        "pip install guardrails",
+        "pip install guardrails-ai",
+        "pip install guardrailsai",
+        "pip install guardrails.ai"
+      ],
+      "golden_answer": "pip install guardrails-ai"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install a validator from Guardrails Hub is incorrect. It uses 'guardrails install' instead of the correct 'guardrails hub install'.",
+      "correction_candidates": [
+        "guardrails hub add hub://guardrails/regex_match",
+        "guardrails get hub://guardrails/regex_match",
+        "guardrails install hub://guardrails/regex_match",
+        "guardrails hub install hub://guardrails/regex_match"
+      ],
+      "golden_answer": "guardrails hub install hub://guardrails/regex_match"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands for initial setup are in the wrong order. The user is instructed to run `guardrails configure` before `pip install guardrails-ai`, which will fail because the package is not yet installed.",
+      "correction_candidates": [
+        "Run `guardrails configure` and then `pip install guardrails-ai`.",
+        "Run `pip install guardrails-ai && guardrails configure`.",
+        "The correct order is `pip install guardrails-ai` followed by `guardrails configure`.",
+        "The commands can be run in any order."
+      ],
+      "golden_answer": "The correct order is `pip install guardrails-ai` followed by `guardrails configure`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The code example for generating structured data is missing the required 'engine' parameter in the `guard()` call, which will cause the OpenAI API call to fail.",
+      "correction_candidates": [
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, engine='gpt-3.5-turbo-instruct')",
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, model='gpt-3.5-turbo-instruct')",
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create)",
+        "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, llm='gpt-3.5-turbo-instruct')"
+      ],
+      "golden_answer": "raw_output, validated_output, *rest = guard(llm_api=openai.completions.create, engine='gpt-3.5-turbo-instruct')"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The syntax for creating a Guard with a single validator is incorrect. The example incorrectly passes the validator to the `Guard` constructor instead of using the `.use()` method.",
+      "correction_candidates": [
+        "guard = Guard.use(RegexMatch, ...)",
+        "guard = Guard().use(RegexMatch, ...)",
+        "guard = Guard().add(RegexMatch, ...)",
+        "guard = new Guard(RegexMatch, ...)"
+      ],
+      "golden_answer": "guard = Guard().use(RegexMatch, ...)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the 'Contributing Guide' in the 'Contributing' section points to a non-existent file path 'docs/CONTRIBUTING.md'.",
+      "correction_candidates": [
+        "[Contributing Guide](CONTRIBUTING)",
+        "[Contributing Guide](CONTRIBUTING.md)",
+        "[Contributing Guide](.github/CONTRIBUTING.md)",
+        "[Contributing Guide](/CONTRIBUTING.md)"
+      ],
+      "golden_answer": "[Contributing Guide](CONTRIBUTING.md)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Installation' section is missing the primary command `pip install guardrails-ai`, which is required to install the package.",
+      "correction_candidates": [
+        "The package is installed automatically when `guardrails configure` is run.",
+        "Add `pip install guardrails-ai` to the 'Installation' section.",
+        "Add `conda install guardrails-ai` to the 'Installation' section.",
+        "Add instructions to clone the repository and run `python setup.py install`."
+      ],
+      "golden_answer": "Add `pip install guardrails-ai` to the 'Installation' section."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Installation' section incorrectly states that Guardrails only works with Python 3.7, which contradicts the PyPI version badge and is overly restrictive.",
+      "correction_candidates": [
+        "Note: Guardrails only works with Python 3.7.",
+        "Note: Guardrails works with Python 2.7 and 3.7.",
+        "Remove the note about the Python version.",
+        "Note: Guardrails requires Python 3.6 or newer."
+      ],
+      "golden_answer": "Remove the note about the Python version."
+    }
+  ]
+}

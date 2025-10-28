@@ -1,0 +1,18 @@
+{
+  "readme": "robotframework_robotframework_error_readme_2_only_E4",
+  "repo_name": "robotframework_robotframework",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example test case references a resource file using the path 'resources/login.resource', implying a directory structure that is not mentioned or set up, which will likely cause a file not found error.",
+      "correction_candidates": [
+        "Resource          login.resource",
+        "Resource          ./login.resource",
+        "Resource          ${CURDIR}/login.resource",
+        "Import Resource   resources/login.resource"
+      ],
+      "golden_answer": "Resource          login.resource"
+    }
+  ]
+}

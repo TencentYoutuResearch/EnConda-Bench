@@ -1,0 +1,29 @@
+{
+  "readme": "pretalx_pretalx_error_readme_2",
+  "repo_name": "pretalx_pretalx",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions include `sudo apt-get install python3-django`, which is an unnecessary system-level dependency installation. Django should be installed via `pip` from `requirements.txt` within the virtual environment.",
+      "correction_candidates": [
+        "The command should be `sudo apt-get install python3-dev`.",
+        "The command should be run after activating the virtual environment.",
+        "Add the `--no-site-packages` flag to the `venv` command.",
+        "The command `sudo apt-get install python3-django` should be removed as Django is listed in `requirements.txt`."
+      ],
+      "golden_answer": "The command `sudo apt-get install python3-django` should be removed as Django is listed in `requirements.txt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies that Python 3.6 is required, which may be outdated or unnecessarily restrictive. The project likely supports a broader range of modern Python 3 versions.",
+      "correction_candidates": [
+        "The sentence 'This project requires Python 3.6 to run correctly' should be changed to specify Python 3.7 or newer.",
+        "The sentence 'This project requires Python 3.6 to run correctly' should be removed. The supported versions are defined in the project's packaging files and documentation.",
+        "The sentence 'This project requires Python 3.6 to run correctly' should be removed, as the specific Python version is managed by `pyenv` or defined in `setup.cfg`.",
+        "The sentence should be updated to 'This project requires Python 2.7 to run correctly'."
+      ],
+      "golden_answer": "The sentence 'This project requires Python 3.6 to run correctly' should be removed. The supported versions are defined in the project's packaging files and documentation."
+    }
+  ]
+}

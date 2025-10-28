@@ -1,0 +1,18 @@
+{
+  "readme": "robbievanleeuwen_section-properties_error_readme_2_only_E7",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package only supports Python 3.7, which is an unnecessary and inaccurate version restriction.",
+      "correction_candidates": [
+        "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'",
+        "Change the sentence to 'Note: `sectionproperties` supports Python 3.7 and newer.'",
+        "Change the sentence to 'Refer to the Python Version badge for compatibility details.'",
+        "Change the sentence to 'Note: `sectionproperties` is tested on Python 3.7+.'"
+      ],
+      "golden_answer": "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'"
+    }
+  ]
+}

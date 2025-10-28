@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_1_only_E2",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the development server is incorrect. `python manage.py run` is not a valid Django management command.",
+      "correction_candidates": [
+        "The command should be `python manage.py runserver`.",
+        "The command should be `python manage.py start`.",
+        "The command should be `pretalx runserver`.",
+        "The command should be `python manage.py startapp`."
+      ],
+      "golden_answer": "The command should be `python manage.py runserver`."
+    }
+  ]
+}

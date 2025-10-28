@@ -1,0 +1,18 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_8_only_E7",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Extremely outdated Python version requirement (2.6) that is no longer supported",
+      "correction_candidates": [
+        "This package is supported in python 3.8 and 3.9",
+        "This package requires python 3.6 or later",
+        "This package supports python 3.7+",
+        "This package is compatible with python 3.8, 3.9, and 3.10"
+      ],
+      "golden_answer": "This package is supported in python 3.8 and 3.9"
+    }
+  ]
+}

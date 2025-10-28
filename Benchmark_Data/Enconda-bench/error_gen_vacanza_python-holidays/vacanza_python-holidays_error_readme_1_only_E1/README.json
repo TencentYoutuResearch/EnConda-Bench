@@ -1,0 +1,18 @@
+{
+  "readme": "vacanza_python-holidays_error_readme_1_only_E1",
+  "repo_name": "vacanza_python-holidays",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions for installing the development version include an unnecessary step to install a non-existent package `build-tools`. This package is not a dependency for installing `holidays` from source.",
+      "correction_candidates": [
+        "Change `pip install build-tools` to `pip install wheel`.",
+        "Remove the line `First, ensure you have the latest build tools:` and the command `$ pip install build-tools`.",
+        "Change `pip install build-tools` to `pip install setuptools --upgrade`.",
+        "Move the `$ pip install build-tools` command to after the main installation command."
+      ],
+      "golden_answer": "Remove the line `First, ensure you have the latest build tools:` and the command `$ pip install build-tools`."
+    }
+  ]
+}

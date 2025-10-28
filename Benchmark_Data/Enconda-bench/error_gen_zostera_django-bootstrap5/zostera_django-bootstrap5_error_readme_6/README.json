@@ -1,0 +1,29 @@
+{
+  "readme": "zostera_django-bootstrap5_error_readme_6",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python 3.6+ and Django 2.2+ version requirements that may not be compatible with current Bootstrap 5",
+      "correction_candidates": [
+        "This package requires a combination of Python and Django that is currently supported.",
+        "This package requires Python 3.8+ and Django 3.2+ to function properly.",
+        "This package requires Python 3.9+ and Django 4.0+ to function properly.",
+        "This package requires the latest versions of Python and Django."
+      ],
+      "golden_answer": "This package requires a combination of Python and Django that is currently supported."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'python manage.py runexample' instead of 'make example'",
+      "correction_candidates": [
+        "make example",
+        "python example/manage.py runserver",
+        "django-admin runexample",
+        "python -m example"
+      ],
+      "golden_answer": "make example"
+    }
+  ]
+}

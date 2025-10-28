@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_irc_error_readme_4",
+  "repo_name": "jaraco_irc",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The added 'Installation' section suggests installing the package with `pip install python-irc`. The correct package name on PyPI is `irc`.",
+      "correction_candidates": [
+        "The correct command is `pip install irc-client`.",
+        "The package should be installed from source, not PyPI.",
+        "The correct command is `pip install irc`.",
+        "The correct command is `pip install jaraco.irc`."
+      ],
+      "golden_answer": "The correct command is `pip install irc`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The note about escaping the '#' character for channel names on a Unix command line provides an incorrect example (`/#test`). This syntax is wrong and will not work as intended in most shells.",
+      "correction_candidates": [
+        "The note is incorrect; the correct syntax is to use single quotes: `'#test'`.",
+        "The correct way to escape the character is by using `^#test`.",
+        "The note should advise using a backslash escape like `\\#test` or quoting the argument like `\"#test\"`.",
+        "The `#` character does not need to be escaped on modern Unix shells."
+      ],
+      "golden_answer": "The note should advise using a backslash escape like `\\#test` or quoting the argument like `\"#test\"`."
+    }
+  ]
+}

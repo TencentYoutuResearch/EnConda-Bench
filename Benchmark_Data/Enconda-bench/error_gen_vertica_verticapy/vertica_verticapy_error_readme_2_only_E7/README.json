@@ -1,0 +1,18 @@
+{
+  "readme": "vertica_verticapy_error_readme_2_only_E7",
+  "repo_name": "vertica_verticapy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The text claims VerticaPy is compatible with Python 3.8, but the compatibility badge only shows versions 3.9, 3.10, and 3.11, creating a version conflict.",
+      "correction_candidates": [
+        "Update the text to say 'VerticaPy is fully compatible with Python versions 3.9 and higher.'",
+        "Change the badge to include Python 3.8.",
+        "Remove the sentence 'VerticaPy is fully compatible with Python versions 3.8 and higher.'",
+        "Add a note that Python 3.8 support is experimental."
+      ],
+      "golden_answer": "Remove the sentence 'VerticaPy is fully compatible with Python versions 3.8 and higher.'"
+    }
+  ]
+}

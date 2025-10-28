@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_6_only_E2",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added incorrect setup.py command with invalid parameters for a pip-installed package",
+      "correction_candidates": [
+        "Remove the setup.py command as it's not needed for pip installations",
+        "Use pip install photutils --user instead for user-specific installation",
+        "Replace with conda install -c conda-forge photutils for conda users",
+        "Use python -m pip install photutils for module-based installation"
+      ],
+      "golden_answer": "Remove the setup.py command as it's not needed for pip installations"
+    }
+  ]
+}

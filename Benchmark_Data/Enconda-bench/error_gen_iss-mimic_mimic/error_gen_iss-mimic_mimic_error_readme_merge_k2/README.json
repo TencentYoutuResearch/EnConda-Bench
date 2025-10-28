@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_iss-mimic_mimic_error_readme_merge_k2",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The python dependencies are installed using `pip` before the virtual environment is created, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source venv/activate` command.",
+        "Add the `--user` flag to the pip command: `pip install --user -r requirements.txt`.",
+        "Remove the virtual environment creation steps and install dependencies globally.",
+        "Run `python3 -m pip install -r requirements.txt` instead of `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source venv/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment `source venv/activate` is incorrect for a standard venv layout; it should be `source venv/bin/activate`.",
+      "correction_candidates": [
+        "Change the activation command to `source venv/bin/activate`.",
+        "Change the activation command to `source ./venv/scripts/activate`.",
+        "Change the activation command to `workon venv`.",
+        "Change the activation command to `. venv/activate`."
+      ],
+      "golden_answer": "Change the activation command to `source venv/bin/activate`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The manual installation command `pip install lightstreamer-client pandas` is missing other critical dependencies like `numpy` and `pyqt5` which are required for the project to run.",
+      "correction_candidates": [
+        "Advise the user to install all dependencies from the requirements file using `pip install -r requirements.txt`.",
+        "Add the missing packages to the command: `pip install lightstreamer-client pandas numpy pyqt5`.",
+        "Instruct the user to install Anaconda and create an environment from a provided file.",
+        "Add `numpy` to the command but still omit `pyqt5`."
+      ],
+      "golden_answer": "Advise the user to install all dependencies from the requirements file using `pip install -r requirements.txt`."
+    }
+  ]
+}

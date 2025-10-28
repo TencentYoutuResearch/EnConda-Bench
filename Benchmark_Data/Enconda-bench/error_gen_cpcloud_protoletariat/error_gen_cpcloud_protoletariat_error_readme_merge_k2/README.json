@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_cpcloud_protoletariat_error_readme_merge_k2",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The example usage incorrectly runs `protol` before `protoc`. `protol` is a post-processing tool and must run after `protoc` has generated the Python files.",
+      "correction_candidates": [
+        "Swap the execution order of the `protoc` and `protol` commands in the example.",
+        "Combine the commands: `protoc ... && protol ...`.",
+        "The `protol` command should be run first to set up the environment for `protoc`.",
+        "Remove the `protoc` command, as `protol` can generate the files itself."
+      ],
+      "golden_answer": "Swap the execution order of the `protoc` and `protol` commands in the example."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `protoc` command outputs files to an `output` directory, but the `protol` command incorrectly tries to read them from an `out` directory.",
+      "correction_candidates": [
+        "In the `protoc` command, change `--python_out=output` to `--python_out=out`.",
+        "In the `protol` command, change `--python-out out` to `--python-out output`.",
+        "Add a step `mv output out` between the `protoc` and `protol` commands.",
+        "Use a variable: `DIR=output; protoc --python_out=$DIR ...; protol --python-out $DIR ...`."
+      ],
+      "golden_answer": "In the `protoc` command, change `--python_out=output` to `--python_out=out`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "A note incorrectly states that `protoletariat` is only compatible with `protoc` version 2.5.0, which is outdated and likely to cause compatibility issues with modern protobuf features.",
+      "correction_candidates": [
+        "Remove the note about the `protoc` version requirement.",
+        "Change the note to \"requires `protoc` version 3.0.0 or newer.\"",
+        "The tool `protol` automatically installs the correct version of `protoc`.",
+        "Change the note to \"requires `protoc` version 3.20.0, but is backwards-compatible with 2.5.0.\""
+      ],
+      "golden_answer": "Remove the note about the `protoc` version requirement."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The description for the `protoc` subcommand is misleading. It claims the command validates syntax, but its actual purpose in `protoletariat` is to generate `FileDescriptorSet` bytes for import rewriting.",
+      "correction_candidates": [
+        "Change the description to: \"Uses `protoc` to generate `FileDescriptorSet` bytes\"",
+        "Change the description to: \"Wraps the `protoc` compiler to fix imports\"",
+        "Change the description to: \"Generates Python code using `protoc` and a `FileDescriptorSet`\"",
+        "Change the description to: \"Interfaces with the `protoc` binary to get dependency information\""
+      ],
+      "golden_answer": "Change the description to: \"Uses `protoc` to generate `FileDescriptorSet` bytes\""
+    }
+  ]
+}

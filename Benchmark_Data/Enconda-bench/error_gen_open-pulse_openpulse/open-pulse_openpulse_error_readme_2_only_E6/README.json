@@ -1,0 +1,18 @@
+{
+  "readme": "open-pulse_openpulse_error_readme_2_only_E6",
+  "repo_name": "open-pulse_openpulse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The instructions suggest running the application before installing its dependencies with 'poetry install'.",
+      "correction_candidates": [
+        "The `poetry install` command should be executed before the `poetry run python pulse` command.",
+        "The `poetry run python pulse` command should be run from a different directory.",
+        "The commands should be combined into a single line: `poetry install && poetry run python pulse`",
+        "The `poetry install` command is optional and can be skipped."
+      ],
+      "golden_answer": "The `poetry install` command should be executed before the `poetry run python pulse` command."
+    }
+  ]
+}

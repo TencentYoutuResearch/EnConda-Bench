@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_8_only_E2",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax for running the bot - should be ./main.py not python main.py",
+      "correction_candidates": [
+        "Change python main.py to ./main.py",
+        "Change python main.py to python3 main.py",
+        "Change python main.py to python -m main",
+        "Change python main.py to ./scripts/run.sh"
+      ],
+      "golden_answer": "Change python main.py to ./main.py"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_irc_error_readme_4_only_E1",
+  "repo_name": "jaraco_irc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The added 'Installation' section suggests installing the package with `pip install python-irc`. The correct package name on PyPI is `irc`.",
+      "correction_candidates": [
+        "The correct command is `pip install irc-client`.",
+        "The package should be installed from source, not PyPI.",
+        "The correct command is `pip install irc`.",
+        "The correct command is `pip install jaraco.irc`."
+      ],
+      "golden_answer": "The correct command is `pip install irc`."
+    }
+  ]
+}

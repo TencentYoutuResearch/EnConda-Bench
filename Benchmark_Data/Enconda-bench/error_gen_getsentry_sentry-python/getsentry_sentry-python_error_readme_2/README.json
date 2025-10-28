@@ -1,0 +1,29 @@
+{
+  "readme": "getsentry_sentry-python_error_readme_2",
+  "repo_name": "getsentry_sentry-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly advise installing `raven`, the old and deprecated Sentry client, which is unnecessary and can cause confusion.",
+      "correction_candidates": [
+        "Replace `pip install raven` with `pip install sentry`.",
+        "Remove the line `pip install raven`.",
+        "Change `pip install raven` to `pip install raven --upgrade`.",
+        "Combine the commands into `pip install raven sentry-sdk`."
+      ],
+      "golden_answer": "Remove the line `pip install raven`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Usage' section appears before the 'Configuration' section. The SDK must be initialized with `sentry_sdk.init()` before it can be used to capture events, so the logical order is incorrect.",
+      "correction_candidates": [
+        "Move the `sentry_sdk.init(...)` call into the 'Usage' section, before `capture_message`.",
+        "Swap the 'Usage' and 'Configuration' sections so that 'Configuration' comes first.",
+        "Combine the 'Configuration' and 'Usage' sections into a single 'Setup' section.",
+        "Add a note at the top of the 'Usage' section that configuration must be done first."
+      ],
+      "golden_answer": "Swap the 'Usage' and 'Configuration' sections so that 'Configuration' comes first."
+    }
+  ]
+}

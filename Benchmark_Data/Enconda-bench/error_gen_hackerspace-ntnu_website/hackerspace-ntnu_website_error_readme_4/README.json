@@ -1,0 +1,29 @@
+{
+  "readme": "hackerspace-ntnu_website_error_readme_4",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions say to run `pre-commit install` before `pip install -r requirements.txt`. This will fail because the `pre-commit` package itself has not been installed yet.",
+      "correction_candidates": [
+        "Run `pip install pre-commit` before `pre-commit install`.",
+        "Combine the commands: `pre-commit install && pip install -r requirements.txt`.",
+        "Swap the order of the `pip install` and `pre-commit install` steps.",
+        "Remove the `pre-commit install` step as it is optional for development."
+      ],
+      "golden_answer": "Swap the order of the `pip install` and `pre-commit install` steps."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The 'Reset database' section instructs the user to delete the database file but omits the necessary `python manage.py migrate` command to recreate the database schema.",
+      "correction_candidates": [
+        "Add the command `python manage.py makemigrations` after deleting the database file.",
+        "Add the command `python manage.py migrate` after deleting the database file and before loading fixtures.",
+        "Replace the deletion step with the `python manage.py flush` command, which clears data without deleting the file.",
+        "Add the command `python manage.py loaddata fixtures.json` immediately after deleting the database file."
+      ],
+      "golden_answer": "Add the command `python manage.py migrate` after deleting the database file and before loading fixtures."
+    }
+  ]
+}

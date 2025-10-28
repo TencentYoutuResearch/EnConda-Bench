@@ -1,0 +1,18 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_1_only_E2",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the development server is incorrect. `python manage.py startapp` is used for creating a new Django application, not for running the server.",
+      "correction_candidates": [
+        "Change `python manage.py startapp` to `python manage.py run`.",
+        "Change `python manage.py startapp` to `django-admin runserver`.",
+        "Change `python manage.py startapp` to `python manage.py runserver`.",
+        "Change `python manage.py startapp` to `python manage.py start`."
+      ],
+      "golden_answer": "Change `python manage.py startapp` to `python manage.py runserver`."
+    }
+  ]
+}

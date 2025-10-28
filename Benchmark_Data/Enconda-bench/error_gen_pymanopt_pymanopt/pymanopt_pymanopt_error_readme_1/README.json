@@ -1,0 +1,29 @@
+{
+  "readme": "pymanopt_pymanopt_error_readme_1",
+  "repo_name": "pymanopt_pymanopt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The user is instructed to install an old and unnecessary dependency, `tensorflow<2.0`, before installing pymanopt. Pymanopt should be installed directly, which pulls in the correct dependencies for a chosen backend if needed.",
+      "correction_candidates": [
+        "Remove the `pip install tensorflow<2.0>` line. Pymanopt can be installed without a specific backend first.",
+        "Change the installation command to `pip install \"pymanopt[tensorflow]\"` to correctly install the package with its TensorFlow extras.",
+        "Update the command to `pip install tensorflow` to get the latest version.",
+        "Replace `pip install tensorflow<2.0` with `pip install autograd numpy`."
+      ],
+      "golden_answer": "Remove the `pip install tensorflow<2.0>` line. Pymanopt can be installed without a specific backend first."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install pymanopt --update` is incorrect. The correct flag for upgrading a package with pip is `--upgrade` or `-U`, and `update` is not a valid option.",
+      "correction_candidates": [
+        "Replace `--update` with the correct `--upgrade` flag: `pip install pymanopt --upgrade`.",
+        "The correct command for a new installation is simply `pip install pymanopt`.",
+        "Use the short flag for upgrade: `pip install -U pymanopt`.",
+        "The command should be `pip update pymanopt`."
+      ],
+      "golden_answer": "The correct command for a new installation is simply `pip install pymanopt`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "gpflow_gpflow_error_readme_4_only_E1",
+  "repo_name": "gpflow_gpflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The version requirement for TensorFlow Probability (TFP) is omitted. This is problematic because TFP releases are tightly coupled to specific TensorFlow versions, and installing the latest TFP with an older TensorFlow will cause import errors.",
+      "correction_candidates": [
+        "Specify the TFP version: `TensorFlow Probability (TFP, version ≥ 0.12)`.",
+        "Specify the TFP version: `TensorFlow Probability (TFP, version == 0.12)`.",
+        "Add a note: 'Install a version of TFP that matches your TensorFlow version.'",
+        "Remove the mention of TFP, as it is a dependency of GPflow."
+      ],
+      "golden_answer": "Specify the TFP version: `TensorFlow Probability (TFP, version ≥ 0.12)`."
+    }
+  ]
+}

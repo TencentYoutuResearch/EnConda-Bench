@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_7_only_E1",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Suggested installing unnecessary dependencies (setuptools, wheel, build) that are not required for Poetry usage",
+      "correction_candidates": [
+        "Poetry handles dependencies automatically, no need to install additional packages",
+        "Only install Poetry itself using the official installer",
+        "Install Poetry using pip install poetry, no additional dependencies needed",
+        "Use the official Poetry installer script without installing extra packages"
+      ],
+      "golden_answer": "Poetry handles dependencies automatically, no need to install additional packages"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "readme": "error_gen_pylabrobot_pylabrobot_error_readme_merge_k7",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The code example for the Hamilton STAR robot references a layout file at a non-existent path \"layouts/hamilton-layout.json\" without instructions to create this directory or noting that it is a placeholder.",
+      "correction_candidates": [
+        "deck = Deck.load_from_json_file(\"hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"./hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"pylabrobot/resources/hamilton-layout.json\")",
+        "deck = Deck.load_from_json(\"hamilton-layout.json\")"
+      ],
+      "golden_answer": "deck = Deck.load_from_json_file(\"hamilton-layout.json\")"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `aspirate` method in the Hamilton STAR example uses an incorrect parameter `vol` instead of the correct parameter `vols`.",
+      "correction_candidates": [
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)",
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], volume=100)",
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], 100)",
+        "await lh.aspirate(well=lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)"
+      ],
+      "golden_answer": "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "An installation command is provided with the `--no-deps` flag, which will prevent necessary dependencies from being installed, leading to runtime errors.",
+      "correction_candidates": [
+        "Change the command to `pip install pylabrobot`.",
+        "Remove the sentence \"You can install PyLabRobot with `pip install pylabrobot --no-deps`.\"",
+        "Change the command to `pip install \"pylabrobot[all]\"`.",
+        "Change the command to `python -m pip install pylabrobot`."
+      ],
+      "golden_answer": "Change the command to `pip install pylabrobot`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that PyLabRobot is built on Python 3.6+ features, while it actually requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change \"Python 3.6+\" to \"Python 3.8+\".",
+        "Change \"Python 3.6+\" to \"the latest version of Python\".",
+        "Change \"Python 3.6+\" to \"Python 3\".",
+        "Change \"Python 3.6+\" to \"Python >= 3.8\"."
+      ],
+      "golden_answer": "Change \"Python 3.6+\" to \"Python 3.8+\"."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the Hamilton STAR example, the `lh.setup()` command is called after other liquid handling operations, which will fail because the robot connection is not established first.",
+      "correction_candidates": [
+        "Move the `await lh.setup()` line to be right after the `lh = LiquidHandler(...)` line.",
+        "The `setup()` call should be `lh.setup()` instead of `await lh.setup()`.",
+        "The `setup()` call is unnecessary and should be removed.",
+        "Move the `await lh.setup()` line to be before the `deck = Deck.load_from_json_file(...)` line."
+      ],
+      "golden_answer": "Move the `await lh.setup()` line to be right after the `lh = LiquidHandler(...)` line."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pump example uses an incorrect method name `run_for` and an incorrect parameter `time` instead of the correct `run_for_duration` method and `duration` parameter.",
+      "correction_candidates": [
+        "await p.run_for_duration(speed=100, duration=30)",
+        "await p.run_duration(speed=100, duration=30)",
+        "await p.run_for_duration(rpm=100, seconds=30)",
+        "await p.run(speed=100, duration=30)"
+      ],
+      "golden_answer": "await p.run_for_duration(speed=100, duration=30)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referenced incorrect file path 'hamilton-config.json' instead of 'hamilton-layout.json'",
+      "correction_candidates": [
+        "deck = Deck.load_from_json_file(\"hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"hamilton-setup.json\")",
+        "deck = Deck.load_from_json_file(\"hamilton-deck.json\")",
+        "deck = Deck.load_from_json_file(\"hamilton-configuration.json\")"
+      ],
+      "golden_answer": "deck = Deck.load_from_json_file(\"hamilton-layout.json\")"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - installing pip package before system dependencies",
+      "correction_candidates": [
+        "First, create a virtual environment:\n```bash\npython -m venv venv\nsource venv/bin/activate\npip install pylabrobot\n```",
+        "First, install the required system dependencies:\n```bash\nsudo apt-get install python3-dev libusb-1.0-0-dev\n```\nThen install PyLabRobot:\n```bash\npip install pylabrobot\n```",
+        "Install PyLabRobot using conda:\n```bash\nconda install -c conda-forge pylabrobot\n```",
+        "First, update your system:\n```bash\nsudo apt-get update\nsudo apt-get install python3-dev libusb-1.0-0-dev\npip install pylabrobot\n```"
+      ],
+      "golden_answer": "First, install the required system dependencies:\n```bash\nsudo apt-get install python3-dev libusb-1.0-0-dev\n```\nThen install PyLabRobot:\n```bash\npip install pylabrobot\n```"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Invalid Python syntax 'setup p' instead of 'await p.setup()'",
+      "correction_candidates": [
+        "await p.setup()",
+        "p.setup()",
+        "await p.initialize()",
+        "p.start()"
+      ],
+      "golden_answer": "await p.setup()"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Listed unnecessary heavy dependencies like TensorFlow, PyTorch, OpenCV that are not actually required for PyLabRobot",
+      "correction_candidates": [
+        "To install PyLabRobot, simply run: pip install pylabrobot",
+        "PyLabRobot has minimal dependencies and can be installed with: pip install pylabrobot",
+        "To install PyLabRobot, you need Python 3.8+ and can install with: pip install pylabrobot",
+        "PyLabRobot requires only standard Python libraries and can be installed with: pip install pylabrobot"
+      ],
+      "golden_answer": "PyLabRobot has minimal dependencies and can be installed with: pip install pylabrobot"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Missing clear installation instructions in a prominent location",
+      "correction_candidates": [
+        "## Installation\n\nInstall PyLabRobot using pip:\n\n```bash\npip install pylabrobot\n```",
+        "## Quick Start\n\nFirst install PyLabRobot:\n\n```bash\npip install pylabrobot\n```",
+        "## Setup\n\nTo get started, install PyLabRobot:\n\n```bash\npip install pylabrobot\n```",
+        "## Getting Started\n\nInstall PyLabRobot with:\n\n```bash\npip install pylabrobot\n```"
+      ],
+      "golden_answer": "## Installation\n\nInstall PyLabRobot using pip:\n\n```bash\npip install pylabrobot\n```"
+    }
+  ]
+}

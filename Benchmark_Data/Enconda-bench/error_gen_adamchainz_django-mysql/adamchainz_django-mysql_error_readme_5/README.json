@@ -1,0 +1,29 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_5",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added incorrect system dependency installation command and forced specific version of mysqlclient without proper context",
+      "correction_candidates": [
+        "Remove the installation instructions and refer users to the official installation documentation",
+        "Install system dependencies with `brew install mysql` on macOS and use `pip install django-mysql` without version pinning",
+        "Use `apt-get install default-libmysqlclient-dev` and install with `pip install django-mysql` allowing automatic dependency resolution",
+        "Install with conda using `conda install django-mysql` and avoid manual system dependency management"
+      ],
+      "golden_answer": "Remove the installation instructions and refer users to the official installation documentation"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Pinned mysqlclient to a specific version without explaining compatibility requirements or supported version ranges",
+      "correction_candidates": [
+        "Specify supported Python versions and compatible mysqlclient version ranges in the requirements section",
+        "Remove version pinning and let pip resolve compatible versions automatically",
+        "Add a compatibility matrix showing which versions work together",
+        "Use version ranges like mysqlclient>=2.0.0,<3.0.0 instead of exact pinning"
+      ],
+      "golden_answer": "Remove version pinning and let pip resolve compatible versions automatically"
+    }
+  ]
+}

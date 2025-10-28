@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_pypa_twine_error_readme_merge_k3",
+  "repo_name": "pypa_twine",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install twine-wheel` is incorrect. The package on PyPI is named `twine`, not `twine-wheel`.",
+      "correction_candidates": [
+        "Run `pip install twine`.",
+        "Run `pip install twine-package`.",
+        "Download the wheel from PyPI and install it directly.",
+        "Run `python -m pip install pypa/twine`."
+      ],
+      "golden_answer": "Run `pip install twine`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `twine --upload dist/*` is syntactically incorrect. `upload` is a subcommand, not an option, so it should not be preceded by dashes.",
+      "correction_candidates": [
+        "The correct command is `twine upload dist/*`.",
+        "The correct command is `twine -u dist/*`.",
+        "The correct command is `twine --push dist/*`.",
+        "The correct command is `python -m twine --upload dist/*`."
+      ],
+      "golden_answer": "The correct command is `twine upload dist/*`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions tell the user to `pip install twine` before creating and activating the virtual environment. This installs Twine in the global or user site-packages, defeating the purpose of the virtual environment for this tool.",
+      "correction_candidates": [
+        "Reverse the order: create and activate the virtual environment first, then run `pip install twine`.",
+        "Use `pipx install twine` to install Twine in an isolated environment separate from the project.",
+        "Run `pip install twine --user` before creating the virtual environment.",
+        "After activating the virtual environment, run `pip install --upgrade twine`."
+      ],
+      "golden_answer": "Reverse the order: create and activate the virtual environment first, then run `pip install twine`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The usage example `twine upload build/*` points to the wrong directory. Standard Python build tools place distribution packages in the `dist/` directory, not `build/`, so Twine will not find any files to upload.",
+      "correction_candidates": [
+        "Change the path from `build/*` to `dist/*`.",
+        "First, run `mv build/*.whl dist/`.",
+        "Use the command `twine upload --build-dir build/*`.",
+        "Change the path to `build/lib/*`."
+      ],
+      "golden_answer": "Change the path from `build/*` to `dist/*`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The example `.pypirc` configuration is missing the required `[pypi]` section header. Without the header, Twine cannot parse the file correctly.",
+      "correction_candidates": [
+        "Add `[pypi]` on a new line before the `username` field.",
+        "Change the header to `[credentials]`.",
+        "Use environment variables `TWINE_USERNAME` and `TWINE_PASSWORD` instead of a file.",
+        "Enclose the credentials in quotes."
+      ],
+      "golden_answer": "Add `[pypi]` on a new line before the `username` field."
+    }
+  ]
+}

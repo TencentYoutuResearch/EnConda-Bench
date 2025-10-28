@@ -1,0 +1,18 @@
+{
+  "readme": "rcmdnk_homebrew-file_error_readme_3_only_E6",
+  "repo_name": "rcmdnk_homebrew-file",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. It instructs the user to run `brew file install` before tapping the repository that provides the `brew file` command, which will cause a 'command not found' error.",
+      "correction_candidates": [
+        "Swap the order of steps 1 and 2.",
+        "Combine steps 1 and 2 into `brew tap rcmdnk/homebrew-file && brew file install`.",
+        "Remove step 1 as it is a usage command, not an installation step.",
+        "Change step 1 to `brew install brew-file`."
+      ],
+      "golden_answer": "Swap the order of steps 1 and 2."
+    }
+  ]
+}

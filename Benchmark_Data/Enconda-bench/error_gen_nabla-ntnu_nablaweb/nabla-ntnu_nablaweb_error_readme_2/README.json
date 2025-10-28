@@ -1,0 +1,29 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_2",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. It instructs to install pre-commit hooks before installing the project dependencies with 'pipenv install', which will fail because the pre-commit package is not yet installed.",
+      "correction_candidates": [
+        "Reverse the order of the two commands in the 'Installasjon' section.",
+        "Combine the two commands into 'pipenv install && pipenv run pre-commit install'.",
+        "Remove the 'pipenv run pre-commit install' step from the 'Installasjon' section.",
+        "Add 'pipenv shell' before the two commands."
+      ],
+      "golden_answer": "Reverse the order of the two commands in the 'Installasjon' section."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'pipenv' dependency is missing from the system dependencies list, but it is required to manage Python packages and run commands.",
+      "correction_candidates": [
+        "Add 'pip' to the system dependencies list.",
+        "Add 'pipenv' to the system dependencies list.",
+        "Add 'virtualenv' to the system dependencies list.",
+        "Remove the mention of 'pipenv' from the pre-commit command in the Kodestil section."
+      ],
+      "golden_answer": "Add 'pipenv' to the system dependencies list."
+    }
+  ]
+}

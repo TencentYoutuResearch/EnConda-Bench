@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_8_only_E2",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Inconsistent pip command usage - uses 'pip' instead of 'python3 -m pip' for development version installation",
+      "correction_candidates": [
+        "$ python3 -m pip install -U .[voice]",
+        "$ python -m pip install -U .[voice]",
+        "$ pip3 install -U .[voice]",
+        "$ python3 -m pip install --editable .[voice]"
+      ],
+      "golden_answer": "$ python3 -m pip install -U .[voice]"
+    }
+  ]
+}

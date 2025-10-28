@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_extension-helpers_error_readme_2",
+  "repo_name": "astropy_extension-helpers",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README misleadingly states the package is tested for Python 2.7, which is an end-of-life version and not the target for modern packages.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.7+.'",
+        "Remove the sentence 'This package is tested for use with Python 2.7.'",
+        "Add a note stating that 'Python 3 is not supported'.",
+        "Change 'Python 2.7' to 'the latest version of Python'."
+      ],
+      "golden_answer": "Remove the sentence 'This package is tested for use with Python 2.7.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs users to create a configuration file at `/etc/extension-helpers.cfg`, which is not a standard practice for this library, and the file is not used.",
+      "correction_candidates": [
+        "Replace `/etc/extension-helpers.cfg` with `~/.config/extension-helpers/config.cfg`.",
+        "Remove the entire 'Usage' section as configuration is handled via `setup.cfg` or `pyproject.toml`.",
+        "Replace `/etc/extension-helpers.cfg` with `pyproject.toml`.",
+        "State that the configuration file is optional."
+      ],
+      "golden_answer": "Remove the entire 'Usage' section as configuration is handled via `setup.cfg` or `pyproject.toml`."
+    }
+  ]
+}

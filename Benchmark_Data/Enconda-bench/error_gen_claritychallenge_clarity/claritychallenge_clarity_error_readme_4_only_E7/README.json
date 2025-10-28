@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_4_only_E7",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the 'GitHub Cloning' section, the instruction `conda create --name clarity python=2.7` specifies Python 2.7, which is end-of-life and incompatible with modern scientific computing libraries and syntax used in this project.",
+      "correction_candidates": [
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python",
+        "conda create --name clarity python=3",
+        "conda create --name clarity python=2.7 anaconda"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    }
+  ]
+}

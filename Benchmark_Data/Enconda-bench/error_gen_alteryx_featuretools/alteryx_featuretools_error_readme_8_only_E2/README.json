@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_8_only_E2",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using unnecessary and potentially harmful flags",
+      "correction_candidates": [
+        "Use the standard python -m pip install featuretools command without additional flags",
+        "Replace with pip install --upgrade featuretools for safer upgrade functionality",
+        "Use conda install command instead of pip for better dependency management",
+        "Add --user flag instead of --force for user-level installation"
+      ],
+      "golden_answer": "Use the standard python -m pip install featuretools command without additional flags"
+    }
+  ]
+}

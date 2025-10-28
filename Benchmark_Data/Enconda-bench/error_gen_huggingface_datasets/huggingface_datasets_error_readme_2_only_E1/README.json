@@ -1,0 +1,18 @@
+{
+  "readme": "huggingface_datasets_error_readme_2_only_E1",
+  "repo_name": "huggingface_datasets",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command includes an unnecessary and incorrect package, `huggingface`, which is not the correct library for this purpose.",
+      "correction_candidates": [
+        "pip install datasets[huggingface]",
+        "pip install datasets",
+        "pip install huggingface-datasets",
+        "pip install datasets && pip install huggingface"
+      ],
+      "golden_answer": "pip install datasets"
+    }
+  ]
+}

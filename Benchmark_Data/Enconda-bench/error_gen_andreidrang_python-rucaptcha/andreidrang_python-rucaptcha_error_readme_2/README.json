@@ -1,0 +1,29 @@
+{
+  "readme": "andreidrang_python-rucaptcha_error_readme_2",
+  "repo_name": "andreidrang_python-rucaptcha",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README claims full support for Python 3.8, but the changelog for v6.0 explicitly states that Python 3.8 support was dropped.",
+      "correction_candidates": [
+        "Change the sentence to 'Full support for Python 3.9 and newer is guaranteed.'",
+        "Install a version compatible with Python 3.8, like `pip install python-rucaptcha<6.0`.",
+        "Remove the sentence 'Full support for Python 3.8 and newer is guaranteed.'",
+        "Update the changelog to remove the mention of dropping Python 3.8 support."
+      ],
+      "golden_answer": "Remove the sentence 'Full support for Python 3.8 and newer is guaranteed.'"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions state to run tests before setting the required `RUCAPTCHA_KEY` environment variable, which will cause the tests to fail due to a missing API key.",
+      "correction_candidates": [
+        "Combine the steps into one command: `RUCAPTCHA_KEY=YOUR_KEY make tests`.",
+        "The tests can be run without an API key by using a specific flag: `make tests --no-api-key`.",
+        "The environment variable should be set in a `.env` file, not manually.",
+        "Reverse the order of the steps: first set the environment variable, then run `make tests`."
+      ],
+      "golden_answer": "Reverse the order of the steps: first set the environment variable, then run `make tests`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "textext_textext_error_readme_1_only_E4",
+  "repo_name": "textext_textext",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the main documentation is incorrect, pointing to `/docs` instead of the correct root path of the documentation website.",
+      "correction_candidates": [
+        "Change the documentation URL to `https://github.com/textext/textext/wiki`.",
+        "Change the documentation URL to `https://textext.github.io/textext/index.html`.",
+        "Change the documentation URL to `https://textext.github.io/`.",
+        "Change the documentation URL to `https://textext.github.io/textext`."
+      ],
+      "golden_answer": "Change the documentation URL to `https://textext.github.io/textext`."
+    }
+  ]
+}

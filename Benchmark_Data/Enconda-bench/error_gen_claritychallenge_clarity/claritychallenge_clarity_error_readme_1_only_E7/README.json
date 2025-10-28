@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_1_only_E7",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the PyPI installation instructions, the command `conda create --name clarity` does not specify a Python version, which can lead to an environment with an incompatible Python version being created.",
+      "correction_candidates": [
+        "conda create --name clarity python",
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python>=3.8",
+        "conda env create -f environment.yml"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "quantumjot_btrack_error_readme_4_only_E7",
+  "repo_name": "quantumjot_btrack",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The note on C++ compatibility incorrectly states that `btrack<=0.5.0` used `C++=17` and `btrack==0.5.1` uses `C++=11`. This is the reverse of the correct information and could mislead developers trying to build the package from source.",
+      "correction_candidates": [
+        "The note should state that `btrack<=0.5.0` used `C++=11` and `btrack==0.5.1` onwards uses `C++=17`.",
+        "The note should be removed as the compiler handles this automatically.",
+        "The note should state that all versions now require `C++=17` for consistency.",
+        "The note should state that `btrack<=0.5.0` used `C++=14` and `btrack==0.5.1` uses `C++=11`."
+      ],
+      "golden_answer": "The note should state that `btrack<=0.5.0` used `C++=11` and `btrack==0.5.1` onwards uses `C++=17`."
+    }
+  ]
+}

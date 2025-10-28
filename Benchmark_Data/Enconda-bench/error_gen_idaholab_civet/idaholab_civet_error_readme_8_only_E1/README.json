@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_8_only_E1",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "References non-existent civet-config-parser package",
+      "correction_candidates": [
+        "Remove the civet-config-parser dependency entirely",
+        "Use standard text editor for configuration files",
+        "Replace with built-in configuration management",
+        "Install pyyaml for YAML configuration parsing"
+      ],
+      "golden_answer": "Remove the civet-config-parser dependency entirely"
+    }
+  ]
+}

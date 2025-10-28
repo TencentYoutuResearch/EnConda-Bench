@@ -1,0 +1,18 @@
+{
+  "readme": "bradenm_micropy-cli_error_readme_3_only_E7",
+  "repo_name": "bradenm_micropy-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the tool is only compatible with Python 3.7. This is an unnecessarily restrictive and likely false version constraint, as indicated by the PyPI versions badge.",
+      "correction_candidates": [
+        "Remove the note about Python 3.7 compatibility.",
+        "Change the note to state it is compatible with Python 3.6 and higher.",
+        "Change the note to state it is only compatible with Python 2.7.",
+        "Change the note to state it requires the latest version of Python 3."
+      ],
+      "golden_answer": "Remove the note about Python 3.7 compatibility."
+    }
+  ]
+}

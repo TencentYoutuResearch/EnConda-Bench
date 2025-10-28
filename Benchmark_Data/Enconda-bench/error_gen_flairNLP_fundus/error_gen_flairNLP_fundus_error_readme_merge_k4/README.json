@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_flairNLP_fundus_error_readme_merge_k4",
+  "repo_name": "flairNLP_fundus",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3+' which is too vague and might cause users to try running it with unsupported older versions of Python 3, leading to compatibility errors. The library requires a more specific minimum version.",
+      "correction_candidates": [
+        "Fundus requires Python 3.6+.",
+        "Fundus requires Python 3.8+.",
+        "Fundus requires Python 3.8 or newer.",
+        "Fundus is compatible with Python versions 3.8, 3.9, and 3.10."
+      ],
+      "golden_answer": "Fundus requires Python 3.8+."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In Example 2, the code `Crawler(PublisherCollection.TheNewYorker)` will raise an AttributeError because `PublisherCollection` does not have a `TheNewYorker` attribute directly. Publishers are grouped by country code.",
+      "correction_candidates": [
+        "crawler = Crawler(\"TheNewYorker\")",
+        "crawler = Crawler(PublisherCollection.us[\"TheNewYorker\"])",
+        "crawler = Crawler(PublisherCollection.us.TheNewYorker)",
+        "crawler = Crawler(PublisherCollection.get(\"TheNewYorker\"))"
+      ],
+      "golden_answer": "crawler = Crawler(PublisherCollection.us.TheNewYorker)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Quick Start' section is logically incorrect. It presents the example code block before the instructions for installing the required 'fundus' package, which will cause a ModuleNotFoundError if followed sequentially.",
+      "correction_candidates": [
+        "Move the 'pip install fundus' command block to be the first step in the 'Quick Start' section.",
+        "Add 'import os' to the top of the script.",
+        "Run 'python -m pip install fundus' instead.",
+        "Create a virtual environment before running the code."
+      ],
+      "golden_answer": "Move the 'pip install fundus' command block to be the first step in the 'Quick Start' section."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions include 'pip install beautifulsoup4', which is an unnecessary dependency. The 'fundus' package manages its own dependencies automatically when installed.",
+      "correction_candidates": [
+        "pip install lxml beautifulsoup4",
+        "pip install fundus[parsing]",
+        "Remove the line 'pip install beautifulsoup4'. 'fundus' handles its own dependencies.",
+        "pip install --upgrade beautifulsoup4"
+      ],
+      "golden_answer": "Remove the line 'pip install beautifulsoup4'. 'fundus' handles its own dependencies."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install fundus --no-cache` is incorrect. `--no-cache` is not a valid pip install option and will cause an error. The correct flag to disable the cache is `--no-cache-dir`.",
+      "correction_candidates": [
+        "pip install fundus --no-cache-dir",
+        "pip install \"fundus\"",
+        "pip install fundus",
+        "python -m pip install fundus"
+      ],
+      "golden_answer": "pip install fundus"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (beautifulsoup4, lxml, requests) to the pip install command when they should be automatically installed as dependencies",
+      "correction_candidates": [
+        "pip install fundus",
+        "pip install fundus[dev]",
+        "pip install --upgrade fundus",
+        "conda install fundus"
+      ],
+      "golden_answer": "pip install fundus"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_keyring_error_readme_3_only_E1",
+  "repo_name": "jaraco_keyring",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Installation - Linux' section, the instruction to install the dbus dependency via pip is 'pip install python-dbus', which is an incorrect package name. The correct package is 'dbus-python'.",
+      "correction_candidates": [
+        "Suggest running `pip install dbus-python`.",
+        "Suggest running `pip install dbus`.",
+        "Suggest running `sudo apt-get install python3-dbus` instead of using pip.",
+        "Suggest running `pip install pydbus`."
+      ],
+      "golden_answer": "Suggest running `pip install dbus-python`."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_pyvisa_pyvisa_error_readme_merge_k3",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command is incorrect, using 'py-visa' which is not the correct package name on PyPI.",
+      "correction_candidates": [
+        "$ pip install pyvisa",
+        "$ pip install pyvisa --upgrade",
+        "$ python -m pip install pyvisa",
+        "$ pip install PyVISA"
+      ],
+      "golden_answer": "$ pip install pyvisa"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README omits the critical non-Python dependency on a VISA library (e.g., NI-VISA), which must be installed on the system for PyVISA to function.",
+      "correction_candidates": [
+        "In the 'Requirements' section, add the following line: - VISA (tested with NI-VISA 17.5, Win7, from www.ni.com/visa and Keysight-VISA )",
+        "Add a note saying 'A VISA backend implementation like NI-VISA must be installed separately.'",
+        "The pip install command should be `pip install pyvisa[visa]`",
+        "The requirements should list `NI-VISA`."
+      ],
+      "golden_answer": "In the 'Requirements' section, add the following line: - VISA (tested with NI-VISA 17.5, Win7, from www.ni.com/visa and Keysight-VISA )"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest creating a virtual environment after installing the package, which is the wrong order. The environment should be created and activated before installation.",
+      "correction_candidates": [
+        "Move the 'Recommended Setup' section to be before the 'Installation' section and recommend running installation commands inside the virtual environment.",
+        "Delete the 'Recommended Setup' section entirely.",
+        "Change the instruction to 'It is recommended to create a virtual environment *before* installing packages.'",
+        "The `pip install` command should be run inside the virtual environment."
+      ],
+      "golden_answer": "Move the 'Recommended Setup' section to be before the 'Installation' section and recommend running installation commands inside the virtual environment."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `easy_install` command has incorrect syntax, using a non-existent '--install' flag.",
+      "correction_candidates": [
+        "$ easy_install pyvisa",
+        "$ easy_install PyVISA",
+        "Remove the `--install` flag from the `easy_install` command.",
+        "The `easy_install` command does not take flags for simple installation."
+      ],
+      "golden_answer": "$ easy_install pyvisa"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command for installing from source references a non-existent 'install.py' file instead of the correct 'setup.py'.",
+      "correction_candidates": [
+        "$ python setup.py install",
+        "$ python3 setup.py install",
+        "The installation script is named `setup.py`, not `install.py`.",
+        "Change `install.py` to `setup.py`."
+      ],
+      "golden_answer": "$ python setup.py install"
+    }
+  ]
+}

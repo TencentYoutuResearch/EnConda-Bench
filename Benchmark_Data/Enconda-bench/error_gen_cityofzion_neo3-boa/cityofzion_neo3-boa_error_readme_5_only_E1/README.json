@@ -1,0 +1,18 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_5_only_E1",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary cryptography dependency to pip install command",
+      "correction_candidates": [
+        "$ pip install neo3-boa",
+        "$ pip install neo3-boa setuptools",
+        "$ pip install neo3-boa requests",
+        "$ pip install neo3-boa wheel"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    }
+  ]
+}

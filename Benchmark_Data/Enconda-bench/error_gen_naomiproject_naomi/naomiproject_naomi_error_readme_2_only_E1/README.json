@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_2_only_E1",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction `sudo apt-get install python-pip` installs the pip for Python 2, which is outdated and not what the project needs. Modern systems using Python 3 should use `python3-pip` or rely on the pip installed with Python 3 itself.",
+      "correction_candidates": [
+        "Change the command to `sudo apt-get install python3-pip`.",
+        "Remove the `sudo apt-get install python-pip` command, as pip is usually included with modern Python 3 installations.",
+        "Replace the command with `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py`.",
+        "Add `sudo apt-get update` before the installation command."
+      ],
+      "golden_answer": "Remove the `sudo apt-get install python-pip` command, as pip is usually included with modern Python 3 installations."
+    }
+  ]
+}

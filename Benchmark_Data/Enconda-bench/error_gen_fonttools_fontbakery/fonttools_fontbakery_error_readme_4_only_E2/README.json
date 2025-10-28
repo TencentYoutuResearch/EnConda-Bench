@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_4_only_E2",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example usage command `fontbakery run google-profile myfont.ttf` is incorrect. The tool does not have a `run` subcommand, and profiles are invoked as subcommands directly (e.g., `check-googlefonts`).",
+      "correction_candidates": [
+        "The correct command is `fontbakery check-googlefonts myfont.ttf`.",
+        "The correct command is `fontbakery --run-profile google-profile --file myfont.ttf`.",
+        "The correct command is `fontbakery google-profile myfont.ttf`.",
+        "The correct command is `fontbakery check --profile googlefonts myfont.ttf`."
+      ],
+      "golden_answer": "The correct command is `fontbakery check-googlefonts myfont.ttf`."
+    }
+  ]
+}

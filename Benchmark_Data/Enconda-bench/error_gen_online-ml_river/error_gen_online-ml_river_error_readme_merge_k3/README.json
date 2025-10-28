@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_online-ml_river_error_readme_merge_k3",
+  "repo_name": "online-ml_river",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The code example incorrectly updates the model with `learn_one` before making a prediction for the same instance. In online validation (Prequential evaluation), the model should first predict and then learn.",
+      "correction_candidates": [
+        "Swap the `model.learn_one(x, y)` and `y_pred = model.predict_one(x)` lines to predict before training on the instance.",
+        "Remove the `metric.update` line as it is computationally expensive inside the loop.",
+        "Combine prediction and learning into a single `model.learn_predict_one(x, y)` call.",
+        "The `model.learn_one(x, y)` call should come first to ensure the model is initialized before prediction."
+      ],
+      "golden_answer": "Swap the `model.learn_one(x, y)` and `y_pred = model.predict_one(x)` lines to predict before training on the instance."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install river from ...` is syntactically incorrect for installing a package from a git repository.",
+      "correction_candidates": [
+        "pip install --upgrade git+https://github.com/online-ml/river",
+        "pip install git+https://github.com/online-ml/river --upgrade",
+        "pip install https://github.com/online-ml/river.git --upgrade",
+        "git clone https://github.com/online-ml/river && cd river && pip install . --upgrade"
+      ],
+      "golden_answer": "pip install git+https://github.com/online-ml/river --upgrade"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary dependency installation - added specific numpy and scipy versions that are not required",
+      "correction_candidates": [
+        "pip install river",
+        "pip install river --upgrade",
+        "pip install river[dev]",
+        "pip install --user river"
+      ],
+      "golden_answer": "pip install river"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Command syntax error - using pip install with -r flag but no requirements file exists",
+      "correction_candidates": [
+        "pip install river",
+        "pip install river[dev]",
+        "pip install --user river",
+        "python setup.py install"
+      ],
+      "golden_answer": "pip install river"
+    }
+  ]
+}

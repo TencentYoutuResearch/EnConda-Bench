@@ -1,0 +1,29 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_1",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The provided `pip install` command includes the `--no-dependencies` flag, which prevents the installation of required libraries like `pyasn1` and `pysmi`.",
+      "correction_candidates": [
+        "Change the command to `pip install pysnmplib`.",
+        "Change the command to `pip install pysnmplib --only-binary :all:`.",
+        "Change the command to `pip install pysnmplib[crypto]` to include all dependencies.",
+        "Change the command to `pip3 install pysnmplib`."
+      ],
+      "golden_answer": "Change the command to `pip install pysnmplib`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The documentation omits `PyCryptodomex` from the list of dependencies, which is required for using SNMPv3 encryption features.",
+      "correction_candidates": [
+        "Add `PyCryptodomex` to the list, noting it's required for all SNMPv3 functionality.",
+        "Add `PyCryptodomex (required only if SNMPv3 encryption is in use)` to the dependency list.",
+        "Add `PyCrypto` to the dependency list, as it is the cryptographic library used.",
+        "The `pip install pysnmplib` command automatically handles all dependencies, so the list is not needed."
+      ],
+      "golden_answer": "Add `PyCryptodomex (required only if SNMPv3 encryption is in use)` to the dependency list."
+    }
+  ]
+}

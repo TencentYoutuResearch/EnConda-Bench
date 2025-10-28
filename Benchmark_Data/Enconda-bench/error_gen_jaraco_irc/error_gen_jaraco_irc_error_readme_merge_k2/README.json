@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_jaraco_irc_error_readme_merge_k2",
+  "repo_name": "jaraco_irc",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the `irc.client_aio` module is compatible with Python 2.7. The library now requires Python 3, and the asyncio features are native to Python 3, making this claim false and misleading.",
+      "correction_candidates": [
+        "To use `irc.client_aio` on Python 2.7, you must install `asyncio` via `pip install asyncio`.",
+        "The `irc.client_aio` module is compatible with Python 2.7 if the `tulip` library is installed.",
+        "The `irc.client_aio` module requires Python 3.5+ and is not compatible with Python 2.7. The misleading sentence should be removed.",
+        "The entire library, including `irc.client_aio`, requires Python 3.8 or newer."
+      ],
+      "golden_answer": "The `irc.client_aio` module requires Python 3.5+ and is not compatible with Python 2.7. The misleading sentence should be removed."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the basic IRC server is incorrect. It's missing the `-m` flag, which is necessary for Python to find and run a module as a script.",
+      "correction_candidates": [
+        "Invoke the server with `python -m irc/server.py`.",
+        "Invoke the server with `python irc.server.py`.",
+        "Invoke the server with `python -m irc.server`.",
+        "Invoke the server with `run irc.server`."
+      ],
+      "golden_answer": "Invoke the server with `python -m irc.server`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The name of the example script `irccat` is misspelled as `irc_cat` in the documentation, which would cause a file not found error if a user tries to run it with that name.",
+      "correction_candidates": [
+        "The script is located in the `examples/` directory, not `scripts/`.",
+        "The script is named `irccat.py`, so it should be referenced as such.",
+        "The script name is `irccat`, not `irc_cat`.",
+        "The script `irc_cat` has been renamed to `irc-cat`."
+      ],
+      "golden_answer": "The script name is `irccat`, not `irc_cat`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the optional `schedule` package is incorrect. The package name on PyPI is `schedule`, not `schedule-lib`.",
+      "correction_candidates": [
+        "To use it, install the package via `pip install python-schedule`.",
+        "To use it, install the package via `pip install schedule`.",
+        "The `schedule` package is included as an extra, install with `pip install irc[schedule]`.",
+        "The `schedule` package is built-in and requires no separate installation."
+      ],
+      "golden_answer": "To use it, install the package via `pip install schedule`."
+    }
+  ]
+}

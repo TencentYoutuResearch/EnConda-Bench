@@ -1,0 +1,29 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_1",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Auto generation' section for adding a new exporter, step 2 incorrectly states that the environment variable file should be named `<exporter_name>.env` instead of the correct `<exporter_name>.default`.",
+      "correction_candidates": [
+        "Create a file named `<exporter_name>.default` which will contain the default environment variables.",
+        "Create a file named `exporter.default` which will contain the default environment variables.",
+        "Create a file named `<exporter_name>.conf` which will contain the default environment variables.",
+        "Create a file named `default.vars` which will contain the default environment variables."
+      ],
+      "golden_answer": "Create a file named `<exporter_name>.default` which will contain the default environment variables."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to build all packages is `make --all`, which is incorrect syntax for the make utility. It should be `make all`.",
+      "correction_candidates": [
+        "make all",
+        "make build all",
+        "make build --all",
+        "make-all"
+      ],
+      "golden_answer": "make all"
+    }
+  ]
+}

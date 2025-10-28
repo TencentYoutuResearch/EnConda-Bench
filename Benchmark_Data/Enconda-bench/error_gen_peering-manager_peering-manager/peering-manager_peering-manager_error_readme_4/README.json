@@ -1,0 +1,29 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_4",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README omits Redis from the list of requirements. Redis is a critical dependency for caching and task processing, and the application will not function correctly without it.",
+      "correction_candidates": [
+        "Add Redis back to the list of required technologies: '...with a [PostgreSQL](https://www.postgresql.org) database, [Redis](https://redis.io/) for caching/task processing and requires Python 3...'",
+        "Add Memcached to the list of required technologies.",
+        "Add a note that a caching service is optional.",
+        "Add RabbitMQ to the list of required technologies."
+      ],
+      "golden_answer": "Add Redis back to the list of required technologies: '...with a [PostgreSQL](https://www.postgresql.org) database, [Redis](https://redis.io/) for caching/task processing and requires Python 3...'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements.txt` is incorrect. It attempts to install a package named 'requirements.txt' instead of installing the packages listed within the file. The correct command requires the `-r` flag.",
+      "correction_candidates": [
+        "Change the command to `pip install -r requirements.txt`.",
+        "Change the command to `pip install --file requirements.txt`.",
+        "Change the command to `pip -r install requirements.txt`.",
+        "Change the command to `python -m pip install from-requirements requirements.txt`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    }
+  ]
+}

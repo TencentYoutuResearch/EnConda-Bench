@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_meltano_sdk_error_readme_merge_k2",
+  "repo_name": "meltano_sdk",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Contributors Guide' is a relative path to a file 'CONTRIBUTING.md', which is incorrect. It should be a full URL pointing to the documentation website.",
+      "correction_candidates": [
+        "https://github.com/meltano/sdk/blob/main/CONTRIBUTING.md",
+        "docs/CONTRIBUTING.md",
+        "https://sdk.meltano.com/en/latest/CONTRIBUTING.html",
+        "https://sdk.meltano.com/en/latest/contributing.html"
+      ],
+      "golden_answer": "https://sdk.meltano.com/en/latest/CONTRIBUTING.html"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `gh workflow run version_bump.yml --manual` is incorrect for triggering the version bump workflow. The command is simpler and does not require the filename or the `--manual` flag.",
+      "correction_candidates": [
+        "gh workflow run",
+        "gh workflow execute version_bump.yml",
+        "gh workflow run version_bump.yml",
+        "gh workflow trigger"
+      ],
+      "golden_answer": "gh workflow run"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install meltano-sdk` is incorrect. The correct package name on PyPI is `singer-sdk`.",
+      "correction_candidates": [
+        "pip install singer-sdk",
+        "pip install meltano[sdk]",
+        "pip install singer-sdk-py",
+        "pip install git+https://github.com/meltano/sdk.git"
+      ],
+      "golden_answer": "pip install singer-sdk"
+    }
+  ]
+}

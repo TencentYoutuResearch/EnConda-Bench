@@ -1,0 +1,29 @@
+{
+  "readme": "pymanopt_pymanopt_error_readme_6",
+  "repo_name": "pymanopt_pymanopt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect pip command syntax using --requirements instead of -r",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install --requirement requirements.txt",
+        "pip install -f requirements.txt",
+        "pip install --file requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "pip install pymanopt",
+        "pip install -e .",
+        "python setup.py install",
+        "conda install pymanopt"
+      ],
+      "golden_answer": "pip install pymanopt"
+    }
+  ]
+}

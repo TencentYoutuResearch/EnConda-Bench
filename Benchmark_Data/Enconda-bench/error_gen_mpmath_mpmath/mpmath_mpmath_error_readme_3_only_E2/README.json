@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_3_only_E2",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install mpmath --py` contains an invalid flag `--py`, causing the installation to fail.",
+      "correction_candidates": [
+        "pip install mpmath",
+        "pip install mpmath --python",
+        "python -m pip install mpmath",
+        "pip install \"mpmath\""
+      ],
+      "golden_answer": "pip install mpmath"
+    }
+  ]
+}

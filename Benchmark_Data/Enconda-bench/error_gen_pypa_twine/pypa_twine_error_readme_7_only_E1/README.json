@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_twine_error_readme_7_only_E1",
+  "repo_name": "pypa_twine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Shows usage command without mentioning that twine needs to be installed first",
+      "correction_candidates": [
+        "First install twine with pip install twine, then run the upload command",
+        "Install via conda install twine before running upload commands",
+        "Use pipx install twine for isolated installation before uploading",
+        "Download twine from GitHub releases and install manually before use"
+      ],
+      "golden_answer": "First install twine with pip install twine, then run the upload command"
+    }
+  ]
+}

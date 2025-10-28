@@ -1,0 +1,29 @@
+{
+  "readme": "eylles_pywal16_error_readme_4",
+  "repo_name": "eylles_pywal16",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command uses the incorrect package name 'py-wal' instead of the correct 'pywal16'.",
+      "correction_candidates": [
+        "You can install the latest release from PyPI:\n`pip install pywal`",
+        "You can install the latest release from PyPI:\n`pip install pywal16`",
+        "You can install the latest release from PyPI:\n`pip install python-wal`",
+        "You can install the latest release from PyPI:\n`pip install wal16`"
+      ],
+      "golden_answer": "You can install the latest release from PyPI:\n`pip install pywal16`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for applying a theme uses an incorrect flag '--apply-theme'.",
+      "correction_candidates": [
+        "To apply one of the built-in themes, run:\n`wal -t \"solarized-dark\"`",
+        "To apply one of the built-in themes, run:\n`wal --theme \"solarized-dark\"`",
+        "To apply one of the built-in themes, run:\n`wal theme \"solarized-dark\"`",
+        "To apply one of the built-in themes, run:\n`wal apply \"solarized-dark\"`"
+      ],
+      "golden_answer": "To apply one of the built-in themes, run:\n`wal -t \"solarized-dark\"`"
+    }
+  ]
+}

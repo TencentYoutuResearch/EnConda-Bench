@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_3_only_E2",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command for checking a C++ file uses a non-existent flag '--check', which will cause the command to fail.",
+      "correction_candidates": [
+        "Change '$ rstcheck --check bad_cpp.rst' to '$ rstcheck bad_cpp.rst'.",
+        "Change '--check' to '--file'.",
+        "Change '--check' to '-c'.",
+        "Change '$ rstcheck --check bad_cpp.rst' to '$ rstcheck < bad_cpp.rst'."
+      ],
+      "golden_answer": "Change '$ rstcheck --check bad_cpp.rst' to '$ rstcheck bad_cpp.rst'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_pip_error_readme_4_only_E2",
+  "repo_name": "pypa_pip",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing a specific package version uses a single equals sign (`=`) instead of the correct double equals sign (`==`), which will cause the command to fail.",
+      "correction_candidates": [
+        "To install a specific version of a package, use: `pip install numpy==1.21.0`",
+        "To install a specific version of a package, use: `pip install 'numpy=1.21.0'`",
+        "To install a specific version of a package, use: `pip install numpy~=1.21.0`",
+        "To install a specific version of a package, use: `pip install numpy --version 1.21.0`"
+      ],
+      "golden_answer": "To install a specific version of a package, use: `pip install numpy==1.21.0`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "bitcart_bitcart_error_readme_8_only_E1",
+  "repo_name": "bitcart_bitcart",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Incorrect system package installation - trying to install Python package via apt-get",
+      "correction_candidates": [
+        "pip install bitcart",
+        "git clone https://github.com/bitcart/bitcart.git && cd bitcart && pip install -e .",
+        "python -m pip install bitcart[all]",
+        "docker run -d --name bitcart bitcart/bitcart"
+      ],
+      "golden_answer": "pip install bitcart"
+    }
+  ]
+}

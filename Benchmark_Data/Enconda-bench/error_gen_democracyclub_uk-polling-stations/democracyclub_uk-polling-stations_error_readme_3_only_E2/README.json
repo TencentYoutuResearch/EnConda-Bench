@@ -1,0 +1,18 @@
+{
+  "readme": "democracyclub_uk-polling-stations_error_readme_3_only_E2",
+  "repo_name": "democracyclub_uk-polling-stations",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command for importing ONSPD data incorrectly provides a path to a specific CSV file, contradicting the note that requires a path to the directory.",
+      "correction_candidates": [
+        "The command is correct, but the note 'Path is to data _directory_... not the csv itself' should be removed.",
+        "The command should use a flag to specify it's a file path: `python manage.py import_onspd --file /path/to/data/ONSPD_MAY_2023_UK.csv`.",
+        "The command should point to the directory containing the data, not the CSV file: `python manage.py import_onspd /path/to/data`.",
+        "The CSV file should be moved to the project root before running the import."
+      ],
+      "golden_answer": "The command should point to the directory containing the data, not the CSV file: `python manage.py import_onspd /path/to/data`."
+    }
+  ]
+}

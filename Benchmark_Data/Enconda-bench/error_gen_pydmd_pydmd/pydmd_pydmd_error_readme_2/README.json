@@ -1,0 +1,29 @@
+{
+  "readme": "pydmd_pydmd_error_readme_2",
+  "repo_name": "pydmd_pydmd",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps for installing from source are in the wrong order. The user is instructed to run `pip install -e .` before cloning the repository, which will fail because the source code is not yet present.",
+      "correction_candidates": [
+        "First, clone the repository with `git clone https://github.com/PyDMD/PyDMD`, then install the package with `pip install -e .`.",
+        "First, install the package with `pip install pydmd`, then clone the repository with `git clone https://github.com/PyDMD/PyDMD`.",
+        "First, download the source as a ZIP file, then run `pip install PyDMD-master.zip`.",
+        "First, clone the repository with `git clone https://github.com/PyDMD/PyDMD` and then run `python setup.py install`."
+      ],
+      "golden_answer": "First, clone the repository with `git clone https://github.com/PyDMD/PyDMD`, then install the package with `pip install -e .`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that PyDMD requires Python 2.7, which is outdated. The package supports modern Python 3 versions, as indicated by the badge.",
+      "correction_candidates": [
+        "Note: PyDMD is compatible with Python 3.6 and higher.",
+        "The Python version requirement should be removed as `pip` handles it automatically.",
+        "Note: PyDMD is only compatible with Python 3.10.",
+        "Note: PyDMD is compatible with both Python 2.7 and Python 3.x."
+      ],
+      "golden_answer": "The Python version requirement should be removed as `pip` handles it automatically."
+    }
+  ]
+}

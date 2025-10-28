@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_open-power_op-test_error_readme_merge_k2",
+  "repo_name": "open-power_op-test",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to install Python dependencies using pip is placed before the command to install pip itself, which will cause the first command to fail.",
+      "correction_candidates": [
+        "First run `sudo apt update`, then `sudo apt install python3 python3-pip`, and finally `pip3 install -r requirements.txt`.",
+        "Run `apt install python3 python3-pip` and then `pip3 install -r requirements.txt`.",
+        "Run `pip3 install -r requirements.txt --user` after installing `python3` and `python3-pip`.",
+        "Run `python3 -m pip install -r requirements.txt` after `apt install python3 python3-pip`."
+      ],
+      "golden_answer": "Run `apt install python3 python3-pip` and then `pip3 install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to list available test suites uses an incorrect parameter `--show-suites` instead of the correct one.",
+      "correction_candidates": [
+        "`./op-test --bmc-type AMI --run-suite list`",
+        "`./op-test --bmc-type AMI --list-suites`",
+        "`./op-test --list`",
+        "`./op-test --help suites`"
+      ],
+      "golden_answer": "`./op-test --bmc-type AMI --list-suites`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install `fwts` prerequisites includes a non-existent package `software-properties-common-plus`, which will cause the `apt-get` command to fail.",
+      "correction_candidates": [
+        "`sudo apt-get install software-properties-common python-software-properties`",
+        "`sudo apt-get install software-properties-common`",
+        "`sudo apt-get install software-properties-common --no-install-recommends`",
+        "`sudo apt install common-software-properties`"
+      ],
+      "golden_answer": "`sudo apt-get install software-properties-common`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions to build skiboot utilities point to an incorrect directory `skiboot/xscom-utils` instead of the correct path `skiboot/external/xscom-utils`.",
+      "correction_candidates": [
+        "`cd skiboot/external/xscom-utils`",
+        "`cd skiboot/external/utils/xscom`",
+        "`cd skiboot/src/xscom-utils`",
+        "`cd skiboot; make xscom-utils`"
+      ],
+      "golden_answer": "`cd skiboot/external/xscom-utils`"
+    }
+  ]
+}

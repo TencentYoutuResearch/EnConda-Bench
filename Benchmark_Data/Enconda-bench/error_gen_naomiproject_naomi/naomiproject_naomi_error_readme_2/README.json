@@ -1,0 +1,29 @@
+{
+  "readme": "naomiproject_naomi_error_readme_2",
+  "repo_name": "naomiproject_naomi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction `sudo apt-get install python-pip` installs the pip for Python 2, which is outdated and not what the project needs. Modern systems using Python 3 should use `python3-pip` or rely on the pip installed with Python 3 itself.",
+      "correction_candidates": [
+        "Change the command to `sudo apt-get install python3-pip`.",
+        "Remove the `sudo apt-get install python-pip` command, as pip is usually included with modern Python 3 installations.",
+        "Replace the command with `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py`.",
+        "Add `sudo apt-get update` before the installation command."
+      ],
+      "golden_answer": "Remove the `sudo apt-get install python-pip` command, as pip is usually included with modern Python 3 installations."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements.txt` is syntactically incorrect for installing packages from a requirements file. It's missing the `-r` flag.",
+      "correction_candidates": [
+        "Change the command to `pip install -r requirements.txt`.",
+        "Change the command to `cat requirements.txt | xargs pip install`.",
+        "Change the command to `pip install --requirements requirements.txt`.",
+        "Create a `setup.py` file and run `python setup.py install`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    }
+  ]
+}

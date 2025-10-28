@@ -1,0 +1,29 @@
+{
+  "readme": "tommadness_kh2randomizer_error_readme_4",
+  "repo_name": "tommadness_kh2randomizer",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions tell the user to run the application before installing dependencies, which will cause the program to fail with an import error.",
+      "correction_candidates": [
+        "The steps are in the wrong order. Dependencies must be installed before running the application.",
+        "First, install dependencies from `requirements.txt`, then run the script.",
+        "The correct procedure is: 1. Install dependencies, 2. Run the application.",
+        "To fix, reverse the order of the steps in the 'Quick Start' section."
+      ],
+      "golden_answer": "The steps are in the wrong order. Dependencies must be installed before running the application."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions specify installing a single, potentially outdated or incorrect dependency version (`PyYAML==5.3`) instead of all required packages from `requirements.txt`.",
+      "correction_candidates": [
+        "Instead of installing one package, install all dependencies from the requirements file: `pip install -r requirements.txt`.",
+        "The correct version of `PyYAML` is `6.0` or higher, which should be installed.",
+        "Remove the specific version to let pip resolve the correct one: `pip install PyYAML`.",
+        "The documentation should refer to `requirements.txt` as the source of truth for all dependencies."
+      ],
+      "golden_answer": "Instead of installing one package, install all dependencies from the requirements file: `pip install -r requirements.txt`."
+    }
+  ]
+}

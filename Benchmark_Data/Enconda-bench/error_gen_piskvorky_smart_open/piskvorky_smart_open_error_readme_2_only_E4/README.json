@@ -1,0 +1,18 @@
+{
+  "readme": "piskvorky_smart_open_error_readme_2_only_E4",
+  "repo_name": "piskvorky_smart_open",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the migration guide is broken because the filename is incorrect. It should be `MIGRATING_FROM_OLDER_VERSIONS.rst`.",
+      "correction_candidates": [
+        "Change `MIGRATION_GUIDE.rst` to `MIGRATING_FROM_OLDER_VERSIONS.rst`",
+        "Change `MIGRATION_GUIDE.rst` to `docs/MIGRATION_GUIDE.rst`",
+        "Change `MIGRATION_GUIDE.rst` to `MIGRATING_FROM_OLDER_VERSIONS.md`",
+        "Change `MIGRATION_GUIDE.rst` to `MIGRATION.rst`"
+      ],
+      "golden_answer": "Change `MIGRATION_GUIDE.rst` to `MIGRATING_FROM_OLDER_VERSIONS.rst`"
+    }
+  ]
+}

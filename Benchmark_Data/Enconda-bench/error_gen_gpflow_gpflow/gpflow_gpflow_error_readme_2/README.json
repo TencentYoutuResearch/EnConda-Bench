@@ -1,0 +1,29 @@
+{
+  "readme": "gpflow_gpflow_error_readme_2",
+  "repo_name": "gpflow_gpflow",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions unnecessarily advise running `pip install tensorflow` before `pip install gpflow`. This is redundant as `gpflow` specifies TensorFlow as a dependency, and it can lead to version conflicts if an incompatible version of TensorFlow is installed manually.",
+      "correction_candidates": [
+        "Remove the `pip install tensorflow` command.",
+        "Change the order to `pip install gpflow` then `pip install tensorflow`.",
+        "Combine the commands: `pip install gpflow tensorflow`.",
+        "Specify a version: `pip install tensorflow>=2.4` then `pip install gpflow`."
+      ],
+      "golden_answer": "Remove the `pip install tensorflow` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the 'Intro to GPflow 2.0' notebook is broken, pointing to `intro_to_gpflow.html` instead of the correct `intro_to_gpflow2.html`, resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link to `.../notebooks/intro_to_gpflow2.html`.",
+        "Change the link to `.../notebooks/GPflow2_intro.html`.",
+        "Change the link to point to the `gpflow2_upgrade_guide.html` instead.",
+        "Change the link to point to the root of the `notebooks` directory."
+      ],
+      "golden_answer": "Change the link to `.../notebooks/intro_to_gpflow2.html`."
+    }
+  ]
+}

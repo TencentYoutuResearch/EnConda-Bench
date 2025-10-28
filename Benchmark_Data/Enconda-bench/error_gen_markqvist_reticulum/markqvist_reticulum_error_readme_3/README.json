@@ -1,0 +1,29 @@
+{
+  "readme": "markqvist_reticulum_error_readme_3",
+  "repo_name": "markqvist_reticulum",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the pip configuration file is incorrect. It is listed as `~/.pip/pip.conf` instead of the correct `~/.config/pip/pip.conf`.",
+      "correction_candidates": [
+        "Change the path to `~/.config/pip/pip.conf`",
+        "Change the path to `/etc/pip.conf`",
+        "Change the path to `~/.pip.conf`",
+        "Change the path to `~/.config/pip.conf`"
+      ],
+      "golden_answer": "Change the path to `~/.config/pip/pip.conf`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The description for the `rnid` utility incorrectly states that it requires the external `gpg` utility for encryption, which is false.",
+      "correction_candidates": [
+        "Change the description to 'The identity management and encryption utility `rnid` let\\'s you manage Identities and encrypt/decrypt files'",
+        "Change the description to 'The identity management and encryption utility `rnid` let\\'s you manage Identities and uses openssl for encryption'",
+        "Change the description to 'The identity management utility `rnid` let\\'s you manage Identities'",
+        "Remove the entire line describing the `rnid` utility."
+      ],
+      "golden_answer": "Change the description to 'The identity management and encryption utility `rnid` let\\'s you manage Identities and encrypt/decrypt files'"
+    }
+  ]
+}

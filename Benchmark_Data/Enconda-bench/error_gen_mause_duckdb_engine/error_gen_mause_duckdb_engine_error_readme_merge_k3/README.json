@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_mause_duckdb_engine_error_readme_merge_k3",
+  "repo_name": "mause_duckdb_engine",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install duckdb_engine` is incorrect because it uses an underscore instead of a hyphen. The correct package name on PyPI is `duckdb-engine`.",
+      "correction_candidates": [
+        "pip install duckdb-engine",
+        "pip install duckdb engine",
+        "pip install duckdb --driver=engine",
+        "conda install duckdb-engine"
+      ],
+      "golden_answer": "pip install duckdb-engine"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The SQLAlchemy connection string `duckdb:/:memory:` is syntactically incorrect for creating an in-memory database. It is missing the required `//` after the `duckdb:` prefix.",
+      "correction_candidates": [
+        "create_engine(\"duckdb:///:memory:\")",
+        "create_engine(\"duckdb:memory:\")",
+        "create_engine(\"duckdb://memory\")",
+        "create_engine(\"duckdb://\")"
+      ],
+      "golden_answer": "create_engine(\"duckdb:///:memory:\")"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example connection string for a file-based database, `duckdb:///path/to/duck.db`, is incorrect for an absolute path. It should use four slashes (`////`) to denote an absolute path from the root directory.",
+      "correction_candidates": [
+        "engine = sqlalchemy.create_engine('duckdb:////path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:/path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:///./path/to/duck.db')",
+        "engine = sqlalchemy.create_engine('duckdb:path/to/duck.db')"
+      ],
+      "golden_answer": "engine = sqlalchemy.create_engine('duckdb:////path/to/duck.db')"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The note about pandas `read_sql()` chunksize incorrectly states that the issue occurs in duckdb versions `>=0.5.0`, which is the opposite of the truth. The issue was resolved in those versions.",
+      "correction_candidates": [
+        "The chunksize parameter is fully supported in all versions.",
+        "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb",
+        "NOTE: this is an issue in all versions of duckdb",
+        "NOTE: this is only an issue in versions <0.5.0 of duckdb"
+      ],
+      "golden_answer": "NOTE: this is no longer an issue in versions >=0.5.0 of duckdb"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to register a pandas DataFrame, `conn.execute(text(\"register\"), name=\"test_df\", df=df)`, is syntactically incorrect for SQLAlchemy 1.4+. The parameters should be passed in a dictionary as the second argument, not as keyword arguments to `execute`.",
+      "correction_candidates": [
+        "conn.execute(text(\"register 'test_df' from df\"))",
+        "conn.execute(text(\"register(:name, :df)\"), {\"name\": \"test_df\", \"df\": df})",
+        "conn.register(\"test_df\", df)",
+        "conn.execute(\"register\", (\"test_df\", df))"
+      ],
+      "golden_answer": "conn.execute(text(\"register(:name, :df)\"), {\"name\": \"test_df\", \"df\": df})"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the Alembic integration section, the dialect name is incorrectly specified as `__dialect__ = \"duckdb-engine\"`. SQLAlchemy's dialect system recognizes this dialect simply as `duckdb`.",
+      "correction_candidates": [
+        "__dialect__ = \"duckdb+psycopg2\"",
+        "__dialect__ = \"postgresql\"",
+        "__dialect__ = \"duckdb\"",
+        "__dialect__ = \"duck\""
+      ],
+      "golden_answer": "__dialect__ = \"duckdb\""
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "has2k1_plotnine_error_readme_2_only_E6",
+  "repo_name": "has2k1_plotnine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly suggest installing matplotlib from source as a corrective step after tests fail, rather than as a necessary prerequisite to ensure consistent test outcomes. The setup should be done before running tests.",
+      "correction_candidates": [
+        "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time.",
+        "Add a command \"pip uninstall matplotlib\" before the reinstall command.",
+        "Move the entire \"Testing\" section to be before the \"Installation\" section.",
+        "Replace the text with \"If tests fail, run 'pip install matplotlib --force-reinstall' and try again\"."
+      ],
+      "golden_answer": "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time."
+    }
+  ]
+}

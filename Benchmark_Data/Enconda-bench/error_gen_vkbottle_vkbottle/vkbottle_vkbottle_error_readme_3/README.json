@@ -1,0 +1,29 @@
+{
+  "readme": "vkbottle_vkbottle_error_readme_3",
+  "repo_name": "vkbottle_vkbottle",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The 'Hello World' example code is logically incorrect. The handler function uses a string literal on its own line instead of a 'return' statement, so the bot will not send any message.",
+      "correction_candidates": [
+        "async def handler(_): print(\"Hello world!\")",
+        "async def handler(_) -> str: return \"Hello world!\"",
+        "async def handler(message): await message.answer(\"Hello world!\")",
+        "def handler(_) -> str: return \"Hello world!\""
+      ],
+      "golden_answer": "async def handler(_) -> str: return \"Hello world!\""
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly advise installing the 'vkbottle' package globally before creating and activating the virtual environment, defeating the purpose of the virtual environment.",
+      "correction_candidates": [
+        "Correct order: `python -m venv venv`, then `source venv/bin/activate`, then `pip install vkbottle`.",
+        "Correct order: `pip install virtualenv`, then `virtualenv venv`, then `source venv/bin/activate`, then `pip install vkbottle`.",
+        "Correct command: `python -m venv venv && source venv/bin/activate && pip install vkbottle`.",
+        "Correct order: `pip install vkbottle`, then `python -m venv venv --system-site-packages`, then `source venv/bin/activate`."
+      ],
+      "golden_answer": "Correct order: `python -m venv venv`, then `source venv/bin/activate`, then `pip install vkbottle`."
+    }
+  ]
+}

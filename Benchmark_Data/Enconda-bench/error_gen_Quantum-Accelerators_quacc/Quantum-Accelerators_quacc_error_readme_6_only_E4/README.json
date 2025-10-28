@@ -1,0 +1,18 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_6_only_E4",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed the GIF file path from 'start.gif' to 'workflow_example.gif' which likely doesn't exist",
+      "correction_candidates": [
+        "Change back to: docs/images/start/start.gif",
+        "Update to: docs/images/examples/demo.gif",
+        "Fix path to: docs/assets/workflow.gif",
+        "Correct to: docs/images/workflow_demo.gif"
+      ],
+      "golden_answer": "Change back to: docs/images/start/start.gif"
+    }
+  ]
+}

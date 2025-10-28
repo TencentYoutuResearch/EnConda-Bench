@@ -1,0 +1,18 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_3_only_E6",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The documentation incorrectly states that users must first visit the docs page to activate a session, which is a non-existent and unnecessary step for this stateless API.",
+      "correction_candidates": [
+        "Change the activation URL from `/docs/` to `/api/v1/activate`.",
+        "Clarify that session activation is only required for `POST` requests.",
+        "Remove the note about needing to visit the docs page to activate a session, as this step is not required.",
+        "Add a `token` parameter to all example URLs to reflect the session activation requirement."
+      ],
+      "golden_answer": "Remove the note about needing to visit the docs page to activate a session, as this step is not required."
+    }
+  ]
+}

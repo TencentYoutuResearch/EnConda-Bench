@@ -1,0 +1,18 @@
+{
+  "readme": "online-ml_river_error_readme_5_only_E7",
+  "repo_name": "online-ml_river",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version compatibility error - River requires Python 3.8+ but README states Python 2.7+",
+      "correction_candidates": [
+        "River is intended to work with **Python 3.8 and above**.",
+        "River is intended to work with **Python 3.6 and above**.",
+        "River is intended to work with **Python 3.7 and above**.",
+        "River requires **Python 3.8 or later**."
+      ],
+      "golden_answer": "River is intended to work with **Python 3.8 and above**."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pydmd_pydmd_error_readme_1_only_E2",
+  "repo_name": "pydmd_pydmd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -d .` is incorrect for installing a package in development mode; it only downloads the package instead of installing it.",
+      "correction_candidates": [
+        "pip install --dev .",
+        "pip install -e .",
+        "python setup.py develop",
+        "pip install --editable ."
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

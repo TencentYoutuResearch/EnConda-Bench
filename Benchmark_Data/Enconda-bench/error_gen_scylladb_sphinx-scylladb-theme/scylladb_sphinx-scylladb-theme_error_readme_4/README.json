@@ -1,0 +1,29 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_4",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily require installing NodeJS and running `npm install`. This project is a Python-based Sphinx theme and does not have NodeJS dependencies.",
+      "correction_candidates": [
+        "Remove the section requiring NodeJS and the `npm install` command.",
+        "Change `npm install` to `pip install`.",
+        "Change `npm install` to `npm install --production`.",
+        "Move the `npm install` command to the Usage section."
+      ],
+      "golden_answer": "Remove the section requiring NodeJS and the `npm install` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment, `source venv/bin`, is incomplete. The correct command on POSIX systems is `source venv/bin/activate`.",
+      "correction_candidates": [
+        "Change `source venv/bin` to `source venv/bin/activate`.",
+        "Change `source venv/bin` to `. venv/bin/activate`.",
+        "Change `source venv/bin` to `venv\\Scripts\\activate` for Windows users.",
+        "Change `source venv/bin` to `run venv/bin/activate`."
+      ],
+      "golden_answer": "Change `source venv/bin` to `source venv/bin/activate`."
+    }
+  ]
+}

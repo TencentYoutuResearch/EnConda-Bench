@@ -1,0 +1,29 @@
+{
+  "readme": "fabric_fabric_error_readme_1",
+  "repo_name": "fabric_fabric",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions install the package into the global Python environment before creating and activating the virtual environment, which defeats the purpose of using a venv.",
+      "correction_candidates": [
+        "Move the `pip install fabric` command to be the last step, after activating the virtual environment.",
+        "Remove the virtual environment steps and install globally.",
+        "Use `conda` instead of `venv` for environment management.",
+        "Run `python -m venv venv` first, then `pip install fabric`, then `source venv/bin/activate`."
+      ],
+      "golden_answer": "Move the `pip install fabric` command to be the last step, after activating the virtual environment."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `source venv/bin/activate.sh` is incorrect for activating a standard Python virtual environment on Linux/macOS; the activation script is named `activate`.",
+      "correction_candidates": [
+        "Change the activation command to `source venv/bin/activate`.",
+        "Use the command `. venv/bin/activate` which is a shorthand for source.",
+        "On Windows, the command is `venv\\Scripts\\activate`.",
+        "Rename the activation script to `activate.sh`."
+      ],
+      "golden_answer": "Change the activation command to `source venv/bin/activate`."
+    }
+  ]
+}

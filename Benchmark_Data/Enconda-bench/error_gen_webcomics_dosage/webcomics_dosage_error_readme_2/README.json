@@ -1,0 +1,29 @@
+{
+  "readme": "webcomics_dosage_error_readme_2",
+  "repo_name": "webcomics_dosage",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pipx` installation command is presented as installing all optional features, but it omits the `css` extra, which is required for some comics.",
+      "correction_candidates": [
+        "Change the command to `pipx install dosage[all]`.",
+        "Change the command to `pipx install dosage[css,bash]`.",
+        "Change the command to `pipx install dosage --include-deps`.",
+        "Add a separate command `pip install cssselect` after the pipx command."
+      ],
+      "golden_answer": "Change the command to `pipx install dosage[css,bash]`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for development setup incorrectly advise installing the package before creating and activating a virtual environment, which defeats the purpose of the virtual environment.",
+      "correction_candidates": [
+        "Reverse the steps: first create and activate a virtual environment, then run the pip install command.",
+        "Remove the mention of a virtual environment as it is optional.",
+        "Add a step to run `pip uninstall dosage` before creating the virtual environment.",
+        "Specify that the pip install command should use the `--user` flag if not in a virtual environment."
+      ],
+      "golden_answer": "Reverse the steps: first create and activate a virtual environment, then run the pip install command."
+    }
+  ]
+}

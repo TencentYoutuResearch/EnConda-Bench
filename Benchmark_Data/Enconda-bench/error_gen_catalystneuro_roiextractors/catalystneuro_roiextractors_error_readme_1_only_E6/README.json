@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_1_only_E6",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to create the conda environment (`conda env create`) is placed after the commands to activate it and install packages into it, which will fail.",
+      "correction_candidates": [
+        "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`.",
+        "Combine the environment creation and package installation into a single script.",
+        "Use `mamba env create` instead of `conda env create` for faster resolution.",
+        "Remove the `conda env create` step and install directly into the base environment."
+      ],
+      "golden_answer": "Place the `conda env create roiextractors_env` command before `conda activate roiextractors_env`."
+    }
+  ]
+}

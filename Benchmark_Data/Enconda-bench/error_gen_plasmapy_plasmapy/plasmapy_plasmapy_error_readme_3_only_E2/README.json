@@ -1,0 +1,18 @@
+{
+  "readme": "plasmapy_plasmapy_error_readme_3_only_E2",
+  "repo_name": "plasmapy_plasmapy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command `conda install plasmapy -c conda-forge` has the channel specified after the package name. While this might work in some conda versions, the standard and most reliable syntax is to specify the channel before the package.",
+      "correction_candidates": [
+        "conda install -c conda-forge plasmapy",
+        "conda install plasmapy --channel conda-forge",
+        "conda -c conda-forge install plasmapy",
+        "conda install conda-forge/plasmapy"
+      ],
+      "golden_answer": "conda install -c conda-forge plasmapy"
+    }
+  ]
+}

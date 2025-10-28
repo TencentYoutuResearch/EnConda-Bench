@@ -1,0 +1,18 @@
+{
+  "readme": "calliope-project_calliope_error_readme_4_only_E1",
+  "repo_name": "calliope-project_calliope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command is missing the `-c conda-forge` channel argument, which is necessary to locate the `calliope` package.",
+      "correction_candidates": [
+        "Add `-c conda-forge` to the `mamba create` command.",
+        "Add a separate command `conda config --add channels conda-forge` before the installation command.",
+        "Replace `mamba` with `pip` using `pip install calliope`.",
+        "Change the command to `mamba create -n calliope -c conda-forge python && conda activate calliope && mamba install calliope`."
+      ],
+      "golden_answer": "Add `-c conda-forge` to the `mamba create` command."
+    }
+  ]
+}

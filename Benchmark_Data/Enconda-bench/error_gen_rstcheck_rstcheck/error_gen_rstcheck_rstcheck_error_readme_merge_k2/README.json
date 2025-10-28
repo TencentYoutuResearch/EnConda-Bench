@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_rstcheck_rstcheck_error_readme_merge_k2",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The main installation command uses an incorrect package name 'rst-check' instead of 'rstcheck'.",
+      "correction_candidates": [
+        "$ pip install rstcheck",
+        "$ pip install rst_check",
+        "$ pip install python-rstcheck",
+        "$ pip install rst-checker"
+      ],
+      "golden_answer": "$ pip install rstcheck"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "A 'Quick Start' section is placed before the 'Installation' section, suggesting the user can run the command before installing the package.",
+      "correction_candidates": [
+        "Move the 'Quick Start' section to be after the 'Installation' section.",
+        "Delete the 'Quick Start' section entirely.",
+        "Combine the 'Quick Start' section with the 'Examples' section.",
+        "Add a note in 'Quick Start' that installation is required first."
+      ],
+      "golden_answer": "Move the 'Quick Start' section to be after the 'Installation' section."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary and incorrect dependency 'check-rst' is listed as a required installation step.",
+      "correction_candidates": [
+        "Remove the line '$ pip install check-rst'.",
+        "Change '$ pip install check-rst' to '$ pip install rst-lint'.",
+        "Combine the installations into '$ pip install check-rst rstcheck'.",
+        "Replace '$ pip install check-rst' with '$ apt-get install rst-checker'."
+      ],
+      "golden_answer": "Remove the line '$ pip install check-rst'."
+    }
+  ]
+}

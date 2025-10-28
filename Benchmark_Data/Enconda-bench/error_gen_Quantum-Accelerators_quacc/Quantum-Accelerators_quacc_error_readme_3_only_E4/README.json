@@ -1,0 +1,18 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_3_only_E4",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the license file is broken. It points to a file named `LICENSE` instead of the correct `LICENSE.md`, resulting in a \"File not found\" error.",
+      "correction_candidates": [
+        "Change the link to point to the project's `pyproject.toml` where the license is declared.",
+        "Change the link to `https://github.com/quantum-accelerators/quacc/blob/main/LICENSE.md`.",
+        "Change the link to a relative path: `LICENSE.md`.",
+        "Change the link to the BSD 3-Clause license text on the OSI website."
+      ],
+      "golden_answer": "Change the link to `https://github.com/quantum-accelerators/quacc/blob/main/LICENSE.md`."
+    }
+  ]
+}

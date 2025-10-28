@@ -1,0 +1,18 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_1_only_E1",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README suggests installing the wrong package `python-ftp`. The correct package name is `pyftpdlib`.",
+      "correction_candidates": [
+        "pip install pyftpdlib",
+        "pip install ftpdlib",
+        "pip install python-ftplib-server",
+        "pip install py-ftpd-lib"
+      ],
+      "golden_answer": "pip install pyftpdlib"
+    }
+  ]
+}

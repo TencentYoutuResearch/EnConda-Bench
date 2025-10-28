@@ -1,0 +1,29 @@
+{
+  "readme": "oarriaga_paz_error_readme_2",
+  "repo_name": "oarriaga_paz",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README instructs users to run `pytest` before installing the package and its dependencies, which is logically incorrect and will fail.",
+      "correction_candidates": [
+        "Remove the instruction to run `pytest tests` from the Installation section.",
+        "Move the `pytest tests` command to the 'Tests and coverage' section and clarify it should be run after installation.",
+        "Change the command to `pip install . && pytest tests`.",
+        "Add a note saying 'Note: dependencies must be installed first for tests to run'."
+      ],
+      "golden_answer": "Remove the instruction to run `pytest tests` from the Installation section."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Tensorflow' as a dependency, which is ambiguous and may lead users to install TensorFlow 1.x, causing version compatibility issues with the library which requires TensorFlow 2.0.",
+      "correction_candidates": [
+        "PAZ has only **three** dependencies: [Tensorflow2.0](https://www.tensorflow.org/), [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/).",
+        "PAZ has only **three** dependencies: [Tensorflow>=2.0](https://www.tensorflow.org/), [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/).",
+        "PAZ has only **three** dependencies: [Keras](https://keras.io/), [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/).",
+        "PAZ has only **three** dependencies: [Tensorflow](https://www.tensorflow.org/) (version 2.0 or higher), [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/)."
+      ],
+      "golden_answer": "PAZ has only **three** dependencies: [Tensorflow2.0](https://www.tensorflow.org/), [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/)."
+    }
+  ]
+}

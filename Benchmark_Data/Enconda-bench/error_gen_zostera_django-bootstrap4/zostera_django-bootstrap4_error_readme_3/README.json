@@ -1,0 +1,29 @@
+{
+  "readme": "zostera_django-bootstrap4_error_readme_3",
+  "repo_name": "zostera_django-bootstrap4",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `django-crispy-forms` is a required dependency, but it is not needed for this package to function.",
+      "correction_candidates": [
+        "Replace `django-crispy-forms` with `django-widget-tweaks` as the required dependency.",
+        "Clarify that `django-crispy-forms` is only needed for advanced layouts.",
+        "Remove the statement about requiring `django-crispy-forms`.",
+        "Add `pip install django-crispy-forms` to the installation instructions."
+      ],
+      "golden_answer": "Remove the statement about requiring `django-crispy-forms`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The example template for a form is missing the critical `{% csrf_token %}` tag, which will cause Django to raise a 403 Forbidden error on form submission.",
+      "correction_candidates": [
+        "Add `{% csrf_token %}` inside the `<form>` tags.",
+        "Change the form method from `post` to `get`.",
+        "Add the `@csrf_exempt` decorator to the corresponding view function.",
+        "Add `enctype=\"multipart/form-data\"` to the form tag."
+      ],
+      "golden_answer": "Add `{% csrf_token %}` inside the `<form>` tags."
+    }
+  ]
+}

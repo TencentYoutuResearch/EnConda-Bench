@@ -1,0 +1,29 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_1",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python 3.9+ is required, but the changelog indicates support for Django 1.10, which is not compatible with Python versions higher than 3.5.",
+      "correction_candidates": [
+        "This project is compatible with Python 2.7, 3.4, and 3.5.",
+        "This project requires Python 3.6 or newer.",
+        "This project requires Python 3.5 to run.",
+        "This project is compatible with Python 2.7 only."
+      ],
+      "golden_answer": "This project is compatible with Python 2.7, 3.4, and 3.5."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions install pip dependencies from requirements.txt before the virtual environment has been created, which will install them globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "1. Create virtual environment: `python -m venv venv`\n2. Activate it: `source venv/bin/activate`\n3. Install dependencies: `pip install -r requirements.txt`",
+        "1. Create virtual environment: `python -m venv venv`\n2. Install dependencies: `pip install -r requirements.txt`\n3. Activate it: `source venv/bin/activate`",
+        "1. Install dependencies using pipx: `pipx install -r requirements.txt`\n2. Create virtual environment: `python -m venv venv`",
+        "1. Activate venv: `source venv/bin/activate`\n2. Install dependencies: `pip install -r requirements.txt`\n3. Create environment: `python -m venv venv`"
+      ],
+      "golden_answer": "1. Create virtual environment: `python -m venv venv`\n2. Activate it: `source venv/bin/activate`\n3. Install dependencies: `pip install -r requirements.txt`"
+    }
+  ]
+}

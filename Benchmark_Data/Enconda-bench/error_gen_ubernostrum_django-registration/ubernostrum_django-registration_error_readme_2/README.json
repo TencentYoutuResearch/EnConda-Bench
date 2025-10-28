@@ -1,0 +1,29 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_2",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions have a logical order error, telling the user to install the package globally with pip *before* creating the virtual environment.",
+      "correction_candidates": [
+        "Reverse steps 1 and 2: create the virtual environment first, then install the package.",
+        "Remove step 1 and add it after step 3.",
+        "The correct order is to create the virtual environment, activate it, and then install the package.",
+        "Install with `sudo pip install django-registration` to ensure it's available before creating the venv."
+      ],
+      "golden_answer": "The correct order is to create the virtual environment, activate it, and then install the package."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a virtual environment, `python -m venv`, is incomplete. It is missing the required argument specifying the directory name for the environment (e.g., 'venv').",
+      "correction_candidates": [
+        "The command should be `python -m venv venv`.",
+        "The command should be `virtualenv venv`.",
+        "The command should be `python -m venv .venv`.",
+        "The command is missing a flag: `python -m venv --create .`"
+      ],
+      "golden_answer": "The command should be `python -m venv venv`."
+    }
+  ]
+}

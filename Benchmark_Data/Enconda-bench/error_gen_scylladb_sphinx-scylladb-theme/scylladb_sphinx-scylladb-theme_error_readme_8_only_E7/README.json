@@ -1,0 +1,18 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_8_only_E7",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python and Sphinx versions that may not be compatible",
+      "correction_candidates": [
+        "Python 3.8 and Sphinx 4.0 or later",
+        "Python 3.7 and Sphinx 3.0 or later",
+        "Python 3.9 and Sphinx 5.0 or later",
+        "Python 3.6 and Sphinx 3.5 or later"
+      ],
+      "golden_answer": "Python 3.8 and Sphinx 4.0 or later"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "netbox-community_netbox_error_readme_2_only_E7",
+  "repo_name": "netbox-community_netbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a minimum Python version of 3.6+, but recent versions of NetBox require Python 3.8 or newer, leading to potential installation failures on older systems.",
+      "correction_candidates": [
+        "Update the requirement to 'Python 3.8+'.",
+        "Update the requirement to 'Python 3+'.",
+        "Specify the exact compatible version, 'Python 3.6.9'.",
+        "Remove the Python version requirement, as `pip` will handle it."
+      ],
+      "golden_answer": "Update the requirement to 'Python 3.8+'."
+    }
+  ]
+}

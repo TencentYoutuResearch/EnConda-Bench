@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_2_only_E7",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README removes the mention that the project requires Python 3 and changes the setup command from `python3` to `python`. This can cause errors on systems where `python` defaults to Python 2.",
+      "correction_candidates": [
+        "The setup command should be `py ./tools/provision` to use the Python launcher for Windows.",
+        "The project requires Python 3, so the command should be `python3 ./tools/provision` and the text should specify the Python 3 requirement.",
+        "The text should be updated to say 'The source code is written in Python 3 or newer'.",
+        "The command should be `python -m tools.provision`."
+      ],
+      "golden_answer": "The project requires Python 3, so the command should be `python3 ./tools/provision` and the text should specify the Python 3 requirement."
+    }
+  ]
+}

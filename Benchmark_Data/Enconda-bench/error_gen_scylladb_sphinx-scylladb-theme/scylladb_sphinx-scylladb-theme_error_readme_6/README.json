@@ -1,0 +1,29 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_6",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Referenced a make command that likely doesn't exist in this project",
+      "correction_candidates": [
+        "pip install sphinx-scylladb-theme",
+        "python setup.py install",
+        "pip install -e .",
+        "npm install"
+      ],
+      "golden_answer": "pip install sphinx-scylladb-theme"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Specified incorrect source directory path that may not exist",
+      "correction_candidates": [
+        "sphinx-build -b html docs/ _build/",
+        "sphinx-build -b html . _build/",
+        "sphinx-build -b html docs/source/ docs/_build/",
+        "sphinx-build -b html src/ build/"
+      ],
+      "golden_answer": "sphinx-build -b html docs/ _build/"
+    }
+  ]
+}

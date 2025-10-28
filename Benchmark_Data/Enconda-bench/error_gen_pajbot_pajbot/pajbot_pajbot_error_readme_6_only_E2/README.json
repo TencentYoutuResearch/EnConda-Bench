@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_6_only_E2",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Wrong file extension used for venvinstall script - should be .sh not .py",
+      "correction_candidates": [
+        "Change ./scripts/venvinstall.py to ./scripts/venvinstall.sh",
+        "Change ./scripts/venvinstall.py to python ./scripts/venvinstall.py",
+        "Change ./scripts/venvinstall.py to ./scripts/install.sh",
+        "Change ./scripts/venvinstall.py to bash ./scripts/venvinstall.py"
+      ],
+      "golden_answer": "Change ./scripts/venvinstall.py to ./scripts/venvinstall.sh"
+    }
+  ]
+}

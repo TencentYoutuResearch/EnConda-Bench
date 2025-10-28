@@ -1,0 +1,29 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_8",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python 2.7+ and Django 1.8+ version requirements that are no longer supported or realistic for current development",
+      "correction_candidates": [
+        "Update to current supported versions like Python 3.8+ and Django 3.2+",
+        "Remove specific version requirements and refer to the official compatibility documentation",
+        "Specify Python 3.9+ and Django 4.0+ as minimum requirements",
+        "Use version ranges like Python 3.7-3.11 and Django 2.2-4.2"
+      ],
+      "golden_answer": "Remove specific version requirements and refer to the official compatibility documentation"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used deprecated setup.py install command with --force flag instead of modern pip installation",
+      "correction_candidates": [
+        "Use `pip install django-mysql` for standard PyPI installation",
+        "Use `pip install .` for local development installation",
+        "Install with `python -m pip install django-mysql` for better compatibility",
+        "Use `pip install -e .` for editable development installation"
+      ],
+      "golden_answer": "Use `pip install django-mysql` for standard PyPI installation"
+    }
+  ]
+}

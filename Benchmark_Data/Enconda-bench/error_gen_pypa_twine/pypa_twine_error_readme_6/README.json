@@ -1,0 +1,29 @@
+{
+  "readme": "pypa_twine_error_readme_6",
+  "repo_name": "pypa_twine",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation order is incorrect - installing from requirements.txt before creating and activating virtual environment",
+      "correction_candidates": [
+        "Create virtual environment first: python -m venv myenv && source myenv/bin/activate && pip install -r requirements.txt",
+        "Use conda environment instead: conda create -n myenv python=3.9 && conda activate myenv && pip install -r requirements.txt",
+        "Install globally first: pip install --upgrade pip && pip install -r requirements.txt && python -m venv myenv",
+        "Use pipenv workflow: pipenv install --dev && pipenv shell"
+      ],
+      "golden_answer": "Create virtual environment first: python -m venv myenv && source myenv/bin/activate && pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the twine project",
+      "correction_candidates": [
+        "Install twine directly: pip install twine",
+        "Use setup.py for development: pip install -e .",
+        "Install from pyproject.toml: pip install .",
+        "Clone and install: git clone repo && pip install -r dev-requirements.txt"
+      ],
+      "golden_answer": "Install twine directly: pip install twine"
+    }
+  ]
+}

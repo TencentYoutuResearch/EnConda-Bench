@@ -1,0 +1,29 @@
+{
+  "readme": "emi-group_evox_error_readme_2",
+  "repo_name": "emi-group_evox",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version badge incorrectly states compatibility with Python 3.8, while the library requires Python 3.9 or newer.",
+      "correction_candidates": [
+        "Update the badge to show `python-3.9+-orange`.",
+        "Update the badge to show `python-3.9|3.10|3.11-orange`.",
+        "Update the badge to show `python->=3.9-orange`.",
+        "Remove the Python version badge entirely."
+      ],
+      "golden_answer": "Update the badge to show `python-3.9+-orange`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The Quick Start example attempts to run the workflow with `workflow.step(state)` before the state is initialized with `workflow.init(key)`, which is a logical order error.",
+      "correction_candidates": [
+        "Move the `for` loop (run step) after the `state = workflow.init(key)` line.",
+        "Combine the init and step into a single line: `state = workflow.run(key, 100)`.",
+        "Initialize state inside the loop: `for i in range(100): state = workflow.init(key); state = workflow.step(state)`.",
+        "Remove the `workflow.init(key)` step and let `workflow.step` handle initialization."
+      ],
+      "golden_answer": "Move the `for` loop (run step) after the `state = workflow.init(key)` line."
+    }
+  ]
+}

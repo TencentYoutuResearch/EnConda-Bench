@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_6_only_E2",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid pip install command syntax - missing quotes around package with extras on Windows",
+      "correction_candidates": [
+        "py -3 -m pip install -U \"nextcord[voice]\"",
+        "py -3 -m pip install -U 'nextcord[voice]'",
+        "py -3 -m pip install -U nextcord\\[voice\\]",
+        "py -3 -m pip install --upgrade \"nextcord[voice]\""
+      ],
+      "golden_answer": "py -3 -m pip install -U \"nextcord[voice]\""
+    }
+  ]
+}

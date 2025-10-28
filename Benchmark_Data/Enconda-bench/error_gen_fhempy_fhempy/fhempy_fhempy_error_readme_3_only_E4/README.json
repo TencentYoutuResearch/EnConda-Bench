@@ -1,0 +1,18 @@
+{
+  "readme": "fhempy_fhempy_error_readme_3_only_E4",
+  "repo_name": "fhempy_fhempy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL provided for adding the FHEM update source points to a non-existent `main` branch instead of the correct `master` branch, which will cause the 'update add' command to fail.",
+      "correction_candidates": [
+        "update add https://github.com/fhempy/fhempy/blob/master/controls_pythonbinding.txt",
+        "update add https://raw.githubusercontent.com/fhempy/fhempy/master/controls_pythonbinding.txt",
+        "update add https://raw.githubusercontent.com/fhempy/fhempy/latest/controls_pythonbinding.txt",
+        "update add https://raw.githubusercontent.com/fhempy/fhempy/master/controls_pythonbinding"
+      ],
+      "golden_answer": "update add https://raw.githubusercontent.com/fhempy/fhempy/master/controls_pythonbinding.txt"
+    }
+  ]
+}

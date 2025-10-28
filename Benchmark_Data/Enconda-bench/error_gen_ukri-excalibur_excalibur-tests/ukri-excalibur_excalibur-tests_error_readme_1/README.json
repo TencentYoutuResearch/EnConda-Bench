@@ -1,0 +1,29 @@
+{
+  "readme": "ukri-excalibur_excalibur-tests_error_readme_1",
+  "repo_name": "ukri-excalibur_excalibur-tests",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided in the 'Quick Start' section to run the benchmarks is incorrect.",
+      "correction_candidates": [
+        "To run the default benchmark suite, execute `reframe -c . -r`",
+        "To run the default benchmark suite, execute `make test`",
+        "To run the default benchmark suite, execute `python run.py --all`",
+        "To run the default benchmark suite, execute `./run-tests.sh`"
+      ],
+      "golden_answer": "To run the default benchmark suite, execute `reframe -c . -r`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The note about the location of system-specific configuration files points to an incorrect directory `configs/systems/`.",
+      "correction_candidates": [
+        "Replace the note with: `_Note: System-specific configurations are located in `etc/systems/`._`",
+        "Replace the note with: `_Note: System-specific configurations are located in `sys/config/`._`",
+        "Replace the note with: `_Note: System-specific configurations are located in `settings/`._`",
+        "Remove the note entirely as it is documented elsewhere."
+      ],
+      "golden_answer": "Replace the note with: `_Note: System-specific configurations are located in `etc/systems/`._`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_5_only_E6",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Build commands are in wrong order - 'make install' should be last, after './configure' and 'make'",
+      "correction_candidates": [
+        "./configure\nmake\nmake install",
+        "make\n./configure\nmake install",
+        "make install\nmake\n./configure",
+        "./configure\nmake install\nmake"
+      ],
+      "golden_answer": "./configure\nmake\nmake install"
+    }
+  ]
+}

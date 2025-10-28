@@ -1,0 +1,18 @@
+{
+  "readme": "r-anime_holo_error_readme_2_only_E6",
+  "repo_name": "r-anime_holo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of setup steps is incorrect. The script attempts to load a season configuration into the database before the database has been initialized.",
+      "correction_candidates": [
+        "The correct order is to first run 'python src/holo.py -m setup' to initialize the database, and then run 'python src/holo.py -m edit season_configs/[season]_[year].yaml' to load the season config.",
+        "The correct order is to first run 'python src/holo.py -m update', then 'python src/holo.py -m setup', and finally 'python src/holo.py -m edit ...'.",
+        "You should run 'python src/holo.py -m edit ...' and 'python src/holo.py -m setup' in any order.",
+        "You must run 'python src/holo.py -m setup' and 'python src/holo.py -m edit ...' at the same time using 'python src/holo.py -m setup -m edit ...'."
+      ],
+      "golden_answer": "The correct order is to first run 'python src/holo.py -m setup' to initialize the database, and then run 'python src/holo.py -m edit season_configs/[season]_[year].yaml' to load the season config."
+    }
+  ]
+}

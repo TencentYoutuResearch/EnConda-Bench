@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_scylladb_sphinx-scylladb-theme_error_readme_merge_k6",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install scylladb-theme` uses an incorrect package name. The correct package name for this theme is likely `sphinx-scylladb-theme`.",
+      "correction_candidates": [
+        "pip install sphinx-scylladb-theme",
+        "pip install scylla-sphinx-theme",
+        "pip install scylladb-sphinx",
+        "pip install sphinx-theme-scylladb"
+      ],
+      "golden_answer": "pip install sphinx-scylladb-theme"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `sphinx-build source build/html` is missing the required builder name flag. The correct flag for generating HTML is `-b html`.",
+      "correction_candidates": [
+        "sphinx-build -b html source build/html",
+        "sphinx-build --builder=html source build/html",
+        "sphinx-build -t html source build/html",
+        "sphinx-build source build/html -b html"
+      ],
+      "golden_answer": "sphinx-build -b html source build/html"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README states that the theme requires Python 2.7, which is an outdated and unsupported version of Python. Modern Sphinx projects typically require Python 3.",
+      "correction_candidates": [
+        "Remove the sentence 'This theme requires Python 2.7.' as the required version is specified in the project's packaging files.",
+        "Change 'Python 2.7' to 'Python 3.6 or newer'.",
+        "Change 'Python 2.7' to 'Python 3'.",
+        "Change 'Python 2.7' to 'the latest version of Python'."
+      ],
+      "golden_answer": "Remove the sentence 'This theme requires Python 2.7.' as the required version is specified in the project's packaging files."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The license link points to `LICENSE.md`, but the standard file name for a license in a repository is typically `LICENSE` without a file extension.",
+      "correction_candidates": [
+        "Change the license link from `<LICENSE.md>` to `<LICENSE>`.",
+        "Change the license link from `<LICENSE.md>` to `<LICENSE.txt>`.",
+        "Change the license link from `<LICENSE.md>` to `<COPYING>`.",
+        "Change the license link from `<LICENSE.md>` to `LICENSE`."
+      ],
+      "golden_answer": "Change the license link from `<LICENSE.md>` to `<LICENSE>`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily require installing NodeJS and running `npm install`. This project is a Python-based Sphinx theme and does not have NodeJS dependencies.",
+      "correction_candidates": [
+        "Remove the section requiring NodeJS and the `npm install` command.",
+        "Change `npm install` to `pip install`.",
+        "Change `npm install` to `npm install --production`.",
+        "Move the `npm install` command to the Usage section."
+      ],
+      "golden_answer": "Remove the section requiring NodeJS and the `npm install` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment, `source venv/bin`, is incomplete. The correct command on POSIX systems is `source venv/bin/activate`.",
+      "correction_candidates": [
+        "Change `source venv/bin` to `source venv/bin/activate`.",
+        "Change `source venv/bin` to `. venv/bin/activate`.",
+        "Change `source venv/bin` to `venv\\Scripts\\activate` for Windows users.",
+        "Change `source venv/bin` to `run venv/bin/activate`."
+      ],
+      "golden_answer": "Change `source venv/bin` to `source venv/bin/activate`."
+    }
+  ]
+}

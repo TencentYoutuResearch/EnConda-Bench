@@ -1,0 +1,29 @@
+{
+  "readme": "hackerspace-ntnu_website_error_readme_2",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `apt install` command for Linux is missing the `python3-venv` package, which is required to create virtual environments using `python3 -m venv`.",
+      "correction_candidates": [
+        "Add `python3-virtualenv` to the `apt install` command.",
+        "Add `python3-venv` to the `apt install` command.",
+        "Install pip and then run `pip install virtualenv` instead of using `apt`.",
+        "The command is correct; `venv` is included with `python3-pip`."
+      ],
+      "golden_answer": "Add `python3-venv` to the `apt install` command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to load test data references a non-existent file `fixture.json` instead of the correct `fixtures.json`.",
+      "correction_candidates": [
+        "Change the command to `python manage.py loaddata fixture.json --format=json`.",
+        "Rename the file `fixtures.json` to `fixture.json` in the project.",
+        "Change the command to `python manage.py loaddata fixtures.json`.",
+        "Change the command to `python manage.py loaddata fixtures`."
+      ],
+      "golden_answer": "Change the command to `python manage.py loaddata fixtures.json`."
+    }
+  ]
+}

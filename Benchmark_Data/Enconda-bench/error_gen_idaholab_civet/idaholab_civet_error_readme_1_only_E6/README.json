@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_1_only_E6",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions attempt to install pip dependencies before the virtual environment has been created and activated, which will cause them to be installed globally or fail.",
+      "correction_candidates": [
+        "Run `pip install --user -r requirements.txt` instead of installing into a virtual environment.",
+        "The steps should be reordered: 1. Create venv, 2. Activate venv, 3. Install pip dependencies, 4. Install system dependencies.",
+        "Combine the creation and installation steps into a single setup script.",
+        "Remove the virtual environment steps and install all dependencies globally."
+      ],
+      "golden_answer": "The steps should be reordered: 1. Create venv, 2. Activate venv, 3. Install pip dependencies, 4. Install system dependencies."
+    }
+  ]
+}

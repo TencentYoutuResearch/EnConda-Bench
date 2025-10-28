@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_posit-dev_great-tables_error_readme_merge_k4",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example code attempts to load data from a local CSV file `data/sp500.csv` which is not provided in the repository or as part of the setup instructions.",
+      "correction_candidates": [
+        "Replace the lines loading `sp500` from a CSV with `from great_tables.data import sp500` to use the built-in dataset.",
+        "Add instructions to download `sp500.csv` and place it in a `data/` directory.",
+        "Change the path to an absolute URL pointing to the raw CSV file on GitHub.",
+        "Replace the pandas code with `from great_tables.data import sp500` and remove the `import pandas as pd` line."
+      ],
+      "golden_answer": "Replace the lines loading `sp500` from a CSV with `from great_tables.data import sp500` to use the built-in dataset."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the Python code example, the `fmt_currency` method is called with an incorrect keyword argument `column` instead of `columns`.",
+      "correction_candidates": [
+        "Change the keyword argument from `column=` to `columns=` in the `.fmt_currency()` call.",
+        "Change `.fmt_currency(column=...` to `.fmt(gt.currency, columns=...`.",
+        "Split the `fmt_currency` call into four separate calls, one for each column.",
+        "Remove the `.fmt_currency()` line from the example."
+      ],
+      "golden_answer": "Change the keyword argument from `column=` to `columns=` in the `.fmt_currency()` call."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary system dependencies and specific version constraints that are not required for great_tables installation",
+      "correction_candidates": [
+        "$ pip install great_tables",
+        "$ conda install great_tables",
+        "$ pip install --upgrade great_tables",
+        "$ python -m pip install great_tables"
+      ],
+      "golden_answer": "$ pip install great_tables"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Shows installing system dependencies after pip installation, which is incorrect order and duplicates the pip install command",
+      "correction_candidates": [
+        "Remove the second installation block entirely as it's unnecessary",
+        "Move system dependencies installation before pip install",
+        "Replace system dependencies with conda environment setup",
+        "Add virtual environment creation before any installations"
+      ],
+      "golden_answer": "Remove the second installation block entirely as it's unnecessary"
+    }
+  ]
+}

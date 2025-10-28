@@ -1,0 +1,18 @@
+{
+  "readme": "strinking_futaba_error_readme_2_only_E7",
+  "repo_name": "strinking_futaba",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified as 'Python 3 or later', which is too broad and may cause compatibility issues as the project requires features from Python 3.6+.",
+      "correction_candidates": [
+        "Change the requirement to 'Requires Python 3.6 or later.'",
+        "Change the requirement to 'Requires Python 3.6.'",
+        "Add a python = \"^3.6\" entry to the pyproject.toml file.",
+        "Change the requirement to 'Requires the latest version of Python 3.'"
+      ],
+      "golden_answer": "Change the requirement to 'Requires Python 3.6 or later.'"
+    }
+  ]
+}

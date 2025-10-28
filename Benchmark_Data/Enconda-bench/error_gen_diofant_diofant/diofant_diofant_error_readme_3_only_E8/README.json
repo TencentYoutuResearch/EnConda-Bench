@@ -1,0 +1,18 @@
+{
+  "readme": "diofant_diofant_error_readme_3_only_E8",
+  "repo_name": "diofant_diofant",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The usage example is incomplete and will raise a NameError because the symbolic variables 'x' and 'y' are used without being defined first.",
+      "correction_candidates": [
+        "The example should be `from diofant.abc import x, y; print(x + y)`.",
+        "Add a line `x, y = symbols('x y')` after the import to define the symbols.",
+        "Replace the example with a non-symbolic one like `print(2**3)`.",
+        "Add a comment `# Assumes x and y are defined as symbols` to clarify the code."
+      ],
+      "golden_answer": "Add a line `x, y = symbols('x y')` after the import to define the symbols."
+    }
+  ]
+}

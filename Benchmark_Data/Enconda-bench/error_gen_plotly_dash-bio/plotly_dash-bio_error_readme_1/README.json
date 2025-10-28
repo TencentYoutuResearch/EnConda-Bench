@@ -1,0 +1,29 @@
+{
+  "readme": "plotly_dash-bio_error_readme_1",
+  "repo_name": "plotly_dash-bio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `pip install` command is executed before the virtual environment is created and activated, which installs packages globally instead of within the isolated environment.",
+      "correction_candidates": [
+        "Move the `pip install` command to be the first step, before creating the virtual environment.",
+        "The `pip install` command should be run after creating the virtual environment but before activating it.",
+        "The `pip install` command should be run after creating and activating the virtual environment.",
+        "Create a `requirements.txt` file and run `pip install -r requirements.txt` before creating the virtual environment."
+      ],
+      "golden_answer": "The `pip install` command should be run after creating and activating the virtual environment."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to build JupyterLab is incorrect. `jupyter lab build-extension` is not the correct command for rebuilding the application.",
+      "correction_candidates": [
+        "Use the command `jupyter lab install`.",
+        "Use the command `jupyter lab build`.",
+        "Use the command `jupyter build lab`.",
+        "Use the command `jupyter-lab build`."
+      ],
+      "golden_answer": "Use the command `jupyter lab build`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_2_only_E4",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command `pip install -r requirements/all.txt` points to a file path that does not exist in the repository. The requirements file is typically at the root.",
+      "correction_candidates": [
+        "Run `find . -name \"*.txt\"` to locate the correct requirements file.",
+        "Change the file path from `requirements/all.txt` to `requirements.txt`.",
+        "Create the directory and file by running `mkdir requirements && pip freeze > requirements/all.txt`.",
+        "Change the file path to `civet/requirements.txt`."
+      ],
+      "golden_answer": "Change the file path from `requirements/all.txt` to `requirements.txt`."
+    }
+  ]
+}

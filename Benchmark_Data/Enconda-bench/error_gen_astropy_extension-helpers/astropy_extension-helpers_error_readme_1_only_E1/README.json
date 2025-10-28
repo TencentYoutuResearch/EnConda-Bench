@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_extension-helpers_error_readme_1_only_E1",
+  "repo_name": "astropy_extension-helpers",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly instructs to install the deprecated `astropy-helpers` package as a prerequisite, which is not a dependency for this package.",
+      "correction_candidates": [
+        "Remove the sentence 'First, make sure you have the `astropy-helpers` package installed.'",
+        "Replace `astropy-helpers` with `astropy`.",
+        "Replace `astropy-helpers` with `setuptools`.",
+        "Add a command `pip install astropy-helpers` to make the instruction explicit."
+      ],
+      "golden_answer": "Remove the sentence 'First, make sure you have the `astropy-helpers` package installed.'"
+    }
+  ]
+}

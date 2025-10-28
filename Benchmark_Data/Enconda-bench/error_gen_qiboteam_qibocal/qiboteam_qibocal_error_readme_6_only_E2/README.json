@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibocal_error_readme_6_only_E2",
+  "repo_name": "qiboteam_qibocal",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'qqcal auto' instead of 'qq auto' for running protocols",
+      "correction_candidates": [
+        "Change 'qqcal auto' to 'qq auto'",
+        "Replace 'qqcal auto' with 'qibocal run'",
+        "Use 'python -m qibocal auto' instead of 'qqcal auto'",
+        "Change 'qqcal auto' to 'qibocal auto'"
+      ],
+      "golden_answer": "Change 'qqcal auto' to 'qq auto'"
+    }
+  ]
+}

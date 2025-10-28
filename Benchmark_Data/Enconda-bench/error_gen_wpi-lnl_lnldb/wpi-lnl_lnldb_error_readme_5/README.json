@@ -1,0 +1,29 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_5",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating and activating the virtual environment",
+      "correction_candidates": [
+        "Move 'pip install -r requirements_debug.txt' after 'source env/bin/activate'",
+        "Replace the entire block with 'python -m venv env && source env/bin/activate && pip install -r requirements_debug.txt'",
+        "Add 'python -m pip install --upgrade pip' before 'pip install -r requirements_debug.txt'",
+        "Change 'pip install -r requirements_debug.txt' to 'pip3 install -r requirements_debug.txt'"
+      ],
+      "golden_answer": "Move 'pip install -r requirements_debug.txt' after 'source env/bin/activate'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect file extension for fixtures data loading command",
+      "correction_candidates": [
+        "Change 'fixtures/*.yaml' to 'fixtures/*.json'",
+        "Change 'fixtures/*.yaml' to 'fixtures/*.xml'",
+        "Change 'fixtures/*.yaml' to 'fixtures/initial_data.json'",
+        "Change 'fixtures/*.yaml' to 'fixtures/**.json'"
+      ],
+      "golden_answer": "Change 'fixtures/*.yaml' to 'fixtures/*.json'"
+    }
+  ]
+}

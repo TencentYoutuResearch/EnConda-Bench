@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_pylabrobot_pylabrobot_error_readme_merge_k4",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The code example for the Hamilton STAR robot references a layout file at a non-existent path \"layouts/hamilton-layout.json\" without instructions to create this directory or noting that it is a placeholder.",
+      "correction_candidates": [
+        "deck = Deck.load_from_json_file(\"hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"./hamilton-layout.json\")",
+        "deck = Deck.load_from_json_file(\"pylabrobot/resources/hamilton-layout.json\")",
+        "deck = Deck.load_from_json(\"hamilton-layout.json\")"
+      ],
+      "golden_answer": "deck = Deck.load_from_json_file(\"hamilton-layout.json\")"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `aspirate` method in the Hamilton STAR example uses an incorrect parameter `vol` instead of the correct parameter `vols`.",
+      "correction_candidates": [
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)",
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], volume=100)",
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], 100)",
+        "await lh.aspirate(well=lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)"
+      ],
+      "golden_answer": "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "An installation command is provided with the `--no-deps` flag, which will prevent necessary dependencies from being installed, leading to runtime errors.",
+      "correction_candidates": [
+        "Change the command to `pip install pylabrobot`.",
+        "Remove the sentence \"You can install PyLabRobot with `pip install pylabrobot --no-deps`.\"",
+        "Change the command to `pip install \"pylabrobot[all]\"`.",
+        "Change the command to `python -m pip install pylabrobot`."
+      ],
+      "golden_answer": "Change the command to `pip install pylabrobot`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that PyLabRobot is built on Python 3.6+ features, while it actually requires Python 3.8 or higher.",
+      "correction_candidates": [
+        "Change \"Python 3.6+\" to \"Python 3.8+\".",
+        "Change \"Python 3.6+\" to \"the latest version of Python\".",
+        "Change \"Python 3.6+\" to \"Python 3\".",
+        "Change \"Python 3.6+\" to \"Python >= 3.8\"."
+      ],
+      "golden_answer": "Change \"Python 3.6+\" to \"Python 3.8+\"."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the Hamilton STAR example, the `lh.setup()` command is called after other liquid handling operations, which will fail because the robot connection is not established first.",
+      "correction_candidates": [
+        "Move the `await lh.setup()` line to be right after the `lh = LiquidHandler(...)` line.",
+        "The `setup()` call should be `lh.setup()` instead of `await lh.setup()`.",
+        "The `setup()` call is unnecessary and should be removed.",
+        "Move the `await lh.setup()` line to be before the `deck = Deck.load_from_json_file(...)` line."
+      ],
+      "golden_answer": "Move the `await lh.setup()` line to be right after the `lh = LiquidHandler(...)` line."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pump example uses an incorrect method name `run_for` and an incorrect parameter `time` instead of the correct `run_for_duration` method and `duration` parameter.",
+      "correction_candidates": [
+        "await p.run_for_duration(speed=100, duration=30)",
+        "await p.run_duration(speed=100, duration=30)",
+        "await p.run_for_duration(rpm=100, seconds=30)",
+        "await p.run(speed=100, duration=30)"
+      ],
+      "golden_answer": "await p.run_for_duration(speed=100, duration=30)"
+    }
+  ]
+}

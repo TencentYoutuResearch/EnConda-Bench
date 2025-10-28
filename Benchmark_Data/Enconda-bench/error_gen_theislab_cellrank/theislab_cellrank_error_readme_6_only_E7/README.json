@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_cellrank_error_readme_6_only_E7",
+  "repo_name": "theislab_cellrank",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifying outdated Python 2.7 requirement and pinning very old incompatible versions of dependencies",
+      "correction_candidates": [
+        "CellRank requires Python 3.8 or higher. Install using pip: pip install cellrank",
+        "CellRank requires Python 3.7+ and current versions. Install with: pip install cellrank scanpy scvelo",
+        "CellRank needs Python 3.9+. Use: pip install cellrank>=2.0 scanpy>=1.9 scvelo>=0.2",
+        "Python 3.6+ required for CellRank. Install: conda install cellrank scanpy scvelo"
+      ],
+      "golden_answer": "CellRank requires Python 3.8 or higher. Install using pip: pip install cellrank"
+    }
+  ]
+}

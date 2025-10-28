@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_tommadness_kh2randomizer_error_readme_merge_k2",
+  "repo_name": "tommadness_kh2randomizer",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly tell the user to install dependencies globally before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "First, create and activate the virtual environment, then run `pip install -r requirements.txt`.",
+        "Use `pipenv install` which automatically creates a virtual environment and installs dependencies from a Pipfile.",
+        "The dependencies should be installed after activating the virtual environment to keep them isolated from the global Python installation.",
+        "The correct order of commands is: `python -m venv venv`, `source venv/bin/activate`, `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "First, create and activate the virtual environment, then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application uses an incorrect parameter `--seed-file` which does not exist.",
+      "correction_candidates": [
+        "The correct command is `python randomizer.py --seed myseed.json`.",
+        "The script expects a positional argument: `python randomizer.py myseed.json`.",
+        "Use the shorthand version of the flag: `python randomizer.py -s myseed.json`.",
+        "The parameter should be `--input-file` instead of `--seed-file`."
+      ],
+      "golden_answer": "The correct command is `python randomizer.py --seed myseed.json`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The 'Prerequisites' section fails to specify the required Python version, which can lead to compatibility issues if the user has an older version like Python 2.7.",
+      "correction_candidates": [
+        "This project requires Python 3.8 or newer.",
+        "Please ensure your system is running Python version 3.8.x for best results.",
+        "The application is not compatible with Python 2. Please use a Python 3.8+ interpreter.",
+        "Check your Python version with `python --version`. It must be at least 3.8."
+      ],
+      "golden_answer": "This project requires Python 3.8 or newer."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install requirements.txt` is incorrect. It attempts to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Use `pip install -r requirements.txt` to install dependencies from the file.",
+        "The correct command is `python -m pip install -r requirements.txt`.",
+        "You can also use the long-form flag: `pip install --requirement requirements.txt`.",
+        "A valid alternative command is `cat requirements.txt | xargs pip install`."
+      ],
+      "golden_answer": "Use `pip install -r requirements.txt` to install dependencies from the file."
+    }
+  ]
+}

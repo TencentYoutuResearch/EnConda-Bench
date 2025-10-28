@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_avaiga_taipy-core_error_readme_merge_k5",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command has its arguments in the wrong order. The repository URL should come before the optional local directory name.",
+      "correction_candidates": [
+        "git pull https://github.com/Avaiga/taipy-core.git",
+        "clone https://github.com/Avaiga/taipy-core.git",
+        "git clone https://github.com/Avaiga/taipy-core.git",
+        "git clone https://github.com/Avaiga/taipy-core.git taipy-core"
+      ],
+      "golden_answer": "git clone https://github.com/Avaiga/taipy-core.git"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The logical order of operations is incorrect. Dependencies are being installed into the global Python environment before the local virtual environment is created and activated.",
+      "correction_candidates": [
+        "Remove the virtual environment steps as they are optional.",
+        "Run `pip install --user -r requirements/core.txt` to avoid global installation issues.",
+        "Move step 1 (Install dependencies) to be after step 2 (Create and activate a virtual environment).",
+        "Combine the steps into one: `python -m venv venv && source venv/bin/activate && pip install -r requirements/core.txt`"
+      ],
+      "golden_answer": "Move step 1 (Install dependencies) to be after step 2 (Create and activate a virtual environment)."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the requirements file, `requirements/core.txt`, is incorrect. The file is typically named `requirements.txt` and located in the project's root directory.",
+      "correction_candidates": [
+        "Change the path to `requirements.txt`.",
+        "Change the command to `pip install taipy-core`.",
+        "Change the path to `setup.py` and run `pip install .`.",
+        "Create a new file at `requirements/core.txt` with the project dependencies."
+      ],
+      "golden_answer": "Change the path to `requirements.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The steps are in the wrong logical order. The `pip install` command is executed from the parent directory before changing into the newly cloned `taipy-core` directory, so it will fail to find `requirements.txt`.",
+      "correction_candidates": [
+        "Move the `cd taipy-core` command to be before the `pip install` command.",
+        "Change the pip command to `pip install -r taipy-core/requirements.txt` to specify the correct path.",
+        "Combine the first two steps: `git clone https://github.com/Avaiga/taipy-core.git && cd taipy-core`.",
+        "Run the command with sudo: `sudo pip install -requirement requirements.txt`."
+      ],
+      "golden_answer": "Move the `cd taipy-core` command to be before the `pip install` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install dependencies uses an incorrect and non-existent flag `-requirement`. The correct flags are `-r` (short) or `--requirement` (long).",
+      "correction_candidates": [
+        "Change `-requirement` to `--r`.",
+        "Change the command to `pip install -r requirements.txt`.",
+        "Change the command to `pip --install -requirement requirements.txt`.",
+        "Remove the flag and run `pip install requirements.txt`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installing taipy-core package which is unnecessary since the repository is archived and the code has been moved to the main taipy repository",
+      "correction_candidates": [
+        "Remove the taipy-core installation since this repository is archived",
+        "Install the main taipy package instead of taipy-core",
+        "Add more dependencies like numpy and matplotlib",
+        "Use pip install --upgrade to ensure latest versions"
+      ],
+      "golden_answer": "Remove the taipy-core installation since this repository is archived"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Referencing requirements.yaml file which likely does not exist, as Python dependency files are typically named requirements.txt",
+      "correction_candidates": [
+        "Change requirements.yaml to requirements.txt",
+        "Use pip install -r pyproject.toml instead",
+        "Replace with pip install -r environment.yml",
+        "Use pip install -r Pipfile for dependency management"
+      ],
+      "golden_answer": "Change requirements.yaml to requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using 'python setup.py install --user' which is deprecated and can cause issues with modern Python packaging",
+      "correction_candidates": [
+        "Replace with 'pip install -e .' for editable installation",
+        "Use 'python -m build' followed by 'pip install dist/*.whl'",
+        "Change to 'python setup.py develop' for development mode",
+        "Use 'pip install .' instead of setup.py directly"
+      ],
+      "golden_answer": "Replace with 'pip install -e .' for editable installation"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "benadida_helios-server_error_readme_7_only_E2",
+  "repo_name": "benadida_helios-server",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Using incorrect parameter '--host' instead of proper Django runserver syntax",
+      "correction_candidates": [
+        "python manage.py runserver 0.0.0.0:8000",
+        "python manage.py runserver --bind 0.0.0.0:8000",
+        "python manage.py runserver -h 0.0.0.0",
+        "python manage.py runserver --address=0.0.0.0"
+      ],
+      "golden_answer": "python manage.py runserver 0.0.0.0:8000"
+    }
+  ]
+}

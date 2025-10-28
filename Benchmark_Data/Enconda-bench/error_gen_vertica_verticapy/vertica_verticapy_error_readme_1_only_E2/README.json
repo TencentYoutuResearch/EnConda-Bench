@@ -1,0 +1,18 @@
+{
+  "readme": "vertica_verticapy_error_readme_1_only_E2",
+  "repo_name": "vertica_verticapy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip install command `pip3 install verticapy --all` uses an incorrect flag `--all`. The correct syntax for installing optional dependencies is with square brackets.",
+      "correction_candidates": [
+        "pip3 install verticapy[all]",
+        "pip3 install verticapy --with-all",
+        "pip3 install verticapy --install-option='all'",
+        "pip3 install verticapy-all"
+      ],
+      "golden_answer": "pip3 install verticapy[all]"
+    }
+  ]
+}

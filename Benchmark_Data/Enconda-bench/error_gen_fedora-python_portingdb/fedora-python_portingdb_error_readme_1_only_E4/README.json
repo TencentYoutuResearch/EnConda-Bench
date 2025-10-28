@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_1_only_E4",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to check for droppable packages specifies an incorrect data directory path (`database/`), which does not exist in the repository structure.",
+      "correction_candidates": [
+        "python -m portingdb --datadir data/ check-drops",
+        "python -m portingdb --datadir ./data check-drops",
+        "python -m portingdb check-drops --datadir ../data/",
+        "python -m portingdb --data-directory data/ check-drops"
+      ],
+      "golden_answer": "python -m portingdb --datadir data/ check-drops"
+    }
+  ]
+}

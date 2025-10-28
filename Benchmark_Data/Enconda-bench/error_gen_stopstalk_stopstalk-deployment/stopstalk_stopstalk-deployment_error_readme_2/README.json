@@ -1,0 +1,29 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_2",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of dependency installation is incorrect. The `pip install` command is executed before installing the required system-level development packages (`libxml2-dev`, `libxslt1-dev`), which can cause the installation of Python packages that depend on them to fail.",
+      "correction_candidates": [
+        "The correct order is to first run `pip install -r requirements.txt`, then run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`.",
+        "Run both commands together: `apt-get install ... && pip install ...`.",
+        "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`.",
+        "Install Python packages individually, then run the `apt-get` command."
+      ],
+      "golden_answer": "The correct order is to first run `apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev`, then run `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to copy the sample configuration file places it in the wrong directory. It copies `0firstrun.py.sample` to `stopstalk/0firstrun.py` instead of `stopstalk/models/0firstrun.py`, and the application will not find it.",
+      "correction_candidates": [
+        "mv models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.sample models/",
+        "cp models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.sample ./"
+      ],
+      "golden_answer": "cp models/0firstrun.py.sample models/0firstrun.py"
+    }
+  ]
+}

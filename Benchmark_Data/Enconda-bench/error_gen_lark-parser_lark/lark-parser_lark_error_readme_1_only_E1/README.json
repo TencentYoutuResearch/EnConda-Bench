@@ -1,0 +1,18 @@
+{
+  "readme": "lark-parser_lark_error_readme_1_only_E1",
+  "repo_name": "lark-parser_lark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the pip install command is incorrect. The correct package name on PyPI is 'lark', not 'lark-parser'.",
+      "correction_candidates": [
+        "Change `$ pip install lark-parser --upgrade` to `$ pip install lark --upgrade`.",
+        "Change `$ pip install lark-parser --upgrade` to `pip install lark`.",
+        "Change `$ pip install lark-parser --upgrade` to `pip install lark.py --upgrade`.",
+        "Remove the `--upgrade` flag: `$ pip install lark-parser`."
+      ],
+      "golden_answer": "Change `$ pip install lark-parser --upgrade` to `$ pip install lark --upgrade`."
+    }
+  ]
+}

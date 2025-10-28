@@ -1,0 +1,29 @@
+{
+  "readme": "tcprescott_sahasrahbot_error_readme_3",
+  "repo_name": "tcprescott_sahasrahbot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `virtualenv /venv` attempts to create a virtual environment in the root directory (`/`), which will fail due to permission errors on most systems and is not a recommended practice.",
+      "correction_candidates": [
+        "Use a relative path like `venv` or `.venv` instead of an absolute path like `/venv`.",
+        "Change the command to `virtualenv .venv` to create the environment in the project's root directory.",
+        "Run the command with `sudo`: `sudo virtualenv /venv`.",
+        "Change the command to `python -m venv .venv`."
+      ],
+      "golden_answer": "Change the command to `virtualenv .venv` to create the environment in the project's root directory."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command `pip install -r requirements.txt` is used, but the project is managed by Poetry and no `requirements.txt` file is mentioned or provided in the repository, leading to a 'file not found' error.",
+      "correction_candidates": [
+        "Generate a `requirements.txt` file using `poetry export -f requirements.txt --output requirements.txt` before running the pip command.",
+        "Replace `pip install -r requirements.txt` with `poetry install` to use the project's native dependency manager.",
+        "Remove the step `pip install poetry` as it is not used.",
+        "Replace `pip install -r requirements.txt` with `pip install -e .`"
+      ],
+      "golden_answer": "Replace `pip install -r requirements.txt` with `poetry install` to use the project's native dependency manager."
+    }
+  ]
+}

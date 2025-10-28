@@ -1,0 +1,29 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_3",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The documentation incorrectly states that project settings are in a top-level 'settings' directory, but they are located in the 'nablaweb' directory.",
+      "correction_candidates": [
+        "Change 'settings -- inneholder settings og urls' to 'nablaweb/settings -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'nablaweb -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'config -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'core -- inneholder settings og urls'."
+      ],
+      "golden_answer": "Change 'settings -- inneholder settings og urls' to 'nablaweb -- inneholder settings og urls'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to automatically format code is listed as 'make format', but the correct command defined in the project's Makefile is 'make fixme'.",
+      "correction_candidates": [
+        "Change 'make format' to 'make fixme'.",
+        "Change 'make format' to 'pipenv run black . && pipenv run isort .'.",
+        "Change 'make format' to 'make style'.",
+        "Change 'make format' to 'make check-fix'."
+      ],
+      "golden_answer": "Change 'make format' to 'make fixme'."
+    }
+  ]
+}

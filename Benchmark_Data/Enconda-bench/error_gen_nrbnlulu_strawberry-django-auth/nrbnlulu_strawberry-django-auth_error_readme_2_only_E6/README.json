@@ -1,0 +1,18 @@
+{
+  "readme": "nrbnlulu_strawberry-django-auth_error_readme_2_only_E6",
+  "repo_name": "nrbnlulu_strawberry-django-auth",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly advise running `manage.py migrate` before adding `strawberry_django_auth` to `INSTALLED_APPS`, which will prevent its migrations from being detected and run.",
+      "correction_candidates": [
+        "Swap the order of steps 2 and 3. First add the app to `INSTALLED_APPS`, then run `migrate`.",
+        "Combine steps 2 and 3 into one step.",
+        "Run `python manage.py migrate strawberry_django_auth` before adding the app to `INSTALLED_APPS`.",
+        "Run `python manage.py makemigrations` and then `migrate` before adding the app to `INSTALLED_APPS`."
+      ],
+      "golden_answer": "Swap the order of steps 2 and 3. First add the app to `INSTALLED_APPS`, then run `migrate`."
+    }
+  ]
+}

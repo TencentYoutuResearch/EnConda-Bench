@@ -1,0 +1,18 @@
+{
+  "readme": "openqasm_openqasm_error_readme_1_only_E2",
+  "repo_name": "openqasm_openqasm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -r. requirements.txt` has a syntax error due to an extra dot between `-r` and the filename.",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install requirements.txt",
+        "pip install -e .",
+        "python setup.py install"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_3_only_E8",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The instruction to create a `production.json` file is incorrect and misleading. Django applications like this one are typically configured via a `settings.py` file, not a separate JSON file.",
+      "correction_candidates": [
+        "Remove the sentence: \"Before running, you must create a `production.json` file to store your database credentials.\"",
+        "Change the sentence to refer to the Django settings file, for example: \"Configuration is handled in the `settings.py` file.\"",
+        "Change the file name to `config.yaml`.",
+        "Change the file name to `.env` and mention using environment variables."
+      ],
+      "golden_answer": "Remove the sentence: \"Before running, you must create a `production.json` file to store your database credentials.\""
+    }
+  ]
+}

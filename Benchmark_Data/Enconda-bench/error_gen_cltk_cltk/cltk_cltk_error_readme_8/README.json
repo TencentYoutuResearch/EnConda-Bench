@@ -1,0 +1,29 @@
+{
+  "readme": "cltk_cltk_error_readme_8",
+  "repo_name": "cltk_cltk",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Outdated Python version requirements that include unsupported Python 2.7 and very old Python 3.4+",
+      "correction_candidates": [
+        "For the CLTK's latest version (requires Python 3.8+):",
+        "For the CLTK's latest version (requires Python 3.7 or higher):",
+        "For the CLTK's latest version (compatible with Python 3.6-3.11):",
+        "For the CLTK's latest version (requires Python 3.9+ recommended):"
+      ],
+      "golden_answer": "For the CLTK's latest version (requires Python 3.8+):"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using pip2 command which is deprecated and incompatible with modern CLTK versions that require Python 3",
+      "correction_candidates": [
+        "$ pip install cltk",
+        "$ pip3 install cltk",
+        "$ python -m pip install cltk",
+        "$ python3 -m pip install cltk"
+      ],
+      "golden_answer": "$ pip install cltk"
+    }
+  ]
+}

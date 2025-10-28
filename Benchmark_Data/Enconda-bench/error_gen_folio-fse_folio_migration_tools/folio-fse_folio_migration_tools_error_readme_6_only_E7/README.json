@@ -1,0 +1,18 @@
+{
+  "readme": "folio-fse_folio_migration_tools_error_readme_6_only_E7",
+  "repo_name": "folio-fse_folio_migration_tools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement - specifies Python 2.7 instead of 3.9",
+      "correction_candidates": [
+        "Make sure you are running Python 3.9 or above.",
+        "Make sure you are running Python 3.8 or above.",
+        "Make sure you are running Python 3.7 or above.",
+        "Make sure you are running Python 3.6 or above."
+      ],
+      "golden_answer": "Make sure you are running Python 3.9 or above."
+    }
+  ]
+}

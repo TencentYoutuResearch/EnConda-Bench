@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_1_only_E2",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install dependencies from a file is incorrect because it is missing the '-r' flag.",
+      "correction_candidates": [
+        "Change `pip install requirements.txt` to `pip install -r requirements.txt`.",
+        "Change `pip install requirements.txt` to `python -m pip install requirements.txt`.",
+        "Change `pip install requirements.txt` to `pip install --file requirements.txt`.",
+        "Change `pip install requirements.txt` to `pip requirements.txt`."
+      ],
+      "golden_answer": "Change `pip install requirements.txt` to `pip install -r requirements.txt`."
+    }
+  ]
+}

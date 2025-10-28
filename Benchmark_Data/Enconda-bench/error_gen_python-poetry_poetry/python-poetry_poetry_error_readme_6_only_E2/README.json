@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_6_only_E2",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command syntax 'poetry init --name myproject' instead of proper Poetry initialization command",
+      "correction_candidates": [
+        "poetry init",
+        "poetry new myproject",
+        "poetry init --no-interaction",
+        "poetry create myproject"
+      ],
+      "golden_answer": "poetry init"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "matchms_matchms_error_readme_1",
+  "repo_name": "matchms_matchms",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The recommended conda command specifies Python 3.7, which is outside the stated compatible range of Python 3.8 - 3.11, potentially causing compatibility issues.",
+      "correction_candidates": [
+        "conda create --name matchms python=3.8",
+        "conda create --name matchms python=3.9",
+        "conda create --name matchms python",
+        "conda create --name matchms python>=3.8"
+      ],
+      "golden_answer": "conda create --name matchms python=3.9"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install developer dependencies is missing the '.' which specifies the current directory, causing the installation to fail.",
+      "correction_candidates": [
+        "pip install .[dev]",
+        "pip install --editable .[dev]",
+        "pip install -e . --with dev",
+        "poetry install --with dev"
+      ],
+      "golden_answer": "pip install --editable .[dev]"
+    }
+  ]
+}

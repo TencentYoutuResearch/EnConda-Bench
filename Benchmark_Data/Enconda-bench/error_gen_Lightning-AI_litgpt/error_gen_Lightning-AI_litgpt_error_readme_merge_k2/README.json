@@ -1,0 +1,18 @@
+{
+  "readme": "error_gen_Lightning-AI_litgpt_error_readme_merge_k2",
+  "repo_name": "Lightning-AI_litgpt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install litgpt` is incomplete. It installs the base package but misses the `[all]` extra, which is required for all dependencies including quantization, tokenizers, and other features.",
+      "correction_candidates": [
+        "pip install litgpt --all",
+        "pip install 'litgpt[all]'",
+        "pip install litgpt-all",
+        "pip install litgpt && pip install litgpt-extras"
+      ],
+      "golden_answer": "pip install 'litgpt[all]'"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_mad-lab-fau_biopsykit_error_readme_merge_k3",
+  "repo_name": "mad-lab-fau_biopsykit",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands for developer installation is incorrect. `poetry install` is called before changing into the project directory, which will cause it to fail.",
+      "correction_candidates": [
+        "Run `poetry install` in the parent directory, then `cd BioPsyKit`.",
+        "First run `cd BioPsyKit`, then run `poetry install`.",
+        "Run `git clone` and `poetry install` in the same line.",
+        "Run `poetry install BioPsyKit` from the parent directory."
+      ],
+      "golden_answer": "First run `cd BioPsyKit`, then run `poetry install`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing optional dependencies with poetry uses the incorrect `--extras` flag, which is not a valid poetry command flag.",
+      "correction_candidates": [
+        "Use `poetry install --with mne,jupyter`.",
+        "Use `poetry install -E mne -E jupyter`.",
+        "Use `poetry install --extras mne,jupyter`.",
+        "Use `poetry install [mne, jupyter]`."
+      ],
+      "golden_answer": "Use `poetry install -E mne -E jupyter`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The Python version requirement is specified as exactly version 3.8 (`=3.8`), which is overly restrictive and incorrect. The package supports version 3.8 and newer.",
+      "correction_candidates": [
+        "Change the Python requirement to `Python >3.8`.",
+        "Change the Python requirement to `Python >=3.8`.",
+        "Change the Python requirement to `Python <=3.8`.",
+        "Remove the Python version specification."
+      ],
+      "golden_answer": "Change the Python requirement to `Python >=3.8`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that `poethepoet` might need to be installed separately with pip, but it is a development dependency managed by poetry and will be installed with `poetry install`.",
+      "correction_candidates": [
+        "Specify that `poethepoet` should be installed with `poetry add poethepoet --dev`.",
+        "Remove the sentence suggesting to install `poethepoet` separately.",
+        "Change the command to `pip install poethepoet --upgrade`.",
+        "Specify that `poethepoet` is installed with `pipx install poethepoet`."
+      ],
+      "golden_answer": "Remove the sentence suggesting to install `poethepoet` separately."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The description for the `test` task provides an incorrect command `poe run test`. The correct syntax is simply `poe test`.",
+      "correction_candidates": [
+        "The correct command is `poetry run test`.",
+        "The correct command is `poe test`.",
+        "The correct command is `poetry run pytest`.",
+        "The correct command is `poe-test`."
+      ],
+      "golden_answer": "The correct command is `poe test`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to activate the virtual environment has an incorrect path; it uses `venv/bin/activate` instead of the correct `.venv/bin/activate`, as poetry creates the virtual environment directory with a leading dot.",
+      "correction_candidates": [
+        "Change the path to `source .venv/bin/activate`.",
+        "Change the path to `source .venv/scripts/activate`.",
+        "Change the path to `source venv/activate`.",
+        "Change the command to `poetry activate`."
+      ],
+      "golden_answer": "Change the path to `source .venv/bin/activate`."
+    }
+  ]
+}

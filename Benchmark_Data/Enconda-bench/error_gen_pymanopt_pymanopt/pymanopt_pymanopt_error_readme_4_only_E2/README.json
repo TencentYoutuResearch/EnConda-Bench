@@ -1,0 +1,18 @@
+{
+  "readme": "pymanopt_pymanopt_error_readme_4_only_E2",
+  "repo_name": "pymanopt_pymanopt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pymanopt run example.py` is incorrect. Pymanopt does not install a command-line executable with a 'run' subcommand. The standard way to execute a Python script is with the `python` interpreter.",
+      "correction_candidates": [
+        "The correct command to run the script is `python example.py`.",
+        "The command should be `python -m pymanopt.example`.",
+        "The command should be `python -m example`.",
+        "The command `run pymanopt example.py` is the correct syntax."
+      ],
+      "golden_answer": "The correct command to run the script is `python example.py`."
+    }
+  ]
+}

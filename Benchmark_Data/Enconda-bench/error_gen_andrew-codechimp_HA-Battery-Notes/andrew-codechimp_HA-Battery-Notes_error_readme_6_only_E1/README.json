@@ -1,0 +1,18 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_6_only_E1",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary system dependency installation for a Home Assistant custom component that doesn't require system packages",
+      "correction_candidates": [
+        "Remove system dependency installation as Home Assistant custom components don't require manual system package installation",
+        "Replace system packages with Python virtual environment setup using `python -m venv battery_notes_env`",
+        "Change to Docker container setup instead of system package installation",
+        "Update to use Home Assistant Supervisor add-on installation method"
+      ],
+      "golden_answer": "Remove system dependency installation as Home Assistant custom components don't require manual system package installation"
+    }
+  ]
+}

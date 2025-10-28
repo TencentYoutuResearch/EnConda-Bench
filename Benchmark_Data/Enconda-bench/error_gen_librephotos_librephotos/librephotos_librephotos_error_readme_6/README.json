@@ -1,0 +1,29 @@
+{
+  "readme": "librephotos_librephotos_error_readme_6",
+  "repo_name": "librephotos_librephotos",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Referenced non-existent pip package 'librephotos' that doesn't exist in PyPI",
+      "correction_candidates": [
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)",
+        "To get started quickly, clone the repository and follow the Docker installation guide in our documentation.",
+        "To get started quickly, download the latest release and follow the setup instructions in our documentation.",
+        "To get started quickly, use our Docker Compose setup as described in the installation documentation."
+      ],
+      "golden_answer": "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect installation order by running docker-compose up without proper setup steps first",
+      "correction_candidates": [
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)",
+        "To get started, first clone the repository, then configure your environment, and finally run docker-compose up.",
+        "To get started, download the Docker Compose file, configure your settings, then run docker-compose up.",
+        "To get started, ensure Docker is installed, clone the repository, configure environment variables, then run docker-compose up."
+      ],
+      "golden_answer": "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)"
+    }
+  ]
+}

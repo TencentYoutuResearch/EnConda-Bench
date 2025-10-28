@@ -1,0 +1,18 @@
+{
+  "readme": "facebookresearch_hydra_error_readme_1_only_E1",
+  "repo_name": "facebookresearch_hydra",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install hydra --upgrade` uses an incorrect package name. The correct package is `hydra-core`.",
+      "correction_candidates": [
+        "Change the installation command to `pip install hydra-core --upgrade`.",
+        "Change the installation command to `pip install hydra-core`.",
+        "Change the installation command to `pip install facebook-hydra --upgrade`.",
+        "Use `conda install hydra` instead."
+      ],
+      "golden_answer": "Change the installation command to `pip install hydra-core --upgrade`."
+    }
+  ]
+}

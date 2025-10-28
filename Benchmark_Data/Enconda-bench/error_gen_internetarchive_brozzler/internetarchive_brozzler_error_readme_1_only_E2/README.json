@@ -1,0 +1,18 @@
+{
+  "readme": "internetarchive_brozzler_error_readme_1_only_E2",
+  "repo_name": "internetarchive_brozzler",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Getting Started' section, the command to start and log rethinkdb is `rethinkdb --log rethinkdb.log &`, which is incorrect. The rethinkdb command-line tool does not have a `--log` option for redirecting output.",
+      "correction_candidates": [
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb --logfile rethinkdb.log &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb &>>rethinkdb.log &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb > rethinkdb.log 2>&1 &`.",
+        "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb --output rethinkdb.log --daemon`."
+      ],
+      "golden_answer": "Replace `rethinkdb --log rethinkdb.log &` with `rethinkdb &>>rethinkdb.log &`."
+    }
+  ]
+}

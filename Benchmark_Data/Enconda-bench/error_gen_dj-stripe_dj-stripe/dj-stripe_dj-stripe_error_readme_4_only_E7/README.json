@@ -1,0 +1,18 @@
+{
+  "readme": "dj-stripe_dj-stripe_error_readme_4_only_E7",
+  "repo_name": "dj-stripe_dj-stripe",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The requirement `Python >=3.6` is incorrect. The library requires features from newer Python versions and is only compatible with Python 3.9 and higher.",
+      "correction_candidates": [
+        "Change the requirement to `Python >=3.9`.",
+        "Change the requirement to `Python >=3.8`.",
+        "Change the requirement to `Python 3.9, 3.10, 3.11`.",
+        "Remove the Python version requirement and let the user figure it out from `pyproject.toml`."
+      ],
+      "golden_answer": "Change the requirement to `Python >=3.9`."
+    }
+  ]
+}

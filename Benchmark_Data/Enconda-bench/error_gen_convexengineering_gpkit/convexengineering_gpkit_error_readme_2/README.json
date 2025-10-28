@@ -1,0 +1,29 @@
+{
+  "readme": "convexengineering_gpkit_error_readme_2",
+  "repo_name": "convexengineering_gpkit",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.7 is required, which is an outdated and overly restrictive version requirement.",
+      "correction_candidates": [
+        "Change the sentence to 'It requires Python 3.6 or newer to run.'",
+        "Remove the sentence 'It requires Python 2.7 to run.'",
+        "Change the sentence to 'It is compatible with both Python 2 and Python 3.'",
+        "Change the sentence to 'It requires Python 3.7 to run.'"
+      ],
+      "golden_answer": "Remove the sentence 'It requires Python 2.7 to run.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip install gp-kit` is incorrect; the package name on PyPI is `gpkit`.",
+      "correction_candidates": [
+        "`pip install gpkit`",
+        "`pip install --upgrade gpkit`",
+        "`python -m pip install gpkit`",
+        "`conda install -c conda-forge gpkit`"
+      ],
+      "golden_answer": "`pip install gpkit`"
+    }
+  ]
+}

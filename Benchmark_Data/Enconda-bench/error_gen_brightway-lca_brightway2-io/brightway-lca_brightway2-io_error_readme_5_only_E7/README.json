@@ -1,0 +1,18 @@
+{
+  "readme": "brightway-lca_brightway2-io_error_readme_5_only_E7",
+  "repo_name": "brightway-lca_brightway2-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified an outdated version of brightway2 (1.8.2) in the installation command which may cause compatibility issues",
+      "correction_candidates": [
+        "pip install bw2io brightway2",
+        "pip install bw2io brightway2>=2.4.0",
+        "conda install -c conda-forge bw2io brightway2",
+        "pip install bw2io brightway2==2.4.1"
+      ],
+      "golden_answer": "pip install bw2io brightway2"
+    }
+  ]
+}

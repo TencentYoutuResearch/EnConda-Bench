@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_5_only_E1",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Specified an outdated version of googletrans dependency that may cause installation or compatibility issues",
+      "correction_candidates": [
+        "First, install the required dependencies by running `pip install googletrans`.",
+        "First, install the required dependencies by running `pip install googletrans>=4.0.0`.",
+        "First, install the required dependencies by running `pip install googletrans==4.0.0`.",
+        "First, install the required dependencies by running `pip install googletrans-py`."
+      ],
+      "golden_answer": "First, install the required dependencies by running `pip install googletrans>=4.0.0`."
+    }
+  ]
+}

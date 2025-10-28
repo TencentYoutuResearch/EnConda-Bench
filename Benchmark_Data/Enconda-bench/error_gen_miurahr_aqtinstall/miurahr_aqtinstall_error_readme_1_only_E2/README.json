@@ -1,0 +1,18 @@
+{
+  "readme": "miurahr_aqtinstall_error_readme_1_only_E2",
+  "repo_name": "miurahr_aqtinstall",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Example' section, the command to install all modules uses an incorrect parameter `--modules all` instead of the correct short form `-m all`, which will cause the command to fail.",
+      "correction_candidates": [
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --all-modules",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 --install-all",
+        "aqt install-qt windows desktop 6.2.0 win64_mingw81 -a"
+      ],
+      "golden_answer": "aqt install-qt windows desktop 6.2.0 win64_mingw81 -m all"
+    }
+  ]
+}

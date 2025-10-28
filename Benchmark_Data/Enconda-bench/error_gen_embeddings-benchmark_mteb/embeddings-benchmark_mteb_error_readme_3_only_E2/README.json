@@ -1,0 +1,18 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_3_only_E2",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The Python code example has a syntax error. The line `evaluation.run(...)` is missing a closing parenthesis, which will cause the script to fail with a `SyntaxError`.",
+      "correction_candidates": [
+        "Remove the output_folder argument: evaluation.run(model)",
+        "Correct the f-string syntax: evaluation.run(model, output_folder=\"results/\" + model_name)",
+        "Add a closing parenthesis: evaluation.run(model, output_folder=f\"results/{model_name}\")",
+        "Change the line to: results = evaluation.run(model)"
+      ],
+      "golden_answer": "Add a closing parenthesis: evaluation.run(model, output_folder=f\"results/{model_name}\")"
+    }
+  ]
+}

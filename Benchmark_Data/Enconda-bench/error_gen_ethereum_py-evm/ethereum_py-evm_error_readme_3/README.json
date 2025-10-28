@@ -1,0 +1,29 @@
+{
+  "readme": "ethereum_py-evm_error_readme_3",
+  "repo_name": "ethereum_py-evm",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the 'Snake Charmers Tactical Manual' points to a non-existent file within the 'py-evm' repository.",
+      "correction_candidates": [
+        "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual'.",
+        "Change the link to 'https://github.com/ethereum/py-evm/blob/main/CONTRIBUTING.md'.",
+        "Change the link to 'https://py-evm.readthedocs.io/en/latest/contributing.html#snake-charmers-tactical-manual'.",
+        "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual/blob/master/README.md'."
+      ],
+      "golden_answer": "Change the link to 'https://github.com/ethereum/snake-charmers-tactical-manual'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'git clone' command uses an invalid URL 'https//github.com' due to a missing colon, which will cause the clone operation to fail.",
+      "correction_candidates": [
+        "Change the command to 'git clone https://github.com/ethereum/py-evm.git'.",
+        "Change the command to 'git clone git@github.com:ethereum/py-evm.git'.",
+        "Change the command to 'git clone git://github.com/ethereum/py-evm.git'.",
+        "Change the command to 'git clone https://www.github.com/ethereum/py-evm.git'."
+      ],
+      "golden_answer": "Change the command to 'git clone git@github.com:ethereum/py-evm.git'."
+    }
+  ]
+}

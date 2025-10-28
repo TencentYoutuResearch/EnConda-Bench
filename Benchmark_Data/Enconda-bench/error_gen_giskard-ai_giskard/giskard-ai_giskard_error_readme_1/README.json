@@ -1,0 +1,29 @@
+{
+  "readme": "giskard-ai_giskard_error_readme_1",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install giskard -U` is missing the `[llm]` extra, which is required to install dependencies for LLM-related features used in the quickstart.",
+      "correction_candidates": [
+        "pip install \"giskard[llm,rag]\" -U",
+        "pip install giskard-llm -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard --all-extras -U"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install langchain tiktoken \"pypdf<=3.17.0\" --no-deps` incorrectly uses the `--no-deps` flag, which prevents pip from installing the necessary dependencies for these packages, leading to runtime errors.",
+      "correction_candidates": [
+        "pip install langchain tiktoken \"pypdf<=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --force-reinstall",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --ignore-installed",
+        "pip install langchain tiktoken pypdf"
+      ],
+      "golden_answer": "pip install langchain tiktoken \"pypdf<=3.17.0\""
+    }
+  ]
+}

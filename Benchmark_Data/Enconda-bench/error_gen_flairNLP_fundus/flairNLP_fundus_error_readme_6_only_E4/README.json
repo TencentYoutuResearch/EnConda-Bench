@@ -1,0 +1,18 @@
+{
+  "readme": "flairNLP_fundus_error_readme_6_only_E4",
+  "repo_name": "flairNLP_fundus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Changed file paths from 'docs/' to 'documentation/' which don't exist in the repository structure",
+      "correction_candidates": [
+        "docs/1_getting_started.md",
+        "tutorials/1_getting_started.md",
+        "guides/1_getting_started.md",
+        "help/1_getting_started.md"
+      ],
+      "golden_answer": "docs/1_getting_started.md"
+    }
+  ]
+}

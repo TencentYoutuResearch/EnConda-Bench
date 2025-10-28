@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_flask-middleware_flask-security_error_readme_merge_k2",
+  "repo_name": "flask-middleware_flask-security",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only compatible with Python 3.6, which is false and may deter users with newer Python versions.",
+      "correction_candidates": [
+        "Change the sentence to \"Note: This package is tested on Python 3.6 and newer.\"",
+        "Remove the sentence \"Note: This package requires Python 3.6 and is not compatible with newer versions.\"",
+        "Check the project's setup.cfg for the actual Python version specifiers and update the note.",
+        "Change the sentence to \"Note: This package is primarily developed for Python 3.6 but may work with other versions.\""
+      ],
+      "golden_answer": "Remove the sentence \"Note: This package requires Python 3.6 and is not compatible with newer versions.\""
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions include an unnecessary and potentially problematic step to install a specific, old version of Flask. Flask is a dependency of Flask-Security-Too and will be installed automatically with a compatible version.",
+      "correction_candidates": [
+        "Change 'pip install Flask==1.0.0' to 'pip install Flask'.",
+        "Move 'pip install Flask==1.0.0' to after the 'pip install -U Flask-Security-Too' command.",
+        "Remove the line 'pip install Flask==1.0.0'.",
+        "Change 'pip install Flask==1.0.0' to 'pip install -U Flask'."
+      ],
+      "golden_answer": "Remove the line 'pip install Flask==1.0.0'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have the wrong logical order. The package is installed globally before the virtual environment is created and activated, defeating the purpose of the virtual environment.",
+      "correction_candidates": [
+        "The correct order is to first create the venv, then activate it, then install the package.",
+        "The package should be installed using 'pipx' to ensure isolation.",
+        "The venv should be created with the --system-site-packages flag.",
+        "Run 'pip install -U Flask-Security-Too --user' instead of using a venv."
+      ],
+      "golden_answer": "The correct order is to first create the venv, then activate it, then install the package."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for 'Code' in the Resources section points to a non-existent '/src' directory in the GitHub repository.",
+      "correction_candidates": [
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security/>.",
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security/tree/master>.",
+        "Change the Code link to <https://github.com/Flask-Middleware/flask-security.git>.",
+        "Create a 'src' directory in the repository to match the link."
+      ],
+      "golden_answer": "Change the Code link to <https://github.com/Flask-Middleware/flask-security/>."
+    }
+  ]
+}

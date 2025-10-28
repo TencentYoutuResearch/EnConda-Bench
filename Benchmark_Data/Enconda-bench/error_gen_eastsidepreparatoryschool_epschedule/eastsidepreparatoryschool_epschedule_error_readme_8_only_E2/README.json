@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_8_only_E2",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command 'python app.py' instead of 'python main.py'",
+      "correction_candidates": [
+        "```python main.py```",
+        "```python server.py```",
+        "```python run.py```",
+        "```python start.py```"
+      ],
+      "golden_answer": "```python main.py```"
+    }
+  ]
+}

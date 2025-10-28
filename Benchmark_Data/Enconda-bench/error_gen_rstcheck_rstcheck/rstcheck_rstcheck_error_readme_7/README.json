@@ -1,0 +1,29 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_7",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Usage example references non-existent file invalid_python.rst instead of the actual file bad_python.rst shown in the code block",
+      "correction_candidates": [
+        "$ rstcheck bad_python.rst",
+        "$ rstcheck test_python.rst",
+        "$ rstcheck example_python.rst",
+        "$ rstcheck sample_python.rst"
+      ],
+      "golden_answer": "$ rstcheck bad_python.rst"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Usage example references non-existent file wrong_cpp.rst instead of the actual file bad_cpp.rst shown in the code block",
+      "correction_candidates": [
+        "$ rstcheck bad_cpp.rst",
+        "$ rstcheck test_cpp.rst",
+        "$ rstcheck example_cpp.rst",
+        "$ rstcheck sample_cpp.rst"
+      ],
+      "golden_answer": "$ rstcheck bad_cpp.rst"
+    }
+  ]
+}

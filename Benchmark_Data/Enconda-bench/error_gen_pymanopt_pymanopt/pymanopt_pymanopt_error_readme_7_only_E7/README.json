@@ -1,0 +1,18 @@
+{
+  "readme": "pymanopt_pymanopt_error_readme_7_only_E7",
+  "repo_name": "pymanopt_pymanopt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Very old version requirements for numpy and scipy that may cause compatibility issues",
+      "correction_candidates": [
+        "numpy>=1.18.0\nscipy>=1.4.0",
+        "numpy>=1.21.0\nscipy>=1.7.0",
+        "numpy>=1.19.0\nscipy>=1.5.0",
+        "numpy>=1.20.0\nscipy>=1.6.0"
+      ],
+      "golden_answer": "numpy>=1.18.0\nscipy>=1.4.0"
+    }
+  ]
+}

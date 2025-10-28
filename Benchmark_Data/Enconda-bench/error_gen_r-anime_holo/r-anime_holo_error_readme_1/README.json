@@ -1,0 +1,29 @@
+{
+  "readme": "r-anime_holo_error_readme_1",
+  "repo_name": "r-anime_holo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to set up the database is incorrect. The `--setup` flag is used instead of the correct `-m setup` module command.",
+      "correction_candidates": [
+        "python src/holo.py -m setup_database",
+        "python src/holo.py --init-db",
+        "python src/holo.py setup",
+        "python src/holo.py -m setup"
+      ],
+      "golden_answer": "python src/holo.py -m setup"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path to the season configuration file in the setup instructions is incorrect. It points to a `configs/` directory instead of `season_configs/`.",
+      "correction_candidates": [
+        "python src/holo.py -m edit season_configs/[season]_[year].yaml",
+        "python src/holo.py -m edit season-configs/[season]_[year].yaml",
+        "python src/holo.py -m load configs/[season]_[year].yaml",
+        "python src/holo.py -m edit --config season_configs/[season]_[year].yaml"
+      ],
+      "golden_answer": "python src/holo.py -m edit season_configs/[season]_[year].yaml"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_3_only_E4",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The documentation incorrectly states that project settings are in a top-level 'settings' directory, but they are located in the 'nablaweb' directory.",
+      "correction_candidates": [
+        "Change 'settings -- inneholder settings og urls' to 'nablaweb/settings -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'nablaweb -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'config -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'core -- inneholder settings og urls'."
+      ],
+      "golden_answer": "Change 'settings -- inneholder settings og urls' to 'nablaweb -- inneholder settings og urls'."
+    }
+  ]
+}

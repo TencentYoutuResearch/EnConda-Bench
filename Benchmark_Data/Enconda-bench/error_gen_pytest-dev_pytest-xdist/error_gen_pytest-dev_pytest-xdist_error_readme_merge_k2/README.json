@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_pytest-dev_pytest-xdist_error_readme_merge_k2",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command uses an incorrect package name `pytest_xdist` instead of the correct `pytest-xdist`.",
+      "correction_candidates": [
+        "Change `pip install pytest_xdist` to `pip install pytest-xdist`.",
+        "Change `pip install pytest_xdist` to `pip install xdist`.",
+        "Change `pip install pytest_xdist` to `python -m pip install pytest-xdist`.",
+        "The package should be installed via conda: `conda install pytest-xdist`."
+      ],
+      "golden_answer": "Change `pip install pytest_xdist` to `pip install pytest-xdist`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pytest --n auto` is incorrect; it should use a single dash `-n` for the short option.",
+      "correction_candidates": [
+        "Change `pytest --n auto` to `pytest -n auto`.",
+        "Change `pytest --n auto` to `pytest --dist=auto`.",
+        "Change `pytest --n auto` to `pytest -n=auto`.",
+        "Change `pytest --n auto` to `pytest --numprocesses=auto`."
+      ],
+      "golden_answer": "Change `pytest --n auto` to `pytest -n auto`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Quick Start' section incorrectly instructs the user to run `pytest` with xdist options before installing the `pytest-xdist` package.",
+      "correction_candidates": [
+        "Swap the order of step 1 (run tests) and step 2 (install plugin).",
+        "Combine the steps into one: 'Install the plugin using `pip install pytest-xdist` and then run `pytest -n auto`'.",
+        "Remove step 1 and only show the installation command.",
+        "Add a step 0: 'Install pytest using `pip install pytest`'."
+      ],
+      "golden_answer": "Swap the order of step 1 (run tests) and step 2 (install plugin)."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pytest -nauto` is syntactically incorrect; a space is required between the option `-n` and its value `auto`.",
+      "correction_candidates": [
+        "Change `pytest -nauto` to `pytest -n auto`.",
+        "Change `pytest -nauto` to `pytest --numprocesses=auto`.",
+        "Change `pytest -nauto` to `pytest --dist=load --tx=auto`.",
+        "Change `pytest -nauto` to `pytest -n 'auto'`."
+      ],
+      "golden_answer": "Change `pytest -nauto` to `pytest -n auto`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "numba_llvmlite_error_readme_7_only_E1",
+  "repo_name": "numba_llvmlite",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary pip dependencies (cmake, numpy, setuptools) when using conda pre-built binaries",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ conda install --channel=numba llvmlite cmake numpy setuptools",
+        "$ conda install --channel=numba llvmlite\n   $ conda install cmake numpy setuptools",
+        "$ pip install llvmlite cmake numpy setuptools"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    }
+  ]
+}

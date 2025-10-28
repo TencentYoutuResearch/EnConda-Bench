@@ -1,0 +1,18 @@
+{
+  "readme": "ethereum_py-evm_error_readme_2_only_E1",
+  "repo_name": "ethereum_py-evm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command for installing development dependencies is missing the '[dev]' extra, which results in necessary tools for development (like testing and linting packages) not being installed.",
+      "correction_candidates": [
+        "Change 'python -m pip install -e .' to 'python -m pip install -e .[dev]'.",
+        "Add a new command 'pip install -r requirements-dev.txt' after 'python -m pip install -e .'.",
+        "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'.",
+        "Change 'python -m pip install -e .' to 'pip install -e \".[dev]\"'."
+      ],
+      "golden_answer": "Change 'python -m pip install -e .' to 'python -m pip install -e \".[dev]\"'."
+    }
+  ]
+}

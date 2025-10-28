@@ -1,0 +1,18 @@
+{
+  "readme": "matchms_matchms_error_readme_1_only_E7",
+  "repo_name": "matchms_matchms",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The recommended conda command specifies Python 3.7, which is outside the stated compatible range of Python 3.8 - 3.11, potentially causing compatibility issues.",
+      "correction_candidates": [
+        "conda create --name matchms python=3.8",
+        "conda create --name matchms python=3.9",
+        "conda create --name matchms python",
+        "conda create --name matchms python>=3.8"
+      ],
+      "golden_answer": "conda create --name matchms python=3.9"
+    }
+  ]
+}

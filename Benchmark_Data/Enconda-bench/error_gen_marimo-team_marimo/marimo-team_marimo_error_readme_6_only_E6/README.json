@@ -1,0 +1,18 @@
+{
+  "readme": "marimo-team_marimo_error_readme_6_only_E6",
+  "repo_name": "marimo-team_marimo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing additional packages before marimo, which could cause dependency conflicts",
+      "correction_candidates": [
+        "Install marimo first, then install other packages as needed",
+        "Install all packages in a single pip command",
+        "Use conda to install all packages together",
+        "Create a requirements.txt file and install from that"
+      ],
+      "golden_answer": "Install marimo first, then install other packages as needed"
+    }
+  ]
+}

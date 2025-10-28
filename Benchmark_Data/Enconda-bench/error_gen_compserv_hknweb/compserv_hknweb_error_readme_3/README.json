@@ -1,0 +1,29 @@
+{
+  "readme": "compserv_hknweb_error_readme_3",
+  "repo_name": "compserv_hknweb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py run server` is syntactically incorrect due to a space. The correct Django management command is `runserver`.",
+      "correction_candidates": [
+        "Correct the command to `python manage.py start-server`.",
+        "Correct the command to `poetry run server`.",
+        "Correct the command to `python manage.py run_server`.",
+        "Correct the command to `python manage.py runserver`."
+      ],
+      "golden_answer": "Correct the command to `python manage.py runserver`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The deployment section incorrectly states the deployment script is `deploy.py`, but the project uses Fabric, and the correct file is `fabfile.py`.",
+      "correction_candidates": [
+        "Rename the `fabfile.py` in the repository to `deploy.py` to match the documentation.",
+        "Change the filename in the text from `deploy.py` to `fabfile.py`.",
+        "Change the deployment command to `HKNWEB_MODE=\"prod\" python deploy.py`.",
+        "Create a new `deploy.py` script that calls the `fabfile.py`."
+      ],
+      "golden_answer": "Change the filename in the text from `deploy.py` to `fabfile.py`."
+    }
+  ]
+}

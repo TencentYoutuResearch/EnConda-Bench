@@ -1,0 +1,49 @@
+# LLM Configuration File
+# For large language model-based environment configuration analysis
+
+# OpenAI API Configuration
+openai:
+  api_key: "your-openai-api-key-here"
+  base_url: "https://api.openai.com/v1"
+  model_name: "gpt-4"
+  max_tokens: 4000
+  temperature: 0.1
+  timeout: 60
+
+# Data Processing Configuration
+data:
+  # Data root directory (contains error_gen_<repo_name> folders)
+  data_root_dir: "./benchmark_data"
+  # Source code root directory (contains zip files and jsonl files)
+  source_root_dir: "./source_repos"
+  # Sampling configuration
+  sampling:
+    enabled: false
+    sample_size: 100
+    random_seed: 42
+
+# Output Configuration
+output:
+  # Output root directory
+  output_dir: "./output"
+  # Generate verbose logging
+  verbose_logging: true
+  # Save raw model output
+  save_raw_output: true
+
+# Processing Configuration
+processing:
+  # Number of concurrent workers
+  max_workers: 1
+  # Maximum retry attempts on failure
+  max_retries: 3
+  # Retry delay in seconds
+  retry_delay: 5
+  # Skip already processed files
+  skip_existing: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "./logs/llm_analysis.log"

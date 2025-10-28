@@ -1,0 +1,29 @@
+{
+  "readme": "pydmd_pydmd_error_readme_1",
+  "repo_name": "pydmd_pydmd",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes an unnecessary dependency, `tensorflow`, which is not required by PyDMD and increases installation size.",
+      "correction_candidates": [
+        "pip install pydmd",
+        "pip install pydmd --no-deps",
+        "pip install pydmd numpy scipy",
+        "pip install pydmd -r requirements.txt"
+      ],
+      "golden_answer": "pip install pydmd"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -d .` is incorrect for installing a package in development mode; it only downloads the package instead of installing it.",
+      "correction_candidates": [
+        "pip install --dev .",
+        "pip install -e .",
+        "python setup.py develop",
+        "pip install --editable ."
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "markqvist_reticulum_error_readme_3_only_E4",
+  "repo_name": "markqvist_reticulum",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the pip configuration file is incorrect. It is listed as `~/.pip/pip.conf` instead of the correct `~/.config/pip/pip.conf`.",
+      "correction_candidates": [
+        "Change the path to `~/.config/pip/pip.conf`",
+        "Change the path to `/etc/pip.conf`",
+        "Change the path to `~/.pip.conf`",
+        "Change the path to `~/.config/pip.conf`"
+      ],
+      "golden_answer": "Change the path to `~/.config/pip/pip.conf`"
+    }
+  ]
+}

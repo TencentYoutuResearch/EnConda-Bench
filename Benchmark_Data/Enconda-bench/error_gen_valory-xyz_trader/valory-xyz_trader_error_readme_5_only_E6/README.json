@@ -1,0 +1,18 @@
+{
+  "readme": "valory-xyz_trader_error_readme_5_only_E6",
+  "repo_name": "valory-xyz_trader",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added poetry install command in the wrong execution order, after Docker operations instead of in environment setup",
+      "correction_candidates": [
+        "Remove the poetry install command from the deployment section",
+        "Move poetry install to the environment preparation section",
+        "Replace poetry install with pip install",
+        "Add poetry shell after poetry install in deployment section"
+      ],
+      "golden_answer": "Remove the poetry install command from the deployment section"
+    }
+  ]
+}

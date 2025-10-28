@@ -1,0 +1,18 @@
+{
+  "readme": "bdaiinstitute_spatialmath-python_error_readme_2_only_E4",
+  "repo_name": "bdaiinstitute_spatialmath-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path in the link to the 'gentle introduction' notebook is incorrect (`notebook` instead of `notebooks`), leading to a 404 error.",
+      "correction_candidates": [
+        "Change `.../notebook/...` to `.../notebooks/...` in the URL.",
+        "Change `.../blob/master/...` to `.../tree/master/...` in the URL.",
+        "Change `gentle-introduction.ipynb` to `introduction.ipynb`.",
+        "Remove the link entirely."
+      ],
+      "golden_answer": "Change `.../notebook/...` to `.../notebooks/...` in the URL."
+    }
+  ]
+}

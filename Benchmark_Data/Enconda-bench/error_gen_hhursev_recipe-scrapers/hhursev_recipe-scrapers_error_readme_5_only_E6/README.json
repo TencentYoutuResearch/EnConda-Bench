@@ -1,0 +1,18 @@
+{
+  "readme": "hhursev_recipe-scrapers_error_readme_5_only_E6",
+  "repo_name": "hhursev_recipe-scrapers",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order in the For Devs section - pip install requirements before activating virtual environment",
+      "correction_candidates": [
+        "git clone git@github.com:hhursev/recipe-scrapers.git && cd recipe-scrapers && python -m venv .venv && source .venv/bin/activate && python -m pip install --upgrade pip && pip install -r requirements-dev.txt && pip install pre-commit && pre-commit install && python -m unittest",
+        "git clone git@github.com:hhursev/recipe-scrapers.git && cd recipe-scrapers && python -m venv .venv && pip install -r requirements-dev.txt && source .venv/bin/activate && pip install pre-commit && pre-commit install && python -m unittest",
+        "git clone git@github.com:hhursev/recipe-scrapers.git && cd recipe-scrapers && pip install -r requirements-dev.txt && python -m venv .venv && source .venv/bin/activate && pip install pre-commit && pre-commit install && python -m unittest",
+        "git clone git@github.com:hhursev/recipe-scrapers.git && cd recipe-scrapers && python -m venv .venv && source .venv/bin/activate && pip install -r requirements-dev.txt && python -m pip install --upgrade pip && pip install pre-commit && pre-commit install && python -m unittest"
+      ],
+      "golden_answer": "git clone git@github.com:hhursev/recipe-scrapers.git && cd recipe-scrapers && python -m venv .venv && source .venv/bin/activate && python -m pip install --upgrade pip && pip install -r requirements-dev.txt && pip install pre-commit && pre-commit install && python -m unittest"
+    }
+  ]
+}

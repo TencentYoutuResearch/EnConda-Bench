@@ -1,0 +1,29 @@
+{
+  "readme": "plotly_dash-bio_error_readme_2",
+  "repo_name": "plotly_dash-bio",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `dash-bio` package, which is essential for running the examples, is missing from the `pip install` command.",
+      "correction_candidates": [
+        "Add `dash-core-components` to the `pip install` command.",
+        "Add `dash-bio` to the `pip install` command.",
+        "Remove `Jupyterlab` from the `pip install` command as it is not required.",
+        "Replace `dash` with `dash-bio` in the `pip install` command."
+      ],
+      "golden_answer": "Add `dash-bio` to the `pip install` command."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command to install the `jupyterlab-plotly` extension does not specify a version, which can lead to installing an incompatible version.",
+      "correction_candidates": [
+        "Change the command to `jupyter labextension install jupyterlab-plotly@latest`.",
+        "Change the command to `jupyter labextension install jupyterlab-plotly@4.14.3`.",
+        "Change the command to `pip install jupyterlab-plotly@4.14.3`.",
+        "Change the command to `jupyter labextension update --all`."
+      ],
+      "golden_answer": "Change the command to `jupyter labextension install jupyterlab-plotly@4.14.3`."
+    }
+  ]
+}

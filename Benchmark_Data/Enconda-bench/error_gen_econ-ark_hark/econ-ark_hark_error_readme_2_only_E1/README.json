@@ -1,0 +1,18 @@
+{
+  "readme": "econ-ark_hark_error_readme_2_only_E1",
+  "repo_name": "econ-ark_hark",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "An unnecessary instruction to pre-install a specific version of `numba` is given. The `econ-ark` package manages its own dependencies, and this step is not needed and could cause version conflicts.",
+      "correction_candidates": [
+        "Remove the unnecessary step of installing `numba` separately, as it is handled by the `econ-ark` package installer.",
+        "Change the command to `conda install -c conda-forge numba==0.50.0` before installing `econ-ark`.",
+        "Upgrade the command to `pip install numba --upgrade`.",
+        "Install from source, which includes the correct `numba` version."
+      ],
+      "golden_answer": "Remove the unnecessary step of installing `numba` separately, as it is handled by the `econ-ark` package installer."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "cda-tum_mqt-bench_error_readme_1_only_E2",
+  "repo_name": "cda-tum_mqt-bench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example code uses a non-existent function `get_algorithm` instead of the correct `get_benchmark` function, which will cause a `NameError`.",
+      "correction_candidates": [
+        "Change the function call from `get_algorithm` to `get_benchmark`.",
+        "Add an import alias: `from mqt.bench import get_benchmark as get_algorithm`.",
+        "Change the import statement to `from mqt.bench import get_algorithm`.",
+        "The function name is `Benchmark`, so the line should be `qc_algorithmic_level = Benchmark(benchmark_name=\"dj\", level=\"alg\", circuit_size=5)`."
+      ],
+      "golden_answer": "Change the function call from `get_algorithm` to `get_benchmark`."
+    }
+  ]
+}

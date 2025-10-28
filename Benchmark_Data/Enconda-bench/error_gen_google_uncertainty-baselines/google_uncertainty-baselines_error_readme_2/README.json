@@ -1,0 +1,29 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_2",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly omit the need to manually install the main `tensorflow` package, implying it is either not needed or installed automatically.",
+      "correction_candidates": [
+        "For TensorFlow, you will need to install TensorFlow (`tensorflow` or `tf-nightly`), TensorFlow Addons (`tensorflow-addons` or `tfa-nightly`), and TensorBoard (`tensorboard` or `tb-nightly`).",
+        "The package will automatically install a compatible version of `tensorflow`.",
+        "The only required dependency is `tensorflow-addons`, which will pull in `tensorflow`.",
+        "Install all dependencies from the `requirements.txt` file using `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "For TensorFlow, you will need to install TensorFlow (`tensorflow` or `tf-nightly`), TensorFlow Addons (`tensorflow-addons` or `tfa-nightly`), and TensorBoard (`tensorboard` or `tb-nightly`)."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for uploading to TensorBoard.dev uses an incorrect flag `--log_dir` instead of the correct `--logdir`.",
+      "correction_candidates": [
+        "tensorboard dev upload --logdir MODEL_DIR",
+        "tensorboard upload --logdir MODEL_DIR",
+        "tensorboard dev --logdir MODEL_DIR",
+        "tensorboard dev upload --path MODEL_DIR"
+      ],
+      "golden_answer": "tensorboard dev upload --logdir MODEL_DIR"
+    }
+  ]
+}

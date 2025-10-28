@@ -1,0 +1,18 @@
+{
+  "readme": "google-deepmind_acme_error_readme_1_only_E6",
+  "repo_name": "google-deepmind_acme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions attempt to upgrade pip before activating the virtual environment, which will modify the global Python environment instead of the isolated one.",
+      "correction_candidates": [
+        "python3 -m venv acme && source acme/bin/activate && pip install --upgrade pip setuptools wheel",
+        "Move the `source acme/bin/activate` command before the `pip install --upgrade pip...` command.",
+        "pip install --upgrade pip setuptools wheel --target=acme/lib/python3.8/site-packages",
+        "The commands are correct but should be run in separate terminals."
+      ],
+      "golden_answer": "Move the `source acme/bin/activate` command before the `pip install --upgrade pip...` command."
+    }
+  ]
+}

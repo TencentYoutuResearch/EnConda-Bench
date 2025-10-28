@@ -1,0 +1,18 @@
+{
+  "readme": "scitools_iris-grib_error_readme_2_only_E7",
+  "repo_name": "scitools_iris-grib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation instructions specify installing `iris==2.4.0`, which is an outdated version and incompatible with the latest `iris-grib`, causing version conflicts.",
+      "correction_candidates": [
+        "Remove the version specifier to install the latest compatible version: `pip install iris`.",
+        "Change the command to `pip install iris>=3.1.0 iris-grib` to ensure a compatible version of Iris is installed.",
+        "Install `iris-grib` using conda, as it handles dependency resolution automatically: `conda install -c conda-forge iris-grib`.",
+        "Use the command `pip install iris-grib --no-dependencies` and manage the Iris version manually."
+      ],
+      "golden_answer": "Change the command to `pip install iris>=3.1.0 iris-grib` to ensure a compatible version of Iris is installed."
+    }
+  ]
+}

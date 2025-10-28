@@ -1,0 +1,29 @@
+{
+  "readme": "revoxhere_duino-coin_error_readme_1",
+  "repo_name": "revoxhere_duino-coin",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The Linux manual installation command is missing the `python3-pip` package, which is required to run the `pip` command in the next step.",
+      "correction_candidates": [
+        "In the `apt install` command, add the `python3-pip` package.",
+        "Replace `python3 -m pip install` with `python3 -m easy_install`.",
+        "Run `sudo apt install python3-pip` as a separate command before `git clone`.",
+        "Remove the line `python3 -m pip install -r requirements.txt` as the packages are already installed."
+      ],
+      "golden_answer": "In the `apt install` command, add the `python3-pip` package."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Windows pip installation command is missing the `-r` flag, causing pip to try to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change `py -m pip install requirements.txt` to `py -m pip install -r requirements.txt`.",
+        "Change `py -m pip install requirements.txt` to `pip install from requirements.txt`.",
+        "Manually open `requirements.txt` and install each package one by one using `py -m pip install <package_name>`.",
+        "Change `py -m pip install requirements.txt` to `py -m pip install --requirements requirements.txt`."
+      ],
+      "golden_answer": "Change `py -m pip install requirements.txt` to `py -m pip install -r requirements.txt`."
+    }
+  ]
+}

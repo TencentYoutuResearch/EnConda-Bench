@@ -1,0 +1,18 @@
+{
+  "readme": "roshan-research_hazm_error_readme_1_only_E2",
+  "repo_name": "roshan-research_hazm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the `Usage` section, the example for the `Lemmatizer` uses an assignment operator (`=`) instead of a function call, which will cause a `TypeError`.",
+      "correction_candidates": [
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize('می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer('می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize(text='می‌روم')`.",
+        "Change `lemmatizer.lemmatize = 'می‌روم'` to `Lemmatizer.lemmatize('می‌روم')`."
+      ],
+      "golden_answer": "Change `lemmatizer.lemmatize = 'می‌روم'` to `lemmatizer.lemmatize('می‌روم')`."
+    }
+  ]
+}

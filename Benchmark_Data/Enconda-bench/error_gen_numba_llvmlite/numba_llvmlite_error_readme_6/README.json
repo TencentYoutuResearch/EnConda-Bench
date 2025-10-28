@@ -1,0 +1,29 @@
+{
+  "readme": "numba_llvmlite_error_readme_6",
+  "repo_name": "numba_llvmlite",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used pip install with conda-specific --channel parameter which is invalid syntax",
+      "correction_candidates": [
+        "$ conda install --channel=numba llvmlite",
+        "$ pip install llvmlite",
+        "$ conda install -c numba llvmlite",
+        "$ pip install --index-url https://anaconda.org/numba llvmlite"
+      ],
+      "golden_answer": "$ conda install --channel=numba llvmlite"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Instruction to install llvmlite using pip before compiling and installing it yourself creates logical order confusion",
+      "correction_candidates": [
+        "If you don't want to use our pre-built packages, you can compile and install llvmlite yourself. The documentation will teach you how:",
+        "After installing our pre-built packages, you can also compile and install llvmlite yourself. The documentation will teach you how:",
+        "Before using our pre-built packages, you should first compile and install llvmlite yourself. The documentation will teach you how:",
+        "To supplement our pre-built packages, you can compile and install additional llvmlite components yourself. The documentation will teach you how:"
+      ],
+      "golden_answer": "If you don't want to use our pre-built packages, you can compile and install llvmlite yourself. The documentation will teach you how:"
+    }
+  ]
+}

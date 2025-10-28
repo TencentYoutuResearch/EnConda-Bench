@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_2_only_E4",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the tool supports `metadata.json` files for project metadata, but it actually supports Protocol Buffer files named `METADATA.pb`.",
+      "correction_candidates": [
+        "Change `metadata.json` to `METADATA.proto`.",
+        "Change `metadata.json` to `METADATA.pb`.",
+        "Change `metadata.json` to `font-metadata.json`.",
+        "Change `metadata.json` to `METADATA.xml`."
+      ],
+      "golden_answer": "Change `metadata.json` to `METADATA.pb`."
+    }
+  ]
+}

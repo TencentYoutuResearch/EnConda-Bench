@@ -1,0 +1,29 @@
+{
+  "readme": "vkbottle_vkbottle_error_readme_2",
+  "repo_name": "vkbottle_vkbottle",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The guide suggests downgrading pip to an outdated version (19.0), which can cause compatibility issues with modern packages and should not be required.",
+      "correction_candidates": [
+        "Replace `pip install --upgrade pip==19.0` with `pip install --upgrade pip>=22.0`.",
+        "Replace the entire installation section with `python3 -m venv venv && source venv/bin/activate && pip install vkbottle`.",
+        "Remove the instruction to downgrade pip. The default `pip install vkbottle` is sufficient.",
+        "Replace `pip install --upgrade pip==19.0` with `pip install pip --force-reinstall`."
+      ],
+      "golden_answer": "Remove the instruction to downgrade pip. The default `pip install vkbottle` is sufficient."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contribution guide points to a non-existent file path 'docs/CONTRIBUTING.md' instead of the correct 'CONTRIBUTION_GUIDE.md' in the root directory.",
+      "correction_candidates": [
+        "Change the link path to `CONTRIBUTING.md`.",
+        "Change the link path to `CONTRIBUTION_GUIDE.md`.",
+        "Change the link path to `../CONTRIBUTION_GUIDE.md`.",
+        "Change the link path to `https://github.com/vkbottle/vkbottle/blob/master/CONTRIBUTION_GUIDE.md`."
+      ],
+      "golden_answer": "Change the link path to `CONTRIBUTION_GUIDE.md`."
+    }
+  ]
+}

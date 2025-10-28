@@ -1,0 +1,18 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_1_only_E2",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install a validator from Guardrails Hub is incorrect. It uses 'guardrails install' instead of the correct 'guardrails hub install'.",
+      "correction_candidates": [
+        "guardrails hub add hub://guardrails/regex_match",
+        "guardrails get hub://guardrails/regex_match",
+        "guardrails install hub://guardrails/regex_match",
+        "guardrails hub install hub://guardrails/regex_match"
+      ],
+      "golden_answer": "guardrails hub install hub://guardrails/regex_match"
+    }
+  ]
+}

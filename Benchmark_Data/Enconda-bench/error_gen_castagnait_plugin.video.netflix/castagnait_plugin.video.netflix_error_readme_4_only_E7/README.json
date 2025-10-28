@@ -1,0 +1,18 @@
+{
+  "readme": "castagnait_plugin.video.netflix_error_readme_4_only_E7",
+  "repo_name": "castagnait_plugin.video.netflix",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Widevine Security Level L3 is required for all playback, which is misleading as L1 is necessary for HD/4K content and this note contradicts information in the resolution table.",
+      "correction_candidates": [
+        "Change the note to specify that Widevine L1 is required for HD content.",
+        "Correct the note to say 'Widevine Security Level L1 and HDCP 2.2 hardware' are needed for 4K.",
+        "Explain that Widevine L3 limits playback to SD quality, while L1 is needed for higher resolutions.",
+        "Remove the note about Widevine Security Level L3."
+      ],
+      "golden_answer": "Remove the note about Widevine Security Level L3."
+    }
+  ]
+}

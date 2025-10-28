@@ -1,0 +1,29 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_6",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install spacy torch transformers",
+        "pip install -e .",
+        "pip install dacy[all]"
+      ],
+      "golden_answer": "pip install dacy"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing from requirements.txt before installing dacy creates incorrect dependency order",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip install dacy && pip install -r requirements.txt",
+        "pip install dacy[all]",
+        "pip install --upgrade dacy"
+      ],
+      "golden_answer": "pip install dacy"
+    }
+  ]
+}

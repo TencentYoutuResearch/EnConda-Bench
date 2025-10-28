@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_6_only_E7",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Incorrect Python version requirement specifying Python 2.7 instead of Python 3.x",
+      "correction_candidates": [
+        "Make sure you have Python 3.8 or higher installed.",
+        "Make sure you have Python 3.7+ installed.",
+        "Ensure Python 3.6 or newer is installed on your system.",
+        "Python 3.9 or later is required for this package."
+      ],
+      "golden_answer": "Make sure you have Python 3.8 or higher installed."
+    }
+  ]
+}

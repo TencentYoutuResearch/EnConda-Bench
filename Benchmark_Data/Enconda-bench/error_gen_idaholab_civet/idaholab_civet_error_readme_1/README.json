@@ -1,0 +1,29 @@
+{
+  "readme": "idaholab_civet_error_readme_1",
+  "repo_name": "idaholab_civet",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions attempt to install pip dependencies before the virtual environment has been created and activated, which will cause them to be installed globally or fail.",
+      "correction_candidates": [
+        "Run `pip install --user -r requirements.txt` instead of installing into a virtual environment.",
+        "The steps should be reordered: 1. Create venv, 2. Activate venv, 3. Install pip dependencies, 4. Install system dependencies.",
+        "Combine the creation and installation steps into a single setup script.",
+        "Remove the virtual environment steps and install all dependencies globally."
+      ],
+      "golden_answer": "The steps should be reordered: 1. Create venv, 2. Activate venv, 3. Install pip dependencies, 4. Install system dependencies."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `sudo yum install` is specific to RHEL-based Linux distributions (like CentOS) and will fail on Debian-based systems (like Ubuntu).",
+      "correction_candidates": [
+        "Replace `sudo yum install gcc python3-devel` with `sudo apt-get install build-essential python3-dev` for Debian/Ubuntu systems.",
+        "Remove the `sudo yum install` command, as these dependencies might already be installed.",
+        "Provide instructions for both package managers, for example: 'For RHEL/CentOS, run `sudo yum install ...`. For Debian/Ubuntu, run `sudo apt-get install ...`.'",
+        "Use `pip` to install these dependencies instead of a system package manager."
+      ],
+      "golden_answer": "Provide instructions for both package managers, for example: 'For RHEL/CentOS, run `sudo yum install ...`. For Debian/Ubuntu, run `sudo apt-get install ...`.'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "valory-xyz_trader_error_readme_2_only_E4",
+  "repo_name": "valory-xyz_trader",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command `cp path/to/keys.json ./abci_build/` copies the key file to the wrong directory. The `autonomy build-image` command expects `keys.json` in the project's root directory (`.`), not in `./abci_build/`.",
+      "correction_candidates": [
+        "cp path/to/keys.json ./trader/",
+        "cp path/to/keys.json .",
+        "mv path/to/keys.json .",
+        "cp path/to/keys.json ./packages/valory/services/trader/"
+      ],
+      "golden_answer": "cp path/to/keys.json ."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pretalx_pretalx_error_readme_6",
+  "repo_name": "pretalx_pretalx",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing package before creating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "To get started, create your virtual environment with `python -m venv venv`, activate it, and then run `pip install pretalx`.",
+        "To get started, first create your virtual environment with `python -m venv venv` and then run `pip install pretalx`.",
+        "To get started, run `python -m venv venv` to create your virtual environment and then `pip install pretalx`.",
+        "To get started, create a virtual environment using `python -m venv venv`, then activate it and run `pip install pretalx`."
+      ],
+      "golden_answer": "To get started, create your virtual environment with `python -m venv venv`, activate it, and then run `pip install pretalx`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect command syntax for virtual environment creation",
+      "correction_candidates": [
+        "To get started, run `pip install pretalx` and then create your virtual environment with `python -m venv pretalx-env`.",
+        "To get started, run `pip install pretalx` and then create your virtual environment with `virtualenv venv`.",
+        "To get started, run `pip install pretalx` and then create your virtual environment with `conda create -n pretalx`.",
+        "To get started, run `pip install pretalx` and then create your virtual environment with `pipenv install`."
+      ],
+      "golden_answer": "To get started, run `pip install pretalx` and then create your virtual environment with `virtualenv venv`."
+    }
+  ]
+}

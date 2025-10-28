@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_3_only_E2",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the `Scaffolding CLI tool` section, the command for importing a CSV is incorrect. It uses `tdbpy import --file grades.csv` which is not a valid command.",
+      "correction_candidates": [
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy importcsv grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy csv --import grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy import grades.csv --na=error`.",
+        "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy --file grades.csv importcsv --na=error`."
+      ],
+      "golden_answer": "Change `$ tdbpy import --file grades.csv --na=error` to `$ tdbpy importcsv grades.csv --na=error`."
+    }
+  ]
+}

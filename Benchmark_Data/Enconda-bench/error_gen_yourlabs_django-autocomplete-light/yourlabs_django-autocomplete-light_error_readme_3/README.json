@@ -1,0 +1,29 @@
+{
+  "readme": "yourlabs_django-autocomplete-light_error_readme_3",
+  "repo_name": "yourlabs_django-autocomplete-light",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup guide specifies an incorrect module path 'yourlabs.autocomplete_light' for INSTALLED_APPS. The correct path is 'dal'.",
+      "correction_candidates": [
+        "Add `'dal'` to your `INSTALLED_APPS`.",
+        "Add `'dal'` and `'dal_select2'` to your `INSTALLED_APPS`.",
+        "Add `'autocomplete_light'` to your `INSTALLED_APPS`.",
+        "Add `'django_autocomplete_light'` to your `INSTALLED_APPS`."
+      ],
+      "golden_answer": "Add `'dal'` and `'dal_select2'` to your `INSTALLED_APPS`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The note incorrectly states that DAL 3.9 is compatible with Django 4.2. The 'Features' section correctly states that support for Django 4.2 was added in DAL 3.10.",
+      "correction_candidates": [
+        "Note: For Django 4.2 compatibility, please ensure you are using DAL version 3.10 or higher.",
+        "Note: For Django 4.2 compatibility, please use the latest DAL version from the master branch.",
+        "Note: For Django 4.2 compatibility, you must also install django-crispy-forms.",
+        "Note: To use Django 4.2, you must downgrade DAL to version 3.8."
+      ],
+      "golden_answer": "Note: For Django 4.2 compatibility, please ensure you are using DAL version 3.10 or higher."
+    }
+  ]
+}

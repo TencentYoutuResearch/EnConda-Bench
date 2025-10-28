@@ -1,0 +1,18 @@
+{
+  "readme": "openreview_openreview-py_error_readme_2_only_E7",
+  "repo_name": "openreview_openreview-py",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The prerequisite is stated as 'Python 3', which is too general. The library requires Python 3.6 or newer, and using an older version like 3.5 could lead to compatibility errors.",
+      "correction_candidates": [
+        "Python 3.6 or newer is required to use openreview-py.",
+        "Python >= 3.6 is required to use openreview-py.",
+        "Python 3.6 is required to use openreview-py.",
+        "The latest version of Python 3 is required to use openreview-py."
+      ],
+      "golden_answer": "Python 3.6 or newer is required to use openreview-py."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mopidy_mopidy_error_readme_1_only_E6",
+  "repo_name": "mopidy_mopidy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The quick start guide instructs the user to install Mopidy with pip before creating and activating the virtual environment, which contradicts best practices and can lead to system-wide package conflicts.",
+      "correction_candidates": [
+        "The `pip install mopidy` command should be run after activating the virtual environment with `source mopidy-env/bin/activate`.",
+        "The virtual environment steps should be removed, and the installation should be done globally using `sudo pip install mopidy`.",
+        "The command should be changed to `pip install --user mopidy` to avoid needing root permissions.",
+        "The `python3 -m venv mopidy-env` command should be run before `pip install mopidy`."
+      ],
+      "golden_answer": "The `pip install mopidy` command should be run after activating the virtual environment with `source mopidy-env/bin/activate`."
+    }
+  ]
+}

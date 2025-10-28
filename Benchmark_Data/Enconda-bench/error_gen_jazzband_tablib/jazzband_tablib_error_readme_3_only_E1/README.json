@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_tablib_error_readme_3_only_E1",
+  "repo_name": "jazzband_tablib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Prerequisites' section incorrectly requires installing a non-existent version of pandas (`pandas==99.0`) and presents it as a mandatory dependency.",
+      "correction_candidates": [
+        "Remove the entire 'Prerequisites' section, as pandas is an optional dependency.",
+        "Change `pip install pandas==99.0` to `pip install pandas`.",
+        "Replace the section with instructions on how to install optional formats, e.g., `pip install 'tablib[pandas]'`.",
+        "Change `pandas==99.0` to a recent, valid version like `pandas>=1.0`."
+      ],
+      "golden_answer": "Remove the entire 'Prerequisites' section, as pandas is an optional dependency."
+    }
+  ]
+}

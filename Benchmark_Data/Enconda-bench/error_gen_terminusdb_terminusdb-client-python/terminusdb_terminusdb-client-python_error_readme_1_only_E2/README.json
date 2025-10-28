@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_1_only_E2",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the client with dataframe support is incorrect. It uses `[df]` instead of the correct extra identifier `[dataframe]`.",
+      "correction_candidates": [
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client[dataframe]`.",
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client --with dataframe`.",
+        "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client-dataframe`.",
+        "Change `python -m pip install terminusdb-client[df]` to `pip install terminusdb-client[pandas]`."
+      ],
+      "golden_answer": "Change `python -m pip install terminusdb-client[df]` to `python -m pip install terminusdb-client[dataframe]`."
+    }
+  ]
+}

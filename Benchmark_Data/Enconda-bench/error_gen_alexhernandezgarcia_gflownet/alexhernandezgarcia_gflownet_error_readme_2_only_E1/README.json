@@ -1,0 +1,18 @@
+{
+  "readme": "alexhernandezgarcia_gflownet_error_readme_2_only_E1",
+  "repo_name": "alexhernandezgarcia_gflownet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install .` is missing the `[all]` tag, which prevents optional but potentially necessary dependencies for molecules or materials from being installed.",
+      "correction_candidates": [
+        "Use `pip install .[dev,materials,molecules]` to install all dependencies.",
+        "Change `pip install .` to `pip install .[all]`.",
+        "Append `[all]` to the pip install command to include all optional dependencies.",
+        "The command should be `pip install -e '.[all]'` for a complete installation."
+      ],
+      "golden_answer": "Change `pip install .` to `pip install .[all]`."
+    }
+  ]
+}

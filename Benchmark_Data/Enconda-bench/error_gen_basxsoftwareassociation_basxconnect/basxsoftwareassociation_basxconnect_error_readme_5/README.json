@@ -1,0 +1,29 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_5",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating virtual environment and activating it",
+      "correction_candidates": [
+        "Create a virtual environment first with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`",
+        "Use `virtualenv basxconnect_env` to create environment, then `basxconnect_env\\Scripts\\activate` on Windows, followed by `pip install -r requirements.txt`",
+        "Run `conda create -n basxconnect python=3.9` then `conda activate basxconnect` before installing requirements",
+        "Install dependencies globally with `sudo pip install -r requirements.txt` then create virtual environment afterwards"
+      ],
+      "golden_answer": "Create a virtual environment first with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that may not exist in the repository",
+      "correction_candidates": [
+        "Install dependencies using `pip install django` and other required packages individually",
+        "Use `pip install -r pyproject.toml` instead of requirements.txt",
+        "Check if requirements.txt exists in the repository, or create it with `pip freeze > requirements.txt`",
+        "Install from setup.py using `pip install -e .` instead of requirements file"
+      ],
+      "golden_answer": "Check if requirements.txt exists in the repository, or create it with `pip freeze > requirements.txt`"
+    }
+  ]
+}

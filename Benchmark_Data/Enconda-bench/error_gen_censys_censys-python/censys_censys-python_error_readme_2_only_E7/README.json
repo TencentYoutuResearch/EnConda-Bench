@@ -1,0 +1,18 @@
+{
+  "readme": "censys_censys-python_error_readme_2_only_E7",
+  "repo_name": "censys_censys-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that 'Python 3 is currently supported', which is too vague. The library specifically requires Python 3.8 or newer.",
+      "correction_candidates": [
+        "Python 3.6+ is currently supported.",
+        "Python 3.8+ is currently supported.",
+        "Python 3.10 is currently supported.",
+        "Any version of Python 3 is supported."
+      ],
+      "golden_answer": "Python 3.8+ is currently supported."
+    }
+  ]
+}

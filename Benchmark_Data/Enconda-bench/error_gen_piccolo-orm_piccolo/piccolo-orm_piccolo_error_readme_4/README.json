@@ -1,0 +1,29 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_4",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the ORM usage example, the line `b = Band(name='C-Sharps' popularity=100)` is missing a comma between the `name` and `popularity` arguments, which will cause a Python `SyntaxError`.",
+      "correction_candidates": [
+        "Change the line to `b = Band('C-Sharps', 100)`.",
+        "Change the line to `b = Band(name='C-Sharps', popularity=100)`.",
+        "Change the line to `b = Band.create(name='C-Sharps', popularity=100)`.",
+        "Change the line to `b = Band(name='C-Sharps'; popularity=100)`."
+      ],
+      "golden_answer": "Change the line to `b = Band(name='C-Sharps', popularity=100)`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install piccolo --all-extras` is not a valid pip command. The `--all-extras` flag is incorrect syntax for installing optional dependencies.",
+      "correction_candidates": [
+        "Run `pip install piccolo --with-all`.",
+        "Run `pip install 'piccolo[all]'`.",
+        "Run `pip install piccolo --install-option='[all]'`.",
+        "Run `pip install piccolo-all`."
+      ],
+      "golden_answer": "Run `pip install 'piccolo[all]'`."
+    }
+  ]
+}

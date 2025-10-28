@@ -1,0 +1,18 @@
+{
+  "readme": "terrapower_armi_error_readme_2_only_E1",
+  "repo_name": "terrapower_armi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install test dependencies is incorrect. `pip install pytest` only installs the pytest package, but not the other testing dependencies specified in the project's configuration (e.g., in `pyproject.toml`).",
+      "correction_candidates": [
+        "$ pip install -e '.[testing]'",
+        "$ pip install -r requirements-test.txt",
+        "$ pip install -e \".[test]\"",
+        "$ pip install pytest pytest-cov"
+      ],
+      "golden_answer": "$ pip install -e \".[test]\""
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "biothings_biothings.api_error_readme_6_only_E2",
+  "repo_name": "biothings_biothings.api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Invalid command syntax 'pip install biothings[dev]' without proper context in the local installation section",
+      "correction_candidates": [
+        "Remove the 'pip install biothings[dev]' line",
+        "Replace with 'pip install .[dev]'",
+        "Change to 'pip install --editable .[dev]'",
+        "Modify to 'python -m pip install .[dev]'"
+      ],
+      "golden_answer": "Replace with 'pip install .[dev]'"
+    }
+  ]
+}

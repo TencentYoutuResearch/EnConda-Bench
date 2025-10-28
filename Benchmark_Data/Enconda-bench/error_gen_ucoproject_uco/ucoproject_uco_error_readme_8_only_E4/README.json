@@ -1,0 +1,18 @@
+{
+  "readme": "ucoproject_uco_error_readme_8_only_E4",
+  "repo_name": "ucoproject_uco",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "Replace with specific package installation commands like pip install rdflib owlrl",
+        "Change to pip install . to install from the current directory setup",
+        "Use pip install --upgrade pip setuptools wheel instead",
+        "Replace with pip install -e . for editable development installation"
+      ],
+      "golden_answer": "Replace with specific package installation commands like pip install rdflib owlrl"
+    }
+  ]
+}

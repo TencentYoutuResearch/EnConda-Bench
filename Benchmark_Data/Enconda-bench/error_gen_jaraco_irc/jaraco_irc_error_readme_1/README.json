@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_irc_error_readme_1",
+  "repo_name": "jaraco_irc",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the `irc.client_aio` module is compatible with Python 2.7. The library now requires Python 3, and the asyncio features are native to Python 3, making this claim false and misleading.",
+      "correction_candidates": [
+        "To use `irc.client_aio` on Python 2.7, you must install `asyncio` via `pip install asyncio`.",
+        "The `irc.client_aio` module is compatible with Python 2.7 if the `tulip` library is installed.",
+        "The `irc.client_aio` module requires Python 3.5+ and is not compatible with Python 2.7. The misleading sentence should be removed.",
+        "The entire library, including `irc.client_aio`, requires Python 3.8 or newer."
+      ],
+      "golden_answer": "The `irc.client_aio` module requires Python 3.5+ and is not compatible with Python 2.7. The misleading sentence should be removed."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the basic IRC server is incorrect. It's missing the `-m` flag, which is necessary for Python to find and run a module as a script.",
+      "correction_candidates": [
+        "Invoke the server with `python -m irc/server.py`.",
+        "Invoke the server with `python irc.server.py`.",
+        "Invoke the server with `python -m irc.server`.",
+        "Invoke the server with `run irc.server`."
+      ],
+      "golden_answer": "Invoke the server with `python -m irc.server`."
+    }
+  ]
+}

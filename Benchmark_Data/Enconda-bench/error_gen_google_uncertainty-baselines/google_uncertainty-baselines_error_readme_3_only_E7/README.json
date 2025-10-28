@@ -1,0 +1,18 @@
+{
+  "readme": "google_uncertainty-baselines_error_readme_3_only_E7",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instruction for using datasets in a notebook incorrectly advises disabling eager execution (`tf.compat.v1.disable_eager_execution()`), which is the opposite of what is needed and will cause errors.",
+      "correction_candidates": [
+        "one may need to activate tf earger execution mode `tf.compat.v1.enable_eager_execution()`.",
+        "one must use TensorFlow 1.x by running `%tensorflow_version 1.x`.",
+        "eager execution is not supported and should be disabled.",
+        "one must wrap the dataset loading in a `tf.function`."
+      ],
+      "golden_answer": "one may need to activate tf earger execution mode `tf.compat.v1.enable_eager_execution()`."
+    }
+  ]
+}

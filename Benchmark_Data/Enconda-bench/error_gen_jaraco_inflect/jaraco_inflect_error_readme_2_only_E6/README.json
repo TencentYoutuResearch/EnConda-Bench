@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_inflect_error_readme_2_only_E6",
+  "repo_name": "jaraco_inflect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Getting Started' section instructs the user to run a python script using the library before installing it, which is the wrong order and will fail.",
+      "correction_candidates": [
+        "Correct the logical order by showing the `pip install inflect` command before the `python inflect.py` command.",
+        "Remove the `python inflect.py` command entirely as it's not a standard way to demonstrate a library.",
+        "Change `python inflect.py` to `python -m inflect` to suggest a module-based execution.",
+        "Add a `git clone` step before the `python inflect.py` command to ensure the file exists."
+      ],
+      "golden_answer": "Correct the logical order by showing the `pip install inflect` command before the `python inflect.py` command."
+    }
+  ]
+}

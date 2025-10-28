@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_2_only_E7",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies that Python 3.6 is required, which may be outdated or unnecessarily restrictive. The project likely supports a broader range of modern Python 3 versions.",
+      "correction_candidates": [
+        "The sentence 'This project requires Python 3.6 to run correctly' should be changed to specify Python 3.7 or newer.",
+        "The sentence 'This project requires Python 3.6 to run correctly' should be removed. The supported versions are defined in the project's packaging files and documentation.",
+        "The sentence 'This project requires Python 3.6 to run correctly' should be removed, as the specific Python version is managed by `pyenv` or defined in `setup.cfg`.",
+        "The sentence should be updated to 'This project requires Python 2.7 to run correctly'."
+      ],
+      "golden_answer": "The sentence 'This project requires Python 3.6 to run correctly' should be removed. The supported versions are defined in the project's packaging files and documentation."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_1_only_E1",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install scylladb-theme` uses an incorrect package name. The correct package name for this theme is likely `sphinx-scylladb-theme`.",
+      "correction_candidates": [
+        "pip install sphinx-scylladb-theme",
+        "pip install scylla-sphinx-theme",
+        "pip install scylladb-sphinx",
+        "pip install sphinx-theme-scylladb"
+      ],
+      "golden_answer": "pip install sphinx-scylladb-theme"
+    }
+  ]
+}

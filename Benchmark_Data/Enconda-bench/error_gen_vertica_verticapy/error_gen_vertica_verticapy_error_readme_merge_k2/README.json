@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_vertica_verticapy_error_readme_merge_k2",
+  "repo_name": "vertica_verticapy",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip install command `pip3 install verticapy --all` uses an incorrect flag `--all`. The correct syntax for installing optional dependencies is with square brackets.",
+      "correction_candidates": [
+        "pip3 install verticapy[all]",
+        "pip3 install verticapy --with-all",
+        "pip3 install verticapy --install-option='all'",
+        "pip3 install verticapy-all"
+      ],
+      "golden_answer": "pip3 install verticapy[all]"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the Quickstart section, `vp.connect('Vertica_New_Connection')` is called before the connection is defined with `vp.new_connection(...)`. The connection must be defined before it can be activated.",
+      "correction_candidates": [
+        "Move the `vp.connect(...)` call to after the `vp.new_connection(...)` call.",
+        "Combine the two calls into `vp.connect(name='Vertica_New_Connection', options={...})`.",
+        "Remove the `vp.connect(...)` call as `new_connection` automatically connects.",
+        "Replace `vp.connect(...)` with `vp.set_connection('Vertica_New_Connection')`."
+      ],
+      "golden_answer": "Move the `vp.connect(...)` call to after the `vp.new_connection(...)` call."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The text claims VerticaPy is compatible with Python 3.8, but the compatibility badge only shows versions 3.9, 3.10, and 3.11, creating a version conflict.",
+      "correction_candidates": [
+        "Update the text to say 'VerticaPy is fully compatible with Python versions 3.9 and higher.'",
+        "Change the badge to include Python 3.8.",
+        "Remove the sentence 'VerticaPy is fully compatible with Python versions 3.8 and higher.'",
+        "Add a note that Python 3.8 support is experimental."
+      ],
+      "golden_answer": "Remove the sentence 'VerticaPy is fully compatible with Python versions 3.8 and higher.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip3 install verticapy` is missing the `[all]` extra, which is necessary to install optional dependencies for features like plotting, which are highlighted in the README. This leads to an incomplete installation.",
+      "correction_candidates": [
+        "Change the command to `pip3 install verticapy[all]` to include all optional dependencies.",
+        "Add a note explaining that `pip3 install verticapy` provides a minimal installation and features like plotting require extra packages.",
+        "Change the command to `pip3 install verticapy --full`.",
+        "Change the command to `pip3 install verticapy-full`."
+      ],
+      "golden_answer": "Change the command to `pip3 install verticapy[all]` to include all optional dependencies."
+    }
+  ]
+}

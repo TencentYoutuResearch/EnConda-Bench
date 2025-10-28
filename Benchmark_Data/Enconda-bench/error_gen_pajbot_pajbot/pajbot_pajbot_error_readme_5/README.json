@@ -1,0 +1,29 @@
+{
+  "readme": "pajbot_pajbot_error_readme_5",
+  "repo_name": "pajbot_pajbot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "System dependencies are installed after running the bot, which is incorrect order - they should be installed before setting up the virtual environment",
+      "correction_candidates": [
+        "Move step 4 to be step 1, before installing library requirements",
+        "Install system dependencies before step 1 by adding them as step 0",
+        "Combine system dependencies with library requirements in step 1",
+        "Remove system dependencies installation from quick install section entirely"
+      ],
+      "golden_answer": "Move step 4 to be step 1, before installing library requirements"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary system dependencies are listed that are not actually required for pajbot installation",
+      "correction_candidates": [
+        "Remove libssl-dev libffi-dev python3-dev as they are not needed",
+        "Replace with only libssl-dev as the single required dependency",
+        "Change to postgresql-dev libxml2-dev dependencies instead",
+        "Keep only python3-dev and remove the other two dependencies"
+      ],
+      "golden_answer": "Remove libssl-dev libffi-dev python3-dev as they are not needed"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "readme": "error_gen_giampaolo_pyftpdlib_error_readme_merge_k6",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level10",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README suggests installing the wrong package `python-ftp`. The correct package name is `pyftpdlib`.",
+      "correction_candidates": [
+        "pip install pyftpdlib",
+        "pip install ftpdlib",
+        "pip install python-ftplib-server",
+        "pip install py-ftpd-lib"
+      ],
+      "golden_answer": "pip install pyftpdlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command provided to start the FTP server is incorrect. `pyftpdlib` does not register a direct command-line executable with `start` and `--port` arguments in this format.",
+      "correction_candidates": [
+        "pyftpdlib --port 2121 --write",
+        "python3 -m pyftpdlib --write",
+        "python3 pyftpdlib --port=2121 --write",
+        "ftpd --module pyftpdlib --write"
+      ],
+      "golden_answer": "python3 -m pyftpdlib --write"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command uses `python` instead of `python3` and incorrectly states that the library requires Python 2.7, which is outdated information. The library is compatible with modern Python 3 versions.",
+      "correction_candidates": [
+        "Change the command to `python3 -m pyftpdlib --write` and remove the note about Python 2.7.",
+        "The command is correct, but the library should be installed via `pip2 install pyftpdlib`.",
+        "The note is correct. You must use a Python 2.7 environment to run the server.",
+        "Change the command to `python3.6 -m pyftpdlib --write` as it only works with Python 3.6."
+      ],
+      "golden_answer": "Change the command to `python3 -m pyftpdlib --write` and remove the note about Python 2.7."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example code specifies a user home directory `/var/ftp/user` and incorrectly claims it will be created automatically. The specified directory must exist beforehand, as `DummyAuthorizer` does not create it.",
+      "correction_candidates": [
+        "Change the path to a directory that is guaranteed to exist, like `/tmp`.",
+        "The code is correct; permissions in `/var/ftp/` need to be adjusted for it to work.",
+        "Replace `DummyAuthorizer` with `FileSystemAuthorizer` to enable automatic directory creation.",
+        "Change the path to an existing directory (e.g., '/home/user') or ensure '/var/ftp/user' is created manually before running the server, and remove the misleading comment."
+      ],
+      "golden_answer": "Change the path to an existing directory (e.g., '/home/user') or ensure '/var/ftp/user' is created manually before running the server, and remove the misleading comment."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Command line usage' section appears before the 'Installation' section, leading users to try running the module before they are instructed on how to install it.",
+      "correction_candidates": [
+        "Combine the installation and usage steps into a single code block.",
+        "Move the 'Installation' section to be before the 'Command line usage' section.",
+        "Add a note in 'Command line usage' that installation instructions are provided below.",
+        "The order is fine, as `pyftpdlib` might be a built-in module."
+      ],
+      "golden_answer": "Move the 'Installation' section to be before the 'Command line usage' section."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the API example, the `FTPServer` constructor is called with a string `'127.0.0.1:21'` for the address, but it expects a tuple `('127.0.0.1', 21)`.",
+      "correction_candidates": [
+        "server = FTPServer(address=\"127.0.0.1\", port=21, handler=handler)",
+        "server = FTPServer(host=\"127.0.0.1:21\", handler=handler)",
+        "server = FTPServer((\"127.0.0.1\", 21), handler)",
+        "server = FTPServer(handler, (\"127.0.0.1\", 21))"
+      ],
+      "golden_answer": "server = FTPServer((\"127.0.0.1\", 21), handler)"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (cryptography, twisted) that are not required for basic pyftpdlib functionality",
+      "correction_candidates": [
+        "$ sudo apt-get install python3-dev libssl-dev\n$ pip install pyftpdlib",
+        "$ pip install pyftpdlib",
+        "$ sudo apt-get install python3-pip\n$ pip install pyftpdlib",
+        "$ conda install pyftpdlib"
+      ],
+      "golden_answer": "$ pip install pyftpdlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid command line parameters --port and --directory that don't exist for pyftpdlib",
+      "correction_candidates": [
+        "$ python3 -m pyftpdlib --write",
+        "$ python3 -m pyftpdlib --write --help",
+        "$ python3 -m pyftpdlib -w -p 2121 -d /tmp",
+        "$ python3 -m pyftpdlib --write -p 2121"
+      ],
+      "golden_answer": "$ python3 -m pyftpdlib -w -p 2121 -d /tmp"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated Python version range (3.5-3.8) and pinned to old pyftpdlib version (1.5.0) which may not be compatible with modern systems",
+      "correction_candidates": [
+        "pyftpdlib requires Python 3.6 or later. Install using:\n\n$ pip install pyftpdlib",
+        "pyftpdlib supports Python 3.x. Install the latest version using:\n\n$ pip install pyftpdlib",
+        "pyftpdlib requires Python 3.7+ for optimal compatibility. Install using:\n\n$ pip install pyftpdlib",
+        "Install the latest pyftpdlib version using:\n\n$ pip install pyftpdlib"
+      ],
+      "golden_answer": "pyftpdlib requires Python 3.6 or later. Install using:\n\n$ pip install pyftpdlib"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used python2 command which is incompatible with pyftpdlib that requires Python 3",
+      "correction_candidates": [
+        "$ python3 -m pyftpdlib --write",
+        "$ python -m pyftpdlib --write",
+        "$ py -3 -m pyftpdlib --write",
+        "$ /usr/bin/python3 -m pyftpdlib --write"
+      ],
+      "golden_answer": "$ python3 -m pyftpdlib --write"
+    }
+  ]
+}

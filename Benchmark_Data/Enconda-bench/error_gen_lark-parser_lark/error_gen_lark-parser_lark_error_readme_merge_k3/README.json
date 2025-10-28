@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_lark-parser_lark_error_readme_merge_k3",
+  "repo_name": "lark-parser_lark",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README instructs to install 'ply', which is an unnecessary dependency for Lark, despite stating Lark has no dependencies.",
+      "correction_candidates": [
+        "Remove the line `$ pip install ply`.",
+        "Change `$ pip install ply` to `$ pip install -r requirements.txt`.",
+        "Combine the installations into `$ pip install lark-parser ply --upgrade`.",
+        "The line `$ pip install ply` should be moved after installing lark-parser."
+      ],
+      "golden_answer": "Remove the line `$ pip install ply`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the pip install command is incorrect. The correct package name on PyPI is 'lark', not 'lark-parser'.",
+      "correction_candidates": [
+        "Change `$ pip install lark-parser --upgrade` to `$ pip install lark --upgrade`.",
+        "Change `$ pip install lark-parser --upgrade` to `pip install lark`.",
+        "Change `$ pip install lark-parser --upgrade` to `pip install lark.py --upgrade`.",
+        "Remove the `--upgrade` flag: `$ pip install lark-parser`."
+      ],
+      "golden_answer": "Change `$ pip install lark-parser --upgrade` to `$ pip install lark --upgrade`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Lark runs on 'Python 3.6 only', while it is compatible with a wide range of Python versions.",
+      "correction_candidates": [
+        "Change 'Run on Python 3.6 only' to 'Run on every Python interpreter'.",
+        "Change 'Run on Python 3.6 only' to 'Run on Python 3.6+.'",
+        "Change 'Run on Python 3.6 only' to 'Run on Python 2.7 and 3.5+.'",
+        "Remove the entire line about Python compatibility."
+      ],
+      "golden_answer": "Change 'Run on Python 3.6 only' to 'Run on every Python interpreter'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the Cheatsheet PDF is incorrect, pointing to 'cheatsheet.pdf' instead of 'lark_cheatsheet.pdf'.",
+      "correction_candidates": [
+        "Correct the path to `[Cheatsheet (PDF)](/docs/_static/lark_cheatsheet.pdf)`.",
+        "Correct the path to `[Cheatsheet (PDF)](/static/lark_cheatsheet.pdf)`.",
+        "Correct the path to `[Cheatsheet (PDF)](/docs/lark_cheatsheet.pdf)`.",
+        "Use the full URL: `[Cheatsheet (PDF)](https://github.com/lark-parser/lark/raw/master/docs/_static/lark_cheatsheet.pdf)`."
+      ],
+      "golden_answer": "Correct the path to `[Cheatsheet (PDF)](/docs/_static/lark_cheatsheet.pdf)`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest running the 'Hello World' example code *before* installing the Lark library, which is the wrong order and will fail.",
+      "correction_candidates": [
+        "Remove the sentence: 'First, run the following Python code to test your setup. After it runs successfully, you can install Lark using the instructions above.'",
+        "Move the 'Install Lark' section to be before the 'Hello World' section.",
+        "Change the sentence to: 'After installing Lark, run the following Python code to test your setup.'",
+        "Add a note saying 'This code requires Lark to be installed first.'"
+      ],
+      "golden_answer": "Remove the sentence: 'First, run the following Python code to test your setup. After it runs successfully, you can install Lark using the instructions above.'"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The string input in the 'Hello World' example code is 'Hello World!', which is missing the comma required by the grammar `start: WORD \",\" WORD \"!\"`. This will cause the parse to fail and also makes the example output incorrect.",
+      "correction_candidates": [
+        "Change the input string in the code to `l.parse(\"Hello, World!\")`.",
+        "Change the grammar in the code to `start: WORD WORD \"!\"`.",
+        "Change the grammar in the code to `start: WORD \",\"? WORD \"!\"` to make the comma optional.",
+        "Change the input string in the code to `l.parse('Hello, World!')`."
+      ],
+      "golden_answer": "Change the input string in the code to `l.parse(\"Hello, World!\")`."
+    }
+  ]
+}

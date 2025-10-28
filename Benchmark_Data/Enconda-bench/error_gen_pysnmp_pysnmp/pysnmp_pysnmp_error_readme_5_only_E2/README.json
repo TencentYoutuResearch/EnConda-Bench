@@ -1,0 +1,18 @@
+{
+  "readme": "pysnmp_pysnmp_error_readme_5_only_E2",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Adding pysnmp-mibs as an unnecessary dependency when installing snmpclitools",
+      "correction_candidates": [
+        "Remove pysnmp-mibs from the installation command",
+        "Install pysnmp-mibs separately in a different step",
+        "Replace pysnmp-mibs with pysmi in the command",
+        "Use --no-deps flag when installing snmpclitools"
+      ],
+      "golden_answer": "Remove pysnmp-mibs from the installation command"
+    }
+  ]
+}

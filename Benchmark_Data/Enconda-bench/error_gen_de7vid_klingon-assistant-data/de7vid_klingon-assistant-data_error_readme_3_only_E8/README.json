@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_3_only_E8",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The README gives a confusing and incorrect instruction to avoid using `blank.xml`, contradicting the template's purpose and suggesting a cumbersome alternative.",
+      "correction_candidates": [
+        "The `blank.xml` file is a template and should be used for creating new entries.",
+        "To create a new entry, run the `create_entry.py` script which uses `blank.xml` automatically.",
+        "The `blank.xml` file should be copied to a new file name, then edited.",
+        "The instruction is incorrect; `blank.xml` is the designated template for new entries."
+      ],
+      "golden_answer": "The `blank.xml` file is a template and should be used for creating new entries."
+    }
+  ]
+}

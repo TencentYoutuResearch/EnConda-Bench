@@ -1,0 +1,18 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_5_only_E7",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned the package to a specific version (2.1.0) which may cause compatibility issues as the version may not exist or may become outdated",
+      "correction_candidates": [
+        "pip install mirascope",
+        "pip install mirascope>=2.0.0",
+        "pip install \"mirascope>=2.0,<3.0\"",
+        "pip install mirascope~=2.1"
+      ],
+      "golden_answer": "pip install mirascope"
+    }
+  ]
+}

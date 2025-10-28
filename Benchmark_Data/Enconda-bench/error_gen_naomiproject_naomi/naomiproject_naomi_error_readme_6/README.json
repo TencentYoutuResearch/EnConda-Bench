@@ -1,0 +1,29 @@
+{
+  "readme": "naomiproject_naomi_error_readme_6",
+  "repo_name": "naomiproject_naomi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility error - specifying Python 2.7 when the badge shows Python 3.5 support",
+      "correction_candidates": [
+        "Naomi requires Python 3.5+ and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`.",
+        "Naomi requires Python 3.6 or higher and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`.",
+        "Naomi requires Python 3.5 or newer and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`.",
+        "Naomi requires Python 3.7+ and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`."
+      ],
+      "golden_answer": "Naomi requires Python 3.5+ and the following system dependencies: `sudo apt-get install portaudio19-dev python3-pyaudio sox libsox-fmt-mp3`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Command syntax error - using invalid parameters for setup.py script",
+      "correction_candidates": [
+        "To get started, run the setup script with `python setup.py install`.",
+        "To get started, run the setup script with `python setup.py configure`.",
+        "To get started, run the setup script with `python setup.py build install`.",
+        "To get started, run the setup script with `python setup.py --help` to see available options."
+      ],
+      "golden_answer": "To get started, run the setup script with `python setup.py install`."
+    }
+  ]
+}

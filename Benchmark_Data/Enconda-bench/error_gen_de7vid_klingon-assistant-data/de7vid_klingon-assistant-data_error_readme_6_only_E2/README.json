@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_6_only_E2",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax for review_changes.sh script with malformed parameter format",
+      "correction_candidates": [
+        "There is a script `review_changes.sh` which takes in a language code and an optional commit (which defaults to `upstream/main` if omitted).",
+        "There is a script `review_changes.sh <language_code> [commit]` which takes in a language code and an optional commit (which defaults to `upstream/main` if omitted).",
+        "There is a script `review_changes.sh` that accepts `-l <code>` and `-c <hash>` which takes in a language code and an optional commit (which defaults to `upstream/main` if omitted).",
+        "There is a script `review_changes.sh [language] [commit]` which takes in a language code and an optional commit (which defaults to `upstream/main` if omitted)."
+      ],
+      "golden_answer": "There is a script `review_changes.sh` which takes in a language code and an optional commit (which defaults to `upstream/main` if omitted)."
+    }
+  ]
+}

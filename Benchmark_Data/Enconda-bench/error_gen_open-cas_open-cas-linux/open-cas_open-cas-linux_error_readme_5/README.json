@@ -1,0 +1,29 @@
+{
+  "readme": "open-cas_open-cas-linux_error_readme_5",
+  "repo_name": "open-cas_open-cas-linux",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced requirements file has incorrect filename 'dependencies.txt' instead of 'requirements.txt'",
+      "correction_candidates": [
+        "python3 -m pip install -r requirements.txt",
+        "python3 -m pip install -r setup.txt",
+        "python3 -m pip install -r packages.txt",
+        "python3 -m pip install -r install.txt"
+      ],
+      "golden_answer": "python3 -m pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Build commands are in wrong order - 'make install' should be last, after './configure' and 'make'",
+      "correction_candidates": [
+        "./configure\nmake\nmake install",
+        "make\n./configure\nmake install",
+        "make install\nmake\n./configure",
+        "./configure\nmake install\nmake"
+      ],
+      "golden_answer": "./configure\nmake\nmake install"
+    }
+  ]
+}

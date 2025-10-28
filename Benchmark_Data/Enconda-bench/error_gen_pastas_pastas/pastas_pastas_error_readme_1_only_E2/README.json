@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_1_only_E2",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the development version from git is syntactically incorrect. `pip install --git` is not a valid pip command.",
+      "correction_candidates": [
+        "pip install git+https://github.com/pastas/pastas.git@dev",
+        "pip install git+https://github.com/pastas/pastas.git@dev#egg=pastas",
+        "pip install pastas --pre",
+        "git clone https://github.com/pastas/pastas.git && cd pastas && pip install -e ."
+      ],
+      "golden_answer": "pip install git+https://github.com/pastas/pastas.git@dev#egg=pastas"
+    }
+  ]
+}

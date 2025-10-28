@@ -1,0 +1,29 @@
+{
+  "readme": "lmcinnes_umap_error_readme_1",
+  "repo_name": "lmcinnes_umap",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'numba' dependency is omitted from the 'Requirements' list, even though it is a critical dependency for the package to function.",
+      "correction_candidates": [
+        "In the Requirements list, add `numba`.",
+        "In the Requirements list, add `numba >= 0.50`.",
+        "In the Requirements list, add `python-numba`.",
+        "In the Requirements list, add `numba` and `llvmlite`."
+      ],
+      "golden_answer": "In the Requirements list, add `numba`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The manual installation command `python setup.py install` is suggested, which is deprecated and may fail with modern tooling.",
+      "correction_candidates": [
+        "Replace `python setup.py install` with `pip install .`.",
+        "Replace `python setup.py install` with `python -m pip install -e .`.",
+        "Replace `python setup.py install` with `pip install -e .`.",
+        "Replace `python setup.py install` with `python -m build && pip install dist/*.whl`."
+      ],
+      "golden_answer": "Replace `python setup.py install` with `python -m pip install -e .`."
+    }
+  ]
+}

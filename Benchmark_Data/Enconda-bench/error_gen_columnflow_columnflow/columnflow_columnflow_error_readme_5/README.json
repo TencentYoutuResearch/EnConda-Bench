@@ -1,0 +1,29 @@
+{
+  "readme": "columnflow_columnflow_error_readme_5",
+  "repo_name": "columnflow_columnflow",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added pip install requirements.txt before setting up the environment, which should happen after creating and activating the virtual environment",
+      "correction_candidates": [
+        "Remove the pip install step and keep only the source setup.sh command",
+        "Move pip install -r requirements.txt after source setup.sh command",
+        "Replace pip install with conda install requirements.txt",
+        "Change to python -m pip install -r requirements.txt before source setup.sh"
+      ],
+      "golden_answer": "Move pip install -r requirements.txt after source setup.sh command"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the columnflow project structure",
+      "correction_candidates": [
+        "Change requirements.txt to setup.py for package installation",
+        "Remove the pip install line entirely as dependencies are handled by setup.sh",
+        "Change to pip install -e . for editable installation",
+        "Replace with pip install columnflow from PyPI"
+      ],
+      "golden_answer": "Remove the pip install line entirely as dependencies are handled by setup.sh"
+    }
+  ]
+}

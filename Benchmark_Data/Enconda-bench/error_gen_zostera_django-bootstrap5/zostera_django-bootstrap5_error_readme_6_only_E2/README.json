@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap5_error_readme_6_only_E2",
+  "repo_name": "zostera_django-bootstrap5",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'python manage.py runexample' instead of 'make example'",
+      "correction_candidates": [
+        "make example",
+        "python example/manage.py runserver",
+        "django-admin runexample",
+        "python -m example"
+      ],
+      "golden_answer": "make example"
+    }
+  ]
+}

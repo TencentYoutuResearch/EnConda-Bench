@@ -1,0 +1,18 @@
+{
+  "readme": "sasview_sasview_error_readme_1_only_E2",
+  "repo_name": "sasview_sasview",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application, `python run.py --gui`, is incorrect as the `--gui` flag is not a valid argument.",
+      "correction_candidates": [
+        "The correct command is `python run.py`.",
+        "The correct flag is `-g` instead of `--gui`.",
+        "The application should be launched via `python -m sasview`.",
+        "The command should be `sasview --run --gui`."
+      ],
+      "golden_answer": "The correct command is `python run.py`."
+    }
+  ]
+}

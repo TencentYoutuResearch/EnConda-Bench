@@ -1,0 +1,18 @@
+{
+  "readme": "googlefonts_gftools_error_readme_2_only_E2",
+  "repo_name": "googlefonts_gftools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install `gftools` with the 'qa' extras is incorrect. It attempts to install a non-existent package `gftools-qa` instead of using the correct pip syntax for extras.",
+      "correction_candidates": [
+        "pip install gftools --with-qa",
+        "pip install gftools && pip install gftools-qa",
+        "pip install 'gftools[qa]'",
+        "pip install gftools --install-option=\"--with-qa\""
+      ],
+      "golden_answer": "pip install 'gftools[qa]'"
+    }
+  ]
+}

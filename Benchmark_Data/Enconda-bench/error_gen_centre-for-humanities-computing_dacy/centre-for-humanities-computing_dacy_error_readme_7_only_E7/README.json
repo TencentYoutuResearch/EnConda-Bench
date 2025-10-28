@@ -1,0 +1,18 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_7_only_E7",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 2.7 as requirement when modern packages require Python 3.x",
+      "correction_candidates": [
+        "Note: DaCy requires Python 3.8 or higher for optimal performance.",
+        "Note: DaCy requires Python 3.6+ for optimal performance.",
+        "Note: DaCy requires Python 3.7 or later for optimal performance.",
+        "Note: DaCy supports Python 3.9+ for optimal performance."
+      ],
+      "golden_answer": "Note: DaCy requires Python 3.8 or higher for optimal performance."
+    }
+  ]
+}

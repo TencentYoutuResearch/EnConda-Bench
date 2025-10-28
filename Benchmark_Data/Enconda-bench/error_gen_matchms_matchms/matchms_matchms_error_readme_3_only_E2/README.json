@@ -1,0 +1,18 @@
+{
+  "readme": "matchms_matchms_error_readme_3_only_E2",
+  "repo_name": "matchms_matchms",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the linter is 'prospector .', which is an incorrect usage. The correct command is simply 'prospector'.",
+      "correction_candidates": [
+        "run prospector",
+        "prospector",
+        "prospector --profile .prospector.yaml",
+        "lint prospector"
+      ],
+      "golden_answer": "prospector"
+    }
+  ]
+}

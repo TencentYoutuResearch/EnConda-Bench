@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_naomiproject_naomi_error_readme_merge_k4",
+  "repo_name": "naomiproject_naomi",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation note incorrectly states that Python 2.7 is required, which conflicts with the Python 3.5 badge and the use of `python3` in commands, causing version incompatibility.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7. The project requires Python 3.5 or newer.",
+        "Update the Python badge to `v2.7` to match the installation note.",
+        "Change the `python3 -m venv venv` command to `python -m venv venv`.",
+        "Add a step to install Python 2.7 using `sudo apt-get install python2.7`."
+      ],
+      "golden_answer": "Remove the note about Python 2.7. The project requires Python 3.5 or newer."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. It attempts to install pip dependencies globally before creating and activating the virtual environment, which defeats the purpose of the environment.",
+      "correction_candidates": [
+        "Move step 3 (`pip install -r requirements.txt`) to be after step 4 (creating and activating the venv).",
+        "Remove the virtual environment steps (step 4) and install dependencies globally.",
+        "Change `pip install` to `pip install --user` to avoid needing sudo permissions.",
+        "Combine steps 3 and 4 into a single script to ensure correct order."
+      ],
+      "golden_answer": "Move step 3 (`pip install -r requirements.txt`) to be after step 4 (creating and activating the venv)."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction `sudo apt-get install python-pip` installs the pip for Python 2, which is outdated and not what the project needs. Modern systems using Python 3 should use `python3-pip` or rely on the pip installed with Python 3 itself.",
+      "correction_candidates": [
+        "Change the command to `sudo apt-get install python3-pip`.",
+        "Remove the `sudo apt-get install python-pip` command, as pip is usually included with modern Python 3 installations.",
+        "Replace the command with `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py`.",
+        "Add `sudo apt-get update` before the installation command."
+      ],
+      "golden_answer": "Remove the `sudo apt-get install python-pip` command, as pip is usually included with modern Python 3 installations."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements.txt` is syntactically incorrect for installing packages from a requirements file. It's missing the `-r` flag.",
+      "correction_candidates": [
+        "Change the command to `pip install -r requirements.txt`.",
+        "Change the command to `cat requirements.txt | xargs pip install`.",
+        "Change the command to `pip install --requirements requirements.txt`.",
+        "Create a `setup.py` file and run `python setup.py install`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment, `venv/bin/activate`, is incorrect. On Linux/macOS, it needs to be sourced by the shell using `source venv/bin/activate` or `. venv/bin/activate`.",
+      "correction_candidates": [
+        "Change `venv/bin/activate` to `source venv/bin/activate`.",
+        "Change `venv/bin/activate` to `bash venv/bin/activate`.",
+        "Add `chmod +x venv/bin/activate` before running the command.",
+        "For Windows, the command should be `venv\\Scripts\\activate`."
+      ],
+      "golden_answer": "Change `venv/bin/activate` to `source venv/bin/activate`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are missing the crucial step of installing the Python dependencies from the `requirements.txt` file after creating and activating the virtual environment.",
+      "correction_candidates": [
+        "Add a new step after activating the virtual environment: `pip install -r requirements.txt`.",
+        "Add the step `python setup.py install` after cloning the repository.",
+        "Add the step `pip install naomi` after activating the virtual environment.",
+        "Instruct the user to find the `requirements.txt` file and install each package listed in it manually using `pip install`."
+      ],
+      "golden_answer": "Add a new step after activating the virtual environment: `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installation steps are in wrong order - installing pip dependencies before creating virtual environment",
+      "correction_candidates": [
+        "First, create a virtual environment using `python -m venv naomi-env`, then activate it and install the required dependencies by running `pip install -r requirements.txt`.",
+        "First, set up your Python environment by running `python -m venv naomi-env && source naomi-env/bin/activate`, then install dependencies with `pip install -r requirements.txt`.",
+        "Create a virtual environment first with `python -m venv naomi-env`, activate it, then run `pip install -r requirements.txt` to install dependencies.",
+        "Install Python virtual environment using `python -m venv naomi-env`, activate the environment, then install requirements with `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "First, create a virtual environment using `python -m venv naomi-env`, then activate it and install the required dependencies by running `pip install -r requirements.txt`."
+    }
+  ]
+}

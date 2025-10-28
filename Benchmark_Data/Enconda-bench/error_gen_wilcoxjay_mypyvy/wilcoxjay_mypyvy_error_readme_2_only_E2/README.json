@@ -1,0 +1,18 @@
+{
+  "readme": "wilcoxjay_mypyvy_error_readme_2_only_E2",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command-line flag `--d=5` for specifying the depth in the `bmc` example is an incorrect abbreviation; the correct flag is `--depth=5`.",
+      "correction_candidates": [
+        "python3 src/mypyvy.py bmc --depth=5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc -depth 5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc --set-depth 5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc --depth 5 --safety=mutex examples/lockserv.pyv"
+      ],
+      "golden_answer": "python3 src/mypyvy.py bmc --depth=5 --safety=mutex examples/lockserv.pyv"
+    }
+  ]
+}

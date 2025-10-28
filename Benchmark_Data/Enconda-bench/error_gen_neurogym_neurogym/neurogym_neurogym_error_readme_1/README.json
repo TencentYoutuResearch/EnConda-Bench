@@ -1,0 +1,29 @@
+{
+  "readme": "neurogym_neurogym_error_readme_1",
+  "repo_name": "neurogym_neurogym",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install -e` is missing the target directory `.` which is required to specify that the installation should apply to the current directory.",
+      "correction_candidates": [
+        "pip install --editable .",
+        "pip install .",
+        "pip install -e .",
+        "pip install -e neurogym"
+      ],
+      "golden_answer": "pip install -e ."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command for a full installation, `pip install -e '.[full]'`, uses an incorrect extra requirement key. The correct key for all optional dependencies is `'[all]'`.",
+      "correction_candidates": [
+        "pip install -e . --all",
+        "pip install -e '.[complete]'",
+        "pip install -e .[all]",
+        "pip install -e '.[all]'"
+      ],
+      "golden_answer": "pip install -e '.[all]'"
+    }
+  ]
+}

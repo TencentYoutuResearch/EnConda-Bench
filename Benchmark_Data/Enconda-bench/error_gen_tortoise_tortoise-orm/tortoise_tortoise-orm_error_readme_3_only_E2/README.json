@@ -1,0 +1,18 @@
+{
+  "readme": "tortoise_tortoise-orm_error_readme_3_only_E2",
+  "repo_name": "tortoise_tortoise-orm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example code for saving a model instance is `tournament.save()`, which is a synchronous call. Since Tortoise ORM is an async library, this will raise an error. The call must be awaited.",
+      "correction_candidates": [
+        "run(tournament.save())",
+        "tournament.save_nowait()",
+        "await tournament.save()",
+        "asyncio.create_task(tournament.save())"
+      ],
+      "golden_answer": "await tournament.save()"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "avaiga_taipy-core_error_readme_4_only_E2",
+  "repo_name": "avaiga_taipy-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install dependencies uses an incorrect and non-existent flag `-requirement`. The correct flags are `-r` (short) or `--requirement` (long).",
+      "correction_candidates": [
+        "Change `-requirement` to `--r`.",
+        "Change the command to `pip install -r requirements.txt`.",
+        "Change the command to `pip --install -requirement requirements.txt`.",
+        "Remove the flag and run `pip install requirements.txt`."
+      ],
+      "golden_answer": "Change the command to `pip install -r requirements.txt`."
+    }
+  ]
+}

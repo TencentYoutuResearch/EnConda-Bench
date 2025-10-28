@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_google-deepmind_acme_error_readme_merge_k2",
+  "repo_name": "google-deepmind_acme",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions attempt to upgrade pip before activating the virtual environment, which will modify the global Python environment instead of the isolated one.",
+      "correction_candidates": [
+        "python3 -m venv acme && source acme/bin/activate && pip install --upgrade pip setuptools wheel",
+        "Move the `source acme/bin/activate` command before the `pip install --upgrade pip...` command.",
+        "pip install --upgrade pip setuptools wheel --target=acme/lib/python3.8/site-packages",
+        "The commands are correct but should be run in separate terminals."
+      ],
+      "golden_answer": "Move the `source acme/bin/activate` command before the `pip install --upgrade pip...` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install from the cloned GitHub repository has a syntax error, using a comma instead of a period to specify the local package.",
+      "correction_candidates": [
+        "pip install -e .[jax,tf,testing,envs]",
+        "pip install setup.py[jax,tf,testing,envs]",
+        "pip install .[jax,tf,testing,envs]",
+        "pip install --path . [jax,tf,testing,envs]"
+      ],
+      "golden_answer": "pip install .[jax,tf,testing,envs]"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `python -m venv acme` is used, which may default to an unsupported Python 2 installation on some systems, leading to compatibility issues. `python3` should be used explicitly.",
+      "correction_candidates": [
+        "python3 -m venv acme",
+        "virtualenv -p python3 acme",
+        "conda create -n acme python=3.8",
+        "Ensure your system's default 'python' is aliased to 'python3' before running."
+      ],
+      "golden_answer": "python3 -m venv acme"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment is incorrect (`source acme/activate`). The correct path to the activation script is `acme/bin/activate`.",
+      "correction_candidates": [
+        ". acme/bin/activate",
+        "source acme/bin/activate",
+        "acme\\Scripts\\activate.bat",
+        "cd acme && source bin/activate"
+      ],
+      "golden_answer": "source acme/bin/activate"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_5_only_E1",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installation command refers to non-existent packages rstcheck-core and rstcheck-extensions instead of the correct rstcheck package",
+      "correction_candidates": [
+        "$ pip install rstcheck",
+        "$ pip install rstcheck-main rstcheck-utils",
+        "$ pip install rstcheck-base rstcheck-plugins",
+        "$ conda install rstcheck"
+      ],
+      "golden_answer": "$ pip install rstcheck"
+    }
+  ]
+}

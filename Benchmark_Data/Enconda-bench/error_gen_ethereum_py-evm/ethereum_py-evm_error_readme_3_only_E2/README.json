@@ -1,0 +1,18 @@
+{
+  "readme": "ethereum_py-evm_error_readme_3_only_E2",
+  "repo_name": "ethereum_py-evm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The 'git clone' command uses an invalid URL 'https//github.com' due to a missing colon, which will cause the clone operation to fail.",
+      "correction_candidates": [
+        "Change the command to 'git clone https://github.com/ethereum/py-evm.git'.",
+        "Change the command to 'git clone git@github.com:ethereum/py-evm.git'.",
+        "Change the command to 'git clone git://github.com/ethereum/py-evm.git'.",
+        "Change the command to 'git clone https://www.github.com/ethereum/py-evm.git'."
+      ],
+      "golden_answer": "Change the command to 'git clone git@github.com:ethereum/py-evm.git'."
+    }
+  ]
+}

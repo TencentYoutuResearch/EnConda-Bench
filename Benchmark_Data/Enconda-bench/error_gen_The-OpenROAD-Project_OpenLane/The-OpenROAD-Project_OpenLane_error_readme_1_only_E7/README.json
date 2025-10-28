@@ -1,0 +1,18 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_1_only_E7",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instruction to 'Get Python 3' is too generic. The project requires at least version 3.6, and a user might have an older, incompatible version like Python 3.5 installed.",
+      "correction_candidates": [
+        "Get Python 3.6",
+        "Get the latest version of Python 3",
+        "Get Python 3.6 or higher",
+        "Get Python >= 3.6"
+      ],
+      "golden_answer": "Get Python 3.6 or higher"
+    }
+  ]
+}

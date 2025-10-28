@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_nabla-ntnu_nablaweb_error_readme_merge_k6",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version is specified as 'python 3', which is ambiguous and can lead to compatibility issues as it doesn't specify the required minor version.",
+      "correction_candidates": [
+        "Change 'python 3' to 'python > 3.6'.",
+        "Change 'python 3' to 'python 3.9'.",
+        "Change 'python 3' to 'python'.",
+        "Change 'python 3' to 'python 3.9+'."
+      ],
+      "golden_answer": "Change 'python 3' to 'python 3.9'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install pre-commit hooks is 'pipenv pre-commit install', which is incorrect. Commands executed within the pipenv environment should be prefixed with 'run'.",
+      "correction_candidates": [
+        "Change 'pipenv pre-commit install' to 'pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv shell && pre-commit install'.",
+        "Change 'pipenv pre-commit install' to 'pipenv install pre-commit'."
+      ],
+      "golden_answer": "Change 'pipenv pre-commit install' to 'pipenv run pre-commit install'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. It instructs to install pre-commit hooks before installing the project dependencies with 'pipenv install', which will fail because the pre-commit package is not yet installed.",
+      "correction_candidates": [
+        "Reverse the order of the two commands in the 'Installasjon' section.",
+        "Combine the two commands into 'pipenv install && pipenv run pre-commit install'.",
+        "Remove the 'pipenv run pre-commit install' step from the 'Installasjon' section.",
+        "Add 'pipenv shell' before the two commands."
+      ],
+      "golden_answer": "Reverse the order of the two commands in the 'Installasjon' section."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'pipenv' dependency is missing from the system dependencies list, but it is required to manage Python packages and run commands.",
+      "correction_candidates": [
+        "Add 'pip' to the system dependencies list.",
+        "Add 'pipenv' to the system dependencies list.",
+        "Add 'virtualenv' to the system dependencies list.",
+        "Remove the mention of 'pipenv' from the pre-commit command in the Kodestil section."
+      ],
+      "golden_answer": "Add 'pipenv' to the system dependencies list."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The documentation incorrectly states that project settings are in a top-level 'settings' directory, but they are located in the 'nablaweb' directory.",
+      "correction_candidates": [
+        "Change 'settings -- inneholder settings og urls' to 'nablaweb/settings -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'nablaweb -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'config -- inneholder settings og urls'.",
+        "Change 'settings -- inneholder settings og urls' to 'core -- inneholder settings og urls'."
+      ],
+      "golden_answer": "Change 'settings -- inneholder settings og urls' to 'nablaweb -- inneholder settings og urls'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to automatically format code is listed as 'make format', but the correct command defined in the project's Makefile is 'make fixme'.",
+      "correction_candidates": [
+        "Change 'make format' to 'make fixme'.",
+        "Change 'make format' to 'pipenv run black . && pipenv run isort .'.",
+        "Change 'make format' to 'make style'.",
+        "Change 'make format' to 'make check-fix'."
+      ],
+      "golden_answer": "Change 'make format' to 'make fixme'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command for installing pre-commit - should use 'run' to execute in pipenv environment",
+      "correction_candidates": [
+        "pipenv run pre-commit install",
+        "pip install pre-commit && pre-commit install",
+        "pipenv install --dev pre-commit && pipenv run pre-commit install",
+        "python -m pip install pre-commit"
+      ],
+      "golden_answer": "pipenv run pre-commit install"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect make command 'make verify' instead of 'make check' for code format verification",
+      "correction_candidates": [
+        "make check",
+        "make lint",
+        "make test",
+        "make validate"
+      ],
+      "golden_answer": "make check"
+    }
+  ]
+}

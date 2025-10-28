@@ -1,0 +1,18 @@
+{
+  "readme": "scikit-rf_scikit-rf_error_readme_1_only_E2",
+  "repo_name": "scikit-rf_scikit-rf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python pip install scikit-rf` is syntactically incorrect for installing the package via pip.",
+      "correction_candidates": [
+        "python -m pip install scikit-rf",
+        "pip install scikit-rf",
+        "python install pip scikit-rf",
+        "py -m pip install scikit-rf"
+      ],
+      "golden_answer": "python -m pip install scikit-rf"
+    }
+  ]
+}

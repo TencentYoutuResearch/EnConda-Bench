@@ -1,0 +1,18 @@
+{
+  "readme": "pysmt_pysmt_error_readme_3_only_E2",
+  "repo_name": "pysmt_pysmt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The package name in the pip install command is incorrect (`pysmt-lib` instead of `pysmt`), which will cause the installation to fail.",
+      "correction_candidates": [
+        "The command should be `pip install pysmt`.",
+        "The command should be `pip install pySMT`.",
+        "The package is named `pysmt`, so the command is `pip install pysmt`.",
+        "The correct package name is `pysmt`, not `pysmt-lib`."
+      ],
+      "golden_answer": "The command should be `pip install pysmt`."
+    }
+  ]
+}

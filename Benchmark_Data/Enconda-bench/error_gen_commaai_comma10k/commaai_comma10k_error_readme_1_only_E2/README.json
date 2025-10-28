@@ -1,0 +1,18 @@
+{
+  "readme": "commaai_comma10k_error_readme_1_only_E2",
+  "repo_name": "commaai_comma10k",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the viewer script is incorrect. 'python view.py' will fail because the script is named 'viewer.py'.",
+      "correction_candidates": [
+        "Run <pre>./viewer.py</pre> to see them with the mask overlay.",
+        "Run <pre>python viewer.py</pre> to see them with the mask overlay.",
+        "Run <pre>view.py</pre> to see them with the mask overlay.",
+        "Run <pre>python view</pre> to see them with the mask overlay."
+      ],
+      "golden_answer": "Run <pre>./viewer.py</pre> to see them with the mask overlay."
+    }
+  ]
+}

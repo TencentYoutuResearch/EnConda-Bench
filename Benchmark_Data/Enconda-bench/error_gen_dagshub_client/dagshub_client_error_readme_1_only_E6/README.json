@@ -1,0 +1,18 @@
+{
+  "readme": "dagshub_client_error_readme_1_only_E6",
+  "repo_name": "dagshub_client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the Quickstart for Data Streaming, the `install_hooks()` function is called before it is imported, which will cause a `NameError`.",
+      "correction_candidates": [
+        "```python\nfrom dagshub.streaming import install_hooks\ninstall_hooks()\n```",
+        "```python\nimport dagshub.streaming\ndagshub.streaming.install_hooks()\n```",
+        "```python\nfrom dagshub import streaming\nstreaming.install_hooks()\n```",
+        "```python\n# Make sure to import before calling\nfrom dagshub.streaming import install_hooks\ninstall_hooks()\n```"
+      ],
+      "golden_answer": "```python\nfrom dagshub.streaming import install_hooks\ninstall_hooks()\n```"
+    }
+  ]
+}

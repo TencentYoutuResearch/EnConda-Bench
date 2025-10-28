@@ -1,0 +1,29 @@
+{
+  "readme": "automl_neps_error_readme_8",
+  "repo_name": "automl_neps",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified a fixed version (1.2.3) for neural-pipeline-search that likely doesn't exist, creating version compatibility issues",
+      "correction_candidates": [
+        "pip install neural-pipeline-search",
+        "pip install neural-pipeline-search>=0.1.0",
+        "pip install neural-pipeline-search --pre",
+        "pip install neural-pipeline-search~=0.9.0"
+      ],
+      "golden_answer": "pip install neural-pipeline-search"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Placed 'cd neps' after 'poetry install' instead of before it, which is incorrect execution order",
+      "correction_candidates": [
+        "git clone git@github.com:automl/neps.git\ncd neps\npoetry install",
+        "git clone git@github.com:automl/neps.git\ncd neps\npip install -e .",
+        "git clone git@github.com:automl/neps.git\ncd neps\npython setup.py install",
+        "git clone git@github.com:automl/neps.git\ncd neps\nconda env create -f environment.yml"
+      ],
+      "golden_answer": "git clone git@github.com:automl/neps.git\ncd neps\npoetry install"
+    }
+  ]
+}

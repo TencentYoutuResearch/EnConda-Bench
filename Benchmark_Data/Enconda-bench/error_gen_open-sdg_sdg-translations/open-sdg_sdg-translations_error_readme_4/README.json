@@ -1,0 +1,29 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_4",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The build script is executed in step 3 before its dependencies are installed in step 4, which will cause the script to fail with an `ImportError`.",
+      "correction_candidates": [
+        "Swap steps 3 and 4, so that dependencies are installed before the script is run.",
+        "Combine the steps into a single command: `pip install -r requirements.txt && python scripts/build_json.py`.",
+        "The script should automatically install its own dependencies if they are not found.",
+        "Run the script with a special flag: `python scripts/build_json.py --install-dependencies`."
+      ],
+      "golden_answer": "Swap steps 3 and 4, so that dependencies are installed before the script is run."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install requirements.txt` incorrectly tries to install a package named 'requirements.txt' from PyPI, instead of installing the packages listed inside the file. The `-r` flag is missing.",
+      "correction_candidates": [
+        "The command should be `pip install -r requirements.txt`.",
+        "The command should be `pip install --requirement requirements.txt`.",
+        "Use `cat requirements.txt | xargs pip install` to install the packages.",
+        "Python's package manager `pip` is deprecated; use `poetry install` instead."
+      ],
+      "golden_answer": "The command should be `pip install -r requirements.txt`."
+    }
+  ]
+}

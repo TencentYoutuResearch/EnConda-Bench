@@ -1,0 +1,18 @@
+{
+  "readme": "owid_etl_error_readme_2_only_E7",
+  "repo_name": "owid_etl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python 3.8 is required, which conflicts with the Python version badge indicating support for 3.9, 3.10, and 3.11.",
+      "correction_candidates": [
+        "Update the badge to show Python 3.8 support.",
+        "Change the required Python version to 'This project requires Python >= 3.9'.",
+        "Remove the line specifying the Python version requirement.",
+        "Change the required Python version to match the badge: 'This project requires Python 3.9, 3.10, or 3.11.'"
+      ],
+      "golden_answer": "Change the required Python version to 'This project requires Python >= 3.9'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pokepetter_ursina_error_readme_3_only_E6",
+  "repo_name": "pokepetter_ursina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instruction to create a virtual environment is placed after the global installation of the package, defeating the purpose of environment isolation.",
+      "correction_candidates": [
+        "Move the instruction about creating a virtual environment to before any `pip install` commands.",
+        "Add a command `pip install ursina` again after the virtual environment is activated.",
+        "Remove the line 'After installation, it is good practice to create and activate a virtual environment for your project.'",
+        "Change the instruction to use `pipx` for global installation."
+      ],
+      "golden_answer": "Move the instruction about creating a virtual environment to before any `pip install` commands."
+    }
+  ]
+}

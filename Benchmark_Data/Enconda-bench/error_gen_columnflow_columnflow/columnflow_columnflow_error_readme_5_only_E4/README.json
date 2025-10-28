@@ -1,0 +1,18 @@
+{
+  "readme": "columnflow_columnflow_error_readme_5_only_E4",
+  "repo_name": "columnflow_columnflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file that doesn't exist in the columnflow project structure",
+      "correction_candidates": [
+        "Change requirements.txt to setup.py for package installation",
+        "Remove the pip install line entirely as dependencies are handled by setup.sh",
+        "Change to pip install -e . for editable installation",
+        "Replace with pip install columnflow from PyPI"
+      ],
+      "golden_answer": "Remove the pip install line entirely as dependencies are handled by setup.sh"
+    }
+  ]
+}

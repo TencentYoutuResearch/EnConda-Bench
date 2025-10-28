@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_7_only_E6",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation instructions suggest installing package in development mode before installing dependencies, but dependencies should typically be installed first or automatically handled",
+      "correction_candidates": [
+        "Change order to install dependencies first: `pip install -r requirements.txt` then `pip install -e .`",
+        "Use single command: `pip install -e .` (which handles dependencies automatically)",
+        "Add setup step: `python setup.py develop` before `pip install -e .`",
+        "Install with all dependencies: `pip install -e .[dev]`"
+      ],
+      "golden_answer": "Use single command: `pip install -e .` (which handles dependencies automatically)"
+    }
+  ]
+}

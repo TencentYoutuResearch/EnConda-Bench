@@ -1,0 +1,29 @@
+{
+  "readme": "fhempy_fhempy_error_readme_1",
+  "repo_name": "fhempy_fhempy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 3.6 is sufficient, but the project requires Python 3.9 or higher.",
+      "correction_candidates": [
+        "Python 3.9 or higher is required.",
+        "Python 3.7 or higher is required.",
+        "Any version of Python 3 is supported.",
+        "Python 3.6 or higher is required, but Python 3.9 is recommended."
+      ],
+      "golden_answer": "Python 3.9 or higher is required."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `define` command for setting up the local fhempy instance is incomplete and missing the required `fhempy` argument.",
+      "correction_candidates": [
+        "define fhempy_local fhempy",
+        "define fhempy_local BindingsIo fhempy",
+        "define fhempy_local BindingsIo:fhempy",
+        "define fhempy BindingsIo fhempy_local"
+      ],
+      "golden_answer": "define fhempy_local BindingsIo fhempy"
+    }
+  ]
+}

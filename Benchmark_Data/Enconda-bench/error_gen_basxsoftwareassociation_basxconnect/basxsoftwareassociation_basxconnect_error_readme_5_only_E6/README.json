@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_5_only_E6",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating virtual environment and activating it",
+      "correction_candidates": [
+        "Create a virtual environment first with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`",
+        "Use `virtualenv basxconnect_env` to create environment, then `basxconnect_env\\Scripts\\activate` on Windows, followed by `pip install -r requirements.txt`",
+        "Run `conda create -n basxconnect python=3.9` then `conda activate basxconnect` before installing requirements",
+        "Install dependencies globally with `sudo pip install -r requirements.txt` then create virtual environment afterwards"
+      ],
+      "golden_answer": "Create a virtual environment first with `python -m venv venv`, activate it with `source venv/bin/activate`, then install dependencies with `pip install -r requirements.txt`"
+    }
+  ]
+}

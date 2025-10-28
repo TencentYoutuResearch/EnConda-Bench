@@ -1,0 +1,18 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_4_only_E1",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions list `requests` as a required dependency for testing, but it is not actually used by the project, leading to unnecessary package installation.",
+      "correction_candidates": [
+        "Remove `requests` from the installation command as it is not a dependency.",
+        "Replace `requests` with `urllib3`, which is a dependency of `cheroot`.",
+        "Add a note explaining that `requests` is only for optional, user-written tests.",
+        "Change the command to `pip install -e .[test]` to install all correct dependencies."
+      ],
+      "golden_answer": "Remove `requests` from the installation command as it is not a dependency."
+    }
+  ]
+}

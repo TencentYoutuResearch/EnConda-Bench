@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_2_only_E4",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the `pyproject.toml` example, the readme files are listed as `README.rst` and `LICENSE.txt`, but the correct files in the repository are `README.md` and `LICENSE`.",
+      "correction_candidates": [
+        "Change the readme entry to `readme = [\"README.md\", \"LICENSE\"]`.",
+        "Change the readme entry to `readme = \"README.md\"`.",
+        "Remove the `readme` entry from the `pyproject.toml` file.",
+        "Rename the files in the repository to `README.rst` and `LICENSE.txt`."
+      ],
+      "golden_answer": "Change the readme entry to `readme = [\"README.md\", \"LICENSE\"]`."
+    }
+  ]
+}

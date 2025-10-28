@@ -1,0 +1,29 @@
+{
+  "readme": "owid_etl_error_readme_2",
+  "repo_name": "owid_etl",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python 3.8 is required, which conflicts with the Python version badge indicating support for 3.9, 3.10, and 3.11.",
+      "correction_candidates": [
+        "Update the badge to show Python 3.8 support.",
+        "Change the required Python version to 'This project requires Python >= 3.9'.",
+        "Remove the line specifying the Python version requirement.",
+        "Change the required Python version to match the badge: 'This project requires Python 3.9, 3.10, or 3.11.'"
+      ],
+      "golden_answer": "Change the required Python version to 'This project requires Python >= 3.9'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly list installing dependencies with `poetry install` before creating and activating the virtual environment.",
+      "correction_candidates": [
+        "Reverse the order of the steps: first create the virtual environment, then install dependencies.",
+        "Poetry handles its own virtual environment; simply run `poetry install` after cloning.",
+        "Run `poetry shell` to create and activate the virtual environment, then run `poetry install`.",
+        "Run `python -m venv .venv`, then `poetry install`, then `source .venv/bin/activate`."
+      ],
+      "golden_answer": "Reverse the order of the steps: first create the virtual environment, then install dependencies."
+    }
+  ]
+}

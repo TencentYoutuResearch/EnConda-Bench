@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_1_only_E2",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the installation script is incorrect. It is missing the '.sh' extension and uses 'sh', which might not be the intended execution method.",
+      "correction_candidates": [
+        "Run the command: source ./scripts/venvinstall.sh",
+        "Run the command: ./scripts/venvinstall.sh",
+        "Run the command: bash venvinstall.sh",
+        "Run the command: ./venvinstall.sh"
+      ],
+      "golden_answer": "Run the command: ./scripts/venvinstall.sh"
+    }
+  ]
+}

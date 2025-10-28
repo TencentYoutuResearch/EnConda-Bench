@@ -1,0 +1,29 @@
+{
+  "readme": "mne-tools_mne-lsl_error_readme_6",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Referenced a non-existent requirements file path 'requirements/missing_file.txt'",
+      "correction_candidates": [
+        "pip install -r requirements.txt",
+        "pip install mne-lsl",
+        "pip install -r pyproject.toml",
+        "pip install -r requirements/dev.txt"
+      ],
+      "golden_answer": "pip install mne-lsl"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added installation of an obsolete/non-existent package 'obsolete-package==1.0.0'",
+      "correction_candidates": [
+        "Remove the obsolete-package installation instruction entirely",
+        "Replace with `pip install mne>=1.0.0` for MNE compatibility",
+        "Install `numpy>=1.20.0` for numerical computation support",
+        "Add `scipy>=1.7.0` for scientific computing dependencies"
+      ],
+      "golden_answer": "Remove the obsolete-package installation instruction entirely"
+    }
+  ]
+}

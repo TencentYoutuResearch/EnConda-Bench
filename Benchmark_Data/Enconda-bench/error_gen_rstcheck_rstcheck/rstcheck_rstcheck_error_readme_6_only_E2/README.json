@@ -1,0 +1,18 @@
+{
+  "readme": "rstcheck_rstcheck_error_readme_6_only_E2",
+  "repo_name": "rstcheck_rstcheck",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Usage example shows invalid command line option --validate that does not exist in rstcheck",
+      "correction_candidates": [
+        "$ rstcheck bad_cpp.rst",
+        "$ rstcheck --report=1 bad_cpp.rst",
+        "$ rstcheck --ignore-languages=python bad_cpp.rst",
+        "$ rstcheck --debug bad_cpp.rst"
+      ],
+      "golden_answer": "$ rstcheck bad_cpp.rst"
+    }
+  ]
+}

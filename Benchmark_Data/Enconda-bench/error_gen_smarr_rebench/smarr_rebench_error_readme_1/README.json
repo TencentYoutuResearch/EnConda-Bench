@@ -1,0 +1,29 @@
+{
+  "readme": "smarr_rebench_error_readme_1",
+  "repo_name": "smarr_rebench",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the `cpuset` dependency on Ubuntu is incorrect. It uses `cpuset-tools`, which is not the correct package name, causing the installation to fail.",
+      "correction_candidates": [
+        "On Ubuntu: `apt-get install cpuset`",
+        "On Ubuntu: `apt install cpuset`",
+        "On Ubuntu: `sudo apt install cpuset-utils`",
+        "On Ubuntu: `pip install cpuset`"
+      ],
+      "golden_answer": "On Ubuntu: `apt install cpuset`"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example command to run a benchmark configuration is `rebench run test.conf`, which is incorrect. `rebench` expects the configuration file path directly as an argument without a `run` subcommand.",
+      "correction_candidates": [
+        "`rebench test.conf`",
+        "`rebench --execute test.conf`",
+        "`rebench --config test.conf`",
+        "`python -m rebench test.conf`"
+      ],
+      "golden_answer": "`rebench test.conf`"
+    }
+  ]
+}

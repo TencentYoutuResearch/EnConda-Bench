@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_2_only_E1",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation section incorrectly suggests installing with `pip install python-poetry`. The correct package name on PyPI is `poetry`, and the recommended installation method is the official script, not pip.",
+      "correction_candidates": [
+        "Replace the incorrect pip instruction with a reference to the official installer script at [install.python-poetry.org].",
+        "Correct the command to `pip install poetry`.",
+        "Correct the command to `pip install poetry --user`.",
+        "Suggest installing with `conda install poetry`."
+      ],
+      "golden_answer": "Replace the incorrect pip instruction with a reference to the official installer script at [install.python-poetry.org]."
+    }
+  ]
+}

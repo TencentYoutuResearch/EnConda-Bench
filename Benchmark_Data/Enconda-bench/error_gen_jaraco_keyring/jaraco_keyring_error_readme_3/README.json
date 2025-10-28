@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_keyring_error_readme_3",
+  "repo_name": "jaraco_keyring",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Tab Completion' section, the example command for installing bash completions incorrectly points to '/etc/bash_completion.d/keyring'. While this path exists on some systems, the more standard path mentioned in the surrounding text is '/usr/share/bash-completion/completions/keyring'.",
+      "correction_candidates": [
+        "sudo tee /usr/local/etc/bash_completion.d/keyring",
+        "sudo tee /etc/profile.d/keyring.bash",
+        "keyring --print-completion bash >> ~/.bashrc",
+        "sudo tee /usr/share/bash-completion/completions/keyring"
+      ],
+      "golden_answer": "sudo tee /usr/share/bash-completion/completions/keyring"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Installation - Linux' section, the instruction to install the dbus dependency via pip is 'pip install python-dbus', which is an incorrect package name. The correct package is 'dbus-python'.",
+      "correction_candidates": [
+        "Suggest running `pip install dbus-python`.",
+        "Suggest running `pip install dbus`.",
+        "Suggest running `sudo apt-get install python3-dbus` instead of using pip.",
+        "Suggest running `pip install pydbus`."
+      ],
+      "golden_answer": "Suggest running `pip install dbus-python`."
+    }
+  ]
+}

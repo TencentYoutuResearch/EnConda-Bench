@@ -1,0 +1,18 @@
+{
+  "readme": "facebookresearch_hydra_error_readme_2_only_E7",
+  "repo_name": "facebookresearch_hydra",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Hydra 1.1 is the stable version, while the correct stable version is 1.3.",
+      "correction_candidates": [
+        "Correct the version number from 1.1 to 1.3.",
+        "Change the text to 'The latest stable version is available on PyPI'.",
+        "Update the version number to 1.2, as it is also a valid past version.",
+        "Remove the specific version number from the sentence."
+      ],
+      "golden_answer": "Correct the version number from 1.1 to 1.3."
+    }
+  ]
+}

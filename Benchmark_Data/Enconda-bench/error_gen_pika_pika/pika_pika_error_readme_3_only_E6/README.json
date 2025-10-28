@@ -1,0 +1,18 @@
+{
+  "readme": "pika_pika_error_readme_3_only_E6",
+  "repo_name": "pika_pika",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README incorrectly suggests a logical order where `add_callback_threadsafe` should be called before the callback function is defined, which would cause a `NameError` in Python.",
+      "correction_candidates": [
+        "Remove the sentence suggesting to schedule the callback before defining the function.",
+        "Move the sentence to appear after the `ack_message` function definition.",
+        "Change the sentence to 'Ensure the callback function is defined before it is scheduled with `add_callback_threadsafe`'.",
+        "Rewrite the example to use a lambda function to avoid a separate definition."
+      ],
+      "golden_answer": "Remove the sentence suggesting to schedule the callback before defining the function."
+    }
+  ]
+}

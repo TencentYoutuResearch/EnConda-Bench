@@ -1,0 +1,18 @@
+{
+  "readme": "gazzolalab_miv-os_error_readme_1_only_E7",
+  "repo_name": "gazzolalab_miv-os",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3+' which is too broad and may cause users to attempt installation with incompatible older Python 3 versions. The package requires Python 3.8 or newer.",
+      "correction_candidates": [
+        "MiV-OS is compatible with Python.",
+        "MiV-OS is compatible with Python 3.8+.",
+        "MiV-OS is compatible with Python 3.6, 3.7, 3.8, 3.9.",
+        "MiV-OS is compatible with the latest version of Python."
+      ],
+      "golden_answer": "MiV-OS is compatible with Python 3.8+."
+    }
+  ]
+}

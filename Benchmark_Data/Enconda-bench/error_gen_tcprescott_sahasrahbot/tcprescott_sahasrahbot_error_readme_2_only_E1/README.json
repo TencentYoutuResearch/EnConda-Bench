@@ -1,0 +1,18 @@
+{
+  "readme": "tcprescott_sahasrahbot_error_readme_2_only_E1",
+  "repo_name": "tcprescott_sahasrahbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install Poetry (`pip install poetry`) is missing from the setup steps. The subsequent command `poetry install` will fail with a 'command not found' error.",
+      "correction_candidates": [
+        "Add `pip install poetry` as a new step before `virtualenv .venv`.",
+        "Replace `poetry install` with `pip install -r requirements.txt` after exporting dependencies.",
+        "Add `pip install poetry` as a new step after `virtualenv .venv`.",
+        "Install poetry using the official installer script: `curl -sSL https://install.python-poetry.org | python3 -`"
+      ],
+      "golden_answer": "Add `pip install poetry` as a new step before `virtualenv .venv`."
+    }
+  ]
+}

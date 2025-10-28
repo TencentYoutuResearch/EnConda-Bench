@@ -1,0 +1,29 @@
+{
+  "readme": "bitcart_bitcart_error_readme_4",
+  "repo_name": "bitcart_bitcart",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are missing a crucial prerequisite step to install system-level dependencies. Packages in requirements.txt may fail to build from source without packages like 'python3-dev' or 'build-essential' on Debian-based systems.",
+      "correction_candidates": [
+        "Add a prerequisite step before cloning, e.g., 'sudo apt-get install python3-dev build-essential'.",
+        "Run 'pip install' with the '--no-build-isolation' flag.",
+        "The dependencies should be installed with 'conda' instead of 'pip'.",
+        "Install the packages one by one instead of using a requirements file."
+      ],
+      "golden_answer": "Add a prerequisite step before cloning, e.g., 'sudo apt-get install python3-dev build-essential'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command in step 3 to activate the virtual environment, 'source venv/bin', is incorrect. It should be 'source venv/bin/activate'.",
+      "correction_candidates": [
+        "Change the command to 'source venv/bin/activate'.",
+        "On Windows, the command is 'venv\\Scripts\\activate'.",
+        "Change the command to '. venv/bin/activate'.",
+        "The command should be 'source activate venv'."
+      ],
+      "golden_answer": "Change the command to 'source venv/bin/activate'."
+    }
+  ]
+}

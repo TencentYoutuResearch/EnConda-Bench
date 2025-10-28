@@ -1,0 +1,18 @@
+{
+  "readme": "rcmdnk_homebrew-file_error_readme_1_only_E2",
+  "repo_name": "rcmdnk_homebrew-file",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `brew tap rcmdnk/homebrew-file install` is incorrect. The `install` argument is not valid for `brew tap` and will cause the command to fail.",
+      "correction_candidates": [
+        "brew install rcmdnk/homebrew-file",
+        "brew tap rcmdnk/homebrew-file && brew install brew-file",
+        "brew tap rcmdnk/homebrew-file",
+        "brew tap rcmdnk/file && brew install homebrew-file"
+      ],
+      "golden_answer": "brew tap rcmdnk/homebrew-file"
+    }
+  ]
+}

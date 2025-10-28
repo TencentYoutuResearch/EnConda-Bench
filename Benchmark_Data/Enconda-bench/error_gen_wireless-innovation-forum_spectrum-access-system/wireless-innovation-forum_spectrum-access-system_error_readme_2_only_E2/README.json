@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_2_only_E2",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a conda environment uses 'conda new', which is not a valid conda command for this purpose. The correct command is 'conda create'.",
+      "correction_candidates": [
+        "The command should be `conda create --name winnf3 python=3.11`.",
+        "The command should be `conda init winnf3 --python 3.11`.",
+        "The command should be `conda env new --name winnf3 python=3.11`.",
+        "The command should be `conda create -n winnf3 python=3.11`."
+      ],
+      "golden_answer": "The command should be `conda create --name winnf3 python=3.11`."
+    }
+  ]
+}

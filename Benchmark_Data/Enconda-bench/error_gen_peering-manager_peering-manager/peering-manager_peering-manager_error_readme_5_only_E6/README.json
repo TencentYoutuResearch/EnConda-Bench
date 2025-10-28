@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_5_only_E6",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Incorrect order of setup steps - installing dependencies before creating virtual environment",
+      "correction_candidates": [
+        "The best way to start setting up this tool is to use **pip** within a **virtualenv**.",
+        "The best way to start setting up this tool is to first create a **virtualenv**, then install dependencies using **pip**.",
+        "The best way to start setting up this tool is to use **conda** to create an environment and install dependencies.",
+        "The best way to start setting up this tool is to install Python 3.12 first, then use **pip** within a **virtualenv**."
+      ],
+      "golden_answer": "The best way to start setting up this tool is to use **pip** within a **virtualenv**."
+    }
+  ]
+}

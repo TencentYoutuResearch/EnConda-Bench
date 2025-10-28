@@ -1,0 +1,29 @@
+{
+  "readme": "smarr_rebench_error_readme_5",
+  "repo_name": "smarr_rebench",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect package manager specified - using conda instead of pip to install ReBench",
+      "correction_candidates": [
+        "pip install rebench",
+        "python -m pip install rebench",
+        "pip3 install rebench",
+        "easy_install rebench"
+      ],
+      "golden_answer": "pip install rebench"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Configuration filename mismatch between example and usage instruction",
+      "correction_candidates": [
+        "Saved as `test.conf`, this configuration could be executed with ReBench as follows:",
+        "Saved as `example.conf`, this configuration could be executed with ReBench as follows:",
+        "Saved as `config.yaml`, this configuration could be executed with ReBench as follows:",
+        "Saved as `rebench.conf`, this configuration could be executed with ReBench as follows:"
+      ],
+      "golden_answer": "Saved as `test.conf`, this configuration could be executed with ReBench as follows:"
+    }
+  ]
+}

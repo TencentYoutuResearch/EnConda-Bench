@@ -1,0 +1,18 @@
+{
+  "readme": "dlubal-software_rfem_python_client_error_readme_4_only_E2",
+  "repo_name": "dlubal-software_rfem_python_client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The description of 'initModel.py' specifies an incorrect server port (8000). The default and correct port for the RFEM Web Service is 8081.",
+      "correction_candidates": [
+        "Change the port number in the description from `8000` to the correct default, `8081`.",
+        "Change the port number to `808X` to indicate it is configurable.",
+        "Remove the specific port number and state that it connects to the RFEM Web Service.",
+        "Add a note that the port must match the one configured in RFEM's Web Services options, which defaults to 8081."
+      ],
+      "golden_answer": "Change the port number in the description from `8000` to the correct default, `8081`."
+    }
+  ]
+}

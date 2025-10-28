@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_4_only_E2",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment, `venv/bin/activate`, is incorrect. On Linux/macOS, it needs to be sourced by the shell using `source venv/bin/activate` or `. venv/bin/activate`.",
+      "correction_candidates": [
+        "Change `venv/bin/activate` to `source venv/bin/activate`.",
+        "Change `venv/bin/activate` to `bash venv/bin/activate`.",
+        "Add `chmod +x venv/bin/activate` before running the command.",
+        "For Windows, the command should be `venv\\Scripts\\activate`."
+      ],
+      "golden_answer": "Change `venv/bin/activate` to `source venv/bin/activate`."
+    }
+  ]
+}

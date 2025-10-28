@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_2_only_E1",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command provided to install voice support is incorrect. It installs the base `nextcord` library but omits the `[voice]` extra, which means voice-related dependencies will be missing.",
+      "correction_candidates": [
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U nextcord PyNaCl`.",
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U \"nextcord[voice]\"`.",
+        "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U nextcord-voice`.",
+        "In the voice support section, add a new command `python3 -m pip install -U PyNaCl` after the existing one."
+      ],
+      "golden_answer": "In the voice support section, change `python3 -m pip install -U nextcord` to `python3 -m pip install -U \"nextcord[voice]\"`."
+    }
+  ]
+}

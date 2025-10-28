@@ -1,0 +1,18 @@
+{
+  "readme": "iss-mimic_mimic_error_readme_2_only_E1",
+  "repo_name": "iss-mimic_mimic",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The manual installation command `pip install lightstreamer-client pandas` is missing other critical dependencies like `numpy` and `pyqt5` which are required for the project to run.",
+      "correction_candidates": [
+        "Advise the user to install all dependencies from the requirements file using `pip install -r requirements.txt`.",
+        "Add the missing packages to the command: `pip install lightstreamer-client pandas numpy pyqt5`.",
+        "Instruct the user to install Anaconda and create an environment from a provided file.",
+        "Add `numpy` to the command but still omit `pyqt5`."
+      ],
+      "golden_answer": "Advise the user to install all dependencies from the requirements file using `pip install -r requirements.txt`."
+    }
+  ]
+}

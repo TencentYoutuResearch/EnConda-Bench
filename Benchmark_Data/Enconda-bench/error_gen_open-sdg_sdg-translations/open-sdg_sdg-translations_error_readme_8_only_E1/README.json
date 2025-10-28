@@ -1,0 +1,18 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_8_only_E1",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Installs unnecessary Python web framework dependencies (Flask, Django) for a translation processing tool",
+      "correction_candidates": [
+        "pip install pyyaml requests click",
+        "pip install translation-tools pyyaml",
+        "pip install babel pyyaml requests",
+        "pip install gettext pyyaml click"
+      ],
+      "golden_answer": "pip install pyyaml requests click"
+    }
+  ]
+}

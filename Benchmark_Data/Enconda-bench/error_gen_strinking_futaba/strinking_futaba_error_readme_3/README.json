@@ -1,0 +1,29 @@
+{
+  "readme": "strinking_futaba_error_readme_3",
+  "repo_name": "strinking_futaba",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The docker command to set the environment variable is syntactically incorrect. It is missing the '=' between the variable name and its value.",
+      "correction_candidates": [
+        "docker run --env POSTGRES_PASSWORD=password -p 5432:5432 postgres",
+        "docker run -e POSTGRES_PASSWORD=\"password\" -p 5432:5432 postgres",
+        "docker run -e POSTGRES_PASSWORD=password -p 5432:5432 postgres",
+        "docker run -p 5432:5432 -e POSTGRES_PASSWORD=password postgres"
+      ],
+      "golden_answer": "docker run -e POSTGRES_PASSWORD=password -p 5432:5432 postgres"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development dependencies uses the `--dev` flag, which is incorrect for recent versions of Poetry. The correct flag is `--with dev`.",
+      "correction_candidates": [
+        "$ poetry add --group dev",
+        "$ poetry install --only dev",
+        "$ poetry install --with dev",
+        "$ poetry install -G dev"
+      ],
+      "golden_answer": "$ poetry install --with dev"
+    }
+  ]
+}

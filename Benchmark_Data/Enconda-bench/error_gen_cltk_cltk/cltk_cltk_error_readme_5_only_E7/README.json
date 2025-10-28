@@ -1,0 +1,18 @@
+{
+  "readme": "cltk_cltk_error_readme_5_only_E7",
+  "repo_name": "cltk_cltk",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Hardcoded old dependency versions that may cause compatibility issues with modern Python environments",
+      "correction_candidates": [
+        "Remove specific version constraints and use latest compatible versions",
+        "Update to tensorflow>=2.0.0 and numpy>=1.19.0",
+        "Specify Python 3.8+ requirement and remove tensorflow dependency",
+        "Use requirements.txt file instead of inline version specifications"
+      ],
+      "golden_answer": "Remove specific version constraints and use latest compatible versions"
+    }
+  ]
+}

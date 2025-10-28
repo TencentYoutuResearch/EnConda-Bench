@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_4_only_E4",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Challenges' section, the link to 'The 3rd Clarity Enhancement Challenge' uses an incorrect relative path `./cec3`. The correct path should include the `recipes` directory.",
+      "correction_candidates": [
+        "Change the path to `recipes/cec3`",
+        "Change the path to `./recipes/cec3`",
+        "Change the path to `clarity/recipes/cec3`",
+        "Change the path to `../recipes/cec3`"
+      ],
+      "golden_answer": "Change the path to `./recipes/cec3`"
+    }
+  ]
+}

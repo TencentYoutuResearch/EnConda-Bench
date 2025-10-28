@@ -1,0 +1,18 @@
+{
+  "readme": "llm-random_llm-random_error_readme_2_only_E4",
+  "repo_name": "llm-random_llm-random",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The path to the baseline experiment configuration template is incorrect, referencing `config/` instead of `configs/`.",
+      "correction_candidates": [
+        "Use the baseline configuration as a template, which is in `configs/test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `lizrd/configs/test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `configs/test_baseline.yaml`."
+      ],
+      "golden_answer": "Use the baseline configuration as a template, which is in `configs/test/test_baseline.yaml`."
+    }
+  ]
+}

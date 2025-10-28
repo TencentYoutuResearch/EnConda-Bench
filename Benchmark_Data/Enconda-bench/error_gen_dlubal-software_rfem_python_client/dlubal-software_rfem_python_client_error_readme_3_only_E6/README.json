@@ -1,0 +1,18 @@
+{
+  "readme": "dlubal-software_rfem_python_client_error_readme_3_only_E6",
+  "repo_name": "dlubal-software_rfem_python_client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Step by step' instructions have an incorrect logical order. It instructs the user to run the script (Step 2) before opening the RFEM 6 application (Step 4), which will cause a connection failure.",
+      "correction_candidates": [
+        "Swap the order of Step 2 ('Run your script') and Step 4 ('Open RFEM 6 application'). The RFEM application must be running before the script.",
+        "Combine Step 2 and Step 4 into a single step: 'Open RFEM 6 and then run your script'.",
+        "Move 'Run your script' to be the last step in the list.",
+        "Move 'Open RFEM 6 application' to be the first step, before cloning the repository."
+      ],
+      "golden_answer": "Swap the order of Step 2 ('Run your script') and Step 4 ('Open RFEM 6 application'). The RFEM application must be running before the script."
+    }
+  ]
+}

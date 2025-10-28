@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_6_only_E6",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing package before creating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "To get started, create your virtual environment with `python -m venv venv`, activate it, and then run `pip install pretalx`.",
+        "To get started, first create your virtual environment with `python -m venv venv` and then run `pip install pretalx`.",
+        "To get started, run `python -m venv venv` to create your virtual environment and then `pip install pretalx`.",
+        "To get started, create a virtual environment using `python -m venv venv`, then activate it and run `pip install pretalx`."
+      ],
+      "golden_answer": "To get started, create your virtual environment with `python -m venv venv`, activate it, and then run `pip install pretalx`."
+    }
+  ]
+}

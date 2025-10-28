@@ -1,0 +1,18 @@
+{
+  "readme": "iree-org_iree-llvm-sandbox_error_readme_2_only_E7",
+  "repo_name": "iree-org_iree-llvm-sandbox",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instructions unnecessarily mandate Python 3.6, which is outdated and may cause compatibility issues with recent dependencies.",
+      "correction_candidates": [
+        "Change 'Python 3.6' to 'Python 3.10' to use a more modern version.",
+        "Change 'Python 3.6' to 'the latest version of Python'.",
+        "Add a check 'python --version' to ensure the version is exactly 3.6.",
+        "Remove the line 'Make sure you are using Python 3.6 for this setup.' as the project is compatible with modern Python 3 versions."
+      ],
+      "golden_answer": "Remove the line 'Make sure you are using Python 3.6 for this setup.' as the project is compatible with modern Python 3 versions."
+    }
+  ]
+}

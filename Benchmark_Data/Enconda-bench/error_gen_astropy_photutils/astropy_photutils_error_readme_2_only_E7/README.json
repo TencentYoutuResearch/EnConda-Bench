@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_2_only_E7",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Photutils requires Python 2.7, which is outdated and unsupported. The package requires a modern Python version.",
+      "correction_candidates": [
+        "Remove the sentence stating it requires Python 2.7.",
+        "Change the requirement to Python 3.6+.",
+        "Specify that it requires Python >= 3.8, as per the latest documentation.",
+        "State that the package is compatible with both Python 2.7 and 3.x."
+      ],
+      "golden_answer": "Remove the sentence stating it requires Python 2.7."
+    }
+  ]
+}

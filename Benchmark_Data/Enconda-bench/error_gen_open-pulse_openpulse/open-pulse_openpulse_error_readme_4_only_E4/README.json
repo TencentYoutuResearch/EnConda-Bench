@@ -1,0 +1,18 @@
+{
+  "readme": "open-pulse_openpulse_error_readme_4_only_E4",
+  "repo_name": "open-pulse_openpulse",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to run the application references a non-existent entry point file 'main.py'. The correct entry point script is 'pulse'.",
+      "correction_candidates": [
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse`",
+        "In the same folder, enter the following command in the terminal: `poetry run python run.py`",
+        "In the same folder, enter the following command in the terminal: `poetry run python app.py`",
+        "In the same folder, enter the following command in the terminal: `poetry run python pulse.py`"
+      ],
+      "golden_answer": "In the same folder, enter the following command in the terminal: `poetry run python pulse`"
+    }
+  ]
+}

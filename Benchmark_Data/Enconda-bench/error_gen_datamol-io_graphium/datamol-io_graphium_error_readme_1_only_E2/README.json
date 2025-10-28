@@ -1,0 +1,18 @@
+{
+  "readme": "datamol-io_graphium_error_readme_1_only_E2",
+  "repo_name": "datamol-io_graphium",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run an experiment is incorrect. It uses `graphium train` instead of `graphium-train`, which will result in a 'command not found' error.",
+      "correction_candidates": [
+        "graphium-train architecture=toymix tasks=toymix training=toymix model=gcn",
+        "python -m graphium.train architecture=toymix tasks=toymix training=toymix model=gcn",
+        "graphium-run --config-name=toymix_gcn",
+        "graphium train --architecture toymix --tasks toymix --training toymix --model gcn"
+      ],
+      "golden_answer": "graphium-train architecture=toymix tasks=toymix training=toymix model=gcn"
+    }
+  ]
+}

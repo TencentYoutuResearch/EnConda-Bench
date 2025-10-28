@@ -1,0 +1,18 @@
+{
+  "readme": "cclib_cclib_error_readme_3_only_E2",
+  "repo_name": "cclib_cclib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command references a non-existent package `cclib-parser` instead of the correct package name `cclib`.",
+      "correction_candidates": [
+        "The package name is case-sensitive, use `pip install CCLIB`.",
+        "You need to specify the version: `pip install cclib-parser==1.8.1`.",
+        "First add a new pip index: `pip config set global.index-url https://cclib.github.io/pypi/` then install.",
+        "The correct package name is `cclib`, so use `pip install cclib`."
+      ],
+      "golden_answer": "The correct package name is `cclib`, so use `pip install cclib`."
+    }
+  ]
+}

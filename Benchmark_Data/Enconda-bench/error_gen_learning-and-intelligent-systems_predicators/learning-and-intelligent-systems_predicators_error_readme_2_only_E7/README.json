@@ -1,0 +1,18 @@
+{
+  "readme": "learning-and-intelligent-systems_predicators_error_readme_2_only_E7",
+  "repo_name": "learning-and-intelligent-systems_predicators",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states that Python 3.9 is used, but the correct required versions are 3.10-3.11, leading to a version compatibility error.",
+      "correction_candidates": [
+        "Change the Python version requirement to '3.10-3.11'.",
+        "Change the Python version requirement to '3.8+'.",
+        "Remove the Python version specification entirely.",
+        "Add a note that `pyenv` should be used to install Python 3.9."
+      ],
+      "golden_answer": "Change the Python version requirement to '3.10-3.11'."
+    }
+  ]
+}

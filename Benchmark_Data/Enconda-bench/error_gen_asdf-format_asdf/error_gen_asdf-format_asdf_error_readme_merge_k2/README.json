@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_asdf-format_asdf_error_readme_merge_k2",
+  "repo_name": "asdf-format_asdf",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `$ pip install asdf gwcs` installs `gwcs`, an unnecessary dependency for the core `asdf` package.",
+      "correction_candidates": [
+        "$ pip install asdf",
+        "$ pip install asdf-core",
+        "$ pip install asdf --no-deps",
+        "$ pip install asdf -e ."
+      ],
+      "golden_answer": "$ pip install asdf"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests from an installed version of the package, `$ pytest asdf`, is incorrect. It is missing the `--pyargs` flag needed to correctly locate the package.",
+      "correction_candidates": [
+        "$ pytest --pyargs asdf",
+        "$ python -m pytest asdf",
+        "$ pytest asdf/tests",
+        "$ pytest"
+      ],
+      "golden_answer": "$ pytest --pyargs asdf"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The commands for installing from source are in the wrong logical order. The `cd asdf` command is executed before the repository has been cloned with `git clone`, which will fail.",
+      "correction_candidates": [
+        "Correct order is: `git clone ...`, then `cd asdf`, then `pip install .`",
+        "Correct order is: `pip install .`, then `git clone ...`, then `cd asdf`",
+        "The `cd asdf` command should be removed.",
+        "The `git clone` command should be `git clone https://github.com/asdf-format/asdf.git asdf`"
+      ],
+      "golden_answer": "Correct order is: `git clone ...`, then `cd asdf`, then `pip install .`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contributing guidelines points to a non-existent file `docs/CONTRIBUTING.md` instead of the correct `CONTRIBUTING.rst` in the root directory.",
+      "correction_candidates": [
+        "Change the link `docs/CONTRIBUTING.md` to `CONTRIBUTING.rst`",
+        "Change the link `docs/CONTRIBUTING.md` to `.github/CONTRIBUTING.md`",
+        "Change the link `docs/CONTRIBUTING.md` to `CONTRIBUTING.md`",
+        "Change the link `docs/CONTRIBUTING.md` to `doc/CONTRIBUTING.rst`"
+      ],
+      "golden_answer": "Change the link `docs/CONTRIBUTING.md` to `CONTRIBUTING.rst`"
+    }
+  ]
+}

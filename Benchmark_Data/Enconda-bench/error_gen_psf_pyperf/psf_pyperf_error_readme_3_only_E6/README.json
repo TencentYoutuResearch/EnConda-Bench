@@ -1,0 +1,18 @@
+{
+  "readme": "psf_pyperf_error_readme_3_only_E6",
+  "repo_name": "psf_pyperf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions show installing `pyperf` globally before creating and activating a virtual environment, which is not a best practice and defeats the purpose of the virtual environment for this package.",
+      "correction_candidates": [
+        "python3 -m venv venv\nsource venv/bin/activate\npython3 -m pip install pyperf",
+        "python3 -m pip install virtualenv\nvirtualenv venv\nsource venv/bin/activate\npip install pyperf",
+        "python3 -m venv venv\npython3 -m pip install pyperf\nsource venv/bin/activate",
+        "python3 -m venv ./pyperf_env\nsource ./pyperf_env/bin/activate\npython3 -m pip install pyperf"
+      ],
+      "golden_answer": "python3 -m venv venv\nsource venv/bin/activate\npython3 -m pip install pyperf"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pyvisa_pyvisa_error_readme_1",
+  "repo_name": "pyvisa_pyvisa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.7 is the tested version, while the package requires Python 3.6 or newer.",
+      "correction_candidates": [
+        "Python (tested with 3.6+)",
+        "Python (compatible with 3.x)",
+        "Python (requires >=3.6)",
+        "Python (latest version recommended)"
+      ],
+      "golden_answer": "Python (tested with 3.6+)"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The pip installation command is incorrect, using 'py-visa' which is not the correct package name on PyPI.",
+      "correction_candidates": [
+        "$ pip install pyvisa",
+        "$ pip install pyvisa --upgrade",
+        "$ python -m pip install pyvisa",
+        "$ pip install PyVISA"
+      ],
+      "golden_answer": "$ pip install pyvisa"
+    }
+  ]
+}

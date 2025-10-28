@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_5_only_E2",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed pip install command to conda install for stable version installation, creating inconsistency with update command",
+      "correction_candidates": [
+        "pip install pastas",
+        "conda install -c conda-forge pastas",
+        "python -m pip install pastas",
+        "pip3 install pastas"
+      ],
+      "golden_answer": "pip install pastas"
+    }
+  ]
+}

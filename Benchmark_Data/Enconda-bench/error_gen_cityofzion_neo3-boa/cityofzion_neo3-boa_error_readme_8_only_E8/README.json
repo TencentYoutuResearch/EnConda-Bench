@@ -1,0 +1,18 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_8_only_E8",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "Incomplete Python version requirement - missing version number after 'Python'",
+      "correction_candidates": [
+        "Installation requires Python 3.10 or later.",
+        "Installation requires Python 3.9 or later.",
+        "Installation requires Python 3.8 or later.",
+        "Installation requires Python version 3.10 or later."
+      ],
+      "golden_answer": "Installation requires Python 3.10 or later."
+    }
+  ]
+}

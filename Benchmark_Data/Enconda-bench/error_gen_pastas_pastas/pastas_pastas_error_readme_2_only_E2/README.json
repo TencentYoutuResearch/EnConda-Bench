@@ -1,0 +1,18 @@
+{
+  "readme": "pastas_pastas_error_readme_2_only_E2",
+  "repo_name": "pastas_pastas",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install pastas[all]` is incorrect for installing optional dependencies. The correct extra identifier is `full`, not `all`.",
+      "correction_candidates": [
+        "pip install pastas --with-extras",
+        "pip install pastas[full]",
+        "pip install pastas lmfit latexify",
+        "pip install pastas --all-dependencies"
+      ],
+      "golden_answer": "pip install pastas[full]"
+    }
+  ]
+}

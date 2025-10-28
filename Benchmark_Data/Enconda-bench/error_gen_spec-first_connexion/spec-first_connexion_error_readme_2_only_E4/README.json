@@ -1,0 +1,18 @@
+{
+  "readme": "spec-first_connexion_error_readme_2_only_E4",
+  "repo_name": "spec-first_connexion",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the `openapi.yaml` example, the `operationId` is set to `app.post_greeting`. However, the corresponding Python code is in a file named `run.py`, so the correct `operationId` should be `run.post_greeting`.",
+      "correction_candidates": [
+        "Rename the file in the example from `run.py` to `app.py`.",
+        "Change `operationId: app.post_greeting` to `operationId: run.post_greeting`.",
+        "Change `app.add_api(\"openapi.yaml\")` to `app.add_api(\"openapi.yaml\", resolver=RelativeResolver(\"run\"))`.",
+        "In `run.py`, move the `post_greeting` function inside a class named `app`."
+      ],
+      "golden_answer": "Change `operationId: app.post_greeting` to `operationId: run.post_greeting`."
+    }
+  ]
+}

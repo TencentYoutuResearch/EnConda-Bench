@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_2_only_E7",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified ambiguously as '3.x', which does not inform the user of the specific minimal version needed for compatibility.",
+      "correction_candidates": [
+        "Specify the minimal supported Python version is 3.9.",
+        "Specify the minimal supported Python version is 3.6.",
+        "Specify the supported Python versions are 3.8, 3.9, and 3.10.",
+        "State that any Python 3 version is supported."
+      ],
+      "golden_answer": "Specify the minimal supported Python version is 3.9."
+    }
+  ]
+}

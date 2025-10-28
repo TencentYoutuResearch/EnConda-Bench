@@ -1,0 +1,18 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_5_only_E1",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary heavy dependencies (numpy and scipy) that are not actually required by Monty",
+      "correction_candidates": [
+        "Remove the numpy>=2.0.0 and scipy>=1.8.0 dependencies as they are not required by Monty",
+        "Replace with lighter dependencies: requires only setuptools and wheel",
+        "Change to optional dependencies: numpy and scipy are optional for advanced features",
+        "Update to correct dependencies: requires python>=3.8 and no additional packages"
+      ],
+      "golden_answer": "Remove the numpy>=2.0.0 and scipy>=1.8.0 dependencies as they are not required by Monty"
+    }
+  ]
+}

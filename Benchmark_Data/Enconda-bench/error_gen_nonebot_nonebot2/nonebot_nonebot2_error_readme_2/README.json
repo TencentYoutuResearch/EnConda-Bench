@@ -1,0 +1,29 @@
+{
+  "readme": "nonebot_nonebot2_error_readme_2",
+  "repo_name": "nonebot_nonebot2",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The guide suggests installing `nb-cli` with `pip install nb-cli`, which installs it into the global or user environment. This contradicts the preceding steps that set up `pipx` for isolated tool installation, which is the recommended practice.",
+      "correction_candidates": [
+        "The command `pip install nb-cli` is not recommended; the guide should use `pipx install nb-cli` as intended.",
+        "You should use `python -m pip install nb-cli` for clarity.",
+        "The command should be `pip install nb-cli --user` to avoid permission errors.",
+        "You must first create a virtual environment with `python -m venv .venv` and then run `pip install nb-cli`."
+      ],
+      "golden_answer": "The command `pip install nb-cli` is not recommended; the guide should use `pipx install nb-cli` as intended."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the project is `nb run`, but the guide incorrectly instructs the user to run `nb start`, which will fail.",
+      "correction_candidates": [
+        "The command `nb start` is incorrect. You should use `nb run`.",
+        "The command should be `python -m nb-cli start`.",
+        "You need to install a start script first using `nb plugin install nonebot-plugin-start`.",
+        "The command is `nb run --start`."
+      ],
+      "golden_answer": "The command `nb start` is incorrect. You should use `nb run`."
+    }
+  ]
+}

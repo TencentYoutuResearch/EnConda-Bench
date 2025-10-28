@@ -1,0 +1,18 @@
+{
+  "readme": "gymrek-lab_TRTools_error_readme_1_only_E2",
+  "repo_name": "gymrek-lab_TRTools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to upgrade pip, `pip --upgrade install pip`, is syntactically incorrect.",
+      "correction_candidates": [
+        "pip upgrade pip",
+        "pip install pip --upgrade",
+        "pip install --upgrade pip",
+        "pip install upgrade pip"
+      ],
+      "golden_answer": "pip install --upgrade pip"
+    }
+  ]
+}

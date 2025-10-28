@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_6_only_E2",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses invalid command parameters --host and --debug for Django's runserver command",
+      "correction_candidates": [
+        "Use `python manage.py runserver 0.0.0.0:8000` to bind to all interfaces",
+        "Run `python manage.py runserver --settings=myproject.settings.debug` for debug mode",
+        "Start with `python manage.py runserver 127.0.0.1:8000 --verbosity=2` for detailed output",
+        "Execute `python manage.py runserver` with DEBUG=True in settings.py"
+      ],
+      "golden_answer": "Use `python manage.py runserver 0.0.0.0:8000` to bind to all interfaces"
+    }
+  ]
+}

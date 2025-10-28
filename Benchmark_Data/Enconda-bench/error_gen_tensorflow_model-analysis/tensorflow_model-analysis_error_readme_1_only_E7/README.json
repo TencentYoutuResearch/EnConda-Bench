@@ -1,0 +1,18 @@
+{
+  "readme": "tensorflow_model-analysis_error_readme_1_only_E7",
+  "repo_name": "tensorflow_model-analysis",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the 'Jupyter Lab 3.0.x' installation instructions, the version for `jupyterlab_widgets` is specified as `2.0.0`, which is incorrect for JupyterLab 3.0.x and can cause dependency conflicts. The correct version is `1.0.0`.",
+      "correction_candidates": [
+        "pip install jupyterlab_widgets==1.0.0",
+        "pip install jupyterlab_widgets",
+        "pip install ipywidgets",
+        "jupyter labextension install @jupyter-widgets/jupyterlab-manager"
+      ],
+      "golden_answer": "pip install jupyterlab_widgets==1.0.0"
+    }
+  ]
+}

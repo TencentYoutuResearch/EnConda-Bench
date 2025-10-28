@@ -1,0 +1,29 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_6",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed pip command syntax from 'python -m pip' to just 'pip' inconsistently",
+      "correction_candidates": [
+        "python -m pip install terminusdb-client[dataframe]",
+        "pip3 install terminusdb-client[dataframe]",
+        "pipx install terminusdb-client[dataframe]",
+        "conda install terminusdb-client[dataframe]"
+      ],
+      "golden_answer": "python -m pip install terminusdb-client[dataframe]"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Changed directory path from 'docs/' to 'documentation/' which doesn't exist",
+      "correction_candidates": [
+        "cd docs/",
+        "cd documentation/",
+        "cd sphinx/",
+        "cd build/"
+      ],
+      "golden_answer": "cd docs/"
+    }
+  ]
+}

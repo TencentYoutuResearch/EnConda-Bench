@@ -1,0 +1,29 @@
+{
+  "readme": "hackerspace-ntnu_website_error_readme_1",
+  "repo_name": "hackerspace-ntnu_website",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instruction to install Python packages with `pip` is placed before the instructions for creating and activating a virtual environment, which would install packages globally instead of in the isolated environment.",
+      "correction_candidates": [
+        "The `pip install` command should be run immediately after the `git clone` command.",
+        "The `pip install` command should be run inside the project directory, after activating the virtual environment.",
+        "The `pip install` command should be run with the `--user` flag to avoid global installation.",
+        "The virtual environment should be created inside the project directory after cloning it."
+      ],
+      "golden_answer": "The `pip install` command should be run inside the project directory, after activating the virtual environment."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to generate translation files uses an incorrect flag syntax (`--locale nb --locale en`) for specifying multiple locales.",
+      "correction_candidates": [
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb,en`.",
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages --locale \"nb en\"`.",
+        "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb -l en`.",
+        "Run the command separately for each language: `python manage.py makemessages -l nb` and then `python manage.py makemessages -l en`."
+      ],
+      "golden_answer": "Replace `python manage.py makemessages --locale nb --locale en` with `python manage.py makemessages -l nb -l en`."
+    }
+  ]
+}

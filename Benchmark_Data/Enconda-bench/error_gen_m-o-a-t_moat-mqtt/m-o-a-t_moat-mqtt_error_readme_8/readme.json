@@ -1,0 +1,29 @@
+{
+  "readme": "m-o-a-t_moat-mqtt_error_readme_8",
+  "repo_name": "m-o-a-t_moat-mqtt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Claims compatibility with Python 2.7 which is outdated and likely incompatible with modern async features",
+      "correction_candidates": [
+        "Note: This package requires Python 3.7+ to function properly.",
+        "Note: This package requires Python 3.6+ to function properly.",
+        "Note: This package requires Python 3.8+ to function properly.",
+        "Note: This package requires Python 3.9+ to function properly."
+      ],
+      "golden_answer": "Note: This package requires Python 3.7+ to function properly."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References /docs/examples/ directory that doesn't exist in the repository structure",
+      "correction_candidates": [
+        "The documentation and examples can be found on Read the Docs.",
+        "The documentation and examples can be found in the GitHub repository.",
+        "The documentation and examples can be found in the source code.",
+        "The documentation and examples can be found in the tests/ directory."
+      ],
+      "golden_answer": "The documentation and examples can be found on Read the Docs."
+    }
+  ]
+}

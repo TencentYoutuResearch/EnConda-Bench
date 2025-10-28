@@ -1,0 +1,18 @@
+{
+  "readme": "pokepetter_ursina_error_readme_2_only_E1",
+  "repo_name": "pokepetter_ursina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies, `pip install ursina --extras`, is syntactically incorrect. The correct syntax uses brackets.",
+      "correction_candidates": [
+        "Change `pip install ursina --extras` to `pip install ursina[extras]`.",
+        "Change `pip install ursina --extras` to `pip install ursina --with-extras`.",
+        "Change `pip install ursina --extras` to `pip install ursina --all`.",
+        "Change `pip install ursina --extras` to `pip install panda3d pillow psd-tools pyperclip`."
+      ],
+      "golden_answer": "Change `pip install ursina --extras` to `pip install ursina[extras]`."
+    }
+  ]
+}

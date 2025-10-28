@@ -1,0 +1,18 @@
+{
+  "readme": "dtmilano_androidviewclient_error_readme_6_only_E1",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Unnecessary system dependency installation - android-sdk is not required and would cause installation issues",
+      "correction_candidates": [
+        "sudo apt-get install adb python3-dev",
+        "sudo apt-get install python3-pip python3-dev",
+        "sudo apt-get install build-essential python3-dev",
+        "sudo apt-get install python3-setuptools python3-dev"
+      ],
+      "golden_answer": "sudo apt-get install adb python3-dev"
+    }
+  ]
+}

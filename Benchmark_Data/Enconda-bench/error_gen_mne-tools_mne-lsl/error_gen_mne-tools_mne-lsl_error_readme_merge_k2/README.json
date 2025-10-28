@@ -1,0 +1,29 @@
+{
+  "readme": "error_gen_mne-tools_mne-lsl_error_readme_merge_k2",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a strict Python version requirement (`python 3.9`), which is overly restrictive and incorrectly implies that later versions like 3.10 or 3.11 are not supported.",
+      "correction_candidates": [
+        "MNE-LSL supports `python >= 3.9`",
+        "MNE-LSL supports `python 3.9, 3.10, 3.11`",
+        "MNE-LSL supports `python ≥ 3.9`",
+        "MNE-LSL supports `python > 3.8`"
+      ],
+      "golden_answer": "MNE-LSL supports `python ≥ 3.9`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The README adds an unnecessary and incorrect installation step, instructing users to install `liblsl` from a third-party conda channel, when it is already included as a dependency in the `mne-lsl` conda-forge package.",
+      "correction_candidates": [
+        "The `liblsl` dependency is automatically installed when using `conda install -c conda-forge mne-lsl`, so the extra step is not needed.",
+        "Remove the instruction to install `liblsl` from the `tstenner` channel.",
+        "The correct command is `conda install -c conda-forge liblsl`.",
+        "You should install `liblsl` from the official LSL website before using conda."
+      ],
+      "golden_answer": "The `liblsl` dependency is automatically installed when using `conda install -c conda-forge mne-lsl`, so the extra step is not needed."
+    }
+  ]
+}

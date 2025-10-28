@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_5_only_E7",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.8 to 2.7, creating version compatibility error with deprecated Python version",
+      "correction_candidates": [
+        "Mpmath requires Python 3.8 or later versions.  It has been tested with CPython 3.8 through 3.13 and for PyPy 3.9 through 3.10.",
+        "Mpmath requires Python 3.6 or later versions.  It has been tested with CPython 3.6 through 3.13 and for PyPy 3.9 through 3.10.",
+        "Mpmath requires Python 3.9 or later versions.  It has been tested with CPython 3.9 through 3.13 and for PyPy 3.9 through 3.10.",
+        "Mpmath requires Python 3.7 or later versions.  It has been tested with CPython 3.7 through 3.13 and for PyPy 3.9 through 3.10."
+      ],
+      "golden_answer": "Mpmath requires Python 3.8 or later versions.  It has been tested with CPython 3.8 through 3.13 and for PyPy 3.9 through 3.10."
+    }
+  ]
+}

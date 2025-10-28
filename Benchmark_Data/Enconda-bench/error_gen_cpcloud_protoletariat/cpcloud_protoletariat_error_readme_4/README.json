@@ -1,0 +1,29 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_4",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `protoc` command references a non-existent file `thing1.prato` due to a typo, which will cause the command to fail.",
+      "correction_candidates": [
+        "Correct the filename from `thing1.prato` to `thing1.proto`.",
+        "The file should be renamed on the filesystem to `thing1.prato`.",
+        "Add a wildcard to the command: `*.proto`.",
+        "Create a symbolic link: `ln -s thing1.proto thing1.prato`."
+      ],
+      "golden_answer": "Correct the filename from `thing1.prato` to `thing1.proto`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `--in-place` flag is a boolean switch and should not be given an argument. The example command incorrectly passes `true` to it.",
+      "correction_candidates": [
+        "Change `--in-place true` to `--in-place`.",
+        "Change `--in-place true` to `--in-place=true`.",
+        "Remove the `--in-place true` flag and pipe the output to a new file.",
+        "Change `--in-place true` to `--in-place-overwrite`."
+      ],
+      "golden_answer": "Change `--in-place true` to `--in-place`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_5_only_E1",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added specific version requirements for dependencies that may not be correct or necessary",
+      "correction_candidates": [
+        "pip install sphinx-scylladb-theme",
+        "pip install -r requirements.txt",
+        "conda install sphinx-scylladb-theme",
+        "pip install sphinx-scylladb-theme sphinx"
+      ],
+      "golden_answer": "pip install sphinx-scylladb-theme"
+    }
+  ]
+}

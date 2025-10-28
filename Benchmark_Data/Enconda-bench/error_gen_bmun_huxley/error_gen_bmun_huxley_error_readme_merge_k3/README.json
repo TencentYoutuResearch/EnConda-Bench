@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_bmun_huxley_error_readme_merge_k3",
+  "repo_name": "bmun_huxley",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally before the virtual environment is created and activated, which can lead to system-wide package conflicts.",
+      "correction_candidates": [
+        "Move the `pip install` command to be after the `source venv/bin/activate` command.",
+        "Run `pip install --user -r requirements/local.txt` to install dependencies for the current user.",
+        "Remove the virtual environment setup and install dependencies globally.",
+        "Use `conda` instead of `venv` for environment management."
+      ],
+      "golden_answer": "Move the `pip install` command to be after the `source venv/bin/activate` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the Django development server is incorrect. `./manage.py run` is not a valid Django management command.",
+      "correction_candidates": [
+        "Use the command `python manage.py start` to run the server.",
+        "Correct the command to `./manage.py runserver`.",
+        "Use the command `django-admin runserver` instead.",
+        "The command should be `python run.py`."
+      ],
+      "golden_answer": "Correct the command to `./manage.py runserver`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions omit the installation of PostgreSQL client libraries, which are a necessary system dependency for the `psycopg2` Python package to build correctly.",
+      "correction_candidates": [
+        "Add a step to install `postgresql` and its development libraries (e.g., `sudo apt-get install postgresql libpq-dev` on Debian/Ubuntu).",
+        "Install `psycopg2-binary` instead of `psycopg2` to avoid the need for system libraries.",
+        "Switch the database backend from PostgreSQL to SQLite for easier setup.",
+        "Specify `psycopg2==2.8.0` in `requirements/local.txt` as it has fewer dependencies."
+      ],
+      "golden_answer": "Add a step to install `postgresql` and its development libraries (e.g., `sudo apt-get install postgresql libpq-dev` on Debian/Ubuntu)."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The `pip install` command points to a non-existent `requirements.txt` file in the project root, while the actual dependencies are located in `requirements/local.txt`.",
+      "correction_candidates": [
+        "Change the file path in the command to `pip install -r requirements/local.txt`.",
+        "Create a `requirements.txt` file by running `pip freeze > requirements.txt`.",
+        "Move the `local.txt` file from the `requirements` directory to the project root and rename it to `requirements.txt`.",
+        "Run `pip install django djangorestframework psycopg2` instead of using a requirements file."
+      ],
+      "golden_answer": "Change the file path in the command to `pip install -r requirements/local.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The instructions suggest using `./manage.py createdb` to set up the database, but this is not a standard Django management command and will fail.",
+      "correction_candidates": [
+        "Change the command to `python manage.py initdb`.",
+        "The database should be created using the native PostgreSQL command `createdb huxley` in the shell, after ensuring the user has the correct permissions.",
+        "The command should be `python manage.py db create`.",
+        "Remove this step, as `migrate` will create the database automatically."
+      ],
+      "golden_answer": "The database should be created using the native PostgreSQL command `createdb huxley` in the shell, after ensuring the user has the correct permissions."
+    }
+  ]
+}

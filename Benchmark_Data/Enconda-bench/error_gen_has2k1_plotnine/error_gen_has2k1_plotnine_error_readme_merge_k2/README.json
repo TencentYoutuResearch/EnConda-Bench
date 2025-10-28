@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_has2k1_plotnine_error_readme_merge_k2",
+  "repo_name": "has2k1_plotnine",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The primary installation command `pip install plotnine` is missing, leaving only the commands for installing optional extras, which is confusing for a standard installation.",
+      "correction_candidates": [
+        "Add the line \"$ pip install plotnine --default\" at the beginning of the pip installation list.",
+        "Change \"$ pip install 'plotnine[extra]'\" to \"$ pip install plotnine\".",
+        "Add the line \"$ pip install plotnine             # 1. should be sufficient for most\" at the beginning of the pip installation list.",
+        "Add a note explaining that 'plotnine[extra]' is the new standard installation method."
+      ],
+      "golden_answer": "Add the line \"$ pip install plotnine             # 1. should be sufficient for most\" at the beginning of the pip installation list."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the development version from GitHub is syntactically incorrect. It's missing the `git+https://` prefix required by pip for installing from a git repository.",
+      "correction_candidates": [
+        "Change the command to \"$ git clone https://github.com/has2k1/plotnine.git && cd plotnine && pip install -e .\".",
+        "Change the command to \"$ pip install git+https://github.com/has2k1/plotnine.git\".",
+        "Change the command to \"$ pip install --git https://github.com/has2k1/plotnine.git\".",
+        "Change the command to \"$ pip install from-git https://github.com/has2k1/plotnine.git\"."
+      ],
+      "golden_answer": "Change the command to \"$ pip install git+https://github.com/has2k1/plotnine.git\"."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for the first example image is incorrect (`./docs/images/...` instead of `./doc/images/...`), which will result in a broken image link.",
+      "correction_candidates": [
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"https://raw.githubusercontent.com/has2k1/plotnine/main/doc/images/readme-image-1.png\".",
+        "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\".",
+        "Create a symbolic link from 'docs' to 'doc' in the repository root.",
+        "Remove the \"./\" from the beginning of the path."
+      ],
+      "golden_answer": "Change the image source path from \"./docs/images/readme-image-1.png\" to \"./doc/images/readme-image-1.png\"."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly suggest installing matplotlib from source as a corrective step after tests fail, rather than as a necessary prerequisite to ensure consistent test outcomes. The setup should be done before running tests.",
+      "correction_candidates": [
+        "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time.",
+        "Add a command \"pip uninstall matplotlib\" before the reinstall command.",
+        "Move the entire \"Testing\" section to be before the \"Installation\" section.",
+        "Replace the text with \"If tests fail, run 'pip install matplotlib --force-reinstall' and try again\"."
+      ],
+      "golden_answer": "Change the text to state that matplotlib must be installed from source *before* running the tests for the first time."
+    }
+  ]
+}

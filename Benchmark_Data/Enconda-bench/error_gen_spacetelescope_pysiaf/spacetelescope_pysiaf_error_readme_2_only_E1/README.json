@@ -1,0 +1,18 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_2_only_E1",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The suggested fix for the `lxml` version incompatibility is incorrect. Installing `lxml==5.0.0` requires a newer `libxml2` and will not solve the described problem, which requires an older version of `lxml` compatible with `libxml2` version 10.0.0.",
+      "correction_candidates": [
+        "pip install lxml==3.6.4",
+        "brew install libxml2 && pip install lxml",
+        "pip install lxml --no-binary :all:",
+        "pip uninstall lxml && pip install lxml"
+      ],
+      "golden_answer": "pip install lxml==3.6.4"
+    }
+  ]
+}

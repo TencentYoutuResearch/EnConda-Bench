@@ -1,0 +1,18 @@
+{
+  "readme": "oarriaga_paz_error_readme_6_only_E2",
+  "repo_name": "oarriaga_paz",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added invalid pytest command with non-existent --config parameter",
+      "correction_candidates": [
+        "pytest tests",
+        "pytest -c pytest.ini tests",
+        "pytest --config-file=pytest.ini tests",
+        "python -m pytest tests"
+      ],
+      "golden_answer": "pytest tests"
+    }
+  ]
+}

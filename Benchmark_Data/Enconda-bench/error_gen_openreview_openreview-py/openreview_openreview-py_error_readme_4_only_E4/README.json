@@ -1,0 +1,18 @@
+{
+  "readme": "openreview_openreview-py_error_readme_4_only_E4",
+  "repo_name": "openreview_openreview-py",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `git clone` command uses an incorrect URL (`openreview_py.git` with an underscore instead of a hyphen), which will cause the clone operation to fail because the repository does not exist at that URL.",
+      "correction_candidates": [
+        "git clone https://github.com/openreview/openreview-py.git",
+        "git clone git@github.com:openreview/openreview-py.git",
+        "git clone https://github.com/openreview/openreview-py",
+        "gh repo clone openreview/openreview-py"
+      ],
+      "golden_answer": "git clone https://github.com/openreview/openreview-py.git"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "terrapower_armi_error_readme_1",
+  "repo_name": "terrapower_armi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly place the `git clone` command before the recommendation to use a virtual environment, which can lead to users polluting their global Python environment.",
+      "correction_candidates": [
+        "The `git clone` command should be run after creating and activating a virtual environment.",
+        "The section should start with instructions for creating a virtual environment, such as `python -m venv .venv`.",
+        "The sentence 'You probably want to do this in a virtual environment...' should be moved to before the code block with the `git clone` command.",
+        "The `pip install -e .` command automatically creates a virtual environment."
+      ],
+      "golden_answer": "The sentence 'You probably want to do this in a virtual environment...' should be moved to before the code block with the `git clone` command."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests uses a non-existent flag `--run-all`, which will cause `pytest` to fail.",
+      "correction_candidates": [
+        "$ pytest armi",
+        "$ pytest -n 4 armi",
+        "$ python -m pytest -n 4 armi",
+        "$ pytest --numprocesses=4 armi"
+      ],
+      "golden_answer": "$ pytest -n 4 armi"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_2_only_E4",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example code attempts to load data from a local CSV file `data/sp500.csv` which is not provided in the repository or as part of the setup instructions.",
+      "correction_candidates": [
+        "Replace the lines loading `sp500` from a CSV with `from great_tables.data import sp500` to use the built-in dataset.",
+        "Add instructions to download `sp500.csv` and place it in a `data/` directory.",
+        "Change the path to an absolute URL pointing to the raw CSV file on GitHub.",
+        "Replace the pandas code with `from great_tables.data import sp500` and remove the `import pandas as pd` line."
+      ],
+      "golden_answer": "Replace the lines loading `sp500` from a CSV with `from great_tables.data import sp500` to use the built-in dataset."
+    }
+  ]
+}

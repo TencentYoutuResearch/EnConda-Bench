@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_ukri-excalibur_excalibur-tests_error_readme_merge_k2",
+  "repo_name": "ukri-excalibur_excalibur-tests",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command provided in the 'Quick Start' section to run the benchmarks is incorrect.",
+      "correction_candidates": [
+        "To run the default benchmark suite, execute `reframe -c . -r`",
+        "To run the default benchmark suite, execute `make test`",
+        "To run the default benchmark suite, execute `python run.py --all`",
+        "To run the default benchmark suite, execute `./run-tests.sh`"
+      ],
+      "golden_answer": "To run the default benchmark suite, execute `reframe -c . -r`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The note about the location of system-specific configuration files points to an incorrect directory `configs/systems/`.",
+      "correction_candidates": [
+        "Replace the note with: `_Note: System-specific configurations are located in `etc/systems/`._`",
+        "Replace the note with: `_Note: System-specific configurations are located in `sys/config/`._`",
+        "Replace the note with: `_Note: System-specific configurations are located in `settings/`._`",
+        "Remove the note entirely as it is documented elsewhere."
+      ],
+      "golden_answer": "Replace the note with: `_Note: System-specific configurations are located in `etc/systems/`._`"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The `pip install` command is listed before the `git clone` command, which means the `requirements.txt` file would not be available.",
+      "correction_candidates": [
+        "Reorder the steps to: 1. Clone the repository, 2. Navigate into the project directory, 3. Install the required packages.",
+        "Combine steps 2 and 3 into a single line: `git clone ... && cd ...`",
+        "Add a step before step 1: `git init`",
+        "Remove step 3, as cloning automatically creates the directory."
+      ],
+      "golden_answer": "Reorder the steps to: 1. Clone the repository, 2. Navigate into the project directory, 3. Install the required packages."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Getting Started' section is missing instructions for setting up a virtual environment, which is a best practice for Python projects.",
+      "correction_candidates": [
+        "Add a step to create and activate a virtual environment (e.g., `python -m venv venv` and `source venv/bin/activate`) before installing packages.",
+        "Suggest using `conda` to manage the environment: `conda create -n excalibur python=3.9`.",
+        "Add a note that dependencies will be installed globally.",
+        "Replace `pip` with `pipx` to ensure dependencies are isolated."
+      ],
+      "golden_answer": "Add a step to create and activate a virtual environment (e.g., `python -m venv venv` and `source venv/bin/activate`) before installing packages."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_2_only_E7",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "An incorrect note has been added stating that the package requires Python 2.7, which is misleading as the library supports modern Python versions.",
+      "correction_candidates": [
+        "Remove the note about Python 2.7 compatibility.",
+        "Change the note to specify Python 3.6+ is required.",
+        "Change the note to state the package is compatible with both Python 2 and 3.",
+        "Add a command `pip install progressbar2 --python-version 2.7`."
+      ],
+      "golden_answer": "Remove the note about Python 2.7 compatibility."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pretalx_pretalx_error_readme_8",
+  "repo_name": "pretalx_pretalx",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References incorrect file path 'requirements/dev.txt' that may not exist",
+      "correction_candidates": [
+        "To install dependencies, run `pip install -r requirements.txt` and then `python manage.py migrate --settings=pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r dev-requirements.txt` and then `python manage.py migrate --settings=pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r requirements-dev.txt` and then `python manage.py migrate --settings=pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r setup.cfg` and then `python manage.py migrate --settings=pretalx.settings.development`."
+      ],
+      "golden_answer": "To install dependencies, run `pip install -r requirements.txt` and then `python manage.py migrate --settings=pretalx.settings.development`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect Django management command syntax with invalid settings parameter format",
+      "correction_candidates": [
+        "To install dependencies, run `pip install -r requirements/dev.txt` and then `python manage.py migrate --settings pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r requirements/dev.txt` and then `DJANGO_SETTINGS_MODULE=pretalx.settings.development python manage.py migrate`.",
+        "To install dependencies, run `pip install -r requirements/dev.txt` and then `python manage.py migrate -s pretalx.settings.development`.",
+        "To install dependencies, run `pip install -r requirements/dev.txt` and then `python manage.py migrate --config=pretalx.settings.development`."
+      ],
+      "golden_answer": "To install dependencies, run `pip install -r requirements/dev.txt` and then `DJANGO_SETTINGS_MODULE=pretalx.settings.development python manage.py migrate`."
+    }
+  ]
+}

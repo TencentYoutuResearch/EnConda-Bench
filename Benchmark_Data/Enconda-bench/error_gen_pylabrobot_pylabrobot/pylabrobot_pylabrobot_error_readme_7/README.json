@@ -1,0 +1,29 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_7",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Listed unnecessary heavy dependencies like TensorFlow, PyTorch, OpenCV that are not actually required for PyLabRobot",
+      "correction_candidates": [
+        "To install PyLabRobot, simply run: pip install pylabrobot",
+        "PyLabRobot has minimal dependencies and can be installed with: pip install pylabrobot",
+        "To install PyLabRobot, you need Python 3.8+ and can install with: pip install pylabrobot",
+        "PyLabRobot requires only standard Python libraries and can be installed with: pip install pylabrobot"
+      ],
+      "golden_answer": "PyLabRobot has minimal dependencies and can be installed with: pip install pylabrobot"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Missing clear installation instructions in a prominent location",
+      "correction_candidates": [
+        "## Installation\n\nInstall PyLabRobot using pip:\n\n```bash\npip install pylabrobot\n```",
+        "## Quick Start\n\nFirst install PyLabRobot:\n\n```bash\npip install pylabrobot\n```",
+        "## Setup\n\nTo get started, install PyLabRobot:\n\n```bash\npip install pylabrobot\n```",
+        "## Getting Started\n\nInstall PyLabRobot with:\n\n```bash\npip install pylabrobot\n```"
+      ],
+      "golden_answer": "## Installation\n\nInstall PyLabRobot using pip:\n\n```bash\npip install pylabrobot\n```"
+    }
+  ]
+}

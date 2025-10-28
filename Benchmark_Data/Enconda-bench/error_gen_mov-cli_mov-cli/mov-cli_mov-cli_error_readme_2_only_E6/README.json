@@ -1,0 +1,18 @@
+{
+  "readme": "mov-cli_mov-cli_error_readme_2_only_E6",
+  "repo_name": "mov-cli_mov-cli",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise installing a plugin (`mov-cli-youtube`) before installing the main `mov-cli` package. The main package must be installed first.",
+      "correction_candidates": [
+        "Remove the `pip install mov-cli-youtube` line and the preceding sentence.",
+        "Move the `pip install mov-cli-youtube` command to the 'Usage' section.",
+        "Combine the commands into `pip install mov-cli mov-cli-youtube -U`.",
+        "Reverse the order of the installation commands: `pip install mov-cli -U` followed by `pip install mov-cli-youtube`."
+      ],
+      "golden_answer": "Remove the `pip install mov-cli-youtube` line and the preceding sentence."
+    }
+  ]
+}

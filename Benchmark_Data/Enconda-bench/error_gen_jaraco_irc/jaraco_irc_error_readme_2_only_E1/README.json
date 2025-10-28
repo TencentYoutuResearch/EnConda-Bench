@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_irc_error_readme_2_only_E1",
+  "repo_name": "jaraco_irc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install the optional `schedule` package is incorrect. The package name on PyPI is `schedule`, not `schedule-lib`.",
+      "correction_candidates": [
+        "To use it, install the package via `pip install python-schedule`.",
+        "To use it, install the package via `pip install schedule`.",
+        "The `schedule` package is included as an extra, install with `pip install irc[schedule]`.",
+        "The `schedule` package is built-in and requires no separate installation."
+      ],
+      "golden_answer": "To use it, install the package via `pip install schedule`."
+    }
+  ]
+}

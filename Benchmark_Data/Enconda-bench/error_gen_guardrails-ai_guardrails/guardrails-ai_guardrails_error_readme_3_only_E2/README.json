@@ -1,0 +1,18 @@
+{
+  "readme": "guardrails-ai_guardrails_error_readme_3_only_E2",
+  "repo_name": "guardrails-ai_guardrails",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The syntax for creating a Guard with a single validator is incorrect. The example incorrectly passes the validator to the `Guard` constructor instead of using the `.use()` method.",
+      "correction_candidates": [
+        "guard = Guard.use(RegexMatch, ...)",
+        "guard = Guard().use(RegexMatch, ...)",
+        "guard = Guard().add(RegexMatch, ...)",
+        "guard = new Guard(RegexMatch, ...)"
+      ],
+      "golden_answer": "guard = Guard().use(RegexMatch, ...)"
+    }
+  ]
+}

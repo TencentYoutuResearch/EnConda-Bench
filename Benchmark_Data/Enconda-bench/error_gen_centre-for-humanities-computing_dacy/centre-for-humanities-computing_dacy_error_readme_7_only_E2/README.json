@@ -1,0 +1,18 @@
+{
+  "readme": "centre-for-humanities-computing_dacy_error_readme_7_only_E2",
+  "repo_name": "centre-for-humanities-computing_dacy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used conda install instead of pip install when the package is only available on PyPI",
+      "correction_candidates": [
+        "pip install dacy",
+        "pip3 install dacy",
+        "python -m pip install dacy",
+        "pip install --user dacy"
+      ],
+      "golden_answer": "pip install dacy"
+    }
+  ]
+}

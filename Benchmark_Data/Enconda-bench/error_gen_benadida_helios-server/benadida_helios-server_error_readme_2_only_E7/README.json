@@ -1,0 +1,18 @@
+{
+  "readme": "benadida_helios-server_error_readme_2_only_E7",
+  "repo_name": "benadida_helios-server",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The instructions specify using Python 2.6, which is an outdated and likely incompatible version for a modern web application.",
+      "correction_candidates": [
+        "The project requires a modern Python version, such as Python 3.8 or newer, not Python 2.6.",
+        "You should use `python2` explicitly, e.g., `python2 -m virtualenv venv`.",
+        "Python 3.4 is the minimum required version for this project.",
+        "Any version of Python 2, including 2.7, will work for this project."
+      ],
+      "golden_answer": "The project requires a modern Python version, such as Python 3.8 or newer, not Python 2.6."
+    }
+  ]
+}

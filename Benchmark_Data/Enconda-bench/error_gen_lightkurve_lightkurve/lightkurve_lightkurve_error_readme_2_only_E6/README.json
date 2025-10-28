@@ -1,0 +1,18 @@
+{
+  "readme": "lightkurve_lightkurve_error_readme_2_only_E6",
+  "repo_name": "lightkurve_lightkurve",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The commands to clone the repository and change into the new directory are in the wrong logical order. The user is instructed to `cd` into the directory before it has been created by `git clone`.",
+      "correction_candidates": [
+        "Swap the `cd lightkurve` and `git clone` commands. The correct order is `git clone` first, then `cd`.",
+        "Combine the commands into a single line: `$ git clone https://github.com/lightkurve/lightkurve.git && cd lightkurve`.",
+        "Replace `$ cd lightkurve` with `$ mkdir lightkurve && cd lightkurve`.",
+        "Remove the `$ cd lightkurve` command entirely."
+      ],
+      "golden_answer": "Swap the `cd lightkurve` and `git clone` commands. The correct order is `git clone` first, then `cd`."
+    }
+  ]
+}

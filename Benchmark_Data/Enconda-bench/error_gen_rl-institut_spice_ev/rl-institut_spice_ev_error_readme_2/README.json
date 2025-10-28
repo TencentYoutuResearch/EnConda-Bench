@@ -1,0 +1,29 @@
+{
+  "readme": "rl-institut_spice_ev_error_readme_2",
+  "repo_name": "rl-institut_spice_ev",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies a strict Python version requirement of `== 3.6`, which is overly restrictive and may cause installation or runtime issues for users with newer, compatible Python versions.",
+      "correction_candidates": [
+        "Everything else uses the Python (>= 3.6, < 3.10) standard library.",
+        "Everything else uses the Python (>= 3.6) standard library.",
+        "Everything else uses the Python 3 standard library.",
+        "Everything else uses the Python standard library."
+      ],
+      "golden_answer": "Everything else uses the Python (>= 3.6) standard library."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The example command for including a price timeseries uses an absolute path `/price/price.csv`, which is incorrect for the described project structure and will result in a 'file not found' error.",
+      "correction_candidates": [
+        "python generate.py --include-price-csv ./price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price-csv price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json",
+        "python generate.py --include-price-csv scenarios/price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json"
+      ],
+      "golden_answer": "python generate.py --include-price-csv ../price/price.csv --include-fixed-load-csv fixed_load.csv --output scenario.json"
+    }
+  ]
+}

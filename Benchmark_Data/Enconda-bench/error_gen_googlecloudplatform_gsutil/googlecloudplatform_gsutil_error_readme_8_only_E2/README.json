@@ -1,0 +1,18 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_8_only_E2",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Suggests using incorrect command 'python setup.py install --force' which may not work properly",
+      "correction_candidates": [
+        "To get started quickly, run `pip install gsutil` to install gsutil with all required dependencies.",
+        "To get started quickly, run `python -m pip install gsutil` to install gsutil with all required dependencies.",
+        "To get started quickly, follow the official installation guide at the link above for proper setup.",
+        "To get started quickly, run `pip install google-cloud-storage` to install gsutil with all required dependencies."
+      ],
+      "golden_answer": "To get started quickly, run `pip install gsutil` to install gsutil with all required dependencies."
+    }
+  ]
+}

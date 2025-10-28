@@ -1,0 +1,29 @@
+{
+  "readme": "wolph_python-progressbar_error_readme_1",
+  "repo_name": "wolph_python-progressbar",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The pip installation command refers to `progressbar`, which is the original, abandoned package, instead of the correct `progressbar2` for this forked version.",
+      "correction_candidates": [
+        "pip install python-progressbar",
+        "pip install progressbar2",
+        "pip install progress-bar-2",
+        "pip install progressbar --upgrade"
+      ],
+      "golden_answer": "pip install progressbar2"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The shell command to set the `WRAP_STDERR` environment variable is syntactically incorrect, missing the `=true` part, which will prevent it from working as intended on Linux/Unix systems.",
+      "correction_candidates": [
+        "export WRAP_STDERR && python your_script.py",
+        "set WRAP_STDERR=true; python your_script.py",
+        "WRAP_STDERR=true python your_script.py",
+        "WRAP_STDERR=1 python your_script.py"
+      ],
+      "golden_answer": "WRAP_STDERR=true python your_script.py"
+    }
+  ]
+}

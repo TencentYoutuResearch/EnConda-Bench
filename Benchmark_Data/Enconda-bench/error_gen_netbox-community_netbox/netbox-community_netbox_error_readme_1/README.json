@@ -1,0 +1,29 @@
+{
+  "readme": "netbox-community_netbox_error_readme_1",
+  "repo_name": "netbox-community_netbox",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally using `pip` before the virtual environment is created and activated, which is the incorrect order.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source /opt/netbox/venv/bin/activate` command.",
+        "Run `sudo pip install -r requirements.txt` to ensure system-wide availability.",
+        "Create the virtual environment first, then run `pip install -r requirements.txt --system`.",
+        "Remove the virtual environment steps as they are optional for local installation."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source /opt/netbox/venv/bin/activate` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The list of system packages to install is incomplete; it is missing the PostgreSQL database server, which is a required dependency for NetBox.",
+      "correction_candidates": [
+        "Add `postgresql` to the `apt-get install` command.",
+        "Replace `redis-server` with `postgresql` in the `apt-get install` command.",
+        "Install PostgreSQL using pip: `pip install postgresql`.",
+        "Add `python3-postgresql` to the `apt-get install` command."
+      ],
+      "golden_answer": "Add `postgresql` to the `apt-get install` command."
+    }
+  ]
+}

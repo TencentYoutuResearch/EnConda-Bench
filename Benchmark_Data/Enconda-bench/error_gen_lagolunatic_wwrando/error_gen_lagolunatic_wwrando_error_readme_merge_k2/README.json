@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_lagolunatic_wwrando_error_readme_merge_k2",
+  "repo_name": "lagolunatic_wwrando",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git clone` command is missing the `--recurse-submodules` flag, which is necessary to download required submodules for the project, causing failures later in the process.",
+      "correction_candidates": [
+        "Change the command to `git clone --recurse-submodules https://github.com/LagoLunatic/wwrando.git`.",
+        "Add a new command after cloning: `git submodule update --init --recursive`.",
+        "Change the command to `git clone --recursive https://github.com/LagoLunatic/wwrando.git`.",
+        "Change the command to `git clone --depth 1 --recurse-submodules https://github.com/LagoLunatic/wwrando.git`."
+      ],
+      "golden_answer": "Change the command to `git clone --recurse-submodules https://github.com/LagoLunatic/wwrando.git`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README ambiguously specifies installing 'Python 3' without a specific version and uses a generic 'py -3' command, which can lead to version conflicts as the project requires Python 3.12.",
+      "correction_candidates": [
+        "Change the instruction to `Download and install Python 3.12 from here: https://www.python.org/downloads/release/python-3121/` and update the dependency installation command to `py -3.12 -m pip install -r requirements.txt` for Windows.",
+        "Change the instruction to `Download and install the latest version of Python from here: https://www.python.org/downloads/` and keep the command `py -3 -m pip install -r requirements.txt`.",
+        "Change the instruction to `Download and install Python 3.10` and update the command to `py -3.10 -m pip install -r requirements.txt`.",
+        "Advise users to create a virtual environment using `python3 -m venv venv` and then install dependencies with `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Change the instruction to `Download and install Python 3.12 from here: https://www.python.org/downloads/release/python-3121/` and update the dependency installation command to `py -3.12 -m pip install -r requirements.txt` for Windows."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions tell the user to install Python dependencies before cloning the repository, which is impossible as the `requirements.txt` file is located within the repository and will not be found.",
+      "correction_candidates": [
+        "Move the 'clone this repository' step to be before the 'install dependencies' step.",
+        "Instruct the user to manually download `requirements.txt` from the repository before running the installation command.",
+        "Move the 'install Python' step after the 'clone this repository' step.",
+        "Combine the cloning and dependency installation steps into a single script."
+      ],
+      "golden_answer": "Move the 'clone this repository' step to be before the 'install dependencies' step."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The pip command for installing dependencies is missing the `-r` flag, causing pip to try to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change the command to `py -3.12 -m pip install -r requirements.txt` on Windows.",
+        "Change the command to `py -3.12 -m pip install --requirement requirements.txt` on Windows.",
+        "Change the command to `cat requirements.txt | xargs py -3.12 -m pip install` on Windows.",
+        "Change the command to `py -3.12 -m pip install -f requirements.txt` on Windows."
+      ],
+      "golden_answer": "Change the command to `py -3.12 -m pip install -r requirements.txt` on Windows."
+    }
+  ]
+}

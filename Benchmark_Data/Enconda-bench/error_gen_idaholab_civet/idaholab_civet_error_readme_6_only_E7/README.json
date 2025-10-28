@@ -1,0 +1,18 @@
+{
+  "readme": "idaholab_civet_error_readme_6_only_E7",
+  "repo_name": "idaholab_civet",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies outdated Python 2.7 version requirement",
+      "correction_candidates": [
+        "Update to require Python 3.8 or higher",
+        "Change to Python 3.6+ for compatibility",
+        "Specify Python 3.9 as the recommended version",
+        "Remove specific Python version requirement"
+      ],
+      "golden_answer": "Update to require Python 3.8 or higher"
+    }
+  ]
+}

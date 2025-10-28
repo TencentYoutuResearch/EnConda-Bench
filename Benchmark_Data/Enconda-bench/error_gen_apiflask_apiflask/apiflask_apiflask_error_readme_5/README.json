@@ -1,0 +1,29 @@
+{
+  "readme": "apiflask_apiflask_error_readme_5",
+  "repo_name": "apiflask_apiflask",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version requirement changed from 3.8+ to 2.7+ which is incompatible with modern Flask and APIFlask",
+      "correction_candidates": [
+        "Python 3.8+",
+        "Python 3.6+",
+        "Python 3.9+",
+        "Python 3.7+"
+      ],
+      "golden_answer": "Python 3.8+"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Installation command uses wrong package name 'flask-apiflask' instead of 'apiflask'",
+      "correction_candidates": [
+        "pip3 install apiflask",
+        "pip3 install python-apiflask",
+        "pip3 install apiflask-framework",
+        "pip3 install flask-api"
+      ],
+      "golden_answer": "pip3 install apiflask"
+    }
+  ]
+}

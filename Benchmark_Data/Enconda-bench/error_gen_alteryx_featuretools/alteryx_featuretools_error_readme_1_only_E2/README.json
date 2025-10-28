@@ -1,0 +1,18 @@
+{
+  "readme": "alteryx_featuretools_error_readme_1_only_E2",
+  "repo_name": "alteryx_featuretools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The primary pip installation command contains a syntax error (`--featuretools` instead of `featuretools`), which will cause the installation to fail.",
+      "correction_candidates": [
+        "python -m pip install featuretools",
+        "pip install \"featuretools\"",
+        "python pip install featuretools",
+        "pip install -p featuretools"
+      ],
+      "golden_answer": "python -m pip install featuretools"
+    }
+  ]
+}

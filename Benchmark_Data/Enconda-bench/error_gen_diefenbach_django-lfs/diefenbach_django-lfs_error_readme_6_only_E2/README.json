@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_6_only_E2",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command syntax error - python manage.py migrate assumes Django project structure that may not exist",
+      "correction_candidates": [
+        "Replace with python setup.py install to properly install the package",
+        "Use django-admin startproject myproject first, then python manage.py migrate",
+        "Change to python -m django migrate after proper project setup",
+        "Replace with pip install -e . for development installation"
+      ],
+      "golden_answer": "Use django-admin startproject myproject first, then python manage.py migrate"
+    }
+  ]
+}

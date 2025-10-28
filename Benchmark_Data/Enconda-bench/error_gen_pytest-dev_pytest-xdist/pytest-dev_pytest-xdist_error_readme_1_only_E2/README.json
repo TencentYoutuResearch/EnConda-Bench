@@ -1,0 +1,18 @@
+{
+  "readme": "pytest-dev_pytest-xdist_error_readme_1_only_E2",
+  "repo_name": "pytest-dev_pytest-xdist",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pytest --n auto` is incorrect; it should use a single dash `-n` for the short option.",
+      "correction_candidates": [
+        "Change `pytest --n auto` to `pytest -n auto`.",
+        "Change `pytest --n auto` to `pytest --dist=auto`.",
+        "Change `pytest --n auto` to `pytest -n=auto`.",
+        "Change `pytest --n auto` to `pytest --numprocesses=auto`."
+      ],
+      "golden_answer": "Change `pytest --n auto` to `pytest -n auto`."
+    }
+  ]
+}

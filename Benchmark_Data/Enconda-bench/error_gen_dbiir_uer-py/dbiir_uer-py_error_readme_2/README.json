@@ -1,0 +1,29 @@
+{
+  "readme": "dbiir_uer-py_error_readme_2",
+  "repo_name": "dbiir_uer-py",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The dependency `six = 1.12.0` in the Requirements section uses invalid syntax for specifying a version. Pip expects `==` for exact versions or `>=` for minimum versions.",
+      "correction_candidates": [
+        "Change `six = 1.12.0` to `six >= 1.12.0`.",
+        "Change `six = 1.12.0` to `six == 1.12.0`.",
+        "Remove the version specification, changing it to just `six`.",
+        "Change `six = 1.12.0` to `six~=1.12`."
+      ],
+      "golden_answer": "Change `six = 1.12.0` to `six >= 1.12.0`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The `Quickstart` section incorrectly places the fine-tuning step (`run_classifier.py`) before the pre-training step (`pretrain.py`), which is a logical error in the workflow.",
+      "correction_candidates": [
+        "Swap the `pretrain.py` command block with the `finetune/run_classifier.py` command block to ensure pre-training happens before fine-tuning.",
+        "Remove the `pretrain.py` step as it is optional and use the downloaded model directly for fine-tuning.",
+        "Run the `finetune/run_classifier.py` script first, then `pretrain.py` to further improve the model.",
+        "Combine the two steps into a single script."
+      ],
+      "golden_answer": "Swap the `pretrain.py` command block with the `finetune/run_classifier.py` command block to ensure pre-training happens before fine-tuning."
+    }
+  ]
+}

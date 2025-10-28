@@ -1,0 +1,29 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_8",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses incorrect Flask command syntax with invalid parameter '--ports' instead of '--port'",
+      "correction_candidates": [
+        "Execute `flask run --host 0.0.0.0 --port 5000` to run the server",
+        "Use `flask run --host 0.0.0.0 -p 5000` to start on port 5000",
+        "Run with `flask run --bind 0.0.0.0:5000` to serve on all interfaces",
+        "Start using `flask run --host=0.0.0.0 --port=5000` for external access"
+      ],
+      "golden_answer": "Execute `flask run --host 0.0.0.0 --port 5000` to run the server"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Suggests using 'pip3' command which may not be available on all systems, instead of the standard 'pip' command",
+      "correction_candidates": [
+        "Install packages from requirements.txt using pip install -r requirements.txt",
+        "Use python -m pip install -r requirements.txt to install dependencies",
+        "Install with pip install --user -r requirements.txt for user-specific installation",
+        "Run python3 -m pip install -r requirements.txt for Python 3 specific installation"
+      ],
+      "golden_answer": "Install packages from requirements.txt using pip install -r requirements.txt"
+    }
+  ]
+}

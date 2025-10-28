@@ -1,0 +1,29 @@
+{
+  "readme": "naomiproject_naomi_error_readme_4",
+  "repo_name": "naomiproject_naomi",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment, `venv/bin/activate`, is incorrect. On Linux/macOS, it needs to be sourced by the shell using `source venv/bin/activate` or `. venv/bin/activate`.",
+      "correction_candidates": [
+        "Change `venv/bin/activate` to `source venv/bin/activate`.",
+        "Change `venv/bin/activate` to `bash venv/bin/activate`.",
+        "Add `chmod +x venv/bin/activate` before running the command.",
+        "For Windows, the command should be `venv\\Scripts\\activate`."
+      ],
+      "golden_answer": "Change `venv/bin/activate` to `source venv/bin/activate`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are missing the crucial step of installing the Python dependencies from the `requirements.txt` file after creating and activating the virtual environment.",
+      "correction_candidates": [
+        "Add a new step after activating the virtual environment: `pip install -r requirements.txt`.",
+        "Add the step `python setup.py install` after cloning the repository.",
+        "Add the step `pip install naomi` after activating the virtual environment.",
+        "Instruct the user to find the `requirements.txt` file and install each package listed in it manually using `pip install`."
+      ],
+      "golden_answer": "Add a new step after activating the virtual environment: `pip install -r requirements.txt`."
+    }
+  ]
+}

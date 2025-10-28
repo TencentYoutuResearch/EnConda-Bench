@@ -1,0 +1,18 @@
+{
+  "readme": "kerneltuner_kernel_tuner_error_readme_2_only_E4",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the 'Getting Started' guide in the Resources section points to a non-existent page (`quick_start.html` instead of `quickstart.html`), resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/quickstart.html`.",
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/getting_started.html`.",
+        "Remove the link as the documentation is deprecated.",
+        "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/latest/quickstart.html`."
+      ],
+      "golden_answer": "Change the link URL to `https://kerneltuner.github.io/kernel_tuner/stable/quickstart.html`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "dbiir_uer-py_error_readme_4_only_E4",
+  "repo_name": "dbiir_uer-py",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states the vocabulary file path is `corpora/google_zh_vocab.txt` and uses this incorrect path in all example commands; the correct path is `models/google_zh_vocab.txt`.",
+      "correction_candidates": [
+        "Change all instances of `corpora/google_zh_vocab.txt` back to the correct path `models/google_zh_vocab.txt`.",
+        "Move the file `google_zh_vocab.txt` from the `models` directory to the `corpora` directory.",
+        "Create a symbolic link from `corpora/google_zh_vocab.txt` to `models/google_zh_vocab.txt`.",
+        "Change the path to `datasets/google_zh_vocab.txt`."
+      ],
+      "golden_answer": "Change all instances of `corpora/google_zh_vocab.txt` back to the correct path `models/google_zh_vocab.txt`."
+    }
+  ]
+}

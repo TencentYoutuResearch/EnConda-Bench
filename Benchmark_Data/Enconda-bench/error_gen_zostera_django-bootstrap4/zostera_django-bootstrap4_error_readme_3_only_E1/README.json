@@ -1,0 +1,18 @@
+{
+  "readme": "zostera_django-bootstrap4_error_readme_3_only_E1",
+  "repo_name": "zostera_django-bootstrap4",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `django-crispy-forms` is a required dependency, but it is not needed for this package to function.",
+      "correction_candidates": [
+        "Replace `django-crispy-forms` with `django-widget-tweaks` as the required dependency.",
+        "Clarify that `django-crispy-forms` is only needed for advanced layouts.",
+        "Remove the statement about requiring `django-crispy-forms`.",
+        "Add `pip install django-crispy-forms` to the installation instructions."
+      ],
+      "golden_answer": "Remove the statement about requiring `django-crispy-forms`."
+    }
+  ]
+}

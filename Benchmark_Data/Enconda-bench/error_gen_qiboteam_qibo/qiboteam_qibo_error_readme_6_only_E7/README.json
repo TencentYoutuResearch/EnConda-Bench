@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibo_error_readme_6_only_E7",
+  "repo_name": "qiboteam_qibo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "States that Qibo requires Python 2.7, which is outdated and incompatible with modern quantum computing libraries",
+      "correction_candidates": [
+        "Qibo requires Python 3.8 or later for optimal performance",
+        "Qibo supports Python 3.6+ with some features requiring 3.9+",
+        "Remove the Python version requirement statement entirely",
+        "Qibo requires Python 3.7 or later with NumPy 1.19+"
+      ],
+      "golden_answer": "Qibo requires Python 3.8 or later for optimal performance"
+    }
+  ]
+}

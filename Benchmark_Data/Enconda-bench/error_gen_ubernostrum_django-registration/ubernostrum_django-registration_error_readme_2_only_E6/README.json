@@ -1,0 +1,18 @@
+{
+  "readme": "ubernostrum_django-registration_error_readme_2_only_E6",
+  "repo_name": "ubernostrum_django-registration",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions have a logical order error, telling the user to install the package globally with pip *before* creating the virtual environment.",
+      "correction_candidates": [
+        "Reverse steps 1 and 2: create the virtual environment first, then install the package.",
+        "Remove step 1 and add it after step 3.",
+        "The correct order is to create the virtual environment, activate it, and then install the package.",
+        "Install with `sudo pip install django-registration` to ensure it's available before creating the venv."
+      ],
+      "golden_answer": "The correct order is to create the virtual environment, activate it, and then install the package."
+    }
+  ]
+}

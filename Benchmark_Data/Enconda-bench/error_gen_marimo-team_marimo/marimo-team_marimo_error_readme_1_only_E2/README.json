@@ -1,0 +1,18 @@
+{
+  "readme": "marimo-team_marimo_error_readme_1_only_E2",
+  "repo_name": "marimo-team_marimo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the introductory tutorial is syntactically incorrect. The `--tutorial` flag is not a valid way to call a tutorial.",
+      "correction_candidates": [
+        "pip install marimo && marimo tutorial intro",
+        "pip install marimo && marimo run tutorial intro",
+        "pip install marimo && marimo --run-tutorial intro",
+        "pip install marimo && marimo start tutorial intro"
+      ],
+      "golden_answer": "pip install marimo && marimo tutorial intro"
+    }
+  ]
+}

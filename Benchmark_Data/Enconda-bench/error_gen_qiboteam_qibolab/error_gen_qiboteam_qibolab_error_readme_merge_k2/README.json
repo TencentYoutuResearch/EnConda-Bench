@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_qiboteam_qibolab_error_readme_merge_k2",
+  "repo_name": "qiboteam_qibolab",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to create and activate a virtual environment is syntactically incorrect because the '--activate' flag is not a valid argument for 'venv'.",
+      "correction_candidates": [
+        "python3 -m venv venv && source venv/bin/activate",
+        "python3 -m venv venv; activate",
+        "virtualenv venv && source venv/bin/activate",
+        "python3 -m venv venv/activate"
+      ],
+      "golden_answer": "python3 -m venv venv && source venv/bin/activate"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. The packages are installed globally using the system's Python before the virtual environment is created and activated.",
+      "correction_candidates": [
+        "The commands should be combined into a single line using '&&'.",
+        "The 'pip install' command should be run with the '--user' flag.",
+        "The correct order is to first create the virtual environment, then activate it, and finally install the packages.",
+        "You should use 'conda' instead of 'venv' for managing environments."
+      ],
+      "golden_answer": "The correct order is to first create the virtual environment, then activate it, and finally install the packages."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README provides contradictory information. It suggests creating a runcard for 'my_platform' but the first code example attempts to load a different platform named 'tiiq', which will cause a file not found error.",
+      "correction_candidates": [
+        "Create a second configuration file named tiiq.yml.",
+        "The platform name should be passed as an environment variable, not as a string.",
+        "In the example code, change create_platform(\"tiiq\") to create_platform(\"my_platform\") to match the configuration instructions.",
+        "In the example code, change create_platform(\"tiiq\") to qibo.set_platform(\"my_platform\")."
+      ],
+      "golden_answer": "In the example code, change create_platform(\"tiiq\") to create_platform(\"my_platform\") to match the configuration instructions."
+    }
+  ]
+}

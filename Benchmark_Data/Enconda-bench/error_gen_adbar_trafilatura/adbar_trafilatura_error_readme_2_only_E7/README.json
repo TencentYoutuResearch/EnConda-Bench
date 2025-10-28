@@ -1,0 +1,18 @@
+{
+  "readme": "adbar_trafilatura_error_readme_2_only_E7",
+  "repo_name": "adbar_trafilatura",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package requires Python 3.6 and is not compatible with newer versions, which contradicts the package's actual support for Python 3.8+.",
+      "correction_candidates": [
+        "Change the note to 'Trafilatura requires Python 3.8 or newer.'",
+        "Remove the note about Python version compatibility.",
+        "Change the note to 'Trafilatura is compatible with Python versions 3.6, 3.7, 3.8, and 3.9.'",
+        "Change the note to 'Please check the PyPI page for the latest Python version compatibility.'"
+      ],
+      "golden_answer": "Change the note to 'Trafilatura requires Python 3.8 or newer.'"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "islandora_documentation_error_readme_4_only_E1",
+  "repo_name": "islandora_documentation",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command `pip install mkdocs-material` only installs the Material theme and its base dependencies, but it may omit other necessary plugins (like `pymdown-extensions`, `mkdocs-redirects`, etc.) that are specified in a project's `requirements.txt` file.",
+      "correction_candidates": [
+        "The command should be 'pip install -r requirements.txt' to install all required dependencies.",
+        "The command should be 'pip install mkdocs mkdocs-material'.",
+        "You must install mkdocs first: 'pip install mkdocs'.",
+        "The 'mkdocs-material' package is unnecessary."
+      ],
+      "golden_answer": "The command should be 'pip install -r requirements.txt' to install all required dependencies."
+    }
+  ]
+}

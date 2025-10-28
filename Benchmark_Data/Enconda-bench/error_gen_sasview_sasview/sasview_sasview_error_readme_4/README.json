@@ -1,0 +1,29 @@
+{
+  "readme": "sasview_sasview_error_readme_4",
+  "repo_name": "sasview_sasview",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions are missing the `matplotlib` package, which is a critical dependency for plotting and data visualization.",
+      "correction_candidates": [
+        "The command should be `pip install numpy scipy matplotlib`.",
+        "The command should be `pip install sasview`, which will install all necessary dependencies.",
+        "The instructions should advise installing from a `requirements.txt` file using `pip install -r requirements.txt`.",
+        "The instructions should specify that `matplotlib` must be installed separately via the system's package manager."
+      ],
+      "golden_answer": "The command should be `pip install numpy scipy matplotlib`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `sasmodels -version` uses incorrect syntax for the version flag. The long-form option should use a double dash (`--`).",
+      "correction_candidates": [
+        "The correct command is `sasmodels --version`.",
+        "The correct command is `sasmodels -v`.",
+        "The command should be `sasmodels version`.",
+        "The command should be `python -m sasmodels.cli --version`."
+      ],
+      "golden_answer": "The correct command is `sasmodels --version`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "lmcinnes_umap_error_readme_1_only_E2",
+  "repo_name": "lmcinnes_umap",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The manual installation command `python setup.py install` is suggested, which is deprecated and may fail with modern tooling.",
+      "correction_candidates": [
+        "Replace `python setup.py install` with `pip install .`.",
+        "Replace `python setup.py install` with `python -m pip install -e .`.",
+        "Replace `python setup.py install` with `pip install -e .`.",
+        "Replace `python setup.py install` with `python -m build && pip install dist/*.whl`."
+      ],
+      "golden_answer": "Replace `python setup.py install` with `python -m pip install -e .`."
+    }
+  ]
+}

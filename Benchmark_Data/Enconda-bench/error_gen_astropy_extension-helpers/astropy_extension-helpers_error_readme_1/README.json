@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_extension-helpers_error_readme_1",
+  "repo_name": "astropy_extension-helpers",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly instructs to install the deprecated `astropy-helpers` package as a prerequisite, which is not a dependency for this package.",
+      "correction_candidates": [
+        "Remove the sentence 'First, make sure you have the `astropy-helpers` package installed.'",
+        "Replace `astropy-helpers` with `astropy`.",
+        "Replace `astropy-helpers` with `setuptools`.",
+        "Add a command `pip install astropy-helpers` to make the instruction explicit."
+      ],
+      "golden_answer": "Remove the sentence 'First, make sure you have the `astropy-helpers` package installed.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The provided pip command `pip install: extension-helpers` contains a syntax error, using a colon instead of a space.",
+      "correction_candidates": [
+        "Replace `pip install: extension-helpers` with `pip install .`.",
+        "Replace `pip install: extension-helpers` with `python -m pip install extension-helpers`.",
+        "Replace `pip install: extension-helpers` with `pip install extension-helpers`.",
+        "Replace `pip install: extension-helpers` with `pip install --upgrade extension-helpers`."
+      ],
+      "golden_answer": "Replace `pip install: extension-helpers` with `pip install extension-helpers`."
+    }
+  ]
+}

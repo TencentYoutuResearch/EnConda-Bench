@@ -1,0 +1,18 @@
+{
+  "readme": "rollbar_pyrollbar_error_readme_1_only_E2",
+  "repo_name": "rollbar_pyrollbar",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `git commit` command in the 'Contributing' section is syntactically incorrect because it is missing the `-m` flag to specify the commit message.",
+      "correction_candidates": [
+        "Commit your changes (```git commit -am 'Added some feature'```)",
+        "Commit your changes (```git commit -m 'Added some feature'```)",
+        "Commit your changes (```git commit --message 'Added some feature'```)",
+        "Commit your changes (```git commit -a -m 'Added some feature'```)"
+      ],
+      "golden_answer": "Commit your changes (```git commit -am 'Added some feature'```)"
+    }
+  ]
+}

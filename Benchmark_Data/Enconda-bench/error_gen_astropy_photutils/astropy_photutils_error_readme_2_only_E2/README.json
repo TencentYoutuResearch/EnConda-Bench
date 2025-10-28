@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_2_only_E2",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The suggested command `cat CITATION` to view citation details is incorrect because the file is not in the repository root and is named `CITATION.rst`.",
+      "correction_candidates": [
+        "The command is incorrect because the file is not in the current working directory after installation.",
+        "Use `less photutils/CITATION.rst` to view the file from the repository root.",
+        "The command should be `photutils --citation`.",
+        "Remove the command and direct users to the `CITATION` file link provided."
+      ],
+      "golden_answer": "Remove the command and direct users to the `CITATION` file link provided."
+    }
+  ]
+}

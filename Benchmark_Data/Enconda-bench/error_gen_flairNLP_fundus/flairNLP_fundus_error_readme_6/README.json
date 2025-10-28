@@ -1,0 +1,29 @@
+{
+  "readme": "flairNLP_fundus_error_readme_6",
+  "repo_name": "flairNLP_fundus",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Added unnecessary --upgrade flag to the pip install command which could cause version conflicts during initial installation",
+      "correction_candidates": [
+        "pip install fundus",
+        "pip install -e fundus",
+        "pip install fundus --user",
+        "pip install fundus --force-reinstall"
+      ],
+      "golden_answer": "pip install fundus"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Changed file paths from 'docs/' to 'documentation/' which don't exist in the repository structure",
+      "correction_candidates": [
+        "docs/1_getting_started.md",
+        "tutorials/1_getting_started.md",
+        "guides/1_getting_started.md",
+        "help/1_getting_started.md"
+      ],
+      "golden_answer": "docs/1_getting_started.md"
+    }
+  ]
+}

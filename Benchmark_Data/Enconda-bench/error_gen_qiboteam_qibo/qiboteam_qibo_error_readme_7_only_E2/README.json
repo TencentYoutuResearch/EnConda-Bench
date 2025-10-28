@@ -1,0 +1,18 @@
+{
+  "readme": "qiboteam_qibo_error_readme_7_only_E2",
+  "repo_name": "qiboteam_qibo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Code example uses incorrect method 'circuit.execute()' instead of the correct callable syntax",
+      "correction_candidates": [
+        "Change 'circuit.execute()' to 'circuit()' for proper execution",
+        "Use 'circuit.run()' method for circuit execution",
+        "Replace with 'final_state = circuit.simulate()' method call",
+        "Use 'circuit.measure()' to get the final state"
+      ],
+      "golden_answer": "Change 'circuit.execute()' to 'circuit()' for proper execution"
+    }
+  ]
+}

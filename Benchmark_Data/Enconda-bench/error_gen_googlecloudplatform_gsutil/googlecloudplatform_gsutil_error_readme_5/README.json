@@ -1,0 +1,29 @@
+{
+  "readme": "googlecloudplatform_gsutil_error_readme_5",
+  "repo_name": "googlecloudplatform_gsutil",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies Python 2.7 as required version when gsutil now supports Python 3.x",
+      "correction_candidates": [
+        "Make sure to install Python 3.7 or later as gsutil requires this version to function properly.",
+        "Make sure to install Python 3.6+ as gsutil has dropped Python 2 support.",
+        "Ensure you have Python 3.8 or newer installed for optimal gsutil performance.",
+        "Install Python 3.7 through 3.11 as these are the supported Python versions for gsutil."
+      ],
+      "golden_answer": "Make sure to install Python 3.7 or later as gsutil requires this version to function properly."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing pip dependencies before creating virtual environment, which is incorrect order",
+      "correction_candidates": [
+        "First create a virtual environment with `python -m venv gsutil-env`, then activate it and install the dependencies with `pip install -r requirements.txt`.",
+        "Create the virtual environment using `python -m venv gsutil-env`, activate it with `source gsutil-env/bin/activate`, then run `pip install -r requirements.txt`.",
+        "Set up a virtual environment first with `python -m venv gsutil-env`, then install dependencies inside it using `pip install -r requirements.txt`.",
+        "Initialize the virtual environment with `python -m venv gsutil-env` before installing any pip packages from requirements.txt."
+      ],
+      "golden_answer": "First create a virtual environment with `python -m venv gsutil-env`, then activate it and install the dependencies with `pip install -r requirements.txt`."
+    }
+  ]
+}

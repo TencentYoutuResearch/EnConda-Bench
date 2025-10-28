@@ -1,0 +1,29 @@
+{
+  "readme": "cityofzion_neo3-boa_error_readme_1",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is incorrectly stated as '3.8 or later', while the project actually requires Python 3.10 or later.",
+      "correction_candidates": [
+        "Installation requires Python 3.9 or later.",
+        "Installation requires Python 3.10 or later.",
+        "Installation requires Python 3.7 or later.",
+        "Installation requires any version of Python 3."
+      ],
+      "golden_answer": "Installation requires Python 3.10 or later."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package via pip is incorrect. It uses 'neo-boa' instead of the correct package name 'neo3-boa'.",
+      "correction_candidates": [
+        "$ pip install neo-boa3",
+        "$ pip install coz-neo3-boa",
+        "$ pip install neo3-boa",
+        "$ pip install neo3boa"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    }
+  ]
+}

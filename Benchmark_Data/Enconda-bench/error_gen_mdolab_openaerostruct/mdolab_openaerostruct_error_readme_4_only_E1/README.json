@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_4_only_E1",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly list `Cython` as a required dependency. It is not listed in the dependency table and is not needed to install or run the package.",
+      "correction_candidates": [
+        "Remove the sentence stating that `Cython` is a required dependency.",
+        "Change 'required' to 'optional' in the sentence about Cython.",
+        "Add Cython to the dependency table as an optional dependency.",
+        "Add a note explaining that Cython is only needed for developers who want to compile C extensions."
+      ],
+      "golden_answer": "Remove the sentence stating that `Cython` is a required dependency."
+    }
+  ]
+}

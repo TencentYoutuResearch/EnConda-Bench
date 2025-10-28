@@ -1,0 +1,18 @@
+{
+  "readme": "scylladb_sphinx-scylladb-theme_error_readme_6_only_E2",
+  "repo_name": "scylladb_sphinx-scylladb-theme",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Referenced a make command that likely doesn't exist in this project",
+      "correction_candidates": [
+        "pip install sphinx-scylladb-theme",
+        "python setup.py install",
+        "pip install -e .",
+        "npm install"
+      ],
+      "golden_answer": "pip install sphinx-scylladb-theme"
+    }
+  ]
+}

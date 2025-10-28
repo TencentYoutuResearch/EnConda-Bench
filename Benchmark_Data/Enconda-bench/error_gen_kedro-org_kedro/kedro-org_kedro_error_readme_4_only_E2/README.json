@@ -1,0 +1,18 @@
+{
+  "readme": "kedro-org_kedro_error_readme_4_only_E2",
+  "repo_name": "kedro-org_kedro",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install from the `main` branch uses an incorrect URL format (`/tree/main`), which is for browsing the repository on GitHub, not for `pip` installation.",
+      "correction_candidates": [
+        "pip install git+https://github.com/kedro-org/kedro.git",
+        "pip install git+https://github.com/kedro-org/kedro@main",
+        "git clone https://github.com/kedro-org/kedro && cd kedro && pip install .",
+        "pip install https://github.com/kedro-org/kedro/archive/main.zip"
+      ],
+      "golden_answer": "pip install git+https://github.com/kedro-org/kedro@main"
+    }
+  ]
+}

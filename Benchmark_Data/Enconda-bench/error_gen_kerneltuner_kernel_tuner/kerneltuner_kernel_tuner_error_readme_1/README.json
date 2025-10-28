@@ -1,0 +1,29 @@
+{
+  "readme": "kerneltuner_kernel_tuner_error_readme_1",
+  "repo_name": "kerneltuner_kernel_tuner",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command is missing the necessary extras like `[cuda]` or `[opencl]`, which means backend-specific dependencies (e.g., PyCUDA) will not be installed, leading to runtime errors.",
+      "correction_candidates": [
+        "pip install kernel_tuner[cuda,opencl,hip]",
+        "pip install kernel_tuner --all-extras",
+        "pip install kernel_tuner; pip install pycuda pyopencl",
+        "conda install kernel_tuner -c conda-forge"
+      ],
+      "golden_answer": "pip install kernel_tuner[cuda,opencl,hip]"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the example code, `tune_params` is incorrectly formatted as a list of tuples instead of a dictionary, which will cause a syntax or type error in the `tune_kernel` function.",
+      "correction_candidates": [
+        "tune_params = {'block_size_x': [32, 64, 128, 256, 512]}",
+        "tune_params = dict(block_size_x=[32, 64, 128, 256, 512])",
+        "tune_params = \"block_size_x: [32, 64, 128, 256, 512]\"",
+        "params = {'block_size_x': [32, 64, 128, 256, 512]}"
+      ],
+      "golden_answer": "tune_params = {'block_size_x': [32, 64, 128, 256, 512]}"
+    }
+  ]
+}

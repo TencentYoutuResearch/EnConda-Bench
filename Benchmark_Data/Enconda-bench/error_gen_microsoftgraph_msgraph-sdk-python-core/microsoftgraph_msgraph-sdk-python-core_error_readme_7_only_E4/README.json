@@ -1,0 +1,18 @@
+{
+  "readme": "microsoftgraph_msgraph-sdk-python-core_error_readme_7_only_E4",
+  "repo_name": "microsoftgraph_msgraph-sdk-python-core",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "LICENSE file path changed to incorrect 'docs/LICENSE' directory that likely doesn't exist",
+      "correction_candidates": [
+        "LICENSE",
+        "LICENSE.txt",
+        "legal/LICENSE",
+        "LICENSE.md"
+      ],
+      "golden_answer": "LICENSE"
+    }
+  ]
+}

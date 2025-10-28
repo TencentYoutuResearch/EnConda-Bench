@@ -1,0 +1,18 @@
+{
+  "readme": "columnflow_columnflow_error_readme_1_only_E4",
+  "repo_name": "columnflow_columnflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The curl command to download the analysis creation script points to a 'main' branch which does not exist, instead of the correct 'master' branch.",
+      "correction_candidates": [
+        "bash -c \"$(curl -Ls https://raw.githubusercontent.com/columnflow/columnflow/master/create_analysis.sh)\"",
+        "bash -c \"$(curl -Ls https://github.com/columnflow/columnflow/blob/master/create_analysis.sh)\"",
+        "git clone https://github.com/columnflow/columnflow.git && cd columnflow && ./create_analysis.sh",
+        "bash -c \"$(curl -Ls https://raw.githubusercontent.com/columnflow/columnflow/stable/create_analysis.sh)\""
+      ],
+      "golden_answer": "bash -c \"$(curl -Ls https://raw.githubusercontent.com/columnflow/columnflow/master/create_analysis.sh)\""
+    }
+  ]
+}

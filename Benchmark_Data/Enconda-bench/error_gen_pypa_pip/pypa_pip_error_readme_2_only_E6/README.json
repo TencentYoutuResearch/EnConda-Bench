@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_pip_error_readme_2_only_E6",
+  "repo_name": "pypa_pip",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions advise installing packages globally before creating a virtual environment, which defeats the purpose of using a virtual environment for project isolation.",
+      "correction_candidates": [
+        "First, create a virtual environment (`python -m venv myenv`), activate it, and then install your desired packages (e.g., `pip install requests`).",
+        "First, install your desired packages (e.g., `requests`) and then create a virtual environment (`python -m venv myenv`) to snapshot them.",
+        "First, create a virtual environment (`python -m venv myenv`). Then install packages globally so they are available everywhere.",
+        "Install packages using `pip install --user <package>`, then create a virtual environment with `python -m venv myenv --system-site-packages`."
+      ],
+      "golden_answer": "First, create a virtual environment (`python -m venv myenv`), activate it, and then install your desired packages (e.g., `pip install requests`)."
+    }
+  ]
+}

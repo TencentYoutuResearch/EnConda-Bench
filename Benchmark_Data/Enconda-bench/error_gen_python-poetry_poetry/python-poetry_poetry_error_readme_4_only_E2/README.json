@@ -1,0 +1,18 @@
+{
+  "readme": "python-poetry_poetry_error_readme_4_only_E2",
+  "repo_name": "python-poetry_poetry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the `pyproject.toml` example, the dev dependencies are defined under `[tool.poetry.dev-dependencies]`, which is a deprecated syntax. The correct modern syntax is `[tool.poetry.group.dev.dependencies]`.",
+      "correction_candidates": [
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.group.dev.dependencies]`.",
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.dependencies.dev]`.",
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.dev-dependencies]`.",
+        "Add `optional = true` under the `[tool.poetry.dev-dependencies]` section."
+      ],
+      "golden_answer": "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.group.dev.dependencies]`."
+    }
+  ]
+}

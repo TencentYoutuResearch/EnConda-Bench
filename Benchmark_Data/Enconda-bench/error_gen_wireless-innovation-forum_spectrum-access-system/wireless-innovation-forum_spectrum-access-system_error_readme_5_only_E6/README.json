@@ -1,0 +1,18 @@
+{
+  "readme": "wireless-innovation-forum_spectrum-access-system_error_readme_5_only_E6",
+  "repo_name": "wireless-innovation-forum_spectrum-access-system",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installing requirements.txt after creating conda environment but before activating it, which is incorrect order",
+      "correction_candidates": [
+        "conda env create -f conda-environment.yml\nconda activate winnf3",
+        "conda activate winnf3\npython -m pip install -r ./requirements.txt",
+        "conda env create -f conda-environment.yml\npython -m pip install -r ./requirements.txt\nconda activate winnf3",
+        "conda create --name winnf3\nconda activate winnf3\npython -m pip install -r ./requirements.txt"
+      ],
+      "golden_answer": "conda env create -f conda-environment.yml\nconda activate winnf3"
+    }
+  ]
+}

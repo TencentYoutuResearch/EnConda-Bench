@@ -1,0 +1,18 @@
+{
+  "readme": "ucoproject_uco_error_readme_3_only_E1",
+  "repo_name": "ucoproject_uco",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions attempt to install `graphviz` using pip. Graphviz is a system-level dependency and must be installed using a system package manager (e.g., apt, brew, yum), not pip.",
+      "correction_candidates": [
+        "The command should be `pip install python-graphviz` which is the correct Python wrapper.",
+        "The `graphviz` package should be removed from the pip command and installed separately with a system package manager like `sudo apt-get install graphviz`.",
+        "The command should be `pip install --no-deps graphviz` to avoid dependency conflicts.",
+        "The command should be run with sudo: `sudo pip install rdflib graphviz`."
+      ],
+      "golden_answer": "The `graphviz` package should be removed from the pip command and installed separately with a system package manager like `sudo apt-get install graphviz`."
+    }
+  ]
+}

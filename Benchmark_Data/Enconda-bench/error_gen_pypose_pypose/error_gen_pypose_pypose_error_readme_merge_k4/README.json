@@ -1,0 +1,95 @@
+{
+  "readme": "error_gen_pypose_pypose_error_readme_merge_k4",
+  "repo_name": "pypose_pypose",
+  "level": "level8",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Requirement' installation step is listed before the 'Install locally' step, which contains the `git clone` command. This will fail because the `requirements/runtime.txt` file does not exist until after the repository is cloned.",
+      "correction_candidates": [
+        "The 'Requirement' and 'Install locally' steps should be combined into a single step.",
+        "The `git clone` command should be moved to be the first command in the 'Requirement' step.",
+        "The 'Install locally' section should be moved before the 'Requirement' section.",
+        "The `pip install -r requirements/runtime.txt` command should be run after cloning the repository and changing into the `pypose` directory."
+      ],
+      "golden_answer": "The `pip install -r requirements/runtime.txt` command should be run after cloning the repository and changing into the `pypose` directory."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `python setup.py development` is incorrect. The correct argument for installing a package in editable mode is `develop`.",
+      "correction_candidates": [
+        "Change `python setup.py development` to `python setup.py develop`.",
+        "Change `python setup.py development` to `python setup.py install`.",
+        "Change `python setup.py development` to `pip install -e .`.",
+        "Change `python setup.py development` to `python setup.py build`."
+      ],
+      "golden_answer": "Change `python setup.py development` to `python setup.py develop`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install PyTorch, a critical dependency, has been removed. The installation will fail without it.",
+      "correction_candidates": [
+        "Add the sentence 'On Ubuntu, macOS, or Windows, install PyTorch, then run:' before the pip command.",
+        "Add the command `pip install torch` before the command `pip install -r requirements.txt`.",
+        "Add 'torch' to the first line of the `requirements.txt` file.",
+        "Add a new step: '1. Prerequisite: Install PyTorch by running `pip install pytorch`.'"
+      ],
+      "golden_answer": "Add the sentence 'On Ubuntu, macOS, or Windows, install PyTorch, then run:' before the pip command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path `requirements.txt` is incorrect. The file is located at `requirements/runtime.txt`.",
+      "correction_candidates": [
+        "Change `pip install -r requirements.txt` to `pip install -r requirements/runtime.txt`.",
+        "Change `pip install -r requirements.txt` to `pip install -r runtime.txt`.",
+        "Change `pip install -r requirements.txt` to `cat requirements.txt | xargs pip install`.",
+        "Change `pip install -r requirements.txt` to `pip install -r ./requirements/runtime.txt`."
+      ],
+      "golden_answer": "Change `pip install -r requirements.txt` to `pip install -r requirements/runtime.txt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "A specific, potentially outdated version of PyTorch (`torch==1.9.0`) is hardcoded in the instructions. This can cause compatibility issues with other dependencies or prevent the user from using a newer, recommended version.",
+      "correction_candidates": [
+        "Change `pip install torch==1.9.0` to `pip install torch>=2.0.0`.",
+        "Remove the specific command `by running 'pip install torch==1.9.0'` and simply instruct the user to install PyTorch from the official website.",
+        "Change the instruction to 'install PyTorch (version 1.9.0 or higher)'.",
+        "Keep the command but add a note: '(or a more recent version from pytorch.org)'."
+      ],
+      "golden_answer": "Remove the specific command `by running 'pip install torch==1.9.0'` and simply instruct the user to install PyTorch from the official website."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements/runtime.txt` is missing the `-r` flag. Without it, pip will try to install a package named 'requirements/runtime.txt' from PyPI, which does not exist, instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change `pip install requirements/runtime.txt` to `pip install --requirements requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `pip install -r requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `pip install -f requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `xargs pip install < requirements/runtime.txt`."
+      ],
+      "golden_answer": "Change `pip install requirements/runtime.txt` to `pip install -r requirements/runtime.txt`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The command `cd pypose` is executed after `python setup.py develop`. The `setup.py` script must be run from within the `pypose` directory, so the current working directory must be changed first.",
+      "correction_candidates": [
+        "Change `python setup.py develop && cd pypose` to `cd pypose && python setup.py develop`.",
+        "Change `python setup.py develop && cd pypose` to `python pypose/setup.py develop`.",
+        "Change `python setup.py develop && cd pypose` to `cd pypose; python setup.py develop`.",
+        "Remove `&& cd pypose` and run the `cd pypose` command on a separate line before `python setup.py develop`."
+      ],
+      "golden_answer": "Change `python setup.py develop && cd pypose` to `cd pypose && python setup.py develop`."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the first code example, the line `import pypose as pp` is missing. This will cause a `NameError` because the alias `pp` is used without being defined.",
+      "correction_candidates": [
+        "Add `import pypose as pp` to the first line of the code block.",
+        "Add `from pypose import *` to the first line of the code block.",
+        "Replace all instances of `pp.` with `pypose.` and add `import pypose` to the first line.",
+        "Add `import torch, pypose as pp` to the first line of the code block."
+      ],
+      "golden_answer": "Add `import torch, pypose as pp` to the first line of the code block."
+    }
+  ]
+}

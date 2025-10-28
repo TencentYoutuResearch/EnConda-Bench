@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_inflect_error_readme_1",
+  "repo_name": "jaraco_inflect",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip3 install inflection` uses the wrong package name. The correct package name on PyPI is `inflect`.",
+      "correction_candidates": [
+        "pip install inflect",
+        "pip install py-inflect",
+        "conda install inflect",
+        "pip install --upgrade inflect"
+      ],
+      "golden_answer": "pip install inflect"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The code example `p.plural word` is missing parentheses for the method call, which will cause a Python SyntaxError.",
+      "correction_candidates": [
+        "print(\"The plural of \", word, \" is \", p.plural(word))",
+        "print(\"The plural of \", word, \" is \", p.plural[word])",
+        "print(\"The plural of \", word, \" is \", p.plural({word}))",
+        "print(\"The plural of \", word, \" is \", p.pluralize(word))"
+      ],
+      "golden_answer": "print(\"The plural of \", word, \" is \", p.plural(word))"
+    }
+  ]
+}

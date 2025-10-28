@@ -1,0 +1,18 @@
+{
+  "readme": "webcomics_dosage_error_readme_1_only_E7",
+  "repo_name": "webcomics_dosage",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies an outdated and incompatible Python version (2.7) while the project requires Python 3.8 or newer.",
+      "correction_candidates": [
+        "Change the Python requirement to 'at least Python 3.6'.",
+        "Change the Python requirement to 'at least Python 3.8'.",
+        "Change the Python requirement to 'Python 3.8 or 3.9 only'.",
+        "Add a note saying 'Python 2.7 is supported via a legacy branch'."
+      ],
+      "golden_answer": "Change the Python requirement to 'at least Python 3.8'."
+    }
+  ]
+}

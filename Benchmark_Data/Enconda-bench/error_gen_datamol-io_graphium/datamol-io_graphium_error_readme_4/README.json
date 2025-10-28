@@ -1,0 +1,29 @@
+{
+  "readme": "datamol-io_graphium_error_readme_4",
+  "repo_name": "datamol-io_graphium",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The command to create the mamba environment refers to a non-existent file `environment.yml`. The correct file name in the repository is `env.yml`.",
+      "correction_candidates": [
+        "mamba env create -f env.yml -n graphium",
+        "mamba env create --file environment.yml --name graphium",
+        "conda env create -f env.yml -n graphium",
+        "Rename the `env.yml` file to `environment.yml` in the repository."
+      ],
+      "golden_answer": "mamba env create -f env.yml -n graphium"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for fine-tuning uses an incorrect and unclear syntax (`--finetuning admet`) for hydra's config composition. This will fail because it's not the correct way to add a config group.",
+      "correction_candidates": [
+        "graphium-train finetuning=admet",
+        "graphium-train --config-name finetuning/admet",
+        "graphium-train +finetuning=admet",
+        "graphium-train --finetune-config admet.yaml"
+      ],
+      "golden_answer": "graphium-train +finetuning=admet"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_distutils_error_readme_2_only_E7",
+  "repo_name": "pypa_distutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package requires Python 2.7 and is incompatible with Python 3, which contradicts the PyPI versions badge showing support for Python 3.7+.",
+      "correction_candidates": [
+        "Remove the sentence stating the Python 2.7 requirement.",
+        "Change the requirement to 'Requires Python 3.7 or later' to match the badge.",
+        "Update the PyPI versions badge to only show Python 2.7.",
+        "Change the requirement to 'Requires Python >= 2.7' to include both versions."
+      ],
+      "golden_answer": "Remove the sentence stating the Python 2.7 requirement."
+    }
+  ]
+}

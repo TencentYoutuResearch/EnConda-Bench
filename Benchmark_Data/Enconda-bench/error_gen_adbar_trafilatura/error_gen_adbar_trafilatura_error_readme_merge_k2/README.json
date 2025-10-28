@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_adbar_trafilatura_error_readme_merge_k2",
+  "repo_name": "adbar_trafilatura",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The file path to the interactive Python notebook is incorrect, leading to a 404 error when clicked.",
+      "correction_candidates": [
+        "Change the link path to `docs/Trafilatura_Overview.ipynb`.",
+        "Change the link path to `examples/Trafilatura_Overview.ipynb`.",
+        "Change the link path to `../docs/Trafilatura_Overview.ipynb`.",
+        "Change the link path to `Trafilatura_Overview.ipynb`."
+      ],
+      "golden_answer": "Change the link path to `docs/Trafilatura_Overview.ipynb`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The README provides an incorrect command to install the optional GUI, referencing a non-existent package `trafilatura-gui`.",
+      "correction_candidates": [
+        "Change the command to `pip install trafilatura[gui]`.",
+        "Change the command to `pip install trafilatura --with-gui`.",
+        "Change the command to `pip install trafilatura` and add a note that the GUI is included.",
+        "Remove the installation command and direct users to the documentation."
+      ],
+      "golden_answer": "Change the command to `pip install trafilatura[gui]`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Python code example uses an incorrect keyword argument `output='json'` in the `extract` function. The correct argument is `output_format`.",
+      "correction_candidates": [
+        "Change `output='json'` to `output_format='json'`.",
+        "Change `trafilatura.extract(downloaded, output='json')` to `trafilatura.extract(downloaded, to_json=True)`.",
+        "Change `trafilatura.extract(downloaded, output='json')` to `trafilatura.extract_json(downloaded)`.",
+        "Change `output='json'` to `format='json'`."
+      ],
+      "golden_answer": "Change `output='json'` to `output_format='json'`."
+    }
+  ]
+}

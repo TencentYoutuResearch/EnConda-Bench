@@ -1,0 +1,18 @@
+{
+  "readme": "matthiasvalvekens_pyhanko_error_readme_2_only_E4",
+  "repo_name": "matthiasvalvekens_pyhanko",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contribution guidelines points to a non-existent file 'docs/CONTRIBUTING.md' instead of the correct 'CONTRIBUTING.md' in the root directory, resulting in a broken link.",
+      "correction_candidates": [
+        "please make sure to review the [contribution guidelines](CONTRIBUTING.md) before making your contribution.",
+        "please make sure to review the [contribution guidelines](.github/CONTRIBUTING.md) before making your contribution.",
+        "please make sure to review the [contribution guidelines](docs/contributing.md) before making your contribution.",
+        "please make sure to review the [contribution guidelines](CONTRIBUTING) before making your contribution."
+      ],
+      "golden_answer": "please make sure to review the [contribution guidelines](CONTRIBUTING.md) before making your contribution."
+    }
+  ]
+}

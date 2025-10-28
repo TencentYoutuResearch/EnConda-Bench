@@ -1,0 +1,18 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_7_only_E1",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Missing required import for StartMode enum which is used in the code example",
+      "correction_candidates": [
+        "from aiogram_dialog import StartMode",
+        "from aiogram_dialog.manager import StartMode",
+        "from aiogram_dialog.enums import StartMode",
+        "from aiogram_dialog.api import StartMode"
+      ],
+      "golden_answer": "from aiogram_dialog import StartMode"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "beeware_briefcase_error_readme_7",
+  "repo_name": "beeware_briefcase",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Changed installation command to use 'python2' instead of 'python', which is incorrect for modern Python environments",
+      "correction_candidates": [
+        "$ python -m pip install briefcase",
+        "$ python3 -m pip install briefcase",
+        "$ pip install briefcase",
+        "$ py -m pip install briefcase"
+      ],
+      "golden_answer": "$ python -m pip install briefcase"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "States that Briefcase requires Python 2.7 or higher, which is incorrect as modern Briefcase requires Python 3.8+ and Python 2.7 is deprecated",
+      "correction_candidates": [
+        "Note: Briefcase requires Python 3.8 or higher.",
+        "Note: Briefcase requires Python 3.6 or higher for full functionality.",
+        "Note: Briefcase supports Python 3.7+ versions.",
+        "Note: Briefcase requires a modern Python version (3.8+)."
+      ],
+      "golden_answer": "Note: Briefcase requires Python 3.8 or higher."
+    }
+  ]
+}

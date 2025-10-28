@@ -1,0 +1,18 @@
+{
+  "readme": "google_trax_error_readme_2_only_E2",
+  "repo_name": "google_trax",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The shell command to remove the output directory, `!rm --r -f {output_dir}`, uses an incorrect flag `--r`. The correct flag for recursive deletion is `-r` or `-R`.",
+      "correction_candidates": [
+        "!rm -r -f {output_dir}",
+        "!rm -rf {output_dir}",
+        "!rm -R -f {output_dir}",
+        "!rmdir -p {output_dir}"
+      ],
+      "golden_answer": "!rm -rf {output_dir}"
+    }
+  ]
+}

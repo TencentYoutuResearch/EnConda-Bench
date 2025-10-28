@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_3_only_E2",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `python manage.py migrate --database=all` uses an invalid option `--database=all`. The correct usage is either no option (to migrate all databases) or `--database` followed by a specific database alias.",
+      "correction_candidates": [
+        "Replace the command with `python manage.py makemigrations`.",
+        "Change the command to `python manage.py migrate --all`.",
+        "Remove the `--database=all` option, leaving just `python manage.py migrate`.",
+        "Change the command to `python manage.py db migrate`."
+      ],
+      "golden_answer": "Remove the `--database=all` option, leaving just `python manage.py migrate`."
+    }
+  ]
+}

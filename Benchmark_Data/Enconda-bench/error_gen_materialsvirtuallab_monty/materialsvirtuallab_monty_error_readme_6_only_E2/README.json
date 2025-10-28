@@ -1,0 +1,18 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_6_only_E2",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Uses deprecated pip install syntax with invalid --config-settings and --global-option combination",
+      "correction_candidates": [
+        "Use standard pip install: pip install monty",
+        "Use pip with user flag: pip install --user monty",
+        "Use pip with verbose flag: pip install monty --verbose",
+        "Use conda instead: conda install -c conda-forge monty"
+      ],
+      "golden_answer": "Use standard pip install: pip install monty"
+    }
+  ]
+}

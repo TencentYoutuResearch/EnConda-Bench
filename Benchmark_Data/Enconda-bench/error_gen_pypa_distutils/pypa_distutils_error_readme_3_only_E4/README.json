@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_distutils_error_readme_3_only_E4",
+  "repo_name": "pypa_distutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README instructs users to modify a `distutils.cfg` file in the root directory, but this file does not exist in the repository and is not the standard way to configure the package.",
+      "correction_candidates": [
+        "Remove the sentence about modifying `distutils.cfg`.",
+        "Change the filename to `setup.cfg`, a more common configuration file.",
+        "Change the instruction to specify that configuration options are passed as command-line arguments to `setup.py`.",
+        "Add a note that the user must create `distutils.cfg` if it doesn't exist."
+      ],
+      "golden_answer": "Remove the sentence about modifying `distutils.cfg`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "open-power_op-test_error_readme_4_only_E4",
+  "repo_name": "open-power_op-test",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example command for flashing firmware uses a relative path `skiboot.lid.xz` for the `--flash-skiboot` argument, which is unlikely to exist in the current working directory and should be a full or user-relative path.",
+      "correction_candidates": [
+        "Change the command argument to `--flash-skiboot /tmp/skiboot.lid.xz`",
+        "Change the command argument to `--flash-skiboot file://~/skiboot/skiboot.lid.xz`",
+        "Change the command argument to `--flash-skiboot ~/skiboot/skiboot.lid.xz`",
+        "Change the command argument to `--flash-skiboot ./skiboot.lid.xz`"
+      ],
+      "golden_answer": "Change the command argument to `--flash-skiboot ~/skiboot/skiboot.lid.xz`"
+    }
+  ]
+}

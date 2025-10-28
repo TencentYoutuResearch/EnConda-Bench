@@ -1,0 +1,50 @@
+{
+  "agent": {
+    "name": "EnConda-Bench-Agent",
+    "version": "1.0.0",
+    "description": "Environment configuration analysis agent for EnConda-Bench",
+    "capabilities": [
+      "environment_analysis",
+      "dependency_detection",
+      "script_generation",
+      "error_identification"
+    ]
+  },
+  "execution": {
+    "mode": "analysis",
+    "timeout": 300,
+    "max_retries": 3,
+    "output_format": "json"
+  },
+  "analysis": {
+    "target_files": [
+      "README.md",
+      "requirements.txt",
+      "setup.py",
+      "pyproject.toml",
+      "environment.yml",
+      "Dockerfile"
+    ],
+    "error_detection": {
+      "enabled": true,
+      "error_types": [
+        "E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8"
+      ]
+    },
+    "script_generation": {
+      "enabled": true,
+      "shell_types": ["bash", "sh"],
+      "include_verification": true
+    }
+  },
+  "output": {
+    "include_analysis_report": true,
+    "include_generated_script": true,
+    "include_error_details": true,
+    "include_recommendations": true
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

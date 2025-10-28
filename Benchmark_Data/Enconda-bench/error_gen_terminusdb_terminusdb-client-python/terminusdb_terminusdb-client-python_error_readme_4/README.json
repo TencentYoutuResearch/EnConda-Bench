@@ -1,0 +1,29 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_4",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `Installation` section is missing the command for a standard installation. It only shows how to install with the `[dataframe]` extra, which forces an unnecessary dependency on users who only need the core client.",
+      "correction_candidates": [
+        "Add the standard installation command `python -m pip install terminusdb-client` before the section for installing with dataframe support.",
+        "Change `python -m pip install terminusdb-client[dataframe]` to `python -m pip install terminusdb-client` and add a note that pandas must be installed separately.",
+        "Remove the `[dataframe]` option from the `pip install` command, as it should be installed by default.",
+        "Add a new section titled 'Core Installation' with the command `python -m pip install terminusdb-client-core`."
+      ],
+      "golden_answer": "Add the standard installation command `python -m pip install terminusdb-client` before the section for installing with dataframe support."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "In the `Usage` section, a misleading comment `# The client automatically connects to the server, no need for client.connect()` has been added. This is incorrect, as `client.connect()` is a required step to establish a connection.",
+      "correction_candidates": [
+        "Remove the comment `# The client automatically connects to the server, no need for client.connect()`.",
+        "Change the comment to `# The client must explicitly connect to the server.`.",
+        "Remove the line `client.connect()` as the comment says it is not needed.",
+        "Change `client.connect()` to `client.connect(auto=True)`."
+      ],
+      "golden_answer": "Remove the comment `# The client automatically connects to the server, no need for client.connect()`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_5_only_E4",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect reference to requirements file path",
+      "correction_candidates": [
+        "For a complete list of requirements, see `requirements.txt`.",
+        "For a complete list of requirements, see `requirements/base.txt`.",
+        "For a complete list of requirements, see the `setup.py` file.",
+        "For a complete list of requirements, see `pyproject.toml`."
+      ],
+      "golden_answer": "For a complete list of requirements, see `requirements.txt`."
+    }
+  ]
+}

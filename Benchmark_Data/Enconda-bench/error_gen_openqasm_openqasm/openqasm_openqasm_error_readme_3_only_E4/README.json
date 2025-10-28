@@ -1,0 +1,18 @@
+{
+  "readme": "openqasm_openqasm_error_readme_3_only_E4",
+  "repo_name": "openqasm_openqasm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The instructions refer to a non-existent `./install.sh` script for installation, which will cause a 'file not found' error.",
+      "correction_candidates": [
+        "Installation should be done using `pip install -e .` from the project root.",
+        "The script is located in the `scripts/` directory: `./scripts/install.sh`.",
+        "The script must be made executable first with `chmod +x install.sh`.",
+        "Installation should be done by running `python setup.py install`."
+      ],
+      "golden_answer": "Installation should be done using `pip install -e .` from the project root."
+    }
+  ]
+}

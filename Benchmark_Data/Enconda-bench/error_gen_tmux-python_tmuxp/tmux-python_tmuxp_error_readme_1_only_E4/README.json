@@ -1,0 +1,18 @@
+{
+  "readme": "tmux-python_tmuxp_error_readme_1_only_E4",
+  "repo_name": "tmux-python_tmuxp",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README specifies an incorrect user configuration directory (`$HOME/.tmuxp.d/`) instead of one of the correct default locations (`$HOME/.config/tmuxp/` or `$HOME/.tmuxp/`).",
+      "correction_candidates": [
+        "`$XDG_CONFIG_HOME`, usually _$HOME/.config/tmuxp/_",
+        "`$XDG_CONFIG_HOME`, usually _$HOME/.tmuxp.conf/_",
+        "`$XDG_CONFIG_HOME`, usually _$HOME/tmuxp/config/_",
+        "`$XDG_CONFIG_HOME`, usually _$HOME/.tmuxp/_"
+      ],
+      "golden_answer": "`$XDG_CONFIG_HOME`, usually _$HOME/.config/tmuxp/_"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_google_uncertainty-baselines_error_readme_merge_k3",
+  "repo_name": "google_uncertainty-baselines",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command for the development version is incomplete and may not install the package correctly for import, as it is missing the '#egg=uncertainty_baselines' suffix.",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/google/uncertainty-baselines.git",
+        "pip install uncertainty_baselines @ git+https://github.com/google/uncertainty-baselines.git",
+        "pip install \"git+https://github.com/google/uncertainty-baselines.git#egg=uncertainty_baselines\"",
+        "git clone https://github.com/google/uncertainty-baselines.git && pip install -e uncertainty-baselines"
+      ],
+      "golden_answer": "pip install \"git+https://github.com/google/uncertainty-baselines.git#egg=uncertainty_baselines\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path provided for launching the BatchEnsemble baseline on a cloud TPU is incorrect. The script is located in the top-level 'baselines' directory, not within the 'uncertainty_baselines' package directory.",
+      "correction_candidates": [
+        "python baselines/cifar/batchensemble.py",
+        "python uncertainty_baselines/baselines/cifar/batchensemble.py",
+        "python scripts/cifar/batchensemble.py",
+        "python examples/cifar/batchensemble.py"
+      ],
+      "golden_answer": "python baselines/cifar/batchensemble.py"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly omit the need to manually install the main `tensorflow` package, implying it is either not needed or installed automatically.",
+      "correction_candidates": [
+        "For TensorFlow, you will need to install TensorFlow (`tensorflow` or `tf-nightly`), TensorFlow Addons (`tensorflow-addons` or `tfa-nightly`), and TensorBoard (`tensorboard` or `tb-nightly`).",
+        "The package will automatically install a compatible version of `tensorflow`.",
+        "The only required dependency is `tensorflow-addons`, which will pull in `tensorflow`.",
+        "Install all dependencies from the `requirements.txt` file using `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "For TensorFlow, you will need to install TensorFlow (`tensorflow` or `tf-nightly`), TensorFlow Addons (`tensorflow-addons` or `tfa-nightly`), and TensorBoard (`tensorboard` or `tb-nightly`)."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for uploading to TensorBoard.dev uses an incorrect flag `--log_dir` instead of the correct `--logdir`.",
+      "correction_candidates": [
+        "tensorboard dev upload --logdir MODEL_DIR",
+        "tensorboard upload --logdir MODEL_DIR",
+        "tensorboard dev --logdir MODEL_DIR",
+        "tensorboard dev upload --path MODEL_DIR"
+      ],
+      "golden_answer": "tensorboard dev upload --logdir MODEL_DIR"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instruction for using datasets in a notebook incorrectly advises disabling eager execution (`tf.compat.v1.disable_eager_execution()`), which is the opposite of what is needed and will cause errors.",
+      "correction_candidates": [
+        "one may need to activate tf earger execution mode `tf.compat.v1.enable_eager_execution()`.",
+        "one must use TensorFlow 1.x by running `%tensorflow_version 1.x`.",
+        "eager execution is not supported and should be disabled.",
+        "one must wrap the dataset loading in a `tf.function`."
+      ],
+      "golden_answer": "one may need to activate tf earger execution mode `tf.compat.v1.enable_eager_execution()`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The instructions for adding a new dataset reference an incorrect file path 'docs/references.md' for bibtex entries; the correct file is 'references.md' in the root directory.",
+      "correction_candidates": [
+        "Add the bibtex reference to `references.md`.",
+        "Add the bibtex reference to `CITATIONS.md`.",
+        "Add the bibtex reference to the main `README.md`.",
+        "Add the bibtex reference to `docs/bibtex.bib`."
+      ],
+      "golden_answer": "Add the bibtex reference to `references.md`."
+    }
+  ]
+}

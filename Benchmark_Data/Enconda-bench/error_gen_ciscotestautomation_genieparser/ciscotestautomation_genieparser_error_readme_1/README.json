@@ -1,0 +1,29 @@
+{
+  "readme": "ciscotestautomation_genieparser_error_readme_1",
+  "repo_name": "ciscotestautomation_genieparser",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command is incomplete. It installs the base 'pyats' package but omits the '[full]' extra, which is required to install all components including genieparser.",
+      "correction_candidates": [
+        "$ pip install pyats --all",
+        "$ pip install pyats-full",
+        "$ pip install 'pyats[full]'",
+        "$ pip install pyats && pip install genie"
+      ],
+      "golden_answer": "$ pip install 'pyats[full]'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The 'git clone' command is missing the repository's full URL, making it impossible to clone the project.",
+      "correction_candidates": [
+        "bash$ git clone https://github.com/CiscoTestAutomation/genieparser.git",
+        "bash$ git clone --repo https://github.com/CiscoTestAutomation/genieparser.git",
+        "bash$ git clone git@github.com:CiscoTestAutomation/genieparser.git",
+        "bash$ git pull https://github.com/CiscoTestAutomation/genieparser.git"
+      ],
+      "golden_answer": "bash$ git clone https://github.com/CiscoTestAutomation/genieparser.git"
+    }
+  ]
+}

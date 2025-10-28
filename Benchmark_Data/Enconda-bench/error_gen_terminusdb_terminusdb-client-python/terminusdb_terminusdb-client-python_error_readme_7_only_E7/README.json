@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_7_only_E7",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed TerminusDB version requirement from v10.0 to v9.0, creating version compatibility issues",
+      "correction_candidates": [
+        "TerminusDB v10.0",
+        "TerminusDB v11.0",
+        "TerminusDB v9.5",
+        "TerminusDB latest"
+      ],
+      "golden_answer": "TerminusDB v10.0"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "openqasm_openqasm_error_readme_3_only_E1",
+  "repo_name": "openqasm_openqasm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The text mentions that the installation will include a dependency named `openqasm-helpers`, which is a fictitious and non-existent package.",
+      "correction_candidates": [
+        "The correct package name is `qasm-helpers`.",
+        "Remove the mention of the non-existent `openqasm-helpers` package.",
+        "The dependencies are `antlr4-python3-runtime` and `numpy`.",
+        "All required dependencies are listed in the `requirements.txt` file."
+      ],
+      "golden_answer": "Remove the mention of the non-existent `openqasm-helpers` package."
+    }
+  ]
+}

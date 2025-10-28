@@ -1,0 +1,18 @@
+{
+  "readme": "pypa_distutils_error_readme_7_only_E2",
+  "repo_name": "pypa_distutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect module name 'distutil' instead of 'distutils' in the command",
+      "correction_candidates": [
+        "Change to python -m distutils build --force",
+        "Change to python -m distutils.core build --force",
+        "Change to python setup.py build --force",
+        "Change to python -m pip install distutils"
+      ],
+      "golden_answer": "Change to python -m distutils build --force"
+    }
+  ]
+}

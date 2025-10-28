@@ -1,0 +1,29 @@
+{
+  "readme": "tensorflow_model-analysis_error_readme_6",
+  "repo_name": "tensorflow_model-analysis",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified a specific TensorFlow version requirement that conflicts with the compatibility table",
+      "correction_candidates": [
+        "TensorFlow is required.",
+        "TensorFlow 2.15 or higher is required.",
+        "TensorFlow 1.15 or 2.x is required.",
+        "Any version of TensorFlow is supported."
+      ],
+      "golden_answer": "TensorFlow is required."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command syntax for pip install with missing package specifier",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -e $FOLDER_OF_THE_LOCAL_LOCATION",
+        "pip install --editable $FOLDER_OF_THE_LOCAL_LOCATION",
+        "pip install -e ./tensorflow_model_analysis"
+      ],
+      "golden_answer": "pip install -e $FOLDER_OF_THE_LOCAL_LOCATION"
+    }
+  ]
+}

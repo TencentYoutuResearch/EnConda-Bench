@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_pysnmp_pysnmp_error_readme_merge_k2",
+  "repo_name": "pysnmp_pysnmp",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The provided `pip install` command includes the `--no-dependencies` flag, which prevents the installation of required libraries like `pyasn1` and `pysmi`.",
+      "correction_candidates": [
+        "Change the command to `pip install pysnmplib`.",
+        "Change the command to `pip install pysnmplib --only-binary :all:`.",
+        "Change the command to `pip install pysnmplib[crypto]` to include all dependencies.",
+        "Change the command to `pip3 install pysnmplib`."
+      ],
+      "golden_answer": "Change the command to `pip install pysnmplib`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The documentation omits `PyCryptodomex` from the list of dependencies, which is required for using SNMPv3 encryption features.",
+      "correction_candidates": [
+        "Add `PyCryptodomex` to the list, noting it's required for all SNMPv3 functionality.",
+        "Add `PyCryptodomex (required only if SNMPv3 encryption is in use)` to the dependency list.",
+        "Add `PyCrypto` to the dependency list, as it is the cryptographic library used.",
+        "The `pip install pysnmplib` command automatically handles all dependencies, so the list is not needed."
+      ],
+      "golden_answer": "Add `PyCryptodomex (required only if SNMPv3 encryption is in use)` to the dependency list."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly advise running `pip install pysnmplib` before creating and activating the virtual environment, which installs the package in the global Python environment instead of the isolated one.",
+      "correction_candidates": [
+        "The steps should be: create venv, activate venv, then pip install.",
+        "The `pip install` command should use the `--user` flag to avoid global installation.",
+        "Remove the virtual environment steps as they are not strictly necessary.",
+        "The `pip install` command should be run inside the virtual environment shell script."
+      ],
+      "golden_answer": "The steps should be: create venv, activate venv, then pip install."
+    }
+  ]
+}

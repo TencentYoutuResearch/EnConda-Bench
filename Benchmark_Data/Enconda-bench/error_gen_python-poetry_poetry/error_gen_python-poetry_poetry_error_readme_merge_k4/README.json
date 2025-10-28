@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_python-poetry_poetry_error_readme_merge_k4",
+  "repo_name": "python-poetry_poetry",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the `pyproject.toml` example, the specified Python version `python = '>=3.5'` is incompatible with the `aiohttp = '^3.8.1'` dependency, which requires Python 3.6 or newer.",
+      "correction_candidates": [
+        "Change the python version to `python = '>=3.6'` to meet the requirement of aiohttp.",
+        "Remove the `aiohttp` dependency entirely.",
+        "Change the aiohttp version to `aiohttp = '<3.8'`.",
+        "Change the python version to `python = '~3.5'`."
+      ],
+      "golden_answer": "Change the python version to `python = '>=3.6'` to meet the requirement of aiohttp."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `pyproject.toml` example, the script definition `my-script: \"my_package.main\"` uses a colon instead of an equals sign, which is invalid TOML syntax for key-value pairs.",
+      "correction_candidates": [
+        "my-script = \"my_package:main\"",
+        "my-script: \"my_package:main()\"",
+        "script = \"my-script:my_package.main\"",
+        "my-script = [\"my_package:main\"]"
+      ],
+      "golden_answer": "my-script = \"my_package:main\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the `pyproject.toml` example, the readme files are listed as `README.rst` and `LICENSE.txt`, but the correct files in the repository are `README.md` and `LICENSE`.",
+      "correction_candidates": [
+        "Change the readme entry to `readme = [\"README.md\", \"LICENSE\"]`.",
+        "Change the readme entry to `readme = \"README.md\"`.",
+        "Remove the `readme` entry from the `pyproject.toml` file.",
+        "Rename the files in the repository to `README.rst` and `LICENSE.txt`."
+      ],
+      "golden_answer": "Change the readme entry to `readme = [\"README.md\", \"LICENSE\"]`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation section incorrectly suggests installing with `pip install python-poetry`. The correct package name on PyPI is `poetry`, and the recommended installation method is the official script, not pip.",
+      "correction_candidates": [
+        "Replace the incorrect pip instruction with a reference to the official installer script at [install.python-poetry.org].",
+        "Correct the command to `pip install poetry`.",
+        "Correct the command to `pip install poetry --user`.",
+        "Suggest installing with `conda install poetry`."
+      ],
+      "golden_answer": "Replace the incorrect pip instruction with a reference to the official installer script at [install.python-poetry.org]."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the `pyproject.toml` example, the dev dependencies are defined under `[tool.poetry.dev-dependencies]`, which is a deprecated syntax. The correct modern syntax is `[tool.poetry.group.dev.dependencies]`.",
+      "correction_candidates": [
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.group.dev.dependencies]`.",
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.dependencies.dev]`.",
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.dev-dependencies]`.",
+        "Add `optional = true` under the `[tool.poetry.dev-dependencies]` section."
+      ],
+      "golden_answer": "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.group.dev.dependencies]`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Related Projects' section, the URL for `poetry-core` incorrectly points to a subpath of the main poetry repository (`.../poetry/core`) instead of its own repository (`.../poetry-core`).",
+      "correction_candidates": [
+        "Correct the URL to `https://github.com/python-poetry/poetry-core`.",
+        "Correct the URL to `https://github.com/python-poetry/poetry-core.git`.",
+        "Change the link text to `poetry/core` to match the incorrect URL.",
+        "Remove the `poetry-core` project from the list."
+      ],
+      "golden_answer": "Correct the URL to `https://github.com/python-poetry/poetry-core`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added installation instructions that install dependencies before Poetry itself, which is incorrect order",
+      "correction_candidates": [
+        "Install Poetry first using the official installer, then run poetry install to install project dependencies",
+        "Run poetry install directly after installing Poetry through the official method",
+        "First create a virtual environment, then install Poetry, then run poetry install",
+        "Use pip install poetry first, then run poetry install for project dependencies"
+      ],
+      "golden_answer": "Install Poetry first using the official installer, then run poetry install to install project dependencies"
+    }
+  ]
+}

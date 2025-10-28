@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_idaholab_civet_error_readme_merge_k3",
+  "repo_name": "idaholab_civet",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions attempt to install pip dependencies before the virtual environment has been created and activated, which will cause them to be installed globally or fail.",
+      "correction_candidates": [
+        "Run `pip install --user -r requirements.txt` instead of installing into a virtual environment.",
+        "The steps should be reordered: 1. Create venv, 2. Activate venv, 3. Install pip dependencies, 4. Install system dependencies.",
+        "Combine the creation and installation steps into a single setup script.",
+        "Remove the virtual environment steps and install all dependencies globally."
+      ],
+      "golden_answer": "The steps should be reordered: 1. Create venv, 2. Activate venv, 3. Install pip dependencies, 4. Install system dependencies."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `sudo yum install` is specific to RHEL-based Linux distributions (like CentOS) and will fail on Debian-based systems (like Ubuntu).",
+      "correction_candidates": [
+        "Replace `sudo yum install gcc python3-devel` with `sudo apt-get install build-essential python3-dev` for Debian/Ubuntu systems.",
+        "Remove the `sudo yum install` command, as these dependencies might already be installed.",
+        "Provide instructions for both package managers, for example: 'For RHEL/CentOS, run `sudo yum install ...`. For Debian/Ubuntu, run `sudo apt-get install ...`.'",
+        "Use `pip` to install these dependencies instead of a system package manager."
+      ],
+      "golden_answer": "Provide instructions for both package managers, for example: 'For RHEL/CentOS, run `sudo yum install ...`. For Debian/Ubuntu, run `sudo apt-get install ...`.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to create a virtual environment, `python3 -m venv --new .venv`, uses an invalid argument `--new`. The correct command does not use this flag.",
+      "correction_candidates": [
+        "Replace `python3 -m venv --new .venv` with `python3 -m venv .venv`.",
+        "Replace the command with `virtualenv .venv`.",
+        "Change the command to `python3 -m venv --create .venv`.",
+        "The command should be `python3 --venv .venv`."
+      ],
+      "golden_answer": "Replace `python3 -m venv --new .venv` with `python3 -m venv .venv`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command `pip install -r requirements/all.txt` points to a file path that does not exist in the repository. The requirements file is typically at the root.",
+      "correction_candidates": [
+        "Run `find . -name \"*.txt\"` to locate the correct requirements file.",
+        "Change the file path from `requirements/all.txt` to `requirements.txt`.",
+        "Create the directory and file by running `mkdir requirements && pip freeze > requirements/all.txt`.",
+        "Change the file path to `civet/requirements.txt`."
+      ],
+      "golden_answer": "Change the file path from `requirements/all.txt` to `requirements.txt`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a requirements.txt file that doesn't exist in the repository",
+      "correction_candidates": [
+        "Remove the pip install -r requirements.txt line entirely",
+        "Change requirements.txt to setup.py dependencies",
+        "Create a requirements.txt file with necessary dependencies",
+        "Replace with pip install civet command"
+      ],
+      "golden_answer": "Remove the pip install -r requirements.txt line entirely"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Installing dependencies before creating and activating virtual environment",
+      "correction_candidates": [
+        "Move virtual environment activation before pip install commands",
+        "Create virtual environment with python -m venv venv first",
+        "Use conda environment instead of venv",
+        "Install system-wide without virtual environment"
+      ],
+      "golden_answer": "Move virtual environment activation before pip install commands"
+    }
+  ]
+}

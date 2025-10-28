@@ -1,0 +1,29 @@
+{
+  "readme": "democracyclub_uk-polling-stations_error_readme_1",
+  "repo_name": "democracyclub_uk-polling-stations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The 'Install front-end dependencies' section is placed before the Python dependencies are installed, which is an illogical order for a Django project.",
+      "correction_candidates": [
+        "The 'Install front-end dependencies' section should be moved after the 'Run migrations' section.",
+        "The 'Install front-end dependencies' section should be moved after 'Install python dependencies'.",
+        "The 'Install python dependencies' section should be moved to be immediately after 'Install system dependencies'.",
+        "The 'Install front-end dependencies' section should be moved to the end of the 'Getting Started' section."
+      ],
+      "golden_answer": "The 'Install front-end dependencies' section should be moved after 'Install python dependencies'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Create database' section, the `createuser` command uses an incorrect flag `-p` which specifies a port, instead of `-P` which prompts for a password.",
+      "correction_candidates": [
+        "sudo -u postgres createuser dc -P -s",
+        "sudo -u postgres createuser dc --password --superuser",
+        "sudo -u postgres createuser dc -s && sudo -u postgres psql -c \"ALTER USER dc WITH PASSWORD 'your_password';\"",
+        "createuser dc -P -s --user=postgres"
+      ],
+      "golden_answer": "sudo -u postgres createuser dc -P -s"
+    }
+  ]
+}

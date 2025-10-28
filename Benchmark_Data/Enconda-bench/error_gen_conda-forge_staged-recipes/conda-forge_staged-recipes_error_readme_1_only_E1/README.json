@@ -1,0 +1,18 @@
+{
+  "readme": "conda-forge_staged-recipes_error_readme_1_only_E1",
+  "repo_name": "conda-forge_staged-recipes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command for installing grayskull is missing the required conda-forge channel, which may lead to the package not being found or an outdated version being installed.",
+      "correction_candidates": [
+        "pip install grayskull",
+        "conda install -c conda-forge grayskull",
+        "conda install anaconda grayskull",
+        "conda install grayskull --channel conda-forge"
+      ],
+      "golden_answer": "conda install -c conda-forge grayskull"
+    }
+  ]
+}

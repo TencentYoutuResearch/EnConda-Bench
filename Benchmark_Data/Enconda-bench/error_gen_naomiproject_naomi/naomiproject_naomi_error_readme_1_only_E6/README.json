@@ -1,0 +1,18 @@
+{
+  "readme": "naomiproject_naomi_error_readme_1_only_E6",
+  "repo_name": "naomiproject_naomi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. It attempts to install pip dependencies globally before creating and activating the virtual environment, which defeats the purpose of the environment.",
+      "correction_candidates": [
+        "Move step 3 (`pip install -r requirements.txt`) to be after step 4 (creating and activating the venv).",
+        "Remove the virtual environment steps (step 4) and install dependencies globally.",
+        "Change `pip install` to `pip install --user` to avoid needing sudo permissions.",
+        "Combine steps 3 and 4 into a single script to ensure correct order."
+      ],
+      "golden_answer": "Move step 3 (`pip install -r requirements.txt`) to be after step 4 (creating and activating the venv)."
+    }
+  ]
+}

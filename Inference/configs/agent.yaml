@@ -1,0 +1,28 @@
+agent:
+  api_key: ""  # Set your API key here or via environment variable
+  base_url: "https://api.openai.com/v1"
+  model_name: "gpt-4"
+  max_tokens: 4000
+  temperature: 0.1
+
+data:
+  data_root_dir: "./benchmark_data"
+  source_root_dir: "./source_repos"
+  sampling:
+    enabled: false
+    sample_size: 100
+    random_seed: 42
+
+output:
+  output_dir: "./output"
+
+processing:
+  max_workers: 1
+
+execution:
+  agent_executable: "python"
+  agent_script_path: "./agent/swe_agent_wrapper.py"
+  agent_timeout: 300
+  agent_work_dir: "./agent_workspace"
+  agent_config_template: "./configs/agent_config_template.json"
+  swe_agent_path: "./swe-agent"

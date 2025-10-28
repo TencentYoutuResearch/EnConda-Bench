@@ -1,0 +1,18 @@
+{
+  "readme": "gpflow_gpflow_error_readme_2_only_E1",
+  "repo_name": "gpflow_gpflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions unnecessarily advise running `pip install tensorflow` before `pip install gpflow`. This is redundant as `gpflow` specifies TensorFlow as a dependency, and it can lead to version conflicts if an incompatible version of TensorFlow is installed manually.",
+      "correction_candidates": [
+        "Remove the `pip install tensorflow` command.",
+        "Change the order to `pip install gpflow` then `pip install tensorflow`.",
+        "Combine the commands: `pip install gpflow tensorflow`.",
+        "Specify a version: `pip install tensorflow>=2.4` then `pip install gpflow`."
+      ],
+      "golden_answer": "Remove the `pip install tensorflow` command."
+    }
+  ]
+}

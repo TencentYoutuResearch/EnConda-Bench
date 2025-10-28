@@ -1,0 +1,29 @@
+{
+  "readme": "python-poetry_poetry_error_readme_4",
+  "repo_name": "python-poetry_poetry",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the `pyproject.toml` example, the dev dependencies are defined under `[tool.poetry.dev-dependencies]`, which is a deprecated syntax. The correct modern syntax is `[tool.poetry.group.dev.dependencies]`.",
+      "correction_candidates": [
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.group.dev.dependencies]`.",
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.dependencies.dev]`.",
+        "Replace `[tool.poetry.dev-dependencies]` with `[tool.dev-dependencies]`.",
+        "Add `optional = true` under the `[tool.poetry.dev-dependencies]` section."
+      ],
+      "golden_answer": "Replace `[tool.poetry.dev-dependencies]` with `[tool.poetry.group.dev.dependencies]`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Related Projects' section, the URL for `poetry-core` incorrectly points to a subpath of the main poetry repository (`.../poetry/core`) instead of its own repository (`.../poetry-core`).",
+      "correction_candidates": [
+        "Correct the URL to `https://github.com/python-poetry/poetry-core`.",
+        "Correct the URL to `https://github.com/python-poetry/poetry-core.git`.",
+        "Change the link text to `poetry/core` to match the incorrect URL.",
+        "Remove the `poetry-core` project from the list."
+      ],
+      "golden_answer": "Correct the URL to `https://github.com/python-poetry/poetry-core`."
+    }
+  ]
+}

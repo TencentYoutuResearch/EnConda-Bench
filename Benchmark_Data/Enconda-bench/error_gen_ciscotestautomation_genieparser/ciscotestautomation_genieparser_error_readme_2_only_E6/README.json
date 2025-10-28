@@ -1,0 +1,18 @@
+{
+  "readme": "ciscotestautomation_genieparser_error_readme_2_only_E6",
+  "repo_name": "ciscotestautomation_genieparser",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The development setup commands are in the wrong order. 'make develop' is executed before changing into the 'genieparser' directory, which will cause the command to fail.",
+      "correction_candidates": [
+        "bash$ make -C genieparser develop",
+        "bash$ cd genieparser && make develop",
+        "bash$ cd genieparser; make develop",
+        "bash$ cd genieparser\nbash$ make develop"
+      ],
+      "golden_answer": "bash$ cd genieparser\nbash$ make develop"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "apiflask_apiflask_error_readme_4_only_E2",
+  "repo_name": "apiflask_apiflask",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the application in debug mode is incorrect. `flask debug` is not a valid command; the `--debug` flag should be used with the `run` command.",
+      "correction_candidates": [
+        "Change the command to `$ flask run --debug`.",
+        "Change the command to `$ flask --debug run`.",
+        "Change the command to `$ flask run --mode=debug`.",
+        "Add `app.run(debug=True)` to the Python script and use `$ python app.py`."
+      ],
+      "golden_answer": "Change the command to `$ flask run --debug`."
+    }
+  ]
+}

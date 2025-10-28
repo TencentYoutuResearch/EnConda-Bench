@@ -1,0 +1,18 @@
+{
+  "readme": "nabla-ntnu_nablaweb_error_readme_3_only_E2",
+  "repo_name": "nabla-ntnu_nablaweb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to automatically format code is listed as 'make format', but the correct command defined in the project's Makefile is 'make fixme'.",
+      "correction_candidates": [
+        "Change 'make format' to 'make fixme'.",
+        "Change 'make format' to 'pipenv run black . && pipenv run isort .'.",
+        "Change 'make format' to 'make style'.",
+        "Change 'make format' to 'make check-fix'."
+      ],
+      "golden_answer": "Change 'make format' to 'make fixme'."
+    }
+  ]
+}

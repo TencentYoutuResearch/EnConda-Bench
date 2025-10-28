@@ -1,0 +1,18 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_2_only_E4",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The README specifies an incorrect path `config/requirements.txt` for the requirements file. The file is located in the root directory.",
+      "correction_candidates": [
+        "Change the path from `config/requirements.txt` to `requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `./requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `project/requirements.txt`.",
+        "Change the path from `config/requirements.txt` to `docs/requirements.txt`."
+      ],
+      "golden_answer": "Change the path from `config/requirements.txt` to `requirements.txt`."
+    }
+  ]
+}

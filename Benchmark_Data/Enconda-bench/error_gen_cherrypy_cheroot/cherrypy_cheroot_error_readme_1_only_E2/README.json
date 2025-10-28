@@ -1,0 +1,18 @@
+{
+  "readme": "cherrypy_cheroot_error_readme_1_only_E2",
+  "repo_name": "cherrypy_cheroot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to execute the test suite, `pytest --run`, uses a non-existent flag `--run`, which causes the command to fail.",
+      "correction_candidates": [
+        "pytest",
+        "python -m pytest",
+        "py.test",
+        "pytest --execute"
+      ],
+      "golden_answer": "pytest"
+    }
+  ]
+}

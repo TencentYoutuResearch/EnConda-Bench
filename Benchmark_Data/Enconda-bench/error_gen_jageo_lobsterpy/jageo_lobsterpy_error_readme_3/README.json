@@ -1,0 +1,29 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_3",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions for creating and activating a virtual environment are placed after the package installation commands, which is the wrong logical order. The environment should be created before installation.",
+      "correction_candidates": [
+        "Move the 'Recommended: Virtual Environment' section before the 'Standard installation' section.",
+        "Change `python -m venv venv` to `conda create -n lobsterpy_env python=3.9`.",
+        "Remove the 'Recommended: Virtual Environment' section as pip handles this automatically.",
+        "Add `pip install virtualenv` before creating the environment."
+      ],
+      "golden_answer": "Move the 'Recommended: Virtual Environment' section before the 'Standard installation' section."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `lobsterpy plot --bonds 1,2` uses an incorrect flag and syntax to specify which bonds to plot.",
+      "correction_candidates": [
+        "``lobsterpy plot --bonds \"1 2\"`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot 1,2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot --bond 1 --bond 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``.",
+        "``lobsterpy plot 1 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``."
+      ],
+      "golden_answer": "``lobsterpy plot 1 2`` will plot COHPs of the first and second bond from ``COHPCAR.lobster``."
+    }
+  ]
+}

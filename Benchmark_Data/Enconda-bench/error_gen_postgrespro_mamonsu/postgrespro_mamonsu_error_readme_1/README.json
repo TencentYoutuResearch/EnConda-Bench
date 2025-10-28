@@ -1,0 +1,29 @@
+{
+  "readme": "postgrespro_mamonsu_error_readme_1",
+  "repo_name": "postgrespro_mamonsu",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Build deb' section, the command `dpkg -x` is used, which extracts files from a package archive. The correct command to install a .deb package is `dpkg -i`.",
+      "correction_candidates": [
+        "dpkg -i mamonsu*.deb",
+        "apt-get install ./mamonsu*.deb",
+        "dpkg --install mamonsu*.deb",
+        "dpkg --unpack mamonsu*.deb && apt-get install -f"
+      ],
+      "golden_answer": "dpkg -i mamonsu*.deb"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Usage > Configuration' section, the `CREATE DATABASE` command is executed before the `CREATE USER` command. This will fail because the user `mamonsu_user` specified as the `OWNER` does not exist yet.",
+      "correction_candidates": [
+        "Swap the `CREATE USER` and `CREATE DATABASE` blocks so the user is created before being assigned as the database owner.",
+        "Remove `OWNER mamonsu_user` from the `CREATE DATABASE` command and add `ALTER DATABASE mamonsu_database OWNER TO mamonsu_user;` after the `CREATE USER` command.",
+        "Combine the commands into a single `psql` block, ensuring `CREATE USER` comes first.",
+        "Change the `CREATE DATABASE` command to `CREATE DATABASE mamonsu_database;` and run `GRANT ALL PRIVILEGES ON DATABASE mamonsu_database TO mamonsu_user;` after creating the user."
+      ],
+      "golden_answer": "Swap the `CREATE USER` and `CREATE DATABASE` blocks so the user is created before being assigned as the database owner."
+    }
+  ]
+}

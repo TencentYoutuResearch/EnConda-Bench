@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_dtmilano_androidviewclient_error_readme_merge_k2",
+  "repo_name": "dtmilano_androidviewclient",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README states the tool supports Python 3.6+ but also claims it is only tested with Python 2.7, which is contradictory and misleading.",
+      "correction_candidates": [
+        "Remove the sentence 'This package is only tested with Python 2.7.'",
+        "Change 'Python 3.6 and above' to 'Python 2.7'.",
+        "Add a note saying 'For Python 3, use the culebra-py3 package instead.'",
+        "Change the sentence to 'This package is primarily tested with Python 3.6 but maintains backward compatibility with 2.7.'"
+      ],
+      "golden_answer": "Remove the sentence 'This package is only tested with Python 2.7.'"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The installation command `pip3 install androidviewclient --update` is incorrect. The `--update` flag is not a valid pip command for upgrading a package; the correct flag is `--upgrade`.",
+      "correction_candidates": [
+        "pip3 install androidviewclient --upgrade",
+        "pip3 install androidviewclient --latest",
+        "pip3 install --update androidviewclient",
+        "pip3 install androidviewclient -U"
+      ],
+      "golden_answer": "pip3 install androidviewclient --upgrade"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that `python-monkeyrunner` is a legacy dependency that must be installed. The tool is pure Python and does not require this system package.",
+      "correction_candidates": [
+        "Remove the command `apt-get install python-monkeyrunner` and the preceding text.",
+        "Change `apt-get install python-monkeyrunner` to `pip3 install monkeyrunner`.",
+        "Add a note that `python-monkeyrunner` is only required for Android versions below 5.0.",
+        "Replace `apt-get install python-monkeyrunner` with `sudo apt-get install android-sdk`."
+      ],
+      "golden_answer": "Remove the command `apt-get install python-monkeyrunner` and the preceding text."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong logical order. The package is installed globally with pip before the virtual environment is created and activated, defeating the purpose of the venv.",
+      "correction_candidates": [
+        "Move the `pip3 install` command to be after the `source venv/bin/activate` command.",
+        "Remove the virtual environment creation steps (`python3 -m venv venv` and `source venv/bin/activate`).",
+        "Change the installation to `python3 -m pip install androidviewclient --upgrade` and place it after activating the venv.",
+        "Combine all commands into a single line: `python3 -m venv venv && source venv/bin/activate && pip3 install androidviewclient --upgrade`."
+      ],
+      "golden_answer": "Move the `pip3 install` command to be after the `source venv/bin/activate` command."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "neptune-ai_neptune-client_error_readme_1_only_E2",
+  "repo_name": "neptune-ai_neptune-client",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `neptune.init_run()` function in the 'Getting started' code snippet uses an incorrect parameter `project_name`. The correct parameter is `project`.",
+      "correction_candidates": [
+        "run = neptune.init_run(project=\"workspace-name/project-name\")",
+        "run = neptune.init(project=\"workspace-name/project-name\")",
+        "run = neptune.init_run(name=\"workspace-name/project-name\")",
+        "run = neptune.init_run(workspace=\"workspace-name\", project=\"project-name\")"
+      ],
+      "golden_answer": "run = neptune.init_run(project=\"workspace-name/project-name\")"
+    }
+  ]
+}

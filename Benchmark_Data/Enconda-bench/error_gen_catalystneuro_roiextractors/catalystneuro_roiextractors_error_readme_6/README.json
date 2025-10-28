@@ -1,0 +1,29 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_6",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified an outdated version (0.4.2) instead of installing the latest stable release",
+      "correction_candidates": [
+        "pip3 install roiextractors",
+        "pip install roiextractors --upgrade",
+        "pip install roiextractors>=1.0.0",
+        "pip install --no-cache-dir roiextractors"
+      ],
+      "golden_answer": "pip3 install roiextractors"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect pip parameter '-f requirements.yaml' which is for finding links, not installing from requirements file",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -e . -r requirements.txt",
+        "pip install -e . --find-links requirements.yaml",
+        "pip install -e . && pip install -r requirements.yaml"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

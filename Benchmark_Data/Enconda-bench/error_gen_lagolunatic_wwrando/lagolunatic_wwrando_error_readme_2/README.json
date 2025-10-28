@@ -1,0 +1,29 @@
+{
+  "readme": "lagolunatic_wwrando_error_readme_2",
+  "repo_name": "lagolunatic_wwrando",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions tell the user to install Python dependencies before cloning the repository, which is impossible as the `requirements.txt` file is located within the repository and will not be found.",
+      "correction_candidates": [
+        "Move the 'clone this repository' step to be before the 'install dependencies' step.",
+        "Instruct the user to manually download `requirements.txt` from the repository before running the installation command.",
+        "Move the 'install Python' step after the 'clone this repository' step.",
+        "Combine the cloning and dependency installation steps into a single script."
+      ],
+      "golden_answer": "Move the 'clone this repository' step to be before the 'install dependencies' step."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The pip command for installing dependencies is missing the `-r` flag, causing pip to try to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change the command to `py -3.12 -m pip install -r requirements.txt` on Windows.",
+        "Change the command to `py -3.12 -m pip install --requirement requirements.txt` on Windows.",
+        "Change the command to `cat requirements.txt | xargs py -3.12 -m pip install` on Windows.",
+        "Change the command to `py -3.12 -m pip install -f requirements.txt` on Windows."
+      ],
+      "golden_answer": "Change the command to `py -3.12 -m pip install -r requirements.txt` on Windows."
+    }
+  ]
+}

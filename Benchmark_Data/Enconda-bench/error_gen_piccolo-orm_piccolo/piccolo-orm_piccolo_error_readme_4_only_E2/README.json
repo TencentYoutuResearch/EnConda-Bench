@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_4_only_E2",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install piccolo --all-extras` is not a valid pip command. The `--all-extras` flag is incorrect syntax for installing optional dependencies.",
+      "correction_candidates": [
+        "Run `pip install piccolo --with-all`.",
+        "Run `pip install 'piccolo[all]'`.",
+        "Run `pip install piccolo --install-option='[all]'`.",
+        "Run `pip install piccolo-all`."
+      ],
+      "golden_answer": "Run `pip install 'piccolo[all]'`."
+    }
+  ]
+}

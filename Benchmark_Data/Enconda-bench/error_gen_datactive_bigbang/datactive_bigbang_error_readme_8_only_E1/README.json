@@ -1,0 +1,18 @@
+{
+  "readme": "datactive_bigbang_error_readme_8_only_E1",
+  "repo_name": "datactive_bigbang",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Adding Docker as an unnecessary dependency that is not actually required for BigBang installation",
+      "correction_candidates": [
+        "Remove Docker from the list of required dependencies",
+        "Keep only Git and Pip as the required dependencies",
+        "Delete the Docker requirement since it's not used in installation",
+        "Remove ', and Docker' from the dependencies list"
+      ],
+      "golden_answer": "Remove ', and Docker' from the dependencies list"
+    }
+  ]
+}

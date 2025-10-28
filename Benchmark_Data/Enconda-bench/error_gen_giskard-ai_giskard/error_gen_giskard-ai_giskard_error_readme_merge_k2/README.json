@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_giskard-ai_giskard_error_readme_merge_k2",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install giskard -U` is missing the `[llm]` extra, which is required to install dependencies for LLM-related features used in the quickstart.",
+      "correction_candidates": [
+        "pip install \"giskard[llm,rag]\" -U",
+        "pip install giskard-llm -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard --all-extras -U"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install langchain tiktoken \"pypdf<=3.17.0\" --no-deps` incorrectly uses the `--no-deps` flag, which prevents pip from installing the necessary dependencies for these packages, leading to runtime errors.",
+      "correction_candidates": [
+        "pip install langchain tiktoken \"pypdf<=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --force-reinstall",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\" --ignore-installed",
+        "pip install langchain tiktoken pypdf"
+      ],
+      "golden_answer": "pip install langchain tiktoken \"pypdf<=3.17.0\""
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The command `pip install langchain tiktoken \"pypdf==4.0.0\"` installs a version of `pypdf` that has breaking changes and is likely incompatible with the `PyPDFLoader` used in the code, causing potential errors.",
+      "correction_candidates": [
+        "pip install langchain tiktoken \"pypdf\"",
+        "pip install langchain tiktoken \"pypdf>=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf<=3.17.0\"",
+        "pip install langchain tiktoken \"pypdf~=3.17\""
+      ],
+      "golden_answer": "pip install langchain tiktoken \"pypdf<=3.17.0\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL provided to `PyPDFLoader` for the IPCC report is incorrect, leading to a file not found error when the loader tries to fetch the document.",
+      "correction_candidates": [
+        "loader = PyPDFLoader(\"IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/IPCC_AR6_SYR_LongerReport.pdf\")",
+        "loader = PyPDFLoader(\"https://raw.githubusercontent.com/giskard-ai/giskard/main/IPCC_AR6_SYR_LongerReport.pdf\")"
+      ],
+      "golden_answer": "loader = PyPDFLoader(\"https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf\")"
+    }
+  ]
+}

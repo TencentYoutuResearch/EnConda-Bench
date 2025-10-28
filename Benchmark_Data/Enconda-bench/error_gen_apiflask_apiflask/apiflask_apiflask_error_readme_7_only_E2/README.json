@@ -1,0 +1,18 @@
+{
+  "readme": "apiflask_apiflask_error_readme_7_only_E2",
+  "repo_name": "apiflask_apiflask",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Command to run Flask app changed from 'flask run --reload' to 'python app.py' which won't work for APIFlask applications",
+      "correction_candidates": [
+        "flask run --reload",
+        "python -m flask run --reload",
+        "flask --app app run --reload",
+        "gunicorn app:app --reload"
+      ],
+      "golden_answer": "flask run --reload"
+    }
+  ]
+}

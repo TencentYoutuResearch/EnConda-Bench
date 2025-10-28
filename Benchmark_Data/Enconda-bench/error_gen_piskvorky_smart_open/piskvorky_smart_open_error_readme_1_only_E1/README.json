@@ -1,0 +1,18 @@
+{
+  "readme": "piskvorky_smart_open_error_readme_1_only_E1",
+  "repo_name": "piskvorky_smart_open",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install all optional dependencies uses an incorrect flag. `pip install smart_open --all` is not a valid pip command for installing extras.",
+      "correction_candidates": [
+        "pip install smart_open --extras all",
+        "pip install smart_open[all]",
+        "pip install \"smart_open[all]\"",
+        "pip install smart_open --all-dependencies"
+      ],
+      "golden_answer": "pip install smart_open[all]"
+    }
+  ]
+}

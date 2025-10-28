@@ -1,0 +1,29 @@
+{
+  "readme": "vertica_verticapy_error_readme_1",
+  "repo_name": "vertica_verticapy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The pip install command `pip3 install verticapy --all` uses an incorrect flag `--all`. The correct syntax for installing optional dependencies is with square brackets.",
+      "correction_candidates": [
+        "pip3 install verticapy[all]",
+        "pip3 install verticapy --with-all",
+        "pip3 install verticapy --install-option='all'",
+        "pip3 install verticapy-all"
+      ],
+      "golden_answer": "pip3 install verticapy[all]"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the Quickstart section, `vp.connect('Vertica_New_Connection')` is called before the connection is defined with `vp.new_connection(...)`. The connection must be defined before it can be activated.",
+      "correction_candidates": [
+        "Move the `vp.connect(...)` call to after the `vp.new_connection(...)` call.",
+        "Combine the two calls into `vp.connect(name='Vertica_New_Connection', options={...})`.",
+        "Remove the `vp.connect(...)` call as `new_connection` automatically connects.",
+        "Replace `vp.connect(...)` with `vp.set_connection('Vertica_New_Connection')`."
+      ],
+      "golden_answer": "Move the `vp.connect(...)` call to after the `vp.new_connection(...)` call."
+    }
+  ]
+}

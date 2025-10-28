@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_scvelo_error_readme_1_only_E1",
+  "repo_name": "theislab_scvelo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction 'pip install pytorch' is unnecessary for a standard scVelo installation and can cause version conflicts, especially if later installing extras like veloVI.",
+      "correction_candidates": [
+        "pip install scvelo[veloVI]",
+        "conda install pytorch -c pytorch",
+        "Remove the line 'pip install pytorch'.",
+        "pip install torch"
+      ],
+      "golden_answer": "Remove the line 'pip install pytorch'."
+    }
+  ]
+}

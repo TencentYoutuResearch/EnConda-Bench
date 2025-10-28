@@ -1,0 +1,18 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_2_only_E1",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip install` command is missing the `-r` flag. Without it, pip attempts to install a package named 'citationhunt/requirements.txt' from PyPI instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Add the `-r` flag to the command: `pip install -r citationhunt/requirements.txt`.",
+        "Use the long-form flag: `pip install --requirement citationhunt/requirements.txt`.",
+        "First change directory with `cd citationhunt` and then run `pip install -r requirements.txt`.",
+        "Replace the command with `pip install -e ./citationhunt`."
+      ],
+      "golden_answer": "Add the `-r` flag to the command: `pip install -r citationhunt/requirements.txt`."
+    }
+  ]
+}

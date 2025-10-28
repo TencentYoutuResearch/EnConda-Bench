@@ -1,0 +1,18 @@
+{
+  "readme": "kevinmusgrave_pytorch-metric-learning_error_readme_6_only_E1",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added tensorflow as an unnecessary dependency that conflicts with PyTorch",
+      "correction_candidates": [
+        "Other dependencies: ```numpy, scikit-learn, tqdm, torchvision```",
+        "Other dependencies: ```numpy, scikit-learn, tqdm, torchvision, matplotlib```",
+        "Other dependencies: ```numpy, scikit-learn, tqdm, torchvision, pandas```",
+        "Other dependencies: ```numpy, scikit-learn, tqdm, torchvision, opencv-python```"
+      ],
+      "golden_answer": "Other dependencies: ```numpy, scikit-learn, tqdm, torchvision```"
+    }
+  ]
+}

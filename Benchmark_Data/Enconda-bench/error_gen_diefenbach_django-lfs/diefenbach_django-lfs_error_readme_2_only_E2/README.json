@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_2_only_E2",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `virtualenv --create .venv` is incorrect. `virtualenv` does not have a `--create` flag.",
+      "correction_candidates": [
+        "Create a virtual environment: `virtualenv .venv`",
+        "Create a virtual environment: `python -m virtualenv create .venv`",
+        "Create a virtual environment: `venv create .venv`",
+        "Create a virtual environment: `virtualenv --new .venv`"
+      ],
+      "golden_answer": "Create a virtual environment: `virtualenv .venv`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "automl_neps_error_readme_1_only_E7",
+  "repo_name": "automl_neps",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that 'NePS requires Python 3.6 or higher', while the library's dependencies and syntax require Python 3.8 or higher.",
+      "correction_candidates": [
+        "NePS requires Python 3.6 or higher.",
+        "NePS requires Python 3.7 or higher.",
+        "NePS requires Python 3.8 or higher.",
+        "NePS requires any version of Python 3."
+      ],
+      "golden_answer": "NePS requires Python 3.8 or higher."
+    }
+  ]
+}

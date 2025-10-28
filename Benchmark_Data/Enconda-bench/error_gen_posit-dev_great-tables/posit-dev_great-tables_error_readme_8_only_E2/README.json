@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_8_only_E2",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Redundant virtual environment activation command after pip install when environment should already be active",
+      "correction_candidates": [
+        "Replace with pip install --upgrade great_tables",
+        "Replace with pip list to verify installation",
+        "Replace with python -c \"import great_tables; print('Installation successful')\"",
+        "Remove the redundant activation line entirely"
+      ],
+      "golden_answer": "Remove the redundant activation line entirely"
+    }
+  ]
+}

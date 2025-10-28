@@ -1,0 +1,18 @@
+{
+  "readme": "skmin-lab_unixmd_error_readme_2_only_E1",
+  "repo_name": "skmin-lab_unixmd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for dependencies is missing 'Cython', which is listed as a mandatory requirement and will cause the build process to fail.",
+      "correction_candidates": [
+        "$ pip install --upgrade numpy Cython",
+        "$ pip install --upgrade numpy && pip install Cython",
+        "$ pip install -r requirements.txt",
+        "$ conda install numpy cython"
+      ],
+      "golden_answer": "$ pip install --upgrade numpy Cython"
+    }
+  ]
+}

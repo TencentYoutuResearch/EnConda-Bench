@@ -1,0 +1,18 @@
+{
+  "readme": "basxsoftwareassociation_basxconnect_error_readme_2_only_E7",
+  "repo_name": "basxsoftwareassociation_basxconnect",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies that the project requires Python 3.5, which is outdated and incompatible with modern versions of Django that the project likely uses.",
+      "correction_candidates": [
+        "Change the requirement to 'Python 3.8 or newer'.",
+        "Remove the Python version specification entirely.",
+        "Change the requirement to 'Python 2.7+'.",
+        "Specify the exact version 'Python 3.9.1'."
+      ],
+      "golden_answer": "Change the requirement to 'Python 3.8 or newer'."
+    }
+  ]
+}

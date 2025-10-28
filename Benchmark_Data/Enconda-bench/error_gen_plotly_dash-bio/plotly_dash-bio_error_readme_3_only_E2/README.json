@@ -1,0 +1,18 @@
+{
+  "readme": "plotly_dash-bio_error_readme_3_only_E2",
+  "repo_name": "plotly_dash-bio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to activate the virtual environment on Windows is incorrect. `source` is a command used in Unix-like shells, not in the Windows Command Prompt or PowerShell.",
+      "correction_candidates": [
+        "On Windows, enter: `env\\Scripts\\activate`",
+        "On Windows, enter: `.\\env\\Scripts\\activate.bat`",
+        "On Windows, enter: `.\\env\\Scripts\\activate`",
+        "On Windows, enter: `call env\\Scripts\\activate`"
+      ],
+      "golden_answer": "On Windows, enter: `.\\env\\Scripts\\activate`"
+    }
+  ]
+}

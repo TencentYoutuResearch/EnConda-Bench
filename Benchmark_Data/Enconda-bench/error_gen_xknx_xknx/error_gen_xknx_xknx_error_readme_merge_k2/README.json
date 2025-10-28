@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_xknx_xknx_error_readme_merge_k2",
+  "repo_name": "xknx_xknx",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies 'Python 3' which is too vague and may lead to using an unsupported older version, as the project requires Python 3.10 or newer.",
+      "correction_candidates": [
+        "You will need the latest version of Python 3 in order to use XKNX.",
+        "You will need at least Python 3.10 in order to use XKNX.",
+        "You will need Python 3.9 or newer in order to use XKNX.",
+        "You will need Python 3.10 in order to use XKNX."
+      ],
+      "golden_answer": "You will need at least Python 3.10 in order to use XKNX."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pre-commit init` is used, which initializes a new pre-commit configuration, instead of `pre-commit install` which installs the hooks from the existing configuration file.",
+      "correction_candidates": [
+        "Install pre-commit hook: `pre-commit run --all-files`",
+        "Install pre-commit hook: `pre-commit install --install-hooks`",
+        "Install pre-commit hook: `git pre-commit install`",
+        "Install pre-commit hook: `pre-commit install`"
+      ],
+      "golden_answer": "Install pre-commit hook: `pre-commit install`"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions advise installing pre-commit hooks before installing the required Python dependencies. This can cause the hooks to fail if they rely on tools that are not yet installed.",
+      "correction_candidates": [
+        "The steps should be: 1. Install requirements: `pip install -r requirements/testing.txt`, 2. Install pre-commit hook: `pre-commit install`",
+        "The steps should be combined: `pip install -r requirements/testing.txt && pre-commit install`",
+        "The `pre-commit install` step should be removed and handled by `tox`.",
+        "The steps should be: 1. `pre-commit install`, 2. `pip install -r requirements/testing.txt`, 3. `tox`"
+      ],
+      "golden_answer": "The steps should be: 1. Install requirements: `pip install -r requirements/testing.txt`, 2. Install pre-commit hook: `pre-commit install`"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to install dependencies points to `requirements.txt`, but the correct file for development dependencies is located at `requirements/testing.txt`.",
+      "correction_candidates": [
+        "Install requirements: `pip install -r requirements/dev.txt`",
+        "Install requirements: `pip install -r requirements/testing.txt`",
+        "Install requirements: `pip install -r testing.txt`",
+        "Install requirements: `pip install -r requirements.txt --extra-index-url requirements/`"
+      ],
+      "golden_answer": "Install requirements: `pip install -r requirements/testing.txt`"
+    }
+  ]
+}

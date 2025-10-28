@@ -1,0 +1,18 @@
+{
+  "readme": "tortoise_tortoise-orm_error_readme_2_only_E1",
+  "repo_name": "tortoise_tortoise-orm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command for the PostgreSQL driver suggests `psycopg2-binary`, which is a synchronous driver and incompatible with the asyncio-based Tortoise ORM.",
+      "correction_candidates": [
+        "pip install tortoise-orm[psycopg2]",
+        "pip install tortoise-orm[asyncpg]",
+        "pip install tortoise-orm[pg8000]",
+        "pip install tortoise-orm asyncpg"
+      ],
+      "golden_answer": "pip install tortoise-orm[asyncpg]"
+    }
+  ]
+}

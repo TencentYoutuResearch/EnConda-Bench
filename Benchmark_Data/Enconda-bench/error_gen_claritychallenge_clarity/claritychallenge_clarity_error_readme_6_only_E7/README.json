@@ -1,0 +1,18 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_6_only_E7",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version changed from 3.8 to 3.12 which may cause compatibility issues with the package",
+      "correction_candidates": [
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python=3.9",
+        "conda create --name clarity python=3.10",
+        "conda create --name clarity python=3.11"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    }
+  ]
+}

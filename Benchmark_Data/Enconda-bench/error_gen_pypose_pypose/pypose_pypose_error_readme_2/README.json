@@ -1,0 +1,29 @@
+{
+  "readme": "pypose_pypose_error_readme_2",
+  "repo_name": "pypose_pypose",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instruction to install PyTorch, a critical dependency, has been removed. The installation will fail without it.",
+      "correction_candidates": [
+        "Add the sentence 'On Ubuntu, macOS, or Windows, install PyTorch, then run:' before the pip command.",
+        "Add the command `pip install torch` before the command `pip install -r requirements.txt`.",
+        "Add 'torch' to the first line of the `requirements.txt` file.",
+        "Add a new step: '1. Prerequisite: Install PyTorch by running `pip install pytorch`.'"
+      ],
+      "golden_answer": "Add the sentence 'On Ubuntu, macOS, or Windows, install PyTorch, then run:' before the pip command."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path `requirements.txt` is incorrect. The file is located at `requirements/runtime.txt`.",
+      "correction_candidates": [
+        "Change `pip install -r requirements.txt` to `pip install -r requirements/runtime.txt`.",
+        "Change `pip install -r requirements.txt` to `pip install -r runtime.txt`.",
+        "Change `pip install -r requirements.txt` to `cat requirements.txt | xargs pip install`.",
+        "Change `pip install -r requirements.txt` to `pip install -r ./requirements/runtime.txt`."
+      ],
+      "golden_answer": "Change `pip install -r requirements.txt` to `pip install -r requirements/runtime.txt`."
+    }
+  ]
+}

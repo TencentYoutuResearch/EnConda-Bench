@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_cityofzion_neo3-boa_error_readme_merge_k4",
+  "repo_name": "cityofzion_neo3-boa",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is incorrectly stated as '3.8 or later', while the project actually requires Python 3.10 or later.",
+      "correction_candidates": [
+        "Installation requires Python 3.9 or later.",
+        "Installation requires Python 3.10 or later.",
+        "Installation requires Python 3.7 or later.",
+        "Installation requires any version of Python 3."
+      ],
+      "golden_answer": "Installation requires Python 3.10 or later."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the package via pip is incorrect. It uses 'neo-boa' instead of the correct package name 'neo3-boa'.",
+      "correction_candidates": [
+        "$ pip install neo-boa3",
+        "$ pip install coz-neo3-boa",
+        "$ pip install neo3-boa",
+        "$ pip install neo3boa"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install .` is used instead of `pip install -e .`. This performs a standard installation rather than an 'editable' one, which is typically intended for development setups from source.",
+      "correction_candidates": [
+        "Change `pip install .` to `python setup.py install`.",
+        "Change `pip install .` to `pip install --editable .`.",
+        "Change `pip install .` to `pip install -e .`.",
+        "Change `pip install .` to `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "Change `pip install .` to `pip install -e .`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to 'Smart contract examples' points to a non-existent path `/examples` instead of the correct path `/boa3_test/examples`.",
+      "correction_candidates": [
+        "Change the link path from `[/examples]` to `[/boa3_test/examples]`.",
+        "Change the link path from `[/examples]` to `[/tests/examples]`.",
+        "Change the link path from `[/examples]` to `[/boa3/examples]`.",
+        "Change the link path from `[/examples]` to `[/smart_contracts/examples]`."
+      ],
+      "golden_answer": "Change the link path from `[/examples]` to `[/boa3_test/examples]`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary cryptography dependency to pip install command",
+      "correction_candidates": [
+        "$ pip install neo3-boa",
+        "$ pip install neo3-boa setuptools",
+        "$ pip install neo3-boa requests",
+        "$ pip install neo3-boa wheel"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Using pip3 instead of pip command which may cause confusion or errors in virtual environments",
+      "correction_candidates": [
+        "$ pip install neo3-boa",
+        "$ python -m pip install neo3-boa",
+        "$ python3 -m pip install neo3-boa",
+        "$ pip3.10 install neo3-boa"
+      ],
+      "golden_answer": "$ pip install neo3-boa"
+    }
+  ]
+}

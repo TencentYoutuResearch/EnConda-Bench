@@ -1,0 +1,18 @@
+{
+  "readme": "stopstalk_stopstalk-deployment_error_readme_5_only_E4",
+  "repo_name": "stopstalk_stopstalk-deployment",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect source filename in copy command - references '0firstrun.py.example' instead of the correct '0firstrun.py.sample'",
+      "correction_candidates": [
+        "cp models/0firstrun.py.sample models/0firstrun.py",
+        "cp models/0firstrun.py.template models/0firstrun.py",
+        "cp models/0firstrun.py.default models/0firstrun.py",
+        "cp models/0firstrun.py.config models/0firstrun.py"
+      ],
+      "golden_answer": "cp models/0firstrun.py.sample models/0firstrun.py"
+    }
+  ]
+}

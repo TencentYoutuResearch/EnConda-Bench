@@ -1,0 +1,18 @@
+{
+  "readme": "has2k1_plotnine_error_readme_1_only_E2",
+  "repo_name": "has2k1_plotnine",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install the development version from GitHub is syntactically incorrect. It's missing the `git+https://` prefix required by pip for installing from a git repository.",
+      "correction_candidates": [
+        "Change the command to \"$ git clone https://github.com/has2k1/plotnine.git && cd plotnine && pip install -e .\".",
+        "Change the command to \"$ pip install git+https://github.com/has2k1/plotnine.git\".",
+        "Change the command to \"$ pip install --git https://github.com/has2k1/plotnine.git\".",
+        "Change the command to \"$ pip install from-git https://github.com/has2k1/plotnine.git\"."
+      ],
+      "golden_answer": "Change the command to \"$ pip install git+https://github.com/has2k1/plotnine.git\"."
+    }
+  ]
+}

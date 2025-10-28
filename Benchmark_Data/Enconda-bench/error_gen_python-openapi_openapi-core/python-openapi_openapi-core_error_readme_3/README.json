@@ -1,0 +1,29 @@
+{
+  "readme": "python-openapi_openapi-core_error_readme_3",
+  "repo_name": "python-openapi_openapi-core",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command for installing from the repository uses the incorrect `git://` protocol scheme instead of `git+https://`, which will cause pip to fail.",
+      "correction_candidates": [
+        "pip install -e git+https://github.com/python-openapi/openapi-core.git#egg=openapi_core",
+        "pip install -e git+ssh://git@github.com/python-openapi/openapi-core.git#egg=openapi_core",
+        "The protocol should be `git+https` for pip to install from a git repository over HTTPS.",
+        "pip install -e \"git+https://github.com/python-openapi/openapi-core.git#egg=openapi_core\""
+      ],
+      "golden_answer": "pip install -e git+https://github.com/python-openapi/openapi-core.git#egg=openapi_core"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest installing the package globally with pip first, and only then creating and activating a virtual environment. Dependencies should be installed after the virtual environment is activated to avoid polluting the global Python installation.",
+      "correction_candidates": [
+        "The virtual environment should be created and activated *before* running `pip install openapi-core`.",
+        "Move the virtual environment creation steps from 'Recommended Setup' to be before the `pip install` command in the 'Installation' section.",
+        "First, run `python3 -m venv venv` and `source venv/bin/activate`, then run `pip install openapi-core`.",
+        "The correct order is to set up the virtual environment, activate it, and then install the package inside it."
+      ],
+      "golden_answer": "The virtual environment should be created and activated *before* running `pip install openapi-core`."
+    }
+  ]
+}

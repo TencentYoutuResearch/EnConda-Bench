@@ -1,0 +1,29 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_3",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Python version for the `webservice` command is specified as `python3`, which is ambiguous and may not match the required version `python3.9` on the Toolforge environment.",
+      "correction_candidates": [
+        "Replace `python3` with `python` in the `webservice` commands.",
+        "Upgrade the project to be compatible with the default `python3` version.",
+        "Replace `python3` with the specific version `python3.9` in both `webservice` commands.",
+        "Remove the python version specifier entirely from the `webservice` commands."
+      ],
+      "golden_answer": "Replace `python3` with the specific version `python3.9` in both `webservice` commands."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the command to delete cron jobs, `delete` is incorrectly passed as a flag (`--delete cronjob`). It should be a subcommand (`delete cronjob`).",
+      "correction_candidates": [
+        "Replace `xargs kubectl --delete cronjob` with `xargs kubectl delete cronjob`.",
+        "Use a different command: `kubectl delete cronjob -l app=citationhunt`.",
+        "Change the command to `kubectl get cronjobs | xargs kubectl delete`.",
+        "Replace the entire pipe with `kubectl delete cronjob --all`."
+      ],
+      "golden_answer": "Replace `xargs kubectl --delete cronjob` with `xargs kubectl delete cronjob`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_1_only_E7",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that Python 2.7 is supported, which is outdated and will cause installation or runtime failures as the package requires a much newer version.",
+      "correction_candidates": [
+        "Mpmath requires Python 3.6 or later versions.",
+        "Mpmath requires Python 3.8 or later versions.",
+        "Mpmath requires Python 2.7 and 3.8 or later versions.",
+        "Mpmath requires Python 3.8 only."
+      ],
+      "golden_answer": "Mpmath requires Python 3.8 or later versions."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "stan-dev_cmdstanpy_error_readme_1",
+  "repo_name": "stan-dev_cmdstanpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists `scipy` as a minimal dependency, which is not required for the core functionality of CmdStanPy.",
+      "correction_candidates": [
+        "Remove `scipy` from the dependency list. The correct list is: `numpy`, `pandas`.",
+        "Add `matplotlib` to the dependency list as it is also required for plotting.",
+        "Change the dependency list to only `numpy`, as `pandas` is optional.",
+        "Specify the version for scipy: `scipy>=1.5`."
+      ],
+      "golden_answer": "Remove `scipy` from the dependency list. The correct list is: `numpy`, `pandas`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path for `stan_file` in the example code is incorrect, referencing a non-existent 'example' directory instead of 'examples'.",
+      "correction_candidates": [
+        "Change the path segment `'example'` to `'examples'`.",
+        "Change the path to an absolute path: `/path/to/cmdstan/examples/bernoulli/bernoulli.stan`.",
+        "Remove the `cmdstan_path()` call and just use a relative path: `'examples/bernoulli/bernoulli.stan'`.",
+        "The file is located in the `src` directory, change `'example'` to `'src'`."
+      ],
+      "golden_answer": "Change the path segment `'example'` to `'examples'`."
+    }
+  ]
+}

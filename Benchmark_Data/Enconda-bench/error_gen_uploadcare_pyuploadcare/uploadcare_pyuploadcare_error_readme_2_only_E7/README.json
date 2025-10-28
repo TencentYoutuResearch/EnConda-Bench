@@ -1,0 +1,18 @@
+{
+  "readme": "uploadcare_pyuploadcare_error_readme_2_only_E7",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The version requirement for Python 3.6/3.7 is incorrect. It states `pyuploadcare < 3.0` is needed, but `< 3.0` is for Python 2.7. The correct requirement for Python 3.6/3.7 is `< 5.0`.",
+      "correction_candidates": [
+        "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare < 5.0`.",
+        "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare==4.3.0`.",
+        "Python 3.6 and 3.7 are no longer supported; please upgrade to Python 3.8 or newer.",
+        "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare~=4.0`."
+      ],
+      "golden_answer": "To use pyuploadcare with Python 3.6 or 3.7 please install `pyuploadcare < 5.0`."
+    }
+  ]
+}

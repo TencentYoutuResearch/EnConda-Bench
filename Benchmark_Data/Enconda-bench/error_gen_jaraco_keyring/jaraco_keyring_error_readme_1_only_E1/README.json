@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_keyring_error_readme_1_only_E1",
+  "repo_name": "jaraco_keyring",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "In the 'Using Keyring on Ubuntu 16.04' section, the pip install command is missing the 'secretstorage' dependency, which is required for the SecretService backend to function correctly.",
+      "correction_candidates": [
+        "pip install secretstorage",
+        "sudo apt install python3-secretstorage",
+        "pip install keyring[secrets]",
+        "pip install secretstorage dbus-python"
+      ],
+      "golden_answer": "pip install secretstorage dbus-python"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_6",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup_dialogs function is called before registering the dialog router, which is incorrect execution order",
+      "correction_candidates": [
+        "dp.include_router(dialog)\nsetup_dialogs(dp)",
+        "setup_dialogs(dp)\ndp.include_router(dialog)",
+        "dp.register_router(dialog)\nsetup_dialogs(dp)",
+        "setup_dialogs(dp, dialog)\ndp.include_router(dialog)"
+      ],
+      "golden_answer": "dp.include_router(dialog)\nsetup_dialogs(dp)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Reference to examples folder uses incorrect path 'example' instead of 'examples'",
+      "correction_candidates": [
+        "[examples](examples)",
+        "[examples](./examples)",
+        "[examples](docs/examples)",
+        "[examples](src/examples)"
+      ],
+      "golden_answer": "[examples](examples)"
+    }
+  ]
+}

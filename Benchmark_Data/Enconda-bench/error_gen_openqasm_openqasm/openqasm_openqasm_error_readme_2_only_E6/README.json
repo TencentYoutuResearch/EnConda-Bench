@@ -1,0 +1,18 @@
+{
+  "readme": "openqasm_openqasm_error_readme_2_only_E6",
+  "repo_name": "openqasm_openqasm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The setup instructions incorrectly tell the user to install dependencies with pip before creating and activating the virtual environment, which can lead to installing packages in the global or user site-packages.",
+      "correction_candidates": [
+        "First, create and activate a virtual environment, then run `pip install -r requirements.txt` inside it.",
+        "The `pip install` command should use the `--user` flag to avoid system-wide installation.",
+        "Use `conda` to manage environments instead of `venv`.",
+        "Run `python setup.py develop` instead of using pip to install from requirements.txt."
+      ],
+      "golden_answer": "First, create and activate a virtual environment, then run `pip install -r requirements.txt` inside it."
+    }
+  ]
+}

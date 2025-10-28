@@ -1,0 +1,18 @@
+{
+  "readme": "markqvist_reticulum_error_readme_3_only_E2",
+  "repo_name": "markqvist_reticulum",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The description for the `rnid` utility incorrectly states that it requires the external `gpg` utility for encryption, which is false.",
+      "correction_candidates": [
+        "Change the description to 'The identity management and encryption utility `rnid` let\\'s you manage Identities and encrypt/decrypt files'",
+        "Change the description to 'The identity management and encryption utility `rnid` let\\'s you manage Identities and uses openssl for encryption'",
+        "Change the description to 'The identity management utility `rnid` let\\'s you manage Identities'",
+        "Remove the entire line describing the `rnid` utility."
+      ],
+      "golden_answer": "Change the description to 'The identity management and encryption utility `rnid` let\\'s you manage Identities and encrypt/decrypt files'"
+    }
+  ]
+}

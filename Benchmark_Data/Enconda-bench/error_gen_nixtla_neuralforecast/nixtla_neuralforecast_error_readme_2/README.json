@@ -1,0 +1,29 @@
+{
+  "readme": "nixtla_neuralforecast_error_readme_2",
+  "repo_name": "nixtla_neuralforecast",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command `pip install neuralforecast==1.0.0` pins the library to an old version, which may be incompatible with the features shown in the README or have known bugs.",
+      "correction_candidates": [
+        "pip install neuralforecast>=1.1.0",
+        "pip install neuralforecast --upgrade",
+        "pip install neuralforecast",
+        "pip install git+https://github.com/Nixtla/neuralforecast.git"
+      ],
+      "golden_answer": "pip install neuralforecast"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "In the Quick Start example, `nf.predict()` is called before `nf.fit()`. The model must be trained with `.fit()` before predictions can be made.",
+      "correction_candidates": [
+        "Swap the order of `nf.fit(df=AirPassengersDF)` and `nf.predict()`.",
+        "Replace `nf.predict()` with `nf.fit_predict(df=AirPassengersDF)` and remove the `nf.fit` line.",
+        "Remove the `nf.predict()` line.",
+        "The `nf.predict()` call should take `df` as an argument: `nf.predict(df=AirPassengersDF)`."
+      ],
+      "golden_answer": "Swap the order of `nf.fit(df=AirPassengersDF)` and `nf.predict()`."
+    }
+  ]
+}

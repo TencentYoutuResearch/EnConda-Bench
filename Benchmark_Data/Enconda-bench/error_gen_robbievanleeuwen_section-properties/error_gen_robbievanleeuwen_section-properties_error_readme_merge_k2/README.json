@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_robbievanleeuwen_section-properties_error_readme_merge_k2",
+  "repo_name": "robbievanleeuwen_section-properties",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The installation command uses the incorrect package name 'section-properties' instead of 'sectionproperties'.",
+      "correction_candidates": [
+        "Change `pip install section-properties` to `pip install sectionproperties`.",
+        "Change `pip install section-properties` to `pip install section.properties`.",
+        "Change `pip install section-properties` to `pip install section_properties`.",
+        "Change `pip install section-properties` to `pip install 'sectionproperties'`."
+      ],
+      "golden_answer": "Change `pip install section-properties` to `pip install sectionproperties`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the license file is incorrect, pointing to a non-existent 'LICENSE.md' file instead of 'LICENSE'.",
+      "correction_candidates": [
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/main/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/LICENSE`.",
+        "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/raw/master/LICENSE`."
+      ],
+      "golden_answer": "Change the license URL to `https://github.com/robbievanleeuwen/section-properties/blob/master/LICENSE`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package only supports Python 3.7, which is an unnecessary and inaccurate version restriction.",
+      "correction_candidates": [
+        "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'",
+        "Change the sentence to 'Note: `sectionproperties` supports Python 3.7 and newer.'",
+        "Change the sentence to 'Refer to the Python Version badge for compatibility details.'",
+        "Change the sentence to 'Note: `sectionproperties` is tested on Python 3.7+.'"
+      ],
+      "golden_answer": "Remove the sentence: 'Note: `sectionproperties` only supports Python 3.7.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily ask the user to install `numpy` and `scipy` manually, when they are dependencies that pip will handle automatically.",
+      "correction_candidates": [
+        "Remove the `pip install numpy scipy` command.",
+        "Add a note explaining that `numpy` and `scipy` are installed automatically as dependencies.",
+        "Change the commands to `pip install sectionproperties[all]`.",
+        "Combine the commands into one line: `pip install numpy scipy sectionproperties`."
+      ],
+      "golden_answer": "Remove the `pip install numpy scipy` command."
+    }
+  ]
+}

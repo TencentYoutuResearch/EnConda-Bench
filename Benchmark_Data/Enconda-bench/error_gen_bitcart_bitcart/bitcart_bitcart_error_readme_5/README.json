@@ -1,0 +1,29 @@
+{
+  "readme": "bitcart_bitcart_error_readme_5",
+  "repo_name": "bitcart_bitcart",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Installation commands are in wrong order - installing dependencies before creating virtual environment",
+      "correction_candidates": [
+        "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "pip install virtualenv\npython -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt",
+        "python -m venv bitcart-env\nsource bitcart-env/bin/activate\npip install -r requirements.txt",
+        "conda create -n bitcart python=3.8\nconda activate bitcart\npip install -r requirements.txt"
+      ],
+      "golden_answer": "python -m venv venv\nsource venv/bin/activate\npip install -r requirements.txt"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect repository URL for BitCCL project",
+      "correction_candidates": [
+        "https://github.com/bitcart/bitccl - The BitCCL scripting language for checkout flow automation",
+        "https://github.com/bitcart/bitcart-ccl - The BitCCL scripting language for checkout flow automation",
+        "https://github.com/bitcart/bitcart-scripts - The BitCCL scripting language for checkout flow automation",
+        "https://github.com/bitcart-community/bitccl - The BitCCL scripting language for checkout flow automation"
+      ],
+      "golden_answer": "https://github.com/bitcart/bitccl - The BitCCL scripting language for checkout flow automation"
+    }
+  ]
+}

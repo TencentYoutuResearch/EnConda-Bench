@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_cellrank_error_readme_2_only_E7",
+  "repo_name": "theislab_cellrank",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that CellRank 2 is only compatible with Python 3.6, while it actually requires Python 3.9 or newer.",
+      "correction_candidates": [
+        "Remove the incorrect sentence about Python 3.6 compatibility.",
+        "Correct the sentence to state 'CellRank requires Python 3.9 or newer'.",
+        "Change the sentence to 'CellRank is compatible with Python >= 3.8'.",
+        "Update the note to 'CellRank is compatible with the latest version of Python 3'."
+      ],
+      "golden_answer": "Correct the sentence to state 'CellRank requires Python 3.9 or newer'."
+    }
+  ]
+}

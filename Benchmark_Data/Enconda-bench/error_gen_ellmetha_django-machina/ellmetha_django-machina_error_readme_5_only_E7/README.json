@@ -1,0 +1,18 @@
+{
+  "readme": "ellmetha_django-machina_error_readme_5_only_E7",
+  "repo_name": "ellmetha_django-machina",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Outdated Python and Django version requirements that are no longer supported",
+      "correction_candidates": [
+        "Python 3.6+, Django 3.2+. Please refer to the requirements_ section of the documentation for a full list of dependencies.",
+        "Python 3.8+, Django 4.0+. Please refer to the requirements_ section of the documentation for a full list of dependencies.",
+        "Python 3.9+, Django 3.1+. Please refer to the requirements_ section of the documentation for a full list of dependencies.",
+        "Python 3.7+, Django 2.2+. Please refer to the requirements_ section of the documentation for a full list of dependencies."
+      ],
+      "golden_answer": "Python 3.6+, Django 3.2+. Please refer to the requirements_ section of the documentation for a full list of dependencies."
+    }
+  ]
+}

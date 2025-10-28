@@ -1,0 +1,29 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_6",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Typo in pip install command - missing 'l' in 'install'",
+      "correction_candidates": [
+        "$ pip install great_tables",
+        "$ pip install-tables great_tables",
+        "$ pip installer great_tables",
+        "$ pip install great-tables"
+      ],
+      "golden_answer": "$ pip install great_tables"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent configuration file path that doesn't exist in the great_tables package",
+      "correction_candidates": [
+        "Remove the configuration file instruction entirely",
+        "Change to install from requirements.txt file",
+        "Reference the correct documentation website instead",
+        "Point to the package's built-in configuration options"
+      ],
+      "golden_answer": "Remove the configuration file instruction entirely"
+    }
+  ]
+}

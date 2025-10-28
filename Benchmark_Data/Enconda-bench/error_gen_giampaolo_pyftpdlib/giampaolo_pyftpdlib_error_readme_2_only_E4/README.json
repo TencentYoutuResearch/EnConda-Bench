@@ -1,0 +1,18 @@
+{
+  "readme": "giampaolo_pyftpdlib_error_readme_2_only_E4",
+  "repo_name": "giampaolo_pyftpdlib",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The example code specifies a user home directory `/var/ftp/user` and incorrectly claims it will be created automatically. The specified directory must exist beforehand, as `DummyAuthorizer` does not create it.",
+      "correction_candidates": [
+        "Change the path to a directory that is guaranteed to exist, like `/tmp`.",
+        "The code is correct; permissions in `/var/ftp/` need to be adjusted for it to work.",
+        "Replace `DummyAuthorizer` with `FileSystemAuthorizer` to enable automatic directory creation.",
+        "Change the path to an existing directory (e.g., '/home/user') or ensure '/var/ftp/user' is created manually before running the server, and remove the misleading comment."
+      ],
+      "golden_answer": "Change the path to an existing directory (e.g., '/home/user') or ensure '/var/ftp/user' is created manually before running the server, and remove the misleading comment."
+    }
+  ]
+}

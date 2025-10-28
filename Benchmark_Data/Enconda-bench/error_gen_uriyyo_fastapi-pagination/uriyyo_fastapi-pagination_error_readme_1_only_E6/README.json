@@ -1,0 +1,18 @@
+{
+  "readme": "uriyyo_fastapi-pagination_error_readme_1_only_E6",
+  "repo_name": "uriyyo_fastapi-pagination",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The `add_pagination(app)` call is placed before the `app` object is instantiated, which will raise a `NameError` because the `app` variable does not exist yet.",
+      "correction_candidates": [
+        "Move `add_pagination(app)` to be the last line in the script.",
+        "Place `add_pagination(app)` immediately after the `users` list is defined.",
+        "Move `add_pagination(app)` to the line just after `app = FastAPI()`.",
+        "Move `add_pagination(app)` to the line just before the `return paginate(users)` statement."
+      ],
+      "golden_answer": "Move `add_pagination(app)` to be the last line in the script."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "sasview_sasview_error_readme_2_only_E7",
+  "repo_name": "sasview_sasview",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies Python 2.7 as a prerequisite, which is end-of-life and incompatible with modern versions of SasView and its dependencies.",
+      "correction_candidates": [
+        "The required version should be Python 3.7 or higher.",
+        "The project should be updated to be compatible with Python 2.7.",
+        "The prerequisite should be listed as `Python >= 3.7`.",
+        "The prerequisite should be changed to Anaconda Python, which handles compatibility."
+      ],
+      "golden_answer": "The required version should be Python 3.7 or higher."
+    }
+  ]
+}

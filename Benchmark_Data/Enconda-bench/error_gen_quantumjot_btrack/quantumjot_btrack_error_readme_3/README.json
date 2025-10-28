@@ -1,0 +1,29 @@
+{
+  "readme": "quantumjot_btrack_error_readme_3",
+  "repo_name": "quantumjot_btrack",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect conda installation command. It suggests installing from a non-existent `btrack` channel, while the primary installation method is `pip`. This will lead to a 'channel not found' error.",
+      "correction_candidates": [
+        "Replace the conda command with `conda install -c conda-forge btrack`.",
+        "Remove the incorrect conda instructions and replace them with the correct pip command: `pip install btrack`.",
+        "Change the command to `conda install btrack` and hope for the best.",
+        "Add a note that conda installation is not officially supported."
+      ],
+      "golden_answer": "Remove the incorrect conda instructions and replace them with the correct pip command: `pip install btrack`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the developer guide in the 'Development' section is broken. It points to `.../developer_guide` instead of the correct path `.../dev_guide`, resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link URL to `https://btrack.readthedocs.io/en/latest/dev_guide`.",
+        "Change the link URL to `https://btrack.readthedocs.io/en/latest/development.html`.",
+        "Change the link URL to point to the `CONTRIBUTING.md` file on GitHub.",
+        "Remove the link and just refer to the documentation."
+      ],
+      "golden_answer": "Change the link URL to `https://btrack.readthedocs.io/en/latest/dev_guide`."
+    }
+  ]
+}

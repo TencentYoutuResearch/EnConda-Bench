@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_pip-tools_error_readme_1",
+  "repo_name": "jazzband_pip-tools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command incorrectly installs `pip` itself instead of `pip-tools`.",
+      "correction_candidates": [
+        "(venv) $ python -m pip install pip-tools",
+        "(venv) $ pip install pip-tools",
+        "(venv) $ python -m pip install piptools",
+        "(venv) $ python -m pip install pip-tool"
+      ],
+      "golden_answer": "(venv) $ python -m pip install pip-tools"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to update a specific package is incorrect. It uses the non-existent `--update-package` flag instead of the correct `--upgrade-package` flag.",
+      "correction_candidates": [
+        "Use the `--upgrade-pkg django` flag.",
+        "Use the `--upgrade-package django` flag.",
+        "Use the `pip-compile --upgrade --package django` command.",
+        "Use the `pip-compile -U django` command."
+      ],
+      "golden_answer": "Use the `--upgrade-package django` flag."
+    }
+  ]
+}

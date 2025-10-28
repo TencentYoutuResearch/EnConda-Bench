@@ -1,0 +1,29 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_2",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The 'Python version' section incorrectly states that the package is compatible with Python 2.7, which is not supported.",
+      "correction_candidates": [
+        "Before the installation, please make sure that you are using the latest Python version.",
+        "Before the installation, please make sure that you are using a Python 3 version.",
+        "Before the installation, please make sure that you are using one of the supported Python versions (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml)).",
+        "Before the installation, please make sure that you are using one of the supported Python versions (see the badges at the top)."
+      ],
+      "golden_answer": "Before the installation, please make sure that you are using one of the supported Python versions (see [pyproject.toml](https://github.com/JaGeo/LobsterPy/blob/main/pyproject.toml))."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The description for `lobsterpy create-inputs` incorrectly states that it uses a non-existent `lobster.yaml` file for configuration.",
+      "correction_candidates": [
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `lobsterin` file.",
+        "``lobsterpy create-inputs`` will create standard inputs based on existing POSCAR, POTCAR, and INCAR files.",
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `POSCAR.lobster` file.",
+        "``lobsterpy create-inputs`` will create standard inputs based on an existing `vasprun.xml` file."
+      ],
+      "golden_answer": "``lobsterpy create-inputs`` will create standard inputs based on existing POSCAR, POTCAR, and INCAR files."
+    }
+  ]
+}

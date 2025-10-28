@@ -1,0 +1,29 @@
+{
+  "readme": "getnikola_plugins_error_readme_2",
+  "repo_name": "getnikola_plugins",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The format specified for `requirements-nonpy.txt` is incorrect, using a comma instead of a double colon `::` as a separator, which will cause dependency parsing to fail.",
+      "correction_candidates": [
+        "The format is `Human-friendly name: http://download/link`.",
+        "The format is `http://download/link (Human-friendly name)`.",
+        "The format is `Human-friendly name = http://download/link`.",
+        "The format is `Human-friendly name::http://download/link`."
+      ],
+      "golden_answer": "The format is `Human-friendly name::http://download/link`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example `.plugin` file is missing the `[Core]` section header, which is a required part of the INI file format and will lead to a parsing error.",
+      "correction_candidates": [
+        "Replace the incorrect `ini` block with:\n```ini\n[Core]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\n\n[Nikola]\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```",
+        "Replace the incorrect `ini` block with:\n```ini\n[Plugin]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\n\n[Nikola]\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```",
+        "Replace the incorrect `ini` block with:\n```ini\n[Nikola]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```",
+        "Replace the incorrect `ini` block with:\n```yaml\nCore:\n  Name: plugin-name\n  Module: plugin-name\n  Tests: test-suite\n\nNikola:\n  MinVersion: version-number\n...\n```"
+      ],
+      "golden_answer": "Replace the incorrect `ini` block with:\n```ini\n[Core]\nName = plugin-name\nModule = plugin-name\nTests = test-suite\n\n[Nikola]\nMinVersion = version-number\nMaxVersion = version-number\nCompiler = compiler-that-uses-extensions\nPluginCategory = plugin-category\n\n[Documentation]\nAuthor = authors-name\nVersion = version-number\nWebsite = https://plugins.getnikola.com/#plugin-name\nDescription = A short, one-line description\n```"
+    }
+  ]
+}

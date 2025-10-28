@@ -1,0 +1,29 @@
+{
+  "readme": "uploadcare_pyuploadcare_error_readme_7",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Installation command uses incorrect syntax 'install pip pyuploadcare' instead of 'pip install pyuploadcare'",
+      "correction_candidates": [
+        "pip install pyuploadcare",
+        "python -m pip install pyuploadcare",
+        "pip3 install pyuploadcare",
+        "python3 -m pip install pyuploadcare"
+      ],
+      "golden_answer": "pip install pyuploadcare"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Testing command is missing the 'make' prefix, showing just 'test_with_github_actions' instead of 'make test_with_github_actions'",
+      "correction_candidates": [
+        "make test_with_github_actions",
+        "npm run test_with_github_actions",
+        "./test_with_github_actions",
+        "python test_with_github_actions"
+      ],
+      "golden_answer": "make test_with_github_actions"
+    }
+  ]
+}

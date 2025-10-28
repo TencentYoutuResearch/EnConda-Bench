@@ -1,0 +1,18 @@
+{
+  "readme": "cpcloud_protoletariat_error_readme_2_only_E4",
+  "repo_name": "cpcloud_protoletariat",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The `protoc` command outputs files to an `output` directory, but the `protol` command incorrectly tries to read them from an `out` directory.",
+      "correction_candidates": [
+        "In the `protoc` command, change `--python_out=output` to `--python_out=out`.",
+        "In the `protol` command, change `--python-out out` to `--python-out output`.",
+        "Add a step `mv output out` between the `protoc` and `protol` commands.",
+        "Use a variable: `DIR=output; protoc --python_out=$DIR ...; protol --python-out $DIR ...`."
+      ],
+      "golden_answer": "In the `protoc` command, change `--python_out=output` to `--python_out=out`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "wilcoxjay_mypyvy_error_readme_7",
+  "repo_name": "wilcoxjay_mypyvy",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specified Python 3.6 minimum version instead of 3.8, creating version compatibility issues",
+      "correction_candidates": [
+        "You need python version 3.8 or higher.",
+        "You need python version 3.9 or higher.",
+        "You need python version 3.7 or higher.",
+        "You need python version 3.10 or higher."
+      ],
+      "golden_answer": "You need python version 3.8 or higher."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect parameter '--level=5' instead of '--depth=5' for bmc command",
+      "correction_candidates": [
+        "python3 src/mypyvy.py bmc --depth=5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc --steps=5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc --bound=5 --safety=mutex examples/lockserv.pyv",
+        "python3 src/mypyvy.py bmc --max-depth=5 --safety=mutex examples/lockserv.pyv"
+      ],
+      "golden_answer": "python3 src/mypyvy.py bmc --depth=5 --safety=mutex examples/lockserv.pyv"
+    }
+  ]
+}

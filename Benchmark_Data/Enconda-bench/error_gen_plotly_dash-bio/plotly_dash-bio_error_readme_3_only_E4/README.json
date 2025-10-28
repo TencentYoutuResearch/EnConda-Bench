@@ -1,0 +1,18 @@
+{
+  "readme": "plotly_dash-bio_error_readme_3_only_E4",
+  "repo_name": "plotly_dash-bio",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL used to fetch the example data file `alignment_viewer_p53.fasta` is incorrect, pointing to a non-existent repository path.",
+      "correction_candidates": [
+        "Change the URL to `https://raw.githubusercontent.com/plotly/dash-bio-docs-files/main/alignment_viewer_p53.fasta`.",
+        "Download the file locally and change the code to `data = open('alignment_viewer_p53.fasta').read()`.",
+        "Change the URL to `https://raw.githubusercontent.com/plotly/dash-bio-docs-files/master/alignment_viewer_p53.fasta`.",
+        "Change the URL to `https://github.com/plotly/dash-bio-docs-files/blob/master/alignment_viewer_p53.fasta`."
+      ],
+      "golden_answer": "Change the URL to `https://raw.githubusercontent.com/plotly/dash-bio-docs-files/master/alignment_viewer_p53.fasta`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "terrapower_armi_error_readme_1_only_E2",
+  "repo_name": "terrapower_armi",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run tests uses a non-existent flag `--run-all`, which will cause `pytest` to fail.",
+      "correction_candidates": [
+        "$ pytest armi",
+        "$ pytest -n 4 armi",
+        "$ python -m pytest -n 4 armi",
+        "$ pytest --numprocesses=4 armi"
+      ],
+      "golden_answer": "$ pytest -n 4 armi"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "mollie_mollie-api-python_error_readme_3",
+  "repo_name": "mollie_mollie-api-python",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Installation' section, the virtual environment is created with `python -m venv venv`, but the activation command is `source .venv/bin/activate`. The activation command will fail because the directory name mismatch ('.venv' vs 'venv').",
+      "correction_candidates": [
+        "Change `python -m venv venv` to `python -m venv .venv`.",
+        "Change `source .venv/bin/activate` to `source venv/bin/activate`.",
+        "Change `python -m venv venv` to `virtualenv .venv`.",
+        "Remove the line `$ python -m venv venv`."
+      ],
+      "golden_answer": "Change `python -m venv venv` to `python -m venv .venv`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'OAuth2' section, the command to run the OAuth example app uses an incorrect file path: `python examples/oauth_app.py`. The correct path is `examples/oauth/oauth_app.py`.",
+      "correction_candidates": [
+        "Change the command to `python examples/oauth/oauth_app.py`.",
+        "Change the command to `cd examples/oauth && python oauth_app.py`.",
+        "Change the command to `python oauth_app.py` and add a note to `cd` into the `examples/oauth` directory first.",
+        "Change the command to `python examples/oauth/app.py`."
+      ],
+      "golden_answer": "Change the command to `python examples/oauth/oauth_app.py`."
+    }
+  ]
+}

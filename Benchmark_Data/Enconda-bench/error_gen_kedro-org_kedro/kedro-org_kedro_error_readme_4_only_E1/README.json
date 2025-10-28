@@ -1,0 +1,18 @@
+{
+  "readme": "kedro-org_kedro_error_readme_4_only_E1",
+  "repo_name": "kedro-org_kedro",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `conda install` command is missing the `-c conda-forge` channel argument, which is required to find the `kedro` package, causing the command to fail.",
+      "correction_candidates": [
+        "conda install -c conda-forge kedro",
+        "conda install anaconda kedro",
+        "conda config --add channels conda-forge && conda install kedro",
+        "conda install kedro --channel conda-forge"
+      ],
+      "golden_answer": "conda install -c conda-forge kedro"
+    }
+  ]
+}

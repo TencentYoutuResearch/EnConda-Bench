@@ -1,0 +1,18 @@
+{
+  "readme": "tensorflow_model-analysis_error_readme_6_only_E2",
+  "repo_name": "tensorflow_model-analysis",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect command syntax for pip install with missing package specifier",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -e $FOLDER_OF_THE_LOCAL_LOCATION",
+        "pip install --editable $FOLDER_OF_THE_LOCAL_LOCATION",
+        "pip install -e ./tensorflow_model_analysis"
+      ],
+      "golden_answer": "pip install -e $FOLDER_OF_THE_LOCAL_LOCATION"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_5_only_E1",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (opencv-python tensorflow) to the pip install command that are not required for roiextractors",
+      "correction_candidates": [
+        "pip install roiextractors",
+        "pip install roiextractors numpy scipy",
+        "pip install roiextractors[all]",
+        "pip install --upgrade roiextractors"
+      ],
+      "golden_answer": "pip install roiextractors"
+    }
+  ]
+}

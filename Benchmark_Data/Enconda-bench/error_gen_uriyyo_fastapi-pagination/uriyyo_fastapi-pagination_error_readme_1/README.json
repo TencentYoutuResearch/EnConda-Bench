@@ -1,0 +1,29 @@
+{
+  "readme": "uriyyo_fastapi-pagination_error_readme_1",
+  "repo_name": "uriyyo_fastapi-pagination",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The package name in the pip install command is incorrect; it uses an underscore instead of a hyphen, which will cause the installation to fail.",
+      "correction_candidates": [
+        "pip install fastapi-pagination",
+        "pip install \"fastapi-pagination\"",
+        "python -m pip install fastapi_pagination",
+        "pip install fastapi-paginate"
+      ],
+      "golden_answer": "pip install fastapi-pagination"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The `add_pagination(app)` call is placed before the `app` object is instantiated, which will raise a `NameError` because the `app` variable does not exist yet.",
+      "correction_candidates": [
+        "Move `add_pagination(app)` to be the last line in the script.",
+        "Place `add_pagination(app)` immediately after the `users` list is defined.",
+        "Move `add_pagination(app)` to the line just after `app = FastAPI()`.",
+        "Move `add_pagination(app)` to the line just before the `return paginate(users)` statement."
+      ],
+      "golden_answer": "Move `add_pagination(app)` to be the last line in the script."
+    }
+  ]
+}

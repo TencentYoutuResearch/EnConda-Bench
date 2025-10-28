@@ -1,0 +1,29 @@
+{
+  "readme": "spacetelescope_pysiaf_error_readme_2",
+  "repo_name": "spacetelescope_pysiaf",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The order of commands for cloning the repository and changing into the new directory is incorrect. The user must clone the repository before they can `cd` into it.",
+      "correction_candidates": [
+        "Correct order: `git clone https://github.com/spacetelescope/pysiaf` followed by `cd pysiaf`",
+        "Combined command: `git clone https://github.com/spacetelescope/pysiaf && cd pysiaf`",
+        "Change `cd pysiaf` to `mkdir pysiaf && cd pysiaf` before cloning.",
+        "Remove the `cd pysiaf` command entirely."
+      ],
+      "golden_answer": "Correct order: `git clone https://github.com/spacetelescope/pysiaf` followed by `cd pysiaf`"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The suggested fix for the `lxml` version incompatibility is incorrect. Installing `lxml==5.0.0` requires a newer `libxml2` and will not solve the described problem, which requires an older version of `lxml` compatible with `libxml2` version 10.0.0.",
+      "correction_candidates": [
+        "pip install lxml==3.6.4",
+        "brew install libxml2 && pip install lxml",
+        "pip install lxml --no-binary :all:",
+        "pip uninstall lxml && pip install lxml"
+      ],
+      "golden_answer": "pip install lxml==3.6.4"
+    }
+  ]
+}

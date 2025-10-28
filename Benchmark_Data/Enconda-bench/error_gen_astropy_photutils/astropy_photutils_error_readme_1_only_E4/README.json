@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_photutils_error_readme_1_only_E4",
+  "repo_name": "astropy_photutils",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the license file incorrectly points to `LICENSE.md`, which does not exist in the repository; the correct file is `LICENSE.rst`.",
+      "correction_candidates": [
+        "Correct the link to point to the `LICENSE.rst` file.",
+        "The license file is located in the `docs` directory, so the path should be `docs/LICENSE.rst`.",
+        "The license file is named `COPYING`, not `LICENSE.md`.",
+        "Remove the link and rely on the text description of the license."
+      ],
+      "golden_answer": "Correct the link to point to the `LICENSE.rst` file."
+    }
+  ]
+}

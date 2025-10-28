@@ -1,0 +1,29 @@
+{
+  "readme": "kevinmusgrave_pytorch-metric-learning_error_readme_2",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The Windows installation command specifies `torch===1.5.0`, which conflicts with the library's requirement of `torch >= 1.6`.",
+      "correction_candidates": [
+        "pip install torch===1.7.0 torchvision===0.8.0 -f https://download.pytorch.org/whl/torch_stable.html",
+        "pip install torch>=1.6.0 -f https://download.pytorch.org/whl/torch_stable.html",
+        "pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html",
+        "Remove the Windows-specific installation instructions."
+      ],
+      "golden_answer": "pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to format code points to a non-existent script path `./scripts/format.sh` instead of the correct `./format_code.sh`.",
+      "correction_candidates": [
+        "Change the command to `bash ./format_code.sh`.",
+        "Change the command to `sh format_code.sh`.",
+        "Change the command to `./format_code.sh`.",
+        "Change the command to `black . && isort .`."
+      ],
+      "golden_answer": "Change the command to `./format_code.sh`."
+    }
+  ]
+}

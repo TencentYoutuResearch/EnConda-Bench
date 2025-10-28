@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_quantumjot_btrack_error_readme_merge_k3",
+  "repo_name": "quantumjot_btrack",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect conda installation command. It suggests installing from a non-existent `btrack` channel, while the primary installation method is `pip`. This will lead to a 'channel not found' error.",
+      "correction_candidates": [
+        "Replace the conda command with `conda install -c conda-forge btrack`.",
+        "Remove the incorrect conda instructions and replace them with the correct pip command: `pip install btrack`.",
+        "Change the command to `conda install btrack` and hope for the best.",
+        "Add a note that conda installation is not officially supported."
+      ],
+      "golden_answer": "Remove the incorrect conda instructions and replace them with the correct pip command: `pip install btrack`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the developer guide in the 'Development' section is broken. It points to `.../developer_guide` instead of the correct path `.../dev_guide`, resulting in a 404 error.",
+      "correction_candidates": [
+        "Change the link URL to `https://btrack.readthedocs.io/en/latest/dev_guide`.",
+        "Change the link URL to `https://btrack.readthedocs.io/en/latest/development.html`.",
+        "Change the link URL to point to the `CONTRIBUTING.md` file on GitHub.",
+        "Remove the link and just refer to the documentation."
+      ],
+      "golden_answer": "Change the link URL to `https://btrack.readthedocs.io/en/latest/dev_guide`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The note on C++ compatibility incorrectly states that `btrack<=0.5.0` used `C++=17` and `btrack==0.5.1` uses `C++=11`. This is the reverse of the correct information and could mislead developers trying to build the package from source.",
+      "correction_candidates": [
+        "The note should state that `btrack<=0.5.0` used `C++=11` and `btrack==0.5.1` onwards uses `C++=17`.",
+        "The note should be removed as the compiler handles this automatically.",
+        "The note should state that all versions now require `C++=17` for consistency.",
+        "The note should state that `btrack<=0.5.0` used `C++=14` and `btrack==0.5.1` uses `C++=11`."
+      ],
+      "golden_answer": "The note should state that `btrack<=0.5.0` used `C++=11` and `btrack==0.5.1` onwards uses `C++=17`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have a logical order error. They ask the user to test the installation with `btrack --help` *before* providing the command to actually install the package.",
+      "correction_candidates": [
+        "The testing step should be moved after the `pip install btrack` command block.",
+        "The testing step should be removed entirely.",
+        "The `btrack --help` command should be combined with the installation: `pip install btrack && btrack --help`.",
+        "The test command should be changed to `python -c 'import btrack'`."
+      ],
+      "golden_answer": "The testing step should be moved after the `pip install btrack` command block."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (opencv-python and numpy with specific versions) to the installation command that are not required by btrack",
+      "correction_candidates": [
+        "pip install btrack",
+        "pip install btrack scipy matplotlib",
+        "conda install btrack",
+        "pip install --upgrade btrack"
+      ],
+      "golden_answer": "pip install btrack"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "Specified outdated and potentially incompatible versions for opencv-python (4.5.2) and numpy (1.19.0) which may conflict with current btrack requirements",
+      "correction_candidates": [
+        "Remove version specifications and let btrack handle its own dependencies",
+        "Update to opencv-python>=4.8.0 numpy>=1.21.0",
+        "Use pip install btrack[all] to get all optional dependencies",
+        "Install with conda-forge channel for better version management"
+      ],
+      "golden_answer": "Remove version specifications and let btrack handle its own dependencies"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "nextcord_nextcord_error_readme_3_only_E1",
+  "repo_name": "nextcord_nextcord",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The list of required Linux packages includes `libssl-dev`, which is not a necessary dependency for installing nextcord with voice support.",
+      "correction_candidates": [
+        "Remove `libffi-dev` from the list of packages.",
+        "Replace `libssl-dev` with `openssl-dev` in the list of packages.",
+        "Remove `libssl-dev` from the list of packages.",
+        "Remove `python-dev` from the list of packages."
+      ],
+      "golden_answer": "Remove `libssl-dev` from the list of packages."
+    }
+  ]
+}

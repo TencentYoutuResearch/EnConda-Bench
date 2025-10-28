@@ -1,0 +1,18 @@
+{
+  "readme": "libensemble_libensemble_error_readme_5_only_E4",
+  "repo_name": "libensemble_libensemble",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Modified save_output to use an incorrect relative path '../output/' that may not exist",
+      "correction_candidates": [
+        "sampling.save_output(__file__)",
+        "sampling.save_output('./output/' + __file__)",
+        "sampling.save_output(os.path.join('output', __file__))",
+        "sampling.save_output('output_' + __file__)"
+      ],
+      "golden_answer": "sampling.save_output(__file__)"
+    }
+  ]
+}

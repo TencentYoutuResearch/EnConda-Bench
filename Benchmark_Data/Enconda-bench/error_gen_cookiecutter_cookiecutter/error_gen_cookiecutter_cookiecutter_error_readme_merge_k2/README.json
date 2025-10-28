@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_cookiecutter_cookiecutter_error_readme_merge_k2",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions unnecessarily advise installing the `jinja2` dependency separately, which is already included as a dependency of `cookiecutter`.",
+      "correction_candidates": [
+        "Remove the `pip install jinja2` command as it is an unnecessary step.",
+        "Change `pip install jinja2` to `pip install jinja2 --upgrade`.",
+        "Move the `pip install jinja2` command to after the `pipx install cookiecutter` command.",
+        "Replace `pip install jinja2` with `pipx inject cookiecutter jinja2`."
+      ],
+      "golden_answer": "Remove the `pip install jinja2` command as it is an unnecessary step."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run a GitHub template uses an incorrect flag `--template` which is not a valid argument for `cookiecutter`.",
+      "correction_candidates": [
+        "Replace `--template gh:audreyfeldroy/cookiecutter-pypackage` with `gh:audreyfeldroy/cookiecutter-pypackage`.",
+        "Change the command to `pipx run --spec cookiecutter gh:audreyfeldroy/cookiecutter-pypackage`.",
+        "Replace `--template` with the correct shorthand `-t`.",
+        "Change the command to `cookiecutter --from-template gh:audreyfeldroy/cookiecutter-pypackage`."
+      ],
+      "golden_answer": "Replace `--template gh:audreyfeldroy/cookiecutter-pypackage` with `gh:audreyfeldroy/cookiecutter-pypackage`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The features section incorrectly states that Cookiecutter is only compatible with Python 3.8, while it supports a much wider range of versions.",
+      "correction_candidates": [
+        "Change 'Python 3.8 only' to 'Python 3.7 to 3.12'.",
+        "Change 'Python 3.8 only' to 'Python 3.6+'.",
+        "Change 'Python 3.8 only' to 'Python 3.x'.",
+        "Remove the entire line about Python version compatibility."
+      ],
+      "golden_answer": "Change 'Python 3.8 only' to 'Python 3.7 to 3.12'."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The documentation for template creators incorrectly specifies `cookiecutter.yaml` as the configuration file, but the correct file is `cookiecutter.json`.",
+      "correction_candidates": [
+        "Change `cookiecutter.yaml` to `cookiecutter.json`.",
+        "Change `cookiecutter.yaml` to `config.json`.",
+        "Add a note that `cookiecutter.yaml` is an alternative to `cookiecutter.json`.",
+        "Change `cookiecutter.yaml` to `.cookiecutterrc`."
+      ],
+      "golden_answer": "Change `cookiecutter.yaml` to `cookiecutter.json`."
+    }
+  ]
+}

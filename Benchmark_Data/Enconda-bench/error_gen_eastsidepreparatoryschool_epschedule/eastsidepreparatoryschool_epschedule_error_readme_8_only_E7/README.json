@@ -1,0 +1,18 @@
+{
+  "readme": "eastsidepreparatoryschool_epschedule_error_readme_8_only_E7",
+  "repo_name": "eastsidepreparatoryschool_epschedule",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies unversioned 'Python' instead of 'Python 3.7+' which creates version compatibility issues",
+      "correction_candidates": [
+        "all you need are `git`, Python 3.7+, and `pip`",
+        "all you need are `git`, Python 3.6+, and `pip`",
+        "all you need are `git`, Python 3+, and `pip`",
+        "all you need are `git`, Python 3.8+, and `pip`"
+      ],
+      "golden_answer": "all you need are `git`, Python 3.7+, and `pip`"
+    }
+  ]
+}

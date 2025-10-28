@@ -1,0 +1,18 @@
+{
+  "readme": "The-OpenROAD-Project_OpenLane_error_readme_5_only_E7",
+  "repo_name": "The-OpenROAD-Project_OpenLane",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Python version requirement changed from 3.6 to 2.7, which is incompatible and deprecated",
+      "correction_candidates": [
+        "Get Python 3.6 or higher",
+        "Get Python 3.8 or higher",
+        "Get Python 3.10 or higher",
+        "Get Python 3.7 or higher"
+      ],
+      "golden_answer": "Get Python 3.6 or higher"
+    }
+  ]
+}

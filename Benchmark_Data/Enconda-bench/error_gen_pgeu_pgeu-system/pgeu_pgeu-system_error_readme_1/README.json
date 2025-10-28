@@ -1,0 +1,29 @@
+{
+  "readme": "pgeu_pgeu-system_error_readme_1",
+  "repo_name": "pgeu_pgeu-system",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The Python dependencies are installed globally using `pip` before the virtual environment is created and activated, which can lead to system-wide package conflicts.",
+      "correction_candidates": [
+        "Move the `pip install -r requirements.txt` command to be after the `source venv/bin/activate` command.",
+        "Combine the venv creation and pip install into one step: `python3 -m venv venv && ./venv/bin/pip install -r requirements.txt`.",
+        "Remove the virtual environment steps and install dependencies globally.",
+        "Use `pipenv install` instead of `pip` and `venv`."
+      ],
+      "golden_answer": "Move the `pip install -r requirements.txt` command to be after the `source venv/bin/activate` command."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command `sudo aptitude install` is used, but `aptitude` is not installed by default on many Debian/Ubuntu systems, which would cause the command to fail.",
+      "correction_candidates": [
+        "Replace `sudo aptitude install` with `sudo apt-get install`.",
+        "Replace `sudo aptitude install` with `sudo apt install`.",
+        "Add a step `sudo apt-get install aptitude` before installing other dependencies.",
+        "Change the command to `sudo yum install` for Red Hat systems."
+      ],
+      "golden_answer": "Replace `sudo aptitude install` with `sudo apt install`."
+    }
+  ]
+}

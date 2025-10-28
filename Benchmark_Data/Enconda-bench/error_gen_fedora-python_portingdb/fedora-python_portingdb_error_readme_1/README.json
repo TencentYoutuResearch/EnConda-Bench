@@ -1,0 +1,29 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_1",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to start the HTML report server is syntactically incorrect. It attempts to run a package as a script instead of as a module, which will likely fail.",
+      "correction_candidates": [
+        "python -m portingdb serve",
+        "./portingdb/serve.py",
+        "python portingdb --serve",
+        "portingdb start-server"
+      ],
+      "golden_answer": "python -m portingdb serve"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command to check for droppable packages specifies an incorrect data directory path (`database/`), which does not exist in the repository structure.",
+      "correction_candidates": [
+        "python -m portingdb --datadir data/ check-drops",
+        "python -m portingdb --datadir ./data check-drops",
+        "python -m portingdb check-drops --datadir ../data/",
+        "python -m portingdb --data-directory data/ check-drops"
+      ],
+      "golden_answer": "python -m portingdb --datadir data/ check-drops"
+    }
+  ]
+}

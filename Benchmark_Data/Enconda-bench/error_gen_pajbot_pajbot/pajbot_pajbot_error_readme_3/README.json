@@ -1,0 +1,29 @@
+{
+  "readme": "pajbot_pajbot_error_readme_3",
+  "repo_name": "pajbot_pajbot",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly tell the user to run `pip install -r requirements.txt` directly, bypassing the provided installation script which handles virtual environment creation and other setup tasks.",
+      "correction_candidates": [
+        "The correct command is pip install .",
+        "The correct command is ./scripts/install_dependencies.sh",
+        "The correct command is ./scripts/venvinstall.sh",
+        "The correct command is python -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "The correct command is ./scripts/venvinstall.sh"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the bot is `python main.py`, which may fail if the user is not in the correct virtual environment. The original command `./main.py` likely uses a shebang to ensure the correct interpreter is used.",
+      "correction_candidates": [
+        "The correct command to run the bot is ./main.py",
+        "The correct command is python3.9 ./main.py",
+        "The correct command is py main.py",
+        "The correct command is python -m main"
+      ],
+      "golden_answer": "The correct command to run the bot is ./main.py"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_mopidy_mopidy_error_readme_merge_k2",
+  "repo_name": "mopidy_mopidy",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The quick start guide instructs the user to install Mopidy with pip before creating and activating the virtual environment, which contradicts best practices and can lead to system-wide package conflicts.",
+      "correction_candidates": [
+        "The `pip install mopidy` command should be run after activating the virtual environment with `source mopidy-env/bin/activate`.",
+        "The virtual environment steps should be removed, and the installation should be done globally using `sudo pip install mopidy`.",
+        "The command should be changed to `pip install --user mopidy` to avoid needing root permissions.",
+        "The `python3 -m venv mopidy-env` command should be run before `pip install mopidy`."
+      ],
+      "golden_answer": "The `pip install mopidy` command should be run after activating the virtual environment with `source mopidy-env/bin/activate`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `mopidy --create-config` is invalid for running the server. The correct command to simply run Mopidy is `mopidy`, and to print a default configuration is `mopidy config`.",
+      "correction_candidates": [
+        "Replace `mopidy --create-config` with `mopidy` to start the server.",
+        "Replace `mopidy --create-config` with `mopidy config > ~/.config/mopidy/mopidy.conf` to create a configuration file.",
+        "Replace `mopidy --create-config` with `mopidy --save-config`.",
+        "Remove the line `mopidy --create-config` entirely as Mopidy creates a default config path on first run."
+      ],
+      "golden_answer": "Replace `mopidy --create-config` with `mopidy` to start the server."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The development setup guide is missing a critical step to install system-level dependencies for GStreamer, which is required by Mopidy for audio processing. The `pip install` command will likely fail without it.",
+      "correction_candidates": [
+        "Add a note before `pip install`: 'Ensure GStreamer and its Python bindings are installed (e.g., `sudo apt-get install python3-gst-1.0` on Debian/Ubuntu).'",
+        "Add the command `pip install pygobject` before `pip install -e .`.",
+        "Change `pip install -e .` to `pip install -e .[gst]` to automatically handle GStreamer bindings.",
+        "Add a system command `sudo apt-get install libgstreamer1.0-dev gir1.2-gstreamer-1.0` before the pip install step."
+      ],
+      "golden_answer": "Add a note before `pip install`: 'Ensure GStreamer and its Python bindings are installed (e.g., `sudo apt-get install python3-gst-1.0` on Debian/Ubuntu).'"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instructions force the installation of `Pykka==1.2.1`, an outdated version that is incompatible with the current version of Mopidy and will cause dependency conflicts or runtime errors.",
+      "correction_candidates": [
+        "Remove the line `pip install Pykka==1.2.1`, as the correct version is specified by the project's own dependencies.",
+        "Change `pip install Pykka==1.2.1` to `pip install -U Pykka` to get the latest version.",
+        "Look up the correct version of Pykka in `setup.cfg` and update the command accordingly.",
+        "Change `pip install Pykka==1.2.1` to `pip install 'Pykka>=2.0'`."
+      ],
+      "golden_answer": "Remove the line `pip install Pykka==1.2.1`, as the correct version is specified by the project's own dependencies."
+    }
+  ]
+}

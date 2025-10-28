@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_fillll_reddit2telegram_error_readme_merge_k3",
+  "repo_name": "fillll_reddit2telegram",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install Python packages is incorrect. `pip install requirements.txt` attempts to install a package named 'requirements.txt' instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "pip install from requirements.txt",
+        "pip install -r requirements.txt",
+        "pip install --file requirements.txt",
+        "python -m pip install requirements.txt"
+      ],
+      "golden_answer": "pip install -r requirements.txt"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The first cron schedule `46 * * *` is invalid. A cron schedule requires five time fields (minute, hour, day of month, month, day of week).",
+      "correction_candidates": [
+        "46 * * * * ~/reddit2telegram/auto_update.sh",
+        "*/46 * * * * ~/reddit2telegram/auto_update.sh",
+        "46 * * * * * ~/reddit2telegram/auto_update.sh",
+        "46h *m *d *M *Y ~/reddit2telegram/auto_update.sh"
+      ],
+      "golden_answer": "46 * * * * ~/reddit2telegram/auto_update.sh"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The instructions specify installing `python2`, which is outdated and likely incompatible with the project's dependencies. The project requires Python 3.",
+      "correction_candidates": [
+        "install `python`",
+        "install `python` (version 3.6 or newer is recommended)",
+        "install `python3`",
+        "install latest `python`"
+      ],
+      "golden_answer": "install `python` (version 3.6 or newer is recommended)"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The file path `~/reddit2telegram/scripts/auto_update.sh` in the cron job is incorrect. The `auto_update.sh` script is located in the root of the project directory, not in a `scripts` subdirectory.",
+      "correction_candidates": [
+        "Change the path to `~/reddit2telegram/auto_update.sh`",
+        "Change the path to `/etc/reddit2telegram/auto_update.sh`",
+        "Change the path to `~/auto_update.sh`",
+        "Change the path to `./reddit2telegram/auto_update.sh`"
+      ],
+      "golden_answer": "Change the path to `~/reddit2telegram/auto_update.sh`"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The instructions for creating `tags.txt` state that tags should be comma-separated, which is incorrect. The application expects tags to be separated by spaces.",
+      "correction_candidates": [
+        "Tags should be separated by semicolons.",
+        "Tags should be on separate lines.",
+        "Tags should be separated by spaces.",
+        "Tags should be provided as a JSON array in `tags.json`."
+      ],
+      "golden_answer": "Tags should be separated by spaces."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions list the steps in the wrong logical order. The cron job is configured before the required software (mongodb, ffmpeg, python) and the project scripts are installed, which will cause the cron job to fail.",
+      "correction_candidates": [
+        "Move the dependency installation step before the cron setup.",
+        "Combine the installation and cron setup into a single script.",
+        "The cron job should be set up last, after all dependencies and scripts are in place.",
+        "Run the `auto_update.sh` script manually once before setting up the cron job."
+      ],
+      "golden_answer": "The cron job should be set up last, after all dependencies and scripts are in place."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "smarr_rebench_error_readme_6_only_E2",
+  "repo_name": "smarr_rebench",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax using non-existent --config flag",
+      "correction_candidates": [
+        "rebench test.conf",
+        "rebench -c test.conf",
+        "rebench --file test.conf",
+        "python -m rebench test.conf"
+      ],
+      "golden_answer": "rebench test.conf"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "gpflow_gpflow_error_readme_4_only_E2",
+  "repo_name": "gpflow_gpflow",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to install from GitHub is missing the `.git` suffix in the repository URL, which will cause `pip` to fail to clone the repository.",
+      "correction_candidates": [
+        "Change the URL to `.../GPflow/GPflow.git@develop...`",
+        "Change the command to `git clone https://github.com/GPflow/GPflow.git` followed by `pip install -e .`",
+        "Remove the `git+` prefix from the command.",
+        "Change `@develop` to `@master`."
+      ],
+      "golden_answer": "Change the URL to `.../GPflow/GPflow.git@develop...`"
+    }
+  ]
+}

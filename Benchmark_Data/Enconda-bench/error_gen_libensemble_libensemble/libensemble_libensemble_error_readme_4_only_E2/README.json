@@ -1,0 +1,18 @@
+{
+  "readme": "libensemble_libensemble_error_readme_4_only_E2",
+  "repo_name": "libensemble_libensemble",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command incorrectly suggests that `libensemble` is a command-line executable for running scripts, but the script should be run with the `python` interpreter.",
+      "correction_candidates": [
+        "Change `libensemble this_file.py` to `python this_file.py`.",
+        "Change the command to `python -m libensemble.cli.run --entry-point this_file.py --comms local --nworkers 4`.",
+        "Change the command to `python -m libensemble this_file.py --comms local --nworkers 4`.",
+        "Add `#!/usr/bin/env python` to the top of the script and run with `./this_file.py --comms local --nworkers 4`."
+      ],
+      "golden_answer": "Change `libensemble this_file.py` to `python this_file.py`."
+    }
+  ]
+}

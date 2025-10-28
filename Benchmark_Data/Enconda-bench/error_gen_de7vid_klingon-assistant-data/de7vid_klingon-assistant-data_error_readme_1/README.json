@@ -1,0 +1,29 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_1",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command syntax provided for `review_changes.sh` is incorrect. The script uses positional arguments for language and commit, not named flags like `--language`.",
+      "correction_candidates": [
+        "The script `review_changes.sh` takes a language code and an optional commit as positional arguments.",
+        "The script should be called as `sh review_changes.sh <lang> [commit]`.",
+        "The script `review_changes.sh` requires a configuration file to specify the language and commit.",
+        "The correct command is `review_changes.sh <language_code> [commit_hash]`."
+      ],
+      "golden_answer": "The script `review_changes.sh` takes a language code and an optional commit as positional arguments."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The README incorrectly states that the `write_db.sh` script is in the `scripts/` directory of the current repository, but it is actually located in the separate Android app repository.",
+      "correction_candidates": [
+        "The `write_db.sh` script is located in the root of the Android repository.",
+        "The `write_db.sh` script must be downloaded from the Android repository's releases page.",
+        "The `write_db.sh` script is located in the separate `klingon-assistant-android` repository.",
+        "The `write_db.sh` script is part of the `klingon-assistant` main repo, not the data repo."
+      ],
+      "golden_answer": "The `write_db.sh` script is located in the separate `klingon-assistant-android` repository."
+    }
+  ]
+}

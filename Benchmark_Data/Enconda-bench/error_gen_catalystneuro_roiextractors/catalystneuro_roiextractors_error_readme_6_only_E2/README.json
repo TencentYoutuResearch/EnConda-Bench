@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_6_only_E2",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect pip parameter '-f requirements.yaml' which is for finding links, not installing from requirements file",
+      "correction_candidates": [
+        "pip install -e .",
+        "pip install -e . -r requirements.txt",
+        "pip install -e . --find-links requirements.yaml",
+        "pip install -e . && pip install -r requirements.yaml"
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

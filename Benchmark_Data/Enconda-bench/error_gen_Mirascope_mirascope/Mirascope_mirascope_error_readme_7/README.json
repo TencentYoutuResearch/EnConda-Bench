@@ -1,0 +1,29 @@
+{
+  "readme": "Mirascope_mirascope_error_readme_7",
+  "repo_name": "Mirascope_mirascope",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (torch transformers) that are not required for basic Mirascope installation",
+      "correction_candidates": [
+        "pip install mirascope",
+        "pip install mirascope numpy scipy",
+        "pip install mirascope pandas matplotlib",
+        "pip install mirascope requests beautifulsoup4"
+      ],
+      "golden_answer": "pip install mirascope"
+    },
+    {
+      "error_type": "E8",
+      "error_description": "Removed the tools parameter from OpenAICallParams but still expects tool functionality to work in the example",
+      "correction_candidates": [
+        "call_params = OpenAICallParams(model=\"gpt-4\", tools=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, functions=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, tool_choice=\"auto\", tools=[get_current_weather])",
+        "call_params = OpenAICallParams(model=\"gpt-4\", temperature=0.4, enable_tools=True)"
+      ],
+      "golden_answer": "call_params = OpenAICallParams(model=\"gpt-4\", tools=[get_current_weather])"
+    }
+  ]
+}

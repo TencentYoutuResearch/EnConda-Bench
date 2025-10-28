@@ -1,0 +1,29 @@
+{
+  "readme": "jaraco_inflect_error_readme_2",
+  "repo_name": "jaraco_inflect",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library requires Python 2.7, which is outdated. The library's badges and metadata indicate support for modern Python 3 versions.",
+      "correction_candidates": [
+        "Remove the sentence stating it requires Python 2.7.",
+        "Change the sentence to \"This library is compatible with Python 3.6 and newer.\"",
+        "Change the sentence to \"This library requires the `python2-compat` package.\"",
+        "Update the sentence to \"This library is compatible with both Python 2.7 and Python 3.x.\""
+      ],
+      "golden_answer": "Remove the sentence stating it requires Python 2.7."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Getting Started' section instructs the user to run a python script using the library before installing it, which is the wrong order and will fail.",
+      "correction_candidates": [
+        "Correct the logical order by showing the `pip install inflect` command before the `python inflect.py` command.",
+        "Remove the `python inflect.py` command entirely as it's not a standard way to demonstrate a library.",
+        "Change `python inflect.py` to `python -m inflect` to suggest a module-based execution.",
+        "Add a `git clone` step before the `python inflect.py` command to ensure the file exists."
+      ],
+      "golden_answer": "Correct the logical order by showing the `pip install inflect` command before the `python inflect.py` command."
+    }
+  ]
+}

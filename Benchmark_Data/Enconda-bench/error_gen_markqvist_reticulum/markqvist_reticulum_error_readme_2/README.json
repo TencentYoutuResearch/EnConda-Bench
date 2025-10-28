@@ -1,0 +1,29 @@
+{
+  "readme": "markqvist_reticulum_error_readme_2",
+  "repo_name": "markqvist_reticulum",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instruction for `pipx` installation suggests running `rnsd` to create a configuration before installing the package, which is impossible since `rnsd` is part of the package.",
+      "correction_candidates": [
+        "Remove the sentence 'First, run `rnsd` to create an initial configuration, then install the package.'",
+        "Change the instruction to 'First, install with `pipx install rns`, then run `rnsd`.'",
+        "Change the instruction to 'First, manually create a config file at `~/.config/rns/config`, then run `pipx install rns`.'",
+        "Change the command to `pipx run rnsd && pipx install rns`."
+      ],
+      "golden_answer": "Remove the sentence 'First, run `rnsd` to create an initial configuration, then install the package.'"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The 'Dependencies' section omits `pyserial` from the list of required packages for a default install, even though it is required for serial interface functionality.",
+      "correction_candidates": [
+        "Add `pyserial` to the list of dependencies.",
+        "Add `[pyserial](https://github.com/pyserial/pyserial)` to the list of dependencies.",
+        "Remove the entire paragraph that mentions using `rnspure` if `pyserial` is not supported.",
+        "Add a note saying `pyserial` is an optional dependency for serial port communication."
+      ],
+      "golden_answer": "Add `[pyserial](https://github.com/pyserial/pyserial)` to the list of dependencies."
+    }
+  ]
+}

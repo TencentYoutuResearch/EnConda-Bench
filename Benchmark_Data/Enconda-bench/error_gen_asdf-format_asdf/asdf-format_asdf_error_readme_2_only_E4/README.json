@@ -1,0 +1,18 @@
+{
+  "readme": "asdf-format_asdf_error_readme_2_only_E4",
+  "repo_name": "asdf-format_asdf",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The link to the contributing guidelines points to a non-existent file `docs/CONTRIBUTING.md` instead of the correct `CONTRIBUTING.rst` in the root directory.",
+      "correction_candidates": [
+        "Change the link `docs/CONTRIBUTING.md` to `CONTRIBUTING.rst`",
+        "Change the link `docs/CONTRIBUTING.md` to `.github/CONTRIBUTING.md`",
+        "Change the link `docs/CONTRIBUTING.md` to `CONTRIBUTING.md`",
+        "Change the link `docs/CONTRIBUTING.md` to `doc/CONTRIBUTING.rst`"
+      ],
+      "golden_answer": "Change the link `docs/CONTRIBUTING.md` to `CONTRIBUTING.rst`"
+    }
+  ]
+}

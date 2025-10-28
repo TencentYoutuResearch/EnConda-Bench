@@ -1,0 +1,18 @@
+{
+  "readme": "terminusdb_terminusdb-client-python_error_readme_3_only_E4",
+  "repo_name": "terminusdb_terminusdb-client-python",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "In the `Release Notes` section, the link to the release notes file is broken. It points to `RELEASENOTES.md` instead of the correct `RELEASE_NOTES.md`.",
+      "correction_candidates": [
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](RELEASE_NOTES.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](release_notes.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](CHANGELOG.md)`.",
+        "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](docs/release-notes.md)`."
+      ],
+      "golden_answer": "Change `[Release Notes](RELEASENOTES.md)` to `[Release Notes](RELEASE_NOTES.md)`."
+    }
+  ]
+}

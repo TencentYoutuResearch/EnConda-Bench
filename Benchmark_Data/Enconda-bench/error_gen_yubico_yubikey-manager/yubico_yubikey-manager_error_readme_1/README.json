@@ -1,0 +1,29 @@
+{
+  "readme": "yubico_yubikey-manager_error_readme_1",
+  "repo_name": "yubico_yubikey-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the Usage examples, the command to list YubiKey serial numbers uses an incorrect flag `--serial` instead of the correct `--serials`.",
+      "correction_candidates": [
+        "Replace `--serial` with `-s`.",
+        "Replace `$ ykman list --serial` with `$ ykman --list --serials`.",
+        "Replace `--serial` with `--serials`.",
+        "Replace `list --serial` with `list --get-serials`."
+      ],
+      "golden_answer": "Replace `--serial` with `--serials`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The Ubuntu installation command `sudo apt install ykman` is incorrect; the package name is `yubikey-manager`, not `ykman`.",
+      "correction_candidates": [
+        "Replace `ykman` with `yubikey-manager`.",
+        "Replace `ykman` with `yubikey-manager-cli`.",
+        "Replace `apt install` with `apt-get install`.",
+        "Replace `ykman` with `python3-yubikey-manager`."
+      ],
+      "golden_answer": "Replace `ykman` with `yubikey-manager`."
+    }
+  ]
+}

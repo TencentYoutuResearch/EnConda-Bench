@@ -1,0 +1,29 @@
+{
+  "readme": "kevinmusgrave_pytorch-metric-learning_error_readme_3",
+  "repo_name": "kevinmusgrave_pytorch-metric-learning",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command `conda install -c=conda-forge ...` uses an incorrect syntax for specifying the channel.",
+      "correction_candidates": [
+        "conda install -c conda-forge pytorch-metric-learning",
+        "conda install --channel conda-forge pytorch-metric-learning",
+        "conda install pytorch-metric-learning -c conda-forge",
+        "conda install pytorch-metric-learning --from-channel conda-forge"
+      ],
+      "golden_answer": "conda install -c conda-forge pytorch-metric-learning"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The code formatting instructions incorrectly advise running the format script `./format_code.sh` before installing the necessary tools (`black`, `isort`).",
+      "correction_candidates": [
+        "Combine the commands into a single line: `pip install black isort && ./format_code.sh`.",
+        "Swap the order of the two commands, so `pip install black isort` is executed first.",
+        "Remove the `./format_code.sh` script and instruct users to run `black .` and `isort .` directly.",
+        "Add `sudo` to the `./format_code.sh` command."
+      ],
+      "golden_answer": "Swap the order of the two commands, so `pip install black isort` is executed first."
+    }
+  ]
+}

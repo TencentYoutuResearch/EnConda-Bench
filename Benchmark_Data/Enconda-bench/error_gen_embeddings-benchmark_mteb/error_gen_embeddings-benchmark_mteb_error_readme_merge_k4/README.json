@@ -1,0 +1,84 @@
+{
+  "readme": "error_gen_embeddings-benchmark_mteb_error_readme_merge_k4",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level7",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install mteb-benchmark` is incorrect. The package is not found under this name on PyPI, causing an installation failure.",
+      "correction_candidates": [
+        "pip install massive-text-embedding-benchmark",
+        "pip install mteb",
+        "conda install mteb",
+        "pip install mteb --from-github"
+      ],
+      "golden_answer": "pip install mteb"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The CLI command `mteb run --m ...` uses an incorrect flag `--m`. The correct flag for specifying the model is a single-dashed `-m`, causing a command-line argument parsing error.",
+      "correction_candidates": [
+        "mteb run --model sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run -model sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run -m sentence-transformers/all-MiniLM-L6-v2",
+        "mteb run --model_name sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "golden_answer": "mteb run -m sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the example script `run_mteb.py` is broken as the file does not exist at the specified path. The correct filename is `run_mteb_english.py`.",
+      "correction_candidates": [
+        "Change the link to point to 'examples/run_mteb.py'.",
+        "Change the link to point to 'mteb/scripts/run_mteb_english.py'.",
+        "Change the link to point to 'scripts/run_mteb_english.py'.",
+        "Change the link to point to the 'mteb/mtebscripts' repository."
+      ],
+      "golden_answer": "Change the link to point to 'scripts/run_mteb_english.py'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The 'Installation' section is placed after the 'Usage' section. Users will likely try to run the code from the 'Usage' section before seeing how to install the required package, leading to a `ModuleNotFoundError`.",
+      "correction_candidates": [
+        "Move the 'Installation' section to be before the 'Usage' section.",
+        "Add a note at the beginning of the 'Usage' section to install the package first.",
+        "Create a new 'Getting Started' section that includes both installation and basic usage.",
+        "Combine the 'Installation' and 'Usage' sections."
+      ],
+      "golden_answer": "Move the 'Installation' section to be before the 'Usage' section."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The Python code example has a syntax error. The line `evaluation.run(...)` is missing a closing parenthesis, which will cause the script to fail with a `SyntaxError`.",
+      "correction_candidates": [
+        "Remove the output_folder argument: evaluation.run(model)",
+        "Correct the f-string syntax: evaluation.run(model, output_folder=\"results/\" + model_name)",
+        "Add a closing parenthesis: evaluation.run(model, output_folder=f\"results/{model_name}\")",
+        "Change the line to: results = evaluation.run(model)"
+      ],
+      "golden_answer": "Add a closing parenthesis: evaluation.run(model, output_folder=f\"results/{model_name}\")"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes `tensorflow`, which is not a required dependency for the core `mteb` package. This installs an unnecessary, large library and may cause dependency conflicts.",
+      "correction_candidates": [
+        "Change the command to install optional dependencies: pip install mteb[tensorflow]",
+        "Add a note explaining that tensorflow is an optional dependency.",
+        "Remove tensorflow from the installation command: pip install mteb",
+        "Replace tensorflow with pytorch: pip install mteb torch"
+      ],
+      "golden_answer": "Remove tensorflow from the installation command: pip install mteb"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "In the 'Advanced Usage' section, the link for 'how to add a new task' points to a non-existent file `docs/new_dataset_guide.md`. This results in a 404 error.",
+      "correction_candidates": [
+        "Correct the link to point to 'CONTRIBUTING.md'.",
+        "Correct the link to point to 'docs/adding_a_model.md'.",
+        "Remove the link entirely.",
+        "Correct the link to point to 'docs/adding_a_dataset.md'."
+      ],
+      "golden_answer": "Correct the link to point to 'docs/adding_a_dataset.md'."
+    }
+  ]
+}

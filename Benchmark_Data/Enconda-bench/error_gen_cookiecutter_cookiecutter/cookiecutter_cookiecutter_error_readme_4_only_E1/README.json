@@ -1,0 +1,18 @@
+{
+  "readme": "cookiecutter_cookiecutter_error_readme_4_only_E1",
+  "repo_name": "cookiecutter_cookiecutter",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The `pip` installation command is missing the `--user` flag, which can lead to permission errors if not installing in a virtual environment or as an administrator.",
+      "correction_candidates": [
+        "Add the `--user` flag to the command: `python -m pip install --user cookiecutter`.",
+        "Replace the command with `sudo python -m pip install cookiecutter`.",
+        "Add a note to first create a virtual environment with `python -m venv venv`.",
+        "Change the command to `pip install cookiecutter`, as `python -m` is redundant."
+      ],
+      "golden_answer": "Add the `--user` flag to the command: `python -m pip install --user cookiecutter`."
+    }
+  ]
+}

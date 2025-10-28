@@ -1,0 +1,29 @@
+{
+  "readme": "error_gen_qiita-spots_qiita_error_readme_merge_k2",
+  "repo_name": "qiita-spots_qiita",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements.txt` is syntactically incorrect for installing dependencies from a file. It is missing the `-r` flag.",
+      "correction_candidates": [
+        "The correct command is `pip install -r requirements.txt`.",
+        "The correct command is `pip --install -r requirements.txt`.",
+        "The correct command is `pip install < requirements.txt`.",
+        "The file should be executed directly: `./requirements.txt install`."
+      ],
+      "golden_answer": "The correct command is `pip install -r requirements.txt`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The setup instructions specify using Python 2.7, which is end-of-life and incompatible with modern scientific Python libraries and likely Qiita itself.",
+      "correction_candidates": [
+        "Change the Python version in the `conda create` command to a supported version, such as `python=3.9`.",
+        "Remove the Python version specification to let conda install a recent, compatible version by default.",
+        "Change the command to `conda create -n qiita-dev python=3` to use any Python 3 version.",
+        "Add a note that Python 3.6 or newer is required."
+      ],
+      "golden_answer": "Change the Python version in the `conda create` command to a supported version, such as `python=3.9`."
+    }
+  ]
+}

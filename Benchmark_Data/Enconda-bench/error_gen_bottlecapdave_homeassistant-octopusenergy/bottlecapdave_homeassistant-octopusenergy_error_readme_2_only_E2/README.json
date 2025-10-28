@@ -1,0 +1,18 @@
+{
+  "readme": "bottlecapdave_homeassistant-octopusenergy_error_readme_2_only_E2",
+  "repo_name": "bottlecapdave_homeassistant-octopusenergy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The My Home Assistant redirect link for adding the HACS repository contains incorrect URL parameters ('author' and 'repo' instead of 'owner' and 'repository'), causing the link to fail.",
+      "correction_candidates": [
+        "[Add the repository](https://my.home-assistant.io/redirect/hacs_repository/?owner=BottlecapDave&repository=homeassistant-octopusenergy&category=integration)",
+        "[Add the repository](https://my.home-assistant.io/redirect/hacs_repository/?user=BottlecapDave&repository=homeassistant-octopusenergy&type=integration)",
+        "[Add the repository](https://hacs.xyz/docs/navigation/repositories)",
+        "[Add the repository](https://github.com/BottlecapDave/HomeAssistant-OctopusEnergy)"
+      ],
+      "golden_answer": "[Add the repository](https://my.home-assistant.io/redirect/hacs_repository/?owner=BottlecapDave&repository=homeassistant-octopusenergy&category=integration)"
+    }
+  ]
+}

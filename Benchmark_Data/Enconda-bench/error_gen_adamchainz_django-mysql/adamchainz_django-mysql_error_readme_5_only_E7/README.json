@@ -1,0 +1,18 @@
+{
+  "readme": "adamchainz_django-mysql_error_readme_5_only_E7",
+  "repo_name": "adamchainz_django-mysql",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Pinned mysqlclient to a specific version without explaining compatibility requirements or supported version ranges",
+      "correction_candidates": [
+        "Specify supported Python versions and compatible mysqlclient version ranges in the requirements section",
+        "Remove version pinning and let pip resolve compatible versions automatically",
+        "Add a compatibility matrix showing which versions work together",
+        "Use version ranges like mysqlclient>=2.0.0,<3.0.0 instead of exact pinning"
+      ],
+      "golden_answer": "Remove version pinning and let pip resolve compatible versions automatically"
+    }
+  ]
+}

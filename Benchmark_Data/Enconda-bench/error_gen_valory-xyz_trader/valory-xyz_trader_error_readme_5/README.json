@@ -1,0 +1,29 @@
+{
+  "readme": "valory-xyz_trader_error_readme_5",
+  "repo_name": "valory-xyz_trader",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Changed Python version requirement from 3.10 to 3.8, creating version compatibility issues",
+      "correction_candidates": [
+        "Python `== 3.10`",
+        "Python `>= 3.8`",
+        "Python `== 3.9`",
+        "Python `>= 3.10`"
+      ],
+      "golden_answer": "Python `== 3.10`"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Added poetry install command in the wrong execution order, after Docker operations instead of in environment setup",
+      "correction_candidates": [
+        "Remove the poetry install command from the deployment section",
+        "Move poetry install to the environment preparation section",
+        "Replace poetry install with pip install",
+        "Add poetry shell after poetry install in deployment section"
+      ],
+      "golden_answer": "Remove the poetry install command from the deployment section"
+    }
+  ]
+}

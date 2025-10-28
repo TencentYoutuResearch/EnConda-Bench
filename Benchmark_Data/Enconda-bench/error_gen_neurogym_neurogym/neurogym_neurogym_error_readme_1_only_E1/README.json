@@ -1,0 +1,18 @@
+{
+  "readme": "neurogym_neurogym_error_readme_1_only_E1",
+  "repo_name": "neurogym_neurogym",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command for a full installation, `pip install -e '.[full]'`, uses an incorrect extra requirement key. The correct key for all optional dependencies is `'[all]'`.",
+      "correction_candidates": [
+        "pip install -e . --all",
+        "pip install -e '.[complete]'",
+        "pip install -e .[all]",
+        "pip install -e '.[all]'"
+      ],
+      "golden_answer": "pip install -e '.[all]'"
+    }
+  ]
+}

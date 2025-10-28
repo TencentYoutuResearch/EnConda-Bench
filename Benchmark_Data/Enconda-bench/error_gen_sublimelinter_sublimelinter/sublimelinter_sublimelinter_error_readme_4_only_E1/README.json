@@ -1,0 +1,18 @@
+{
+  "readme": "sublimelinter_sublimelinter_error_readme_4_only_E1",
+  "repo_name": "sublimelinter_sublimelinter",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The 'Installation' section adds an unnecessary and incorrect step to `pip install sublimelinter-backend`. This package does not exist, and installation only requires the Sublime Text package and the actual command-line linter tools.",
+      "correction_candidates": [
+        "The command should be `pip install sublime-linter`.",
+        "The instruction to `pip install sublimelinter-backend` is incorrect and should be removed. Users should install specific command-line linter tools like `eslint` or `flake8`.",
+        "The package manager is wrong; the command should be `npm install sublimelinter-backend`.",
+        "The command is correct but needs to be run with `sudo`."
+      ],
+      "golden_answer": "The instruction to `pip install sublimelinter-backend` is incorrect and should be removed. Users should install specific command-line linter tools like `eslint` or `flake8`."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "open-sdg_sdg-translations_error_readme_3",
+  "repo_name": "open-sdg_sdg-translations",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The instructions omit the `cd sdg-translations` command after cloning the repository, which will cause all subsequent file-path-dependent commands to fail.",
+      "correction_candidates": [
+        "Add the command `cd sdg-translations` after the `git clone` step.",
+        "Prefix all subsequent commands with the directory, e.g., `python3 -m venv sdg-translations/venv`.",
+        "Clone the repository into the current directory with `git clone https://github.com/open-sdg/sdg-translations.git .`",
+        "The `cd` command is not needed if you run the script from the parent directory."
+      ],
+      "golden_answer": "Add the command `cd sdg-translations` after the `git clone` step."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `venv/bin/activate` is used to activate the virtual environment, but it must be sourced (e.g., with `source venv/bin/activate`) to modify the current shell's state.",
+      "correction_candidates": [
+        "Use `source venv/bin/activate` to correctly activate the virtual environment.",
+        "The command is correct, but requires `sudo` privileges: `sudo venv/bin/activate`.",
+        "On Windows, the correct command is `venv\\Scripts\\activate`.",
+        "Add the venv `bin` directory to your system's PATH variable permanently."
+      ],
+      "golden_answer": "Use `source venv/bin/activate` to correctly activate the virtual environment."
+    }
+  ]
+}

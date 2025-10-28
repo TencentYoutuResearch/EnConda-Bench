@@ -1,0 +1,18 @@
+{
+  "readme": "andrew-codechimp_HA-Battery-Notes_error_readme_2_only_E1",
+  "repo_name": "andrew-codechimp_HA-Battery-Notes",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The manual installation instructions incorrectly state that the user must run `pip install requests`. This dependency is not required for the integration and is managed by Home Assistant itself if needed.",
+      "correction_candidates": [
+        "The command `pip install requests` is unnecessary and should be removed.",
+        "The command should be `pip install ha-battery-notes` instead.",
+        "The command should be run inside the Home Assistant container.",
+        "The command is correct, but should be `pip3 install requests`."
+      ],
+      "golden_answer": "The command `pip install requests` is unnecessary and should be removed."
+    }
+  ]
+}

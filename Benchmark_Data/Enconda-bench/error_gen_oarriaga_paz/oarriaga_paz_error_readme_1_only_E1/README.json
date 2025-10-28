@@ -1,0 +1,18 @@
+{
+  "readme": "oarriaga_paz_error_readme_1_only_E1",
+  "repo_name": "oarriaga_paz",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly lists PyTorch as a required dependency, while the library is built on TensorFlow.",
+      "correction_candidates": [
+        "PAZ has only **three** dependencies: [Tensorflow2.0](https://www.tensorflow.org/), [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/).",
+        "PAZ has only **three** dependencies: [Tensorflow2.0](https://www.tensorflow.org/), [Keras](https://keras.io/) and [NumPy](https://numpy.org/).",
+        "PAZ has **four** dependencies: [Tensorflow2.0](https://www.tensorflow.org/), [OpenCV](https://opencv.org/), [NumPy](https://numpy.org/) and [PyYAML](https://pyyaml.org/).",
+        "PAZ has only **two** dependencies: [Tensorflow2.0](https://www.tensorflow.org/) and [NumPy](https://numpy.org/)."
+      ],
+      "golden_answer": "PAZ has only **three** dependencies: [Tensorflow2.0](https://www.tensorflow.org/), [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/)."
+    }
+  ]
+}

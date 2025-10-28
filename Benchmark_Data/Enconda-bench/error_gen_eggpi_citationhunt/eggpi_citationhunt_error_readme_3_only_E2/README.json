@@ -1,0 +1,18 @@
+{
+  "readme": "eggpi_citationhunt_error_readme_3_only_E2",
+  "repo_name": "eggpi_citationhunt",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the command to delete cron jobs, `delete` is incorrectly passed as a flag (`--delete cronjob`). It should be a subcommand (`delete cronjob`).",
+      "correction_candidates": [
+        "Replace `xargs kubectl --delete cronjob` with `xargs kubectl delete cronjob`.",
+        "Use a different command: `kubectl delete cronjob -l app=citationhunt`.",
+        "Change the command to `kubectl get cronjobs | xargs kubectl delete`.",
+        "Replace the entire pipe with `kubectl delete cronjob --all`."
+      ],
+      "golden_answer": "Replace `xargs kubectl --delete cronjob` with `xargs kubectl delete cronjob`."
+    }
+  ]
+}

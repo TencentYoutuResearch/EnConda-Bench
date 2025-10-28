@@ -1,0 +1,18 @@
+{
+  "readme": "wpi-lnl_lnldb_error_readme_3_only_E2",
+  "repo_name": "wpi-lnl_lnldb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run the development server is incorrect. 'startserver' is not a valid Django command.",
+      "correction_candidates": [
+        "The correct command is 'python manage.py runserver'.",
+        "The correct command is 'python manage.py server'.",
+        "The correct command is 'django-admin runserver'.",
+        "The correct command is 'gunicorn lnldb.wsgi'."
+      ],
+      "golden_answer": "The correct command is 'python manage.py runserver'."
+    }
+  ]
+}

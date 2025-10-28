@@ -1,0 +1,18 @@
+{
+  "readme": "rdmorganiser_rdmo_error_readme_2_only_E7",
+  "repo_name": "rdmorganiser_rdmo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the project requires Python 2.7, which is outdated and likely incompatible with the project's dependencies.",
+      "correction_candidates": [
+        "Change 'Python 2.7' to 'Python 3.6 or newer'.",
+        "Change 'Python 2.7' to 'the latest version of Python'.",
+        "Add a note that Python 2.7 can be used with a legacy version of pip.",
+        "Remove the note stating that Python 2.7 is required."
+      ],
+      "golden_answer": "Remove the note stating that Python 2.7 is required."
+    }
+  ]
+}

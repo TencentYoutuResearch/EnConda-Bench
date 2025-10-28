@@ -1,0 +1,18 @@
+{
+  "readme": "jmetal_jmetalpy_error_readme_1_only_E2",
+  "repo_name": "jmetal_jmetalpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The main installation command `pip install jmetalpy=` contains a syntax error, causing the installation to fail.",
+      "correction_candidates": [
+        "pip install jmetalpy",
+        "pip install jmetalpy --upgrade",
+        "pip install \"jmetalpy\"",
+        "pip install jmetalpy=="
+      ],
+      "golden_answer": "pip install jmetalpy"
+    }
+  ]
+}

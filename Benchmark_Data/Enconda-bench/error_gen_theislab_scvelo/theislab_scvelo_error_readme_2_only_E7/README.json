@@ -1,0 +1,18 @@
+{
+  "readme": "theislab_scvelo_error_readme_2_only_E7",
+  "repo_name": "theislab_scvelo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that scVelo requires Python 2.7, which is outdated and incompatible. scVelo requires Python 3.6 or newer.",
+      "correction_candidates": [
+        "Change \"Python 2.7\" to \"Python 3\".",
+        "Change \"Python 2.7\" to \"Python >= 3.6\".",
+        "Remove the sentence \"scVelo requires Python 2.7.\"",
+        "Change \"Python 2.7\" to \"the latest Python version\"."
+      ],
+      "golden_answer": "Change \"Python 2.7\" to \"Python >= 3.6\"."
+    }
+  ]
+}

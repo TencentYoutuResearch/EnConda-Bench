@@ -1,0 +1,18 @@
+{
+  "readme": "fixator10_fixator10-cogs_error_readme_5_only_E6",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Dependencies are installed before adding the repository, which is incorrect order",
+      "correction_candidates": [
+        "Move dependency installation after the repo add and cog install commands",
+        "Install dependencies using Red's built-in package manager after cog installation",
+        "Remove dependency installation entirely as it's handled automatically",
+        "Add dependencies through requirements.txt in the cog directory instead"
+      ],
+      "golden_answer": "Remove dependency installation entirely as it's handled automatically"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_llm-random_llm-random_error_readme_merge_k2",
+  "repo_name": "llm-random_llm-random",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The README suggests that `./start-dev.sh` installs requirements before creating the virtual environment, which is the wrong logical order.",
+      "correction_candidates": [
+        "This will set up git hooks, create a virtual environment, and then install requirements.",
+        "Run `pip install -r requirements.txt` first, then run `./start-dev.sh`.",
+        "This will install system-wide requirements and then create a local virtual environment.",
+        "This will create a virtual environment, install requirements and set up git hooks."
+      ],
+      "golden_answer": "This will create a virtual environment, install requirements and set up git hooks."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command for running an experiment locally includes an incorrect flag `--config` which is not recognized by the script.",
+      "correction_candidates": [
+        "python lizrd.grid path/to/config",
+        "python -m lizrd.grid -c path/to/config",
+        "python -m lizrd.grid path/to/config",
+        "./lizrd.grid --config path/to/config"
+      ],
+      "golden_answer": "python -m lizrd.grid path/to/config"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions omit the step of installing dependencies from a requirements file, incorrectly suggesting manual installation of a few packages.",
+      "correction_candidates": [
+        "This will create a virtual environment, install requirements and set up git hooks.",
+        "This will create a virtual environment, install requirements from `requirements.txt` and set up git hooks.",
+        "Run `pip install -e .` after running the script to install all necessary dependencies.",
+        "This will create a virtual environment and set up git hooks. Then run `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "This will create a virtual environment, install requirements and set up git hooks."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The path to the baseline experiment configuration template is incorrect, referencing `config/` instead of `configs/`.",
+      "correction_candidates": [
+        "Use the baseline configuration as a template, which is in `configs/test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `lizrd/configs/test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `test/test_baseline.yaml`.",
+        "Use the baseline configuration as a template, which is in `configs/test_baseline.yaml`."
+      ],
+      "golden_answer": "Use the baseline configuration as a template, which is in `configs/test/test_baseline.yaml`."
+    }
+  ]
+}

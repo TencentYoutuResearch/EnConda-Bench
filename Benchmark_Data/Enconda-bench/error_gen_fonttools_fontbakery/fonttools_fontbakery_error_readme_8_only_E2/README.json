@@ -1,0 +1,18 @@
+{
+  "readme": "fonttools_fontbakery_error_readme_8_only_E2",
+  "repo_name": "fonttools_fontbakery",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Used invalid command syntax with non-existent --profile and --check-all parameters",
+      "correction_candidates": [
+        "Run Font Bakery with: `fontbakery check-universal fonts/*.ttf`",
+        "Run Font Bakery with: `fontbakery check-googlefonts fonts/*.ttf`",
+        "Run Font Bakery with: `fontbakery check-opentype fonts/*.ttf`",
+        "Run Font Bakery with: `fontbakery check-fontval fonts/*.ttf`"
+      ],
+      "golden_answer": "Run Font Bakery with: `fontbakery check-universal fonts/*.ttf`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "ansible_ansible-zuul-jobs_error_readme_6_only_E4",
+  "repo_name": "ansible_ansible-zuul-jobs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References non-existent setup.yml and hosts.ini files without providing them or explaining how to create them",
+      "correction_candidates": [
+        "ansible-playbook playbook.yml --inventory=inventory.ini",
+        "ansible-playbook site.yml --inventory=localhost,",
+        "ansible-playbook main.yml --inventory=hosts",
+        "ansible-playbook deploy.yml --inventory=inventory"
+      ],
+      "golden_answer": "ansible-playbook site.yml --inventory=localhost,"
+    }
+  ]
+}

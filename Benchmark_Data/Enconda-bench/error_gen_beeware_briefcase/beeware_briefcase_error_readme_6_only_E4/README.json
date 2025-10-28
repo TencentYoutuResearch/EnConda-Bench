@@ -1,0 +1,18 @@
+{
+  "readme": "beeware_briefcase_error_readme_6_only_E4",
+  "repo_name": "beeware_briefcase",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References a non-existent file 'requirements-system.txt' that users need to install dependencies from",
+      "correction_candidates": [
+        "Remove the reference to requirements-system.txt and keep only the pip install command",
+        "Change to reference requirements.txt instead of requirements-system.txt",
+        "Reference the actual dependency installation documentation",
+        "Use apt-get install or brew install commands for system dependencies"
+      ],
+      "golden_answer": "Remove the reference to requirements-system.txt and keep only the pip install command"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pylabrobot_pylabrobot_error_readme_1_only_E2",
+  "repo_name": "pylabrobot_pylabrobot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `aspirate` method in the Hamilton STAR example uses an incorrect parameter `vol` instead of the correct parameter `vols`.",
+      "correction_candidates": [
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)",
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], volume=100)",
+        "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], 100)",
+        "await lh.aspirate(well=lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)"
+      ],
+      "golden_answer": "await lh.aspirate(lh.deck.get_resource(\"plate\")[\"A1\"], vols=100)"
+    }
+  ]
+}

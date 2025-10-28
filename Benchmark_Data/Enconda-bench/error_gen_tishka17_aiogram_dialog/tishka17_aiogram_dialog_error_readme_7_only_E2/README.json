@@ -1,0 +1,18 @@
+{
+  "readme": "tishka17_aiogram_dialog_error_readme_7_only_E2",
+  "repo_name": "tishka17_aiogram_dialog",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect method name 'begin' used instead of 'start' for DialogManager",
+      "correction_candidates": [
+        "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.open(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.launch(MySG.first, mode=StartMode.RESET_STACK)",
+        "await dialog_manager.init(MySG.first, mode=StartMode.RESET_STACK)"
+      ],
+      "golden_answer": "await dialog_manager.start(MySG.first, mode=StartMode.RESET_STACK)"
+    }
+  ]
+}

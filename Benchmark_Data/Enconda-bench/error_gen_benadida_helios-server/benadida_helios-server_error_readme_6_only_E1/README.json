@@ -1,0 +1,18 @@
+{
+  "readme": "benadida_helios-server_error_readme_6_only_E1",
+  "repo_name": "benadida_helios-server",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Including unnecessary nodejs and npm dependencies that are not needed for this Python application",
+      "correction_candidates": [
+        "sudo apt-get install python3-dev libssl-dev libffi-dev postgresql-server-dev-all",
+        "sudo apt-get install python3-dev libssl-dev postgresql-dev",
+        "sudo apt-get install python3-dev libffi-dev postgresql-server-dev-all",
+        "sudo apt-get install build-essential python3-dev libssl-dev libffi-dev"
+      ],
+      "golden_answer": "sudo apt-get install python3-dev libssl-dev libffi-dev postgresql-server-dev-all"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "lest_prometheus-rpm_error_readme_2_only_E6",
+  "repo_name": "lest_prometheus-rpm",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the 'Auto generation' section for adding a new exporter, steps 2 and 3 are swapped. The user is instructed to add the exporter to the Makefile before its directory and default file have been created, which will cause the build to fail.",
+      "correction_candidates": [
+        "Swap the order of steps 2 and 3.",
+        "The correct order is: 1. Add to templating.yaml, 2. Create directory and .default file, 3. Add to Makefile, 4. Test build.",
+        "The step 'add this exporter to the list of AUTO_GENERATED exporters in Makefile' should be performed after creating the exporter directory and its default file.",
+        "Create the exporter directory and its default file before adding the exporter to the Makefile."
+      ],
+      "golden_answer": "The correct order is: 1. Add to templating.yaml, 2. Create directory and .default file, 3. Add to Makefile, 4. Test build."
+    }
+  ]
+}

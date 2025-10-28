@@ -1,0 +1,18 @@
+{
+  "readme": "hips_autograd_error_readme_1_only_E1",
+  "repo_name": "hips_autograd",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies includes `plotting`, which is not a valid extra for the autograd package, causing an installation error.",
+      "correction_candidates": [
+        "pip install \"autograd[scipy]\"",
+        "pip install autograd --with-scipy --with-plotting",
+        "pip install \"autograd[all]\"",
+        "pip install \"autograd[scipy]\" matplotlib"
+      ],
+      "golden_answer": "pip install \"autograd[scipy]\""
+    }
+  ]
+}

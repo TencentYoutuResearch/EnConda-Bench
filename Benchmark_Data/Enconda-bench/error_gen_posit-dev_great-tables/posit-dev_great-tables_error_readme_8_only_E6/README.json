@@ -1,0 +1,18 @@
+{
+  "readme": "posit-dev_great-tables_error_readme_8_only_E6",
+  "repo_name": "posit-dev_great-tables",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Shows activating virtual environment after pip install, which is incorrect order - should activate before installing",
+      "correction_candidates": [
+        "Remove the second activation command since environment is already activated",
+        "Move the activation command before pip install",
+        "Replace with deactivation command instead",
+        "Change to conda environment activation"
+      ],
+      "golden_answer": "Remove the second activation command since environment is already activated"
+    }
+  ]
+}

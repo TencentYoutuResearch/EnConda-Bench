@@ -1,0 +1,18 @@
+{
+  "readme": "catalystneuro_roiextractors_error_readme_3_only_E2",
+  "repo_name": "catalystneuro_roiextractors",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command `source activate roiextractors_env` uses a deprecated syntax for activating conda environments. The modern and recommended command is `conda activate`.",
+      "correction_candidates": [
+        "conda activate roiextractors_env",
+        ". activate roiextractors_env",
+        "conda shell.posix activate roiextractors_env",
+        "source /path/to/conda/bin/activate roiextractors_env"
+      ],
+      "golden_answer": "conda activate roiextractors_env"
+    }
+  ]
+}

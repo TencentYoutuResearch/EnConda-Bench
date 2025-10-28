@@ -1,0 +1,18 @@
+{
+  "readme": "googlefonts_gftools_error_readme_3_only_E2",
+  "repo_name": "googlefonts_gftools",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command for `gftools qa` uses a plausible but incorrect flag `--google-fonts` to compare a local font family against the version on Google Fonts.",
+      "correction_candidates": [
+        "gftools qa [fonts.ttf] -gfb -a -o qa",
+        "gftools qa [fonts.ttf] --gfonts -a -o qa",
+        "gftools qa [fonts.ttf] -g -a -o qa",
+        "gftools qa [fonts.ttf] --against-gfonts -a -o qa"
+      ],
+      "golden_answer": "gftools qa [fonts.ttf] -gfb -a -o qa"
+    }
+  ]
+}

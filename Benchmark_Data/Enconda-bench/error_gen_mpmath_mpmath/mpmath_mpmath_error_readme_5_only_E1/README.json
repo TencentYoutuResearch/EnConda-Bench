@@ -1,0 +1,18 @@
+{
+  "readme": "mpmath_mpmath_error_readme_5_only_E1",
+  "repo_name": "mpmath_mpmath",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependencies (numpy scipy) to the pip install command",
+      "correction_candidates": [
+        "``pip install mpmath``",
+        "``pip install --user mpmath``",
+        "``python -m pip install mpmath``",
+        "``pip3 install mpmath``"
+      ],
+      "golden_answer": "``pip install mpmath``"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "embeddings-benchmark_mteb_error_readme_4_only_E1",
+  "repo_name": "embeddings-benchmark_mteb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command includes `tensorflow`, which is not a required dependency for the core `mteb` package. This installs an unnecessary, large library and may cause dependency conflicts.",
+      "correction_candidates": [
+        "Change the command to install optional dependencies: pip install mteb[tensorflow]",
+        "Add a note explaining that tensorflow is an optional dependency.",
+        "Remove tensorflow from the installation command: pip install mteb",
+        "Replace tensorflow with pytorch: pip install mteb torch"
+      ],
+      "golden_answer": "Remove tensorflow from the installation command: pip install mteb"
+    }
+  ]
+}

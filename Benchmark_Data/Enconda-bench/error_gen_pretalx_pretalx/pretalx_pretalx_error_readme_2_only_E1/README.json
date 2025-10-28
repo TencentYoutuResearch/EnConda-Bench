@@ -1,0 +1,18 @@
+{
+  "readme": "pretalx_pretalx_error_readme_2_only_E1",
+  "repo_name": "pretalx_pretalx",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The setup instructions include `sudo apt-get install python3-django`, which is an unnecessary system-level dependency installation. Django should be installed via `pip` from `requirements.txt` within the virtual environment.",
+      "correction_candidates": [
+        "The command should be `sudo apt-get install python3-dev`.",
+        "The command should be run after activating the virtual environment.",
+        "Add the `--no-site-packages` flag to the `venv` command.",
+        "The command `sudo apt-get install python3-django` should be removed as Django is listed in `requirements.txt`."
+      ],
+      "golden_answer": "The command `sudo apt-get install python3-django` should be removed as Django is listed in `requirements.txt`."
+    }
+  ]
+}

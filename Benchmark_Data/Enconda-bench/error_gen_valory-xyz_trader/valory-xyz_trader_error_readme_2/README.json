@@ -1,0 +1,29 @@
+{
+  "readme": "valory-xyz_trader_error_readme_2",
+  "repo_name": "valory-xyz_trader",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly place the 'poetry install && poetry shell' command before cloning the repository. This will fail because the 'pyproject.toml' file, which poetry needs, does not exist yet.",
+      "correction_candidates": [
+        "Move the `git clone https://github.com/valory-xyz/trader.git` command before `poetry install && poetry shell`.",
+        "Run `poetry new trader` before `poetry install`.",
+        "Combine the commands into `git clone ... && cd trader && poetry install && poetry shell`.",
+        "Run `poetry init` in the current directory before `poetry install`."
+      ],
+      "golden_answer": "Move the `git clone https://github.com/valory-xyz/trader.git` command before `poetry install && poetry shell`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The command `cp path/to/keys.json ./abci_build/` copies the key file to the wrong directory. The `autonomy build-image` command expects `keys.json` in the project's root directory (`.`), not in `./abci_build/`.",
+      "correction_candidates": [
+        "cp path/to/keys.json ./trader/",
+        "cp path/to/keys.json .",
+        "mv path/to/keys.json .",
+        "cp path/to/keys.json ./packages/valory/services/trader/"
+      ],
+      "golden_answer": "cp path/to/keys.json ."
+    }
+  ]
+}

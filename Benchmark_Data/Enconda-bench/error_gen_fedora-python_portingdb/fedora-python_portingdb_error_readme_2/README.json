@@ -1,0 +1,29 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_2",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions incorrectly place the 'pip install' command before the instruction to create and activate a Python virtual environment, which would install the package in the global Python environment.",
+      "correction_candidates": [
+        "First set up a Python virtual environment, then run `pip install --editable .`",
+        "Run `pip install --user --editable .` and then create a virtual environment.",
+        "Run `python3 -m venv venv && . venv/bin/activate && pip install --editable .`",
+        "Install the package using `pipx install --editable .`"
+      ],
+      "golden_answer": "First set up a Python virtual environment, then run `pip install --editable .`"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README fails to specify the required Python version (3.7+), stating only 'Python 3', which can lead to compatibility errors if an older, unsupported version is used.",
+      "correction_candidates": [
+        "To install it, first set up a [Python virtual environment](...) with Python 3.7+.",
+        "To install it, first set up a [Python virtual environment](...) with the latest Python 3 version.",
+        "To install it, first set up a [Python virtual environment](...) with Python > 3.6.",
+        "To install it, first set up a [Python virtual environment](...) with Python >= 3.7."
+      ],
+      "golden_answer": "To install it, first set up a [Python virtual environment](...) with Python 3.7+."
+    }
+  ]
+}

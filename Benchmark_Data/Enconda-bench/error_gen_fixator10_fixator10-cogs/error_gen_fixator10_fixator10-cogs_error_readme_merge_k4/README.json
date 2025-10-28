@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_fixator10_fixator10-cogs_error_readme_merge_k4",
+  "repo_name": "fixator10_fixator10-cogs",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The `[p]repo add` command specifies the `master` branch, which is incompatible with Red-DiscordBot V3. The correct branch is `V3`.",
+      "correction_candidates": [
+        "Change 'master' to 'V3' in the command.",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs V3",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs --branch V3",
+        "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs"
+      ],
+      "golden_answer": "[p]repo add Fixator10-Cogs https://github.com/fixator10/Fixator10-Cogs V3"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The `[p]cog install` command uses a comma as a separator between the repo name and the cog name, which is syntactically incorrect.",
+      "correction_candidates": [
+        "[p]cog install Fixator10-Cogs <cog_name>",
+        "[p]cog install Fixator10-Cogs --cog <cog_name>",
+        "[p]cog install from Fixator10-Cogs <cog_name>",
+        "[p]cog install <cog_name> from Fixator10-Cogs"
+      ],
+      "golden_answer": "[p]cog install Fixator10-Cogs <cog_name>"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "An incorrect dependency installation step (`pip install red-cogs`) is included. Red cogs are not installed via pip.",
+      "correction_candidates": [
+        "Remove the line 'pip install red-cogs'.",
+        "Replace 'pip install red-cogs' with '[p]pip install red-cogs'.",
+        "Red cogs are installed via the downloader, not pip. This step should be removed.",
+        "The correct command is 'pip install red-discordbot'."
+      ],
+      "golden_answer": "Remove the line 'pip install red-cogs'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation steps are in the wrong order. The `[p]cog install` command is placed before the `[p]repo add` command, which will cause the installation to fail because the repo is not yet known to the bot.",
+      "correction_candidates": [
+        "Swap the order of the two installation commands.",
+        "First run '[p]repo add', then run '[p]cog install'.",
+        "The '[p]repo add' command must be executed before '[p]cog install'.",
+        "Combine the commands into one: '[p]cog install from https://github.com/fixator10/Fixator10-Cogs <cog_name>'"
+      ],
+      "golden_answer": "The '[p]repo add' command must be executed before '[p]cog install'."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "Added unnecessary dependency installation step that conflicts with Red-DiscordBot's existing environment",
+      "correction_candidates": [
+        "Remove the pip install command as Red-DiscordBot already manages its dependencies",
+        "Replace with `[p]pipinstall discord.py aiohttp requests` command instead",
+        "Move the dependency installation to after the repo add command",
+        "Change to `conda install discord.py aiohttp requests` for better package management"
+      ],
+      "golden_answer": "Remove the pip install command as Red-DiscordBot already manages its dependencies"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Used incorrect branch name 'master' instead of 'V3' in the repo add command",
+      "correction_candidates": [
+        "Change 'master' to 'V3' to match the correct branch name",
+        "Replace 'master' with 'main' as the default branch",
+        "Remove the branch specification entirely to use default",
+        "Change to 'development' branch for latest features"
+      ],
+      "golden_answer": "Change 'master' to 'V3' to match the correct branch name"
+    }
+  ]
+}

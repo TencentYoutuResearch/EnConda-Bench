@@ -1,0 +1,18 @@
+{
+  "readme": "librephotos_librephotos_error_readme_8_only_E6",
+  "repo_name": "librephotos_librephotos",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Suggests installing development dependencies first before following standard installation, which is incorrect order",
+      "correction_candidates": [
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). Follow the complete installation guide for proper setup.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). The installation process will handle all dependencies automatically.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install). Use the Docker method for automatic dependency management.",
+        "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)."
+      ],
+      "golden_answer": "Step-by-step installation instructions are available in our [documentation](https://docs.librephotos.com/docs/installation/standard-install)."
+    }
+  ]
+}

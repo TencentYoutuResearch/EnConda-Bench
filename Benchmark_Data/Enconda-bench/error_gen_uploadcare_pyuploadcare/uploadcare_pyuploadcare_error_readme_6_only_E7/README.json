@@ -1,0 +1,18 @@
+{
+  "readme": "uploadcare_pyuploadcare_error_readme_6_only_E7",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Requirements section lists Python 2.7 and 3.6-3.7 as supported, conflicting with the compatibility information provided below",
+      "correction_candidates": [
+        "Python 3.8, 3.9, 3.10, 3.11, 3.12",
+        "Python 3.7, 3.8, 3.9, 3.10, 3.11, 3.12",
+        "Python 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12",
+        "Python 2.7, 3.8, 3.9, 3.10, 3.11, 3.12"
+      ],
+      "golden_answer": "Python 3.8, 3.9, 3.10, 3.11, 3.12"
+    }
+  ]
+}

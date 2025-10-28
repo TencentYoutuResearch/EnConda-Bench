@@ -1,0 +1,18 @@
+{
+  "readme": "astropy_reproject_error_readme_4_only_E1",
+  "repo_name": "astropy_reproject",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions incorrectly state that a separate package `reproject-core` must be installed. This package does not exist, and all functionality is included in the `reproject` package.",
+      "correction_candidates": [
+        "The package is monolithic. Simply run `pip install reproject` to install.",
+        "The correct way to install all features, including optional ones, is `pip install 'reproject[all]'`.",
+        "Remove the line about `reproject-core`. The only command needed is `pip install reproject`.",
+        "There is no `reproject-core` package. The installation is done with a single command: `pip install reproject`."
+      ],
+      "golden_answer": "There is no `reproject-core` package. The installation is done with a single command: `pip install reproject`."
+    }
+  ]
+}

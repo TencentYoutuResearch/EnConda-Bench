@@ -1,0 +1,29 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_5",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "Specified an outdated version of googletrans dependency that may cause installation or compatibility issues",
+      "correction_candidates": [
+        "First, install the required dependencies by running `pip install googletrans`.",
+        "First, install the required dependencies by running `pip install googletrans>=4.0.0`.",
+        "First, install the required dependencies by running `pip install googletrans==4.0.0`.",
+        "First, install the required dependencies by running `pip install googletrans-py`."
+      ],
+      "golden_answer": "First, install the required dependencies by running `pip install googletrans>=4.0.0`."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "Dependency installation instruction is placed after mentioning the script usage instead of at the beginning of the setup process",
+      "correction_candidates": [
+        "Move the pip install command to appear before mentioning the script usage",
+        "Place the dependency installation at the very beginning of the README file",
+        "Put the installation command in a separate Prerequisites section",
+        "Add the pip install command to the end of the paragraph after script instructions"
+      ],
+      "golden_answer": "Move the pip install command to appear before mentioning the script usage"
+    }
+  ]
+}

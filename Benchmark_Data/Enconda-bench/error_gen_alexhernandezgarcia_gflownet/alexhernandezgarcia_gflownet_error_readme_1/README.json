@@ -1,0 +1,29 @@
+{
+  "readme": "alexhernandezgarcia_gflownet_error_readme_1",
+  "repo_name": "alexhernandezgarcia_gflownet",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The command to activate the virtual environment is placed before the command to create it, which will cause the activation to fail.",
+      "correction_candidates": [
+        "The `source` command should come after `python3.10 -m venv ...`.",
+        "The virtual environment must be created before it can be activated.",
+        "Run `python3.10 -m venv ~/envs/gflownet` before `source ~/envs/gflownet/bin/activate`.",
+        "Swap the first two lines in the installation script."
+      ],
+      "golden_answer": "The `source` command should come after `python3.10 -m venv ...`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to specify the GFlowNet model uses a colon `:` instead of an equals sign `=` for assigning the value `trajectorybalance`, which is incorrect Hydra syntax.",
+      "correction_candidates": [
+        "Replace `gflownet:trajectorybalance` with `gflownet=trajectorybalance`.",
+        "Use `--gflownet trajectorybalance` instead.",
+        "The correct syntax is `gflownet=trajectorybalance`.",
+        "Change the colon to an equals sign: `gflownet=trajectorybalance`."
+      ],
+      "golden_answer": "Replace `gflownet:trajectorybalance` with `gflownet=trajectorybalance`."
+    }
+  ]
+}

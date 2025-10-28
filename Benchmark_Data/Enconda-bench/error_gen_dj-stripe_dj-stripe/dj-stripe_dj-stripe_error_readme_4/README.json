@@ -1,0 +1,29 @@
+{
+  "readme": "dj-stripe_dj-stripe_error_readme_4",
+  "repo_name": "dj-stripe_dj-stripe",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README omits the specific database engine requirements. While dj-stripe works with multiple engines, it recommends PostgreSQL and has minimum version requirements for others like MySQL and SQLite which are critical for users to know.",
+      "correction_candidates": [
+        "Add the recommended and required database engines and their versions back to the Requirements section.",
+        "Add a note stating 'Any Django-supported database is compatible'.",
+        "Add a requirement for `psycopg2-binary` to the Installation section.",
+        "Add a requirement for `PostgreSQL >=12` only."
+      ],
+      "golden_answer": "Add the recommended and required database engines and their versions back to the Requirements section."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The requirement `Python >=3.6` is incorrect. The library requires features from newer Python versions and is only compatible with Python 3.9 and higher.",
+      "correction_candidates": [
+        "Change the requirement to `Python >=3.9`.",
+        "Change the requirement to `Python >=3.8`.",
+        "Change the requirement to `Python 3.9, 3.10, 3.11`.",
+        "Remove the Python version requirement and let the user figure it out from `pyproject.toml`."
+      ],
+      "golden_answer": "Change the requirement to `Python >=3.9`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "mflowgen_mflowgen_error_readme_1_only_E1",
+  "repo_name": "mflowgen_mflowgen",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install mflow` attempts to install a package with the wrong name, which is not the correct package for this tool.",
+      "correction_candidates": [
+        "pip install mflow-gen",
+        "pip install mflowgen",
+        "pip install --upgrade mflow",
+        "python -m pip install mflow"
+      ],
+      "golden_answer": "pip install mflowgen"
+    }
+  ]
+}

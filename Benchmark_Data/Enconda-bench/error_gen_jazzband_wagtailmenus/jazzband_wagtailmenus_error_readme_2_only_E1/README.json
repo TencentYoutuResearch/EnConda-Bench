@@ -1,0 +1,18 @@
+{
+  "readme": "jazzband_wagtailmenus_error_readme_2_only_E1",
+  "repo_name": "jazzband_wagtailmenus",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command `pip install wagtail-menus` is incorrect; the correct package name on PyPI is `wagtailmenus`.",
+      "correction_candidates": [
+        "Run `pip install wagtailmenus`",
+        "Run `pip install wagtailmenu`",
+        "Run `pip install wagtail_menus`",
+        "Clone the repository and run `python setup.py install`"
+      ],
+      "golden_answer": "Run `pip install wagtailmenus`"
+    }
+  ]
+}

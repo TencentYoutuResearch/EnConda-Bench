@@ -1,0 +1,18 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_2_only_E1",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README provides an incorrect package name for installation. It suggests `pip install quacc-core`, but the correct package on PyPI is `quacc`.",
+      "correction_candidates": [
+        "The correct command is `pip install quacc`.",
+        "The correct command is `conda install -c conda-forge quacc`.",
+        "The package should be installed from source: `git clone https://github.com/Quantum-Accelerators/quacc.git; cd quacc; pip install .`",
+        "The correct command is `pip install quantum-accelerator`."
+      ],
+      "golden_answer": "The correct command is `pip install quacc`."
+    }
+  ]
+}

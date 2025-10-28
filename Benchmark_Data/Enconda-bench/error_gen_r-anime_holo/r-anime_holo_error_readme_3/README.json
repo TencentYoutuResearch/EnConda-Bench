@@ -1,0 +1,29 @@
+{
+  "readme": "r-anime_holo_error_readme_3",
+  "repo_name": "r-anime_holo",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is specified as 'Python 3+', which is too vague and may lead users to attempt running it on unsupported early Python 3 versions (e.g., 3.0-3.4).",
+      "correction_candidates": [
+        "Change the requirement to 'Python 3.5+'.",
+        "Change the requirement to 'Python 2.7 or Python 3.5+'.",
+        "Change the requirement to 'The latest version of Python 3'.",
+        "Change the requirement to 'Python 3.6+'."
+      ],
+      "golden_answer": "Change the requirement to 'Python 3.5+'."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to find new episodes in the module table uses an incorrect flag, `-r`, instead of the correct flag, `-s`, for specifying the subreddit.",
+      "correction_candidates": [
+        "Change the command to 'python holo.py -s [subreddit]'",
+        "Change the command to 'python holo.py --subreddit [subreddit]'",
+        "Change the command to 'python holo.py find --subreddit [subreddit]'",
+        "Change the command to 'python holo.py --run [subreddit]'"
+      ],
+      "golden_answer": "Change the command to 'python holo.py -s [subreddit]'"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "pypose_pypose_error_readme_3",
+  "repo_name": "pypose_pypose",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "A specific, potentially outdated version of PyTorch (`torch==1.9.0`) is hardcoded in the instructions. This can cause compatibility issues with other dependencies or prevent the user from using a newer, recommended version.",
+      "correction_candidates": [
+        "Change `pip install torch==1.9.0` to `pip install torch>=2.0.0`.",
+        "Remove the specific command `by running 'pip install torch==1.9.0'` and simply instruct the user to install PyTorch from the official website.",
+        "Change the instruction to 'install PyTorch (version 1.9.0 or higher)'.",
+        "Keep the command but add a note: '(or a more recent version from pytorch.org)'."
+      ],
+      "golden_answer": "Remove the specific command `by running 'pip install torch==1.9.0'` and simply instruct the user to install PyTorch from the official website."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install requirements/runtime.txt` is missing the `-r` flag. Without it, pip will try to install a package named 'requirements/runtime.txt' from PyPI, which does not exist, instead of installing the packages listed within the file.",
+      "correction_candidates": [
+        "Change `pip install requirements/runtime.txt` to `pip install --requirements requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `pip install -r requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `pip install -f requirements/runtime.txt`.",
+        "Change `pip install requirements/runtime.txt` to `xargs pip install < requirements/runtime.txt`."
+      ],
+      "golden_answer": "Change `pip install requirements/runtime.txt` to `pip install -r requirements/runtime.txt`."
+    }
+  ]
+}

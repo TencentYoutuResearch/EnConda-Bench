@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_6_only_E4",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "Incorrect path for example config file - should be ./configs/example.ini not ./config/example.ini",
+      "correction_candidates": [
+        "Change ./config/example.ini to ./configs/example.ini",
+        "Change ./config/example.ini to ./examples/config.ini",
+        "Change ./config/example.ini to ./config/config.ini.example",
+        "Change ./config/example.ini to ./settings/example.ini"
+      ],
+      "golden_answer": "Change ./config/example.ini to ./configs/example.ini"
+    }
+  ]
+}

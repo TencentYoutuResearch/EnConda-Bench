@@ -1,0 +1,73 @@
+{
+  "readme": "error_gen_camdavidsonpilon_lifelines_error_readme_merge_k4",
+  "repo_name": "camdavidsonpilon_lifelines",
+  "level": "level6",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions list `scipy-survival` as a required dependency, but this package is unnecessary and does not exist.",
+      "correction_candidates": [
+        "Replace `pip install scipy-survival` with `pip install scipy`.",
+        "Remove the line `pip install scipy-survival` as it is not a dependency.",
+        "The command should be `pip install scipy-survival --no-deps`.",
+        "First, install `numpy` and `pandas`, then `scipy-survival`."
+      ],
+      "golden_answer": "Remove the line `pip install scipy-survival` as it is not a dependency."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command `pip install --upgrade lifelines` uses incorrect syntax for flags. The package name should come before the options.",
+      "correction_candidates": [
+        "Replace `pip install --upgrade lifelines` with `pip install lifelines`.",
+        "The correct command is `pip install lifelines --upgrade`.",
+        "Change the command to `python -m pip install --upgrade lifelines`.",
+        "The command should be `pip install lifelines -U` which is a valid shorthand."
+      ],
+      "golden_answer": "The correct command is `pip install lifelines --upgrade`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the library is only compatible with Python 2.7, which is outdated information.",
+      "correction_candidates": [
+        "Change the sentence to 'Note: this library is only compatible with Python 3.6+.'",
+        "Change the sentence to 'Note: this library is compatible with Python 2.7 and Python 3.x'.",
+        "Add a note that for Python 3, a different installation method is required.",
+        "Remove the sentence 'Note: this library is only compatible with Python 2.7.' as lifelines supports modern Python 3 versions."
+      ],
+      "golden_answer": "Remove the sentence 'Note: this library is only compatible with Python 2.7.' as lifelines supports modern Python 3 versions."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink to the 'Contributing' guidelines points to a non-existent file path (`docs/CONTRIBUTING.md`).",
+      "correction_candidates": [
+        "The correct path in the link is `.github/CONTRIBUTING.md`.",
+        "Change the link to `https://github.com/CamDavidsonPilon/lifelines/blob/master/CONTRIBUTING.md`.",
+        "The file is located in the root directory, so the link should be `CONTRIBUTING.md`.",
+        "Change the link to `https://lifelines.readthedocs.io/en/latest/Contributing.html`."
+      ],
+      "golden_answer": "The correct path in the link is `.github/CONTRIBUTING.md`."
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions incorrectly state that `pandas` must be uninstalled, which is a required dependency for `lifelines`.",
+      "correction_candidates": [
+        "Replace `pip uninstall pandas` with `pip install --upgrade pandas`.",
+        "Add a note that this step is only for users with pandas version < 1.0.",
+        "The `pip uninstall pandas` command should be removed.",
+        "The command should be `pip uninstall pandas` followed by `conda install pandas`."
+      ],
+      "golden_answer": "The `pip uninstall pandas` command should be removed."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The conda installation command uses the wrong channel (`conda` instead of `conda-forge`) and incorrect flag order, which will likely fail.",
+      "correction_candidates": [
+        "The command should be `conda install lifelines`.",
+        "The correct channel is `anaconda`, not `conda`. The command should be `conda install -c anaconda lifelines`.",
+        "Change the command to `conda install lifelines --channel conda-forge`.",
+        "The correct command is `conda install -c conda-forge lifelines`."
+      ],
+      "golden_answer": "The correct command is `conda install -c conda-forge lifelines`."
+    }
+  ]
+}

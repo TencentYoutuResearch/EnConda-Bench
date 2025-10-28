@@ -1,0 +1,29 @@
+{
+  "readme": "jazzband_tablib_error_readme_2",
+  "repo_name": "jazzband_tablib",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly recommends Python 2.7 for full compatibility, which is an end-of-life version and not supported by current releases of tablib.",
+      "correction_candidates": [
+        "Remove the note recommending Python 2.7.",
+        "Change the note to recommend Python 3.7 or newer, in line with the package's actual support.",
+        "Refer to the 'Supported Python versions' badge for accurate compatibility information.",
+        "Update the note to say 'Requires the latest version of Python 3'."
+      ],
+      "golden_answer": "Remove the note recommending Python 2.7."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The installation instructions have a logical order error, advising the user to install the package globally before creating and activating a virtual environment.",
+      "correction_candidates": [
+        "Reverse the order of operations: instruct the user to create and activate the virtual environment first, then run `pip install tablib`.",
+        "Replace the instructions with a guide on using `pipx` for tool installation.",
+        "Remove the virtual environment steps entirely.",
+        "Add `sudo` to the `pip install tablib` command to ensure the global installation works."
+      ],
+      "golden_answer": "Reverse the order of operations: instruct the user to create and activate the virtual environment first, then run `pip install tablib`."
+    }
+  ]
+}

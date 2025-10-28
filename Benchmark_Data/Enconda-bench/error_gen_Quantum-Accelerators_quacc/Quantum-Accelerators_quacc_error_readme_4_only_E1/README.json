@@ -1,0 +1,18 @@
+{
+  "readme": "Quantum-Accelerators_quacc_error_readme_4_only_E1",
+  "repo_name": "Quantum-Accelerators_quacc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The README incorrectly states that `pytorch` is a required dependency for all calculations. This is false and would cause users to install a large, unnecessary library.",
+      "correction_candidates": [
+        "Change the note to mention that `pytorch` is an optional dependency for machine-learning-related workflows.",
+        "Remove the note entirely as `pytorch` is not a dependency.",
+        "Replace `pytorch` with `ase`, which is a core dependency.",
+        "Replace `pytorch` with `covalent`, which is one of the supported workflow managers."
+      ],
+      "golden_answer": "Remove the note entirely as `pytorch` is not a dependency."
+    }
+  ]
+}

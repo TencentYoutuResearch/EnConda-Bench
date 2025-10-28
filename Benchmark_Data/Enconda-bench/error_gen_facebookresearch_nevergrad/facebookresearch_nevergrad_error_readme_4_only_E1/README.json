@@ -1,0 +1,18 @@
+{
+  "readme": "facebookresearch_nevergrad_error_readme_4_only_E1",
+  "repo_name": "facebookresearch_nevergrad",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation command suggests using `conda install nevergrad` without specifying the required channel (e.g., conda-forge), which will likely fail. The standard and recommended installation method is with `pip`.",
+      "correction_candidates": [
+        "pip install nevergrad",
+        "conda install -c conda-forge nevergrad",
+        "pip install git+https://github.com/FacebookResearch/Nevergrad.git",
+        "conda install nevergrad -c defaults"
+      ],
+      "golden_answer": "pip install nevergrad"
+    }
+  ]
+}

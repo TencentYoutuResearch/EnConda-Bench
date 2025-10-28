@@ -1,0 +1,29 @@
+{
+  "readme": "googlefonts_gftools_error_readme_1",
+  "repo_name": "googlefonts_gftools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `gftools compare-font` command example is missing the second font file argument required for comparison, which will cause the command to fail.",
+      "correction_candidates": [
+        "gftools compare-font font1.ttf --vs font2.ttf",
+        "gftools compare-font font1.ttf font2.ttf",
+        "gftools compare font1.ttf font2.ttf",
+        "gftools compare-font --fonts font1.ttf font2.ttf"
+      ],
+      "golden_answer": "gftools compare-font font1.ttf font2.ttf"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The required Python version is not specified, only stating 'a recent version,' which is ambiguous and can lead to installation or runtime issues if an incompatible version is used.",
+      "correction_candidates": [
+        "Please note that gftools requires Python 3.",
+        "Please note that gftools is compatible with Python 2.7 and 3.x.",
+        "Please note that gftools requires Python 3.6 or later.",
+        "Please note that gftools requires [Python 3.7](http://www.python.org/download/) or later."
+      ],
+      "golden_answer": "Please note that gftools requires [Python 3.7](http://www.python.org/download/) or later."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "fabric_fabric_error_readme_2_only_E7",
+  "repo_name": "fabric_fabric",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The installation command `pip install fabric==1.0` installs a legacy version of Fabric that is incompatible with Python 3 and conflicts with the README's description of supporting Python 3.4+.",
+      "correction_candidates": [
+        "Change the command to `pip install fabric` to install the latest compatible version.",
+        "Change the command to `pip install fabric>=2.0` to ensure a modern version is installed.",
+        "Update the README description to state it is for Fabric 1.0 and Python 2.7 only.",
+        "Use the command `pip install 'fabric<2'` for the legacy version."
+      ],
+      "golden_answer": "Change the command to `pip install fabric` to install the latest compatible version."
+    }
+  ]
+}

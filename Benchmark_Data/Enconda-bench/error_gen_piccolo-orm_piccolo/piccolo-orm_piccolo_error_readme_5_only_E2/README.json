@@ -1,0 +1,18 @@
+{
+  "readme": "piccolo-orm_piccolo_error_readme_5_only_E2",
+  "repo_name": "piccolo-orm_piccolo",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Missing quotes around package name with extras in pip install command for PostgreSQL driver",
+      "correction_candidates": [
+        "pip install 'piccolo[postgres]'",
+        "pip install \"piccolo[postgres]\"",
+        "pip install piccolo\\[postgres\\]",
+        "pip install --upgrade piccolo[postgres]"
+      ],
+      "golden_answer": "pip install 'piccolo[postgres]'"
+    }
+  ]
+}

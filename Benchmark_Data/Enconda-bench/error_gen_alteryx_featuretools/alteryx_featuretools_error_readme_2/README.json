@@ -1,0 +1,29 @@
+{
+  "readme": "alteryx_featuretools_error_readme_2",
+  "repo_name": "alteryx_featuretools",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states a requirement for an outdated Python version (3.6), which may mislead users and is not the actual requirement for the latest version.",
+      "correction_candidates": [
+        "Remove the sentence 'Note: Featuretools requires Python 3.6 for full compatibility.'",
+        "Change the sentence to 'Note: Featuretools requires Python 3.8 or newer.'",
+        "Change the sentence to 'Note: Featuretools requires Python 2.7.'",
+        "Add a note saying 'Works with any Python 3 version.'"
+      ],
+      "golden_answer": "Remove the sentence 'Note: Featuretools requires Python 3.6 for full compatibility.'"
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The image URL for the entity set diagram points to a non-existent `master` branch instead of the correct `main` branch, resulting in a broken image link.",
+      "correction_candidates": [
+        "https://github.com/alteryx/featuretools/blob/main/docs/source/_static/images/entity_set.png?raw=true",
+        "https://raw.githubusercontent.com/alteryx/featuretools/main/docs/source/_static/images/entity_set.png",
+        "docs/source/_static/images/entity_set.png",
+        "https://github.com/alteryx/featuretools/raw/main/docs/source/_static/images/entity_set.png"
+      ],
+      "golden_answer": "https://github.com/alteryx/featuretools/blob/main/docs/source/_static/images/entity_set.png?raw=true"
+    }
+  ]
+}

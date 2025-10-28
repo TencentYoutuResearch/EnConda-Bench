@@ -1,0 +1,18 @@
+{
+  "readme": "mne-tools_mne-lsl_error_readme_5_only_E6",
+  "repo_name": "mne-tools_mne-lsl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Added installation instructions that install pip dependencies before system dependencies, creating logical order error",
+      "correction_candidates": [
+        "First install system dependencies with `sudo apt-get install liblsl-dev`, then install Python packages with `pip install mne-lsl numpy scipy matplotlib`",
+        "Install using conda: `conda install -c conda-forge mne-lsl`",
+        "Use the package manager: `pip install mne-lsl` followed by system setup",
+        "Follow the documentation website installation guide without additional commands"
+      ],
+      "golden_answer": "First install system dependencies with `sudo apt-get install liblsl-dev`, then install Python packages with `pip install mne-lsl numpy scipy matplotlib`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "giskard-ai_giskard_error_readme_1_only_E1",
+  "repo_name": "giskard-ai_giskard",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The main installation command `pip install giskard -U` is missing the `[llm]` extra, which is required to install dependencies for LLM-related features used in the quickstart.",
+      "correction_candidates": [
+        "pip install \"giskard[llm,rag]\" -U",
+        "pip install giskard-llm -U",
+        "pip install \"giskard[llm]\" -U",
+        "pip install giskard --all-extras -U"
+      ],
+      "golden_answer": "pip install \"giskard[llm]\" -U"
+    }
+  ]
+}

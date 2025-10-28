@@ -1,0 +1,29 @@
+{
+  "readme": "peering-manager_peering-manager_error_readme_7",
+  "repo_name": "peering-manager_peering-manager",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect file path reference to requirements file in wrong directory",
+      "correction_candidates": [
+        "For a complete list of requirements, see `requirements.txt`.",
+        "For a complete list of requirements, see `config/requirements.txt`.",
+        "For a complete list of requirements, see `src/requirements.txt`.",
+        "For a complete list of requirements, see `requirements/production.txt`."
+      ],
+      "golden_answer": "For a complete list of requirements, see `requirements.txt`."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command syntax mixing installation command with setup approach description",
+      "correction_candidates": [
+        "The best way to start setting up this tool is to use **pip** within a **virtualenv**.",
+        "The best way to start setting up this tool is to run **pip install -r requirements.txt** after creating a **virtualenv**.",
+        "The best way to start setting up this tool is to use **conda install** within a **conda environment**.",
+        "The best way to start setting up this tool is to execute **python setup.py install** in a **virtualenv**."
+      ],
+      "golden_answer": "The best way to start setting up this tool is to use **pip** within a **virtualenv**."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "eylles_pywal16_error_readme_2",
+  "repo_name": "eylles_pywal16",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The hyperlink for the license badge points to a non-existent 'LICENSE' file instead of 'LICENSE.md'.",
+      "correction_candidates": [
+        "<a href=\"./LICENSE.md\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>",
+        "<a href=\"./docs/LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>",
+        "<a href=\"https://github.com/eylles/pywal16/blob/master/LICENSE.md\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>",
+        "<a href=\"./LICENSE.txt\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>"
+      ],
+      "golden_answer": "<a href=\"./LICENSE.md\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\"></a>"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README specifies an outdated and incompatible Python version requirement (Python 2.7).",
+      "correction_candidates": [
+        "This tool is written in Python and requires Python 3.6+ to run.",
+        "This tool is written in Python and requires Python 3.0 or later to run.",
+        "This tool is written in Python and requires both Python 2.7+ and Python 3+ to run.",
+        "This tool is written in Python and is compatible with all Python versions."
+      ],
+      "golden_answer": "This tool is written in Python and requires Python 3.6+ to run."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_2_only_E4",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "The URL for the logo image is incorrect, pointing to 'logo.svg' instead of 'logo_wide.svg', which results in a broken image link.",
+      "correction_candidates": [
+        "Change the image source to 'https://raw.githubusercontent.com/rlberry-py/rlberry/main/assets/logo_wide.svg'.",
+        "Change the image source to './assets/logo_wide.svg'.",
+        "Change the image source to 'https://github.com/rlberry-py/rlberry/blob/main/assets/logo_wide.svg'.",
+        "Remove the logo image tag from the README."
+      ],
+      "golden_answer": "Change the image source to 'https://raw.githubusercontent.com/rlberry-py/rlberry/main/assets/logo_wide.svg'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "uploadcare_pyuploadcare_error_readme_1_only_E2",
+  "repo_name": "uploadcare_pyuploadcare",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The command to run local tests is incorrect. The instructions mention installing `act` but then provide a command that is not a valid `make` target or `act` command. The correct command uses `make`.",
+      "correction_candidates": [
+        "make test_with_github_actions",
+        "act --job test",
+        "act -W .github/workflows/test.yml",
+        "act"
+      ],
+      "golden_answer": "make test_with_github_actions"
+    }
+  ]
+}

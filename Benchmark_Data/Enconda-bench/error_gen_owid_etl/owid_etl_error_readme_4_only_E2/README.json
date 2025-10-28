@@ -1,0 +1,18 @@
+{
+  "readme": "owid_etl_error_readme_4_only_E2",
+  "repo_name": "owid_etl",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The example command `etl grapher ...` uses an incorrect subcommand 'grapher'. The `grapher` functionality is an option for the `run` command.",
+      "correction_candidates": [
+        "Correct the command to `etl run data/garden/institution/2023-11-29/ggdc --grapher --private`",
+        "Change `etl grapher` to `etl run`.",
+        "The command is `etl build --grapher data/garden/institution/2023-11-29/ggdc --private`",
+        "Run the grapher step separately: `etl grapher-update data/garden/institution/2023-11-29/ggdc --private`"
+      ],
+      "golden_answer": "Correct the command to `etl run data/garden/institution/2023-11-29/ggdc --grapher --private`"
+    }
+  ]
+}

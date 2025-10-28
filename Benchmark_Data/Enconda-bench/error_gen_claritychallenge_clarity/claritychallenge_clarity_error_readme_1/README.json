@@ -1,0 +1,29 @@
+{
+  "readme": "claritychallenge_clarity_error_readme_1",
+  "repo_name": "claritychallenge_clarity",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "In the PyPI installation instructions, the command `conda create --name clarity` does not specify a Python version, which can lead to an environment with an incompatible Python version being created.",
+      "correction_candidates": [
+        "conda create --name clarity python",
+        "conda create --name clarity python=3.8",
+        "conda create --name clarity python>=3.8",
+        "conda env create -f environment.yml"
+      ],
+      "golden_answer": "conda create --name clarity python=3.8"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "In the 'GitHub Cloning' installation section, the command `python setup.py install` is used. This is an outdated method that bypasses pip's dependency resolver and can lead to installation issues. The recommended approach is using `pip install`.",
+      "correction_candidates": [
+        "pip install .",
+        "pip install --use-pep517 .",
+        "pip install -e .",
+        "python -m pip install ."
+      ],
+      "golden_answer": "pip install -e ."
+    }
+  ]
+}

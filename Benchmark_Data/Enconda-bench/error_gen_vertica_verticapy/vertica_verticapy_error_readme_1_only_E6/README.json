@@ -1,0 +1,18 @@
+{
+  "readme": "vertica_verticapy_error_readme_1_only_E6",
+  "repo_name": "vertica_verticapy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "In the Quickstart section, `vp.connect('Vertica_New_Connection')` is called before the connection is defined with `vp.new_connection(...)`. The connection must be defined before it can be activated.",
+      "correction_candidates": [
+        "Move the `vp.connect(...)` call to after the `vp.new_connection(...)` call.",
+        "Combine the two calls into `vp.connect(name='Vertica_New_Connection', options={...})`.",
+        "Remove the `vp.connect(...)` call as `new_connection` automatically connects.",
+        "Replace `vp.connect(...)` with `vp.set_connection('Vertica_New_Connection')`."
+      ],
+      "golden_answer": "Move the `vp.connect(...)` call to after the `vp.new_connection(...)` call."
+    }
+  ]
+}

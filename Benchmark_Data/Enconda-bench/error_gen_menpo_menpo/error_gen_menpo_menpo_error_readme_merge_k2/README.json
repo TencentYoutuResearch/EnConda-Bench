@@ -1,0 +1,51 @@
+{
+  "readme": "error_gen_menpo_menpo_error_readme_merge_k2",
+  "repo_name": "menpo_menpo",
+  "level": "level4",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command uses an invalid option `--update`, which does not exist for `pip`.",
+      "correction_candidates": [
+        "> pip install menpo --upgrade",
+        "> pip install menpo",
+        "> pip get menpo",
+        "> pip install menpo -U"
+      ],
+      "golden_answer": "> pip install menpo"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The testing instructions omit the `pytest-mock` dependency, which is required to run the test suite.",
+      "correction_candidates": [
+        "After installing `pytest`, `mock`, `pytest-mock` and `opencv`, running",
+        "After installing `pytest` and `pytest-mock`, running",
+        "After installing `pytest`, `mock` and `pytest-mock`, running",
+        "After installing `pytest-all`, running"
+      ],
+      "golden_answer": "After installing `pytest`, `mock` and `pytest-mock`, running"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The text states that Menpo strictly requires Python 3.7, which contradicts the badges indicating support for Python 3.6-3.9.",
+      "correction_candidates": [
+        "Remove the sentence 'Please note that Menpo strictly requires Python 3.7.' and change the Python 3.7 badge to a Python 3.6 badge.",
+        "Remove the sentence 'Please note that Menpo strictly requires Python 3.7.'.",
+        "Change the sentence to 'Please note that Menpo works best with Python 3.7.'.",
+        "Remove the Python 3.6, 3.8, and 3.9 badges, leaving only the Python 3.7 badge."
+      ],
+      "golden_answer": "Remove the sentence 'Please note that Menpo strictly requires Python 3.7.'."
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The usage instructions incorrectly tell the user to run `jupyter notebook` before installing it.",
+      "correction_candidates": [
+        "1. Conda install Jupyter notebook: `conda install jupyter ipython notebook`\n  2. Download the [latest version of the notebooks][notebooks_gh]\n  3. Run `jupyter notebook`",
+        "1. Download the [latest version of the notebooks][notebooks_gh]\n  2. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`\n  3. Run `jupyter notebook`",
+        "1. Run `jupyter notebook`\n  2. Download the [latest version of the notebooks][notebooks_gh]\n  3. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`",
+        "1. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`\n  2. Run `jupyter notebook` and download the notebooks from the interface."
+      ],
+      "golden_answer": "1. Download the [latest version of the notebooks][notebooks_gh]\n  2. Conda install Jupyter notebook and IPython: `conda install jupyter ipython notebook`\n  3. Run `jupyter notebook`"
+    }
+  ]
+}

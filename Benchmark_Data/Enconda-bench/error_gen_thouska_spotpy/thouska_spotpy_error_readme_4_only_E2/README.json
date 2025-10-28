@@ -1,0 +1,18 @@
+{
+  "readme": "thouska_spotpy_error_readme_4_only_E2",
+  "repo_name": "thouska_spotpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Contributing' section, the `git commit` command is missing the `-m` flag for the message, which will cause the command to fail or open a text editor, contrary to the one-line command shown.",
+      "correction_candidates": [
+        "git commit -m \"Add some feature\"",
+        "git commit --message \"Add some feature\"",
+        "git commit -a -m \"Add some feature\"",
+        "git commit -message \"Add some feature\""
+      ],
+      "golden_answer": "git commit -m \"Add some feature\""
+    }
+  ]
+}

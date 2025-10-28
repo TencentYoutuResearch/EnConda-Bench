@@ -1,0 +1,18 @@
+{
+  "readme": "mdolab_openaerostruct_error_readme_7_only_E4",
+  "repo_name": "mdolab_openaerostruct",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E4",
+      "error_description": "References requirements.txt file for installation but this file does not exist in the repository",
+      "correction_candidates": [
+        "Remove the `pip install -r requirements.txt` command",
+        "Replace `requirements.txt` with `setup.py`",
+        "Change to `pip install -r environment.yml`",
+        "Modify to `pip install -r dependencies.txt`"
+      ],
+      "golden_answer": "Remove the `pip install -r requirements.txt` command"
+    }
+  ]
+}

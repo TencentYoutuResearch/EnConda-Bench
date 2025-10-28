@@ -1,0 +1,18 @@
+{
+  "readme": "ecds_readux_error_readme_4_only_E8",
+  "repo_name": "ecds_readux",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E8",
+      "error_description": "The example ELASTICSEARCH_URL is missing the required 'http://' protocol prefix. This will cause the application to fail when trying to connect to Elasticsearch.",
+      "correction_candidates": [
+        "Add the 'http://' protocol prefix to the ELASTICSEARCH_URL value.",
+        "Change the URL to 'localhost:9200' and configure credentials in local.py.",
+        "Use 'https://' if Elasticsearch is configured with TLS/SSL.",
+        "Remove the user and password from the URL and set them in a different environment variable."
+      ],
+      "golden_answer": "Add the 'http://' protocol prefix to the ELASTICSEARCH_URL value."
+    }
+  ]
+}

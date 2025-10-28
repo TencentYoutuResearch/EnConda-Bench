@@ -1,0 +1,29 @@
+{
+  "readme": "tensorflow_model-analysis_error_readme_1",
+  "repo_name": "tensorflow_model-analysis",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "In the 'Build TFMA from source' section, the command to install the locally built wheel uses a wildcard `*`, which is not a standard way to specify a package for pip and may fail depending on the shell.",
+      "correction_candidates": [
+        "pip3 install tensorflow_model_analysis-<version>-py3-none-any.whl",
+        "pip3 install tensorflow_model_analysis",
+        "pip3 install dist/tensorflow_model_analysis-*.whl",
+        "python3 setup.py install"
+      ],
+      "golden_answer": "pip3 install tensorflow_model_analysis-<version>-py3-none-any.whl"
+    },
+    {
+      "error_type": "E7",
+      "error_description": "In the 'Jupyter Lab 3.0.x' installation instructions, the version for `jupyterlab_widgets` is specified as `2.0.0`, which is incorrect for JupyterLab 3.0.x and can cause dependency conflicts. The correct version is `1.0.0`.",
+      "correction_candidates": [
+        "pip install jupyterlab_widgets==1.0.0",
+        "pip install jupyterlab_widgets",
+        "pip install ipywidgets",
+        "jupyter labextension install @jupyter-widgets/jupyterlab-manager"
+      ],
+      "golden_answer": "pip install jupyterlab_widgets==1.0.0"
+    }
+  ]
+}

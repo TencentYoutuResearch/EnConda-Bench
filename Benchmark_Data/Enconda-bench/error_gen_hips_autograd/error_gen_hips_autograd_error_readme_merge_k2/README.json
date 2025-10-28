@@ -1,0 +1,40 @@
+{
+  "readme": "error_gen_hips_autograd_error_readme_merge_k2",
+  "repo_name": "hips_autograd",
+  "level": "level3",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The `pip install` command for the basic installation is syntactically incorrect, using a flag-like syntax `--autograd` instead of the package name.",
+      "correction_candidates": [
+        "pip get autograd",
+        "conda install autograd",
+        "pip install autograd-lib",
+        "pip install autograd"
+      ],
+      "golden_answer": "pip install autograd"
+    },
+    {
+      "error_type": "E1",
+      "error_description": "The command to install optional dependencies includes `plotting`, which is not a valid extra for the autograd package, causing an installation error.",
+      "correction_candidates": [
+        "pip install \"autograd[scipy]\"",
+        "pip install autograd --with-scipy --with-plotting",
+        "pip install \"autograd[all]\"",
+        "pip install \"autograd[scipy]\" matplotlib"
+      ],
+      "golden_answer": "pip install \"autograd[scipy]\""
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the tutorial in the 'Documentation' section points to a non-existent path `documentation/tutorial.md` instead of the correct `docs/tutorial.md`.",
+      "correction_candidates": [
+        "Change the link path to `TUTORIAL.md`.",
+        "Change the link path to `docs/tutorial.md`.",
+        "Change the link path to `autograd/docs/tutorial.md`.",
+        "Change the link path to the absolute URL `https://github.com/HIPS/autograd/blob/master/docs/tutorial.md`."
+      ],
+      "golden_answer": "Change the link path to `docs/tutorial.md`."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "jageo_lobsterpy_error_readme_6_only_E2",
+  "repo_name": "jageo_lobsterpy",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "Incorrect command 'lobsterpy analysis' instead of the correct 'lobsterpy description'",
+      "correction_candidates": [
+        "You can use ``lobsterpy description`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically.",
+        "You can use ``lobsterpy analyze`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically.",
+        "You can use ``lobsterpy summary`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically.",
+        "You can use ``lobsterpy cohp`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically."
+      ],
+      "golden_answer": "You can use ``lobsterpy description`` for an automated analysis of COHPs for relevant cation-anion bonds or ``lobsterpy automatic-plot`` to plot the results automatically."
+    }
+  ]
+}

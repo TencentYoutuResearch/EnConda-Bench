@@ -1,0 +1,18 @@
+{
+  "readme": "diefenbach_django-lfs_error_readme_6_only_E7",
+  "repo_name": "diefenbach_django-lfs",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Version compatibility error - specifies Django 2.0+ but changelog shows only Django 1.10 support",
+      "correction_candidates": [
+        "Change Django requirement to Django 1.8+ to match the changelog",
+        "Update requirement to Django 1.10+ based on the latest changelog entry",
+        "Specify Django 1.6-1.10 to show the supported version range",
+        "Remove specific Django version and just say Django (compatible versions listed in setup.py)"
+      ],
+      "golden_answer": "Update requirement to Django 1.10+ based on the latest changelog entry"
+    }
+  ]
+}

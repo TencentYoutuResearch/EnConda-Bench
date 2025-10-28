@@ -1,0 +1,62 @@
+{
+  "readme": "error_gen_astropy_reproject_error_readme_merge_k3",
+  "repo_name": "astropy_reproject",
+  "level": "level5",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The installation instructions imply that `numpy` and `scipy` are the only major dependencies, failing to mention the essential `astropy` package.",
+      "correction_candidates": [
+        "The main dependency is `astropy`. Ensure it is installed by running `pip install astropy` before installing `reproject`.",
+        "Installation can be done via conda: `conda install -c conda-forge reproject`.",
+        "The `reproject` package requires `astropy`. It is typically installed automatically as a dependency, so a simple `pip install reproject` is sufficient.",
+        "You should install all dependencies from the `requirements.txt` file first using `pip install -r requirements.txt`."
+      ],
+      "golden_answer": "The `reproject` package requires `astropy`. It is typically installed automatically as a dependency, so a simple `pip install reproject` is sufficient."
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The example usage of `reproject_interp` uses a non-existent keyword argument `target_wcs` instead of the correct one, `output_projection`.",
+      "correction_candidates": [
+        "reproject_interp(hdu_in, output_projection=wcs_out, shape_out=shape_out)",
+        "reproject_interp(input_data=hdu_in, output_projection=wcs_out, shape_out=shape_out)",
+        "reproject_interp(hdu_in, wcs_out, shape_out)",
+        "reproject_interp(hdu_in, projection=wcs_out, shape=shape_out)"
+      ],
+      "golden_answer": "reproject_interp(hdu_in, output_projection=wcs_out, shape_out=shape_out)"
+    },
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly advise installing the package globally with pip *before* creating and activating the virtual environment.",
+      "correction_candidates": [
+        "First, create a virtual environment with `python -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package inside it with `pip install reproject`.",
+        "Install the package and create a virtual environment simultaneously using `pipenv install reproject`.",
+        "Run `pip install reproject --user` to avoid global installation issues.",
+        "Use conda to manage environments and installation: `conda create -n reproject_env -c conda-forge reproject python=3.9`."
+      ],
+      "golden_answer": "First, create a virtual environment with `python -m venv venv`, then activate it with `source venv/bin/activate`, and finally install the package inside it with `pip install reproject`."
+    },
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that the package is only compatible with Python 2.7, while it is a modern package compatible with Python 3.",
+      "correction_candidates": [
+        "The `reproject` package is compatible with Python 3.8 and later.",
+        "This package requires Python >= 3.8.",
+        "Remove the compatibility section entirely, as Python 2.7 is end-of-life and the package is actively maintained for modern Python versions.",
+        "The `reproject` package is compatible with modern Python versions (3.8+). The note about Python 2.7 is incorrect."
+      ],
+      "golden_answer": "The `reproject` package is compatible with modern Python versions (3.8+). The note about Python 2.7 is incorrect."
+    },
+    {
+      "error_type": "E8",
+      "error_description": "The development installation instructions are poorly formatted, combining a command and its description on one line without proper code formatting, making it unclear and likely to be copied incorrectly.",
+      "correction_candidates": [
+        "To install for development, first clone the repository. Then, run the following command to install the package in editable mode with all dependencies: \n```\npip install -e .[all,test]\n```",
+        "For a development install, use this command: `pip install --editable .[all,test]`",
+        "To set up a development environment, run:\n\n`git clone https://github.com/astropy/reproject.git`\n`cd reproject`\n`pip install -e .[all,test]`",
+        "The command is `pip install -e .[all,test]`. This should be run from the root of the repository after cloning it."
+      ],
+      "golden_answer": "To install for development, first clone the repository. Then, run the following command to install the package in editable mode with all dependencies: \n```\npip install -e .[all,test]\n```"
+    }
+  ]
+}

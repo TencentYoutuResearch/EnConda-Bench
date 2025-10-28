@@ -1,0 +1,18 @@
+{
+  "readme": "de7vid_klingon-assistant-data_error_readme_4_only_E2",
+  "repo_name": "de7vid_klingon-assistant-data",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides a non-existent command (`python commit_submissions.py --auto`) for using the `commit_submissions.py` script.",
+      "correction_candidates": [
+        "The `commit_submissions.py` script is run without any arguments.",
+        "The README should be corrected to remove the fake `--auto` flag from the command example.",
+        "The correct command is `python scripts/commit_submissions.py`.",
+        "The `commit_submissions.py` script does not create commits automatically; it prepares them. The command example is misleading."
+      ],
+      "golden_answer": "The README should be corrected to remove the fake `--auto` flag from the command example."
+    }
+  ]
+}

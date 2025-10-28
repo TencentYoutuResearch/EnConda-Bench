@@ -1,0 +1,29 @@
+{
+  "readme": "astropy_photutils_error_readme_1",
+  "repo_name": "astropy_photutils",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The README provides an incorrect PyPI package name `photoutils` for installation, which will fail due to a typo.",
+      "correction_candidates": [
+        "Install using the correct package name: `pip install photutils`.",
+        "The package should be installed from source: `git clone https://github.com/astropy/photutils.git && python setup.py install`.",
+        "Use conda to install the package: `conda install -c conda-forge photutils`.",
+        "The package name is `astro-photutils`, so run `pip install astro-photutils`."
+      ],
+      "golden_answer": "Install using the correct package name: `pip install photutils`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The link to the license file incorrectly points to `LICENSE.md`, which does not exist in the repository; the correct file is `LICENSE.rst`.",
+      "correction_candidates": [
+        "Correct the link to point to the `LICENSE.rst` file.",
+        "The license file is located in the `docs` directory, so the path should be `docs/LICENSE.rst`.",
+        "The license file is named `COPYING`, not `LICENSE.md`.",
+        "Remove the link and rely on the text description of the license."
+      ],
+      "golden_answer": "Correct the link to point to the `LICENSE.rst` file."
+    }
+  ]
+}

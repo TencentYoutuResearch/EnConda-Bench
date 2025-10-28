@@ -1,0 +1,18 @@
+{
+  "readme": "commaai_comma10k_error_readme_4_only_E6",
+  "repo_name": "commaai_comma10k",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The contribution instructions have a logical order error, telling users to fork the repository and start labeling *before* claiming a task in the spreadsheet. This can lead to multiple people working on the same image.",
+      "correction_candidates": [
+        "Move the step \"Visit the Google Spreadsheet...\" to be step 1, before forking and labeling.",
+        "Combine the forking and spreadsheet steps into a single step.",
+        "Add a note before step 1 saying \"Important: Make sure to check the spreadsheet first to see if an image is already being worked on.\"",
+        "Remove the step about the Google Spreadsheet entirely and tell users to coordinate on Discord."
+      ],
+      "golden_answer": "Move the step \"Visit the Google Spreadsheet...\" to be step 1, before forking and labeling."
+    }
+  ]
+}

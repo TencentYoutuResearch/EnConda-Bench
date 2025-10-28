@@ -1,0 +1,18 @@
+{
+  "readme": "jaraco_irc_error_readme_4_only_E2",
+  "repo_name": "jaraco_irc",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The note about escaping the '#' character for channel names on a Unix command line provides an incorrect example (`/#test`). This syntax is wrong and will not work as intended in most shells.",
+      "correction_candidates": [
+        "The note is incorrect; the correct syntax is to use single quotes: `'#test'`.",
+        "The correct way to escape the character is by using `^#test`.",
+        "The note should advise using a backslash escape like `\\#test` or quoting the argument like `\"#test\"`.",
+        "The `#` character does not need to be escaped on modern Unix shells."
+      ],
+      "golden_answer": "The note should advise using a backslash escape like `\\#test` or quoting the argument like `\"#test\"`."
+    }
+  ]
+}

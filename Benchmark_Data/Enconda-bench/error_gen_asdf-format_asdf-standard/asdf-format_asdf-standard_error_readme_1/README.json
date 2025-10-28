@@ -1,0 +1,29 @@
+{
+  "readme": "asdf-format_asdf-standard_error_readme_1",
+  "repo_name": "asdf-format_asdf-standard",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The command to install development dependencies includes an incorrect package name, 'black-code', which does not exist. The correct package for the black code formatter is 'black'.",
+      "correction_candidates": [
+        "pip install pre-commit isort black",
+        "pip install pre-commit isort black-formatter",
+        "conda install pre-commit isort black",
+        "pip install pre-commit isort py-black"
+      ],
+      "golden_answer": "pip install pre-commit isort black"
+    },
+    {
+      "error_type": "E2",
+      "error_description": "The command to run pre-commit on all files uses an incorrect flag, '--all_files'. The correct flag uses a hyphen, '--all-files'.",
+      "correction_candidates": [
+        "pre-commit run --all-files",
+        "pre-commit --run --all-files",
+        "pre-commit run --all",
+        "pre-commit check --all-files"
+      ],
+      "golden_answer": "pre-commit run --all-files"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "readme": "jacebrowning_memegen_error_readme_1",
+  "repo_name": "jacebrowning_memegen",
+  "level": "level2",
+  "errors": [
+    {
+      "error_type": "E2",
+      "error_description": "The documentation incorrectly states that the escape pattern for a question mark is `~qu` instead of `~q`.",
+      "correction_candidates": [
+        "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + Q (~q) → question mark (?)`.",
+        "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + QM (~qm) → question mark (?)`.",
+        "In the example URL `.../~hspecial_characters~q/...`, replace `~q` with `~qu` to match the documentation.",
+        "Remove the line for the question mark escape pattern as it is a reserved character that cannot be escaped."
+      ],
+      "golden_answer": "In the list of special characters, change `tilde + QU (~qu) → question mark (?)` to `tilde + Q (~q) → question mark (?)`."
+    },
+    {
+      "error_type": "E4",
+      "error_description": "The documentation provides an example using the 'arial' font, which is not listed as an available font and will not work.",
+      "correction_candidates": [
+        "Add 'Arial' to the list of available fonts in the table.",
+        "Remove the example sentence that suggests using the non-existent 'arial' font.",
+        "Change the example font from `font=arial` to `font=impact`, which is a valid font.",
+        "Add a note specifying that `font=arial` is an alias for `font=notosans`."
+      ],
+      "golden_answer": "Remove the example sentence that suggests using the non-existent 'arial' font."
+    }
+  ]
+}

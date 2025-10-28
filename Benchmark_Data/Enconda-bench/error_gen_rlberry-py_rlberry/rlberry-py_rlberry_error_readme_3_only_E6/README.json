@@ -1,0 +1,18 @@
+{
+  "readme": "rlberry-py_rlberry_error_readme_3_only_E6",
+  "repo_name": "rlberry-py_rlberry",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions suggest creating and activating a virtual environment *after* installing the package, which is the incorrect order. This leads to a global installation rather than an isolated one.",
+      "correction_candidates": [
+        "The current order is correct for a system-wide installation fallback.",
+        "Remove the suggestion to use a virtual environment.",
+        "Move the instructions for creating and activating a virtual environment to before the `pip install` command.",
+        "Replace the `venv` instructions with `conda` environment commands."
+      ],
+      "golden_answer": "Move the instructions for creating and activating a virtual environment to before the `pip install` command."
+    }
+  ]
+}

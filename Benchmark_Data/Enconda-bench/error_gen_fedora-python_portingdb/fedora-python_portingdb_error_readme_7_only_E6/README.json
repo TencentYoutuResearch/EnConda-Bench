@@ -1,0 +1,18 @@
+{
+  "readme": "fedora-python_portingdb_error_readme_7_only_E6",
+  "repo_name": "fedora-python_portingdb",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "Moved PYTHONPATH export before pip install, which is incorrect order",
+      "correction_candidates": [
+        "Move export PYTHONPATH=. after pip install --editable .",
+        "Remove export PYTHONPATH=. from installation section",
+        "Add export PYTHONPATH=. to both installation and usage sections",
+        "Replace export PYTHONPATH=. with pip install -e . in installation"
+      ],
+      "golden_answer": "Move export PYTHONPATH=. after pip install --editable ."
+    }
+  ]
+}

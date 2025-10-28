@@ -1,0 +1,18 @@
+{
+  "readme": "bioimage-io_spec-bioimage-io_error_readme_2_only_E7",
+  "repo_name": "bioimage-io_spec-bioimage-io",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "The README incorrectly states that PyYAML supports YAML 1.2, while it does not, leading to potential parsing issues. The recommended package is `ruyaml`.",
+      "correction_candidates": [
+        "Note that the Python package PyYAML does not support YAML 1.2 .",
+        "Note that only Python 3.8+ with PyYAML supports YAML 1.2 .",
+        "Note that the Python package PyYAML has limited support for YAML 1.2 .",
+        "Note that the Python package PyYAML is deprecated in favor of ruaml for YAML 1.2 support."
+      ],
+      "golden_answer": "Note that the Python package PyYAML does not support YAML 1.2 ."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "diofant_diofant_error_readme_4_only_E1",
+  "repo_name": "diofant_diofant",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E1",
+      "error_description": "The instructions suggest installing from a 'develop' branch, but this branch does not exist in the repository, which will cause the installation to fail.",
+      "correction_candidates": [
+        "Suggest installing from the `master` branch, which is the correct default branch.",
+        "Suggest installing from the `main` branch, a common default branch name.",
+        "Remove the suggestion to install from a development branch.",
+        "Recommend using the stable version from PyPI with `pip install diofant`."
+      ],
+      "golden_answer": "Suggest installing from the `master` branch, which is the correct default branch."
+    }
+  ]
+}

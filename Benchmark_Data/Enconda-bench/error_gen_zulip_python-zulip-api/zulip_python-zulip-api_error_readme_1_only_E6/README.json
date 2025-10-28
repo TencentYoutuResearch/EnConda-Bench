@@ -1,0 +1,18 @@
+{
+  "readme": "zulip_python-zulip-api_error_readme_1_only_E6",
+  "repo_name": "zulip_python-zulip-api",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions say to activate the virtual environment before running the provision script that creates it, which is logically impossible.",
+      "correction_candidates": [
+        "You must create the virtual environment manually with `python3 -m venv` before activating it.",
+        "The `provision` script should be run before activating the virtual environment.",
+        "The correct command is `source /.../python-zulip-api/.../activate` and it should be run after `./tools/provision` prints the path.",
+        "First run `python3 ./tools/provision`, then run the `source` command that the script prints."
+      ],
+      "golden_answer": "First run `python3 ./tools/provision`, then run the `source` command that the script prints."
+    }
+  ]
+}

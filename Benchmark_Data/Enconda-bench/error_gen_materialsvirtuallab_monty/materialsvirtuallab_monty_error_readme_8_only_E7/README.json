@@ -1,0 +1,18 @@
+{
+  "readme": "materialsvirtuallab_monty_error_readme_8_only_E7",
+  "repo_name": "materialsvirtuallab_monty",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E7",
+      "error_description": "Specifies overly restrictive exact Python patch versions instead of minimum versions",
+      "correction_candidates": [
+        "Change to minimum version requirements: Python 3.6+ is supported",
+        "Use range specification: Python 3.6-3.11 are supported",
+        "Simplify to major versions: Python 3.7 or higher recommended",
+        "Update to current standards: Python 3.8+ required for optimal performance"
+      ],
+      "golden_answer": "Change to minimum version requirements: Python 3.6+ is supported"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "readme": "pajbot_pajbot_error_readme_3_only_E6",
+  "repo_name": "pajbot_pajbot",
+  "level": "level1",
+  "errors": [
+    {
+      "error_type": "E6",
+      "error_description": "The instructions incorrectly tell the user to run `pip install -r requirements.txt` directly, bypassing the provided installation script which handles virtual environment creation and other setup tasks.",
+      "correction_candidates": [
+        "The correct command is pip install .",
+        "The correct command is ./scripts/install_dependencies.sh",
+        "The correct command is ./scripts/venvinstall.sh",
+        "The correct command is python -m pip install -r requirements.txt"
+      ],
+      "golden_answer": "The correct command is ./scripts/venvinstall.sh"
+    }
+  ]
+}
