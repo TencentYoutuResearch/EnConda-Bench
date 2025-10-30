@@ -223,6 +223,14 @@ python convert_to_jsonl.py \
 - 感谢所有贡献者的努力
 - 感谢开源社区的支持
 
----
-
-*如果这个项目对你有帮助，请给我们一个⭐️！*
+## 📚 Citation
+如果你认为本工作帮助到了您，请考虑引用:
+```bibtex
+@article{EnConda_Bench,
+      title={Process-Level Trajectory Evaluation for Environment Configuration in Software Engineering Agents}, 
+      author={Kuang, Jiayi and Li, Yinghui and Zhang, Xin and Li, Yangning and Yin, Di and Sun, Xing and Shen, Ying and Yu, Philip S},
+      journal={arXiv preprint arXiv:2510.25694},
+      url={https://arxiv.org/abs/2510.25694},
+      year={2025}
+}
+```

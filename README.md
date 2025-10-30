@@ -223,6 +223,14 @@ This project is licensed under an open source license. See the [LICENSE](LICENSE
 - Thanks to all contributors for their efforts
 - Thanks to the open source community for their support
 
----
-
-*If this project helps you, please give us a ⭐️!*
+## 📚 Citation
+If you find this work useful, please give us a ⭐️ and consider citing:
+```bibtex
+@article{EnConda_Bench,
+      title={Process-Level Trajectory Evaluation for Environment Configuration in Software Engineering Agents}, 
+      author={Kuang, Jiayi and Li, Yinghui and Zhang, Xin and Li, Yangning and Yin, Di and Sun, Xing and Shen, Ying and Yu, Philip S},
+      journal={arXiv preprint arXiv:2510.25694},
+      url={https://arxiv.org/abs/2510.25694},
+      year={2025}
+}
+```
